@@ -1,0 +1,5580 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 18 36 577 806
+%%Title: Enscript Output
+%%Creator: GNU enscript 1.6.4
+%%CreationDate: Fri Jun 12 15:39:18 2009
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6 4
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6 4
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier /F-gs-font MF
+/F-gs-font 10 10 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [595 842] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-simple 1.6 4
+
+/do_header {	% print default simple header
+  gsave
+    d_header_x d_header_y HFpt_h 3 div add translate
+
+    HF setfont
+    user_header_p {
+      5 0 moveto user_header_left_str show
+
+      d_header_w user_header_center_str stringwidth pop sub 2 div
+      0 moveto user_header_center_str show
+
+      d_header_w user_header_right_str stringwidth pop sub 5 sub
+      0 moveto user_header_right_str show
+    } {
+      5 0 moveto fname show
+      45 0 rmoveto fmodstr show
+      45 0 rmoveto pagenumstr show
+    } ifelse
+
+  grestore
+} def
+%%EndResource
+/d_page_w 559 def
+/d_page_h 770 def
+/d_header_x 0 def
+/d_header_y 755 def
+/d_header_w 559 def
+/d_header_h 15 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 559 def
+/d_footer_h 0 def
+/d_output_w 559 def
+/d_output_h 755 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (file.c) def
+/fdir () def
+/ftail (file.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (1-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      File: file.c) s
+5 720 M
+( *) s
+5 709 M
+( */) s
+5 698 M
+(#include "file.h") s
+5 687 M
+(#include "config.h") s
+5 676 M
+(#include "system.h") s
+5 654 M
+(/*) s
+5 643 M
+( * Files Buffer Definition) s
+5 632 M
+( */) s
+5 621 M
+(static char fs_stdin_buffer[SCREEN_SIZE];) s
+5 610 M
+(static char fs_stdout_buffer[SCREEN_SIZE];) s
+5 599 M
+(static char fs_in_att_buffer[SCREEN_SIZE];) s
+5 588 M
+(static char fs_out_att_buffer[SCREEN_SIZE];) s
+5 566 M
+(/*) s
+5 555 M
+( *      File System Table Definition) s
+5 544 M
+( */) s
+5 533 M
+(static int openFiles = 4;) s
+5 511 M
+(FILE fileSystem[MAX_OPEN_FILES] = {) s
+5 500 M
+(        {0, fs_stdin_buffer, fs_stdin_buffer,  \(_READ | _WRITE\), SCREEN_SIZE},) s
+5 489 M
+(        {1, fs_stdout_buffer, fs_stdout_buffer, \(_READ | _WRITE\), SCREEN_SIZE},) s
+5 478 M
+(        {2, fs_in_att_buffer, fs_in_att_buffer, \(_READ | _WRITE\), SCREEN_SIZE},) s
+5 467 M
+(        {3, fs_out_att_buffer, fs_out_att_buffer, \(_READ | _WRITE\), SCREEN_SIZE}) s
+5 456 M
+(};) s
+5 434 M
+(/*) s
+5 423 M
+( * Public Function File System Access) s
+5 412 M
+( */) s
+5 401 M
+(int getOpenFilesCount \( void \) ) s
+5 390 M
+({) s
+5 379 M
+(        return openFiles;) s
+5 368 M
+(}) s
+_R
+S
+%%Page: (1) 2
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (kernel.c) def
+/fdir () def
+/ftail (kernel.c) def
+% User defined strings:
+/fmodstr (jue jun 11 16:28:06 2009) def
+/pagenumstr (2-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(#include "kasm.h") s
+5 731 M
+(#include "kc.h") s
+5 720 M
+(#include "system.h") s
+5 709 M
+(#include "int_handlers.h") s
+5 698 M
+(#include "config.h") s
+5 687 M
+(#include "stdio.h") s
+5 676 M
+(#include "string.h") s
+5 665 M
+(#include "video_driver.h") s
+5 654 M
+(#include "mouse_driver.h") s
+5 632 M
+(DESCR_INT idt[256];                     /* IDT de 256 entradas*/) s
+5 621 M
+(IDTR idtr;                                      /* IDTR */) s
+5 610 M
+(static int colors[] = { 1, 2, 3, 4, 5, 6, 7 ,8, 9, 10, 11 , 12, 13, 14, 15, 1,) s
+5 599 M
+(                2, 3, 4, 5, 6, 7, 8};) s
+5 577 M
+(void kernel_main \( void  \) ) s
+5 566 M
+({) s
+5 555 M
+(        ) s
+5 544 M
+(        char *msg;) s
+5 522 M
+(        /* Loading IDT */) s
+5 511 M
+(        setup_IDT_entry \(&idt[0x08], 0x08, \(dword\)&_int_08_handler, ACS_INT, 0\);) s
+5 500 M
+(        setup_IDT_entry \(&idt[0x09], 0x08, \(dword\)&_int_09_handler, ACS_INT, 0\);) s
+5 489 M
+(        setup_IDT_entry \(&idt[0x74], 0x08, \(dword\)&_int_74_handler, ACS_INT, 0\);) s
+5 478 M
+(        setup_IDT_entry \(&idt[0x80], 0x08, \(dword\)&_int_80_handler, ACS_INT, 0\);) s
+5 456 M
+(        /* Loading IDTR */) s
+5 445 M
+(        idtr.base = 0;  ) s
+5 434 M
+(        idtr.base +=\(dword\) &idt;) s
+5 423 M
+(        idtr.limit = sizeof\(idt\)-1;) s
+5 412 M
+(        _lidt \(&idtr\);  ) s
+5 379 M
+(        clearScreen\(\);) s
+5 357 M
+(        msg = "Welcome to Ark OS 1.0\\n\\n";) s
+5 346 M
+(        putColoredStringAtFixedPos\(msg, colors, strlen\(msg\), 1, 4\);) s
+5 335 M
+(        /* puts\(msg\); */) s
+5 324 M
+(        /* Enabling Interrupts */) s
+5 313 M
+(        puts\("\\n\\t\\tEnabling Interrupts.............................................."\);) s
+5 302 M
+(        _Cli\(\);) s
+5 280 M
+(                _mascaraPIC1\(0xF8\);) s
+5 269 M
+(                _mascaraPIC2\(0xEF\);) s
+5 258 M
+(        ) s
+5 247 M
+(        _Sti\(\);) s
+5 236 M
+(        puts\("Done.\\n"\);) s
+5 214 M
+(        /* Initializing Driver */) s
+5 203 M
+(        puts\("\\t\\tInitializing Driver.............................................."\);) s
+5 192 M
+(        initVideo\(CURSOR_START_VISIBLE, POINTER_START_VISIBLE\);) s
+5 181 M
+(        initMouse\(\);) s
+5 170 M
+(        puts\("Done.\\n"\);) s
+5 159 M
+(        ) s
+5 148 M
+(        puts\("\\n\\tReady.\\n\\n"\);) s
+5 137 M
+(        ) s
+5 126 M
+(        /* Main loop */) s
+5 115 M
+(        launchApp\(SHELL\);) s
+5 104 M
+(        while \(1\)) s
+5 93 M
+(                runApp\(\);) s
+5 82 M
+(}) s
+_R
+S
+%%Page: (1) 3
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (keyboard_adapter.c) def
+/fdir () def
+/ftail (keyboard_adapter.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:05:50 2009) def
+/pagenumstr (3-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      \\file keyboard_adapter.c) s
+5 720 M
+( *) s
+5 709 M
+( *      \\brief  Connect Stdin with the Keyboard buffer with it's) s
+5 698 M
+( *                      respective attributes.) s
+5 687 M
+( *) s
+5 676 M
+( *      \\code) s
+5 665 M
+( *              keyboard_adapter\(\);) s
+5 654 M
+( *      \\endcode) s
+5 643 M
+( */) s
+5 621 M
+(#include "keyboard_adapter.h") s
+5 610 M
+(#include "stdio.h") s
+5 599 M
+(#include "video_driver.h") s
+5 588 M
+(#include "queue.h") s
+5 544 M
+(void flushKeyboardBuffer\( void \)) s
+5 533 M
+({) s
+5 522 M
+(        Keycode deChar = 0;) s
+5 511 M
+(        int color;) s
+5 500 M
+(        ) s
+5 489 M
+(        color = getVideoColor\(\);) s
+5 467 M
+(        while\( !kbBufferIsEmpty\(\) \)) s
+5 456 M
+(                if\( \(deChar = charDeque\(\)\) != '\\0' \)) s
+5 445 M
+(                {) s
+5 434 M
+(                        fputc\(\(int\)deChar, stdin \);) s
+5 423 M
+(                        fputc\(color, inatt\);) s
+5 412 M
+(                }) s
+5 390 M
+(}) s
+_R
+S
+%%Page: (1) 4
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (keyboard_driver.c) def
+/fdir () def
+/ftail (keyboard_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (4-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      file: keyboard_driver.c) s
+5 720 M
+( *) s
+5 709 M
+( *      \\brief: This file contains the scancode table for all of the letter and) s
+5 698 M
+( *                      their combination.) s
+5 687 M
+( *                      -The incoming scancode of the keyboard select the row) s
+5 676 M
+( *                      -The modifier status select the column) s
+5 665 M
+( *                      -The intersection of two is the scan/ASCII code to put into the PC ) s
+5 654 M
+(buffer ahead    ) s
+5 643 M
+( */) s
+5 621 M
+(#include "io.h") s
+5 610 M
+(#include "keyboard_driver.h") s
+5 599 M
+(#include "config.h") s
+5 566 M
+(/* ----------------------------------------------------------------------) s
+5 555 M
+( * Software keycodes) s
+5 544 M
+( * ---------------------------------------------------------------------- */) s
+5 522 M
+(/*) s
+5 511 M
+( *      \\brief Each keyboard event generates a 16 bit code.) s
+5 500 M
+( *                      - The low 10 bits indicate which key was used.) s
+5 489 M
+( *                      - If bit 8 \(KEY_SPECIAL_FLAG\) is 0, then the low 8 bits contain) s
+5 478 M
+( *                the ASCII code.) s
+5 467 M
+( *                      - The flags indicate the shift/alt/control state,) s
+5 456 M
+( *                and whether the event was a make or release.) s
+5 445 M
+( */) s
+5 423 M
+(static char flag = 0;) s
+5 412 M
+(static int amountOfRepetition = KEYBOARD_REPETITION;) s
+5 401 M
+(static int keyboardActivity = 0;) s
+5 379 M
+(#define KEY_RSHIFT_P    0x2A) s
+5 368 M
+(#define KEY_LSHIFT_P    0x36) s
+5 357 M
+(#define KEY_RSHIFT_R    \(KEY_RSHIFT_P + KB_KEY_RELEASE\)) s
+5 346 M
+(#define KEY_LSHIFT_R    \(KEY_LSHIFT_P + KB_KEY_RELEASE\)) s
+5 335 M
+(#define KEY_ALT_P               0x38) s
+5 324 M
+(#define KEY_ALT_R               \(KEY_ALT_P + KB_KEY_RELEASE\)) s
+5 313 M
+(#define KEY_CTRL_P              0x1D) s
+5 302 M
+(#define KEY_CTRL_R              \(KEY_CTRL_P+KB_KEY_RELEASE\)) s
+5 291 M
+(#define KEY_CAPS                0x3A) s
+5 269 M
+(#define KB_KEY_RELEASE  0x80) s
+5 258 M
+(#define KB_OUTPUT_FULL  0x01) s
+5 236 M
+(#define DATA_PORT               0x60) s
+5 225 M
+(#define CONTROL_PORT    0x64) s
+5 203 M
+(/*) s
+5 192 M
+( * Flags) s
+5 181 M
+( */) s
+5 170 M
+(#define FLAG_SHIFT              \(0x01\)) s
+5 159 M
+(#define FLAG_CTRL               \(0x02\)) s
+5 148 M
+(#define FLAG_ALT                \(0x04\)) s
+5 137 M
+(#define FLAG_CAPS               \(0x08\)) s
+5 115 M
+(#define KEY_SPECIAL_FLAG 0x00) s
+5 104 M
+(#define KEY_KEYPAD_FLAG  0x00) s
+5 93 M
+(#define KEY_SHIFT_FLAG   0x1000) s
+5 82 M
+(#define KEY_ALT_FLAG     0x2000) s
+5 71 M
+(#define KEY_CTRL_FLAG    0x4000) s
+5 60 M
+(#define KEY_RELEASE_FLAG 0x8000) s
+5 38 M
+(/*) s
+5 27 M
+( * Special key codes) s
+5 16 M
+( */) s
+_R
+S
+%%Page: (2) 5
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 2 def
+/fname (keyboard_driver.c) def
+/fdir () def
+/ftail (keyboard_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (4-2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(#define _SPECIAL\(num\) \(KEY_SPECIAL_FLAG & \(num\)\)) s
+5 731 M
+(#define KEY_UNKNOWN _SPECIAL\(0\) ) s
+5 720 M
+(#define KEY_F1      _SPECIAL\(1\) ) s
+5 709 M
+(#define KEY_F2      _SPECIAL\(2\) ) s
+5 698 M
+(#define KEY_F3      _SPECIAL\(3\) ) s
+5 687 M
+(#define KEY_F4      _SPECIAL\(4\) ) s
+5 676 M
+(#define KEY_F5      _SPECIAL\(5\) ) s
+5 665 M
+(#define KEY_F6      _SPECIAL\(6\) ) s
+5 654 M
+(#define KEY_F7      _SPECIAL\(7\) ) s
+5 643 M
+(#define KEY_F8      _SPECIAL\(8\) ) s
+5 632 M
+(#define KEY_F9      _SPECIAL\(9\) ) s
+5 621 M
+(#define KEY_F10     _SPECIAL\(10\) ) s
+5 610 M
+(#define KEY_F11     _SPECIAL\(11\) ) s
+5 599 M
+(#define KEY_F12     _SPECIAL\(12\) ) s
+5 588 M
+(#define KEY_LCTRL   _SPECIAL\(13\) ) s
+5 577 M
+(#define KEY_RCTRL   _SPECIAL\(14\) ) s
+5 566 M
+(#define KEY_LSHIFT  _SPECIAL\(15\) ) s
+5 555 M
+(#define KEY_RSHIFT  _SPECIAL\(16\) ) s
+5 544 M
+(#define KEY_LALT    _SPECIAL\(17\) ) s
+5 533 M
+(#define KEY_RALT    _SPECIAL\(18\) ) s
+5 522 M
+(#define KEY_PRINTSCRN _SPECIAL\(19\) ) s
+5 511 M
+(#define KEY_CAPSLOCK _SPECIAL\(20\) ) s
+5 500 M
+(#define KEY_NUMLOCK _SPECIAL\(21\) ) s
+5 489 M
+(#define KEY_SCRLOCK _SPECIAL\(22\) ) s
+5 478 M
+(#define KEY_SYSREQ  _SPECIAL\(23\) ) s
+5 456 M
+(/*) s
+5 445 M
+( * Keypad keys) s
+5 434 M
+( */) s
+5 423 M
+(#define KEYPAD_START 128) s
+5 412 M
+(#define _KEYPAD\(num\) \(KEY_KEYPAD_FLAG & KEY_SPECIAL_FLAG & \(num+KEYPAD_START\)\)) s
+5 401 M
+(#define KEY_KPHOME  _KEYPAD\(0\)) s
+5 390 M
+(#define KEY_KPUP    _KEYPAD\(1\)) s
+5 379 M
+(#define KEY_KPPGUP  _KEYPAD\(2\)) s
+5 368 M
+(#define KEY_KPMINUS _KEYPAD\(3\)) s
+5 357 M
+(#define KEY_KPLEFT  _KEYPAD\(4\)) s
+5 346 M
+(#define KEY_KPCENTER _KEYPAD\(5\)) s
+5 335 M
+(#define KEY_KPRIGHT _KEYPAD\(6\)) s
+5 324 M
+(#define KEY_KPPLUS  _KEYPAD\(7\)) s
+5 313 M
+(#define KEY_KPEND   _KEYPAD\(8\)) s
+5 302 M
+(#define KEY_KPDOWN  _KEYPAD\(9\)) s
+5 291 M
+(#define KEY_KPPGDN  _KEYPAD\(10\)) s
+5 280 M
+(#define KEY_KPINSERT _KEYPAD\(11\)) s
+5 269 M
+(#define KEY_KPDEL   _KEYPAD\(12\)) s
+5 247 M
+(#define ASCII_ESC       0x00) s
+5 236 M
+(#define ASCII_BS        '\\b') s
+5 225 M
+(#define ASCII_ENTER '\\n') s
+5 214 M
+(/*) s
+5 203 M
+( * Translate from scan code to key code, when shift is not pressed.) s
+5 192 M
+( */) s
+5 170 M
+(static const Keycode scanTableNoShift[] = {) s
+5 159 M
+(        KEY_UNKNOWN, ASCII_ESC, '1', '2',   /* 0x00 - 0x03 */) s
+5 148 M
+(        '3', '4', '5', '6',                 /* 0x04 - 0x07 */) s
+5 137 M
+(        '7', '8', '9', '0',                 /* 0x08 - 0x0B */) s
+5 126 M
+(        '-', '=', ASCII_BS, '\\t',           /* 0x0C - 0x0F */) s
+5 115 M
+(        'q', 'w', 'e', 'r',                 /* 0x10 - 0x13 */) s
+5 104 M
+(        't', 'y', 'u', 'i',                 /* 0x14 - 0x17 */) s
+5 93 M
+(        'o', 'p', '[', ']',                 /* 0x18 - 0x1B */) s
+5 82 M
+(        ASCII_ENTER, KEY_LCTRL, 'a', 's',   /* 0x1C - 0x1F */) s
+5 71 M
+(        'd', 'f', 'g', 'h',                 /* 0x20 - 0x23 */) s
+5 60 M
+(        'j', 'k', 'l', ';',                 /* 0x24 - 0x27 */) s
+5 49 M
+(        '\\'', '`', KEY_LSHIFT, '\\\\',        /* 0x28 - 0x2B */) s
+5 38 M
+(        'z', 'x', 'c', 'v',                 /* 0x2C - 0x2F */) s
+5 27 M
+(        'b', 'n', 'm', ',',                 /* 0x30 - 0x33 */) s
+5 16 M
+(        '.', '/', KEY_RSHIFT, KEY_PRINTSCRN, /* 0x34 - 0x37 */) s
+5 5 M
+(        KEY_LALT, ' ', KEY_CAPSLOCK, KEY_F1, /* 0x38 - 0x3B */) s
+_R
+S
+%%Page: (3) 6
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 3 def
+/fname (keyboard_driver.c) def
+/fdir () def
+/ftail (keyboard_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (4-3) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        KEY_F2, KEY_F3, KEY_F4, KEY_F5,     /* 0x3C - 0x3F */) s
+5 731 M
+(        KEY_F6, KEY_F7, KEY_F8, KEY_F9,     /* 0x40 - 0x43 */) s
+5 720 M
+(        KEY_F10, KEY_NUMLOCK, KEY_SCRLOCK, KEY_KPHOME,  /* 0x44 - 0x47 */) s
+5 709 M
+(        KEY_KPUP, KEY_KPPGUP, KEY_KPMINUS, KEY_KPLEFT,  /* 0x48 - 0x4B */) s
+5 698 M
+(        KEY_KPCENTER, KEY_KPRIGHT, KEY_KPPLUS, KEY_KPEND,  /* 0x4C - 0x4F */) s
+5 687 M
+(        KEY_KPDOWN, KEY_KPPGDN, KEY_KPINSERT, KEY_KPDEL,  /* 0x50 - 0x53 */) s
+5 676 M
+(        KEY_SYSREQ, KEY_UNKNOWN, KEY_UNKNOWN, KEY_UNKNOWN,  /* 0x54 - 0x57 */) s
+5 665 M
+(};) s
+5 643 M
+(#define SCAN_TABLE_SIZE \(sizeof\(s_scanTableNoShift\) / sizeof\(Keycode\)\)) s
+5 621 M
+(/*) s
+5 610 M
+( * \\brief       Translate from scan code to key code, when shift *is* pressed.) s
+5 599 M
+( *                      Keep this in sync with the unshifted table above!) s
+5 588 M
+( *                      They must be the same size.) s
+5 577 M
+( */) s
+5 566 M
+(static const Keycode scanTableWithShift[] = {) s
+5 555 M
+(        KEY_UNKNOWN, ASCII_ESC, '!', '@',   /* 0x00 - 0x03 */) s
+5 544 M
+(        '#', '$', '%', '^',                 /* 0x04 - 0x07 */) s
+5 533 M
+(        '&', '*', '\(', '\)',                 /* 0x08 - 0x0B */) s
+5 522 M
+(        '_', '=', ASCII_BS, '\\t',           /* 0x0C - 0x0F */) s
+5 511 M
+(        'Q', 'W', 'E', 'R',                 /* 0x10 - 0x13 */) s
+5 500 M
+(        'T', 'Y', 'U', 'I',                 /* 0x14 - 0x17 */) s
+5 489 M
+(        'O', 'P', '{', '}',                 /* 0x18 - 0x1B */) s
+5 478 M
+(        ASCII_ENTER, KEY_LCTRL, 'A', 'S',   /* 0x1C - 0x1F */) s
+5 467 M
+(        'D', 'F', 'G', 'H',                 /* 0x20 - 0x23 */) s
+5 456 M
+(        'J', 'K', 'L', ':',                 /* 0x24 - 0x27 */) s
+5 445 M
+(        '"', '~', KEY_LSHIFT, '|',          /* 0x28 - 0x2B */) s
+5 434 M
+(        'Z', 'X', 'C', 'V',                 /* 0x2C - 0x2F */) s
+5 423 M
+(        'B', 'N', 'M', '<',                 /* 0x30 - 0x33 */) s
+5 412 M
+(        '>', '?', KEY_RSHIFT, KEY_PRINTSCRN, /* 0x34 - 0x37 */) s
+5 401 M
+(        KEY_LALT, ' ', KEY_CAPSLOCK, KEY_F1, /* 0x38 - 0x3B */) s
+5 390 M
+(        KEY_F2, KEY_F3, KEY_F4, KEY_F5,     /* 0x3C - 0x3F */) s
+5 379 M
+(        KEY_F6, KEY_F7, KEY_F8, KEY_F9,     /* 0x40 - 0x43 */) s
+5 368 M
+(        KEY_F10, KEY_NUMLOCK, KEY_SCRLOCK, KEY_KPHOME,  /* 0x44 - 0x47 */) s
+5 357 M
+(        KEY_KPUP, KEY_KPPGUP, KEY_KPMINUS, KEY_KPLEFT,  /* 0x48 - 0x4B */) s
+5 346 M
+(        KEY_KPCENTER, KEY_KPRIGHT, KEY_KPPLUS, KEY_KPEND,  /* 0x4C - 0x4F */) s
+5 335 M
+(        KEY_KPDOWN, KEY_KPPGDN, KEY_KPINSERT, KEY_KPDEL,  /* 0x50 - 0x53 */) s
+5 324 M
+(        KEY_SYSREQ, KEY_UNKNOWN, KEY_UNKNOWN, KEY_UNKNOWN,  /* 0x54 - 0x57 */) s
+5 313 M
+(};) s
+5 280 M
+(Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE];) s
+5 258 M
+(/* ----------------------------------------------------------------------) s
+5 247 M
+( * Private data and functions) s
+5 236 M
+( * ---------------------------------------------------------------------- */) s
+5 192 M
+(void keyboard_driver\(\){) s
+5 170 M
+(        Keycode scan = 0, auxScan, oldScanCode=0;) s
+5 159 M
+(        unsigned char status;) s
+5 148 M
+(        int countEnq = 0;) s
+5 137 M
+(        ) s
+5 126 M
+(        status = inportb\(CONTROL_PORT\);) s
+5 115 M
+(        if\( \(KB_OUTPUT_FULL & status\) != 0 \)) s
+5 104 M
+(                scan = inportb\(DATA_PORT\);                      /* The keyboard is avaliabl) s
+5 93 M
+(e to read */) s
+5 82 M
+(        SetKeyState\(scan\);) s
+5 71 M
+(        if\( !\(scan & KB_KEY_RELEASE\)  \)) s
+5 60 M
+(        {) s
+5 49 M
+(                if\( flag & FLAG_SHIFT  \)) s
+5 38 M
+(                {) s
+5 27 M
+(                        auxScan = scanTableWithShift[scan];) s
+5 16 M
+(                        if\( auxScan != 0 \)) s
+5 5 M
+(                                charEnque\(auxScan\);) s
+_R
+S
+%%Page: (4) 7
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 4 def
+/fname (keyboard_driver.c) def
+/fdir () def
+/ftail (keyboard_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (4-4) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                }) s
+5 731 M
+(                else if\( flag & FLAG_CAPS && scanTableNoShift[scan] >= 'a' && scanTableNoSh) s
+5 720 M
+(ift[scan] <= 'z' \)) s
+5 709 M
+(                {) s
+5 698 M
+(                        auxScan = \(scanTableNoShift[scan]-0x20\);) s
+5 687 M
+(                        if\( auxScan != 0 \)) s
+5 676 M
+(                                charEnque\(auxScan\);) s
+5 665 M
+(                }) s
+5 654 M
+(                else) s
+5 643 M
+(                {) s
+5 632 M
+(                        auxScan = scanTableNoShift[scan];) s
+5 621 M
+(                        if\( oldScanCode == scan \)) s
+5 610 M
+(                                while\( countEnq++ <= amountOfRepetition \)) s
+5 599 M
+(                                        charEnque\(auxScan\);) s
+5 588 M
+(                        else if\( auxScan \)) s
+5 577 M
+(                                charEnque\(auxScan\);) s
+5 566 M
+(                }) s
+5 544 M
+(        }) s
+5 533 M
+(        oldScanCode = scan;) s
+5 522 M
+(        keyboardActivity = 1;) s
+5 511 M
+(}) s
+5 489 M
+(void SetKeyState\( Keycode scanCode \)) s
+5 478 M
+({) s
+5 467 M
+(        switch \(scanCode\) {) s
+5 456 M
+(                case KEY_RSHIFT_P: case KEY_LSHIFT_P:) s
+5 445 M
+(                        flag |= FLAG_SHIFT;) s
+5 434 M
+(                        break;) s
+5 423 M
+(                case KEY_RSHIFT_R: case KEY_LSHIFT_R:) s
+5 412 M
+(                        flag &= ~FLAG_SHIFT;) s
+5 401 M
+(                        break;) s
+5 390 M
+(                case KEY_CAPS:) s
+5 379 M
+(                        flag = flag ^FLAG_CAPS;) s
+5 368 M
+(                        break;) s
+5 357 M
+(                case KEY_CTRL_P:) s
+5 346 M
+(                        flag |= FLAG_CTRL;) s
+5 335 M
+(                        break;) s
+5 324 M
+(                case KEY_CTRL_R:) s
+5 313 M
+(                        flag &= ~FLAG_CTRL;) s
+5 302 M
+(                        break;) s
+5 291 M
+(                }) s
+5 280 M
+(}) s
+5 247 M
+(int shiftIsPressed\( void \)) s
+5 236 M
+({) s
+5 225 M
+(        return flag == FLAG_SHIFT;) s
+5 214 M
+(}) s
+5 192 M
+(int capsIsPressed\( void \)) s
+5 181 M
+({) s
+5 170 M
+(        return flag == FLAG_CAPS;) s
+5 159 M
+(}) s
+5 137 M
+(int ctrlIsPressed \( void \)) s
+5 126 M
+({) s
+5 115 M
+(        return flag == FLAG_CTRL;) s
+5 104 M
+(}) s
+5 82 M
+(int getRepetition\(\)) s
+5 71 M
+({) s
+5 60 M
+(        return amountOfRepetition;) s
+5 49 M
+(}) s
+5 27 M
+(void setRepetition\( int newRep \)) s
+5 16 M
+({) s
+5 5 M
+(        amountOfRepetition = newRep;) s
+_R
+S
+%%Page: (5) 8
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 5 def
+/fname (keyboard_driver.c) def
+/fdir () def
+/ftail (keyboard_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (4-5) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(}) s
+5 720 M
+(int checkKeyboardActivity\( void \)) s
+5 709 M
+({) s
+5 698 M
+(        if\( keyboardActivity \)) s
+5 687 M
+(        {       ) s
+5 676 M
+(                keyboardActivity = 0;) s
+5 665 M
+(                return 1;) s
+5 654 M
+(        }) s
+5 643 M
+(        return 0;) s
+5 632 M
+(}) s
+5 610 M
+(void setKeyboardActivity\(void\)) s
+5 599 M
+({ ) s
+5 588 M
+(        keyboardActivity = 0;) s
+5 577 M
+(}) s
+_R
+S
+%%Page: (1) 9
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (libc.c) def
+/fdir () def
+/ftail (libc.c) def
+% User defined strings:
+/fmodstr (vie jun 05 20:41:15 2009) def
+/pagenumstr (5-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(#include "kc.h") s
+5 709 M
+(/***************************************************************) s
+5 698 M
+(*k_clear_screen) s
+5 687 M
+(*) s
+5 676 M
+(* Borra la pantalla en modo texto color.) s
+5 665 M
+(****************************************************************/) s
+5 643 M
+(void k_clear_screen\(\) ) s
+5 632 M
+({) s
+5 621 M
+(        char *vidmem = \(char *\) 0xb8000;) s
+5 610 M
+(        unsigned int i=0;) s
+5 599 M
+(        while\(i < \(80*25*2\)\)) s
+5 588 M
+(        {) s
+5 577 M
+(                vidmem[i]=' ';) s
+5 566 M
+(                i++;) s
+5 555 M
+(                vidmem[i]=WHITE_TXT;) s
+5 544 M
+(                i++;) s
+5 533 M
+(        };) s
+5 522 M
+(}) s
+5 500 M
+(/***************************************************************) s
+5 489 M
+(*setup_IDT_entry) s
+5 478 M
+(* Inicializa un descriptor de la IDT) s
+5 467 M
+(*) s
+5 456 M
+(*Recibe: Puntero a elemento de la IDT) s
+5 445 M
+(*        Selector a cargar en el descriptor de interrupcion) s
+5 434 M
+(*        Puntero a rutina de atencion de interrupcion   ) s
+5 423 M
+(*        Derechos de acceso del segmento) s
+5 412 M
+(*        Cero) s
+5 401 M
+(****************************************************************/) s
+5 379 M
+(void setup_IDT_entry \(DESCR_INT *item, byte selector, dword offset, byte access,) s
+5 368 M
+(                         byte cero\) {) s
+5 357 M
+(  item->selector = selector;) s
+5 346 M
+(  item->offset_l = offset & 0xFFFF;) s
+5 335 M
+(  item->offset_h = offset >> 16;) s
+5 324 M
+(  item->access = access;) s
+5 313 M
+(  item->cero = cero;) s
+5 302 M
+(}) s
+_R
+S
+%%Page: (1) 10
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (mouse_driver.c) def
+/fdir () def
+/ftail (mouse_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (6-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( * \\file mouse_driver.c) s
+5 720 M
+( *) s
+5 709 M
+( *      \\author: Guido Marucci Blas & Nicolas Purita & Luciano Zemin) s
+5 698 M
+( */) s
+5 676 M
+(/*---------INCLUDE SECTION----------*/) s
+5 654 M
+(#include "io.h") s
+5 643 M
+(#include "config.h") s
+5 632 M
+(#include "video_driver.h") s
+5 621 M
+(#include "mouse_driver.h") s
+5 610 M
+(#include "unistd.h") s
+5 599 M
+(#include "system.h") s
+5 588 M
+(#include "stdio.h") s
+5 566 M
+(/*----------DEFINE SECTION----------*/) s
+5 544 M
+(#define ENABLE_IRQ12 0x02) s
+5 533 M
+(#define DISABLE_MOUSE_CLOCK 0xDF) s
+5 522 M
+(#define READ 0) s
+5 511 M
+(#define WRITE 1) s
+5 500 M
+(#define OLD 0) s
+5 489 M
+(#define NEW 1) s
+5 478 M
+(#define TMP 2) s
+5 467 M
+(#define LEFT_OLD 0) s
+5 456 M
+(#define RIGHT_OLD 1) s
+5 445 M
+(#define LEFT_NEW 2) s
+5 434 M
+(#define RIGHT_NEW 3) s
+5 423 M
+(#define UPPER_X 0) s
+5 412 M
+(#define UPPER_Y 1) s
+5 401 M
+(#define LOWER_X 2) s
+5 390 M
+(#define LOWER_Y 3) s
+5 368 M
+(/*----------------------------MOUSE INITIALIZATION----------------------------*/) s
+5 346 M
+(static void mouseWaitTo \(int mode\)) s
+5 335 M
+({) s
+5 324 M
+(        int graceperiod = 100000;) s
+5 302 M
+(        if \(mode == READ\)) s
+5 291 M
+(                while \(\(\(inportb\(0x64\) & 0x01\) != 1\) && graceperiod--\);) s
+5 280 M
+(        else) s
+5 269 M
+(                while \(\(\(inportb\(0x64\) & 0x02\) != 0\) && graceperiod--\);) s
+5 258 M
+(        return;) s
+5 247 M
+(}) s
+5 225 M
+(static void mouseWrite \(unsigned char byte\)) s
+5 214 M
+({) s
+5 203 M
+(        mouseWaitTo\(WRITE\);) s
+5 192 M
+(        outportb\(0x64, byte\);) s
+5 181 M
+(        return;) s
+5 170 M
+(}) s
+5 148 M
+(static unsigned char mouseRead \(void\)) s
+5 137 M
+({) s
+5 126 M
+(        mouseWaitTo\(READ\);) s
+5 115 M
+(        return inportb\(0x60\);) s
+5 104 M
+(}) s
+5 82 M
+(static void mouseSendCommand\(unsigned char command\)) s
+5 71 M
+({) s
+5 60 M
+(        mouseWaitTo\(WRITE\);) s
+5 49 M
+(        outportb\(0x64, 0xD4\);) s
+5 27 M
+(        mouseWaitTo\(WRITE\);) s
+5 16 M
+(        outportb\(0x60, command\);) s
+_R
+S
+%%Page: (2) 11
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 2 def
+/fname (mouse_driver.c) def
+/fdir () def
+/ftail (mouse_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (6-2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        mouseRead\(\);) s
+5 720 M
+(        return;) s
+5 709 M
+(}) s
+5 687 M
+(void initMouse\(void\)) s
+5 676 M
+({) s
+5 665 M
+(        unsigned char byte;) s
+5 654 M
+(        ) s
+5 643 M
+(        mouseWrite\(0xA8\);) s
+5 632 M
+(        mouseRead\(\);) s
+5 621 M
+(        mouseWrite\(0x20\);) s
+5 610 M
+(        ) s
+5 599 M
+(        byte = mouseRead\(\);) s
+5 588 M
+(        byte = byte | ENABLE_IRQ12;) s
+5 577 M
+(        byte = byte & DISABLE_MOUSE_CLOCK;) s
+5 566 M
+(        ) s
+5 555 M
+(        mouseRead\(\);) s
+5 533 M
+(        mouseWrite\(0x60\);) s
+5 522 M
+(        mouseWaitTo\(WRITE\);) s
+5 511 M
+(        outportb\(0x60, byte\);) s
+5 500 M
+(        mouseRead\(\);) s
+5 489 M
+(        ) s
+5 478 M
+(        mouseSendCommand\(0xF6\);) s
+5 467 M
+(        mouseSendCommand\(0xF4\);) s
+5 456 M
+(        ) s
+5 445 M
+(        return;) s
+5 434 M
+(}) s
+5 412 M
+(/*-------------------------------MOUSE DRIVER---------------------------------*/) s
+5 390 M
+(static int left = 0, right = 0, col2 = POINTER_START_COL, row2 = POINTER_START_ROW, oldAmou) s
+5 379 M
+(nt = 0, counter = 0, rate = 0;) s
+5 357 M
+(static unsigned char bytes[6];) s
+5 335 M
+(static void checkPosition \(int *curCol, int *curRow\)) s
+5 324 M
+({) s
+5 313 M
+(        *curCol = col2;) s
+5 302 M
+(        *curRow = row2;) s
+5 291 M
+(        return;) s
+5 280 M
+(}) s
+5 269 M
+(static void checkButtons \(int *leftButton, int *rightButton, int *pressed\)) s
+5 258 M
+({) s
+5 247 M
+(        *leftButton = left;) s
+5 236 M
+(        *rightButton = right;) s
+5 225 M
+(        *pressed = oldAmount;) s
+5 214 M
+(        return;) s
+5 203 M
+(}) s
+5 181 M
+(void mouseDriver\(void\)) s
+5 170 M
+({) s
+5 159 M
+(        static int cycles = 0;) s
+5 148 M
+(        int amount = 0;) s
+5 126 M
+(        bytes[counter++] = mouseRead\(\);) s
+5 115 M
+(        ) s
+5 104 M
+(        if \(counter == 3\)) s
+5 93 M
+(        {                               ) s
+5 82 M
+(                counter = 0;) s
+5 71 M
+(                if \(\(\(bytes[0] & 0x80\) == 0x80\) || \(\(bytes[0] & 0x40\) == 0x40\)\)) s
+5 60 M
+(                        return;) s
+5 49 M
+(                ) s
+5 38 M
+(                amount = \(left = \(\(bytes[0] & 0x01\) == 0x01\)\);) s
+5 27 M
+(                amount += \(right = \(\(bytes[0] & 0x02\) == 0x02\)\);) s
+5 16 M
+(                amount += \(\(bytes[0] & 0x04\) == 0x04\);) s
+5 5 M
+(        ) s
+_R
+S
+%%Page: (3) 12
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 3 def
+/fname (mouse_driver.c) def
+/fdir () def
+/ftail (mouse_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (6-3) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                if \(oldAmount == amount\)) s
+5 731 M
+(                {) s
+5 720 M
+(                        col2 += \(\(\(int\)bytes[1]\) - \(256 * \(\(bytes[0] & 0x10\) == 0x10\)\)\);) s
+5 709 M
+(                        col2 = \(col2 >= SCREEN_WIDTH\) ? SCREEN_WIDTH - 1: col2;) s
+5 698 M
+(                        col2 = \(col2 < 0\) ? 0 : col2;) s
+5 687 M
+(                                ) s
+5 676 M
+(                        row2 -= \(\(\(int\)bytes[2]\) - \(256 * \(\(bytes[0] & 0x20\) == 0x20\)\)\);) s
+5 665 M
+(                        row2 = \(row2 >= SCREEN_HEIGTH\) ? SCREEN_HEIGTH - 1: row2;) s
+5 654 M
+(                        row2 = \(row2 < 0\) ? 0 : row2;) s
+5 643 M
+(                }) s
+5 632 M
+(                else) s
+5 621 M
+(                        oldAmount = amount;) s
+5 610 M
+(        }) s
+5 599 M
+(        if \(cycles == rate\)) s
+5 588 M
+(        {) s
+5 577 M
+(                refreshMouse\(\);) s
+5 566 M
+(                cycles = 0;) s
+5 555 M
+(        }) s
+5 544 M
+(        else) s
+5 533 M
+(                ++cycles;) s
+5 511 M
+(        return;) s
+5 500 M
+(}) s
+5 478 M
+(/*-------------------------------MOUSE REFRESHING-----------------------------*/) s
+5 456 M
+(static int buttons[4] = {0, 0, 0, 0}, col[3] = {0, 0, 0}, row[3] = {0, 0, 0}, points[4] = {) s
+5 445 M
+(0, 0, 0, 0}, amount[2] = {0, 0}, copying = 0, copyed = 0, painting = 0, state = 0, enabled ) s
+5 434 M
+(= 1;) s
+5 412 M
+(static char buffer[VIDEO_MEMORY_SIZE], buf1[SCREEN_SIZE + 21], buf2[SCREEN_SIZE + 21];) s
+5 390 M
+(int checkMouseActivity\(void\)) s
+5 379 M
+({) s
+5 368 M
+(        if \(state\)) s
+5 357 M
+(        {) s
+5 346 M
+(                state = 0;) s
+5 335 M
+(                return 1;) s
+5 324 M
+(        }) s
+5 313 M
+(        return 0;) s
+5 302 M
+(}) s
+5 280 M
+(static void setCoordinates\(void\)) s
+5 269 M
+({) s
+5 258 M
+(        points[UPPER_X] = col[OLD];) s
+5 247 M
+(        points[UPPER_Y] = row[OLD];) s
+5 236 M
+(        points[LOWER_X] = col[NEW];) s
+5 225 M
+(        points[LOWER_Y] = row[NEW];) s
+5 203 M
+(        return;) s
+5 192 M
+(}) s
+5 170 M
+(static void checkCoordinates\(void\)) s
+5 159 M
+({) s
+5 148 M
+(        int tmp = 0;) s
+5 126 M
+(        if \(points[UPPER_X] > points[LOWER_X]\)) s
+5 115 M
+(        {) s
+5 104 M
+(                tmp = points[UPPER_X];) s
+5 93 M
+(                points[UPPER_X] = points[LOWER_X];) s
+5 82 M
+(                points[LOWER_X] = tmp;) s
+5 71 M
+(        }) s
+5 60 M
+(        ) s
+5 49 M
+(        if \(points[UPPER_Y] > points[LOWER_Y]\)) s
+5 38 M
+(        {               ) s
+5 27 M
+(                tmp = points[UPPER_Y];) s
+5 16 M
+(                points[UPPER_Y] = points[LOWER_Y];) s
+5 5 M
+(                points[LOWER_Y] = tmp;) s
+_R
+S
+%%Page: (4) 13
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 4 def
+/fname (mouse_driver.c) def
+/fdir () def
+/ftail (mouse_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (6-4) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        }) s
+5 720 M
+(        return;) s
+5 709 M
+(}) s
+5 687 M
+(static void paste\(char *area, int size, int width\)) s
+5 676 M
+({) s
+5 665 M
+(        int i, j;) s
+5 643 M
+(        for \(i = 0 ; i < size / width ; ++i\)) s
+5 632 M
+(        {) s
+5 621 M
+(                for \(j = 0 ; j < width * 2 ; j += 2\)) s
+5 610 M
+(                {) s
+5 599 M
+(                        buf1[\(i * \(width + 1\)\) + j / 2] = area[2 * \(i * width\) + j + 1];) s
+5 588 M
+(                        buf2[\(i * \(width + 1\)\) + j / 2] = area[2 * \(i * width\) + j];) s
+5 577 M
+(                }) s
+5 566 M
+(                buf1[\(i * \(width + 1\)\) + j / 2] = VIDEO_COLOR;) s
+5 555 M
+(                buf2[\(i * \(width + 1\)\) + j / 2] = '\\n';) s
+5 544 M
+(        }) s
+5 522 M
+(        write\(STDIN, \(void *\)buf2, size + size / width - 1\);) s
+5 511 M
+(        write\(IN_ATT, \(void *\)buf1, size + size / width - 1\);) s
+5 489 M
+(        return;) s
+5 478 M
+(}) s
+5 456 M
+(static void processButton\(int press\)) s
+5 445 M
+({) s
+5 434 M
+(        switch \(press\)) s
+5 423 M
+(        {) s
+5 412 M
+(                case 1:) s
+5 401 M
+(                        if \(painting\)) s
+5 390 M
+(                        {) s
+5 379 M
+(                                checkCoordinates\(\);) s
+5 368 M
+(                                paintArea\(points[UPPER_X], points[UPPER_Y], points[LOWER_X]) s
+5 357 M
+(, points[LOWER_Y]\);) s
+5 346 M
+(                        }) s
+5 335 M
+(                        copying = painting = 1;) s
+5 324 M
+(                        copyed = 0;) s
+5 313 M
+(                        checkPosition\(&col[OLD], &row[OLD]\);) s
+5 302 M
+(                        col[NEW] = col[OLD];) s
+5 291 M
+(                        row[NEW] = row[OLD];) s
+5 280 M
+(                        setCoordinates\(\);) s
+5 269 M
+(                        checkCoordinates\(\);) s
+5 258 M
+(                        paintArea\(points[UPPER_X], points[UPPER_Y], points[LOWER_X], points) s
+5 247 M
+([LOWER_Y]\);) s
+5 236 M
+(                        break;) s
+5 225 M
+(                case 2:) s
+5 214 M
+(                        if \(copyed\)) s
+5 203 M
+(                        {) s
+5 192 M
+(                                checkCoordinates\(\);) s
+5 181 M
+(                                if \(painting\)) s
+5 170 M
+(                                        paintArea\(points[UPPER_X], points[UPPER_Y], points[) s
+5 159 M
+(LOWER_X], points[LOWER_Y]\);) s
+5 148 M
+(                                paste\(buffer, \(points[LOWER_X] - points[UPPER_X] + 1\) * \(po) s
+5 137 M
+(ints[LOWER_Y] - points[UPPER_Y] + 1\), \(points[LOWER_X] - points[UPPER_X]\) + 1\);) s
+5 126 M
+(                                painting = 0;) s
+5 115 M
+(                        }) s
+5 104 M
+(                        break;) s
+5 93 M
+(                case -1:) s
+5 82 M
+(                        if \(painting\)) s
+5 71 M
+(                        {) s
+5 60 M
+(                                checkCoordinates\(\);) s
+5 49 M
+(                                paintArea\(points[UPPER_X], points[UPPER_Y], points[LOWER_X]) s
+5 38 M
+(, points[LOWER_Y]\);) s
+5 27 M
+(                        }) s
+5 16 M
+(                        checkPosition\(&col[NEW], &row[NEW]\);) s
+5 5 M
+(                        setCoordinates\(\);) s
+_R
+S
+%%Page: (5) 14
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 5 def
+/fname (mouse_driver.c) def
+/fdir () def
+/ftail (mouse_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (6-5) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                        checkCoordinates\(\);) s
+5 731 M
+(                        paintArea\(points[UPPER_X], points[UPPER_Y], points[LOWER_X], points) s
+5 720 M
+([LOWER_Y]\);) s
+5 709 M
+(                        copyArea\(points[UPPER_X], points[UPPER_Y], points[LOWER_X], points[) s
+5 698 M
+(LOWER_Y], buffer\);) s
+5 687 M
+(                        copying = 0;) s
+5 676 M
+(                        painting = copyed = 1;) s
+5 665 M
+(                        break;) s
+5 654 M
+(                case -2:case 3:case -3:) s
+5 643 M
+(                        break;) s
+5 632 M
+(                default:) s
+5 621 M
+(                        break;) s
+5 610 M
+(        }) s
+5 599 M
+(        return;) s
+5 588 M
+(}) s
+5 566 M
+(static void cleanIfNeeded\(void\)) s
+5 555 M
+({) s
+5 544 M
+(        if \(painting\)) s
+5 533 M
+(        {) s
+5 522 M
+(                if \(copying\)) s
+5 511 M
+(                {) s
+5 500 M
+(                        checkPosition\(&col[NEW], &row[NEW]\);    ) s
+5 489 M
+(                        setCoordinates\(\);) s
+5 478 M
+(                }) s
+5 467 M
+(                checkCoordinates\(\);) s
+5 456 M
+(                paintArea\(points[UPPER_X], points[UPPER_Y], points[LOWER_X], points[LOWER_Y) s
+5 445 M
+(]\);) s
+5 434 M
+(                copyed = copying = painting = 0;) s
+5 423 M
+(        }) s
+5 412 M
+(        return;) s
+5 401 M
+(}) s
+5 379 M
+(void setMouseState\(int newState\)) s
+5 368 M
+({) s
+5 357 M
+(        enabled = newState;) s
+5 346 M
+(        return;) s
+5 335 M
+(}) s
+5 313 M
+(void setMouseRate \(int newRate\)) s
+5 302 M
+({) s
+5 291 M
+(        rate = newRate;) s
+5 280 M
+(        return;) s
+5 269 M
+(}) s
+5 247 M
+(void refreshMouse \(void\)) s
+5 236 M
+({) s
+5 225 M
+(        int press = 0, i;) s
+5 214 M
+(        ) s
+5 203 M
+(        checkButtons\(&buttons[LEFT_NEW], &buttons[RIGHT_NEW], &amount[NEW]\);) s
+5 192 M
+(        ) s
+5 181 M
+(        if \(amount[NEW] != amount[OLD]\)) s
+5 170 M
+(        {) s
+5 159 M
+(                if \(enabled\)) s
+5 148 M
+(                {) s
+5 137 M
+(                        if \(amount[NEW] > 1 || amount[OLD] > 1\)) s
+5 126 M
+(                                cleanIfNeeded\(\);) s
+5 115 M
+(                        else) s
+5 104 M
+(                        {) s
+5 93 M
+(                                for \(i = 0 ; i < 2  ; ++i\) ) s
+5 82 M
+(                                        if \(buttons[i] != buttons[i + 2]\)) s
+5 71 M
+(                                        {) s
+5 60 M
+(                                                buttons[i] = buttons[i + 2];) s
+5 49 M
+(                                                press = \(buttons[i] ? \(i + 1\) : \(\(i + 1\) * ) s
+5 38 M
+(\(-1\)\)\);) s
+5 27 M
+(                                                break;) s
+5 16 M
+(                                        }) s
+5 5 M
+(                                processButton\(press\);) s
+_R
+S
+%%Page: (6) 15
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 6 def
+/fname (mouse_driver.c) def
+/fdir () def
+/ftail (mouse_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (6-6) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                        }) s
+5 731 M
+(                        amount[OLD] = amount[NEW];) s
+5 720 M
+(                }) s
+5 709 M
+(                state = 1;) s
+5 698 M
+(        }) s
+5 687 M
+(        else) s
+5 676 M
+(        {) s
+5 665 M
+(                checkPosition\(&col[NEW], &row[NEW]\);) s
+5 654 M
+(                if \(row[TMP] != row[NEW] || col[TMP] != col[NEW]\)) s
+5 643 M
+(                {) s
+5 632 M
+(                        if \(enabled\)) s
+5 621 M
+(                        {) s
+5 610 M
+(                                setPointerPosition\(row[NEW], col[NEW]\);) s
+5 599 M
+(                                row[TMP] = row[NEW];) s
+5 588 M
+(                                col[TMP] = col[NEW];) s
+5 577 M
+(                                ) s
+5 566 M
+(                                if \(copying\)) s
+5 555 M
+(                                {) s
+5 544 M
+(                                        if \(painting\)) s
+5 533 M
+(                                        {) s
+5 522 M
+(                                                checkCoordinates\(\);) s
+5 511 M
+(                                                paintArea\(points[UPPER_X], points[UPPER_Y],) s
+5 500 M
+( points[LOWER_X], points[LOWER_Y]\);) s
+5 489 M
+(                                        }) s
+5 478 M
+(                                        setCoordinates\(\);) s
+5 467 M
+(                                        checkCoordinates\(\);) s
+5 456 M
+(                                        paintArea\(points[UPPER_X], points[UPPER_Y], points[) s
+5 445 M
+(LOWER_X], points[LOWER_Y]\);) s
+5 434 M
+(                                        painting = 1;) s
+5 423 M
+(                                }) s
+5 412 M
+(                        }) s
+5 401 M
+(                        state = 1;) s
+5 390 M
+(                }) s
+5 379 M
+(        }) s
+5 368 M
+(}) s
+_R
+S
+%%Page: (1) 16
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (queue.c) def
+/fdir () def
+/ftail (queue.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:07:14 2009) def
+/pagenumstr (7-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *  \\file queue.c) s
+5 720 M
+( *  \\author Nicolas Purita) s
+5 709 M
+( *) s
+5 698 M
+( *  \\brief      Make a circular buffer queue. The first time that the keyboard want to enqu) s
+5 687 M
+(eue, this) s
+5 676 M
+( *              buffer start to save in position 1 and then continue as normally. If the po) s
+5 665 M
+(inter where it) s
+5 654 M
+( *              is adding is equal to the size of the queue start in the beginning of the b) s
+5 643 M
+(uffer but at this) s
+5 632 M
+( *              time it will enqueue to the position 0.) s
+5 621 M
+( */) s
+5 588 M
+(#include "queue.h") s
+5 555 M
+(/*) s
+5 544 M
+( * Function Defines) s
+5 533 M
+( */) s
+5 500 M
+(static int curr = 0, tail = 0;) s
+5 467 M
+(int charEnque \( Keycode elem \)) s
+5 456 M
+({) s
+5 445 M
+(        if \( curr == KEYBOARD_BUFFER_SIZE - 1\)) s
+5 434 M
+(        {) s
+5 423 M
+(                if\( tail != 0 \)) s
+5 412 M
+(                {) s
+5 401 M
+(                        keyboardBuffer[curr] = elem;) s
+5 390 M
+(                        curr = 0;) s
+5 379 M
+(                }else) s
+5 368 M
+(                        --curr; ) s
+5 357 M
+(        }) s
+5 346 M
+(        else) s
+5 335 M
+(        {) s
+5 324 M
+(                if\( curr+1 == tail \)) s
+5 313 M
+(                        --curr;) s
+5 302 M
+(                else) s
+5 291 M
+(                        keyboardBuffer[curr++] = elem;) s
+5 280 M
+(        }) s
+5 269 M
+(        return TRUE;) s
+5 247 M
+(}) s
+5 225 M
+(Keycode charDeque \( void \)) s
+5 214 M
+({) s
+5 203 M
+(         if\( tail == KEYBOARD_BUFFER_SIZE \)) s
+5 192 M
+(                tail = 0;) s
+5 181 M
+(         if\( tail == curr \)) s
+5 170 M
+(                 return '\\0';) s
+5 148 M
+(         return keyboardBuffer[tail++];) s
+5 137 M
+(}) s
+5 104 M
+(int kbBufferIsEmpty\( void \)) s
+5 93 M
+({) s
+5 82 M
+(        return curr == tail;) s
+5 71 M
+(}) s
+_R
+S
+%%Page: (1) 17
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (screensaver.c) def
+/fdir () def
+/ftail (screensaver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (8-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( * \\file screensaver.c) s
+5 720 M
+( *) s
+5 709 M
+( * \\brief       It show a screensaver if nothing happen and dissapear if any interrypt) s
+5 698 M
+( *                      has occurred, it will dissappear.) s
+5 687 M
+( */) s
+5 665 M
+(#include "config.h") s
+5 654 M
+(#include "video_driver.h") s
+5 643 M
+(#include "stdio.h") s
+5 632 M
+(#include "keyboard_driver.h") s
+5 621 M
+(#include "mouse_driver.h") s
+5 610 M
+(#include "system.h") s
+5 588 M
+(char bufferShell[VIDEO_MEMORY_SIZE];) s
+5 577 M
+(static int isFirstTime = 1;) s
+5 566 M
+(int screenSaverTime = DEFAULT_SCREENSAVER_TIME;) s
+5 555 M
+(static int rowBackup, colBackup,rowMouseBackup, colMouseBackup;) s
+5 533 M
+(int screenSaver\( void \)) s
+5 522 M
+({) s
+5 511 M
+(        static int colors[] = {0x01, 0x02, 0x03, 0x0F, 0x04, 0x05, 0x0F, 0x06, 0x01, 0x02};) s
+5 500 M
+(        int status = LIVE;) s
+5 489 M
+(        if\( isFirstTime \)) s
+5 478 M
+(        {) s
+5 467 M
+(                copyArea\(0,0,SCREEN_WIDTH-1,SCREEN_HEIGTH-1, bufferShell\);) s
+5 456 M
+(                getCursorPosition\(&rowBackup, &colBackup\);) s
+5 445 M
+(                getPointerPosition\(&rowMouseBackup, &colMouseBackup\);) s
+5 434 M
+(                clearScreen\(\);) s
+5 423 M
+(                putColoredStringAtFixedPos\("ARK OS 1.0", colors, 13, SCREEN_HEIGTH/2, SCREE) s
+5 412 M
+(N_WIDTH/2 - 6\);) s
+5 401 M
+(                setCursorVisibility\(0\);) s
+5 390 M
+(                setPointerVisibility\(0\);) s
+5 379 M
+(                isFirstTime = 0;) s
+5 368 M
+(                refreshScreen\(\);) s
+5 357 M
+(        }) s
+5 346 M
+(        else) s
+5 335 M
+(        {) s
+5 324 M
+(                if\( checkMouseActivity\(\) || checkKeyboardActivity\(\) \)) s
+5 313 M
+(                {) s
+5 302 M
+(                        pasteArea\(CURSOR_START_COL,CURSOR_START_ROW,SCREEN_WIDTH-1,SCREEN_H) s
+5 291 M
+(EIGTH-1, bufferShell \);) s
+5 280 M
+(                        setCursorVisibility\(1\);) s
+5 269 M
+(                        setPointerVisibility\(1\);) s
+5 258 M
+(                        setCursorPosition\( rowBackup, colBackup \);) s
+5 247 M
+(                        setPointerPosition\(rowMouseBackup, colMouseBackup \);) s
+5 236 M
+(                        isFirstTime = 1;) s
+5 225 M
+(                        status = DEAD;) s
+5 214 M
+(                }) s
+5 203 M
+(        }) s
+5 192 M
+(        return status;) s
+5 181 M
+(}) s
+5 148 M
+(int getScreenSaverTime\( void \)) s
+5 137 M
+({) s
+5 126 M
+(        return screenSaverTime;) s
+5 115 M
+(}) s
+5 82 M
+(void setScreenSaverTime\( int time \)) s
+5 71 M
+({) s
+5 60 M
+(        screenSaverTime = time;) s
+5 49 M
+(}) s
+_R
+S
+%%Page: (1) 18
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (shell.c) def
+/fdir () def
+/ftail (shell.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:47:09 2009) def
+/pagenumstr (9-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      File shell.c) s
+5 720 M
+( *      ) s
+5 709 M
+( *              Brief ) s
+5 698 M
+( *) s
+5 687 M
+( *              Author Guido Marucci Blas, Nicolas Purita & Luciano Zemin) s
+5 676 M
+( *) s
+5 665 M
+( */) s
+5 654 M
+(#include "config.h") s
+5 643 M
+(#include "stdio.h") s
+5 632 M
+(#include "video_driver.h") s
+5 621 M
+(#include "unistd.h") s
+5 610 M
+(#include "system.h") s
+5 599 M
+(#include "string.h") s
+5 588 M
+(#include "colors.h") s
+5 577 M
+(#include "mouse_driver.h") s
+5 566 M
+(#include "screensaver.h") s
+5 555 M
+(#include "video_adapter.h") s
+5 533 M
+(#define MAX_LINE 2000) s
+5 511 M
+(static int firstRun = 1;) s
+5 500 M
+(static int status = DEAD;) s
+5 489 M
+(static char lineBuffer[MAX_LINE];) s
+5 478 M
+(static char enteredCommand[MAX_LINE];) s
+5 467 M
+(static int index = 0;) s
+5 456 M
+(static char * prompt = "root@ArkOS$>";) s
+5 434 M
+(typedef void \(*shellFuncT\)\(char *\);) s
+5 412 M
+(typedef struct {) s
+5 401 M
+(        char * command;) s
+5 390 M
+(        shellFuncT func;) s
+5 379 M
+(        char * helpMsg;) s
+5 368 M
+(} commandT;) s
+5 346 M
+(typedef int \(*pFuncT\)\(char*\);) s
+5 324 M
+(typedef struct {) s
+5 313 M
+(        char * name;) s
+5 302 M
+(        pFuncT func;) s
+5 291 M
+(        char * helpMsg;) s
+5 280 M
+(} propertyT;) s
+5 258 M
+(/* SYSTEM PROPERTIES */) s
+5 247 M
+(static int getColor\(char *value, int * color\)) s
+5 236 M
+({) s
+5 225 M
+(        toLowerCase\(value\);) s
+5 214 M
+(        if \( strcmp\(value, "black"\) == 0  \)) s
+5 203 M
+(                *color = setColor\(BLACK,BLACK\);) s
+5 192 M
+(        else if \( strcmp\(value, "blue"\) == 0 \)) s
+5 181 M
+(                *color = setColor\(BLUE,BLUE\);) s
+5 170 M
+(        else if \( strcmp\(value, "green"\) == 0 \)) s
+5 159 M
+(                *color = setColor\(GREEN,GREEN\);) s
+5 148 M
+(        else if \( strcmp\(value, "cyan"\) == 0 \)) s
+5 137 M
+(                *color = setColor\(CYAN,CYAN\);) s
+5 126 M
+(        else if \( strcmp\(value, "red"\) == 0 \)) s
+5 115 M
+(                *color = setColor\(RED,RED\);) s
+5 104 M
+(        else if \( strcmp\(value, "magenta"\) == 0 \)) s
+5 93 M
+(                *color = setColor\(MAGENTA,MAGENTA\);) s
+5 82 M
+(        else if \( strcmp\(value, "brown"\) == 0 \)) s
+5 71 M
+(                *color = setColor\(BROWN,BROWN\);) s
+5 60 M
+(        else if \( strcmp\(value, "white"\) == 0 \)) s
+5 49 M
+(                *color = setColor\(WHITE,WHITE\);) s
+5 38 M
+(        else) s
+5 27 M
+(                return 0;) s
+5 16 M
+(        return 1;) s
+5 5 M
+(}) s
+_R
+S
+%%Page: (2) 19
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 2 def
+/fname (shell.c) def
+/fdir () def
+/ftail (shell.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:47:09 2009) def
+/pagenumstr (9-2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 731 M
+(static int pointerColor \( char * value \)) s
+5 720 M
+({) s
+5 709 M
+(        int color, row, col;) s
+5 687 M
+(        if \( getColor\(value, &color\) \)) s
+5 676 M
+(        {) s
+5 665 M
+(                setPointerColor\(color\);) s
+5 654 M
+(                getPointerPosition\(&row, &col\);) s
+5 643 M
+(                setPointerPosition\(row, col\);) s
+5 632 M
+(                refreshScreen\(\);) s
+5 621 M
+(        }) s
+5 610 M
+(        else) s
+5 599 M
+(        {) s
+5 588 M
+(                puts\("Error: Invalid Color - "\);) s
+5 577 M
+(                puts\(value\);) s
+5 566 M
+(                puts\(".\\n"\);) s
+5 555 M
+(                return 0;) s
+5 544 M
+(        }) s
+5 533 M
+(        return 1;) s
+5 522 M
+(}) s
+5 500 M
+(static int videoColor \( char * value \)) s
+5 489 M
+({) s
+5 478 M
+(        int color;) s
+5 456 M
+(        if \( getColor\(value, &color\) \)) s
+5 445 M
+(        {) s
+5 434 M
+(                color &= 0xF;) s
+5 423 M
+(                setPointerVisibility\(0\);) s
+5 412 M
+(                setVideoColor\(color\);) s
+5 401 M
+(                updateColor\(\);) s
+5 390 M
+(                refreshScreen\(\);) s
+5 379 M
+(                setPointerVisibility\(1\);) s
+5 368 M
+(        }) s
+5 357 M
+(        else) s
+5 346 M
+(        {) s
+5 335 M
+(                puts\("Error: Invalid Color - "\);) s
+5 324 M
+(                puts\(value\);) s
+5 313 M
+(                puts\(".\\n"\);) s
+5 302 M
+(                return 0;) s
+5 291 M
+(        }) s
+5 280 M
+(        return 1;) s
+5 269 M
+(}) s
+5 247 M
+(static int tabStop \(char * value\)) s
+5 236 M
+({) s
+5 225 M
+(        int ts = toInt\(value\);) s
+5 214 M
+(        if \( setVideoTabStop\(ts\) != ts \)) s
+5 203 M
+(        {) s
+5 192 M
+(                puts\("Error: Invalid value - "\);) s
+5 181 M
+(                puts\(value\);) s
+5 170 M
+(                puts\(".\\n"\);) s
+5 159 M
+(                return 0;) s
+5 148 M
+(        }) s
+5 137 M
+(        return 1;) s
+5 126 M
+(}) s
+5 104 M
+(static int mouseRate \(char *value\)) s
+5 93 M
+({) s
+5 82 M
+(        int rate = toInt\(value\);) s
+5 71 M
+(        setMouseRate\(rate\);) s
+5 60 M
+(        return 1;) s
+5 49 M
+(}) s
+5 27 M
+(static int pointerVisible \(char *value\)) s
+5 16 M
+({) s
+5 5 M
+(        toLowerCase\(value\);) s
+_R
+S
+%%Page: (3) 20
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 3 def
+/fname (shell.c) def
+/fdir () def
+/ftail (shell.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:47:09 2009) def
+/pagenumstr (9-3) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        if \(strcmp\(value,"true"\) == 0\)) s
+5 731 M
+(                setPointerVisibility\(1\);) s
+5 720 M
+(        else if \(strcmp\(value, "false"\) == 0 \)) s
+5 709 M
+(                setPointerVisibility\(0\);) s
+5 698 M
+(        else) s
+5 687 M
+(        {) s
+5 676 M
+(                puts\("Error: Invalid value - "\);) s
+5 665 M
+(                puts\(value\);) s
+5 654 M
+(                puts\(".\\n"\);) s
+5 643 M
+(                return 0;) s
+5 632 M
+(        }) s
+5 621 M
+(        return 1;) s
+5 610 M
+(}) s
+5 588 M
+(static int mouseEnable \(char *value\)) s
+5 577 M
+({) s
+5 566 M
+(        toLowerCase\(value\);) s
+5 555 M
+(        if \(strcmp\(value, "true"\) == 0\)) s
+5 544 M
+(        {) s
+5 533 M
+(                setPointerVisibility\(1\);) s
+5 522 M
+(                setMouseState\(ENABLED\);) s
+5 511 M
+(        }) s
+5 500 M
+(        else if \(strcmp\(value, "false"\) == 0\)) s
+5 489 M
+(        {) s
+5 478 M
+(                setPointerVisibility\(0\);) s
+5 467 M
+(                setMouseState\(DISABLED\);) s
+5 456 M
+(        }) s
+5 445 M
+(        else) s
+5 434 M
+(        {) s
+5 423 M
+(                puts\("Error: Invalid value - "\);) s
+5 412 M
+(                puts\(value\);) s
+5 401 M
+(                puts\(".\\n"\);) s
+5 390 M
+(                return 0;       ) s
+5 379 M
+(        }) s
+5 368 M
+(        refreshScreen\(\);) s
+5 357 M
+(        return 1;) s
+5 346 M
+(}) s
+5 324 M
+(static int screenSaverTime \(char *value\)) s
+5 313 M
+({) s
+5 302 M
+(        int time = toInt\(value\) * TICKS_PER_SECOND;) s
+5 291 M
+(        setScreenSaverTime\(time\);) s
+5 280 M
+(        return 1;) s
+5 269 M
+(}) s
+5 247 M
+(static propertyT properties[] = {) s
+5 236 M
+(        {"pointer-color", pointerColor, "Changes the mouse pointer's color. Valid colors: B) s
+5 225 M
+(LUE, GREEN, CYAN, RED and MAGENTA."},) s
+5 214 M
+(        {"video-color", videoColor, "Changes the video color. Valid colors: BLUE, GREEN, CY) s
+5 203 M
+(AN, RED and MAGENTA."},) s
+5 192 M
+(        {"tab-stop", tabStop, "Changes amount of spaces a tab stop inserts into a line."},) s
+5 181 M
+(        {"mouse-rate", mouseRate, "Changes the mouse rate. The amount of ticks before the m) s
+5 170 M
+(ouse refreshes it's position."},) s
+5 159 M
+(        {"pointer-visible", pointerVisible, "Changes the mouse's visibility but it will sti) s
+5 148 M
+(ll interrupt. Valid values 'true' or 'false'."},) s
+5 137 M
+(        {"mouse-enable", mouseEnable, "Turn on/off the mouse. Valid values 'true' or 'false) s
+5 126 M
+('"},) s
+5 115 M
+(        {"screensaver-time", screenSaverTime, "Changes the non-activity time required by th) s
+5 104 M
+(e screensaver to be launched."},) s
+5 93 M
+(        {"", NULL}) s
+5 82 M
+(};) s
+5 60 M
+(static int setProperty\(char *property, char *value\)) s
+5 49 M
+({) s
+5 38 M
+(        int i;) s
+5 27 M
+(        ) s
+5 16 M
+(        for \( i = 0; properties[i].func != NULL; ++i \)) s
+5 5 M
+(                if \( strcmp\(properties[i].name, property\) == 0 \)) s
+_R
+S
+%%Page: (4) 21
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 4 def
+/fname (shell.c) def
+/fdir () def
+/ftail (shell.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:47:09 2009) def
+/pagenumstr (9-4) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                        return properties[i].func\(value\);) s
+5 731 M
+(        puts\("Error: Invalid property - "\);) s
+5 720 M
+(        puts\(property\);) s
+5 709 M
+(        puts\(".\\n"\);) s
+5 698 M
+(        return 0;) s
+5 687 M
+(}) s
+5 665 M
+(static void printProperties \( char *value \)) s
+5 654 M
+({) s
+5 643 M
+(        int i;) s
+5 632 M
+(        puts\("System Properties:\\n"\);) s
+5 621 M
+(        for \( i = 0; properties[i].func != NULL; ++i \)) s
+5 610 M
+(        {) s
+5 599 M
+(                puts\("\\t - "\);) s
+5 588 M
+(                puts\(properties[i].name\);) s
+5 577 M
+(                puts\(": "\);) s
+5 566 M
+(                puts\(properties[i].helpMsg\);) s
+5 555 M
+(                puts\("\\n\\n"\);) s
+5 544 M
+(        }) s
+5 533 M
+(}) s
+5 511 M
+(/* END SYSTEM PROPERTIES */) s
+5 489 M
+(static commandT * getCommand \( char * command \);) s
+5 467 M
+(/* SHELL COMMANDS */) s
+5 456 M
+(static void clear\(char *\);) s
+5 445 M
+(static void echo\(char *\);) s
+5 434 M
+(static void logout\(char *\);) s
+5 423 M
+(static void help\(char *\);) s
+5 412 M
+(static void set\(char *\);) s
+5 401 M
+(static void reboot\(char *\);) s
+5 390 M
+(static void shutdown\(char *\);) s
+5 379 M
+(static void mkdir\(char *\);) s
+5 368 M
+(static void printPhrasing\(char *\);) s
+5 346 M
+(static commandT commands[] = {) s
+5 335 M
+(        {"clear", clear, "Clears Screen."},) s
+5 324 M
+(        {"echo", echo, "Prints the arguments on the standard output."},) s
+5 313 M
+(        {"logout", logout, "Terminates the shell application."},) s
+5 302 M
+(        {"help", help, "Prints this list of commands."},) s
+5 291 M
+(        {"set", set, "Sets a system property. Use: set property=value."},) s
+5 280 M
+(        {"reboot", reboot, "Reboots the system."},) s
+5 269 M
+(        {"shutdown", shutdown, "Shuts the system down."},) s
+5 258 M
+(        {"mkdir", mkdir, "Makes a new directory."},) s
+5 247 M
+(        {"print-sysproperties", printProperties, "Prints the lisf of system properties that) s
+5 236 M
+( can be set by the set command."},) s
+5 225 M
+(        {"print-statment", printPhrasing, "Prints the statment of the project."},) s
+5 214 M
+(        {"", NULL, ""}) s
+5 203 M
+(};) s
+5 181 M
+(static void printPhrasing\(char * value\)) s
+5 170 M
+({) s
+5 159 M
+(        static char * msg1 = "\\nObjetivo\\n\\tRealizar un programa que muestre algunas de las) s
+5 148 M
+( caracteristicas del Modo protegido de los microprocesadores de Intel.\\n\\tEnunciado\\n\\tEl t) s
+5 137 M
+(rabajo consta de un diskete booteable con GRUB instalado, el cual debe obtener de disco una) s
+5 126 M
+( imagen binaria que sera el programa que corra en Modo protegido.\\n\\tDicho programa debera ) s
+5 115 M
+(contener lo siguiente:\\n\\t\\ta\) Shell: El sistema debe proveer al usuario de un shell, para ) s
+5 104 M
+(poder ejecutar comandos.\\n\\t\\tb\) INT 80h: Crear las primitivas read\(\) y write\(\) ";) s
+5 93 M
+(        static char * msg2 = "para centralizar la lectura y la escritura de los dispositivo) s
+5 82 M
+(s. Dichas primitivas deben invocar la INT 80h.\\n\\t\\tc\) Driver de Mouse: El programa debera ) s
+5 71 M
+(poder manejar un cursor de texto en pantalla. Con el bot\303\263n izquierdo del Mouse presionado ) s
+5 60 M
+(se podra seleccionar cualquier parte de la pantalla \(copiar\) y con el boton derecho ";) s
+5 49 M
+(        static char * msg3 = "se podra \342\\200\\234pegar\342\\200\\235 lo seleccionado donde se enc) s
+5 38 M
+(uentre el cursor para ingreso de datos.\\n\\t\\td\) Salva pantalla: Por l\303\255nea de comando se po) s
+5 27 M
+(dra programar la cantidad de segundos en la que se activa el salva pantalla. El mismo dejar) s
+5 16 M
+(a de funcionar ante la presi\303\263n de una tecla o el movimiento del Mouse.\\n\\n";) s
+5 5 M
+(        puts\(msg1\);) s
+_R
+S
+%%Page: (5) 22
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 5 def
+/fname (shell.c) def
+/fdir () def
+/ftail (shell.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:47:09 2009) def
+/pagenumstr (9-5) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        puts\(msg2\);) s
+5 731 M
+(        puts\(msg3\);) s
+5 720 M
+(}) s
+5 698 M
+(static void mkdir\(char *value\)) s
+5 687 M
+({) s
+5 676 M
+(        puts\("jejejeje are you crazy!!!"\);) s
+5 665 M
+(}) s
+5 643 M
+(static void shutdown\(char *value\)) s
+5 632 M
+({) s
+5 621 M
+(        puts\("Shutting down the system...\\n"\);) s
+5 610 M
+(        puts\("...oops!!! function not implemented...Push the power button.\\n"\);) s
+5 599 M
+(}) s
+5 577 M
+(static void reboot\(char *value\)) s
+5 566 M
+({) s
+5 555 M
+(        rebootSystem\(\);) s
+5 544 M
+(}) s
+5 522 M
+(static void clear \( char * args \)) s
+5 511 M
+({) s
+5 500 M
+(        wait\(500\);) s
+5 489 M
+(        flushStdScreen\(\);) s
+5 478 M
+(        setPointerVisibility\(0\);) s
+5 467 M
+(        clearScreen\(\);) s
+5 456 M
+(        setCursorPosition\(0, 0\);) s
+5 445 M
+(        setPointerVisibility\(1\);) s
+5 434 M
+(}) s
+5 412 M
+(static void echo \( char * args \)) s
+5 401 M
+({) s
+5 390 M
+(        puts\(args\);) s
+5 379 M
+(        putchar\('\\n'\);) s
+5 368 M
+(}) s
+5 346 M
+(void logout \( char * args \)) s
+5 335 M
+({) s
+5 324 M
+(        puts\("[logout]\\n"\);) s
+5 313 M
+(        puts\("Exiting Shell...\\n"\);) s
+5 302 M
+(        status = DEAD;) s
+5 291 M
+(}) s
+5 269 M
+(static void help \( char * args \)) s
+5 258 M
+({) s
+5 247 M
+(        int i;) s
+5 236 M
+(        char * command;) s
+5 225 M
+(        commandT * cmd;) s
+5 203 M
+(        if \( \(command = strtok\(args, " "\)\) == NULL \)) s
+5 192 M
+(        {) s
+5 181 M
+(                puts\("Command list:\\n"\);) s
+5 170 M
+(                for \( i = 0; commands[i].func != NULL; ++i \)) s
+5 159 M
+(                {) s
+5 148 M
+(                        putchar\('\\t'\);) s
+5 137 M
+(                        puts\(commands[i].command\);) s
+5 126 M
+(                        puts\(" - "\);) s
+5 115 M
+(                        puts\(commands[i].helpMsg\);) s
+5 104 M
+(                        putchar\('\\n'\);) s
+5 93 M
+(                }) s
+5 82 M
+(        }) s
+5 71 M
+(        else if \( \(cmd = getCommand\(command\)\) != NULL \) ) s
+5 60 M
+(        {) s
+5 49 M
+(                puts\(command\);) s
+5 38 M
+(                puts\(": "\);) s
+5 27 M
+(                puts\(cmd->helpMsg\);) s
+5 16 M
+(                putchar\('\\n'\);) s
+5 5 M
+(        }) s
+_R
+S
+%%Page: (6) 23
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 6 def
+/fname (shell.c) def
+/fdir () def
+/ftail (shell.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:47:09 2009) def
+/pagenumstr (9-6) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        else) s
+5 731 M
+(                puts\("Command not found\\n"\);) s
+5 720 M
+(}) s
+5 698 M
+(static void set \( char * args \)) s
+5 687 M
+({) s
+5 676 M
+(        char * property, * value;) s
+5 654 M
+(        if \( \(property = strtok\(args, "="\)\) == NULL \)) s
+5 643 M
+(        {) s
+5 632 M
+(                puts\("Error: Invalid System Property\\n"\);) s
+5 621 M
+(                return;) s
+5 610 M
+(        }) s
+5 599 M
+(        if \( \(value = strtok\(NULL, "="\)\) == NULL \)) s
+5 588 M
+(        {) s
+5 577 M
+(                puts\("Error: Invalid Property Value\\n"\);) s
+5 566 M
+(                return;) s
+5 555 M
+(        }) s
+5 544 M
+(        setProperty\(property, value\);) s
+5 533 M
+(}) s
+5 511 M
+(/* END SHELL COMMANDS */) s
+5 489 M
+(static commandT * getCommand \( char * command \)) s
+5 478 M
+({) s
+5 467 M
+(        int i;) s
+5 445 M
+(        for \( i = 0; commands[i].func != NULL; ++i \)) s
+5 434 M
+(                if \( strcmp\(commands[i].command, command\) == 0 \)) s
+5 423 M
+(                        return &\(commands[i]\);) s
+5 412 M
+(        return NULL;) s
+5 401 M
+(}) s
+5 379 M
+(static void printPrompt\(\)) s
+5 368 M
+({) s
+5 357 M
+(        puts\(prompt\);) s
+5 346 M
+(}) s
+5 324 M
+(static void parseCommand \( void \)) s
+5 313 M
+({) s
+5 302 M
+(        commandT * cmd;) s
+5 291 M
+(        char *command, *args;) s
+5 269 M
+(        putchar\('\\n'\);) s
+5 258 M
+(        if \( index == 0 \)) s
+5 247 M
+(        {) s
+5 236 M
+(                printPrompt\(\);) s
+5 225 M
+(                return;) s
+5 214 M
+(        }) s
+5 203 M
+(        lineBuffer[index] = '\\0';) s
+5 192 M
+(        strcpy\(enteredCommand, lineBuffer\);) s
+5 181 M
+(        command = strtok\(enteredCommand, " "\);) s
+5 170 M
+(        args = strtok\(NULL, ""\);) s
+5 159 M
+(        if \( \(cmd = getCommand\(command\)\) != NULL \)) s
+5 148 M
+(                cmd->func\(args\);) s
+5 137 M
+(        else) s
+5 126 M
+(        {) s
+5 115 M
+(                puts\("shell: "\);) s
+5 104 M
+(                puts\(lineBuffer\);) s
+5 93 M
+(                puts\(": Invalid Command\\n"\);) s
+5 82 M
+(        }) s
+5 60 M
+(        index = 0;) s
+5 49 M
+(        if \( status == LIVE \) printPrompt\(\);) s
+5 38 M
+(}) s
+5 16 M
+(static void putBackspace \( void \)) s
+5 5 M
+({) s
+_R
+S
+%%Page: (7) 24
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 7 def
+/fname (shell.c) def
+/fdir () def
+/ftail (shell.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:47:09 2009) def
+/pagenumstr (9-7) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        if \( index == 0 \)) s
+5 731 M
+(                return;) s
+5 720 M
+(        putchar\('\\b'\);) s
+5 709 M
+(        --index;) s
+5 698 M
+(}) s
+5 676 M
+(static void parseBackspace \( void \)) s
+5 665 M
+({) s
+5 654 M
+(        int i, ts;) s
+5 632 M
+(        if \( lineBuffer[index] == '\\t' \)) s
+5 621 M
+(                for \( i = 0, ts = getVideoTabStop\(\); i < ts; ++i\)) s
+5 610 M
+(                        putBackspace\(\);) s
+5 599 M
+(        else) s
+5 588 M
+(                putBackspace\(\);) s
+5 577 M
+(}) s
+5 555 M
+(static void autoComplete \( void \)) s
+5 544 M
+({) s
+5 533 M
+(        /*) s
+5 522 M
+(         * Code for autocompliting command) s
+5 511 M
+(         */) s
+5 489 M
+(        /* If command could not be autocompleted print tab*/) s
+5 478 M
+(        index += getVideoTabStop\(\);) s
+5 467 M
+(        lineBuffer[index] = '\\t';) s
+5 456 M
+(        putchar\('\\t'\);) s
+5 445 M
+(}) s
+5 423 M
+(int shell \( void \)) s
+5 412 M
+({) s
+5 401 M
+(        int c;) s
+5 390 M
+(        unsigned char uc, att;) s
+5 368 M
+(        if \( firstRun \)) s
+5 357 M
+(        {) s
+5 346 M
+(                firstRun = 0;) s
+5 335 M
+(                status = LIVE;) s
+5 324 M
+(                puts\("Starting Shell...\\n"\);) s
+5 313 M
+(                puts\("\\tEnter 'help' for a list of commands.\\n"\);) s
+5 302 M
+(                puts\("\\tEnter 'help cmd' for the help message of 'cmd'.\\n\\n"\);) s
+5 291 M
+(                printPrompt\(\);) s
+5 280 M
+(        }) s
+5 258 M
+(        c = getchar\(\);) s
+5 247 M
+(        att = fgetc\(inatt\);) s
+5 225 M
+(        if \( c == EOF \)) s
+5 214 M
+(                return status;) s
+5 203 M
+(        uc = c;) s
+5 192 M
+(        if \( uc == '\\n' \)) s
+5 181 M
+(                parseCommand\(\);) s
+5 170 M
+(        else if \( uc == '\\b' \) ) s
+5 159 M
+(                parseBackspace\(\);) s
+5 148 M
+(        else if \( uc == '\\t' \)) s
+5 137 M
+(                autoComplete\(\);) s
+5 126 M
+(        else if \( index < MAX_LINE \)) s
+5 115 M
+(        {) s
+5 104 M
+(                lineBuffer[index++] = uc;) s
+5 93 M
+(                putchar\(uc\);) s
+5 82 M
+(                /*fputc\(att, outatt\);*/) s
+5 71 M
+(        }) s
+5 49 M
+(        return status;) s
+5 38 M
+(}) s
+_R
+S
+%%Page: (1) 25
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (stdio.c) def
+/fdir () def
+/ftail (stdio.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (10-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      File stdio.h) s
+5 720 M
+( *      ) s
+5 709 M
+( *              Brief) s
+5 698 M
+( *) s
+5 687 M
+( *              Author Guido Marucci Blas, Nicolas Purita & Luciano Zemin) s
+5 676 M
+( *) s
+5 665 M
+( */) s
+5 654 M
+(#include "stdio.h") s
+5 643 M
+(#include "system.h") s
+5 632 M
+(#include "string.h") s
+5 621 M
+(#include "unistd.h") s
+5 599 M
+(extern FILE fileSystem[];) s
+5 577 M
+(FILE * stdoutFile = &\(fileSystem[STDOUT]\);) s
+5 566 M
+(FILE * stdinFile = &\(fileSystem[STDIN]\);) s
+5 555 M
+(FILE * inattFile = &\(fileSystem[IN_ATT]\);) s
+5 544 M
+(FILE * outattFile = &\(fileSystem[OUT_ATT]\);) s
+5 522 M
+(int fputc \( int c, FILE * stream \)) s
+5 511 M
+({) s
+5 500 M
+(        if \( stream == NULL  \)) s
+5 489 M
+(                return EOF;) s
+5 478 M
+(        if \( write\(stream->fd, &c, 1\) != 1 \)) s
+5 467 M
+(                return EOF;) s
+5 456 M
+(        return c;) s
+5 445 M
+(}) s
+5 423 M
+(int fgetc \( FILE * stream \)) s
+5 412 M
+({) s
+5 401 M
+(        int c;) s
+5 390 M
+(        if \( stream == NULL \)) s
+5 379 M
+(                return EOF;) s
+5 368 M
+(        if \( read\(stream->fd, &c, 1\) != 1 \)) s
+5 357 M
+(                return EOF;) s
+5 346 M
+(        return c;) s
+5 335 M
+(}) s
+5 313 M
+(int fputs \( const char * s, FILE * stream \)) s
+5 302 M
+({) s
+5 291 M
+(        int ret;) s
+5 269 M
+(        if \( s == NULL || stream == NULL \)) s
+5 258 M
+(                return EOF;) s
+5 247 M
+(        if \( \(ret = write\(stream->fd, s, strlen\(s\)\)\) == EOF \)) s
+5 236 M
+(                return EOF;) s
+5 225 M
+(        return ret;) s
+5 214 M
+(}) s
+5 192 M
+(char * fgets \( char * s, int size, FILE * stream \)) s
+5 181 M
+({) s
+5 170 M
+(        if \( stream == NULL || s == NULL || size <= 0 \)) s
+5 159 M
+(                return NULL;) s
+5 148 M
+(        if \( read\(stream->fd, s, size\) == EOF \)) s
+5 137 M
+(                return NULL;) s
+5 126 M
+(        return s;) s
+5 115 M
+(}) s
+5 93 M
+(void flush \( FILE * stream \)) s
+5 82 M
+({) s
+5 71 M
+(        if \( stream == NULL \)) s
+5 60 M
+(                return;) s
+5 49 M
+(        stream->ptr = stream->buffer;) s
+5 38 M
+(}) s
+_R
+S
+%%Page: (1) 26
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (string.c) def
+/fdir () def
+/ftail (string.c) def
+% User defined strings:
+/fmodstr (lun jun 08 10:24:27 2009) def
+/pagenumstr (11-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      File string.c) s
+5 720 M
+( *) s
+5 709 M
+( *              Brief: Implementation of string.h. String releated functions.) s
+5 698 M
+( *) s
+5 687 M
+( *              Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin) s
+5 676 M
+( */) s
+5 665 M
+(#include "string.h") s
+5 632 M
+(void * memcpy\(void * dest, const void * source, size_t n\)) s
+5 621 M
+({) s
+5 610 M
+(        size_t i;) s
+5 588 M
+(        if \( dest == NULL || source == NULL \)) s
+5 577 M
+(                return NULL;) s
+5 555 M
+(        for \( i = 0; i < n; ++i \) ) s
+5 544 M
+(                \(\(char *\)dest\)[i] = \(\(char *\)source\)[i];) s
+5 533 M
+(        ) s
+5 522 M
+(        return dest;) s
+5 511 M
+(}) s
+5 489 M
+(int strlen \( const char * str \)) s
+5 478 M
+({) s
+5 467 M
+(        int counter = 0;) s
+5 445 M
+(        if \( str == NULL \)) s
+5 434 M
+(                return -1;) s
+5 423 M
+(        ) s
+5 412 M
+(        while \( *str++ != '\\0' \)) s
+5 401 M
+(                ++counter;) s
+5 390 M
+(        return counter;) s
+5 379 M
+(}) s
+5 357 M
+(char * strtok \( char * s, char * tokens \)) s
+5 346 M
+({) s
+5 335 M
+(        static char * string,  * ret, * ptr;) s
+5 324 M
+(        int i, tokensLen;) s
+5 313 M
+(        char * temp;) s
+5 291 M
+(        if \( tokens == NULL || \(s == NULL && string == NULL\) \)) s
+5 280 M
+(                return NULL;) s
+5 269 M
+(        else if \( s != NULL \)) s
+5 258 M
+(        {) s
+5 247 M
+(                string = s;) s
+5 236 M
+(                ptr = string;) s
+5 225 M
+(        }) s
+5 203 M
+(        ret = ptr;) s
+5 192 M
+(        tokensLen = strlen\(tokens\);) s
+5 181 M
+(        while \( *ptr != '\\0' \)) s
+5 170 M
+(        {) s
+5 159 M
+(                for \( i = 0; i < tokensLen; ++i \)) s
+5 148 M
+(                        if \( \(*ptr == tokens[i]\) \)) s
+5 137 M
+(                        {) s
+5 126 M
+(                                if \( *ret != *ptr \)) s
+5 115 M
+(                                {) s
+5 104 M
+(                                        *ptr++ = '\\0';) s
+5 93 M
+(                                        return ret;) s
+5 82 M
+(                                }) s
+5 71 M
+(                                else) s
+5 60 M
+(                                        ret = ptr + 1;) s
+5 49 M
+(                        }) s
+5 38 M
+(                ++ptr;  ) s
+5 27 M
+(        }) s
+5 16 M
+(        if \( ret != ptr \)) s
+5 5 M
+(        {) s
+_R
+S
+%%Page: (2) 27
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 2 def
+/fname (string.c) def
+/fdir () def
+/ftail (string.c) def
+% User defined strings:
+/fmodstr (lun jun 08 10:24:27 2009) def
+/pagenumstr (11-2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                temp = ret;) s
+5 731 M
+(                ret = ptr;) s
+5 720 M
+(                return temp;) s
+5 709 M
+(        }) s
+5 698 M
+(        return NULL;) s
+5 687 M
+(}) s
+5 665 M
+(int strcmp \( char * a, char * b \)) s
+5 654 M
+({) s
+5 643 M
+(        for \(; *a && *b; ++a, ++b \)) s
+5 632 M
+(                if \( *a == *b \)) s
+5 621 M
+(                        continue;) s
+5 610 M
+(                else) s
+5 599 M
+(                        return *a - *b;) s
+5 588 M
+(        ) s
+5 577 M
+(        return *a - *b;) s
+5 566 M
+(}) s
+5 544 M
+(char * strcpy \( char * dest, char * source \)) s
+5 533 M
+({) s
+5 522 M
+(        char * ret = dest;) s
+5 511 M
+(        while \(  \(*dest++ = *source++\) != '\\0' \);) s
+5 500 M
+(        return ret;) s
+5 489 M
+(}) s
+5 467 M
+(int toInt\( char * string \)) s
+5 456 M
+({) s
+5 445 M
+(        int num=0;) s
+5 423 M
+(        while \( *string != '\\0' && '0' <= *string && *string <= '9' \)) s
+5 412 M
+(                num = num * 10 + *string++ - '0';) s
+5 390 M
+(        return num;) s
+5 379 M
+(}) s
+5 357 M
+(char * toLowerCase\( char * string \)) s
+5 346 M
+({) s
+5 335 M
+(        char *aux = string;) s
+5 313 M
+(        while \( *string != '\\0' \)) s
+5 302 M
+(        {) s
+5 291 M
+(                if \( 'A' <= *string && *string <= 'Z' \)) s
+5 280 M
+(                        *string += 0x20;) s
+5 269 M
+(                ++string;) s
+5 258 M
+(        }) s
+5 247 M
+(        return aux;) s
+5 236 M
+(}       ) s
+_R
+S
+%%Page: (1) 28
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (syscall.c) def
+/fdir () def
+/ftail (syscall.c) def
+% User defined strings:
+/fmodstr (dom jun 07 01:21:37 2009) def
+/pagenumstr (12-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/**) s
+5 731 M
+( *      File syscall.c) s
+5 720 M
+( *) s
+5 709 M
+( *              Brief: The implementation of all system calls) s
+5 698 M
+( *) s
+5 687 M
+( *              Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin) s
+5 676 M
+( */) s
+5 665 M
+(#include "file.h") s
+5 654 M
+(#include "string.h") s
+5 632 M
+(extern FILE fileSystem[];) s
+5 610 M
+(size_t _sys_write \( int fd, char * buffer, size_t n \)) s
+5 599 M
+({) s
+5 588 M
+(        FILE file;) s
+5 577 M
+(        char * fileBufferEnd;) s
+5 566 M
+(        int i;) s
+5 544 M
+(        if \( buffer == NULL || n == 0 \)) s
+5 533 M
+(                return -1;) s
+5 522 M
+(        if \( fd < 0 || fd >= MAX_OPEN_FILES \)) s
+5 511 M
+(                return -1;) s
+5 489 M
+(        file = fileSystem[fd];) s
+5 478 M
+(        if \( file.flag == 0 || \(file.flag & _WRITE\) != _WRITE \)) s
+5 467 M
+(                return -1;) s
+5 456 M
+(        fileBufferEnd = file.buffer + file.bufferSize - 1;) s
+5 445 M
+(        for \( i = 0; n && file.ptr <= fileBufferEnd; ++i, --n \)) s
+5 434 M
+(                *\(file.ptr++\) = *buffer++;) s
+5 423 M
+(        fileSystem[fd] = file;) s
+5 401 M
+(        return i;) s
+5 390 M
+(}) s
+5 368 M
+(size_t _sys_read \( int fd, char * buffer, size_t n \)) s
+5 357 M
+({) s
+5 346 M
+(        FILE file;) s
+5 335 M
+(        size_t i;) s
+5 324 M
+(        int remaining;) s
+5 302 M
+(        if \( buffer == NULL || n == 0 \)) s
+5 291 M
+(                return -1;) s
+5 280 M
+(        if \( fd < 0 || fd >= MAX_OPEN_FILES \)) s
+5 269 M
+(                return -1;) s
+5 247 M
+(        file = fileSystem[fd];) s
+5 236 M
+(        if \( file.buffer == file.ptr \)) s
+5 225 M
+(                return -1;) s
+5 214 M
+(        if \( file.flag == 0 || \(file.flag & _READ\) != _READ \)) s
+5 203 M
+(                return -1;) s
+5 192 M
+(        for \( i = 0; \(i < n\) && \(\(file.buffer + i\) < file.ptr\); ++i \) ) s
+5 181 M
+(                buffer[i] = file.buffer[i];) s
+5 170 M
+(        if \( i < n \)) s
+5 159 M
+(                file.ptr = file.buffer;) s
+5 148 M
+(        else) s
+5 137 M
+(        {) s
+5 126 M
+(                remaining = \(file.ptr - \(file.buffer + i\)\);) s
+5 115 M
+(                memcpy\(file.buffer, file.buffer + i, remaining\);) s
+5 104 M
+(                file.ptr = file.buffer + remaining;) s
+5 93 M
+(        }) s
+5 82 M
+(        fileSystem[fd] = file;) s
+5 60 M
+(        return i;) s
+5 49 M
+(}) s
+_R
+S
+%%Page: (1) 29
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (system.c) def
+/fdir () def
+/ftail (system.c) def
+% User defined strings:
+/fmodstr (jue jun 11 15:15:42 2009) def
+/pagenumstr (13-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      File system.c) s
+5 720 M
+( *) s
+5 709 M
+( *              Brief:) s
+5 698 M
+( *) s
+5 687 M
+( *              Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin) s
+5 676 M
+( */) s
+5 665 M
+(#include "system.h") s
+5 654 M
+(#include "shell.h") s
+5 643 M
+(#include "stdio.h") s
+5 632 M
+(#include "io.h") s
+5 621 M
+(#include "screensaver.h") s
+5 610 M
+(#include "config.h") s
+5 588 M
+(static int runningApp = TERMINAL, oldApp = TERMINAL;) s
+5 577 M
+(unsigned int waitCounter = 0;) s
+5 544 M
+(void rebootSystem\(void\)) s
+5 533 M
+({) s
+5 522 M
+(        unsigned char good = 0x02;) s
+5 511 M
+(        while \(\(good & 0x02\) != 0\)) s
+5 500 M
+(        good = inportb\(0x64\);) s
+5 489 M
+(    outportb\(0x64, 0xFE\);) s
+5 478 M
+(}) s
+5 445 M
+(static int terminal \( void \)) s
+5 434 M
+({) s
+5 423 M
+(        int c;) s
+5 401 M
+(        if \( \(c = getchar\(\)\) != EOF \)) s
+5 390 M
+(                putchar\(c\);) s
+5 379 M
+(        ) s
+5 368 M
+(        return LIVE;) s
+5 357 M
+(}) s
+5 335 M
+(static proccessT applications[] = {) s
+5 324 M
+(        terminal,) s
+5 313 M
+(        shell,) s
+5 302 M
+(        screenSaver) s
+5 291 M
+(};) s
+5 269 M
+(void launchApp \( int app \)) s
+5 258 M
+({) s
+5 247 M
+(        oldApp = runningApp;) s
+5 236 M
+(        runningApp = app;) s
+5 214 M
+(        return;) s
+5 203 M
+(}) s
+5 181 M
+(int isAppRunning\(int app\)) s
+5 170 M
+({) s
+5 159 M
+(        return app == runningApp;) s
+5 148 M
+(}) s
+5 126 M
+(void runApp \(void\)) s
+5 115 M
+({ ) s
+5 104 M
+(        if \(!\(applications[runningApp]\(\)\)\)) s
+5 93 M
+(        {) s
+5 82 M
+(                if\(runningApp == SCREEN_SAVER\)) s
+5 71 M
+(                        applications[runningApp = oldApp]\(\);) s
+5 60 M
+(                else) s
+5 49 M
+(                        applications[runningApp = TERMINAL]\(\);) s
+5 38 M
+(        }) s
+5 27 M
+(}) s
+5 5 M
+(void wait \( int miliseconds \)) s
+_R
+S
+%%Page: (2) 30
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 2 def
+/fname (system.c) def
+/fdir () def
+/ftail (system.c) def
+% User defined strings:
+/fmodstr (jue jun 11 15:15:42 2009) def
+/pagenumstr (13-2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+({) s
+5 731 M
+(        waitCounter = miliseconds / MILISECOND_PER_TICKS;) s
+5 720 M
+(}) s
+_R
+S
+%%Page: (1) 31
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (timerTick.c) def
+/fdir () def
+/ftail (timerTick.c) def
+% User defined strings:
+/fmodstr (jue jun 11 15:15:42 2009) def
+/pagenumstr (14-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      File: timerTick.c) s
+5 720 M
+( *) s
+5 709 M
+( *              Brief:) s
+5 698 M
+( *) s
+5 687 M
+( *              Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin) s
+5 676 M
+( *) s
+5 665 M
+( */) s
+5 643 M
+(#include "timerTick.h") s
+5 632 M
+(#include "system.h") s
+5 621 M
+(#include "video_adapter.h") s
+5 610 M
+(#include "keyboard_adapter.h") s
+5 599 M
+(#include "keyboard_driver.h") s
+5 588 M
+(#include "mouse_driver.h") s
+5 577 M
+(#include "screensaver.h") s
+5 555 M
+(extern int waitCounter;) s
+5 533 M
+(void timerTick \( void \)) s
+5 522 M
+({) s
+5 511 M
+(        static int mouseRefreshTime = 0;) s
+5 500 M
+(        static int screenSaverCount = 0;) s
+5 478 M
+(        /* Wait Counter Loop */) s
+5 467 M
+(        if \( waitCounter != 0 \)) s
+5 456 M
+(        {) s
+5 445 M
+(                while \( waitCounter-- \);) s
+5 434 M
+(                waitCounter = 0;) s
+5 423 M
+(        }) s
+5 401 M
+(        /* Mouse Postion Update */) s
+5 390 M
+(        if \( mouseRefreshTime == 2 \)) s
+5 379 M
+(        {) s
+5 368 M
+(                mouseRefreshTime = 0;) s
+5 357 M
+(                refreshMouse\(\);) s
+5 346 M
+(        }) s
+5 335 M
+(        else) s
+5 324 M
+(                ++mouseRefreshTime;) s
+5 302 M
+(        /* Screen Update from Buffers */) s
+5 291 M
+(        flushKeyboardBuffer\(\); /* flush kb buffer into stdin */) s
+5 280 M
+(        flushStdScreen\(\);       /* flush stdout into video buffer and refresh screen */) s
+5 258 M
+(        /* Task Scheduler Decision */) s
+5 247 M
+(        if \(!isAppRunning\(SCREEN_SAVER\)\)) s
+5 236 M
+(        {) s
+5 225 M
+(                if\( checkKeyboardActivity\(\) || checkMouseActivity\(\) \)) s
+5 214 M
+(                        screenSaverCount = 0;) s
+5 203 M
+(                else if\( screenSaverCount == getScreenSaverTime\(\) \)) s
+5 192 M
+(                {) s
+5 181 M
+(                        launchApp\(SCREEN_SAVER\);) s
+5 170 M
+(                        screenSaverCount = 0;) s
+5 159 M
+(                }) s
+5 148 M
+(                else) s
+5 137 M
+(                        ++screenSaverCount;) s
+5 126 M
+(        }) s
+5 115 M
+(}) s
+_R
+S
+%%Page: (1) 32
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (toString.c) def
+/fdir () def
+/ftail (toString.c) def
+% User defined strings:
+/fmodstr (vie jun 12 11:30:51 2009) def
+/pagenumstr (15-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      file: toString.c) s
+5 720 M
+( *) s
+5 709 M
+( *      Description: Imprime en pantalla un numero entero.) s
+5 698 M
+( *      ) s
+5 687 M
+( */) s
+5 654 M
+(/*) s
+5 643 M
+( * \\fn void intToString\( int number, char *buffer\)) s
+5 632 M
+( *) s
+5 621 M
+( * \\brief       It received a string number and it will save in a buffer) s
+5 610 M
+( *                      as an int.) s
+5 599 M
+( *) s
+5 588 M
+( */) s
+5 577 M
+(void intToString\( int number , char *buffer\)) s
+5 566 M
+({) s
+5 555 M
+(        static int i = 0;) s
+5 544 M
+(        if\( number < 10 \)) s
+5 533 M
+(        {) s
+5 522 M
+(                buffer[i++]=number+'0';) s
+5 511 M
+(                return;) s
+5 500 M
+(        }) s
+5 489 M
+(        intToString\(number/10, buffer\);) s
+5 478 M
+(        buffer[i++] = \(number%10\)+'0';) s
+5 467 M
+(}) s
+_R
+S
+%%Page: (1) 33
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (video_adapter.c) def
+/fdir () def
+/ftail (video_adapter.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (16-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(#include "video_driver.h") s
+5 731 M
+(#include "video_adapter.h") s
+5 709 M
+(void bufferMapper \( FILE *f/*, FILE *att*/ \)) s
+5 698 M
+({) s
+5 687 M
+(        char c;) s
+5 665 M
+(        while \( \(c = fgetc\(f\)\) != EOF \)) s
+5 654 M
+(                printChar\(c\);/*printColorChar\(c,fgetc\(att\)\);*/) s
+5 643 M
+(}) s
+5 621 M
+(void flushStdScreen \(void\)) s
+5 610 M
+({) s
+5 599 M
+(        bufferMapper\(stdout /*, outatt*/\);) s
+5 588 M
+(        refreshScreen\(\);) s
+5 577 M
+(}) s
+_R
+S
+%%Page: (1) 34
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(/*) s
+5 731 M
+( *      File: video_driver.c) s
+5 720 M
+( *) s
+5 709 M
+( *              Brief Implementation of the video_driver.h file) s
+5 698 M
+( *) s
+5 687 M
+( *              Author Guido Marucci Blas, Nicolas Purita & Luciano Zemin) s
+5 676 M
+( *) s
+5 665 M
+( */) s
+5 643 M
+(/*) s
+5 632 M
+( *      Include Section) s
+5 621 M
+( */) s
+5 610 M
+(#include "config.h") s
+5 599 M
+(#include "video_driver.h") s
+5 588 M
+(#include "io.h") s
+5 577 M
+(#include "types.h") s
+5 566 M
+(#include "string.h") s
+5 544 M
+(/*) s
+5 533 M
+( *      Macro Definition Section) s
+5 522 M
+( */) s
+5 511 M
+(#define VGA_MISC_REGISTER       0x3CC) s
+5 500 M
+(#define VGA_CURSOR_POS_HIGH_PORT 0x0E) s
+5 489 M
+(#define VGA_CURSOR_POS_LOW_PORT 0x0F) s
+5 478 M
+(#define VGA_MAX_SCAN_LINE_REGISTER 0x09) s
+5 467 M
+(#define VGA_CURSOR_START_REGISTER 0x0A) s
+5 456 M
+(#define VGA_CURSOR_END_REGISTER 0x0B) s
+5 445 M
+(#define VGA_INPUT_STATUS_REGISTER 0X3DA) s
+5 434 M
+(#define VGA_ADDRESS_DATA_REGISTER 0X3C0) s
+5 423 M
+(#define VGA_DATA_READ_REGISTER 0x3C1) s
+5 412 M
+(#define colorMask\(c\)                    \(\(c << 4\)  + \(c >> 4\)\)) s
+5 401 M
+(#define getOffset\(row,col\) 2 * \( \(row\) * SCREEN_WIDTH + \(col\) \)) s
+5 379 M
+(#define ALARM           '\\a') s
+5 368 M
+(#define BACKSPACE       '\\b') s
+5 357 M
+(#define LINE_FEED       '\\f') s
+5 346 M
+(#define NEW_LINE        '\\n') s
+5 335 M
+(#define RETURN          '\\r') s
+5 324 M
+(#define TAB                     '\\t') s
+5 313 M
+(#define VTAB            '\\v') s
+5 291 M
+(/*) s
+5 280 M
+( *      Screen Properties Definition) s
+5 269 M
+( */) s
+5 236 M
+(static short cursorOffset = getOffset\(CURSOR_START_ROW, CURSOR_START_COL\);) s
+5 214 M
+(static int cursorRow = CURSOR_START_ROW;) s
+5 192 M
+(static int cursorCol = CURSOR_START_COL;) s
+5 170 M
+(static int cursorVisibility = 1;) s
+5 148 M
+(static unsigned char * videoMemory = VIDEO_MEMORY_ADDRESS;) s
+5 126 M
+(static unsigned char videoBuffer[VIDEO_MEMORY_SIZE];) s
+5 104 M
+(static unsigned char videoColor = VIDEO_COLOR;) s
+5 82 M
+(static int pointerCol = POINTER_START_COL;) s
+5 60 M
+(static int pointerRow = POINTER_START_ROW;) s
+5 38 M
+(static short pointerOffset = getOffset\(POINTER_START_ROW, POINTER_START_COL\);) s
+5 16 M
+(static unsigned char pointerColor = POINTER_COLOR;) s
+_R
+S
+%%Page: (2) 35
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 2 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(static int pointerVisibility = 0;) s
+5 720 M
+(static unsigned char  oldPointedColor = VIDEO_COLOR;) s
+5 698 M
+(static int CRTCAddress, CRTCData;) s
+5 676 M
+(static int vtabStop = VIDEO_VTAB_STOP;) s
+5 654 M
+(static int tabStop = VIDEO_TAB_STOP;) s
+5 632 M
+(typedef void \(*printFunctionT\)\(void\);) s
+5 610 M
+(/*) s
+5 599 M
+( *      Private Function Section) s
+5 588 M
+( */) s
+5 555 M
+(static void fillLine \( int c \)) s
+5 544 M
+({) s
+5 533 M
+(        int i;) s
+5 522 M
+(        for \( i = cursorOffset; i < VIDEO_MEMORY_SIZE; i += 2 \)) s
+5 511 M
+(                videoBuffer[i] = c;) s
+5 500 M
+(}) s
+5 478 M
+(static void printAlarm \( void \)) s
+5 467 M
+({) s
+5 456 M
+(}) s
+5 434 M
+(static void printBackspace \( void \)) s
+5 423 M
+({) s
+5 412 M
+(        decCursor\(\);) s
+5 401 M
+(        videoBuffer[cursorOffset] = ' ';) s
+5 390 M
+(        videoBuffer[cursorOffset + 1] = videoColor;) s
+5 379 M
+(}) s
+5 357 M
+(static void printNewLine \( void \)) s
+5 346 M
+({) s
+5 335 M
+(        do) s
+5 324 M
+(        {) s
+5 313 M
+(                incCursor\(\);) s
+5 302 M
+(        } while \( cursorCol != 0 \);) s
+5 291 M
+(}) s
+5 269 M
+(static void printLineFeed \( void \)) s
+5 258 M
+({) s
+5 247 M
+(        int col;) s
+5 225 M
+(        printNewLine\(\);) s
+5 214 M
+(        col = cursorCol;) s
+5 203 M
+(        do) s
+5 192 M
+(        {) s
+5 181 M
+(                incCursor\(\);) s
+5 170 M
+(        } while \( cursorCol == col \);) s
+5 159 M
+(}) s
+5 137 M
+(static void printReturn \( void \)) s
+5 126 M
+({) s
+5 115 M
+(        while \( cursorCol != 0 \)) s
+5 104 M
+(                decCursor\(\);) s
+5 93 M
+(}) s
+5 71 M
+(static void printTab \( void  \)) s
+5 60 M
+({) s
+5 49 M
+(        int i, prevRow;) s
+5 16 M
+(        for \( i = 0, prevRow = cursorRow; i < tabStop; ++i \)) s
+5 5 M
+(        {) s
+_R
+S
+%%Page: (3) 36
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 3 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-3) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                if \( prevRow != cursorRow \)) s
+5 731 M
+(                        break;) s
+5 720 M
+(                videoBuffer[cursorOffset] = ' ';) s
+5 709 M
+(                videoBuffer[cursorOffset + 1] = videoColor;) s
+5 698 M
+(                incCursor\(\);) s
+5 687 M
+(        }) s
+5 676 M
+(}) s
+5 654 M
+(static void printVTab \( void \)) s
+5 643 M
+({) s
+5 632 M
+(        int i, col;) s
+5 610 M
+(        col = cursorCol - 1;) s
+5 599 M
+(        for \( i = 0; i < vtabStop; ++i \)) s
+5 588 M
+(                printNewLine\(\);) s
+5 577 M
+(        while \( cursorCol < col \)) s
+5 566 M
+(                incCursor\(\);) s
+5 555 M
+(}) s
+5 511 M
+(static int parseCharacter \( int c, int offset \)) s
+5 500 M
+({) s
+5 489 M
+(        static printFunctionT specialCharFunctions[] = {) s
+5 478 M
+(                printAlarm,) s
+5 467 M
+(                printBackspace,) s
+5 456 M
+(                printTab,) s
+5 445 M
+(                printNewLine,) s
+5 434 M
+(                printVTab,) s
+5 423 M
+(                printLineFeed,) s
+5 412 M
+(                printReturn) s
+5 401 M
+(        };) s
+5 390 M
+(        if \( '\\a' <= c && c <= '\\r' \)) s
+5 379 M
+(        {) s
+5 368 M
+(                specialCharFunctions[c - '\\a']\(\);) s
+5 357 M
+(                return 0;) s
+5 346 M
+(        }) s
+5 335 M
+(        else) s
+5 324 M
+(        {) s
+5 313 M
+(                videoBuffer[offset] = c;) s
+5 302 M
+(                return 1;) s
+5 291 M
+(        }) s
+5 280 M
+(}) s
+5 258 M
+(static void pointerOn \( void  \)) s
+5 247 M
+({) s
+5 236 M
+(        if \( pointerVisibility \)) s
+5 225 M
+(        {) s
+5 214 M
+(                oldPointedColor =  videoBuffer[pointerOffset + 1];) s
+5 203 M
+(                videoBuffer[pointerOffset + 1] = pointerColor;) s
+5 192 M
+(        }) s
+5 181 M
+(}) s
+5 159 M
+(static void pointerOff \( void \)) s
+5 148 M
+({) s
+5 137 M
+(        if \( pointerVisibility \)) s
+5 126 M
+(        {) s
+5 115 M
+(                videoBuffer[pointerOffset + 1] = oldPointedColor;) s
+5 104 M
+(        }) s
+5 93 M
+(}) s
+5 71 M
+(static int transverseArea \( int leftUpper_x, int leftUpper_y, int rightLower_x,) s
+5 60 M
+(        int rightLower_y, void \(*callback\)\(unsigned char *, unsigned char *,void *\), void *) s
+5 49 M
+( callbackArgs \)) s
+5 38 M
+({) s
+5 27 M
+(        int i, j, offset;) s
+5 5 M
+(        if \( leftUpper_x < 0 || leftUpper_x >= SCREEN_WIDTH || leftUpper_y < 0 || leftUpper) s
+_R
+S
+%%Page: (4) 37
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 4 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-4) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(_y >= SCREEN_HEIGTH ||) s
+5 731 M
+(                 rightLower_x < 0 || rightLower_x >= SCREEN_WIDTH || rightLower_y < 0 || ri) s
+5 720 M
+(ghtLower_y >= SCREEN_HEIGTH ||) s
+5 709 M
+(                 leftUpper_y > rightLower_y || leftUpper_x > rightLower_x \)) s
+5 698 M
+(                return 0;) s
+5 687 M
+(        ) s
+5 676 M
+(        for \( i = leftUpper_y; i <= rightLower_y; ++i \)) s
+5 665 M
+(                for \( j = leftUpper_x; j <=  rightLower_x; ++j \)) s
+5 654 M
+(                {) s
+5 643 M
+(                        offset = getOffset\(i, j\);) s
+5 632 M
+(                        if \( offset == pointerOffset  \)) s
+5 621 M
+(                                callback\(&\(videoBuffer[offset]\), &\(oldPointedColor\), callba) s
+5 610 M
+(ckArgs\);) s
+5 599 M
+(                        else) s
+5 588 M
+(                                callback\(&\(videoBuffer[offset]\), &\(videoBuffer[offset + 1]\)) s
+5 577 M
+(, callbackArgs\);) s
+5 566 M
+(                }) s
+5 555 M
+(        return 1;) s
+5 544 M
+(}) s
+5 522 M
+(static void paintChar \( unsigned char * c, unsigned char * color, void * notUsed \)) s
+5 511 M
+({) s
+5 500 M
+(        *color = colorMask\(*color\);) s
+5 489 M
+(}) s
+5 467 M
+(typedef struct indexedBuffer {) s
+5 456 M
+(        void * buffer;) s
+5 445 M
+(        int index;) s
+5 434 M
+(} indexedBufferT;) s
+5 412 M
+(static void copyChar \( unsigned char * c, unsigned char * color, void * package \)) s
+5 401 M
+({) s
+5 390 M
+(        char * buffer = \(\(indexedBufferT *\)package\)->buffer;) s
+5 379 M
+(        buffer[\(\(indexedBufferT *\)package\)->index++] =  *c;) s
+5 368 M
+(        buffer[\(\(indexedBufferT *\)package\)->index++] = *color;) s
+5 357 M
+(}) s
+5 335 M
+(static void pasteChar \( unsigned char * c, unsigned char * color, void * package \)) s
+5 324 M
+({) s
+5 313 M
+(        char * buffer = \(\(indexedBufferT *\)package\)->buffer;) s
+5 302 M
+(        *c = buffer[\(\(indexedBufferT *\)package\)->index++];) s
+5 291 M
+(        *color = buffer[\(\(indexedBufferT *\)package\)->index++];) s
+5 280 M
+(}) s
+5 258 M
+(static void scrollScreen\(\)) s
+5 247 M
+({) s
+5 236 M
+(        pointerOff\(\);) s
+5 225 M
+(        memcpy\(videoBuffer, videoBuffer + \(SCREEN_WIDTH * 2\), VIDEO_MEMORY_SIZE - \(SCREEN_W) s
+5 214 M
+(IDTH * 2\)\);) s
+5 203 M
+(        pointerOn\(\);) s
+5 192 M
+(        cursorRow = SCREEN_HEIGTH -1;) s
+5 181 M
+(        cursorCol = 0;) s
+5 170 M
+(        cursorOffset = getOffset\(cursorRow, cursorCol\);) s
+5 159 M
+(        fillLine\(' '\);) s
+5 148 M
+(}) s
+5 126 M
+(static void refreshCursor \( void \)) s
+5 115 M
+({) s
+5 104 M
+(        int temp;) s
+5 82 M
+(        temp = inportb\(CRTCAddress\);) s
+5 60 M
+(        outportb\(CRTCAddress, VGA_CURSOR_POS_LOW_PORT\);) s
+5 49 M
+(        outportb\(CRTCData, cursorOffset/2\);) s
+5 38 M
+(        outportb\(CRTCAddress, VGA_CURSOR_POS_HIGH_PORT\);) s
+5 27 M
+(        outportb\(CRTCData, \(cursorOffset/2\) >> 8\);) s
+5 16 M
+(        ) s
+5 5 M
+(        outportb\(CRTCAddress, temp\);) s
+_R
+S
+%%Page: (5) 38
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 5 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-5) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(}) s
+5 709 M
+(/*) s
+5 698 M
+( *      Public Function Section) s
+5 687 M
+( */) s
+5 665 M
+(void initVideo \( int cursorEnabled, int pointerEnabled \) ) s
+5 654 M
+({) s
+5 643 M
+(        int temp, temp2, miscVGARegister, CRTControler, cursorStart,) s
+5 632 M
+(                cursorEnd, maxScanLineRegister;) s
+5 621 M
+(        /*) s
+5 610 M
+(         *      Disabling blink-bit) s
+5 599 M
+(         */) s
+5 577 M
+(        inportb\(VGA_INPUT_STATUS_REGISTER\);) s
+5 566 M
+(        temp = inportb\(VGA_ADDRESS_DATA_REGISTER\);) s
+5 555 M
+(        outportb\(VGA_ADDRESS_DATA_REGISTER, 0x10\);) s
+5 544 M
+(        temp2 = inportb\(VGA_DATA_READ_REGISTER\);) s
+5 533 M
+(        temp2 &= 0xF7;) s
+5 522 M
+(        outportb\(VGA_ADDRESS_DATA_REGISTER, temp2\);) s
+5 511 M
+(        outportb\(VGA_ADDRESS_DATA_REGISTER, temp\);) s
+5 500 M
+(        inportb\(VGA_INPUT_STATUS_REGISTER\);) s
+5 478 M
+(        /*) s
+5 467 M
+(         *      Getting VGA CRT Control registers Address) s
+5 456 M
+(         */) s
+5 445 M
+(        miscVGARegister = inportb\(VGA_MISC_REGISTER\);) s
+5 434 M
+(        miscVGARegister &= 0x01; /*getting I/O Address select bit*/) s
+5 423 M
+(        if \( miscVGARegister == 0x01 \)) s
+5 412 M
+(                CRTControler = 0x03D0;) s
+5 401 M
+(        else) s
+5 390 M
+(                CRTControler = 0x03B0;) s
+5 368 M
+(        /*) s
+5 357 M
+(         *      Initializing CRT Control Address and Data) s
+5 346 M
+(         */) s
+5 335 M
+(        CRTCData = CRTControler + 5;) s
+5 324 M
+(        CRTCAddress = CRTControler + 4;) s
+5 302 M
+(        /*) s
+5 291 M
+(         * Defining Cursor Shape ) s
+5 280 M
+(         */) s
+5 269 M
+(        temp = inportb\(CRTCAddress\);) s
+5 258 M
+(        ) s
+5 247 M
+(        outportb\(CRTCAddress, VGA_MAX_SCAN_LINE_REGISTER\);) s
+5 236 M
+(        maxScanLineRegister = inportb\(CRTCData\);) s
+5 225 M
+(        maxScanLineRegister &= 0x1F;) s
+5 214 M
+(        outportb\(CRTCAddress, VGA_CURSOR_START_REGISTER\);) s
+5 203 M
+(        cursorStart = inportb\(CRTCData\);) s
+5 192 M
+(        cursorStart &= 0xE0;) s
+5 181 M
+(        outportb\(CRTCData, cursorStart\);) s
+5 170 M
+(        outportb\(CRTCAddress, VGA_CURSOR_END_REGISTER\);) s
+5 159 M
+(        cursorEnd = inportb\(CRTCData\);) s
+5 148 M
+(        cursorEnd &= 0xE0;) s
+5 137 M
+(        cursorEnd += maxScanLineRegister;) s
+5 126 M
+(        outportb\(CRTCData, cursorEnd\);) s
+5 104 M
+(        outportb\(CRTCAddress, temp\);) s
+5 93 M
+(        ) s
+5 82 M
+(        setCursorVisibility\(cursorEnabled\);) s
+5 71 M
+(        setPointerVisibility\(pointerEnabled\);) s
+5 60 M
+(        refreshCursor\(\);) s
+5 49 M
+(}) s
+5 27 M
+(void refreshScreen \( void \) {) s
+5 16 M
+(        memcpy\(videoMemory, videoBuffer, VIDEO_MEMORY_SIZE\);) s
+5 5 M
+(        refreshCursor\(\);) s
+_R
+S
+%%Page: (6) 39
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 6 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-6) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(}) s
+5 720 M
+(void updateColor \( void \)) s
+5 709 M
+({) s
+5 698 M
+(        int i;) s
+5 687 M
+(        for \( i = 0; i < VIDEO_MEMORY_SIZE; i += 2 \) ) s
+5 676 M
+(                videoBuffer[i+1] = videoColor;) s
+5 665 M
+(}) s
+5 654 M
+(/* Cursor Movment Functions */) s
+5 632 M
+(int setCursorVisibility \( int b \)) s
+5 621 M
+({) s
+5 610 M
+(        int temp, cursorDisabled;) s
+5 588 M
+(        if \( b & !cursorVisibility \)) s
+5 577 M
+(        {) s
+5 566 M
+(                temp = inportb\(CRTCAddress\);) s
+5 555 M
+(                outportb\(CRTCAddress, 0x0A\);) s
+5 544 M
+(                cursorDisabled = inportb\(CRTCData\);) s
+5 533 M
+(                cursorDisabled &= 0xDF;) s
+5 522 M
+(                outportb\(CRTCData, cursorDisabled\);) s
+5 511 M
+(                outportb\(CRTCAddress, temp\);) s
+5 500 M
+(                cursorVisibility = !cursorVisibility;) s
+5 489 M
+(        }) s
+5 478 M
+(        else if \( !b & cursorVisibility \)) s
+5 467 M
+(        {) s
+5 456 M
+(                temp = inportb\(CRTCAddress\);) s
+5 445 M
+(                outportb\(CRTCAddress, 0x0A\);) s
+5 434 M
+(                cursorDisabled = inportb\(CRTCData\);) s
+5 423 M
+(                cursorDisabled |= 0x20;) s
+5 412 M
+(                outportb\(CRTCData, cursorDisabled\);) s
+5 401 M
+(                outportb\(CRTCAddress, temp\);) s
+5 390 M
+(                cursorVisibility = !cursorVisibility;) s
+5 379 M
+(        }) s
+5 357 M
+(        return cursorVisibility;) s
+5 346 M
+(}) s
+5 324 M
+(void incCursor \( void \)) s
+5 313 M
+({) s
+5 302 M
+(        cursorOffset += 2;) s
+5 291 M
+(        ++cursorCol;) s
+5 280 M
+(        if \( cursorCol == SCREEN_WIDTH \)) s
+5 269 M
+(        {) s
+5 258 M
+(                cursorCol = 0;) s
+5 247 M
+(                ++cursorRow;) s
+5 236 M
+(        }) s
+5 225 M
+(        if \( cursorRow == SCREEN_HEIGTH \)) s
+5 214 M
+(                scrollScreen\(\);) s
+5 203 M
+(}) s
+5 181 M
+(void decCursor \( void \)) s
+5 170 M
+({) s
+5 159 M
+(        if \( \(cursorOffset -= 2\) < 0 \)) s
+5 148 M
+(                cursorOffset = 0;) s
+5 137 M
+(        ) s
+5 126 M
+(        --cursorCol;) s
+5 115 M
+(        if \( cursorCol == -1 \)) s
+5 104 M
+(        {) s
+5 93 M
+(                cursorCol = SCREEN_WIDTH - 1;) s
+5 82 M
+(                --cursorRow;) s
+5 71 M
+(        }) s
+5 60 M
+(        if \( cursorRow == -1 \)) s
+5 49 M
+(        {) s
+5 38 M
+(                cursorRow = 0;) s
+5 27 M
+(                cursorCol = 0;) s
+5 16 M
+(        }) s
+5 5 M
+(}) s
+_R
+S
+%%Page: (7) 40
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 7 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-7) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 731 M
+(int setCursorPosition \( int row, int col \)) s
+5 720 M
+({) s
+5 709 M
+(        if \( row >= SCREEN_HEIGTH || col >= SCREEN_WIDTH || row < 0 || col < 0 \)) s
+5 698 M
+(                return -1;) s
+5 687 M
+(        cursorOffset = getOffset\(row, col\);) s
+5 676 M
+(        cursorRow = row;) s
+5 665 M
+(        cursorCol = col;) s
+5 654 M
+(        return cursorOffset;) s
+5 643 M
+(}) s
+5 621 M
+(void getCursorPosition \( int * row, int * col \)) s
+5 610 M
+({) s
+5 599 M
+(        if \( row == NULL || col == NULL \)) s
+5 588 M
+(                return;) s
+5 577 M
+(        *row = cursorRow;) s
+5 566 M
+(        *col = cursorCol;) s
+5 555 M
+(}) s
+5 533 M
+(/* Mouse Pointer Functions */) s
+5 511 M
+(int setPointerPosition \( int row, int col \)) s
+5 500 M
+({) s
+5 489 M
+(        if \( row >= SCREEN_HEIGTH \)) s
+5 478 M
+(                pointerRow = SCREEN_HEIGTH - 1;) s
+5 467 M
+(        else if \( row < 0 \)) s
+5 456 M
+(                pointerRow = 0;) s
+5 445 M
+(        else) s
+5 434 M
+(                pointerRow = row;) s
+5 412 M
+(        if \( col >= SCREEN_WIDTH \)) s
+5 401 M
+(                pointerCol = SCREEN_WIDTH - 1;) s
+5 390 M
+(        else if \( col < 0 \)) s
+5 379 M
+(                pointerCol = 0;) s
+5 368 M
+(        else) s
+5 357 M
+(                pointerCol = col;) s
+5 335 M
+(        pointerOff\(\);) s
+5 324 M
+(        pointerOffset = getOffset\(pointerRow, pointerCol\);) s
+5 313 M
+(        pointerOn\(\);) s
+5 302 M
+(        ) s
+5 291 M
+(        return pointerOffset;) s
+5 280 M
+(}) s
+5 258 M
+(int setPointerPositionByOffset \( int offset \)) s
+5 247 M
+({) s
+5 236 M
+(        if \( offset >= SCREEN_SIZE || offset < 0 \)) s
+5 225 M
+(                return -1;) s
+5 214 M
+(        ) s
+5 203 M
+(        pointerOff\(\);) s
+5 192 M
+(        pointerOffset = offset % 2;) s
+5 181 M
+(        pointerOn\(\);) s
+5 170 M
+(        ) s
+5 159 M
+(        return pointerOffset;) s
+5 148 M
+(}) s
+5 126 M
+(int getPointerPosition \( int * row, int * col \)) s
+5 115 M
+({) s
+5 104 M
+(        *row = pointerRow;) s
+5 93 M
+(        *col = pointerCol;) s
+5 82 M
+(        return pointerOffset;) s
+5 71 M
+(}) s
+5 49 M
+(int setPointerVisibility \( int b \)) s
+5 38 M
+({) s
+5 27 M
+(        if \( b && !pointerVisibility  \)) s
+5 16 M
+(        {) s
+5 5 M
+(                pointerOn\(\);) s
+_R
+S
+%%Page: (8) 41
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 8 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-8) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(                pointerVisibility = !pointerVisibility;) s
+5 731 M
+(        }) s
+5 720 M
+(        else if \( !b && pointerVisibility \)) s
+5 709 M
+(        {) s
+5 698 M
+(                pointerOff\(\);) s
+5 687 M
+(                pointerVisibility = !pointerVisibility;) s
+5 676 M
+(        }) s
+5 665 M
+(        return pointerVisibility;) s
+5 654 M
+(}) s
+5 632 M
+(int isPointerVisible \( void \)) s
+5 621 M
+({) s
+5 610 M
+(        return pointerVisibility;) s
+5 599 M
+(}) s
+5 577 M
+(int getPointerColor \( void \)) s
+5 566 M
+({) s
+5 555 M
+(        return pointerColor;) s
+5 544 M
+(}) s
+5 522 M
+(int setPointerColor \( int color \)) s
+5 511 M
+({) s
+5 500 M
+(        return pointerColor = color;) s
+5 489 M
+(}) s
+5 467 M
+(/*      Screen Properties Getters & Setters */) s
+5 445 M
+(int getVideoColor \( void \)) s
+5 434 M
+({) s
+5 423 M
+(        return videoColor;) s
+5 412 M
+(}) s
+5 390 M
+(int setVideoColor \( int color \)) s
+5 379 M
+({) s
+5 368 M
+(        return videoColor = color;      ) s
+5 357 M
+(}) s
+5 335 M
+(int getVideoTabStop \( void \)) s
+5 324 M
+({) s
+5 313 M
+(        return tabStop;) s
+5 302 M
+(}) s
+5 280 M
+(int setVideoTabStop \( int num \) ) s
+5 269 M
+({) s
+5 258 M
+(        if \( tabStop <= 0 \)) s
+5 247 M
+(                return -1;) s
+5 236 M
+(        return tabStop = num;) s
+5 225 M
+(}) s
+5 203 M
+(int getVideoVTabStop \( void \)) s
+5 192 M
+({) s
+5 181 M
+(        return vtabStop;) s
+5 170 M
+(}) s
+5 148 M
+(int setVideoVTabStop \( int num \)) s
+5 137 M
+({) s
+5 126 M
+(        if \( num <= 0 \)) s
+5 115 M
+(                return -1;) s
+5 104 M
+(        return vtabStop = num;) s
+5 93 M
+(}) s
+5 82 M
+(/* Video Driver Functions */) s
+5 60 M
+(int paintArea \( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y \)) s
+5 49 M
+({) s
+5 38 M
+(        return transverseArea\(leftUpper_x, leftUpper_y, rightLower_x, rightLower_y, paintCh) s
+5 27 M
+(ar, NULL\);) s
+5 16 M
+(}) s
+_R
+S
+%%Page: (9) 42
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 9 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-9) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(int copyArea \( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char *) s
+5 731 M
+( buffer \)) s
+5 720 M
+({) s
+5 709 M
+(        indexedBufferT package;) s
+5 698 M
+(        package.buffer = buffer;) s
+5 687 M
+(        package.index = 0;) s
+5 676 M
+(        return transverseArea\(leftUpper_x, leftUpper_y, rightLower_x, rightLower_y, copyCha) s
+5 665 M
+(r, &package\);) s
+5 654 M
+(}) s
+5 632 M
+(int pasteArea \( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char ) s
+5 621 M
+(* buffer \)) s
+5 610 M
+({) s
+5 599 M
+(        indexedBufferT package;) s
+5 588 M
+(        package.buffer = buffer;) s
+5 577 M
+(        package.index = 0;) s
+5 566 M
+(        return transverseArea\(leftUpper_x, leftUpper_y, rightLower_x, rightLower_y, pasteCh) s
+5 555 M
+(ar, &package\);) s
+5 544 M
+(}) s
+5 522 M
+(void putCharAtCurrentPos \( int c, int color \)) s
+5 511 M
+({) s
+5 500 M
+(        parseCharacter\(c, cursorOffset\);) s
+5 489 M
+(        if \( cursorOffset != pointerOffset \)) s
+5 478 M
+(                videoBuffer[cursorOffset + 1] = videoColor;) s
+5 467 M
+(        else) s
+5 456 M
+(                oldPointedColor = color;) s
+5 445 M
+(}) s
+5 423 M
+(void printChar \( int c \)) s
+5 412 M
+({) s
+5 401 M
+(        printColorChar\(c, videoColor\);) s
+5 390 M
+(}) s
+5 368 M
+(void printColorChar \( int c, int color \)) s
+5 357 M
+({) s
+5 346 M
+(        int inc = parseCharacter\(c, cursorOffset\);) s
+5 335 M
+(        if \( cursorOffset != pointerOffset \)) s
+5 324 M
+(                videoBuffer[cursorOffset + 1] = color;) s
+5 313 M
+(        else) s
+5 302 M
+(                oldPointedColor = color;) s
+5 291 M
+(        if \( inc \)) s
+5 280 M
+(                incCursor\(\);) s
+5 269 M
+(}) s
+5 247 M
+(int putCharAtFixedPos \( int c, int color, int row, int col \)) s
+5 236 M
+({) s
+5 225 M
+(        int i;) s
+5 203 M
+(        if \( col >= SCREEN_WIDTH || row >= SCREEN_HEIGTH || col < 0 || row < 0 \)) s
+5 192 M
+(                return 0;) s
+5 181 M
+(        ) s
+5 170 M
+(        i = getOffset\(row, col\);) s
+5 159 M
+(        parseCharacter\(c, cursorOffset\);) s
+5 148 M
+(        if \( cursorOffset != pointerOffset \)) s
+5 137 M
+(                videoBuffer[i + 1] = videoColor;) s
+5 126 M
+(        else) s
+5 115 M
+(                oldPointedColor = videoColor;) s
+5 93 M
+(        return 1;) s
+5 82 M
+(}) s
+5 60 M
+(int putColoredStringAtFixedPos \( char * s, int * color, int length, int row, int col  \)) s
+5 49 M
+({) s
+5 38 M
+(        int i, j;) s
+5 16 M
+(        if \( col >= SCREEN_WIDTH || row >= SCREEN_HEIGTH || col < 0 || row < 0 \)) s
+5 5 M
+(                return -1;) s
+_R
+S
+%%Page: (10) 43
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 10 def
+/fname (video_driver.c) def
+/fdir () def
+/ftail (video_driver.c) def
+% User defined strings:
+/fmodstr (vie jun 12 14:38:18 2009) def
+/pagenumstr (17-10) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(        ) s
+5 731 M
+(        for \( i = getOffset\(row, col\), j = 0; j < length && j < VIDEO_MEMORY_SIZE; ++i, ++j) s
+5 720 M
+( \)) s
+5 709 M
+(        {) s
+5 698 M
+(                parseCharacter\(s[j], i++\);) s
+5 687 M
+(                if \( cursorOffset != pointerOffset \) ) s
+5 676 M
+(                {) s
+5 665 M
+(                        if \( color == NULL \)) s
+5 654 M
+(                                videoBuffer[i] = videoColor;) s
+5 643 M
+(                        else) s
+5 632 M
+(                                videoBuffer[i] = color[j];) s
+5 621 M
+(                }) s
+5 610 M
+(                else) s
+5 599 M
+(                {) s
+5 588 M
+(                        if \( color == NULL \)) s
+5 577 M
+(                                oldPointedColor = videoColor;) s
+5 566 M
+(                        else) s
+5 555 M
+(                                oldPointedColor = color[j];) s
+5 544 M
+(                }) s
+5 533 M
+(        }) s
+5 511 M
+(        return j;) s
+5 500 M
+(}) s
+5 478 M
+(void fillScreen \( int c \)) s
+5 467 M
+({) s
+5 456 M
+(        int i;) s
+5 434 M
+(        for \( i = 0; i < VIDEO_MEMORY_SIZE; i += 2 \) ) s
+5 423 M
+(        {) s
+5 412 M
+(                videoBuffer[i] = c;) s
+5 401 M
+(                videoBuffer[i+1] = videoColor;) s
+5 390 M
+(        }) s
+5 379 M
+(                ) s
+5 368 M
+(}) s
+5 346 M
+(void clearScreen \( void \)) s
+5 335 M
+({) s
+5 324 M
+(        fillScreen\(' '\);) s
+5 313 M
+(}) s
+_R
+S
+%%Page: (-1) 44
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum -1 def
+/fname (Índice) def
+/fdir () def
+/ftail (Índice) def
+% User defined strings:
+/fmodstr (vie jun 12 15:39:18 2009) def
+/pagenumstr (-1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 742 M
+(  1 file.c                                     1 pages   35 lines  09/06/12 14:38:18) s
+5 731 M
+(  2 kernel.c                                   1 pages   61 lines  09/06/11 16:28:06) s
+5 720 M
+(  3 keyboard_adapter.c                         1 pages   34 lines  09/06/12 14:05:50) s
+5 709 M
+(  4 keyboard_driver.c                          5 pages  285 lines  09/06/12 14:38:18) s
+5 698 M
+(  5 libc.c                                     1 pages   41 lines  09/06/05 20:41:15) s
+5 687 M
+(  6 mouse_driver.c                             6 pages  361 lines  09/06/12 14:38:18) s
+5 676 M
+(  7 queue.c                                    1 pages   59 lines  09/06/12 14:07:14) s
+5 665 M
+(  8 screensaver.c                              1 pages   63 lines  09/06/12 14:38:18) s
+5 654 M
+(  9 shell.c                                    7 pages  455 lines  09/06/12 14:47:09) s
+5 643 M
+( 10 stdio.c                                    1 pages   65 lines  09/06/12 14:38:18) s
+5 632 M
+( 11 string.c                                   2 pages  115 lines  09/06/08 10:24:27) s
+5 621 M
+( 12 syscall.c                                  1 pages   64 lines  09/06/07 01:21:37) s
+5 610 M
+( 13 system.c                                   2 pages   71 lines  09/06/11 15:15:42) s
+5 599 M
+( 14 timerTick.c                                1 pages   58 lines  09/06/11 15:15:42) s
+5 588 M
+( 15 toString.c                                 1 pages   28 lines  09/06/12 11:30:51) s
+5 577 M
+( 16 video_adapter.c                            1 pages   16 lines  09/06/12 14:38:18) s
+5 566 M
+( 17 video_driver.c                            10 pages  640 lines  09/06/12 14:38:18) s
+_R
+S
+%%Trailer
+%%Pages: 44
+%%DocumentNeededResources: font Courier-Bold Courier 
+%%EOF

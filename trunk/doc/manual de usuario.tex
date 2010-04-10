@@ -1,0 +1,76 @@
+%Packages
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+
+%Header
+\pagestyle{fancy}
+\fancyhead[C]{Arquitecturas de las computadoras}
+\fancyhead[L]{I.T.B.A}
+\fancyhead[R]{TP Especial}
+
+\usepackage[spanish]{babel} 			%For Spanish Caracters
+\usepackage[utf8]{inputenc} 			%For Spanish Format
+
+\title{Ark OS 1.0: Manual de Usuario}
+\date{}
+
+\begin{document}
+	\maketitle
+	\newpage
+	Developers team: Guido Marucci Blas, Nicolás Purita y Luciano Zemin
+	
+\section{Introducción}
+
+	Una vez encendida la máquina y seleccionado el medio de booteo, se desplegará un menú de selección de sistemas operativos. Por el momento solo figurará Ark OS 1.0, por lo tanto,  debe confirmarse dicha selección presionando la tecla enter, o bien esperando 20 segundos.
+Una vez booteado el S.O., se le presentará la pantalla de bienvenida, indicando el proceso de carga de los distintos módulos, y luego de ello, iniciará la aplicación Shell, la cual le permitirá introducir distintos comandos, los cuales será explicados en la sección dedicada a la Shell.
+	\par Este S.O. es compatible con teclados tanto por conexíon a un puerto PS/2 como a un puerto USB. También dispone de la posibilidad de utilizar un Mouse conectado a dichos puertos.
+
+\section{Shell}
+
+	Esta aplicación es un intérprete de comandos, confirmados con enter.
+	\begin{itemize}
+		\item 	clear: Limpia la pantalla.
+		\item 	echo: Imprime los argumentos recibiidos en la salida estándar.
+		\item 	logout: Termina la aplicación Shell.
+		\item 	help: Imprime la lista de comandos con sus descripciones.
+		\item 	set: Sirve para setear el valor de alguna de las propiedades del sistema.
+		\item 	reboot: Reinicia la PC.
+		\item 	print-sysproperties: Imprime la lista de las propiedades del sistema que pueden ser modificadas mediane el comando set.
+		\item print-statement: Imprime el enunciado del TPE.
+		 		\begin{itemize}
+					\item 	pointer-color: Cambia el color del puntero del Mouse. 
+					\item	video-color: Cambia el color de los caracteres en pantalla.
+					\item   Colores válidos: BLUE, GREEN, CYAN, RED y MAGENTA.
+					\item	tab-stop: Cambia la cantidad de espacios que un tab inserta en la línea.
+					\item	mouse-rate: Cambia la tasa de refresco del Mouse. Más precisamente, la cantidad de timer ticks que deben transcurrir antes de que se refresque la posición del Mouse.
+					\item	mouse-enable: Enciendo o apaga el Mouse. Este sigue interrumpiendo, pero no se muestran las modificaciones. Los valores válidos son “true”  o “false” sin las comillas.
+					\item	screensaver-time: cambia el tiempo requerido de inactividad en segundos requeridos para que el salva pantalla se inicie.
+		
+			   	\end{itemize}
+	\end{itemize}
+	Todos estos comandos deben ser terminados con un enter para ser procesados.
+
+\subsection{El Mouse en la Shell}
+	En cuanto a la utilización del Mouse en la Shell, este es capaz de copiar y pegar uno o más caracteres.
+	El procedimiento es el siguiente: 
+	\par Mantenga presionado el botón izquierdo del Mouse y desplácelo, con lo cual se irá pintando el area marcada. Cuando haya pintado los caracteres que desea copiar, suelte el botón izquierdo del Mouse. Una vez hecho esto, el contenido pintado ha sido copiado al clipboard del Mouse, y ahora usted por cada vez que presione el botón derecho del Mouse, los caracteres copiados serán introducidos en la linea de comando, tal como si usted los hubiera escrito a mano. Tenga en cuenta que si copia varias lineas consecutivas, al final de cada una de ellas se agregará un Enter, salvo la última linea copiada.
+	\par Tenga en cuenta también que hasta que no copie otro contenido, el actual permanecerá en el clipboard del Mouse y podrá ser pegado tantas veces como usted lo desee.
+
+\section{Compilando Ark OS 1.0}
+	Si usted desea compilar el sistema operativo a partir de su codigo fuente, obtenga del medio (CD o Diskette) la carpeta Source, y copiela a su ordenador. Luego ingrese a dicha carpeta mediante consola, y en la raíz, ejecute el comando “make”.  Luego, ejecute el comando “make mcopy”. 
+	\par Esto se encargará de compilar todo el sistema operativo, y dejará en la sub-carpeta “img” la imagen que deberá ser o bien emulada, o bien grabada en algun medio para ser booteada.
+
+\section{Posibles Extensiones}
+	Actualmente la versión 1.0 de Ark OS está preparada para agregar distintas features sin necesidad de modificar grandes cantidades de código fuente gracias a la flexibilidad del mismo.
+	\subsection{Copiado de líneas a Colores}
+	Por cuestiones de tiempo en relación a la fecha de entrega, la versión 1.0 no soporta copia de los colores de la pantalla. Es decir al copiar un string que tiene colores cuando se procede al pegado, este se pega con el color default de la pantalla.
+	\par En realidad el sistema soporta el copiado pero en esta versión esta función está deshabilitada debido a un BUG a la hora de recuperar los atributos desde el archivo inatt.
+	\subsection{Recordado de Comandos}
+	Es posible agregar la habilidad de recordar comandos previamente ingresados y navegarlos usando las "flechitas". Solo hay que agregar un arreglo de string para guardar los comandos ingresados y agregar la detección de los ASCII codes en la shell.
+	\subsection{Autocompletado de Comandos}
+	Actualmente la shell permite el uso de la tecla TAB y permite cambiar el TAB STOP. Se ha dejado listo la detección del la tecla TAB en la shell para el autocompletado de comandos. Reiteramos por una cuestión de tiempo para la entrega de la versión 1.0 esta función no se implementó, pero el código está preparado para recivir dicha función, ya que la mini-librería de C implementada en Ark OS permite el fácil análisis de string y comparación con el arreglo de comandos.
+	\subsection{Soporte para más archivos aparte de los standard}
+	Si se desea agregar más archivos aparte de stdout y stdin solo se deben definir en el archivo file.c y dichos archivos quedan disponibles para que los use cualquier aplicación.
+	
+ \end{document}

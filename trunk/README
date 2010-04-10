@@ -1,0 +1,7 @@
+- Copiar el archivo mtools.conf a /etc/
+
+- Habilitar Modo de Copiado a color
+	Se deben descomentar las siguientes lineas:
+	En src/shell.c en la funcion shell() descomentar el fputc(att, outatt) del else final
+	En src/video_adapter descomentar todas las lineas comentadas dentro de la funcion flushStdBuffer y bufferMapper
+	En inc/video_adapter descomentar todas las lineas comentadas dentro en la funcion bufferMapper
