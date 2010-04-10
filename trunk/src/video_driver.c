@@ -361,7 +361,7 @@ int setCursorVisibility ( int b )
 		outportb(CRTCAddress, temp);
 		cursorVisibility = !cursorVisibility;
 	}
-	else if ( !b & cursorVisibility )
+	else if ( (!b) & (cursorVisibility) )
 	{
 		temp = inportb(CRTCAddress);
 		outportb(CRTCAddress, 0x0A);
