@@ -1,0 +1,10 @@
+-Instalacion
+------------
+	* Instalar bochs y bochs-x
+	* Instalar mtools
+	* sudo make configure
+	* make
+	* make mcopy
+	* bochs
+
+Si se requiere es posible moficar el makefile para activar/desactivar el modulo de debug
