@@ -1,4 +1,6 @@
-
+typedef sruct entryMalloc{
+	pid_t 
+}
 
 void *krealloc(void *ap, size_t nbytes);
 
