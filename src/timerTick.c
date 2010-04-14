@@ -19,8 +19,8 @@ extern int waitCounter;
 
 void timerTick ( void )
 {
-	static int mouseRefreshTime = 0;
-	static int screenSaverCount = 0;
+	/*static int mouseRefreshTime = 0;
+	static int screenSaverCount = 0;*/
 
 	/* Wait Counter Loop */
 	if ( waitCounter != 0 )
@@ -30,20 +30,20 @@ void timerTick ( void )
 	}
 
 	/* Mouse Postion Update */
-	if ( mouseRefreshTime == 2 )
+	/*if ( mouseRefreshTime == 2 )
 	{
 		mouseRefreshTime = 0;
 		refreshMouse();
 	}
 	else
 		++mouseRefreshTime;
-
+	*/
 	/* Screen Update from Buffers */
 	flushKeyboardBuffer(); /* flush kb buffer into stdin */
 	flushStdScreen();	/* flush stdout into video buffer and refresh screen */
 
 	/* Task Scheduler Decision */
-	if (!isAppRunning(SCREEN_SAVER))
+	/*if (!isAppRunning(SCREEN_SAVER))
 	{
 		if( checkKeyboardActivity() || checkMouseActivity() )
 			screenSaverCount = 0;
@@ -54,5 +54,6 @@ void timerTick ( void )
 		}
 		else
 			++screenSaverCount;
-	}
+		
+	}*/
 }
