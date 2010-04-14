@@ -27,7 +27,7 @@ int screenSaver( void )
 		getCursorPosition(&rowBackup, &colBackup);
 		getPointerPosition(&rowMouseBackup, &colMouseBackup);
 		clearScreen();
-		putColoredStringAtFixedPos("ARK OS 1.0", colors, 13, SCREEN_HEIGTH/2, SCREEN_WIDTH/2 - 6);
+		putColoredStringAtFixedPos("FLYING HIGH OS 1.0", colors, 13, SCREEN_HEIGTH/2, SCREEN_WIDTH/2 - 6);
 		setCursorVisibility(0);
 		setPointerVisibility(0);
 		isFirstTime = 0;

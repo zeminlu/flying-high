@@ -37,7 +37,7 @@ LD = ld
 LDFLAGS = -T $(SRC_DIR)link.ld -o
 #
 TARGET1 = kernel.bin
-OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o mouse_driver.o keyboard_driver.o keyboard_adapter.o int_handlers.o queue.o video_adapter.o file.o shell.o system.o screensaver.o timerTick.o
+OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o mouse_driver.o keyboard_driver.o keyboard_adapter.o int_handlers.o queue.o video_adapter.o file.o shell.o system.o screensaver.o timerTick.o memModule.o
 ###############################################################################
 .SILENT:
 .PHONY: clean mcopy
@@ -71,7 +71,7 @@ unistd.o: unistd.asm sys.inc
 
 syscall.o: syscall.c file.h system.h
 
-kernel.o: kernel.c kc.h kasm.h system.h int_handlers.h unistd.h video_driver.h mouse_driver.h keyboard_driver.h config.h stdio.h string.h shell.h 
+kernel.o: kernel.c kc.h kasm.h system.h int_handlers.h unistd.h video_driver.h mouse_driver.h keyboard_driver.h config.h stdio.h string.h shell.h memModule.h 
 
 file.o: file.c file.h system.h types.h config.h
 
@@ -99,7 +99,9 @@ screensaver.o: screensaver.c screensaver.h config.h video_driver.h io.h mouse_dr
 
 system.o: system.c system.h stdio.h io.h shell.h screensaver.h
 
-timerTick.o: timerTick.c timerTick.h system.h video_adapter.h keyboard_adapter.h keyboard_driver.h mouse_driver.h screensaver.h 
+timerTick.o: timerTick.c timerTick.h system.h video_adapter.h keyboard_adapter.h keyboard_driver.h mouse_driver.h screensaver.h
+
+memModule.o: memModule.c memModule.h 
 
 clean:
 	@echo "Clearing" $(OUTPUT_DIR) "directory..."
