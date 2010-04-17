@@ -19,6 +19,7 @@ extern timerTick
 extern keyboard_driver
 extern _sys_write
 extern _sys_read
+extern _sys_memmap
 
 ;------------------------------------------------------------------------------;
 ;_int_08_handler															   ;
@@ -75,13 +76,18 @@ __check_SYS_WRITE:					; switch(eax) {							   ;
 									;										   ;
 __check_SYS_READ:					;	case _SYS_READ:						   ;
 	cmp		eax, _SYS_READ			;		_sys_read(ebx, ecx, eds);		   ;
-	jnz		__int_80_ret			;		break;							   ;
+	jnz		__check_SYS_MEMMAP		;		break;							   ;
 	push	edx						;										   ;
 	push	ecx						;										   ;
 	push	ebx						;										   ;
 	call	_sys_read				;										   ;
 	add		esp,12					;										   ;
 	jmp		__int_80_ret			;										   ;
+				
+__check_SYS_MEMMAP:
+	cmp		eax, _SYS_MEMMAP
+	jnz		__int_80_ret
+	
 									;	default:							   ;
 __int_80_ret:						;		break:							   ;
 	leave							; }										   ;
@@ -129,3 +135,8 @@ _int_09_handler:						; Building the stack Frame			   ;
 		pop		ds						;									   ;
 		iret							;									   ;
 ; ---------------------------------------------------------------------------- ;
+
+SECTION .data
+
+	_SYS_MEMMAP 	equ 2
+	

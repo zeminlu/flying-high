@@ -14,8 +14,9 @@ IDTR idtr;					/* IDTR */
 
 void kernel_main ( void  ) 
 {
-	
-	char *msg;
+	char *msg, *aux = "Anduvo\n";
+	frame_t *frame;
+	void *buffer;
 
 	/* Loading IDT */
 	setup_IDT_entry (&idt[0x08], 0x08, (dword)&_int_08_handler, ACS_INT, 0);
@@ -54,6 +55,14 @@ void kernel_main ( void  )
 	
 	puts("\n\tReady.\n\n");
 	
+	frame = getFrame();
+	setFramePresence(frame, TRUE);
+	buffer = (void *)(frame->address);
+	memcpy(buffer, aux, sizeof(char) * 8);
+	memcpy(aux, buffer, sizeof(char) * 8);
+	puts(aux);
+	setFramePresence(frame, FALSE);
+	freeFrame(frame);
 	/* Main loop */
 	launchApp(SHELL);
 	while (1)
