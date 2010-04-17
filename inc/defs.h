@@ -11,6 +11,8 @@
 #define dword int
 #define TRUE 1
 #define FALSE !TRUE
+#define OK	TRUE
+#define	ERROR FALSE
 
 /* Flags para derechos de acceso de los segmentos */
 #define ACS_PRESENT     0x80            /* segmento presente en memoria */
