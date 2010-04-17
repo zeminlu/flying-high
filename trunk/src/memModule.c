@@ -6,6 +6,9 @@ static directory_t *kernelDir = (directory_t *)((char *)(KERNEL_SPACE_SIZE) - si
 /* Kernel Heap Definition */
 static void *kernelHeapPages[KERNEL_HEAP_PAGES_QTY];
 
+/* Frame table Definition*/
+static framesTable_t framesTable;
+
 /*
  *	Bitmap Implementation
  */
@@ -17,13 +20,15 @@ int initPaging(){
 	unsigned int cr0;
 
 	memset(kernelDir, 0, sizeof(directory_t));
+	memset(framesTable, 0, sizeof(frame_t) * TOTAL_FRAMES_QTY);
+	
 	for (i = FIRST_KERNEL_TABLE ; i < KERNEL_TABLES_QTY ; ++i){
 		initKernelTable(kernelDir->tables[i]);
 		initPage(&(kernelDir->pageTable[i]), TRUE);
 		kernelDir->pageTable[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
 	}
 	for (i = FIRST_MALLOC_TABLE ; i < MALLOC_TABLES_QTY ; ++i){
-		initMallocTable(kernelDir->tables[i]);
+		initMallocTable(kernelDir->tables[i], i);
 		initPage(&(kernelDir->pageTable[i]), FALSE);
 		kernelDir->pageTable[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
 	}
@@ -38,7 +43,7 @@ int initPaging(){
 
 void initPage(page_t *page, int isKernel){
 	page->present = TRUE;
-	page->writeable = isKernel;
+	page->writeable = !isKernel;
 	page->user = isKernel;
 	
 	return;
@@ -74,12 +79,58 @@ int allocMPage(page_t *mallocPage){
 	return 0;
 }
 
-int initMallocTable(pageTable_t mallocTable){
-	int i;
+int initMallocTable(pageTable_t mallocTable, int dirIndex){
+	int i, j;
+	static int frameIndex = 0;
+	unsigned int dir = 0, table = 0;
 	
-	for (i = 0 ; i < PAGE_ENTRIES_PER_TABLE ; ++i){
+	dir = dirIndex << 22;
+	for (i = 0, j = 0 ; i < PAGE_ENTRIES_PER_TABLE ; ++i){
 		allocMPage(&(mallocTable[i]));
+		if (j == PAGES_PER_FRAME){
+			table = i << 12;
+			framesTable[frameIndex].address |= dir;
+			framesTable[frameIndex].address |= table; 
+			j = 0;
+			++frameIndex;
+		}else{
+			++j;
+		}
 	}
 
 	return 0;
+}
+
+void setFramePresence(frame_t *frame, int state){
+	int i;
+	unsigned int dirIndex = 0, tableIndex = 0;
+	
+	dirIndex = frame->address >> 22;
+	for (i = 0 ; i < PAGES_PER_FRAME ; ++i){
+		tableIndex = (frame->address + i * PAGE_SIZE) >> 12;
+		((kernelDir->tables)[dirIndex][tableIndex]).present = state;
+	}
+	return;
+}
+
+frame_t * getFrame(){
+	int i = 0;
+	
+	for (i = 0 ; i < TOTAL_FRAMES_QTY ; ++i){
+		if (!((framesTable[i]).assigned)){
+			framesTable[i].assigned = TRUE;
+			return &(framesTable[i]); 
+		}
+	}
+	return NULL;
+}
+
+int freeFrame(frame_t *frame){
+	if (!frame->assigned){
+		return -1;
+	}
+	else{
+		frame->assigned = FALSE;
+		return 0;
+	}
 }

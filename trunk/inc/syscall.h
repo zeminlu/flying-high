@@ -12,5 +12,6 @@
 
 #define _SYS_WRITE 	0
 #define _SYS_READ 	1
+#define _SYS_MEMMAP 2
 
 #endif

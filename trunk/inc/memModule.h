@@ -22,6 +22,13 @@
 #define MALLOC_TABLES_QTY			(MALLOC_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))
 #define PAGE_TABLES_QTY				(KERNEL_TABLES_QTY + MALLOC_TABLES_QTY)
 
+/* Frame Definitions */
+#define PAGES_PER_FRAME				(PAGE_ENTRIES_PER_TABLE / 8)
+#define PAGES_PER_HEAP				(PAGES_PER_FRAME - 1)
+#define PAGES_PER_STACKFRAME		1
+#define FRAMES_PER_TABLE			(PAGE_ENTRIES_PER_TABLE / PAGES_PER_FRAME)
+#define TOTAL_FRAMES_QTY			(MALLOC_TABLES_QTY * PAGE_ENTRIES_PER_TABLE)
+
 /* Table's Index Definitions */
 #define FIRST_KERNEL_TABLE			0
 #define FIRST_MALLOC_TABLE			FIRST_KERNEL_TABLE + KERNEL_TABLES_QTY
@@ -67,6 +74,13 @@ typedef struct usedMemBitmap {
 	unsigned int bitmap[BITMAP_SIZE];
 } usedMemBitmap_t;
 
+typedef struct frame{
+	int assigned;
+	unsigned int address;
+} frame_t;
+
+typedef frame_t framesTable_t[TOTAL_FRAMES_QTY];
+
 int initPaging();
 
 void initPage(page_t *page, int isKernel);
@@ -77,9 +91,10 @@ int initKernelTable(pageTable_t kernelTable);
 
 int allocMPage(page_t *mallocPage);
 
-int initMallocTable(pageTable_t mallocTable);
+int initMallocTable(pageTable_t mallocTable, int dirIndex);
 
+frame_t * getFrame();
 
-
+int freeFrame(frame_t *frame);
 
 #endif
