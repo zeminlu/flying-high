@@ -6,10 +6,10 @@
  *	Includes Section
  */
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string.h>*/
 
 #include "../inc/pQueueP.h"
 
@@ -54,15 +54,15 @@ void printQueue( pQueueADT queueADT )
 	int i;
 	Node_t *cur;
 	
-	for( i = 0 ; i < _MAX_PRIORITY_ ; ++i )
+	for( i = 0 ; i < MAX_PRIORITIES ; ++i )
 	{
 		if( (queueADT->queue)[i].pQueueDim > 0 )
 		{
-			printf("pQueueDim: %d\n", (queueADT->queue)[i].pQueueDim);
+			puts("pQueueDim: %d\n", (queueADT->queue)[i].pQueueDim);
 			cur = (queueADT->queue)[i].first;
 			while( cur != NULL )
 			{
-				printf("data: %d\n", *((int*)(cur->data)) );
+				puts("data: %d\n", *((int*)(cur->data)) );
 				cur = cur->next;
 			}
 		}
@@ -98,14 +98,14 @@ pQueueADT newPQueue( void (*freeFnP)(void *), void * (*cpyFnP)(void *) )
 	
 	if( (queueADT = malloc(sizeof(pQueueCDT))) == NULL )
 	{
-		printf("Error en la creacion de la queue");
+		puts("Error en la creacion de la queue");
 		return NULL;
 	}
 	queueADT->cpyFn = cpyFnP;
 	queueADT->freeFn = freeFnP;
-	if( (queueADT->queue = malloc( sizeof(listWithPrio) * _MAX_PRIORITY_)) == NULL )
+	if( (queueADT->queue = malloc( sizeof(listWithPrio) * MAX_PRIORITIES)) == NULL )
 	{
-		printf("Error en la creacion de la lista con las prioridades");
+		puts("Error en la creacion de la lista con las prioridades");
 		return NULL;
 	}
 	for( i = 0 ; i < _MAX_PRIORITY_ ; ++i )
@@ -123,7 +123,7 @@ void freePQueue( pQueueADT queueADT )
 	int i;
 	Node_t *cur, *prev;
 	
-	for( i = 0 ; i < _MAX_PRIORITY_ ; ++i )
+	for( i = 0 ; i < MAX_PRIORITIES ; ++i )
 	{
 		if( (queueADT->queue)[i].pQueueDim > 0 )
 		{	
@@ -172,7 +172,7 @@ void * pop( pQueueADT queue )
 	void * cpyData = NULL;
 	Node_t * aux;
 	
-	for( i = 0 ; i < _MAX_PRIORITY_ ; ++i )
+	for( i = 0 ; i < MAX_PRIORITIES ; ++i )
 	{
 		if( (queue->queue)[i].pQueueDim > 0 )
 		{
