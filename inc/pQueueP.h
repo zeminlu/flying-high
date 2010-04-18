@@ -5,12 +5,9 @@
 #ifndef _PQUEUE_
 #define _PQUEUE_ 	
 
-/* 
- *	Define Section
- */
-
-#define _MAX_PRIORITY_		5
-
+#include "string.h"
+#include "stdio.h"
+#include "sysProcess.h"
 /*
  *	Struct Section
  */
