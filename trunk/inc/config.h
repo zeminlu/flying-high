@@ -36,4 +36,10 @@
 #define TICKS_PER_SECOND 18
 #define DEFAULT_SCREENSAVER_TIME 540
 
+#define MAX_PROCESS			24
+#define MAX_CHILDS			30
+#define MAX_PROCESS_NAME	36
+#define MAX_PRIORITIES		4
+#define MAX_TTY				8
+
 #endif
