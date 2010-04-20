@@ -1,12 +1,17 @@
 #ifndef _SYSPROCESS_H_
 #define _SYSPROCESS_H_
 
-#include "process.h"
 #include "keyboard_buffer.h"
 #include "config.h"
 
 #define	ATOMIC				1
 #define UNATOMIC			!ATOMIC
+
+typedef int pid_t;
+
+typedef int tty_t;
+
+typedef void (pfunc_t)(int);
 
 enum processErrorList{
 	PERROR_NO_ERROR, 
