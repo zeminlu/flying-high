@@ -8,11 +8,11 @@
 #define	ATOMIC				1
 #define UNATOMIC			!ATOMIC
 
-#define MAX_PROCESS			24
-#define MAX_CHILDS			30
-#define MAX_PROCESS_NAME	36
-#define MAX_PRIORITIES		4
-#define MAX_TTY				8
+typedef int pid_t;
+
+typedef int tty_t;
+
+typedef void (pfunc_t)(int);
 
 enum processErrorList{
 	PERROR_NO_ERROR, 
