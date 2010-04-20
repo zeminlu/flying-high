@@ -85,4 +85,13 @@ int push( pQueueADT queue, void* data, int priority );
 
 void * pop( pQueueADT queue );
 
+/**
+ *	\fn	int isEmpty( pQueueADT queue);
+ *
+ *	\brief	This function the amount of proccess that are in the
+ *			priority queue.
+ */
+
+int isEmpty( pQueueADT queue);
+
 #endif

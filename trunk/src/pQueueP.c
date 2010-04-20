@@ -187,3 +187,16 @@ void * pop( pQueueADT queue )
 	}
 	return NULL;
 }
+
+int isEmpty( pQueueADT queue)
+{
+	int i,qty = 0;
+	
+	for( i = 0 ; i < MAX_PRIORITIES ; ++i )
+	{
+		if( (queue->queue)[i].pQueueDim > 0 )
+			++qty;
+	}
+	
+	return qty;
+}

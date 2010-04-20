@@ -2,6 +2,7 @@
 #define _SYSPROCESS_H_
 
 #include "process.h"
+#include "keyboard_buffer.h"
 
 #define	ATOMIC				1
 #define UNATOMIC			!ATOMIC
@@ -10,6 +11,7 @@
 #define MAX_CHILDS			30
 #define MAX_PROCESS_NAME	36
 #define MAX_PRIORITIES		4
+#define MAX_TTY				8
 
 enum processErrorList{
 	PERROR_NO_ERROR, 
@@ -46,5 +48,17 @@ typedef struct process {
 	void *heap;
 	int atomicity;
 } process_t;
+
+typedef struct TTY{
+	tty_y	ttyId;
+	Keycode	KBBuffer[ KEYBOARD_BUFFER_SIZE];
+	pid_t	focusProccess;
+}TTY;
+
+typedef struct sysTTY{
+	int		qtyTTY;
+	TTY		ttys[MAX_TTY];
+	tty_t	focusTTY;
+}sysTTY;
 
 #endif

@@ -73,8 +73,8 @@ static int keyboardActivity = 0;
 #define KEY_F4      KB_KEY_RELEASE & 0x04 
 #define KEY_F5      KB_KEY_RELEASE & 0x05 
 #define KEY_F6      KB_KEY_RELEASE & 0x06
-#define KEY_F7      _SPECIAL(7) 
-#define KEY_F8      _SPECIAL(8) 
+#define KEY_F7      KB_KEY_RELEASE & 0x07
+#define KEY_F8      KB_KEY_RELEASE & 0x08
 #define KEY_F9      _SPECIAL(9) 
 #define KEY_F10     _SPECIAL(10) 
 #define KEY_F11     _SPECIAL(11) 
