@@ -3,6 +3,7 @@
 
 #include "process.h"
 #include "keyboard_buffer.h"
+#include "config.h"
 
 #define	ATOMIC				1
 #define UNATOMIC			!ATOMIC
@@ -27,7 +28,7 @@ enum processErrorList{
 
 enum processStates {RUNNING, READY, BLOCKED, WAITING_CHILD, WAITING_TIME, WAITING_PID, TERMINATED, DEAD};
 
-typedef struct process {
+typedef struct process_t {
 	pid_t pid;
 	pid_t ppid;
 	pid_t gid;
@@ -50,7 +51,7 @@ typedef struct process {
 } process_t;
 
 typedef struct TTY{
-	tty_y	ttyId;
+	tty_t	ttyId;
 	Keycode	KBBuffer[KEYBOARD_BUFFER_SIZE];
 	unsigned char TerminalBuffer[VIDEO_MEMORY_SIZE];
 	pid_t	focusProccess;
