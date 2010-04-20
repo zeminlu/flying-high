@@ -10,7 +10,6 @@
 #define FOREGROUND		0
 #define BACKGROUND		1
 
-
 void * memmap();
 
 pid_t getpid();
