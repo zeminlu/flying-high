@@ -7,7 +7,7 @@
  */
 #include "file.h"
 #include "string.h"
-#include "sysProcess.h"
+#include "process.h"
 #include "memModule.h"
 
 extern FILE fileSystem[];
