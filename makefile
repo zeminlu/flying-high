@@ -103,9 +103,9 @@ timerTick.o: timerTick.c timerTick.h system.h video_adapter.h keyboard_adapter.h
 
 memModule.o: memModule.c memModule.h
 
-process.o: process.c process.h int80.h syscall.h int80.h types.h
+process.o: process.c process.h int80.h syscall.h string.h types.h sysProcess.h
 
-sysProcess.o: sysProcess.c sysProcess.h process.h
+sysProcess.o: sysProcess.c sysProcess.h keyboard_driver.h config.h
 
 int80.o: int80.asm syscall.h
 
