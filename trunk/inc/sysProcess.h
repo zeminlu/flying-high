@@ -51,7 +51,8 @@ typedef struct process {
 
 typedef struct TTY{
 	tty_y	ttyId;
-	Keycode	KBBuffer[ KEYBOARD_BUFFER_SIZE];
+	Keycode	KBBuffer[KEYBOARD_BUFFER_SIZE];
+	unsigned char TerminalBuffer[VIDEO_MEMORY_SIZE];
 	pid_t	focusProccess;
 }TTY;
 

@@ -31,8 +31,7 @@ extern int qtyProccessTable;
  */
 
 proccess_t * getNextTask()
-{
-	
+{	
 	proccess_t * proc;
 	int procPos;
 	
@@ -48,8 +47,7 @@ proccess_t * getNextTask()
 }
 
 int getNextProccess()
-{
-	
+{	
 	int i;
 	
 	if( proccessTableIsEmpty() )
