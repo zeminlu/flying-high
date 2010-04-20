@@ -4,7 +4,6 @@
 #include "syscall.h"
 #include "int80.h"
 #include "types.h"
-#include "sysProcess.h"
 #include "string.h"
 
 #define FOREGROUND		0
@@ -22,10 +21,10 @@ pid_t getpid();
 
 pid_t getppid();
 
-tty_y getCurrentTTY();
+tty_t getCurrentTTY();
 
-proccess_t * getProccessByPid( pid_t pid );
+int getProccessByPid( pid_t pid );
 
-proccess_t * getProccessByName( char * name );
+int getProccessByName( char * name );
 
 #endif

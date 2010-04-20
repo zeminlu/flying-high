@@ -20,12 +20,12 @@ pid_t getppid()
 	return runningProcess->ppid;
 }
 
-tty_y getCurrentTTY()
+tty_t getCurrentTTY()
 {
 	return runningProcess->tty;
 }
 
-proccess_t * getProccessByPid( pid_t pid )
+int getProccessByPid( pid_t pid )
 {
 	int i;
 	
@@ -36,24 +36,24 @@ proccess_t * getProccessByPid( pid_t pid )
 	for( i = 0 ; i < MAX_PROCESS ; ++i )
 	{
 		if( processTable[i].pid == pid )
-			return &processTable[i];
+			return i;
 	}
-	return NULL;
+	return -1;
 }
 
-proccess_t * getProccessByName( char * name )
+int getProccessByName( char * name )
 {
 	int i;
 	
 	if( !strcmp(name, "Idle") )
 	{
-		return initProcess;
+		return -1;
 	}
 	for( i = 0 ; i < MAX_PROCESS ; ++i )
 	{
 		if( !strcmp(processTable[i].name, name) )
-			return &processTable[i];
+			return i;
 	}
-	return NULL;
+	return -1;
 }
 
