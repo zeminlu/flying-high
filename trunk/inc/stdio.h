@@ -37,6 +37,10 @@ extern FILE * outattFile;
 #define putchar(c) fputc((c), stdout)
 #define getchar() fgetc(stdin)
 
+int fputi(int i, FILE * stream);
+
+int puti(int i);
+
 int fputx(int i, FILE * stream);
 
 int putx(int i);

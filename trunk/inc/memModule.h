@@ -2,6 +2,7 @@
 #define _MEMMODULE_H_
 
 #include "string.h"
+#include "stdio.h"
 
 /*	Units Definitions */
 #define KB							* (1 << 10)

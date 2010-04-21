@@ -4,6 +4,7 @@
 #include "memModule.h"
 #include "sysMalloc.h"
 #include "process.h"
+#include "stdio.h"
 
 void kFree(void *ap);
 

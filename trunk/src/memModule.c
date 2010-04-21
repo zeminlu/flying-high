@@ -32,7 +32,7 @@ int initPaging(){
 		initPage(&(kernelDir->pageTable[i]), TRUE);
 		kernelDir->pageTable[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
 	}
-	for (i = FIRST_MALLOC_TABLE ; i < MALLOC_TABLES_QTY ; ++i){
+	for ( ; i < PAGE_TABLES_QTY ; ++i){
 		initMallocTable(kernelDir->tables[i], i);
 		initPage(&(kernelDir->pageTable[i]), FALSE);
 		kernelDir->pageTable[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
@@ -45,6 +45,10 @@ int initPaging(){
 	
 	kernelFrame = getFrame();
 	kernelHeap = (void *)kernelFrame->address;
+	puts("kernelHeap address = ");
+	putx((int)kernelFrame->address);
+	puts("\n");
+	flushStdScreen();
 	return 0;
 }
 
@@ -96,6 +100,7 @@ int initMallocTable(pageTable_t mallocTable, int dirIndex){
 	unsigned int dir = 0, table = 0;
 	
 	dir = dirIndex << 22;
+	puts("Entre a initMallocTable\n");
 	for (i = 0, j = 0 ; i < PAGE_ENTRIES_PER_TABLE ; ++i){
 		allocMPage(&(mallocTable[i]));
 		if (j == PAGES_PER_FRAME){

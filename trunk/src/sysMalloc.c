@@ -205,9 +205,10 @@ void *sysRealloc(void *ptr, size_t size, memArea_t (*getMemoryArea)()){
 
 void *sysMalloc(size_t nbytes, memArea_t (*getMemoryArea)()){
 	char * aux;
-	
- 	memArea_t memArea= getMemoryArea();
+ 	memArea_t memArea;
 	memAreaHeader_t memHeader;
+	
+	memArea = getMemoryArea();
 	if( ((memAreaHeader_t *) (memArea.address))->freep == NULL ){
 		aux = ((memAreaHeader_t *) (memArea.address))->point;
 		aux = (char *)memArea.address + sizeof(memAreaHeader_t);
