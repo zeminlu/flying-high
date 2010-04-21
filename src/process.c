@@ -1,5 +1,4 @@
 #include "process.h"
-#include "int80.h"
 
 extern process_t processTable[MAX_PROCESS];
 

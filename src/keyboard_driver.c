@@ -8,9 +8,7 @@
  *			-The intersection of two is the scan/ASCII code to put into the PC buffer ahead	
  */
 
-#include "io.h"
 #include "keyboard_driver.h"
-#include "config.h"
 
 /* ----------------------------------------------------------------------
  * Software keycodes

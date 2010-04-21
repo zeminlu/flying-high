@@ -51,7 +51,7 @@ EXTERN coprocessorExceptionHandler
 EXTERN increaseKernelDepth
 EXTERN decreaseKernelDepth
 
-extern mouseDriver
+;extern mouseDriver
 extern timerTick
 extern keyboard_driver
 extern _sys_write
@@ -141,20 +141,20 @@ __int_80_ret:						;		break:							   ;
 ;   Brief: It handles the interrupt of the mouse (IRQ 12) by calling the       ;
 ;   mouse driver.															   ;
 ;------------------------------------------------------------------------------;
-_int_74_handler:                    ;                                          ;
-    push    ebp                     ; Building Stack Frame                     ;
-	mov     ebp, esp                ;                                          ;
-	and		esp, -16				;										   ;
-	pusha                           ; 										   ;                
-									;										   ;
-	call    mouseDriver				;										   ;
-	mov		al, 0x20				; Sending generic EOI to PIC 1 & 2		   ;
-	out		0xA0, al                ;										   ;
-	out		0x20, al				;										   ;
-									;										   ;
-	popa							;										   ;
-	leave							;										   ;
-	iret							;									       ;
+;_int_74_handler:                    ;                                          ;
+;    push    ebp                     ; Building Stack Frame                     ;
+;	mov     ebp, esp                ;                                          ;
+;	and		esp, -16				;										   ;
+;	pusha                           ; 										   ;                
+;									;										   ;
+;	call    mouseDriver				;										   ;
+;	mov		al, 0x20				; Sending generic EOI to PIC 1 & 2		   ;
+;	out		0xA0, al                ;										   ;
+;	out		0x20, al				;										   ;
+;									;										   ;
+;	popa							;										   ;
+;	leave							;										   ;
+;	iret							;									       ;
 ;------------------------------------------------------------------------------;
 
 ;------------------------------------------------------------------------------;

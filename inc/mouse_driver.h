@@ -7,6 +7,11 @@
 #ifndef _MOUSE_DRIVER_H_
 #define _MOUSE_DRIVER_H_
 
+#include "unistd.h"
+#include "io.h"
+#include "config.h"
+#include "defs.h"
+#include "video_driver.h"
 
 /**
  *	\fn void initMouse (void)

@@ -6,13 +6,7 @@
 
 /*---------INCLUDE SECTION----------*/
 
-#include "io.h"
-#include "config.h"
-#include "video_driver.h"
 #include "mouse_driver.h"
-#include "unistd.h"
-#include "system.h"
-#include "stdio.h"
 
 /*----------DEFINE SECTION----------*/
 

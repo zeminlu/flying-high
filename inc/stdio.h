@@ -12,6 +12,8 @@
 #ifndef _STDIO_H_
 #define	_STDIO_H_
 
+#include "string.h"
+#include "unistd.h"
 #include "file.h"
 
 #define EOF	-1

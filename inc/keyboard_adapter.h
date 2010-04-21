@@ -1,6 +1,9 @@
 #ifndef _KEYBOARD_ADAPTER_H
 #define _KEYBOARD_ADAPTER_H
 
+#include "stdio.h"
+#include "video_driver.h"
+#include "queue.h"
 
 /**
  * \fn void flushKeyboardBuffer(void)

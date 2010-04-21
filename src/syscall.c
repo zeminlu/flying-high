@@ -5,11 +5,7 @@
  *
  * 		Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin
  */
-#include "file.h"
-#include "string.h"
-#include "process.h"
-#include "memModule.h"
-#include "kasm.h"
+#include "syscall.h"
 
 extern FILE fileSystem[];
 extern process_t *runningProcess;

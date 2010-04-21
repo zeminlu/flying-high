@@ -7,9 +7,6 @@
  *
  */
 #include "stdio.h"
-#include "system.h"
-#include "string.h"
-#include "unistd.h"
 
 #define NIBBLES_PER_INT sizeof(int) * 2
 

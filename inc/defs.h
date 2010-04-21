@@ -14,6 +14,11 @@
 #define OK	TRUE
 #define	ERROR FALSE
 
+#define STDIN 	0
+#define STDOUT 	1
+#define IN_ATT	2
+#define OUT_ATT 3
+
 /* Flags para derechos de acceso de los segmentos */
 #define ACS_PRESENT     0x80            /* segmento presente en memoria */
 #define ACS_CSEG        0x18            /* segmento de codigo */

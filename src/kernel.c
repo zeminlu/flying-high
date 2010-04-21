@@ -1,24 +1,13 @@
-#include "kasm.h"
-#include "kc.h"
-#include "system.h"
-#include "int_handlers.h"
-#include "config.h"
-#include "stdio.h"
-#include "string.h"
-#include "video_driver.h"
-#include "mouse_driver.h"
-#include "memModule.h"
-#include "exceptions.h"
-#include "kMalloc.h"
+#include "kernel.h"
 
 DESCR_INT idt[256];			/* IDT de 256 entradas*/
 IDTR idtr;					/* IDTR */
 
 void kernel_main ( void  ) 
 {
-	char *msg, *aux = "Anduvo\n";
+	char *msg;/*, *aux = "Anduvo\n";
 	frame_t *frame;
-	char *buffer;
+	char *buffer;*/
 
 	_Cli();
 		_mascaraPIC1(0xFF);

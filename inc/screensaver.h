@@ -5,6 +5,11 @@
 #ifndef _SCREENSAVER_H_
 #define _SCREENSAVER_H_
 
+#include "config.h"
+#include "video_driver.h"
+#include "stdio.h"
+#include "keyboard_driver.h"
+#include "system.h"
 
 /*
  *	\fn ins screenSaver(void)

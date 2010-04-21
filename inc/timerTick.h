@@ -10,6 +10,12 @@
 #ifndef _TIMERTICK_H_
 #define _TIMERTICK_H_
 
+#include "system.h"
+#include "video_adapter.h"
+#include "keyboard_adapter.h"
+#include "keyboard_driver.h"
+#include "screensaver.h"
+
 void timerTick (void);
 
 #endif

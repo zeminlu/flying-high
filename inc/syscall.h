@@ -13,6 +13,9 @@
 #include "sysProcess.h"
 #include "memModule.h"
 #include "process.h"
+#include "file.h"
+#include "string.h"
+#include "kasm.h"
 
 #define _SYS_WRITE 	0
 #define _SYS_READ 	1
