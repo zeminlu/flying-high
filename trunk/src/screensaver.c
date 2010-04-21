@@ -5,12 +5,7 @@
  * 			has occurred, it will dissappear.
  */
 
-#include "config.h"
-#include "video_driver.h"
-#include "stdio.h"
-#include "keyboard_driver.h"
-#include "mouse_driver.h"
-#include "system.h"
+#include "screensaver.h"
 
 char bufferShell[VIDEO_MEMORY_SIZE];
 static int isFirstTime = 1;
@@ -35,7 +30,7 @@ int screenSaver( void )
 	}
 	else
 	{
-		if( checkMouseActivity() || checkKeyboardActivity() )
+		if( /*checkMouseActivity() ||*/ checkKeyboardActivity() )
 		{
 			pasteArea(CURSOR_START_COL,CURSOR_START_ROW,SCREEN_WIDTH-1,SCREEN_HEIGTH-1, bufferShell );
 			setCursorVisibility(1);

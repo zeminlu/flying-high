@@ -12,7 +12,6 @@
 
 #include "types.h"
 #include "defs.h"
-#include "stdio.h"
 
 char *strncpy(char *dst, const char *source, int n);
 

@@ -10,11 +10,6 @@
  */
 
 #include "keyboard_adapter.h"
-#include "stdio.h"
-#include "video_driver.h"
-#include "queue.h"
-
-
 
 void flushKeyboardBuffer( void )
 {

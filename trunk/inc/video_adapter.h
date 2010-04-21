@@ -11,6 +11,8 @@
 #define _VIDEO_ADAPTER_H_
 
 #include "stdio.h"
+#include "video_driver.h"
+
 void bufferMapper ( FILE *f/*, FILE *att*/ );
 
 /**

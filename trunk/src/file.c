@@ -3,8 +3,6 @@
  *
  */
 #include "file.h"
-#include "config.h"
-#include "system.h"
 
 /*
  * Files Buffer Definition

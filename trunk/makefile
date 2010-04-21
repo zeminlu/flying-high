@@ -37,7 +37,8 @@ LD = ld
 LDFLAGS = -T $(SRC_DIR)link.ld -o
 #
 TARGET1 = kernel.bin
-OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o mouse_driver.o keyboard_driver.o keyboard_adapter.o int_handlers.o queue.o video_adapter.o file.o shell.o system.o screensaver.o timerTick.o int80.o process.o memModule.o sysProcess.o kMalloc.o sysMalloc.o uMalloc.o exceptions.o kernelDepth.o
+OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o keyboard_driver.o keyboard_adapter.o int_handlers.o queue.o video_adapter.o file.o shell.o system.o screensaver.o timerTick.o int80.o process.o memModule.o sysProcess.o kMalloc.o sysMalloc.o uMalloc.o exceptions.o kernelDepth.o
+# mouse_driver.o
 ###############################################################################
 .SILENT:
 .PHONY: clean mcopy
@@ -65,47 +66,47 @@ mcopy:
 	$(COMPILE.asm) $@ $<
 	@echo "Done."
 
-libc.o: libc.c kc.h
+libc.o: libc.c libc.h
 
 unistd.o: unistd.asm sys.inc
 
-syscall.o: syscall.c file.h system.h sysProcess.h memModule.h
+syscall.o: syscall.c syscall.h
 
-kernel.o: kernel.c kc.h kasm.h system.h int_handlers.h unistd.h video_driver.h mouse_driver.h keyboard_driver.h config.h stdio.h string.h shell.h memModule.h 
+kernel.o: kernel.c kernel.h
 
-file.o: file.c file.h system.h types.h config.h
+file.o: file.c file.h
 
 io.o: io.asm io.h 
 
-video_driver.o: video_driver.c video_driver.h config.h io.h string.h 
+video_driver.o: video_driver.c video_driver.h 
 
 int_handlers.o: int_handlers.asm int_handlers.h
 
-mouse_driver.o: mouse_driver.c mouse_driver.h video_driver.h config.h
+mouse_driver.o: mouse_driver.c mouse_driver.h
 
-keyboard_driver.o: keyboard_driver.c keyboard_driver.h io.h queue.h keyboard_buffer.h config.h
+keyboard_driver.o: keyboard_driver.c keyboard_driver.h
 
-queue.o: queue.c queue.h keyboard_buffer.h
+queue.o: queue.c queue.h
 
-video_adapter.o: video_adapter.c video_adapter.h video_driver.h stdio.h
+video_adapter.o: video_adapter.c video_adapter.h
 
 stdio.o: stdio.c stdio.h
 
-keyboard_adapter.o: keyboard_adapter.c keyboard_adapter.h stdio.h video_driver.h queue.h
+keyboard_adapter.o: keyboard_adapter.c keyboard_adapter.h
 
-shell.o: shell.c shell.h video_driver.h system.h stdio.h config.h unistd.h string.h colors.h mouse_driver.h
+shell.o: shell.c shell.h
 
-screensaver.o: screensaver.c screensaver.h config.h video_driver.h io.h mouse_driver.h system.h 
+screensaver.o: screensaver.c screensaver.h 
 
-system.o: system.c system.h stdio.h io.h shell.h screensaver.h
+system.o: system.c system.h
 
-timerTick.o: timerTick.c timerTick.h system.h video_adapter.h keyboard_adapter.h keyboard_driver.h mouse_driver.h screensaver.h
+timerTick.o: timerTick.c timerTick.h
 
 memModule.o: memModule.c memModule.h
 
-process.o: process.c process.h int80.h syscall.h string.h types.h sysProcess.h
+process.o: process.c process.h
 
-sysProcess.o: sysProcess.c sysProcess.h keyboard_driver.h config.h
+sysProcess.o: sysProcess.c sysProcess.h
 
 int80.o: int80.asm syscall.h
 

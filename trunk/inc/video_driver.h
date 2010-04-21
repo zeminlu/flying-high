@@ -11,6 +11,11 @@
 #ifndef _VIDEO_DRIVER_H_
 #define _VIDEO_DRIVER_H_
 
+#include "io.h"
+#include "types.h"
+#include "config.h"
+
+void *memcpy(void *dest, const void *src, size_t n);
 
 /*
  *	Special Characters Definition

@@ -6,16 +6,7 @@
  *		Author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
  *
  */
-#include "config.h"
-#include "stdio.h"
-#include "video_driver.h"
-#include "unistd.h"
-#include "system.h"
-#include "string.h"
-#include "colors.h"
-#include "mouse_driver.h"
-#include "screensaver.h"
-#include "video_adapter.h"
+#include "shell.h"
 
 #define MAX_LINE 100
 
@@ -124,7 +115,7 @@ static int tabStop (char * value)
 	return 1;
 }
 
-static int mouseRate (char *value)
+/*static int mouseRate (char *value)
 {
 	int rate = toInt(value);
 	setMouseRate(rate);
@@ -153,7 +144,7 @@ static int mouseEnable (char *value)
 	}
 	refreshScreen();
 	return 1;
-}
+}*/
 
 static int screenSaverTime (char *value)
 {
@@ -177,8 +168,8 @@ static propertyT properties[] = {
 	{"pointer-color", pointerColor, "Changes the mouse pointer's color. Valid colors: BLUE, GREEN, CYAN, RED and MAGENTA."},
 	{"video-color", videoColor, "Changes the video color. Valid colors: BLUE, GREEN, CYAN, RED and MAGENTA."},
 	{"tab-stop", tabStop, "Changes amount of spaces a tab stop inserts into a line."},
-	{"mouse-rate", mouseRate, "Changes the mouse rate. The amount of ticks before the mouse refreshes it's position."},
-	{"mouse-enable", mouseEnable, "Turn on/off the mouse. Valid values 'true' or 'false'"},
+	/*{"mouse-rate", mouseRate, "Changes the mouse rate. The amount of ticks before the mouse refreshes it's position."},
+	{"mouse-enable", mouseEnable, "Turn on/off the mouse. Valid values 'true' or 'false'"},*/
 	{"screensaver-time", screenSaverTime, "Changes the non-activity time required by the screensaver to be launched."},
 	{"", NULL}
 };

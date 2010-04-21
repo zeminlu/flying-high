@@ -10,11 +10,7 @@
 /*
  *	Include Section
  */
-#include "config.h"
 #include "video_driver.h"
-#include "io.h"
-#include "types.h"
-#include "string.h"
 
 /*
  *	Macro Definition Section

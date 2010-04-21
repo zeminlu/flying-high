@@ -8,12 +8,6 @@
  */
 
 #include "timerTick.h"
-#include "system.h"
-#include "video_adapter.h"
-#include "keyboard_adapter.h"
-#include "keyboard_driver.h"
-#include "mouse_driver.h"
-#include "screensaver.h"
 
 extern int waitCounter;
 

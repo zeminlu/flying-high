@@ -9,10 +9,11 @@
 #ifndef _SYSTEM_H_
 #define _SYSTEM_H_
 
-#define STDIN 	0
-#define STDOUT 	1
-#define IN_ATT	2
-#define OUT_ATT 3
+#include "screensaver.h"
+#include "shell.h"
+#include "io.h"
+#include "config.h"
+
 #define LIVE 1
 #define DEAD 0
 

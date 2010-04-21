@@ -1,4 +1,3 @@
-#include "video_driver.h"
 #include "video_adapter.h"
 
 void bufferMapper ( FILE *f/*, FILE *att*/ )

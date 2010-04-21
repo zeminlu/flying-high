@@ -6,11 +6,6 @@
  *		Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin
  */
 #include "system.h"
-#include "shell.h"
-#include "stdio.h"
-#include "io.h"
-#include "screensaver.h"
-#include "config.h"
 
 static int runningApp = TERMINAL, oldApp = TERMINAL;
 unsigned int waitCounter = 0;
