@@ -8,8 +8,9 @@
  *
  */
 
-#ifndef VIDEO_DRIVER_H_
-#define VIDEO_DRIVER_H_
+#ifndef _VIDEO_DRIVER_H_
+#define _VIDEO_DRIVER_H_
+
 
 /*
  *	Special Characters Definition

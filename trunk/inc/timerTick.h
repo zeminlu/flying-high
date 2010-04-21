@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef TIMERTICK_H_
-#define TIMERTICK_H_
+#ifndef _TIMERTICK_H_
+#define _TIMERTICK_H_
 
 void timerTick (void);
 

@@ -37,7 +37,7 @@ LD = ld
 LDFLAGS = -T $(SRC_DIR)link.ld -o
 #
 TARGET1 = kernel.bin
-OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o mouse_driver.o keyboard_driver.o keyboard_adapter.o int_handlers.o queue.o video_adapter.o file.o shell.o system.o screensaver.o timerTick.o int80.o process.o memModule.o sysProcess.o
+OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o mouse_driver.o keyboard_driver.o keyboard_adapter.o int_handlers.o queue.o video_adapter.o file.o shell.o system.o screensaver.o timerTick.o int80.o process.o memModule.o sysProcess.o kMalloc.o sysMalloc.o uMalloc.o exceptions.o kernelDepth.o
 ###############################################################################
 .SILENT:
 .PHONY: clean mcopy
@@ -109,6 +109,15 @@ sysProcess.o: sysProcess.c sysProcess.h keyboard_driver.h config.h
 
 int80.o: int80.asm syscall.h
 
+kMalloc.o: kMalloc.c kMalloc.h
+
+sysMalloc.o: sysMalloc.c sysMalloc.h
+
+uMalloc.o: uMalloc.c uMalloc.h
+
+exceptions.o: exceptions.c exceptions.h
+
+kernelDepth.o: kernelDepth.c kernelDepth.h
 
 clean:
 	@echo "Clearing" $(OUTPUT_DIR) "directory..."

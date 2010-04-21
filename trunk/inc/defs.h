@@ -3,8 +3,8 @@
 	
 ****************************************************/
 
-#ifndef _defs_
-#define _defs_
+#ifndef _DEFS_H_
+#define _DEFS_H_
 
 #define byte unsigned char
 #define word short int
@@ -56,8 +56,6 @@ typedef struct {
   word  limit;
   dword base;
 } IDTR;
-
-     
 
 #endif
 

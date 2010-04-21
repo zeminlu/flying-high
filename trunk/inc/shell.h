@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef SHELL_H_
-#define SHELL_H_
+#ifndef _SHELL_H_
+#define _SHELL_H_
 
 /**
  * \fn int shell ( void )

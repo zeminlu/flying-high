@@ -1,11 +1,12 @@
-#ifndef KEYBOARD_DRIVER
-#define KEYBOARD_DRIVER
+#ifndef _KEYBOARD_DRIVER_H_
+#define _KEYBOARD_DRIVER_H_
 
 /*
  *  keyboard_driver.h
  */ 
 
 #include "queue.h"
+
 
 /*
  *	Functions Section

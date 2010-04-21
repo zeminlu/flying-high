@@ -1,4 +1,5 @@
 #include "process.h"
+#include "int80.h"
 
 extern process_t processTable[MAX_PROCESS];
 
@@ -6,13 +7,22 @@ extern process_t *runningProcess;
 
 extern process_t *initProcess;
 
-void * memmap(){
-	return (void *)int80(_SYS_MEMMAP, NULL, NULL, NULL);
+void * memmap(int isKernel){
+	return (void *)int80(_SYS_MEMMAP, (void *)isKernel, NULL, NULL);
 }
+
+/*pid_t createProcess(char *name, pfunc_t main, int args, int level) {
+	return (pid_t)callInt80(_SYS_CREATE_PROCESS, name, (void*)main, (void *)args, (void *)level, NULL);
+}*/
 
 pid_t getpid()
 {
 	return runningProcess->pid;
+}
+
+void exit(int status) {
+	int80(_SYS_EXIT, (void *)status, NULL, NULL);
+	return;
 }
 
 pid_t getppid()

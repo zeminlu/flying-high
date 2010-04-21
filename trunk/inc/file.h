@@ -5,8 +5,8 @@
  *
  *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
  */
-#ifndef FILE_H_
-#define FILE_H_
+#ifndef _FILE_H_
+#define _FILE_H_
 
 #include "types.h"
 

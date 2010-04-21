@@ -9,10 +9,47 @@ section .text
 
 %include "sys.inc"
 
+GLOBAL returnAddress
+
 global _int_80_handler
 global _int_08_handler
 global _int_74_handler
 global _int_09_handler
+
+GLOBAL _divide_e_hand
+GLOBAL _debug_e_hand
+GLOBAL _nmi_e_hand
+GLOBAL _break_point_e_hand
+GLOBAL _overflow_e_hand
+GLOBAL _bounds_check_e_hand
+GLOBAL _invalid_opcode_e_hand
+GLOBAL _copro_unavailable_e_hand
+GLOBAL _double_fault_e_hand
+GLOBAL _invalid_tss_e_hand
+GLOBAL _segment_not_present_e_hand
+GLOBAL _stack_e_hand
+GLOBAL _general_protection_e_hand
+GLOBAL _page_fault_e_hand
+GLOBAL _coprocessor_e_hand
+
+EXTERN divideExceptionHandler
+EXTERN debugExceptionHandler
+EXTERN NMIExceptionHandler
+EXTERN breakPointExceptionHandler
+EXTERN overflowExceptionHandler
+EXTERN boundsCheckExceptionHandler
+EXTERN invalidOpcodeExceptionHandler
+EXTERN coprocessorUnavailableExceptionHandler
+EXTERN doubleFaultExceptionHandler
+EXTERN invalidTSSExceptionHandler
+EXTERN segmentNotPresentExceptionHandler
+EXTERN stackExceptionHandler
+EXTERN generalProtectionExceptionHandler
+EXTERN pageFaultExceptionHandler
+EXTERN coprocessorExceptionHandler
+
+EXTERN increaseKernelDepth
+EXTERN decreaseKernelDepth
 
 extern mouseDriver
 extern timerTick
@@ -37,6 +74,7 @@ _int_08_handler:		;													   ;
 						;													   ;
 	call	timerTick	; 													   ;
 						;													   ;
+returnAddress:			;													   ;
 	mov		al,0x20		; Notifying PIC1 of End OF Interrupt				   ;
 	out		0x20,al		;													   ;
 						;													   ;
@@ -83,11 +121,14 @@ __check_SYS_READ:					;	case _SYS_READ:						   ;
 	call	_sys_read				;										   ;
 	add		esp,12					;										   ;
 	jmp		__int_80_ret			;										   ;
-				
-__check_SYS_MEMMAP:
-	cmp		eax, _SYS_MEMMAP
-	jnz		__int_80_ret
-	
+									;										   ;
+__check_SYS_MEMMAP:					;										   ;
+	cmp		eax, _SYS_MEMMAP		;										   ;
+	jnz		__int_80_ret			;										   ;
+	push	ebx						;										   ;
+	call	_sys_memmap				;										   ;
+	add		esp, 12					;										   ;
+	jmp		__int_80_ret			;										   ;
 									;	default:							   ;
 __int_80_ret:						;		break:							   ;
 	leave							; }										   ;
@@ -136,7 +177,321 @@ _int_09_handler:						; Building the stack Frame			   ;
 		iret							;									   ;
 ; ---------------------------------------------------------------------------- ;
 
+;-----------------------------------------------------------------------------;
+; Function: _devide_e_hand													  ;
+; Description:																  ;
+;		Handles the divide by zero exception.								  ;
+; 																			  ;
+; Programmer: Luciano Zemin											  ;
+;-----------------------------------------------------------------------------;
+_divide_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call divideExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _debug_e_hand													  ;
+; Description:																  ;
+;		Handles the debug exception.										  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_debug_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call debugExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _nmi_e_hand														  ;
+; Description:																  ;
+;		Handles the non maskable exception.									  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_nmi_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call NMIExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _break_point_e_hand												  ;
+; Description:																  ;
+;		Handles the break point exception.									  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_break_point_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call breakPointExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _overflow_e_hand												  ;
+; Description:																  ;
+;		Handles the overflow exception.										  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_overflow_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call overflowExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _bounds_check_e_hand											  ;
+; Description:																  ;
+;		Handles the bounds check exception.									  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_bounds_check_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call boundsCheckExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _invalid_opcode_e_hand											  ;
+; Description:																  ;
+;		Handles the invalid opcode exception.								  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_invalid_opcode_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call invalidOpcodeExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _copro_unavailable_e_hand										  ;
+; Description:																  ;
+;		Handles the coprocessor unavailable exception.						  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_copro_unavailable_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call coprocessorUnavailableExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _double_fault_e_hand											  ;
+; Description:																  ;
+;		Handles the double fault exception.									  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_double_fault_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call doubleFaultExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _invalid_tss_e_hand			 									  ;
+; Description:																  ;
+;		Handles the invalid TSS exception.									  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_invalid_tss_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call invalidTSSExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _segment_not_present_e_hand										  ;
+; Description:																  ;
+;		Handles the segment not present exception.							  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_segment_not_present_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call segmentNotPresentExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _stack_e_hand													  ;
+; Description:																  ;
+;		Handles the stack exception.										  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_stack_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call stackExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _general_protection_e_hand										  ;
+; Description:																  ;
+;		Handles the general protection exception.							  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_general_protection_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call generalProtectionExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _page_fault_e_hand												  ;
+; Description:																  ;
+;		Handles the page fault exception.									  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_page_fault_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call pageFaultExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
+;-----------------------------------------------------------------------------;
+; Function: _coprocessor_e_hand												  ;
+; Description:																  ;
+;		Handles the coprocessor exception.									  ;
+; 																			  ;
+; Programmer: Luciano Zemin													  ;
+;-----------------------------------------------------------------------------;
+_coprocessor_e_hand:
+	cli
+	pushad
+	call increaseKernelDepth
+	
+	call coprocessorExceptionHandler
+	
+	push 0x01
+	call decreaseKernelDepth
+	add esp, 0x04
+
+	popad
+	iret
+
 SECTION .data
 
 	_SYS_MEMMAP 	equ 2
-	

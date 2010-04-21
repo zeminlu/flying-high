@@ -6,8 +6,8 @@
  *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
  */
 
-#ifndef SYSTEM_H_
-#define SYSTEM_H_
+#ifndef _SYSTEM_H_
+#define _SYSTEM_H_
 
 #define STDIN 	0
 #define STDOUT 	1

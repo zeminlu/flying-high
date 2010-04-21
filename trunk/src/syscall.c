@@ -9,10 +9,14 @@
 #include "string.h"
 #include "process.h"
 #include "memModule.h"
+#include "kasm.h"
 
 extern FILE fileSystem[];
 extern process_t *runningProcess;
 extern process_t processTable[MAX_PROCESS];
+
+void returnAddress();
+void *getKernelHeap();
 
 size_t _sys_write ( int fd, char * buffer, size_t n )
 {
@@ -67,16 +71,14 @@ size_t _sys_read ( int fd, char * buffer, size_t n )
 	return i;
 }
 
-void * _sys_memmap(){
-	return runningProcess->heap;
+void * _sys_memmap(int isKernel){
+	return isKernel ? getKernelHeap() : runningProcess->heap;
 }
 
 static void createStackFrame(process_t *process, pfunc_t main, int args) {
-	/*unsigned *esp, espPushedReg;
+	unsigned *esp, espPushedReg;
 	
-	setPagePresence(process->stack, TRUE);
-	setPagePresence(process->heap, TRUE);
-	esp = process->stack + PAGE_SIZE  - 4;
+	esp = (unsigned *)(((char *)process->stack) + PAGE_SIZE  - 4);
 	
 	*esp-- = 0x00000000;
 	*esp-- = 0x00000000;
@@ -95,20 +97,16 @@ static void createStackFrame(process_t *process, pfunc_t main, int args) {
 	*esp-- = 0x11111111;
 	*esp-- = 0xEEEEEEEE;
 	*esp-- = 0xFFFFFFFF;
-	*esp-- = (unsigned)mtaskRetAddr;
+	*esp-- = (unsigned)returnAddress;
 	*esp =  (unsigned)(esp + 1);
 	process->esp = esp - LOCAL_VARIABLES_SPACE;
 	process->ebp = esp;
 
-	
-	setPagePresence(process->stack, FALSE);
-	setPagePresence(process->heap, FALSE);
-*/
 	return;
 }
 
 pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
-	int i, j, nameLen, *linkRet;
+	int i, j, nameLen;/*, *linkRet;*/
 	process_t *process;
 	frame_t *frame;
 	
@@ -154,9 +152,9 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	process->atomicity = UNATOMIC;
 	process->level = level;
 	
-	/*process->priority = ;
+	/*process->priority = 0;*/
 	process->tickCounter = 0;
-	process->sleepingPid = -1;*/
+	process->sleepingPid = -1;
 	
 	for ( i = 0; i < MAX_CHILDS; ++i )
 		process->childs[i] = -1;
@@ -169,8 +167,10 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 			nameLen = MAX_PROCESS_NAME;
 		memcpy(process->name, name, nameLen);
 	}
-		
-	/*createStackFrame(process, main, args);*/
+	
+	setFramePresence(frame, TRUE);
+	createStackFrame(process, main, args);
+	setFramePresence(frame, FALSE);
 
 	return process->pid;
 }

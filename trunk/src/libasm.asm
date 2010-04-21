@@ -1,9 +1,13 @@
 GLOBAL  _read_msw,_lidt
 GLOBAL  _mascaraPIC1,_mascaraPIC2,_Cli,_Sti
 GLOBAL  _debug
+GLOBAL getCodeSegment
 
 SECTION .text
 
+getCodeSegment:
+	mov eax, cs
+	ret
 
 _Cli:
 	cli			; limpia flag de interrupciones

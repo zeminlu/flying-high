@@ -3,6 +3,9 @@
  *		Definitions of calling80.asm
  */
 
+#ifndef _INT80_H_
+#define _INT80_H_
+
 /*
  * Function: void * int80( int eax, void * ebx, void * ecx, void * edx)
  *	
@@ -11,3 +14,4 @@
  */
  void * int80( int eax, void * ebx, void * ecx, void * edx );
  
+#endif

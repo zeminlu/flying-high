@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef CONFIG_H_
-#define CONFIG_H_
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
 
 #include "colors.h"
 

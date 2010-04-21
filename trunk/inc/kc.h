@@ -1,10 +1,11 @@
 /**********************
  kc.h
 **********************/
-#include "defs.h"
 
-#ifndef _kc_
-#define _kc_
+#ifndef _KC_H_
+#define _KC_H_
+
+#include "defs.h"
 
 #define WHITE_TXT 0x07 /* Atributo de video. Letras blancas, fondo negro */
 
