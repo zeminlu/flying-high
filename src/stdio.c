@@ -17,8 +17,21 @@ FILE * stdinFile = &(fileSystem[STDIN]);
 FILE * inattFile = &(fileSystem[IN_ATT]);
 FILE * outattFile = &(fileSystem[OUT_ATT]);
 
+int fputi(int i, FILE * stream) {
+	char msg[10];
+
+	memset(msg, '\0', 10);
+	intToString(i, msg);
+
+	return fputs((const char *)msg, stream);
+}
+
+int puti(int i) {
+	return fputi(i, stdout);
+}
+
 int fputx(int num, FILE * stream) {
-/*	char msg[NIBBLES_PER_INT + 3];
+	char msg[NIBBLES_PER_INT + 3];
 	int i, nibbles, mask, c;
 
 	memset(msg, '\0', NIBBLES_PER_INT + 3);
@@ -33,8 +46,7 @@ int fputx(int num, FILE * stream) {
 			msg[NIBBLES_PER_INT - i + 1] = 'A' + c - 10;
 		num = num >> 4;
 	}
-	return fputs((const char *)msg, stream);*/
-		return 0;
+	return fputs((const char *)msg, stream);
 }
 
 int putx(int num) {

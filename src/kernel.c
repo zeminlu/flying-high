@@ -6,8 +6,8 @@ IDTR idtr;					/* IDTR */
 void kernel_main ( void  ) 
 {
 	char *msg;/*, *aux = "Anduvo\n";
-	frame_t *frame;
-	char *buffer;*/
+	frame_t *frame;*/
+	char *buffer;
 
 	_Cli();
 		_mascaraPIC1(0xFF);
@@ -52,7 +52,7 @@ void kernel_main ( void  )
 	
 	puts("\n\tReady.\n\n");
 	
-	/*buffer = kMalloc(sizeof(char) * 6);
+	buffer = kMalloc(sizeof(char) * 6);
 	buffer[0] = 'H';
 	buffer[1] = 'o';
 	buffer[2] = 'l';
@@ -60,7 +60,10 @@ void kernel_main ( void  )
 	buffer[4] = '\n';
 	buffer[5] = '\0';
 	
-	puts("Hizo kmalloc\n\0");*/
+	puts(buffer);
+	puts("Hizo kMalloc\n");
+	flushKeyboardBuffer(); /* flush kb buffer into stdin */
+	flushStdScreen();	/* flush stdout into video buffer and refresh screen */
 	/* Main loop */
 	launchApp(SHELL);
 	while (1)
