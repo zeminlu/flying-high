@@ -7,10 +7,10 @@
  *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
  *
  */
-#ifndef VIDEO_ADAPTER_H_
-#define VIDEO_ADAPTER_H_
-#include "stdio.h"
+#ifndef _VIDEO_ADAPTER_H_
+#define _VIDEO_ADAPTER_H_
 
+#include "stdio.h"
 void bufferMapper ( FILE *f/*, FILE *att*/ );
 
 /**

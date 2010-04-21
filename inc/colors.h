@@ -1,5 +1,5 @@
-#ifndef COLORS_H_
-#define COLORS_H_
+#ifndef _COLORS_H_
+#define _COLORS_H_
 
 #define BLACK			0x0
 #define BLUE			0x1

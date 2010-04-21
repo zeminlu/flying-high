@@ -11,12 +11,38 @@
 #include "string.h"
 #include "unistd.h"
 
+#define NIBBLES_PER_INT sizeof(int) * 2
+
 extern FILE fileSystem[];
 
 FILE * stdoutFile = &(fileSystem[STDOUT]);
 FILE * stdinFile = &(fileSystem[STDIN]);
 FILE * inattFile = &(fileSystem[IN_ATT]);
 FILE * outattFile = &(fileSystem[OUT_ATT]);
+
+int fputx(int num, FILE * stream) {
+/*	char msg[NIBBLES_PER_INT + 3];
+	int i, nibbles, mask, c;
+
+	memset(msg, '\0', NIBBLES_PER_INT + 3);
+	mask = 0x0000000F;
+	msg[0] = '0';
+	msg[1] = 'x';
+	for ( i = 0, nibbles = NIBBLES_PER_INT; i < nibbles; ++i ) {
+		c = num & mask;
+		if ( c < 0xA )	
+			msg[NIBBLES_PER_INT - i + 1] = '0' + c;
+		else
+			msg[NIBBLES_PER_INT - i + 1] = 'A' + c - 10;
+		num = num >> 4;
+	}
+	return fputs((const char *)msg, stream);*/
+		return 0;
+}
+
+int putx(int num) {
+	return fputx(num, stdout);
+}
 
 int fputc ( int c, FILE * stream )
 {

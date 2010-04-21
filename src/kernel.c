@@ -8,6 +8,8 @@
 #include "video_driver.h"
 #include "mouse_driver.h"
 #include "memModule.h"
+#include "exceptions.h"
+#include "kMalloc.h"
 
 DESCR_INT idt[256];			/* IDT de 256 entradas*/
 IDTR idtr;					/* IDTR */
@@ -16,14 +18,20 @@ void kernel_main ( void  )
 {
 	char *msg, *aux = "Anduvo\n";
 	frame_t *frame;
-	void *buffer;
+	char *buffer;
+
+	_Cli();
+		_mascaraPIC1(0xFF);
+		_mascaraPIC2(0xFF);
+	_Sti();
 
 	/* Loading IDT */
+	/*setup_IDT_entry (&idt[0x74], 0x08, (dword)&_int_74_handler, ACS_INT, 0);*/
 	setup_IDT_entry (&idt[0x08], 0x08, (dword)&_int_08_handler, ACS_INT, 0);
 	setup_IDT_entry (&idt[0x09], 0x08, (dword)&_int_09_handler, ACS_INT, 0);
-	/*setup_IDT_entry (&idt[0x74], 0x08, (dword)&_int_74_handler, ACS_INT, 0);*/
 	setup_IDT_entry (&idt[0x80], 0x08, (dword)&_int_80_handler, ACS_INT, 0);
-
+	loadExceptionHandlers();
+	
 	/* Loading IDTR */
 	idtr.base = 0;
 	idtr.base +=(dword) &idt;
@@ -32,7 +40,7 @@ void kernel_main ( void  )
 
 	clearScreen();
 
-	msg = "\n\tWelcome, you're Flying-High at 0.1 meters\n\n";
+	msg = "\n\tWelcome, you're Flying-High at 0.2 meters!!\n\n";
 	puts(msg);
 	
 	initPaging();
@@ -55,14 +63,15 @@ void kernel_main ( void  )
 	
 	puts("\n\tReady.\n\n");
 	
-	frame = getFrame();
-	setFramePresence(frame, TRUE);
-	buffer = (void *)(frame->address);
-	memcpy(buffer, aux, sizeof(char) * 8);
-	memcpy(aux, buffer, sizeof(char) * 8);
-	puts(aux);
-	setFramePresence(frame, FALSE);
-	freeFrame(frame);
+	/*buffer = kMalloc(sizeof(char) * 6);
+	buffer[0] = 'H';
+	buffer[1] = 'o';
+	buffer[2] = 'l';
+	buffer[3] = 'a';
+	buffer[4] = '\n';
+	buffer[5] = '\0';
+	
+	puts("Hizo kmalloc\n\0");*/
 	/* Main loop */
 	launchApp(SHELL);
 	while (1)

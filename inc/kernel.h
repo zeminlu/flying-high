@@ -6,8 +6,8 @@
 *
 ***********************************/
 
-#ifndef _kernel_
-#define _kernel_
+#ifndef _KERNEL_H_
+#define _KERNEL_H_
 
 #define OS_PID	0
 

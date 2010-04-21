@@ -2,11 +2,11 @@
 
 process_t processTable[MAX_PROCESS];
 
-process_t *runningProcess;
+process_t *runningProcess = NULL;
 
-process_t *initProcess;
+process_t *initProcess = NULL;
 
-process_t *nextProcess;
+process_t *nextProcess = NULL;
 
 static pid_t nextPID = 1;
 

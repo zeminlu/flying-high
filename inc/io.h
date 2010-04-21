@@ -8,8 +8,8 @@
  *
  */
 
-#ifndef INOUT_H_
-#define INOUT_H_
+#ifndef _INOUT_H_
+#define _INOUT_H_
 
 /*
  *	Video Memory Address

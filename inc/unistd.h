@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef UNISTD_H_
-#define UNISTD_H_
+#ifndef _UNISTD_H_
+#define _UNISTD_H_
 
 #include "types.h"
 

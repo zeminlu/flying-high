@@ -79,9 +79,16 @@ typedef struct frame{
 	unsigned int address;
 } frame_t;
 
+typedef struct memArea{
+	void *address;
+	size_t size;
+} memArea_t;
+
 typedef frame_t framesTable_t[TOTAL_FRAMES_QTY];
 
 int initPaging();
+
+void setKernelHeapPresence(int state);
 
 void initPage(page_t *page, int isKernel);
 
@@ -96,5 +103,7 @@ int initMallocTable(pageTable_t mallocTable, int dirIndex);
 frame_t * getFrame();
 
 int freeFrame(frame_t *frame);
+
+void setFramePresence(frame_t *frame, int state);
 
 #endif

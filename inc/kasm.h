@@ -2,6 +2,8 @@
 kasm.h
 
 ************************************************/
+#ifndef _KASM_H_
+#define _KASM_H_
 
 #include "defs.h"
 
@@ -20,3 +22,6 @@ void		_int_08_hand();      /* Timer tick */
 
 void		_debug (void);
 
+unsigned getCodeSegment();
+
+#endif

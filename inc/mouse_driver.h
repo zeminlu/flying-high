@@ -4,8 +4,9 @@
  *	\author: Guido Marucci Blas & Nicolas Purita & Luciano Zemin
  */
 
-#ifndef MOUSE_DRIVER_H_
-#define MOUSE_DRIVER_H_
+#ifndef _MOUSE_DRIVER_H_
+#define _MOUSE_DRIVER_H_
+
 
 /**
  *	\fn void initMouse (void)

@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef TYPES_H_
-#define	TYPES_H_
+#ifndef _TYPES_H_
+#define	_TYPES_H_
 
 /*
  *	Type definitions

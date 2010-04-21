@@ -6,8 +6,8 @@
  *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
  */
 
-#ifndef INT_HANDLERS_H_
-#define INT_HANDLERS_H_
+#ifndef _INT_HANDLERS_H_
+#define _INT_HANDLERS_H_
 
 /**
  *	\fn void _int_08_handler ( void )

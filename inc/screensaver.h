@@ -2,8 +2,9 @@
  *	\file screensaver.h
  *
  */
-#ifndef SCREENSAVER_H_
-#define SCREENSAVER_H_
+#ifndef _SCREENSAVER_H_
+#define _SCREENSAVER_H_
+
 
 /*
  *	\fn ins screenSaver(void)

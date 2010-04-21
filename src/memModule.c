@@ -4,7 +4,8 @@
 static directory_t *kernelDir = (directory_t *)((char *)(KERNEL_SPACE_SIZE) - sizeof(directory_t));
 
 /* Kernel Heap Definition */
-static void *kernelHeapPages[KERNEL_HEAP_PAGES_QTY];
+static void *kernelHeap;
+static frame_t *kernelFrame;
 
 /* Frame table Definition*/
 static framesTable_t framesTable;
@@ -14,6 +15,10 @@ static framesTable_t framesTable;
  */
 
 static usedMemBitmap_t usedMemory;
+
+void * getKernelHeap(){
+	return kernelHeap;
+}
 
 int initPaging(){
 	unsigned int i;
@@ -38,7 +43,13 @@ int initPaging(){
 	cr0 |= 0x80000000;
 	asm volatile("mov %0, %%cr0":: "r"(cr0));
 	
+	kernelFrame = getFrame();
+	kernelHeap = (void *)kernelFrame->address;
 	return 0;
+}
+
+void setKernelHeapPresence(int state){
+	setFramePresence(kernelFrame, state);
 }
 
 void initPage(page_t *page, int isKernel){

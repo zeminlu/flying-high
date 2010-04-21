@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef STDIO_H_
-#define	STDIO_H_
+#ifndef _STDIO_H_
+#define	_STDIO_H_
 
 #include "file.h"
 
@@ -34,6 +34,10 @@ extern FILE * outattFile;
 #define puts(str) fputs((str), stdout)
 #define putchar(c) fputc((c), stdout)
 #define getchar() fgetc(stdin)
+
+int fputx(int i, FILE * stream);
+
+int putx(int i);
 
 int fputs ( const char *s, FILE * stream );
 

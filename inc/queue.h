@@ -1,17 +1,16 @@
+#ifndef _QUEUE_H_
+#define _QUEUE_H_
+
 /*
  *	\file queue.h
  *	\author Guido Marucci Blas, Luciano Zemin & Nicolas Purita
  *
  */
 #include "keyboard_buffer.h"
-
+#include "defs.h"
 /*
  * Define Section
  */
-
-
-enum { FALSE, TRUE };
-
 
 /*
  * Function Section
@@ -47,3 +46,4 @@ Keycode charDeque ( void );
 
 int kbBufferIsEmpty ( void );
 
+#endif
