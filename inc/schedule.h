@@ -15,11 +15,11 @@
 
 #include "sysProcess.h"
 
-process_t * getNextTask();
+static process_t * getNextTask();
 
-process_t * roundRobinSchedule();
+static process_t * roundRobinSchedule();
 
-process_t * rpgSchedule();
+static process_t * rpgSchedule();
 
 void checkWhatAreReady( process_t * pro[] );
 
