@@ -2,14 +2,14 @@
 
 static int asigment = FALSE;
 
-static memArea_t getMem(){
+static memArea_t * getMem(){
 	static memArea_t auxMem;
 	if(!asigment){
 		asigment = TRUE;
 		auxMem.address = memmap(FALSE);
 		auxMem.size = (6 * PAGE_SIZE);
 	}
-	return auxMem;
+	return &auxMem;
 
 }
 

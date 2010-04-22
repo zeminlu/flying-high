@@ -7,8 +7,10 @@ void kernel_main ( void  )
 {
 	char *msg;/*, *aux = "Anduvo\n";
 	frame_t *frame;*/
-	char *buffer;
-
+	/*
+	char * buffer;
+	char * buffer2;
+	*/
 	_Cli();
 		_mascaraPIC1(0xFF);
 		_mascaraPIC2(0xFF);
@@ -51,20 +53,36 @@ void kernel_main ( void  )
 	puts("Done.\n");
 	
 	puts("\n\tReady.\n\n");
-	
+	/*
 	buffer = kMalloc(sizeof(char) * 6);
+	
 	buffer[0] = 'H';
 	buffer[1] = 'o';
 	buffer[2] = 'l';
 	buffer[3] = 'a';
 	buffer[4] = '\n';
 	buffer[5] = '\0';
-	
 	puts(buffer);
-	puts("Hizo kMalloc\n");
-	flushKeyboardBuffer(); /* flush kb buffer into stdin */
-	flushStdScreen();	/* flush stdout into video buffer and refresh screen */
+	buffer2 = kMalloc(sizeof(char)* 6);
+	buffer2[0] = 'C';
+	buffer2[1] = 'h';
+	buffer2[2] = 'a';
+	buffer2[3] = 'u';
+	buffer2[4] = '\n';
+	buffer2[5] = '\0';
+	puts(buffer2);
+	
+	buffer = kRealloc(buffer, sizeof(char)* 10);
+	buffer[4] = 'L';
+	buffer[5] = 'E';
+	buffer[6] = 'R';
+	buffer[7] = '0';
+	buffer[8] = '\n';
+	buffer[9] = '\0';
+	puts(buffer);
+	*/
 	/* Main loop */
+	
 	launchApp(SHELL);
 	while (1)
 		runApp();
