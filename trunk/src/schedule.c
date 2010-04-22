@@ -24,7 +24,7 @@ extern int qtyProccessTable;
  *	Functions Section
  */
 
-process_t * getNextTask()
+static process_t * getNextTask()
 {	
 	process_t * proc;
 	
@@ -33,7 +33,7 @@ process_t * getNextTask()
 	return proc;
 }
 
-process_t * roundRobinSchedule()
+static process_t * roundRobinSchedule()
 {
 	static int lastTask = 0;
 	int i;
@@ -44,7 +44,7 @@ process_t * roundRobinSchedule()
 	{
 		if( i == MAX_PROCESS )
 			i = 2;
-		if( processTable[i].state == READY && processTable[i].state != RUNNING )
+		if( processTable[i].state == READY )
 		{
 			lastTask = i;
 			return &processTable[i];
@@ -54,7 +54,7 @@ process_t * roundRobinSchedule()
 	
 }
 
-process_t * rpgSchedule()
+static process_t * rpgSchedule()
 {
 	int i, procPos;
 	process_t *auxReady[MAX_PROCESS];
@@ -76,7 +76,7 @@ void checkWhatAreReady( process_t * pro[] )
 	
 	for( i = 2, k = 0 ; i < MAX_PROCESS ; ++i )
 	{
-		if( processTable[i].state == READY && processTable[i].state != RUNNING && processTable[i].rpgPrior >= MAX_RPG )
+		if( processTable[i].state == READY && processTable[i].rpgPrior >= MAX_RPG )
 			*(pro[k++]) = processTable[i];
 	}
 }
@@ -117,7 +117,7 @@ void increaseRPGCounter()
 	
 	for( i = 2 ; i < MAX_PROCESS ; ++i )
 	{
-		if( processTable[i].state == READY && processTable[i].state != RUNNING )
+		if( processTable[i].state == READY )
 		{
 			processTable[i].rpgPrior += evaluate(processTable[i].priority);
 			processTable[i].tickCounter = 1;
