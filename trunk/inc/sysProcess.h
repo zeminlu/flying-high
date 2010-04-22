@@ -46,6 +46,7 @@ typedef struct process_t {
 	int childsQty;
 	char name[MAX_PROCESS_NAME + 1];
 	int state;
+	int rpgPrior;
 	unsigned tickCounter;
 	int priority;
 	int level;
