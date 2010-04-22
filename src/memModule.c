@@ -45,10 +45,12 @@ int initPaging(){
 	
 	kernelFrame = getFrame();
 	kernelHeap = (void *)kernelFrame->address;
+	/*
 	puts("kernelHeap address = ");
 	putx((int)kernelFrame->address);
 	puts("\n");
 	flushStdScreen();
+	*/
 	return 0;
 }
 
