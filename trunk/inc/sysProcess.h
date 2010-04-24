@@ -15,11 +15,9 @@
 #define WAITING_PID			5
 #define TERMINATED			6
 #define ZOMBIE				7
+#define	FOREGROUND			0
+#define	BACKGROUND			1
 
-
-typedef int pid_t;
-
-typedef int tty_t;
 
 typedef void (pfunc_t)(int);
 
@@ -59,18 +57,5 @@ typedef struct process_t {
 	void *heap;
 	int atomicity;
 } process_t;
-
-typedef struct TTY{
-	tty_t	ttyId;
-	Keycode	KBBuffer[KEYBOARD_BUFFER_SIZE];
-	unsigned char TerminalBuffer[VIDEO_MEMORY_SIZE];
-	pid_t	focusProccess;
-}TTY;
-
-typedef struct sysTTY{
-	int		qtyTTY;
-	TTY		ttys[MAX_TTY];
-	tty_t	focusTTY;
-}sysTTY;
 
 #endif

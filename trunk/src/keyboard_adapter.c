@@ -10,6 +10,7 @@
  */
 
 #include "keyboard_adapter.h"
+#include "ttys.h"
 
 void flushKeyboardBuffer( void )
 {
@@ -21,6 +22,8 @@ void flushKeyboardBuffer( void )
 	while( !kbBufferIsEmpty() )
 		if( (deChar = charDeque()) != '\0' )
 		{
+			if( (deChar & 0x80 ) == 1 )
+				changeTtyFocus( (deChar & 0x81) - 1 );
 			fputc((int)deChar, stdin );
 			fputc(color, inatt);
 		}
