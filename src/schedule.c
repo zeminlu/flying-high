@@ -16,7 +16,7 @@ extern process_t processTable[MAX_PROCESS];
 
 extern process_t *nextProcess;
 
-extern sysTTY ttyTable;
+extern process_t *idleProcess;
 
 extern int qtyProccessTable;
 
@@ -50,7 +50,7 @@ static process_t * roundRobinSchedule()
 			return &processTable[i];
 		}
 	}
-	return &processTable[0];
+	return idleProcess;
 	
 }
 
@@ -59,7 +59,7 @@ static process_t * rpgSchedule()
 	int i, procPos;
 	process_t *auxReady[MAX_PROCESS];
 	
-	for( i = 0 ; i < MAX_PROCESS ; ++i )
+	for( i = 1 ; i < MAX_PROCESS ; ++i )
 		auxReady[i] = NULL;
 	
 	checkWhatAreReady(auxReady);
@@ -74,7 +74,7 @@ void checkWhatAreReady( process_t * pro[] )
 {
 	int i, k;
 	
-	for( i = 2, k = 0 ; i < MAX_PROCESS ; ++i )
+	for( i = 1, k = 0 ; i < MAX_PROCESS ; ++i )
 	{
 		if( processTable[i].state == READY && processTable[i].rpgPrior >= MAX_RPG )
 			*(pro[k++]) = processTable[i];
@@ -115,7 +115,7 @@ void increaseRPGCounter()
 {
 	int i;
 	
-	for( i = 2 ; i < MAX_PROCESS ; ++i )
+	for( i = 1 ; i < MAX_PROCESS ; ++i )
 	{
 		if( processTable[i].state == READY )
 		{
@@ -123,6 +123,23 @@ void increaseRPGCounter()
 			processTable[i].tickCounter = 1;
 		}
 	}
+}
+
+void setupScheduler( void )
+{
+	int i;
+	
+	idleProcess->pid = 0;
+	idleProcess->level = FOREGROUND;
+	idleProcess->priority = 4;
+	idleProcess->ppid = 0;
+	idleProcess->gid = 0;
+	idleProcess->tty = 0;
+	idleProcess->childsQty = 0;
+	memcpy(idleProcess->name, "Idle", 5);
+	idleProcess->state = RUNNING;
+	idleProcess->stack = malloc(0x200);
+	/*createStackFrame(idleProcess, );*/
 }
 
 

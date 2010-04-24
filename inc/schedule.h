@@ -5,6 +5,9 @@
 #ifndef SCEHDULE
 #define SCEHDULE
 
+#include "sysProcess.h"
+#include "uMalloc.h"
+
 #define	ROUND_ROBIN	1
 #define	RPG			2
 #define	ALGORITHIM	ROUND_ROBIN
@@ -13,18 +16,19 @@
 #define	evaluate(x)		((x * 0.75) + (MAX_PROCESS/(x+1)) * 3)
 #define	MAX(a,b)		((a > b) ? a : b)
 
-#include "sysProcess.h"
 
-static process_t * getNextTask();
+static process_t * getNextTask( void );
 
-static process_t * roundRobinSchedule();
+static process_t * roundRobinSchedule( void );
 
-static process_t * rpgSchedule();
+static process_t * rpgSchedule( void );
 
 void checkWhatAreReady( process_t * pro[] );
 
 int getTheOlder( process_t * pro[] );
 
-void increaseRPGCounter();
+void increaseRPGCounter( void );
+
+void setupScheduler( void );
 
 #endif

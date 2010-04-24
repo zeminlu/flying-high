@@ -14,7 +14,12 @@
  *	Type definitions
  */
 typedef unsigned int size_t;
+
 typedef unsigned int ssize_t;
+
+typedef int pid_t;
+
+typedef int tty_t;
 
 /*
  *	NULL Pointer Definition
