@@ -13,7 +13,7 @@
 #define	ALGORITHIM	ROUND_ROBIN
 #define	MAX_RPG		100
 
-#define	evaluate(x)		((x * 0.75) + (MAX_PROCESS/(x+1)) * 3)
+#define	evaluate(x)		((x * 0.75) + ((x+2)/MAX_PROCESS) * 100)
 #define	MAX(a,b)		((a > b) ? a : b)
 
 
