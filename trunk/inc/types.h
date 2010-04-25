@@ -19,6 +19,8 @@ typedef unsigned int ssize_t;
 
 typedef int pid_t;
 
+typedef int key_t;
+
 typedef int tty_t;
 
 /*
