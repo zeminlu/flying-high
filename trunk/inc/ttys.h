@@ -14,12 +14,10 @@ extern Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE];
 
 void initializeTTY( void );
 
-int getCurrentTty( void );
+int getCurrentTTY( void );
 
 void setTtyFocusProcess( tty_t tty, pid_t pid );
 
 int changeTtyFocus( tty_t nextTty );
-
-static void KBCleaner ( void );
 
 #endif
