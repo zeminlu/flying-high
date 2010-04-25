@@ -6,7 +6,7 @@
 
 typedef struct TTY{
 	tty_t	ttyId;
-	Keycode	KBBuffer[KEYBOARD_BUFFER_SIZE];
+	Keycode *	stdin;
 	unsigned char TerminalBuffer[VIDEO_MEMORY_SIZE];
 	pid_t	focusProcess;
 }TTY;
@@ -25,18 +25,17 @@ void initializeTTY( void )
 	
 	for( i = 0 ; i < MAX_TTY ; ++i )
 	{
-		if( i > 0 )
-			memcpy(ttyTable.ttys[i].TerminalBuffer, "root@ArkOS$>", 13 ); 
+		memcpy(ttyTable.ttys[i].TerminalBuffer, "root@ArkOS$>", 13 ); 
 		ttyTable.ttys[i].ttyId = i;
 	}
 	ttyTable.qtyTTY = MAX_TTY;
 	ttyTable.focusTTY = 0;
 	ttyTable.ttys[0].focusProcess = 0;		/* Cuando arranca la TTY tiene al Idle corriendo */
-	keyboardBuffer = ttyTable.ttys[0].KBBuffer;
-	videoBuffer = ttyTable.ttys[0].TerminalBuffer;
+	ttyTable.ttys[0].stdin = keyboardBuffer;
+	
 }
 
-int getCurrentTty( void ) 
+int getCurrentTTY( void ) 
 {
 	return ttyTable.focusTTY;
 }
@@ -51,21 +50,19 @@ int changeTtyFocus( tty_t nextTty )
 	
 	if( nextTty == ttyTable.focusTTY )
 		return 1;
-	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
-	keyboardBuffer = ttyTable.ttys[nextTty].KBBuffer;
-	KBCleaner();
-	clearScreen();
-	memcpy(videoBuffer, ttyTable.ttys[nextTty].TerminalBuffer, VIDEO_MEMORY_SIZE);
-	refreshScreen();
+	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId; 	
 	return 0;
 }
 
-static void KBCleaner ( void )
-{
-	int i;
-	
-	for( i = 0 ; i < KEYBOARD_BUFFER_SIZE ; ++i )
-	{
-		ttyTable.ttys[getCurrentTty()].KBBuffer[i] = '\0';
+
+static void SysWriteTTY(tty_t ttyId, char * buffer, int amm){
+
+	/*Funcion que agrega a la queue de video*/
+	if(ttyTable.focusTTY == ttyId){
+		/*Quiero escribir en mi buffer y en pantalla*/
+		/*funcion que imprimie en pantalla*/
+		
 	}
 }
+
+	

@@ -1,4 +1,4 @@
-#include "process.h"
+ 	#include "process.h"
 
 extern process_t processTable[MAX_PROCESS];
 
@@ -27,11 +27,6 @@ void exit(int status) {
 pid_t getppid()
 {
 	return runningProcess->ppid;
-}
-
-tty_t getCurrentTTY()
-{
-	return runningProcess->tty;
 }
 
 int getProccessByPid( pid_t pid )

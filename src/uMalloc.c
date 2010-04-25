@@ -7,7 +7,7 @@ static memArea_t * getMem(){
 	if(!asigment){
 		asigment = TRUE;
 		auxMem.address = memmap(FALSE);
-		auxMem.size = (6 * PAGE_SIZE);
+		auxMem.size = (8 * PAGE_SIZE);
 	}
 	return &auxMem;
 
