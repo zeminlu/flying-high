@@ -19,6 +19,8 @@ typedef struct sysTTY{
 
 sysTTY ttyTable;
 
+void printToScreen(char * str, int amm);
+
 void initializeTTY( void )
 {
 	int i;
@@ -60,9 +62,18 @@ static void SysWriteTTY(tty_t ttyId, char * buffer, int amm){
 	/*Funcion que agrega a la queue de video*/
 	if(ttyTable.focusTTY == ttyId){
 		/*Quiero escribir en mi buffer y en pantalla*/
-		/*funcion que imprimie en pantalla*/
+		printToScreen(buffer, amm);
 		
 	}
 }
+void printToScreen(char * str, int amm){
+	int i; 
+	for(i = 0; i < amm ; i++){
+		putCharAtCurrentPos((int)str[i], getVideoColor());
+	}
+
+}
+
+
 
 	
