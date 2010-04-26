@@ -8,7 +8,7 @@ static int offset = 0;
 
 typedef struct TTY{
 	tty_t	ttyId;
-	Keycode *	stdin;
+	Keycode *	stdIn;
 	unsigned char TerminalBuffer[VIDEO_MEMORY_SIZE];
 	unsigned char 	*begin, *end;
 	int		hasScrolled;
@@ -24,6 +24,8 @@ typedef struct sysTTY{
 typedef void (*printFunctions)(unsigned char * p);
 
 sysTTY ttyTable;
+
+static int sleepCondition[MAX_TTY]= {FALSE};
 
 /*
  *	Functions Section
@@ -45,14 +47,14 @@ static void moveBackSpaceTTY( unsigned char * p )
 
 static void moveTabTTY(unsigned char * p )
 {
-	putCharAtCurrentPos((int)TAB, getVideoColor());
+	putCharAtCurrentPos( TAB, getVideoColor());
 	p += TAB;
 	offset += TAB;	
 }
 
 static void moveNewLineTTY( unsigned char * p )
 {
-	putCharAtCurrentPos( (int)NEW_LINE, getVideoColor());
+	putCharAtCurrentPos( NEW_LINE, getVideoColor());
 	do{
 		++p;
 		++offset;
@@ -63,7 +65,7 @@ static void moveVTabTTY( unsigned char * p )
 {
 	int i, curOffset;
 
-	putCharAtCurrentPos( (int)VTAB, getVideoColor());
+	putCharAtCurrentPos( VTAB, getVideoColor());
 	curOffset = offset % SCREEN_WIDTH;
 	for( i = 0 ; i < VIDEO_VTAB_STOP ; ++i )
 	{
@@ -263,9 +265,9 @@ void initializeTTY( void )
 	
 	for( i = 0 ; i < MAX_TTY ; ++i )
 	{
-		memcpy(ttyTable.ttys[i].TerminalBuffer, "root@ArkOS$>", 13 ); 
+		memcpy(ttyTable.ttys[i].TerminalBuffer, "root@ArkOS$>", 13 );
 		ttyTable.ttys[i].ttyId = i;
-		ttyTable.ttys[i].stdin = keyboardBuffer;
+		ttyTable.ttys[i].stdIn = keyboardBuffer;
 		ttyTable.ttys[i].hasScrolled = 0;
 	}
 	ttyTable.qtyTTY = MAX_TTY;
@@ -311,6 +313,19 @@ void printToScreen(char * str, int amm){
 	}
 }
 
+int SysReadTTY(tty_t ttyId){
+	/*hay algo disponible para leer en stdin*/
+	if( !kbBufferIsEmpty() ){
+		/*si lo hay lo retorno en buffer*/
+		return(int)charDeque();
+	}else{
+		while(!sleepCondition[ttyTable.focusTTY]){
+			waitTty(ttyTable.focusTTY);
+		}
+		return(int)charDeque();
+	}
+	return 0;
+}
 
 
 	

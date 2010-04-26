@@ -176,7 +176,6 @@ static const Keycode scanTableWithShift[] = {
  * Buffer Teclado
  * ---------------------------------------------------------------------- */
 
-
 Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE];
 
 /* ----------------------------------------------------------------------

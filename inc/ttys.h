@@ -5,13 +5,17 @@
 #ifndef TTYS
 #define TTYS
 
-#include "keyboard_buffer.h"
+#include "queue.h"
 #include "video_driver.h"
 #include "string.h"
+#include "keyboard_buffer.h"
+#include "sysProcess.h"
 
 extern unsigned char videoBuffer[VIDEO_MEMORY_SIZE];
 
-extern Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE];
+extern process_t processTable[MAX_PROCESS];
+
+/*extern Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE];*/
 
 void printToScreen(char * str, int amm);
 
