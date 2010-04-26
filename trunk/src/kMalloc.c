@@ -13,7 +13,6 @@ static memArea_t * getMem(){
 		auxMem.size = (8 * PAGE_SIZE);
 	}
 
-
 	return &auxMem;
 }
 

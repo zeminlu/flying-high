@@ -12,5 +12,7 @@
 #include "memModule.h"
 #include "exceptions.h"
 #include "kMalloc.h"
+#include "sysProcess.h"
+#include "bin.h"
 
 #endif

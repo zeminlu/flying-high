@@ -5,7 +5,7 @@ kasm.h
 #ifndef _KASM_H_
 #define _KASM_H_
 
-#include "defs.h"
+#include "types.h"
 
 
 unsigned int    _read_msw();

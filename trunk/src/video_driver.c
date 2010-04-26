@@ -505,7 +505,7 @@ int getVideoTabStop ( void )
 
 int setVideoTabStop ( int num ) 
 {
-	if ( tabStop <= 0 )
+	if ( num <= 0 )
 		return -1;
 	return tabStop = num;
 }

@@ -67,7 +67,7 @@ kmain()
 	initFileSystem( 50/*open files*/,50/*files*/, 20/*tags*/);
 	
 	/* Initializes The Screen */
-	initializeScreen(18 ,NO_MOUSE_FORMAT);
+	initializeScreen(18  ,NO_MOUSE_FORMAT);
 	
 	/* Initializes all the TTYs */
 	initializeTTY();
@@ -82,6 +82,9 @@ kmain()
 		puts((unsigned char *)getProcessErrorMsg());
 		while(1);
 	}
+	char *lula;
+	char puri[8];
+	puri = lula
 
 	/* Enables the pertinent interruptions */
 	_Cli();

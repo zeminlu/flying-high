@@ -19,6 +19,62 @@
 #define IN_ATT	2
 #define OUT_ATT 3
 
+#define	ATOMIC			1
+#define UNATOMIC		!ATOMIC
+#define RUNNING			0
+#define READY			1
+#define BLOCKED			2
+#define WAITING_CHILD	3
+#define WAITING_TIME	4
+#define WAITING_PID		5
+#define TERMINATED		6
+#define ZOMBIE			7
+#define	FOREGROUND		0
+#define	BACKGROUND		1
+#define MAX_FILES		3
+
+/*	Units Definitions */
+#define KB							* (1 << 10)
+#define MB							* (1 << 20)
+
+/* Memory Space Model */
+#define KERNEL_SPACE				0x00000000
+#define KERNEL_SPACE_SIZE			(8 MB)
+#define MALLOC_SPACE				(KERNEL_SPACE + KERNEL_SPACE_SIZE)
+#define MALLOC_SPACE_SIZE			(8 MB)
+#define TOTAL_MEMORY_SIZE			(KERNEL_SPACE_SIZE + MALLOC_SPACE)
+
+/* Page Definitions */
+#define PAGE_SIZE					(4 KB)
+#define PAGE_ENTRY_SIZE				sizeof(unsigned int)
+#define PAGE_ENTRIES_PER_TABLE		(PAGE_SIZE / PAGE_ENTRY_SIZE)
+#define KERNEL_TABLES_QTY			(KERNEL_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))
+#define MALLOC_TABLES_QTY			(MALLOC_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))
+#define PAGE_TABLES_QTY				(KERNEL_TABLES_QTY + MALLOC_TABLES_QTY)
+
+/* Frame Definitions */
+#define PAGES_PER_FRAME				(PAGE_ENTRIES_PER_TABLE / 8)
+#define PAGES_PER_HEAP				(PAGES_PER_FRAME - 1)
+#define PAGES_PER_STACKFRAME		1
+#define FRAMES_PER_TABLE			(PAGE_ENTRIES_PER_TABLE / PAGES_PER_FRAME)
+#define TOTAL_FRAMES_QTY			(MALLOC_TABLES_QTY * PAGE_ENTRIES_PER_TABLE)
+
+/* Table's Index Definitions */
+#define FIRST_KERNEL_TABLE			0
+#define FIRST_MALLOC_TABLE			FIRST_KERNEL_TABLE + KERNEL_TABLES_QTY
+
+/* Free Memory Bitmap Definitions */
+#define PAGES_PER_INT				((int)(sizeof(unsigned int)) * 8)
+#define INTS_PER_TABLE				(PAGE_ENTRIES_PER_TABLE / 32)
+#define BITMAP_SIZE					(INTS_PER_TABLE * MALLOC_TABLES_QTY)
+#define MAX_MAPPED_ADDRESS			(TOTAL_MEMORY_SIZE - 1)
+#define getBitmapIndex(addr)		(((addr) / (unsigned)PAGE_SIZE) / (unsigned)PAGES_PER_INT)
+#define getBitmapOffset(addr)		(0x00000001 << (((addr) / PAGE_SIZE) % PAGES_PER_INT))
+#define OFFSET_MASK					0xFFFFF000
+
+/* Kernel Heap Area */
+#define KERNEL_HEAP_PAGES_QTY		10
+
 /* Flags para derechos de acceso de los segmentos */
 #define ACS_PRESENT     0x80            /* segmento presente en memoria */
 #define ACS_CSEG        0x18            /* segmento de codigo */
@@ -34,33 +90,10 @@
 #define ACS_DATA        (ACS_PRESENT | ACS_DSEG | ACS_WRITE)
 #define ACS_STACK       (ACS_PRESENT | ACS_DSEG | ACS_WRITE)
 
-#pragma pack (1) 		/* Alinear las siguiente estructuras a 1 byte */
-
-/* Descriptor de segmento */
-typedef struct {
-  word limit,
-       base_l;
-  byte base_m,
-       access,
-       attribs,
-       base_h;
-} DESCR_SEG;
-
-
-/* Descriptor de interrupcion */
-typedef struct {
-  word      offset_l,
-            selector;
-  byte      cero,
-            access;
-  word	    offset_h;
-} DESCR_INT;
-
-/* IDTR  */
-typedef struct {
-  word  limit;
-  dword base;
-} IDTR;
+/*
+ *	NULL Pointer Definition
+ */
+#define NULL (void *)0x0
 
 #endif
 

@@ -16,7 +16,7 @@ extern process_t processTable[MAX_PROCESS];
 
 extern process_t *nextProcess;
 
-extern process_t *idleProcess;
+extern process_t *initProcess;
 
 extern int qtyProccessTable;
 
@@ -24,7 +24,7 @@ extern int qtyProccessTable;
  *	Functions Section
  */
 
-static process_t * getNextTask()
+process_t * getNextTask()
 {	
 	process_t * proc;
 	
@@ -33,7 +33,7 @@ static process_t * getNextTask()
 	return proc;
 }
 
-static process_t * roundRobinSchedule()
+process_t * roundRobinSchedule()
 {
 	static int lastTask = 0;
 	int i;
@@ -50,11 +50,11 @@ static process_t * roundRobinSchedule()
 			return &processTable[i];
 		}
 	}
-	return idleProcess;
+	return initProcess;
 	
 }
 
-static process_t * rpgSchedule()
+process_t * rpgSchedule()
 {
 	int i, procPos;
 	process_t *auxReady[MAX_PROCESS];
@@ -129,17 +129,17 @@ void setupScheduler( void )
 {
 	int i;
 	
-	idleProcess->pid = 0;
-	idleProcess->level = FOREGROUND;
-	idleProcess->priority = 4;
-	idleProcess->ppid = 0;
-	idleProcess->gid = 0;
-	idleProcess->tty = 0;
-	idleProcess->childsQty = 0;
-	memcpy(idleProcess->name, "Idle", 5);
-	idleProcess->state = RUNNING;
-	idleProcess->stack = malloc(0x200);
-	/*createStackFrame(idleProcess, );*/
+	initProcess->pid = 0;
+	initProcess->level = FOREGROUND;
+	initProcess->priority = 4;
+	initProcess->ppid = 0;
+	initProcess->gid = 0;
+	initProcess->tty = 0;
+	initProcess->childsQty = 0;
+	memcpy(initProcess->name, "Idle", 5);
+	initProcess->state = RUNNING;
+	initProcess->stack = malloc(0x200);
+	/*createStackFrame(initProcess, );*/
 }
 
 
