@@ -27,14 +27,6 @@
 #define colorMask(c)			((c << 4)  + (c >> 4))
 #define getOffset(row,col) 2 * ( (row) * SCREEN_WIDTH + (col) )
 
-#define	ALARM		'\a'
-#define BACKSPACE	'\b'
-#define LINE_FEED	'\f'
-#define NEW_LINE	'\n'
-#define	RETURN		'\r'
-#define TAB			'\t'
-#define VTAB		'\v'
-
 /*
  *	Screen Properties Definition
  */
