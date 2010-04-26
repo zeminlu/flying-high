@@ -150,10 +150,10 @@ static void terminate(pid_t pid, int status) {
 			processTable[ppid].childs[i] = -1;
 	
 	processTable[ppid].childsQty--;
-	setTtyFocusProcess(processTable[pid].tty, (processTable[pid].ppid > 0) ? processTable[pid].ppid: 0);
+	/*setTtyFocusProcess(processTable[pid].tty, (processTable[pid].ppid > 0) ? processTable[pid].ppid: 0);*/
 	processTable[pid].state = TERMINATED;
 	processTable[pid].atomicity = UNATOMIC;
-	alertWaitingProcesses(pid, status);
+	/*alertWaitingProcesses(pid, status);*/
 }
 
 static void sigkill(pid_t pid) {
@@ -184,9 +184,9 @@ static void freeTerminatedProcesses(void) {
 	for ( i = 0; i < MAX_PROCESS; ++i )
 		if ( processTable[i].state == TERMINATED ) {
 			processTable[i].pid = -1;
-			freePage(processTable[i].stack);
-			freePage(processTable[i].heap);
-			closeAllFiles(&processTable[i]);
+			freeFrame(processTable[i].sFrame);
+			freeFrame(processTable[i].pFrame)
+			freeFrame(processTable[i].hFrame);
 			for ( j = 0; j < MAX_CHILDS; ++j )
 				if ( processTable[i].childs[j] != -1 )
 					terminate(j, KILL_EXIT_STATUS);

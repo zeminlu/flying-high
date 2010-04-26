@@ -29,7 +29,7 @@ tty_t getCurrentTTY();
  *		@return THe new process' pid or -1 in case of error.
  *
  */
-pid_t createProcess(char *name, pfunc_t main, int args, int level);
+pid_t createProcess(char *name, pfunc_t main, void *args, int level);
 
 /**
  *	@fn void exit(int status)

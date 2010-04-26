@@ -1,4 +1,4 @@
- 	#include "process.h"
+#include "process.h"
 
 extern process_t processTable[MAX_PROCESS];
 
@@ -10,9 +10,9 @@ void * memmap(int isKernel){
 	return (void *)int80(_SYS_MEMMAP, (void *)isKernel, NULL, NULL);
 }
 
-/*pid_t createProcess(char *name, pfunc_t main, int args, int level) {
-	return (pid_t)callInt80(_SYS_CREATE_PROCESS, name, (void*)main, (void *)args, (void *)level, NULL);
-}*/
+pid_t createProcess(char *name, pfunc_t main, void *args, int level) {
+	return (pid_t)int80ext(_SYS_CREATE, name, (void*)main, args, (void *)level, NULL);
+}
 
 pid_t getpid()
 {

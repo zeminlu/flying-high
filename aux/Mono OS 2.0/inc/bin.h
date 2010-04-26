@@ -14,7 +14,6 @@ void topProcess(int args);
 
 void init(void *args);
 
-
 void fun1(int args);
 
 void fun2(int args);

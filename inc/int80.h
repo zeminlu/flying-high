@@ -12,6 +12,8 @@
  *		Description: copy to the processor registers the parameters
  *
  */
- void * int80( int eax, void * ebx, void * ecx, void * edx );
- 
+void * int80( int eax, void * ebx, void * ecx, void * edx );
+
+void * int80ext(int eax, void *ebx, void *ecx, void *edx, void *edi, void *esi); 
+
 #endif

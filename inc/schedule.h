@@ -5,7 +5,7 @@
 #ifndef SCEHDULE
 #define SCEHDULE
 
-#include "sysProcess.h"
+#include "types.h"
 #include "uMalloc.h"
 
 #define	ROUND_ROBIN	1
@@ -17,11 +17,11 @@
 #define	MAX(a,b)		((a > b) ? a : b)
 
 
-static process_t * getNextTask( void );
+process_t * getNextTask( void );
 
-static process_t * roundRobinSchedule( void );
+process_t * roundRobinSchedule( void );
 
-static process_t * rpgSchedule( void );
+process_t * rpgSchedule( void );
 
 void checkWhatAreReady( process_t * pro[] );
 

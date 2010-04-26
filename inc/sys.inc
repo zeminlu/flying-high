@@ -3,9 +3,11 @@ NULL	equ	0x0
 ;
 ; System Calls
 ;
-_SYS_WRITE	equ 0
-_SYS_READ	equ	1
-
+_SYS_WRITE		equ 0
+_SYS_READ		equ	1
+_SYS_MEMMAP 	equ 2
+_SYS_CREATE		equ 3
+_SYS_EXIT		equ 4
 ;
 ; Standard File Descriptors
 ;

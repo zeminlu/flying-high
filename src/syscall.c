@@ -9,8 +9,11 @@
 
 extern FILE fileSystem[];
 extern process_t *runningProcess;
+extern process_t *nextProcess;
+extern process_t *initProcess;
 extern process_t processTable[MAX_PROCESS];
 
+void forceMultitasker();
 void returnAddress();
 void *getKernelHeap();
 
@@ -71,10 +74,26 @@ void * _sys_memmap(int isKernel){
 	return isKernel ? getKernelHeap() : runningProcess->heap;
 }
 
+void _sysExit(int status) {
+/*	signalTty(getFocusTTY());*/
+	if ( runningProcess == initProcess )
+		return;
+	else 
+		terminate(runningProcess->pid, status);
+	
+	forceMultitasker();
+	decreaseKernelDepth();
+	_Sti();
+	while(1)
+		asm volatile("hlt");
+
+	return;
+}
+
 static void createStackFrame(process_t *process, pfunc_t main, int args) {
 	unsigned *esp, espPushedReg;
 	
-	esp = (unsigned *)(((char *)process->stack) + PAGE_SIZE  - 4);
+	esp = (unsigned *)(((char *)process->stack) + PAGE_SIZE * PAGES_PER_FRAME  - 4);
 	
 	*esp-- = 0x00000000;
 	*esp-- = 0x00000000;
@@ -104,8 +123,6 @@ static void createStackFrame(process_t *process, pfunc_t main, int args) {
 pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	int i, j, nameLen;/*, *linkRet;*/
 	process_t *process;
-	frame_t *frame;
-	
 
 	if ( main == NULL ) {
 		return -1;
@@ -128,10 +145,11 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 		return -1;
 	}
 	
-	frame = getFrame();
-	
-	process->stack = (void *)(frame->address + PAGE_SIZE - 1);
-	process->heap = (void *)(frame->address + PAGE_SIZE * 2);
+	process->sFrame = getFrame();
+	process->pFrame = getFrame();
+	process->hFrame = getFrame();
+	process->stack = (void *)(process->sFrame->address);
+	process->heap = (void *)(process->hFrame->address);
 	runningProcess->childsQty++;
 	
 	for ( j = 0; j < MAX_CHILDS; ++j )
@@ -148,7 +166,7 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	process->atomicity = UNATOMIC;
 	process->level = level;
 	
-	/*process->priority = 0;*/
+	process->priority = 3;
 	process->tickCounter = 0;
 	process->sleepingPid = -1;
 	
@@ -164,9 +182,9 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 		memcpy(process->name, name, nameLen);
 	}
 	
-	setFramePresence(frame, TRUE);
+	setFramePresence(process->sFrame, TRUE);
 	createStackFrame(process, main, args);
-	setFramePresence(frame, FALSE);
+	setFramePresence(process->sFrame, FALSE);
 
 	return process->pid;
 }

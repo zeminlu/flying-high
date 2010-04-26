@@ -14,7 +14,7 @@ static framesTable_t framesTable;
  *	Bitmap Implementation
  */
 
-static usedMemBitmap_t usedMemory;
+/*static usedMemBitmap_t usedMemory;*/
 
 void * getKernelHeap(){
 	return kernelHeap;
@@ -45,12 +45,12 @@ int initPaging(){
 	
 	kernelFrame = getFrame();
 	kernelHeap = (void *)kernelFrame->address;
-	/*
-	puts("kernelHeap address = ");
+	
+	/*puts("kernelHeap address = ");
 	putx((int)kernelFrame->address);
 	puts("\n");
-	flushStdScreen();
-	*/
+	flushStdScreen();*/
+	
 	return 0;
 }
 
@@ -59,7 +59,7 @@ void setKernelHeapPresence(int state){
 }
 
 void initPage(page_t *page, int isKernel){
-	page->present = TRUE;
+	page->present = isKernel;
 	page->writeable = !isKernel;
 	page->user = isKernel;
 	
@@ -102,7 +102,6 @@ int initMallocTable(pageTable_t mallocTable, int dirIndex){
 	unsigned int dir = 0, table = 0;
 	
 	dir = dirIndex << 22;
-	puts("Entre a initMallocTable\n");
 	for (i = 0, j = 0 ; i < PAGE_ENTRIES_PER_TABLE ; ++i){
 		allocMPage(&(mallocTable[i]));
 		if (j == PAGES_PER_FRAME){

@@ -10,6 +10,7 @@ section .text
 %include "sys.inc"
 
 GLOBAL returnAddress
+GLOBAL forceMultitasker
 
 global _int_80_handler
 global _int_08_handler
@@ -56,8 +57,19 @@ extern timerTick
 extern keyboard_driver
 extern _sys_write
 extern _sys_read
+extern _sys_create_process
 extern _sys_memmap
+extern multitasker
+extern _sysExit	
+extern refresh
 
+forceMultitasker:
+	push 	ebp
+	mov		ebp, esp
+	int		08h
+	leave
+	ret
+	
 ;------------------------------------------------------------------------------;
 ;_int_08_handler															   ;
 ;																			   ;
@@ -66,21 +78,21 @@ extern _sys_memmap
 ;																			   ;
 ;																			   ;
 ;------------------------------------------------------------------------------;
-_int_08_handler:		;													   ;
-	push	ebp			; Building Stack Frame								   ;
-	mov		ebp, esp	;													   ;
-	and		esp, -16	; Aligning Segment to 16 bytes						   ;
-	pusha				; Saving Caller's registers							   ;
-						;													   ;
-	call	timerTick	; 													   ;
-						;													   ;
-returnAddress:			;													   ;
-	mov		al,0x20		; Notifying PIC1 of End OF Interrupt				   ;
-	out		0x20,al		;													   ;
-						;													   ;
-	popa				; Restoring Caller's registers						   ;
-	leave				;													   ;
-	iret				;													   ;
+_int_08_handler:					;										   ;
+	cli								;										   ;
+	pushad							;										   ;
+	call 	increaseKernelDepth		;										   ;
+	call	refresh					;										   ;
+	call	multitasker				;										   ;
+									;										   ;
+returnAddress:						;										   ;
+	mov al, 20h						;										   ;
+	out 20h, al						;										   ;
+	call decreaseKernelDepth		;										   ;
+	popad							;										   ;
+	sti								;										   ;
+	leave							;										   ;
+	iret							;										   ;
 ;------------------------------------------------------------------------------;
 
 ;------------------------------------------------------------------------------;
@@ -114,13 +126,33 @@ __check_SYS_WRITE:					; switch(eax) {							   ;
 									;										   ;
 __check_SYS_READ:					;	case _SYS_READ:						   ;
 	cmp		eax, _SYS_READ			;		_sys_read(ebx, ecx, eds);		   ;
-	jnz		__check_SYS_MEMMAP		;		break;							   ;
+	jnz		__check_SYS_CREATE		;		break;							   ;
 	push	edx						;										   ;
 	push	ecx						;										   ;
 	push	ebx						;										   ;
 	call	_sys_read				;										   ;
 	add		esp,12					;										   ;
 	jmp		__int_80_ret			;										   ;
+									;										   ;
+__check_SYS_CREATE:					;										   ;
+	cmp 	eax, _SYS_CREATE		;										   ;
+	jnz		__check_SYS_EXIT		;										   ;
+	push	ESI						;										   ;
+	push	EDI						;										   ;
+	push	EDX						;										   ;
+	push	ECX						;										   ;
+	push	EBX						;										   ;
+	call	_sys_create_process		;										   ;
+	add		esp, 20					;										   ;
+	jmp		__int_80_ret			;										   ;
+									;										   ;
+__check_SYS_EXIT:					;										   ;
+	cmp		eax, _SYS_EXIT			;										   ;
+	jnz		__check_SYS_MEMMAP		;										   ;
+	push 	EBX						;										   ;
+	call 	_sysExit				;										   ;
+	add		esp, 12					;										   ;
+	jmp 	__int_80_ret			;										   ;
 									;										   ;
 __check_SYS_MEMMAP:					;										   ;
 	cmp		eax, _SYS_MEMMAP		;										   ;
@@ -491,7 +523,3 @@ _coprocessor_e_hand:
 
 	popad
 	iret
-
-SECTION .data
-
-	_SYS_MEMMAP 	equ 2
