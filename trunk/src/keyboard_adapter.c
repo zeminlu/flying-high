@@ -24,8 +24,11 @@ void flushKeyboardBuffer( void )
 		{
 			if( (deChar & 0x80 ) == 1 )
 				changeTtyFocus( (deChar & 0x81) - 1 );
-			fputc((int)deChar, stdin );
-			fputc(color, inatt);
+			else
+			{
+				fputc((int)deChar, stdin );
+				fputc(color, inatt);
+			}
 		}
 
 }

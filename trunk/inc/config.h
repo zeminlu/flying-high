@@ -42,4 +42,12 @@
 #define MAX_PRIORITIES		4
 #define MAX_TTY				8
 
+#define	ALARM		'\a'
+#define BACKSPACE	'\b'
+#define LINE_FEED	'\f'
+#define NEW_LINE	'\n'
+#define	RETURN		'\r'
+#define TAB			'\t'
+#define VTAB		'\v'
+
 #endif
