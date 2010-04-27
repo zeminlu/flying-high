@@ -37,4 +37,8 @@ void _sysExit(int status);
 
 void * _sys_memmap(int isKernel);
 
+void cli(void);
+
+void sti(void);
+
 #endif
