@@ -13,6 +13,8 @@ extern process_t *nextProcess;
 extern process_t *initProcess;
 extern process_t processTable[MAX_PROCESS];
 
+static int cliAmm = 0;
+
 void forceMultitasker();
 void returnAddress();
 void *getKernelHeap();
@@ -187,4 +189,19 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	setFramePresence(process->sFrame, FALSE);
 
 	return process->pid;
+}
+
+void cli(void){
+	/*Deshabilita las interrupciones si cliAmm es igual a cero*/
+	if(cliAmm == 0){
+		_Cli();
+	}
+	++cliAmm;
+}
+
+void sti(void){
+	--cliAmm;
+	if(cliAmm == 0){
+		_Sti();
+	}
 }
