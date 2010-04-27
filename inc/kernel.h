@@ -14,5 +14,6 @@
 #include "kMalloc.h"
 #include "sysProcess.h"
 #include "bin.h"
+#include "ttys.h"
 
 #endif

@@ -19,9 +19,9 @@ extern process_t processTable[MAX_PROCESS];
 
 void printToScreen(char * str, int amm);
 
-void putsTTY( unsigned char *name, int count );
+void putsTTY( unsigned char *name, int count, tty_t tty );
 
-void putcharTTY( char c );
+void putcharTTY( char c, tty_t tty );
 
 void initializeTTY( void );
 
