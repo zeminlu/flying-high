@@ -14,6 +14,9 @@
 #define OK	TRUE
 #define	ERROR FALSE
 
+#define	SEND_TO_VIDEO	1
+#define WRITE_ON_TTY	0
+
 #define STDIN 	0
 #define STDOUT 	1
 #define IN_ATT	2

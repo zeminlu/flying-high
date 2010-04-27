@@ -21,7 +21,7 @@ typedef struct sysTTY{
 	tty_t	focusTTY;
 }sysTTY;
 
-typedef void (*printFunctions)(unsigned char * p);
+typedef void (*printFunctions)(unsigned char *, int);
 
 sysTTY ttyTable;
 
@@ -32,117 +32,61 @@ static int sleepCondition[MAX_TTY]= {FALSE};
  */
 
 /*
- *	Static functions for refreshTTY
- */
-
-static void moveAlarmTTY( unsigned char * p )
-{
-	return;	
-}
-
-static void moveBackSpaceTTY( unsigned char * p )
-{	
-	return;
-}
-
-static void moveTabTTY(unsigned char * p )
-{
-	putCharAtCurrentPos( TAB, getVideoColor());
-	p += TAB;
-	offset += TAB;	
-}
-
-static void moveNewLineTTY( unsigned char * p )
-{
-	putCharAtCurrentPos( NEW_LINE, getVideoColor());
-	do{
-		++p;
-		++offset;
-	}while( (offset % SCREEN_WIDTH) != 0 );
-}
-
-static void moveVTabTTY( unsigned char * p )
-{
-	int i, curOffset;
-
-	putCharAtCurrentPos( VTAB, getVideoColor());
-	curOffset = offset % SCREEN_WIDTH;
-	for( i = 0 ; i < VIDEO_VTAB_STOP ; ++i )
-	{
-		moveNewLineTTY(p);
-	}
-	while( curOffset >= offset)
-	{
-		++offset;
-		++p;
-	}
-}
-
-static void moveLineFeedTTY( unsigned char * p )
-{
-	int curOffset;
-
-	moveNewLineTTY(p);
-	curOffset = offset % SCREEN_WIDTH;
-	do
-	{
-		++p;
-		++offset;
-	}while( offset == curOffset );
-}
-
-static void moveReturnTTY( unsigned char * p )
-{
-	while( (offset % SCREEN_WIDTH) != 0 )
-	{
-		--p;
-		--offset;
-	}
-}
-
-/*
  *	Static functions for putcharTTY
  */
 
-static void parseAlarmTTY( unsigned char * p )
+static void parseAlarmTTY( unsigned char * p, int where )
 {
 	return;	
 }
 
-static void parseBackSpaceTTY( unsigned char * p )
+static void parseBackSpaceTTY( unsigned char * p, int where )
 {
-	if( offset > 0 )
+	if( !where )
 	{
-		--p;
-		*p++ = ' ';
+		if( offset > 0 )
+		{
+			--p;
+			*p++ = ' ';
+		}
 	}
+	return;
 }
 
-static void parseTabTTY(unsigned char * p )
+static void parseTabTTY(unsigned char * p, int where )
 {
-	*p = TAB;
+	if( !where ) 
+		*p = TAB;
+	else 
+		putCharAtCurrentPos( TAB, getVideoColor());
 	p += VIDEO_TAB_STOP;
 	offset += VIDEO_TAB_STOP;	
 }
 
-static void parseNewLineTTY( unsigned char * p )
+static void parseNewLineTTY( unsigned char * p, int where )
 {
-	*p = NEW_LINE;
+	if( !where ) 
+		*p = NEW_LINE;
+	else 
+		putCharAtCurrentPos( NEW_LINE, getVideoColor());
 	do{
 		++p;
 		++offset;
 	}while( (offset % SCREEN_WIDTH) != 0 );
 }
 
-static void parseVTabTTY( unsigned char * p )
+static void parseVTabTTY( unsigned char * p, int where )
 {
 	int i, curOffset;
 	
-	*p = VTAB;
+	if( !where ) 
+		*p = VTAB;
+	else 
+		putCharAtCurrentPos( VTAB, getVideoColor());
 	curOffset = offset % SCREEN_WIDTH;
 	for( i = 0 ; i < VIDEO_VTAB_STOP ; ++i )
 	{
-		parseNewLineTTY(p);
+		parseNewLineTTY(p,where);
 	}
 	while( curOffset >= offset)
 	{
@@ -151,11 +95,11 @@ static void parseVTabTTY( unsigned char * p )
 	}
 }
 
-static void parseLineFeedTTY( unsigned char * p )
+static void parseLineFeedTTY( unsigned char * p, int where )
 {
 	int curOffset;
 	
-	parseNewLineTTY(p);
+	parseNewLineTTY(p,where);
 	curOffset = offset % SCREEN_WIDTH;
 	do
 	{
@@ -164,7 +108,7 @@ static void parseLineFeedTTY( unsigned char * p )
 	}while( offset == curOffset );
 }
 
-static void parseReturnTTY( unsigned char * p )
+static void parseReturnTTY( unsigned char * p, int where )
 {
 	while( (offset % SCREEN_WIDTH) != 0 )
 	{
@@ -187,7 +131,7 @@ static int parseCharTTY( int c )
 	
 	if( '\a' <= c && c >= '\r' )
 	{
-		specialCharPrint[c - '\a'](ttyTable.ttys[ttyTable.focusTTY].begin);
+		specialCharPrint[c - '\a'](ttyTable.ttys[ttyTable.focusTTY].begin, WRITE_ON_TTY);
 		return 0;
 	}else
 	{
@@ -199,14 +143,14 @@ static int parseCharTTY( int c )
 static void refreshTTYScreen( void )
 {
 	int bckOffset, character;
-	static printFunctions moveCharPrint[] = {
-		moveAlarmTTY,
-		moveBackSpaceTTY,
-		moveTabTTY,
-		moveNewLineTTY,
-		moveVTabTTY,
-		moveLineFeedTTY,
-		moveReturnTTY
+	static printFunctions refreshCharPrint[] = {
+		parseAlarmTTY,
+		parseBackSpaceTTY,
+		parseTabTTY,
+		parseNewLineTTY,
+		parseVTabTTY,
+		parseLineFeedTTY,
+		parseReturnTTY
 	};
 	
 	bckOffset = offset;
@@ -224,10 +168,10 @@ static void refreshTTYScreen( void )
 		character = *(ttyTable.ttys[ttyTable.focusTTY].end);
 		if( '\a' <= character && character >= '\r' )
 		{
-			moveCharPrint[character - '\a'](ttyTable.ttys[ttyTable.focusTTY].end);
+			refreshCharPrint[character - '\a'](ttyTable.ttys[ttyTable.focusTTY].end, SEND_TO_VIDEO);
 		}else
 		{
-			putCharAtCurrentPos((int)(*ttyTable.ttys[ttyTable.focusTTY].end), getVideoColor());
+			putCharAtCurrentPos((int)(*(ttyTable.ttys[ttyTable.focusTTY].end)), getVideoColor());
 			ttyTable.ttys[ttyTable.focusTTY].end++;
 			offset++;
 		}
