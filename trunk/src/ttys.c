@@ -235,21 +235,21 @@ static void refreshTTYScreen( void )
 	offset = bckOffset;
 }
 
-void putsTTY( unsigned char *name, int count )
+void putsTTY( unsigned char *name, int count, tty_t tty )
 {
 	while( count-- >= 0 )
-		putcharTTY(*name++);
+		putcharTTY(*name++, tty);
 }
 
-void putcharTTY( char c )
+void putcharTTY( char c, tty_t tty )
 {	
 	int parse;
 	
 	if( offset == VIDEO_MEMORY_SIZE - 1 )
 	{
 		offset = 0;
-		ttyTable.ttys[ttyTable.focusTTY].begin = ttyTable.ttys[ttyTable.focusTTY].TerminalBuffer;
-		ttyTable.ttys[ttyTable.focusTTY].hasScrolled++;
+		ttyTable.ttys[tty].begin = ttyTable.ttys[ttyTable.focusTTY].TerminalBuffer;
+		ttyTable.ttys[tty].hasScrolled++;
 	}
 	parse = parseCharTTY(c);
 	if( parse )
