@@ -37,6 +37,8 @@ static int sleepCondition[MAX_TTY]= {FALSE};
 
 static void parseAlarmTTY( unsigned char * p, int where )
 {
+	if( !runningProcess->ttyMode )		/* RAW TYPE */
+		;								/* Escribir en el buffer de la shell */
 	return;	
 }
 

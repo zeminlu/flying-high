@@ -15,6 +15,8 @@ extern unsigned char videoBuffer[VIDEO_MEMORY_SIZE];
 
 extern process_t processTable[MAX_PROCESS];
 
+extern process_t *runningProcess;
+
 /*extern Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE];*/
 
 void printToScreen(char * str, int amm);

@@ -17,6 +17,9 @@
 #define	SEND_TO_VIDEO	1
 #define WRITE_ON_TTY	0
 
+#define	TTY_RAW			0
+#define	TTY_CANONICAL	1
+
 #define STDIN 	0
 #define STDOUT 	1
 #define IN_ATT	2

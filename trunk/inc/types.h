@@ -106,6 +106,7 @@ typedef struct process_t {
 	frame_t *pFrame;
 	frame_t *hFrame;
 	int atomicity;
+	int	ttyMode;
 } process_t;
 
 #pragma pack (1) 		/* Alinear las siguiente estructuras a 1 byte */
