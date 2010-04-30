@@ -105,7 +105,7 @@ static void parseLineFeedTTY( unsigned char * p, int where )
 	{
 		++p;
 		++offset;
-	}while( offset == curOffset );
+	}while( curOffset-- >= 0 );
 }
 
 static void parseReturnTTY( unsigned char * p, int where )
