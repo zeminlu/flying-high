@@ -21,7 +21,7 @@ typedef struct sysTTY{
 	tty_t	focusTTY;
 }sysTTY;
 
-typedef void (*printFunctions)(unsigned char *, int);
+typedef void (*printFunctions)(unsigned char *, int, tty_t);
 
 sysTTY ttyTable;
 
@@ -35,14 +35,28 @@ static int sleepCondition[MAX_TTY]= {FALSE};
  *	Static functions for putcharTTY
  */
 
-static void parseAlarmTTY( unsigned char * p, int where )
+static void putLine( tty_t tty)
 {
-	if( !runningProcess->ttyMode )		/* RAW TYPE */
-		;								/* Escribir en el buffer de la shell */
+	switch( runningProcess->ttyMode )
+	{
+		case TTY_RAW:
+			while( *(ttyTable.ttys[tty].stdIn) != NEW_LINE )
+			{
+				putCharAtCurrentPos( *(ttyTable.ttys[tty].stdIn), getVideoColor() );
+				(ttyTable.ttys[tty].stdIn)++;
+			}
+			break;
+		case TTY_CANONICAL:
+			break;
+	}
+}
+
+static void parseAlarmTTY( unsigned char * p, int where, tty_y tty )
+{
 	return;	
 }
 
-static void parseBackSpaceTTY( unsigned char * p, int where )
+static void parseBackSpaceTTY( unsigned char * p, int where, tty_y tty )
 {
 	if( !where )
 	{
@@ -55,7 +69,7 @@ static void parseBackSpaceTTY( unsigned char * p, int where )
 	return;
 }
 
-static void parseTabTTY(unsigned char * p, int where )
+static void parseTabTTY(unsigned char * p, int where, tty_y tty )
 {
 	if( !where ) 
 		*p = TAB;
@@ -65,7 +79,7 @@ static void parseTabTTY(unsigned char * p, int where )
 	offset += VIDEO_TAB_STOP;	
 }
 
-static void parseNewLineTTY( unsigned char * p, int where )
+static void parseNewLineTTY( unsigned char * p, int where, tty_y tty )
 {
 	if( !where ) 
 		*p = NEW_LINE;
@@ -77,7 +91,7 @@ static void parseNewLineTTY( unsigned char * p, int where )
 	}while( (offset % SCREEN_WIDTH) != 0 );
 }
 
-static void parseVTabTTY( unsigned char * p, int where )
+static void parseVTabTTY( unsigned char * p, int where, tty_y tty )
 {
 	int i, curOffset;
 	
@@ -97,10 +111,11 @@ static void parseVTabTTY( unsigned char * p, int where )
 	}
 }
 
-static void parseLineFeedTTY( unsigned char * p, int where )
+static void parseLineFeedTTY( unsigned char * p, int where, tty_y tty )
 {
 	int curOffset;
 	
+	putLine( tty);
 	parseNewLineTTY(p,where);
 	curOffset = offset % SCREEN_WIDTH;
 	do
@@ -110,7 +125,7 @@ static void parseLineFeedTTY( unsigned char * p, int where )
 	}while( curOffset-- >= 0 );
 }
 
-static void parseReturnTTY( unsigned char * p, int where )
+static void parseReturnTTY( unsigned char * p, int where, tty_y tty )
 {
 	while( (offset % SCREEN_WIDTH) != 0 )
 	{
@@ -119,7 +134,7 @@ static void parseReturnTTY( unsigned char * p, int where )
 	}
 }
 
-static int parseCharTTY( int c )
+static int parseCharTTY( int c, tty_y tty )
 {
 	static printFunctions specialCharPrint[] = {
 		parseAlarmTTY,
@@ -133,7 +148,7 @@ static int parseCharTTY( int c )
 	
 	if( '\a' <= c && c >= '\r' )
 	{
-		specialCharPrint[c - '\a'](ttyTable.ttys[ttyTable.focusTTY].begin, WRITE_ON_TTY);
+		specialCharPrint[c - '\a'](ttyTable.ttys[ttyTable.focusTTY].begin, WRITE_ON_TTY, tty);
 		return 0;
 	}else
 	{
@@ -197,7 +212,7 @@ void putcharTTY( char c, tty_t tty )
 		ttyTable.ttys[tty].begin = ttyTable.ttys[ttyTable.focusTTY].TerminalBuffer;
 		ttyTable.ttys[tty].hasScrolled++;
 	}
-	parse = parseCharTTY(c);
+	parse = parseCharTTY(c, tty);
 	if( parse )
 	{
 		++ttyTable.ttys[ttyTable.focusTTY].begin;
