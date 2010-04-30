@@ -150,7 +150,7 @@ static void printVTab ( void )
 
 static int parseCharacter ( int c, int offset )
 {
-	static printFunctionT specialCharFunctions[] = {
+	/*static printFunctionT specialCharFunctions[] = {
 		printAlarm,
 		printBackspace,
 		printTab,
@@ -168,7 +168,9 @@ static int parseCharacter ( int c, int offset )
 	{
 		videoBuffer[offset] = c;
 		return 1;
-	}
+	}*/
+	videoBuffer[offset] = c;
+	return 1;
 }
 
 static void pointerOn ( void  )
