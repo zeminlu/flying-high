@@ -370,4 +370,19 @@ int setVideoVTabStop ( int num );
  */
 void updateColor ( void  );
 
+void printAlarm ( void );
+
+void printBackspace ( void );
+
+void printNewLine ( void );
+
+void printLineFeed ( void );
+
+void printReturn ( void );
+
+void printTab ( void  );
+
+void printVTab ( void );
+
+
 #endif
