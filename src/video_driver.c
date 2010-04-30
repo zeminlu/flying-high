@@ -83,18 +83,18 @@ static void fillLine ( int c )
 	}
 }
 
-static void printAlarm ( void )
+void printAlarm ( void )
 {
 }
 
-static void printBackspace ( void )
+void printBackspace ( void )
 {
 	decCursor();
 	videoBuffer[cursorOffset] = ' ';
 	videoBuffer[cursorOffset + 1] = videoColor;
 }
 
-static void printNewLine ( void )
+void printNewLine ( void )
 {
 	do
 	{
@@ -102,7 +102,7 @@ static void printNewLine ( void )
 	} while ( cursorCol != 0 );
 }
 
-static void printLineFeed ( void )
+void printLineFeed ( void )
 {
 	int col;
 
@@ -114,13 +114,13 @@ static void printLineFeed ( void )
 	} while ( cursorCol == col );
 }
 
-static void printReturn ( void )
+void printReturn ( void )
 {
 	while ( cursorCol != 0 )
 		decCursor();
 }
 
-static void printTab ( void  )
+void printTab ( void  )
 {
 	int i, prevRow;
 
@@ -135,7 +135,7 @@ static void printTab ( void  )
 	}
 }
 
-static void printVTab ( void )
+void printVTab ( void )
 {
 	int i, col;
 
