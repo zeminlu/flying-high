@@ -51,12 +51,12 @@ static void putLine( tty_t tty)
 	}
 }
 
-static void parseAlarmTTY( unsigned char * p, int where, tty_y tty )
+static void parseAlarmTTY( unsigned char * p, int where, tty_t tty )
 {
 	return;	
 }
 
-static void parseBackSpaceTTY( unsigned char * p, int where, tty_y tty )
+static void parseBackSpaceTTY( unsigned char * p, int where, tty_t tty )
 {
 	if( !where )
 	{
@@ -69,7 +69,7 @@ static void parseBackSpaceTTY( unsigned char * p, int where, tty_y tty )
 	return;
 }
 
-static void parseTabTTY(unsigned char * p, int where, tty_y tty )
+static void parseTabTTY(unsigned char * p, int where, tty_t tty )
 {
 	if( !where ) 
 		*p = TAB;
@@ -79,7 +79,7 @@ static void parseTabTTY(unsigned char * p, int where, tty_y tty )
 	offset += VIDEO_TAB_STOP;	
 }
 
-static void parseNewLineTTY( unsigned char * p, int where, tty_y tty )
+static void parseNewLineTTY( unsigned char * p, int where, tty_t tty )
 {
 	if( !where ) 
 		*p = NEW_LINE;
@@ -91,7 +91,7 @@ static void parseNewLineTTY( unsigned char * p, int where, tty_y tty )
 	}while( (offset % SCREEN_WIDTH) != 0 );
 }
 
-static void parseVTabTTY( unsigned char * p, int where, tty_y tty )
+static void parseVTabTTY( unsigned char * p, int where, tty_t tty )
 {
 	int i, curOffset;
 	
@@ -102,7 +102,7 @@ static void parseVTabTTY( unsigned char * p, int where, tty_y tty )
 	curOffset = offset % SCREEN_WIDTH;
 	for( i = 0 ; i < VIDEO_VTAB_STOP ; ++i )
 	{
-		parseNewLineTTY(p,where);
+		parseNewLineTTY(p,where, tty);
 	}
 	while( curOffset >= offset)
 	{
@@ -111,12 +111,12 @@ static void parseVTabTTY( unsigned char * p, int where, tty_y tty )
 	}
 }
 
-static void parseLineFeedTTY( unsigned char * p, int where, tty_y tty )
+static void parseLineFeedTTY( unsigned char * p, int where, tty_t tty )
 {
 	int curOffset;
 	
 	putLine( tty);
-	parseNewLineTTY(p,where);
+	parseNewLineTTY(p,where, tty);
 	curOffset = offset % SCREEN_WIDTH;
 	do
 	{
@@ -125,7 +125,7 @@ static void parseLineFeedTTY( unsigned char * p, int where, tty_y tty )
 	}while( curOffset-- >= 0 );
 }
 
-static void parseReturnTTY( unsigned char * p, int where, tty_y tty )
+static void parseReturnTTY( unsigned char * p, int where, tty_t tty )
 {
 	while( (offset % SCREEN_WIDTH) != 0 )
 	{
@@ -134,7 +134,7 @@ static void parseReturnTTY( unsigned char * p, int where, tty_y tty )
 	}
 }
 
-static int parseCharTTY( int c, tty_y tty )
+static int parseCharTTY( int c, tty_t tty )
 {
 	static printFunctions specialCharPrint[] = {
 		parseAlarmTTY,
@@ -185,7 +185,7 @@ static void refreshTTYScreen( void )
 		character = *(ttyTable.ttys[ttyTable.focusTTY].end);
 		if( '\a' <= character && character >= '\r' )
 		{
-			refreshCharPrint[character - '\a'](ttyTable.ttys[ttyTable.focusTTY].end, SEND_TO_VIDEO);
+			refreshCharPrint[character - '\a'](ttyTable.ttys[ttyTable.focusTTY].end, SEND_TO_VIDEO, ttyTable.focusTTY);
 		}else
 		{
 			putCharAtCurrentPos((int)(*(ttyTable.ttys[ttyTable.focusTTY].end)), getVideoColor());
