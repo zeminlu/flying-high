@@ -1,0 +1,4 @@
+*Diseño de la tty, es la encargada de traducir a un lenguaje pertinente para que cada proceso lo recibe ne el idioma que necesita.
+*en el stdout se puede de cada estructura de tty dejamos todo en idioma shell, ya que es mas facil de parcear, pro los \n, \t etc.
+*decidimos que se puede elejir entre modo canonico, y row, para que si se esta jugando un juego se pueda levantar los caracteres crudos.
+*Intentamos sacarla todo tipo de funcionalidad especial alos drivers, y la encargada de poder porcesar todo es la tty.
