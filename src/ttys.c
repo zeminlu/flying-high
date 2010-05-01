@@ -26,7 +26,7 @@ typedef struct stdInTTY{
 	int 	writeOffset;
 	int 	readOffset;
 	int 	empty;
-	}stdInTTY;
+}stdInTTY;
 
 typedef void (*printFunctions)(unsigned char *, int, tty_t);
 
@@ -35,12 +35,6 @@ sysTTY ttyTable;
 static stdInTTY stdinTableTTY[MAX_TTY];
 
 static int sleepCondition[MAX_TTY]= {0};
-
-static char * promnt = "root@FlyingHigh$>";
-
-/*
- *	Functions Section
- */
 
 /*
  *	Static functions for putcharTTY
@@ -200,10 +194,10 @@ static void refreshTTYScreen( void )
 void putsTTY( unsigned char *name, int count, tty_t tty )
 {
 	while( count-- >= 0 )
-		putcharTTY(*name++, tty);
+		putCharTTY(*name++, tty);
 }
 
-void putcharTTY( char c, tty_t tty )
+void putCharTTY( char c, tty_t tty )
 {	
 	int parse;
 	
@@ -233,7 +227,6 @@ void initializeTTY( void )
 		stdinTableTTY[i].writeOffset = 0;
 		stdinTableTTY[i].readOffset = 0;
 		stdinTableTTY[i].empty = TRUE;
-	//	putsTTY((unsigned char *) promnt, 17, i);
 	}
 	ttyTable.qtyTTY = MAX_TTY;
  	ttyTable.focusTTY= 0;
@@ -291,7 +284,7 @@ static void refreshTTYKeyboardBuffer( void )
 					changeTtyFocus( (deChar & 0x81) - 1 );
 				}else{
 					if(runningProcess->ttyMode  == TTY_CANONICAL){
-						putcharTTY((int)deChar, getCurrentTTY());
+						putCharTTY((int)deChar, getCurrentTTY());
 					}else{
 						putTTY((int)deChar, getCurrentTTY());
 					}
@@ -309,7 +302,11 @@ void refreshTTY(void){
 
 }
 
-Keycode getCharTTY(tty_t tty){
+/*
+ *Public Functions
+ */
+
+Keycode SysGetChar(tty_t tty){
 	Keycode aux ;
 	
 	do{
@@ -330,5 +327,11 @@ Keycode getCharTTY(tty_t tty){
 
 }
 
+void SysPutChar(Keycode c, tty_t tty){
+	SysPutS(&c, 1, tty);
+}
 
+void SysPutS(Keycode *name, int count,tty_t tty){
+	putsTTY( name,count, tty);
+}
 	
