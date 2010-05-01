@@ -22,14 +22,16 @@ void chupala(){
 	char *video0 = (char *)0xb8000;
 	static int count = 0;
 	/*puts("CHUPALA ");*/
+	
 	while(1){
-		if ((count % (80*25)) == 0){
+		sysPutChar( 'A', 0);
+		/*if ((count % (80*25)) == 0){
 			video0 = (char *)0xb8000;
 			count = 0;
 		}
 		*video0 = 'A';
 		video0 += 4;
-		count += 2;
+		count += 2;*/
 	}
 	return;
 }
@@ -40,13 +42,14 @@ void puto(){
 	/*puts("PUTO!\n");*/
 	
 	while(1){
-		if ((count % (80*25)) == 0){
+		sysPutChar( 'B', 0);
+		/*if ((count % (80*25)) == 0){
 			video1 = (char *)0xb8002;
 			count = 0;
 		}
 		*video1 = 'B';
 		video1 += 4;
-		count += 2;
+		count += 2;*/
 	}
 	return;
 }

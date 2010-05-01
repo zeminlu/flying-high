@@ -171,8 +171,7 @@ static int parseCharTTY( int c, tty_t tty )
 		parseLineFeedTTY,
 		parseReturnTTY
 	};
-	
-	if( '\a' <= c && c >= '\r' )
+	if( '\a' <= c && c <= '\r' )
 	{
 		bckOffset = cursorOffset;
 		specialCharPrint[c - '\a'](ttyTable.ttys[tty].begin, WRITE_ON_TTY, tty);
@@ -184,7 +183,7 @@ static int parseCharTTY( int c, tty_t tty )
 	{
 		(ttyTable.ttys[getCurrentTTY()].begin)[cursorOffset] = c;
 		if( tty == getCurrentTTY() )
-			putCharAtCurrentPos( c, getVideoColor() );
+			printChar( c );
 		return 1;
 	}
 }
@@ -221,7 +220,7 @@ static void refreshScreenTTY( void )
 			refreshCharPrint[character - '\a'](ttyTable.ttys[getCurrentTTY()].end, SEND_TO_VIDEO, getCurrentTTY());
 		}else
 		{
-			putCharAtCurrentPos( (ttyTable.ttys[getCurrentTTY()].end)[cursorOffset], getVideoColor() );
+			printChar( (ttyTable.ttys[getCurrentTTY()].end)[cursorOffset] );
 			incTTYCursor();
 		}
 	}
@@ -271,12 +270,12 @@ void initializeTTY( void )
 
 int getCurrentTTY( void ) 
 {
-	return getCurrentTTY();
+	return ttyTable.focusTTY;
 }
 
 void setFocusProcessTTY( tty_t tty, pid_t pid ){
 	
-		ttyTable.ttys[tty].focusProcess = pid;
+	ttyTable.ttys[tty].focusProcess = pid;
 }
 
 int changeFocusTTY( tty_t nextTty ){	
@@ -343,15 +342,15 @@ void refreshTTY(void){
  *Public Functions
  */
 
-void SysSetFocusProcessTTY(pid_t pid, tty_t tty){
+void sysSetFocusProcessTTY(pid_t pid, tty_t tty){
 	ttyTable.ttys[tty].focusProcess = pid; 
 }
 
-pid_t SysGetFocusProcessTTY(tty_t tty){
+pid_t sysGetFocusProcessTTY(tty_t tty){
 	return ttyTable.ttys[tty].focusProcess;
 }
 
-Keycode SysGetChar(tty_t tty){
+Keycode sysGetChar(tty_t tty){
 	Keycode aux ;
 	
 	do{
@@ -374,11 +373,11 @@ Keycode SysGetChar(tty_t tty){
 
 }
 
-void SysPutChar(Keycode c, tty_t tty){
+void sysPutChar(Keycode c, tty_t tty){
 	putCharTTY(c,tty);
 }
 
-void SysPutS(Keycode *name, int count,tty_t tty){
+void sysPutS(Keycode *name, int count,tty_t tty){
 	putsTTY( name,count, tty);
 }
 	
