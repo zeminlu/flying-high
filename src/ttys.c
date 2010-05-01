@@ -314,10 +314,10 @@ static void refreshKeyboardBufferTTY( void ){
 	
 		color = getVideoColor();
 
-		while( !kbBufferIsEmpty() )
+		while( !kbBufferIsEmpty() ){
 			if( (deChar = charDeque()) != '\0' )
 			{
-				if( (deChar & 0x80 ) == 1 ){
+				if( (deChar & 0x80) == 1 ){
 					changeFocusTTY( (deChar & 0x81) - 1 );
 				}else{
 					if(runningProcess->ttyMode  == TTY_CANONICAL){
@@ -327,6 +327,7 @@ static void refreshKeyboardBufferTTY( void ){
 					}
 				}
 			}
+		}
 }
 
 void refreshTTY(void){
