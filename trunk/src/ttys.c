@@ -1,4 +1,4 @@
-/*
+	/*
  * ttys.c
  */
 
@@ -78,6 +78,7 @@ static void decTTYCursor ( void )
 static void putLine( tty_t tty)
 {
 	sleepCondition[tty]++;
+	signalTty(tty);
 }
 
 static void parseAlarmTTY( unsigned char * p, int where, tty_t tty )
@@ -292,6 +293,7 @@ void putTTY(Keycode c, tty_t tty){
 		
 	}
 	sleepCondition[tty]++;
+	signalTty(tty);
 	
 }
 
@@ -331,11 +333,19 @@ void refreshTTY(void){
  *Public Functions
  */
 
+void SysSetFocusProcessTTY(pid_t pid, tty_t tty){
+	ttyTable.ttys[tty].focusProcess = pid; 
+}
+
+pid_t SysGetFocusProcessTTY(tty_t tty){
+	return ttyTable.ttys[tty].focusProcess;
+}
+
 Keycode SysGetChar(tty_t tty){
 	Keycode aux ;
 	
 	do{
-		/* TENGO QUE DORMIR EL PROCESO */
+		waitTty(tty);
 	}while(sleepCondition[tty] > 0);
 
 	if(stdinTableTTY[tty].readOffset == MAX_LINE){
@@ -344,7 +354,9 @@ Keycode SysGetChar(tty_t tty){
 	
 	aux = stdinTableTTY[tty].stdIN[stdinTableTTY[tty].readOffset++];
 	
-	if(aux == NEW_LINE){
+	if(runningProcess->ttyMode == TTY_CANONICAL && aux == NEW_LINE){
+		sleepCondition[tty] --;
+	}else if(runningProcess->ttyMode != TTY_CANONICAL){
 		sleepCondition[tty] --;
 	}
 	
