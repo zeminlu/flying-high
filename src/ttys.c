@@ -228,7 +228,7 @@ void putCharTTY( char c, tty_t tty )
 {	
 	int parse;
 	
-	if( cursorOffset == VIDEO_MEMORY_SIZE - 1 )
+	if( cursorOffset == VIDEO_MEMORY_SIZE )
 	{
 		cursorOffset = 0;
 		ttyTable.ttys[tty].begin = ttyTable.ttys[getCurrentTTY()].TerminalBuffer;
@@ -271,10 +271,12 @@ void setTtyFocusProcess( tty_t tty, pid_t pid ){
 
 int changeTtyFocus( tty_t nextTty ){	
 	
+	clearScreen();
 	if( nextTty == getCurrentTTY() )
 		return 1;
 	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
 	refreshTTYScreen();
+	refreshScreen();
 	return 0;
 }
 
