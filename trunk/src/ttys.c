@@ -263,7 +263,7 @@ int changeTtyFocus( tty_t nextTty ){
 	if( nextTty == getCurrentTTY() )
 		return 1;
 	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
-	refreshTTYScreen();	
+	refreshTTYScreen();
 	return 0;
 }
 

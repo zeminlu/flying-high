@@ -20,9 +20,19 @@ void * getKernelHeap(){
 	return kernelHeap;
 }
 
+void loadCR3(){
+	unsigned int cr0;
+
+	asm volatile("mov %0, %%cr3":: "r"(&(kernelDir->pageTable)));
+	asm volatile("mov %%cr0, %0": "=r"(cr0));
+	cr0 |= 0x80000000;
+	asm volatile("mov %0, %%cr0":: "r"(cr0));
+	
+	return;
+}
+
 int initPaging(){
 	unsigned int i;
-	unsigned int cr0;
 
 	memset(kernelDir, 0, sizeof(directory_t));
 	memset(framesTable, 0, sizeof(frame_t) * TOTAL_FRAMES_QTY);
@@ -38,11 +48,8 @@ int initPaging(){
 		kernelDir->pageTable[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
 	}
 	
-	asm volatile("mov %0, %%cr3":: "r"(&(kernelDir->pageTable)));
-	asm volatile("mov %%cr0, %0": "=r"(cr0));
-	cr0 |= 0x80000000;
-	asm volatile("mov %0, %%cr0":: "r"(cr0));
-	
+	loadCR3();
+		
 	kernelFrame = getFrame();
 	kernelHeap = (void *)kernelFrame->address;
 	
@@ -59,7 +66,7 @@ void setKernelHeapPresence(int state){
 }
 
 void initPage(page_t *page, int isKernel){
-	page->present = isKernel;
+	page->present = TRUE;
 	page->writeable = !isKernel;
 	page->user = isKernel;
 	

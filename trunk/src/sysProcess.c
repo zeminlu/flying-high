@@ -16,15 +16,38 @@ static pid_t ttyRestPlace[MAX_TTY];
 
 int qtyProccessTable = 0;
 
+static int proc = 0;
+
 void chupala(){
-	puts("CHUPALA ");
-	
+	char *video0 = (char *)0xb8000;
+	static int count = 0;
+	/*puts("CHUPALA ");*/
+	while(1){
+		if ((count % (80*25)) == 0){
+			video0 = (char *)0xb8000;
+			count = 0;
+		}
+		*video0 = 'A';
+		video0 += 4;
+		count += 2;
+	}
 	return;
 }
 
 void puto(){
-	puts("PUTO!\n");
+	char *video1 = (char *)0xb8002;
+	static int count = 0;
+	/*puts("PUTO!\n");*/
 	
+	while(1){
+		if ((count % (80*25)) == 0){
+			video1 = (char *)0xb8002;
+			count = 0;
+		}
+		*video1 = 'B';
+		video1 += 4;
+		count += 2;
+	}
 	return;
 }
 
@@ -89,14 +112,11 @@ int initMultitasker(pfunc_t init) {
 
 void multitasker(void) {
 
-	if (!isMTActivated())
+	if (!mtActivated)
 		return;
-
 	if ( runningProcess != NULL && runningProcess->atomicity == ATOMIC )
 		return;
-
-	nextProcess = rpgSchedule() /*roundRobinSched()*/ /* prioritySched()*/;
-
+	nextProcess = (runningProcess == NULL) ? nextProcess : getNextTask() /*roundRobinSched()*/ /* prioritySched()*/;
 	if ( nextProcess != runningProcess ) {
 		/* This is done when loading the init process for the first time */
 		if ( runningProcess != NULL ) {
@@ -105,11 +125,9 @@ void multitasker(void) {
 			asm volatile("mov %%esp, %0": "=r"(runningProcess->esp));
 			asm volatile("mov %%ebp, %0": "=r"(runningProcess->ebp));
 		}
-		
 		/* Protection */
 		setFramePresence(nextProcess->sFrame, TRUE);
 		setFramePresence(nextProcess->hFrame, TRUE);
-		
 		asm volatile("mov %0, %%esp":: "r"(nextProcess->esp));
 		asm volatile("mov %0, %%ebp":: "r"(nextProcess->ebp));
 		if ( runningProcess != NULL ) {
@@ -117,9 +135,8 @@ void multitasker(void) {
 			setFramePresence(runningProcess->hFrame, FALSE);
 		}
 		nextProcess->state = RUNNING;
-	} else {
+	}else {
 	}
-
 	freeTerminatedProcesses();
 	runningProcess = nextProcess;
 	/*if ( runningProcess->level == FOREGROUND ) 

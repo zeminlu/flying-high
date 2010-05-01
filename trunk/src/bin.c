@@ -12,7 +12,7 @@ void init(void *args){
 	}*/
 	createProcess("chupala", chupala, NULL, FOREGROUND);
 	createProcess("puto", puto, NULL, FOREGROUND);
-
+	
 	while(1)
 		asm volatile ("hlt");
 

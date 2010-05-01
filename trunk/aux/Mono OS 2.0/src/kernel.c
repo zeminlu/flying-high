@@ -82,9 +82,6 @@ kmain()
 		puts((unsigned char *)getProcessErrorMsg());
 		while(1);
 	}
-	char *lula;
-	char puri[8];
-	puri = lula
 
 	/* Enables the pertinent interruptions */
 	_Cli();

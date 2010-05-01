@@ -176,7 +176,6 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 		process->childs[i] = -1;
 	
 	process->childsQty = 0;
-	
 	if ( name != NULL ) {
 		memset(process->name, '\0', MAX_PROCESS_NAME + 1);
 		if ( (nameLen = strlen(name)) > MAX_PROCESS_NAME )

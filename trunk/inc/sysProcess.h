@@ -7,6 +7,7 @@
 #include "memModule.h"	
 #include "schedule.h"
 #include "syscall.h"
+#include "stdio.h"
 
 void forceMultitasker();
 

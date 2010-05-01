@@ -24,34 +24,27 @@ extern int qtyProccessTable;
  *	Functions Section
  */
 
-process_t * getNextTask()
-{	
-	process_t * proc;
-	
-	proc = ALGORITHIM == ROUND_ROBIN ? roundRobinSchedule() : rpgSchedule();
-	nextProcess = proc;
-	return proc;
-}
-
-process_t * roundRobinSchedule()
+static process_t * roundRobinSchedule()
 {
 	static int lastTask = 0;
 	int i;
 	
-	if( lastTask == MAX_PROCESS )
-		lastTask = 2;
-	for( i = lastTask + 1 ; i != lastTask ; ++i )
+	i = lastTask + 1;
+	while(i != lastTask)
 	{
-		if( i == MAX_PROCESS )
-			i = 2;
-		if( processTable[i].state == READY )
-		{
+		if( processTable[i].pid != -1 && processTable[i].state == READY )
+		{		
 			lastTask = i;
 			return &processTable[i];
 		}
+		
+		++i;
+		
+		if( i == MAX_PROCESS ){
+			i = 0;
+		}
 	}
 	return initProcess;
-	
 }
 
 process_t * rpgSchedule()
@@ -68,6 +61,19 @@ process_t * rpgSchedule()
 	processTable[procPos].tickCounter = 0;
 	processTable[procPos].rpgPrior = 0;
 	return &processTable[procPos];			/* If there isn't a process to be excecuted it return Idle(0) process */
+}
+
+process_t * getNextTask()
+{	
+	process_t * proc;
+	char *video = (char*)0xb8002;
+	
+	proc = (ALGORITHIM == ROUND_ROBIN ? roundRobinSchedule() : rpgSchedule());
+	/*while(1){
+		*video = (proc->pid + 30);
+		*(video + 18) = 'A';
+	}*/
+	return proc;
 }
 
 void checkWhatAreReady( process_t * pro[] )

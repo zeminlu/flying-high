@@ -18,7 +18,7 @@ vpath %.asm $(SRC_DIR)
 #Sets the C compiler used to create object files from source code.
 CC = gcc
 #Sets compiler options.
-CFLAGS = -O -Wall -Wuninitialized -pedantic -errors -fno-builtin -fno-stack-protector -c -o
+CFLAGS = -Wall -Wuninitialized -pedantic -errors -fno-builtin -fno-stack-protector -c -o
 #Sets the location of the header files.
 INCLUDES = -I $(INC_DIR)
 #Sets the C compiler set up
