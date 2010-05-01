@@ -34,7 +34,7 @@ void timerTick ( void )
 	*/
 	/* Screen Update from Buffers */
 	 /* flush kb buffer into stdin */
-	refreshTTY();	/* flush stdout into video buffer and refresh screen */
+	/*refreshTTY();	 flush stdout into video buffer and refresh screen */
 
 	/* Task Scheduler Decision */
 	/*if (!isAppRunning(SCREEN_SAVER))

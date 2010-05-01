@@ -28,7 +28,7 @@
 #define EFLAGS			0x00200
 #define STACK_TRACE_LENGTH 15
 #define KILL_EXIT_STATUS 0
-#define LOCAL_VARIABLES_SPACE	0x0000001c
+#define LOCAL_VARIABLES_SPACE	0x00000018
 #define MILISECONDS_PER_TICK	55
 
 pid_t _sys_create_process(char *name, pfunc_t main, int args, int level);

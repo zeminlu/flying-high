@@ -62,6 +62,9 @@ extern _sys_memmap
 extern multitasker
 extern _sysExit	
 extern refresh
+extern loadCR3
+extern refreshTTY
+extern _debug
 
 forceMultitasker:
 	push 	ebp
@@ -82,16 +85,17 @@ _int_08_handler:					;										   ;
 	cli								;										   ;
 	pushad							;										   ;
 	call 	increaseKernelDepth		;										   ;
-	call	refresh					;										   ;
+	call	refreshTTY				;										   ;
+;	call	_debug					;										   ;
 	call	multitasker				;										   ;
 									;										   ;
 returnAddress:						;										   ;
-	mov al, 20h						;										   ;
-	out 20h, al						;										   ;
-	call decreaseKernelDepth		;										   ;
+;	call	_debug					;										   ;
+	mov 	al, 20h					;										   ;
+	out 	20h, al					;										   ;
+	call	decreaseKernelDepth		;										   ;
+	call	loadCR3					;										   ;
 	popad							;										   ;
-	sti								;										   ;
-	leave							;										   ;
 	iret							;										   ;
 ;------------------------------------------------------------------------------;
 
@@ -110,9 +114,11 @@ returnAddress:						;										   ;
 ;	the invalid value if such was given.									   ;
 ;------------------------------------------------------------------------------;
 _int_80_handler:					;										   ;
-	push	ebp						; Building Stack Frame					   ;
-	mov		ebp, esp				;										   ;
-	and		esp, -16				; Aligning segment to 16 bytes			   ;
+	cli
+	pushad
+	call	increaseKernelDepth		;										   ;
+	popad
+	
 									;										   ;
 __check_SYS_WRITE:					; switch(eax) {							   ;
 	cmp		eax, _SYS_WRITE			;	case _SYS_WRITE:					   ;
@@ -151,7 +157,7 @@ __check_SYS_EXIT:					;										   ;
 	jnz		__check_SYS_MEMMAP		;										   ;
 	push 	EBX						;										   ;
 	call 	_sysExit				;										   ;
-	add		esp, 12					;										   ;
+	add		esp, 4					;										   ;
 	jmp 	__int_80_ret			;										   ;
 									;										   ;
 __check_SYS_MEMMAP:					;										   ;
@@ -159,11 +165,13 @@ __check_SYS_MEMMAP:					;										   ;
 	jnz		__int_80_ret			;										   ;
 	push	ebx						;										   ;
 	call	_sys_memmap				;										   ;
-	add		esp, 12					;										   ;
+	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;	default:							   ;
 __int_80_ret:						;		break:							   ;
-	leave							; }										   ;
+	pushad
+	call	decreaseKernelDepth
+	popad
 	iret							;										   ;
 ;------------------------------------------------------------------------------;
 
@@ -197,16 +205,17 @@ __int_80_ret:						;		break:							   ;
 ;			keyboard_driver that it's implemented in C.						   ;
 ; -----------------------------------------------------------------------------;
 _int_09_handler:						; Building the stack Frame			   ;
-        push    ds						;									   ;
-        push    es                      ; 									   ;
-        pusha                           ; 									   ;
-        call    keyboard_driver         ; Call to the keyboard_driver (imple.C);
-		mov		al,20h					; Send EOI							   ;
-		out		20h,al					; Write the instruction in port 0x20   ;
-		popa							; Leave the Stack Frame				   ;
-		pop		es						;									   ;
-		pop		ds						;									   ;
-		iret							;									   ;
+	cli
+	pushad                     	    	; 									   ;
+	call	increaseKernelDepth			;									   ;
+
+	call    keyboard_driver    		    ; Call to the keyboard_driver (imple.C);
+	mov		al,20h						; Send EOI							   ;
+	out		20h,al						; Write the instruction in port 0x20   ;
+
+	call	decreaseKernelDepth			;									   ;
+	popad								; Leave the Stack Frame				   ;
+	iret								;									   ;
 ; ---------------------------------------------------------------------------- ;
 
 ;-----------------------------------------------------------------------------;
@@ -219,13 +228,10 @@ _int_09_handler:						; Building the stack Frame			   ;
 _divide_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call divideExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -240,13 +246,10 @@ _divide_e_hand:
 _debug_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call debugExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -261,13 +264,10 @@ _debug_e_hand:
 _nmi_e_hand:
 	cli
 	pushad
-	call increaseKernelDepth
-	
+
+	call increaseKernelDepth	
 	call NMIExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -282,13 +282,10 @@ _nmi_e_hand:
 _break_point_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call breakPointExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -303,13 +300,10 @@ _break_point_e_hand:
 _overflow_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call overflowExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -324,13 +318,10 @@ _overflow_e_hand:
 _bounds_check_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call boundsCheckExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -345,13 +336,10 @@ _bounds_check_e_hand:
 _invalid_opcode_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call invalidOpcodeExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -366,13 +354,10 @@ _invalid_opcode_e_hand:
 _copro_unavailable_e_hand:
 	cli
 	pushad
+	
 	call increaseKernelDepth
-	
-	call coprocessorUnavailableExceptionHandler
-	
-	push 0x01
+	call coprocessorUnavailableExceptionHandler	
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -387,13 +372,10 @@ _copro_unavailable_e_hand:
 _double_fault_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call doubleFaultExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -408,13 +390,10 @@ _double_fault_e_hand:
 _invalid_tss_e_hand:
 	cli
 	pushad
+	
 	call increaseKernelDepth
-	
 	call invalidTSSExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -429,13 +408,10 @@ _invalid_tss_e_hand:
 _segment_not_present_e_hand:
 	cli
 	pushad
+	
 	call increaseKernelDepth
-	
 	call segmentNotPresentExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -450,13 +426,10 @@ _segment_not_present_e_hand:
 _stack_e_hand:
 	cli
 	pushad
+	
 	call increaseKernelDepth
-	
 	call stackExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -471,14 +444,11 @@ _stack_e_hand:
 _general_protection_e_hand:
 	cli
 	pushad
+	
 	call increaseKernelDepth
-	
 	call generalProtectionExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
-
+	
 	popad
 	iret
 
@@ -492,13 +462,10 @@ _general_protection_e_hand:
 _page_fault_e_hand:
 	cli
 	pushad
-	call increaseKernelDepth
 	
+	call increaseKernelDepth	
 	call pageFaultExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret
@@ -513,13 +480,10 @@ _page_fault_e_hand:
 _coprocessor_e_hand:
 	cli
 	pushad
+
 	call increaseKernelDepth
-	
 	call coprocessorExceptionHandler
-	
-	push 0x01
 	call decreaseKernelDepth
-	add esp, 0x04
 
 	popad
 	iret

@@ -16,12 +16,9 @@
 #define	evaluate(x)		((x * 0.75) + ((x+2)/MAX_PROCESS) * 100)
 #define	MAX(a,b)		((a > b) ? a : b)
 
+process_t * rpgSchedule();
 
 process_t * getNextTask( void );
-
-process_t * roundRobinSchedule( void );
-
-process_t * rpgSchedule( void );
 
 void checkWhatAreReady( process_t * pro[] );
 

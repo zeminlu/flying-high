@@ -43,8 +43,9 @@ _lidt:				; Carga el IDTR
         push    ebp
         mov     ebp, esp
         push    ebx
-        mov     ebx, [ss: ebp + 6] ; ds:bx = puntero a IDTR 
-	rol	ebx,16		    	
+    ;    mov     ebx, [ss: ebp + 6] ; ds:bx = puntero a IDTR 
+	;	rol	ebx,16		    	
+		mov ebx, [ss: ebp + 8]
 	lidt    [ds: ebx]          ; carga IDTR
         pop     ebx
         pop     ebp

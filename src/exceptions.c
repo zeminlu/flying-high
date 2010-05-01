@@ -130,6 +130,7 @@ static void panic(char *msg, registers_t regs) {
 	putx(regs.edi);
 	puts((const char *)"\n");
 	puts((const char *)"\n");
+	flushStdScreen();
 	return;
 }
 
@@ -256,6 +257,7 @@ void pageFaultExceptionHandler(registers_t regs) {
 	else
 		puts((const char *)"     4 - The fault was not caused by reserved bits violation.\n");
 
+	flushStdScreen();
 	handleException(regs);
 	return;
 }

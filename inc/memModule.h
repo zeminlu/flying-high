@@ -5,6 +5,8 @@
 #include "stdio.h"
 #include "types.h"
 
+void loadCR3();
+
 int initPaging();
 
 void setKernelHeapPresence(int state);

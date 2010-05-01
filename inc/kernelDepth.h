@@ -2,6 +2,7 @@
 #define _KERNELDEPTH_H_
 
 #include "memModule.h"
+#include "kasm.h"
 
 void increaseKernelDepth(void);
 
