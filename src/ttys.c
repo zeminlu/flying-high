@@ -198,20 +198,20 @@ static void refreshTTYScreen( void )
 	
 	if( ttyTable.ttys[getCurrentTTY()].hasScrolled > 0 )
 	{
-		ttyTable.ttys[getCurrentTTY()].end = ttyTable.ttys[getCurrentTTY()].begin + (bckOffset % SCREEN_WIDTH) + 1;
-		cursorOffset = (ttyTable.ttys[getCurrentTTY()].begin - ttyTable.ttys[getCurrentTTY()].TerminalBuffer ) + SCREEN_WIDTH;
+		ttyTable.ttys[getCurrentTTY()].end = ttyTable.ttys[getCurrentTTY()].begin + (SCREEN_WIDTH - (bckOffset % SCREEN_WIDTH));
+		cursorOffset = bckOffset + (SCREEN_WIDTH - (bckOffset % SCREEN_WIDTH));
 	}
-	while( ttyTable.ttys[getCurrentTTY()].end != ttyTable.ttys[getCurrentTTY()].begin )
+	while( ttyTable.ttys[getCurrentTTY()].end != (ttyTable.ttys[getCurrentTTY()].begin + bckOffset) )
 	{
 		if( cursorOffset == VIDEO_MEMORY_SIZE )
 			cursorOffset = 0;
-		character = *(ttyTable.ttys[getCurrentTTY()].end);
+		character = (ttyTable.ttys[getCurrentTTY()].end)[cursorOffset];
 		if( '\a' <= character && character >= '\r' )
 		{
 			refreshCharPrint[character - '\a'](ttyTable.ttys[getCurrentTTY()].end, SEND_TO_VIDEO, getCurrentTTY());
 		}else
 		{
-			putCharAtCurrentPos((int)(*(ttyTable.ttys[getCurrentTTY()].end)), getVideoColor());
+			putCharAtCurrentPos((int)((ttyTable.ttys[getCurrentTTY()].end)[cursorOffset]), getVideoColor());
 			cursorOffset++;
 		}
 	}
