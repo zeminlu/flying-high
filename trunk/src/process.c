@@ -20,25 +20,25 @@ void exit(int status) {
 }
 
 tty_t setTty(pid_t pid, tty_t tty) {
-	return (tty_t)callInt80(_SYS_SET_TTY, (void *)pid, (void *)tty, NULL);
+	return (tty_t)int80(_SYS_SET_TTY, (void *)pid, (void *)tty, NULL);
 }
 
 tty_t getTty(pid_t pid) {
-	return (tty_t)callInt80(_SYS_GET_TTY, (void *)pid, NULL, NULL);
+	return (tty_t)int80(_SYS_GET_TTY, (void *)pid, NULL, NULL);
 }
 
 pid_t getpid(void) {
-	return (pid_t)callInt80(_SYS_GET_PID, NULL, NULL, NULL);
+	return (pid_t)int80(_SYS_GET_PID, NULL, NULL, NULL);
 }
 
 pid_t getppid() {
-	return (pid_t)callInt80(_SYS_GET_PPID, NULL, NULL, NULL);
+	return (pid_t)int80(_SYS_GET_PPID, NULL, NULL, NULL);
 }
 
 int waitpid(pid_t pid, int *status, int opt) {
-	return (int)callInt80(_SYS_WAIT_PID, (void *)pid, (void *)status, (void *)opt);
+	return (int)int80(_SYS_WAIT_PID, (void *)pid, (void *)status, (void *)opt);
 }
 
 int kill(int fd1, int fd2) {
-	return (int)callInt80(_SYS_KILL, (void *)fd1, (void *)fd2, NULL);
+	return (int)int80(_SYS_KILL, (void *)fd1, (void *)fd2, NULL);
 }

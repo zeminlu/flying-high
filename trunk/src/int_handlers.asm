@@ -59,6 +59,12 @@ extern _sys_write
 extern _sys_read
 extern _sys_create_process
 extern _sys_memmap
+extern _sys_get_tty
+extern _sys_set_tty
+extern _sys_get_pid
+extern _sys_get_ppid
+extern _sys_kill
+extern _sys_wait_pid
 extern multitasker
 extern _sysExit	
 extern refresh
@@ -162,7 +168,7 @@ __check_SYS_EXIT:					;										   ;
 									;										   ;
 __check_SYS_MEMMAP:					;										   ;
 	cmp		eax, _SYS_MEMMAP		;										   ;
-	jnz		__SYS_SET_TTY			;										   ;
+	jnz		__check_SYS_SET_TTY		;										   ;
 	push	ebx						;										   ;
 	call	_sys_memmap				;										   ;
 	add		esp, 4					;										   ;
@@ -170,34 +176,33 @@ __check_SYS_MEMMAP:					;										   ;
 									;										   ;
 __check_SYS_SET_TTY:				;										   ;
 	cmp 	eax, _SYS_SET_TTY		;										   ;
-	jnz		__check_SYS_GET_EXIT	;										   ;
+	jnz		__check_SYS_GET_TTY		;										   ;
 	push	ECX						;										   ;
 	push	EBX						;										   ;
-	call	_sys_create_process		;										   ;
-	add		esp, 20					;										   ;
+	call	_sys_set_tty			;										   ;
+	add		esp, 8					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
 __check_SYS_GET_TTY:				;										   ;
 	cmp 	eax, _SYS_GET_TTY		;										   ;
 	jnz		__check_SYS_GET_PID		;										   ;
 	push	EBX						;										   ;
-	call	_sys_create_process		;										   ;
-	add		esp, 20					;										   ;
+	call	_sys_get_tty			;										   ;
+	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
 __check_SYS_GET_PID:				;										   ;
 	cmp 	eax, _SYS_GET_PID		;										   ;
 	jnz		__check_SYS_GET_PPID	;										   ;
-	call	_sys_create_process		;										   ;
-	add		esp, 20					;										   ;
+	call	_sys_get_pid			;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
 __check_SYS_GET_PPID:				;										   ;
 	cmp 	eax, _SYS_GET_PPID		;										   ;
 	jnz		__check_SYS_WAIT_PID	;										   ;
 	push	EBX						;										   ;
-	call	_sys_create_process		;										   ;
-	add		esp, 20					;										   ;
+	call	_sys_get_ppid			;										   ;
+	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
 __check_SYS_WAIT_PID:				;										   ;
@@ -206,8 +211,8 @@ __check_SYS_WAIT_PID:				;										   ;
 	push	EDX						;										   ;
 	push	ECX						;										   ;
 	push	EBX						;										   ;
-	call	_sys_create_process		;										   ;
-	add		esp, 20					;										   ;
+	call	_sys_wait_pid			;										   ;
+	add		esp, 12					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
 __check_SYS_KILL:					;										   ;
@@ -215,8 +220,8 @@ __check_SYS_KILL:					;										   ;
 	jnz		__int_80_ret			;										   ;
 	push	ECX						;										   ;
 	push	EBX						;										   ;
-	call	_sys_create_process		;										   ;
-	add		esp, 20					;										   ;
+	call	_sys_kill				;										   ;
+	add		esp, 8					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
 __int_80_ret:						;										   ;
