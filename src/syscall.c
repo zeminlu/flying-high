@@ -186,6 +186,8 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	setFramePresence(process->sFrame, TRUE);
 	createStackFrame(process, main, args);
 	setFramePresence(process->sFrame, FALSE);
+	
+	process->ttyMode = TTY_CANONICAL;
 
 	return process->pid;
 }
