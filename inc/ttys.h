@@ -41,6 +41,9 @@ void SysPutS(Keycode *name, int count,tty_t tty);
 
 void SysPutChar(Keycode c, tty_t tty);
 
+void SysSetFocusProcessTTY(pid_t pid, tty_t tty);
+
+pid_t SysGetFocusProcessTTY(tty_t tty);
 
 
 #endif
