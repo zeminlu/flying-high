@@ -39,7 +39,7 @@ void kernel_main ( void  )
 	
 	initializeTTY();
 	
-	initMultitasker(init);
+	//initMultitasker(init);
 	
 	/*initMouse();*/
 	puts("Done.\n");

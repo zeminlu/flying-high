@@ -233,7 +233,7 @@ void initializeTTY( void )
 		stdinTableTTY[i].writeOffset = 0;
 		stdinTableTTY[i].readOffset = 0;
 		stdinTableTTY[i].empty = TRUE;
-		putsTTY((unsigned char *) promnt, 17, i);
+	//	putsTTY((unsigned char *) promnt, 17, i);
 	}
 	ttyTable.qtyTTY = MAX_TTY;
  	ttyTable.focusTTY= 0;

@@ -51,11 +51,6 @@ void *sysMalloc(size_t nbytes, memArea_t * (*getMemoryArea)()){
 	memArea = getMemoryArea();
 	
 	debug  = baseMalloc(nbytes, memArea);
-	/*
-	puts("Valor en la estructura del address = ");
-	putx((int)memArea->address);
-	puts("\n");
-	flushStdScreen();
-	*/
+
 	return debug;
 }
