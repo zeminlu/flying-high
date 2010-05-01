@@ -65,14 +65,14 @@ static int keyboardActivity = 0;
 
 #define _SPECIAL(num) (KEY_SPECIAL_FLAG & (num))
 #define KEY_UNKNOWN _SPECIAL(0) 
-#define KEY_F1      KB_KEY_RELEASE & 0x01
-#define KEY_F2      KB_KEY_RELEASE & 0x02 
-#define KEY_F3      KB_KEY_RELEASE & 0x03 
-#define KEY_F4      KB_KEY_RELEASE & 0x04 
-#define KEY_F5      KB_KEY_RELEASE & 0x05 
-#define KEY_F6      KB_KEY_RELEASE & 0x06
-#define KEY_F7      KB_KEY_RELEASE & 0x07
-#define KEY_F8      KB_KEY_RELEASE & 0x08
+#define KEY_F1      KB_KEY_RELEASE | 0x01
+#define KEY_F2      KB_KEY_RELEASE | 0x02 
+#define KEY_F3      KB_KEY_RELEASE | 0x03 
+#define KEY_F4      KB_KEY_RELEASE | 0x04 
+#define KEY_F5      KB_KEY_RELEASE | 0x05 
+#define KEY_F6      KB_KEY_RELEASE | 0x06
+#define KEY_F7      KB_KEY_RELEASE | 0x07
+#define KEY_F8      KB_KEY_RELEASE | 0x08
 #define KEY_F9      _SPECIAL(9) 
 #define KEY_F10     _SPECIAL(10) 
 #define KEY_F11     _SPECIAL(11) 
