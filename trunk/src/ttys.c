@@ -49,15 +49,7 @@ static char * promnt = "root@FlyingHigh$>";
 
 static void putLine( tty_t tty)
 {
-	switch( runningProcess->ttyMode )
-	{
-		case TTY_RAW:
-
-			break;
-		case TTY_CANONICAL:
-			sleepCondition[tty]++;
-			break;
-	}
+	sleepCondition[tty]++;
 }
 
 static void parseAlarmTTY( unsigned char * p, int where, tty_t tty )
@@ -281,6 +273,7 @@ void putTTY(Keycode c, tty_t tty){
 		}
 		
 	}
+	sleepCondition[tty]++;
 	
 }
 
@@ -309,8 +302,11 @@ static void refreshTTYKeyboardBuffer( void )
 }
 
 void refreshTTY(void){
-	refreshTTYKeyboardBuffer();
-	refreshTTYScreen();
+	if(runningProcess != NULL){
+		refreshTTYKeyboardBuffer();
+		refreshTTYScreen();
+	}
+
 }
 
 Keycode getCharTTY(tty_t tty){
