@@ -201,6 +201,7 @@ tty_t _sys_get_tty(pid_t pid) {
 }
 
 tty_t _sys_set_tty(pid_t pid, tty_t tty) {
+	
 	if ( pid > MAX_PROCESS || pid < 0 )
 		return -1;
 	if ( processTable[pid].pid == -1 )
