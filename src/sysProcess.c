@@ -29,8 +29,7 @@ void puto(){
 }
 
 void refresh(){
-	flushKeyboardBuffer(); /* flush kb buffer into stdin */
-	flushStdScreen();
+	refreshTTY();
 }
 
 int isMTActivated(){

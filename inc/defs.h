@@ -97,6 +97,11 @@
 #define ACS_STACK       (ACS_PRESENT | ACS_DSEG | ACS_WRITE)
 
 /*
+ * defines de la shell
+*/
+#define MAX_LINE 100
+
+/*
  *	NULL Pointer Definition
  */
 #define NULL (void *)0x0

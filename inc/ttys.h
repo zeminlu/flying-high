@@ -33,4 +33,12 @@ void setTtyFocusProcess( tty_t tty, pid_t pid );
 
 int changeTtyFocus( tty_t nextTty );
 
+void refreshTTY(void);
+
+void putTTY(Keycode c, tty_t tty);
+
+Keycode getCharTTY(tty_t tty);
+
+
+
 #endif

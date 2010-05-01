@@ -8,8 +8,6 @@
  */
 #include "shell.h"
 
-#define MAX_LINE 100
-
 static int firstRun = 1;
 static int status = DEAD;
 static char lineBuffer[MAX_LINE];
