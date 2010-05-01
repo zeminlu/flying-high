@@ -1,9 +1,8 @@
 #ifndef _SYSPROCESS_H_
 #define _SYSPROCESS_H_
 
+#include "ttys.h"
 #include "keyboard_buffer.h"
-#include "keyboard_adapter.h"
-#include "video_adapter.h"
 #include "types.h"
 #include "memModule.h"	
 #include "schedule.h"

@@ -7,12 +7,12 @@
 static int offset = 0;
 
 typedef struct TTY{
-	tty_t	ttyId;
-	Keycode *	stdIn;
-	unsigned char TerminalBuffer[VIDEO_MEMORY_SIZE];
+	tty_t			ttyId;
+	Keycode *		stdIn;
+	unsigned char 	TerminalBuffer[VIDEO_MEMORY_SIZE];
 	unsigned char 	*begin, *end;
-	int		hasScrolled;
-	pid_t	focusProcess;
+	int				hasScrolled;
+	pid_t			focusProcess;
 }TTY;
 
 typedef struct sysTTY{
@@ -21,11 +21,22 @@ typedef struct sysTTY{
 	tty_t	focusTTY;
 }sysTTY;
 
+typedef struct stdInTTY{
+	Keycode stdIN[MAX_LINE];
+	int 	writeOffset;
+	int 	readOffset;
+	int 	empty;
+	}stdInTTY;
+
 typedef void (*printFunctions)(unsigned char *, int, tty_t);
 
 sysTTY ttyTable;
 
-static int sleepCondition[MAX_TTY]= {FALSE};
+static stdInTTY stdinTableTTY[MAX_TTY];
+
+static int sleepCondition[MAX_TTY]= {0};
+
+static char * promnt = "root@FlyingHigh$>";
 
 /*
  *	Functions Section
@@ -35,18 +46,16 @@ static int sleepCondition[MAX_TTY]= {FALSE};
  *	Static functions for putcharTTY
  */
 
+
 static void putLine( tty_t tty)
 {
 	switch( runningProcess->ttyMode )
 	{
 		case TTY_RAW:
-			while( *(ttyTable.ttys[tty].stdIn) != NEW_LINE )
-			{
-				putCharAtCurrentPos( *(ttyTable.ttys[tty].stdIn), getVideoColor() );
-				(ttyTable.ttys[tty].stdIn)++;
-			}
+
 			break;
 		case TTY_CANONICAL:
+			sleepCondition[tty]++;
 			break;
 	}
 }
@@ -60,8 +69,7 @@ static void parseBackSpaceTTY( unsigned char * p, int where, tty_t tty )
 {
 	if( !where )
 	{
-		if( offset > 0 )
-		{
+		if( offset > 0 ){
 			--p;
 			*p++ = ' ';
 		}
@@ -85,10 +93,9 @@ static void parseNewLineTTY( unsigned char * p, int where, tty_t tty )
 		*p = NEW_LINE;
 	else 
 		printNewLine();
-	do{
-		++p;
-		++offset;
-	}while( (offset % SCREEN_WIDTH) != 0 );
+
+	p += SCREEN_WIDTH - (offset % SCREEN_WIDTH);
+	offset += SCREEN_WIDTH - (offset % SCREEN_WIDTH);
 }
 
 static void parseVTabTTY( unsigned char * p, int where, tty_t tty )
@@ -150,11 +157,11 @@ static int parseCharTTY( int c, tty_t tty )
 	
 	if( '\a' <= c && c >= '\r' )
 	{
-		specialCharPrint[c - '\a'](ttyTable.ttys[ttyTable.focusTTY].begin, WRITE_ON_TTY, tty);
+		specialCharPrint[c - '\a'](ttyTable.ttys[getCurrentTTY()].begin, WRITE_ON_TTY, tty);
 		return 0;
 	}else
 	{
-		*(ttyTable.ttys[ttyTable.focusTTY].begin) = c;
+		*(ttyTable.ttys[getCurrentTTY()].begin) = c;
 		return 1;
 	}
 }
@@ -175,23 +182,23 @@ static void refreshTTYScreen( void )
 	bckOffset = offset;
 	offset = 0;
 	
-	if( ttyTable.ttys[ttyTable.focusTTY].hasScrolled > 0 )
+	if( ttyTable.ttys[getCurrentTTY()].hasScrolled > 0 )
 	{
-		ttyTable.ttys[ttyTable.focusTTY].end = ttyTable.ttys[ttyTable.focusTTY].begin + (bckOffset % SCREEN_WIDTH) + 1;
-		offset = (ttyTable.ttys[ttyTable.focusTTY].begin - ttyTable.ttys[ttyTable.focusTTY].TerminalBuffer ) + SCREEN_WIDTH;
+		ttyTable.ttys[getCurrentTTY()].end = ttyTable.ttys[getCurrentTTY()].begin + (bckOffset % SCREEN_WIDTH) + 1;
+		offset = (ttyTable.ttys[getCurrentTTY()].begin - ttyTable.ttys[getCurrentTTY()].TerminalBuffer ) + SCREEN_WIDTH;
 	}
-	while( ttyTable.ttys[ttyTable.focusTTY].end != ttyTable.ttys[ttyTable.focusTTY].begin )
+	while( ttyTable.ttys[getCurrentTTY()].end != ttyTable.ttys[getCurrentTTY()].begin )
 	{
 		if( offset == VIDEO_MEMORY_SIZE )
 			offset = 0;
-		character = *(ttyTable.ttys[ttyTable.focusTTY].end);
+		character = *(ttyTable.ttys[getCurrentTTY()].end);
 		if( '\a' <= character && character >= '\r' )
 		{
-			refreshCharPrint[character - '\a'](ttyTable.ttys[ttyTable.focusTTY].end, SEND_TO_VIDEO, ttyTable.focusTTY);
+			refreshCharPrint[character - '\a'](ttyTable.ttys[getCurrentTTY()].end, SEND_TO_VIDEO, getCurrentTTY());
 		}else
 		{
-			putCharAtCurrentPos((int)(*(ttyTable.ttys[ttyTable.focusTTY].end)), getVideoColor());
-			ttyTable.ttys[ttyTable.focusTTY].end++;
+			putCharAtCurrentPos((int)(*(ttyTable.ttys[getCurrentTTY()].end)), getVideoColor());
+			ttyTable.ttys[getCurrentTTY()].end++;
 			offset++;
 		}
 	}
@@ -211,13 +218,13 @@ void putcharTTY( char c, tty_t tty )
 	if( offset == VIDEO_MEMORY_SIZE - 1 )
 	{
 		offset = 0;
-		ttyTable.ttys[tty].begin = ttyTable.ttys[ttyTable.focusTTY].TerminalBuffer;
+		ttyTable.ttys[tty].begin = ttyTable.ttys[getCurrentTTY()].TerminalBuffer;
 		ttyTable.ttys[tty].hasScrolled++;
 	}
 	parse = parseCharTTY(c, tty);
 	if( parse )
 	{
-		++ttyTable.ttys[ttyTable.focusTTY].begin;
+		++ttyTable.ttys[getCurrentTTY()].begin;
 		++offset;
 	}
 }
@@ -228,66 +235,103 @@ void initializeTTY( void )
 	
 	for( i = 0 ; i < MAX_TTY ; ++i )
 	{
-		memcpy(ttyTable.ttys[i].TerminalBuffer, "root@ArkOS$>", 13 );
 		ttyTable.ttys[i].ttyId = i;
-		ttyTable.ttys[i].stdIn = keyboardBuffer;
+		ttyTable.ttys[i].stdIn = stdinTableTTY[i].stdIN;
 		ttyTable.ttys[i].hasScrolled = 0;
+		stdinTableTTY[i].writeOffset = 0;
+		stdinTableTTY[i].readOffset = 0;
+		stdinTableTTY[i].empty = TRUE;
+		putsTTY((unsigned char *) promnt, 17, i);
 	}
 	ttyTable.qtyTTY = MAX_TTY;
-	ttyTable.focusTTY = 0;
+ 	ttyTable.focusTTY= 0;
 	ttyTable.ttys[0].focusProcess = 0;		/* Cuando arranca la TTY tiene al Idle corriendo */	
 }
 
 int getCurrentTTY( void ) 
 {
-	return ttyTable.focusTTY;
+	return getCurrentTTY();
 }
 
-void setTtyFocusProcess( tty_t tty, pid_t pid )
-{
+void setTtyFocusProcess( tty_t tty, pid_t pid ){
+	
 		ttyTable.ttys[tty].focusProcess = pid;
 }
 
-int changeTtyFocus( tty_t nextTty )
-{
+int changeTtyFocus( tty_t nextTty ){	
 	
-	if( nextTty == ttyTable.focusTTY )
+	if( nextTty == getCurrentTTY() )
 		return 1;
 	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
 	refreshTTYScreen();	
 	return 0;
 }
 
-
-static void SysWriteTTY(tty_t ttyId, char * buffer, int amm){
-
-	/*Funcion que agrega a la queue de video*/
-	if(ttyTable.focusTTY == ttyId){
-		/*Quiero escribir en mi buffer y en pantalla*/
-		printToScreen(buffer, amm);
+void putTTY(Keycode c, tty_t tty){
 	
-	}
-}
-
-void printToScreen(char * str, int amm){
-	int i; 
-	for(i = 0; i < amm ; i++){
-		putCharAtCurrentPos((int)str[i], getVideoColor());
-	}
-}
-
-int SysReadTTY(tty_t ttyId){
-	/*hay algo disponible para leer en stdin*/
-	if( !kbBufferIsEmpty() ){
-		/*si lo hay lo retorno en buffer*/
-		return(int)charDeque();
-	}else{
-		while(!sleepCondition[ttyTable.focusTTY]){
-			waitTty(ttyTable.focusTTY);
+	int aux = stdinTableTTY[tty].writeOffset;
+	
+	if(stdinTableTTY[tty].empty == TRUE ){
+		if(aux == MAX_LINE){
+			aux = 0;
 		}
-		return(int)charDeque();
+		stdinTableTTY[tty].stdIN[aux++] = c;
+		if(aux == stdinTableTTY[tty].readOffset){
+			stdinTableTTY[tty].empty = FALSE;
+		}
+		
 	}
-	return 0;
+	
+}
+
+static void refreshTTYKeyboardBuffer( void )
+{
+	Keycode deChar = 0;
+	int color;
+	
+		color = getVideoColor();
+
+		while( !kbBufferIsEmpty() )
+			if( (deChar = charDeque()) != '\0' )
+			{
+				if( (deChar & 0x80 ) == 1 ){
+					changeTtyFocus( (deChar & 0x81) - 1 );
+				}else{
+					if(runningProcess->ttyMode  == TTY_CANONICAL){
+						putcharTTY((int)deChar, getCurrentTTY());
+					}else{
+						putTTY((int)deChar, getCurrentTTY());
+					}
+				}
+			}
+
+		
+}
+
+void refreshTTY(void){
+	refreshTTYKeyboardBuffer();
+	refreshTTYScreen();
+}
+
+Keycode getCharTTY(tty_t tty){
+	Keycode aux ;
+	
+	do{
+		/* TENGO QUE DORMIR EL PROCESO */
+	}while(sleepCondition[tty] > 0);
+
+	if(stdinTableTTY[tty].readOffset == MAX_LINE){
+		stdinTableTTY[tty].readOffset = 0;
+	}
+	
+	aux = stdinTableTTY[tty].stdIN[stdinTableTTY[tty].readOffset++];
+	
+	if(aux == NEW_LINE){
+		sleepCondition[tty] --;
+	}
+	
+	return  aux;
+
 }
 
 

@@ -19,7 +19,7 @@
 #include "colors.h"
 #include "screensaver.h"
 #include "video_adapter.h"
-
+#include "defs.h"
 /**
  * \fn int shell ( void )
  *

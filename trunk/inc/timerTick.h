@@ -11,10 +11,9 @@
 #define _TIMERTICK_H_
 
 #include "system.h"
-#include "video_adapter.h"
-#include "keyboard_adapter.h"
 #include "keyboard_driver.h"
 #include "screensaver.h"
+#include "ttys.h"
 
 void timerTick (void);
 

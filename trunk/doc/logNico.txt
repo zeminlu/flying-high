@@ -2,3 +2,11 @@
 *en el stdout se puede de cada estructura de tty dejamos todo en idioma shell, ya que es mas facil de parcear, pro los \n, \t etc.
 *decidimos que se puede elejir entre modo canonico, y row, para que si se esta jugando un juego se pueda levantar los caracteres crudos.
 *Intentamos sacarla todo tipo de funcionalidad especial alos drivers, y la encargada de poder porcesar todo es la tty.
+*malloc esta implementado que siempre te da memoria continua, y como no segmentamos las pag, para hacer malloc, y no guardamos ningun registro sobre segmentos otorgados. EL free no tiene validez.
+*Se crea la funcion refresh, que llama a refresh del teclado y del video.
+*cuando se llama el refresh de teclado se vacia el buffer de teclado, y se verifica en que modo se esta correiendo el proceso , si es RAW, y si CANONICO. EN todos los casos ningun Fx es parceado por separado.
+*Si es CANONICO, se parcea y se diferencian los caracteres de los comandos. Y se le envia a la shell una vez que se precion a\n
+*Si es RAW, se mandan directamente a al ashell sin parceo previo.
+*Si se llena enl buffer se  pierden los caracters ingresados.
+*Cuando la shell pide una nueva linea,se verifica si ehay algo para leer si es posible lo lee sino , se duerme.
+*La variables booleanas uso un contador, para que se puedan anidar.

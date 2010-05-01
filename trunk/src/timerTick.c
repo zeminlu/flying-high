@@ -33,8 +33,8 @@ void timerTick ( void )
 		++mouseRefreshTime;
 	*/
 	/* Screen Update from Buffers */
-	flushKeyboardBuffer(); /* flush kb buffer into stdin */
-	flushStdScreen();	/* flush stdout into video buffer and refresh screen */
+	 /* flush kb buffer into stdin */
+	refreshTTY();	/* flush stdout into video buffer and refresh screen */
 
 	/* Task Scheduler Decision */
 	/*if (!isAppRunning(SCREEN_SAVER))
