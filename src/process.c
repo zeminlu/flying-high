@@ -14,50 +14,31 @@ pid_t createProcess(char *name, pfunc_t main, void *args, int level) {
 	return (pid_t)int80ext(_SYS_CREATE, name, (void*)main, args, (void *)level, NULL);
 }
 
-pid_t getpid()
-{
-	return runningProcess->pid;
-}
-
 void exit(int status) {
 	int80(_SYS_EXIT, (void *)status, NULL, NULL);
 	return;
 }
 
-pid_t getppid()
-{
-	return runningProcess->ppid;
+tty_t setTty(pid_t pid, tty_t tty) {
+	return (tty_t)callInt80(_SYS_SET_TTY, (void *)pid, (void *)tty, NULL);
 }
 
-int getProccessByPid( pid_t pid )
-{
-	int i;
-	
-	/*if( pid == 0 )
-	{
-		return initProcess;
-	}*/
-	for( i = 0 ; i < MAX_PROCESS ; ++i )
-	{
-		if( processTable[i].pid == pid )
-			return i;
-	}
-	return -1;
+tty_t getTty(pid_t pid) {
+	return (tty_t)callInt80(_SYS_GET_TTY, (void *)pid, NULL, NULL);
 }
 
-int getProccessByName( char * name )
-{
-	int i;
-	
-	if( !strcmp(name, "Idle") )
-	{
-		return -1;
-	}
-	for( i = 0 ; i < MAX_PROCESS ; ++i )
-	{
-		if( !strcmp(processTable[i].name, name) )
-			return i;
-	}
-	return -1;
+pid_t getpid(void) {
+	return (pid_t)callInt80(_SYS_GET_PID, NULL, NULL, NULL);
 }
 
+pid_t getppid() {
+	return (pid_t)callInt80(_SYS_GET_PPID, NULL, NULL, NULL);
+}
+
+int waitpid(pid_t pid, int *status, int opt) {
+	return (int)callInt80(_SYS_WAIT_PID, (void *)pid, (void *)status, (void *)opt);
+}
+
+int kill(int fd1, int fd2) {
+	return (int)callInt80(_SYS_KILL, (void *)fd1, (void *)fd2, NULL);
+}

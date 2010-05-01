@@ -404,34 +404,36 @@ int shell ( void )
 	int c;
 	unsigned char uc, att;
 
-	if ( firstRun )
-	{
-		firstRun = 0;
-		status = LIVE;
-		puts("Starting Shell...\n");
-		puts("\tEnter 'help' for a list of commands.\n");
-		puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
-		printPrompt();
-	}
+	while (1){
+		if ( firstRun )
+		{
+			firstRun = 0;
+			status = LIVE;
+			puts("Starting Shell...\n");
+			puts("\tEnter 'help' for a list of commands.\n");
+			puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
+			printPrompt();
+		}
 
-	c = getchar();
-	att = fgetc(inatt);
+		c = getchar();
+		att = fgetc(inatt);
 
-	if ( c == EOF )
-		return status;
-	uc = c;
-	if ( uc == '\n' )
-		parseCommand();
-	else if ( uc == '\b' ) 
-		parseBackspace();
-	else if ( uc == '\t' )
-		autoComplete();
-	else if ( index < MAX_LINE  - 1)
-	{
-		lineBuffer[index++] = uc;
-		putchar(uc);
+		if ( c == EOF )
+			return status;
+		uc = c;
+		if ( uc == '\n' )
+			parseCommand();
+		else if ( uc == '\b' ) 
+			parseBackspace();
+		else if ( uc == '\t' )
+			autoComplete();
+		else if ( index < MAX_LINE  - 1)
+		{
+			lineBuffer[index++] = uc;
+			putchar(uc);
 		/*fputc(att, outatt);*/
-	}
+		}
 
-	return status;
+		return status;
+	}
 }

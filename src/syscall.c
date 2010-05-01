@@ -192,6 +192,42 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	return process->pid;
 }
 
+tty_t _sys_get_tty(pid_t pid) {
+	if ( pid > MAX_PROCESS || pid < 0 )
+		return -1;
+	if ( processTable[pid].pid == -1 )
+		return -1;
+	return processTable[pid].tty;
+}
+
+tty_t _sys_set_tty(pid_t pid, tty_t tty) {
+	if ( pid > MAX_PROCESS || pid < 0 )
+		return -1;
+	if ( processTable[pid].pid == -1 )
+		return -1;
+	processTable[pid].tty = tty;
+	
+	return tty;
+}
+
+pid_t _sys_get_pid()
+{
+	return (runningProcess != NULL) ? runningProcess->pid:-1;
+}
+
+pid_t _sys_get_ppid(){
+	return (runningProcess != NULL) ? runningProcess->ppid:-1;
+}
+
+int _sys_wait_pid(pid_t pid, int *status, int opt) {
+	return 0;
+}
+
+int _sys_kill(int fd1, int fd2) {
+	return 0;
+}
+
+
 void cli(void){
 	/*Deshabilita las interrupciones si cliAmm es igual a cero*/
 	if(cliAmm == 0){

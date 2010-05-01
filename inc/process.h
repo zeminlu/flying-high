@@ -41,8 +41,17 @@ pid_t createProcess(char *name, pfunc_t main, void *args, int level);
  *
  */
 void exit(int status);
-int getProccessByPid( pid_t pid );
 
-int getProccessByName( char * name );
+tty_t setTty(pid_t pid, tty_t tty);
+
+tty_t getTty(pid_t pid);
+
+pid_t getpid(void);
+
+pid_t getppid();
+
+int waitpid(pid_t pid, int *status, int opt);
+
+int kill(int fd1, int fd2);
 
 #endif
