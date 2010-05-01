@@ -323,6 +323,7 @@ void refreshTTY(void){
 		SysPutChar('0'+runningProcess->pid, 0);
 		refreshTTYKeyboardBuffer();
 		refreshTTYScreen();
+		refreshScreen();
 	}
 
 }
