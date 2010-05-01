@@ -180,7 +180,7 @@ static int parseCharTTY( int c, tty_t tty )
 	}
 }
 
-static void refreshTTYScreen( void )
+static void refreshScreenTTY( void )
 {
 	int bckOffset, character;
 	static printFunctions refreshCharPrint[] = {
@@ -264,18 +264,18 @@ int getCurrentTTY( void )
 	return getCurrentTTY();
 }
 
-void setTtyFocusProcess( tty_t tty, pid_t pid ){
+void setFocusProcessTTY( tty_t tty, pid_t pid ){
 	
 		ttyTable.ttys[tty].focusProcess = pid;
 }
 
-int changeTtyFocus( tty_t nextTty ){	
+int changeFocusTTY( tty_t nextTty ){	
 	
 	clearScreen();
 	if( nextTty == getCurrentTTY() )
 		return 1;
 	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
-	refreshTTYScreen();
+	refreshScreenTTY();
 	refreshScreen();
 	return 0;
 }
@@ -299,7 +299,7 @@ void putTTY(Keycode c, tty_t tty){
 	
 }
 
-static void refreshTTYKeyboardBuffer( void ){
+static void refreshKeyboardBufferTTY( void ){
 	Keycode deChar = 0;
 	int color;
 	
@@ -309,7 +309,7 @@ static void refreshTTYKeyboardBuffer( void ){
 			if( (deChar = charDeque()) != '\0' )
 			{
 				if( (deChar & 0x80 ) == 1 ){
-					changeTtyFocus( (deChar & 0x81) - 1 );
+					changeFocusTTY( (deChar & 0x81) - 1 );
 				}else{
 					if(runningProcess->ttyMode  == TTY_CANONICAL){
 						putCharTTY((int)deChar, getCurrentTTY());
@@ -322,9 +322,7 @@ static void refreshTTYKeyboardBuffer( void ){
 
 void refreshTTY(void){
 	if(runningProcess != NULL && runningProcess->pid > 0){
-		SysPutChar('0'+runningProcess->pid, 0);
-		refreshTTYKeyboardBuffer();
-		refreshTTYScreen();
+		refreshKeyboardBufferTTY();
 		refreshScreen();
 	}
 
@@ -366,7 +364,7 @@ Keycode SysGetChar(tty_t tty){
 }
 
 void SysPutChar(Keycode c, tty_t tty){
-	SysPutS(&c, 1, tty);
+	putCharTTY(c,tty);
 }
 
 void SysPutS(Keycode *name, int count,tty_t tty){
