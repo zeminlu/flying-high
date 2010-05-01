@@ -8,6 +8,12 @@ _SYS_READ		equ	1
 _SYS_MEMMAP 	equ 2
 _SYS_CREATE		equ 3
 _SYS_EXIT		equ 4
+_SYS_SET_TTY	equ 5	
+_SYS_GET_TTY	equ 6
+_SYS_GET_PID	equ 7
+_SYS_GET_PPID	equ 8
+_SYS_WAIT_PID	equ 9
+_SYS_KILL		equ 10
 ;
 ; Standard File Descriptors
 ;

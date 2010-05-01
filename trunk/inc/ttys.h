@@ -11,7 +11,6 @@
 #include "keyboard_buffer.h"
 #include "sysProcess.h"
 
-
 extern unsigned char videoBuffer[VIDEO_MEMORY_SIZE];
 
 extern process_t processTable[MAX_PROCESS];

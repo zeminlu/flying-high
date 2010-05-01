@@ -51,6 +51,40 @@ void puto(){
 	return;
 }
 
+int getProccessByPid( pid_t pid )
+{
+	int i;
+	
+	/*if( pid == 0 )
+	{
+		return initProcess;
+	}*/
+	for( i = 0 ; i < MAX_PROCESS ; ++i )
+	{
+		if( processTable[i].pid == pid )
+			return i;
+	}
+	return -1;
+}
+
+int getProccessByName( char * name )
+{
+	int i;
+	
+	if( !strcmp(name, "Idle") )
+	{
+		return -1;
+	}
+	for( i = 0 ; i < MAX_PROCESS ; ++i )
+	{
+		if( !strcmp(processTable[i].name, name) )
+			return i;
+	}
+	return -1;
+}
+
+
+
 void refresh(){
 	refreshTTY();
 }
@@ -189,24 +223,6 @@ void signalTty(tty_t tty) {
 	}
 	
 	return;
-}
-
-tty_t sysGetTty(pid_t pid) {
-	if ( pid > MAX_PROCESS || pid < 0 )
-		return -1;
-	if ( processTable[pid].pid == -1 )
-		return -1;
-	return processTable[pid].tty;
-}
-
-tty_t sysSetTty(pid_t pid, tty_t tty) {
-	if ( pid > MAX_PROCESS || pid < 0 )
-		return -1;
-	if ( processTable[pid].pid == -1 )
-		return -1;
-	processTable[pid].tty = tty;
-	
-	return tty;
 }
 
 static void alertWaitingProcesses(pid_t pid, int status) {

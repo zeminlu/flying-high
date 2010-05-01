@@ -35,7 +35,7 @@ void kernel_main ( void  )
 	
 	/* Initializing Driver */
 	puts("\t\tInitializing Driver..............................................");
-	initVideo(CURSOR_START_VISIBLE, DISABLED);	
+	initVideo(CURSOR_START_VISIBLE, DISABLED);
 	
 	initializeTTY();
 	
