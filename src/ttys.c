@@ -297,8 +297,7 @@ void putTTY(Keycode c, tty_t tty){
 	
 }
 
-static void refreshTTYKeyboardBuffer( void )
-{
+static void refreshTTYKeyboardBuffer( void ){
 	Keycode deChar = 0;
 	int color;
 	
@@ -317,12 +316,11 @@ static void refreshTTYKeyboardBuffer( void )
 					}
 				}
 			}
-
-		
 }
 
 void refreshTTY(void){
-	if(runningProcess != NULL){
+	if(runningProcess != NULL && runningProcess->pid > 0){
+		SysPutChar('0'+runningProcess->pid, 0);
 		refreshTTYKeyboardBuffer();
 		refreshTTYScreen();
 	}
