@@ -66,7 +66,7 @@ process_t * rpgSchedule()
 process_t * getNextTask()
 {	
 	process_t * proc;
-	char *video = (char*)0xb8002;
+	/*char *video = (char*)0xb8002;*/
 	
 	proc = (ALGORITHIM == ROUND_ROBIN ? roundRobinSchedule() : rpgSchedule());
 	/*while(1){
@@ -133,7 +133,7 @@ void increaseRPGCounter()
 
 void setupScheduler( void )
 {
-	int i;
+	/*int i;*/
 	
 	initProcess->pid = 0;
 	initProcess->level = FOREGROUND;

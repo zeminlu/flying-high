@@ -139,8 +139,10 @@ static void parseLineFeedTTY( unsigned char * p, int where, tty_t tty )
 	int curOffset;
 	
 	putLine( tty );
-	parseNewLineTTY(p,where, tty);
-	printNewLine();
+	if( !where )
+		parseNewLineTTY(p,where, tty);
+	else
+		printNewLine();
 	curOffset = cursorOffset % SCREEN_WIDTH;
 	do
 	{
@@ -159,6 +161,7 @@ static void parseReturnTTY( unsigned char * p, int where, tty_t tty )
 
 static int parseCharTTY( int c, tty_t tty )
 {
+	int bckOffset;
 	static printFunctions specialCharPrint[] = {
 		parseAlarmTTY,
 		parseBackSpaceTTY,
@@ -171,11 +174,17 @@ static int parseCharTTY( int c, tty_t tty )
 	
 	if( '\a' <= c && c >= '\r' )
 	{
-		specialCharPrint[c - '\a'](ttyTable.ttys[getCurrentTTY()].begin, WRITE_ON_TTY, tty);
+		bckOffset = cursorOffset;
+		specialCharPrint[c - '\a'](ttyTable.ttys[tty].begin, WRITE_ON_TTY, tty);
+		cursorOffset = bckOffset;
+		if( tty == getCurrentTTY() )
+			specialCharPrint[c - '\a'](ttyTable.ttys[tty].begin, SEND_TO_VIDEO, tty);
 		return 0;
 	}else
 	{
 		(ttyTable.ttys[getCurrentTTY()].begin)[cursorOffset] = c;
+		if( tty == getCurrentTTY() )
+			putCharAtCurrentPos( c, getVideoColor() );
 		return 1;
 	}
 }
@@ -196,6 +205,7 @@ static void refreshScreenTTY( void )
 	bckOffset = cursorOffset;
 	cursorOffset = 0;
 	
+	setPointerPosition(0,0);
 	if( ttyTable.ttys[getCurrentTTY()].hasScrolled > 0 )
 	{
 		ttyTable.ttys[getCurrentTTY()].end = ttyTable.ttys[getCurrentTTY()].begin + (SCREEN_WIDTH - (bckOffset % SCREEN_WIDTH));
@@ -211,8 +221,8 @@ static void refreshScreenTTY( void )
 			refreshCharPrint[character - '\a'](ttyTable.ttys[getCurrentTTY()].end, SEND_TO_VIDEO, getCurrentTTY());
 		}else
 		{
-			putCharAtCurrentPos((int)((ttyTable.ttys[getCurrentTTY()].end)[cursorOffset]), getVideoColor());
-			cursorOffset++;
+			putCharAtCurrentPos( (ttyTable.ttys[getCurrentTTY()].end)[cursorOffset], getVideoColor() );
+			incTTYCursor();
 		}
 	}
 	cursorOffset = bckOffset;
@@ -271,9 +281,9 @@ void setFocusProcessTTY( tty_t tty, pid_t pid ){
 
 int changeFocusTTY( tty_t nextTty ){	
 	
-	clearScreen();
 	if( nextTty == getCurrentTTY() )
 		return 1;
+	clearScreen();
 	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
 	refreshScreenTTY();
 	refreshScreen();
@@ -321,6 +331,7 @@ static void refreshKeyboardBufferTTY( void ){
 }
 
 void refreshTTY(void){
+
 	if(runningProcess != NULL && runningProcess->pid > 0){
 		refreshKeyboardBufferTTY();
 		refreshScreen();
