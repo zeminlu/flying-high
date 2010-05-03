@@ -19,37 +19,17 @@ int qtyProccessTable = 0;
 static int proc = 0;
 
 void chupala(){
-	char *video0 = (char *)0xb8000;
-	static int count = 0;
-	/*puts("CHUPALA ");*/
-	
+		
 	while(1){
 		sysPutChar( 'A', 0);
-		/*if ((count % (80*25)) == 0){
-			video0 = (char *)0xb8000;
-			count = 0;
-		}
-		*video0 = 'A';
-		video0 += 4;
-		count += 2;*/
 	}
 	return;
 }
 
 void puto(){
-	char *video1 = (char *)0xb8002;
-	static int count = 0;
-	/*puts("PUTO!\n");*/
-	
+		
 	while(1){
-		sysPutChar( 'B', 0);
-		/*if ((count % (80*25)) == 0){
-			video1 = (char *)0xb8002;
-			count = 0;
-		}
-		*video1 = 'B';
-		video1 += 4;
-		count += 2;*/
+		sysPutChar( 'B', 1);
 	}
 	return;
 }
