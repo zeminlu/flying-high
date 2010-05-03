@@ -240,7 +240,7 @@ void putCharTTY( char c, tty_t tty )
 	if( cursorOffset == VIDEO_MEMORY_SIZE )
 	{
 		cursorOffset = 0;
-		ttyTable.ttys[tty].begin = ttyTable.ttys[getCurrentTTY()].TerminalBuffer;
+		ttyTable.ttys[tty].begin = ttyTable.ttys[tty].TerminalBuffer;
 		ttyTable.ttys[tty].hasScrolled++;
 	}
 	parse = parseCharTTY(c, tty);
@@ -317,8 +317,8 @@ static void refreshKeyboardBufferTTY( void ){
 		while( !kbBufferIsEmpty() ){
 			if( (deChar = charDeque()) != '\0' )
 			{
-				if( (deChar & 0x8000) == 1 ){
-					changeFocusTTY( (deChar & 0x8001) - 1 );
+				if( 0x8001 >= deChar && deChar >= 0x8008  ){
+					changeFocusTTY( deChar - 0x8001 );
 				}else{
 					if(runningProcess->ttyMode  == TTY_CANONICAL){
 						putCharTTY((int)deChar, getCurrentTTY());
