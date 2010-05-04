@@ -13,9 +13,9 @@ void init(void *args){
 	
 	pid = createProcess("chupala", chupala, NULL, FOREGROUND);
 	setTty(pid, 0);
-	pid = createProcess("puto", puto, NULL, FOREGROUND);
+	/*pid = createProcess("puto", puto, NULL, FOREGROUND);
 	setTty(pid, 1);
-	
+	*/
 	while(1)
 		asm volatile ("hlt");
 

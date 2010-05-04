@@ -314,21 +314,25 @@ static void refreshKeyboardBufferTTY( void ){
 
 static void refreshStdout(void){
 	int j;
-	char * aux;
+	char aux, *video = (char *) 0xb8000;
 	
-	for(j = 0; read(STDOUT, aux, 1 ) != 0;j++){
-		putCharTTY( *aux, j );
-	}				
+	//write(STDOUT, &aux, 1);
+	read(STDOUT, &aux, 1);
+	*video = aux;
+	//for(j = 0; read(STDOUT, &aux, 1 ) == 1 ; j++){
+	//	putCharTTY( aux, j );
+	//	*video=aux;
+	//	video += 2;
+	//}				
 }
 
 void refreshTTY(void){
 
-	if(runningProcess != NULL && runningProcess->pid > 0){
+	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0){
 		refreshKeyboardBufferTTY();
 		refreshStdout();
-		refreshScreen();
+	//	refreshScreen();
 	}
-
 }
 
 /*

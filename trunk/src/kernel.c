@@ -27,32 +27,30 @@ void kernel_main ( void  )
 	_lidt (&idtr);	
 
 	initPaging();
+		
+	clearScreen();
+
+	msg = "\n\tWelcome, you're Flying-High at 0.2 meters!!\n\n";
+//	fputs(msg);
+	
+	/* Initializing Driver */
+//	puts("\t\tInitializing Driver..............................................");
+	initVideo(CURSOR_START_VISIBLE, DISABLED);
 	
 	initializeFileSystem();
 	
 	initializeTTY();
 	
-	clearScreen();
-
-	msg = "\n\tWelcome, you're Flying-High at 0.2 meters!!\n\n";
-	puts(msg);
-	
-	/* Initializing Driver */
-	puts("\t\tInitializing Driver..............................................");
-	initVideo(CURSOR_START_VISIBLE, DISABLED);
-	
-	
-	
-	initMultitasker(init);
-	
 	/*initMouse();*/
-	puts("Done.\n");
+//	puts("Done.\n");
 	
 	/* Enabling Interrupts */
-	puts("\n\t\tEnabling Interrupts..............................................");
-	puts("Done.\n");
+//	puts("\n\t\tEnabling Interrupts..............................................");
+//	puts("Done.\n");
 	
-	puts("\n\tReady.\n\n");
+//	puts("\n\tReady.\n\n");
+
+	initMultitasker(init);
 	
 	_Cli();
 		_mascaraPIC1(0xF8);
