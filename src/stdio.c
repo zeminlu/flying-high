@@ -49,11 +49,20 @@ int fputc ( int c, FILE * stream )
 
 int fgetc ( FILE * stream )
 {
-	int c;
+	int c, aux;
+	
 	if ( stream == NULL )
 		return EOF;
-	if ( read(stream->fd, &c, 1) != 1 )
-		return EOF;
+	
+	while ( (aux = read(stream->fd, &c, 1)) != 1 ){
+		if (aux == -1){
+			return EOF;
+		}
+		else{
+			waitTty(getTty(getpid()));
+		}
+	}
+		
 	return c;
 }
 
@@ -82,4 +91,8 @@ void flush ( FILE * stream )
 	if ( stream == NULL )
 		return;
 	stream->ptr = stream->buffer;
+}
+
+int putsInStdTTY(const char  *s){
+	return fputs(s, &(fileSystem[STD_TTY][STDOUT]));
 }

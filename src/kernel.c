@@ -30,25 +30,27 @@ void kernel_main ( void  )
 		
 	clearScreen();
 
-	msg = "\n\tWelcome, you're Flying-High at 0.2 meters!!\n\n";
-//	fputs(msg);
-	
-	/* Initializing Driver */
-//	puts("\t\tInitializing Driver..............................................");
-	initVideo(CURSOR_START_VISIBLE, DISABLED);
-	
 	initializeFileSystem();
 	
 	initializeTTY();
+
+
+	msg = "\n\tWelcome, you're Flying-High at 0.2 meters!!\n\n";
+//	putsInStdTTY(msg);
+	
+	/* Initializing Driver */
+//	putsInStdTTY("\t\tInitializing Drivers..............................................");
+	initVideo(CURSOR_START_VISIBLE, DISABLED);
+	
 	
 	/*initMouse();*/
-//	puts("Done.\n");
+//	putsInStdTTY("Done.\n");
 	
 	/* Enabling Interrupts */
-//	puts("\n\t\tEnabling Interrupts..............................................");
-//	puts("Done.\n");
+//	putsInStdTTY("\n\t\tEnabling Interrupts..............................................");
+//	putsInStdTTY("Done.\n");
 	
-//	puts("\n\tReady.\n\n");
+//	putsInStdTTY("\n\tReady.\n\n");
 
 	initMultitasker(init);
 	

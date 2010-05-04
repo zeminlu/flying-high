@@ -51,4 +51,6 @@ int fgetc ( FILE * stream );
 
 void flush ( FILE * strema );
 
+int putsInStdTTY(const char  *s);
+
 #endif
