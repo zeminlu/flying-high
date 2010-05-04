@@ -19,17 +19,19 @@ static pid_t ttyRestPlace[MAX_TTY];
 int qtyProccessTable = 0;
 
 void chupala(){
+	char aux = 'A';	
 		
 	while(1){
-		fputc( 'A', &(fileSystem[0][1]) );
+		putchar('A');
 	}
+	
 	return;
 }
 
 void puto(){
 		
 	while(1){
-		fputc( 'B', &(fileSystem[1][1]));
+		//putchar('B');
 	}
 	return;
 }
@@ -114,12 +116,12 @@ int initMultitasker(pfunc_t init) {
 	if ( (pid = _sys_create_process("init", init, 0, BACKGROUND)) == -1 ) {
 		return FALSE;
 	}
-
+	
 	for ( i = 0; i < MAX_TTY; ++i )
 		ttyRestPlace[i] = -1;
 	initProcess = &processTable[pid];
-	initProcess->files[0] = stdin;
-	initProcess->files[1] = stdout;
+//	initProcess->files[0] = stdin;
+//	initProcess->files[1] = stdout;
 	initProcess->priority = 0;
 	nextProcess = initProcess;
 	mtActivated = TRUE;
