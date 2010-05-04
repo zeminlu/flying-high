@@ -15,7 +15,7 @@ static int rowBackup, colBackup,rowMouseBackup, colMouseBackup;
 int screenSaver( void )
 {
 	static int colors[] = {0x01, 0x02, 0x03, 0x0F, 0x04, 0x05, 0x0F, 0x06, 0x01, 0x02};
-	int status = LIVE;
+	int status = RUNNING;
 	if( isFirstTime )
 	{
 		copyArea(0,0,SCREEN_WIDTH-1,SCREEN_HEIGTH-1, bufferShell);

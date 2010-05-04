@@ -13,11 +13,7 @@
 #include "shell.h"
 #include "io.h"
 #include "config.h"
-
-#define LIVE 1
-#define DEAD 0
-
-enum PROCCESS { TERMINAL, SHELL, SCREEN_SAVER };
+#include "types.h"
 
 typedef int (*proccessT)(void);
 

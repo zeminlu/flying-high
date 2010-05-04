@@ -9,11 +9,11 @@
 #include "shell.h"
 
 static int firstRun = 1;
-static int status = DEAD;
+static int status = RUNNING;
 static char lineBuffer[MAX_LINE];
 static char enteredCommand[MAX_LINE];
 static int index = 0;
-static char * prompt = "root@ArkOS$>";
+static char * prompt = "root@flyingHighOS$>";
 
 typedef void (*shellFuncT)(char *);
 
@@ -365,7 +365,7 @@ static void parseCommand ( void )
 	}
 
 	index = 0;
-	if ( status == LIVE ) printPrompt();
+	if ( status == RUNNING ) printPrompt();
 }
 
 static void putBackspace ( void )
@@ -402,13 +402,13 @@ static void autoComplete ( void )
 int shell ( void )
 {
 	int c;
-	unsigned char uc, att;
+	unsigned char uc;
 
-	while (1){
+	while (status ){
 		if ( firstRun )
 		{
 			firstRun = 0;
-			status = LIVE;
+			status = RUNNING;
 			puts("Starting Shell...\n");
 			puts("\tEnter 'help' for a list of commands.\n");
 			puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
@@ -416,24 +416,23 @@ int shell ( void )
 		}
 
 		c = getchar();
-		att = fgetc(inatt);
 
 		if ( c == EOF )
 			return status;
 		uc = c;
 		if ( uc == '\n' )
 			parseCommand();
-		else if ( uc == '\b' ) 
+		/*else if ( uc == '\b' ) 
 			parseBackspace();
 		else if ( uc == '\t' )
-			autoComplete();
+			autoComplete();*/
 		else if ( index < MAX_LINE  - 1)
 		{
 			lineBuffer[index++] = uc;
-			putchar(uc);
-		/*fputc(att, outatt);*/
 		}
 
-		return status;
+		/*return status;*/
 	}
+	
+	return status;
 }

@@ -27,7 +27,7 @@ static int terminal ( void )
 	if ( (c = getchar()) != EOF )
 		putchar(c);
 	
-	return LIVE;
+	return RUNNING;
 }
 
 static proccessT applications[] = {

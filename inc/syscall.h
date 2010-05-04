@@ -26,20 +26,6 @@
 #define LOCAL_VARIABLES_SPACE	0x00000018
 #define MILISECONDS_PER_TICK	55
 
-enum{
-	_SYS_WRITE,
-	_SYS_READ,
-	_SYS_MEMMAP,
-	_SYS_CREATE,
-	_SYS_EXIT,
-	_SYS_SET_TTY,	
-	_SYS_GET_TTY,
-	_SYS_GET_PID,
-	_SYS_GET_PPID,
-	_SYS_WAIT_PID,
-	_SYS_KILL
-};
-
 pid_t _sys_create_process(char *name, pfunc_t main, int args, int level);
 
 void _sysExit(int status);

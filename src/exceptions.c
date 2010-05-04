@@ -145,7 +145,7 @@ void handleException(registers_t regs) {
 	
 /*	sysKill(sysGetpid(), SIGKILL);
 	signalTty(getFocusTTY());*/
-//	refreshTTY();
+	refreshTTY();
 while(1);	
 	return;
 }
