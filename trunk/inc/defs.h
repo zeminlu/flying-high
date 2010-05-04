@@ -27,14 +27,6 @@
 
 #define	ATOMIC			1
 #define UNATOMIC		!ATOMIC
-#define RUNNING			0
-#define READY			1
-#define BLOCKED			2
-#define WAITING_CHILD	3
-#define WAITING_TIME	4
-#define WAITING_PID		5
-#define TERMINATED		6
-#define ZOMBIE			7
 #define	FOREGROUND		0
 #define	BACKGROUND		1
 #define MAX_FILES		3

@@ -13,6 +13,7 @@
 #include "stdio.h"
 #include "kasm.h"
 #include "kc.h"
+#include "ttys.h"
 
 /*
  *	Loads all the exception handlers

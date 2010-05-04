@@ -109,6 +109,37 @@ typedef struct process_t {
 	int	ttyMode;
 } process_t;
 
+enum SYSCALL_IDS{
+	_SYS_WRITE,
+	_SYS_READ,
+	_SYS_MEMMAP,
+	_SYS_CREATE,
+	_SYS_EXIT,
+	_SYS_SET_TTY,	
+	_SYS_GET_TTY,
+	_SYS_GET_PID,
+	_SYS_GET_PPID,
+	_SYS_WAIT_PID,
+	_SYS_KILL
+};
+
+enum STATES{
+	RUNNING,
+	READY,
+	BLOCKED,
+	WAITING_CHILD,
+	WAITING_TIME,
+	WAITING_PID,
+	TERMINATED,
+	DEAD
+};
+
+enum PROCCESS { 
+	TERMINAL, 
+	SHELL, 
+	SCREEN_SAVER 
+};
+
 #pragma pack (1) 		/* Alinear las siguiente estructuras a 1 byte */
 
 /* Descriptor de segmento */

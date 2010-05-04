@@ -8,6 +8,7 @@
  *		keyboard_adapter();
  *	\endcode
  */
+
 /*
 #include "keyboard_adapter.h"
 #include "ttys.h"

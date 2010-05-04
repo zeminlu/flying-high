@@ -16,8 +16,6 @@ static pid_t ttyRestPlace[MAX_TTY];
 
 int qtyProccessTable = 0;
 
-static int proc = 0;
-
 void chupala(){
 		
 	while(1){
@@ -86,8 +84,8 @@ static void freeTerminatedProcesses(void) {
 			freeFrame(processTable[i].hFrame);
 			for ( j = 0; j < MAX_CHILDS; ++j )
 				if ( processTable[i].childs[j] != -1 )
-					terminate(j, KILL_EXIT_STATUS);
-			processTable[i].state = ZOMBIE;
+					terminate(j, KILL_EXIT_STATUS);			
+					processTable[i].state = DEAD;
 		}
 	}
 	
@@ -106,7 +104,7 @@ int initMultitasker(pfunc_t init) {
 	
 	for ( i = 0; i < MAX_PROCESS; ++i ) {
 		processTable[i].pid = -1;
-		processTable[i].state = ZOMBIE;
+		processTable[i].state = DEAD;
 		for ( j = 0; j < MAX_FILES; ++j )
 			processTable[i].files[j] = NULL;
 	}
