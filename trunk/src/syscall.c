@@ -7,12 +7,11 @@
  */
 #include "syscall.h"
 
-extern FILE fileSystem[];
 extern process_t *runningProcess;
 extern process_t *nextProcess;
 extern process_t *initProcess;
 extern process_t processTable[MAX_PROCESS];
-
+extern FILE fileSystem[MAX_TTY][MAX_OPEN_FILES];
 static int cliAmm = 0;
 
 void forceMultitasker();
@@ -30,13 +29,13 @@ size_t _sys_write ( int fd, char * buffer, size_t n )
 	if ( fd < 0 || fd >= MAX_OPEN_FILES )
 		return -1;
 
-	file = fileSystem[fd];
+	file = fileSystem[runningProcess->tty][fd];
 	if ( file.flag == 0 || (file.flag & _WRITE) != _WRITE )
 		return -1;
 	fileBufferEnd = file.buffer + file.bufferSize - 1;
 	for ( i = 0; n && file.ptr <= fileBufferEnd; ++i, --n )
 		*(file.ptr++) = *buffer++;
-	fileSystem[fd] = file;
+	fileSystem[runningProcess->tty][fd] = file;
 
 	return i;
 }
@@ -52,7 +51,7 @@ size_t _sys_read ( int fd, char * buffer, size_t n )
 	if ( fd < 0 || fd >= MAX_OPEN_FILES )
 		return -1;
 
-	file = fileSystem[fd];
+	file = fileSystem[runningProcess->tty][fd];
 	if ( file.buffer == file.ptr )
 		return -1;
 	if ( file.flag == 0 || (file.flag & _READ) != _READ )
@@ -67,7 +66,7 @@ size_t _sys_read ( int fd, char * buffer, size_t n )
 		memcpy(file.buffer, file.buffer + i, remaining);
 		file.ptr = file.buffer + remaining;
 	}
-	fileSystem[fd] = file;
+	fileSystem[runningProcess->tty][fd] = file;
 
 	return i;
 }
