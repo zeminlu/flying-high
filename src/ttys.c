@@ -244,8 +244,8 @@ void initializeTTY( void )
 	}
 
 	ttyTable.qtyTTY = MAX_TTY;
- 	ttyTable.focusTTY= 0;
-	ttyTable.ttys[0].focusProcess = 0;		/* Cuando arranca la TTY tiene al Idle corriendo */	
+ 	ttyTable.focusTTY= STD_TTY;
+	ttyTable.ttys[STD_TTY].focusProcess = 0;		/* Cuando arranca la TTY tiene al Idle corriendo */	
 }
 
 int getCurrentTTY( void ) 
@@ -313,12 +313,12 @@ static void refreshKeyboardBufferTTY( void ){
 }
 
 static void refreshStdout(void){
-	int j;
 	char aux;
-	
+
 	while(read(STDOUT, &aux, 1 ) == 1 ){
 		putCharTTY(aux,  runningProcess->tty );
 	}
+
 }
 
 void refreshTTY(void){
@@ -327,6 +327,7 @@ void refreshTTY(void){
 		refreshKeyboardBufferTTY();
 		refreshStdout();
 		refreshScreen();
+
 	}
 }
 
