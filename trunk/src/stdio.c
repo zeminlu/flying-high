@@ -10,13 +10,6 @@
 
 #define NIBBLES_PER_INT sizeof(int) * 2
 
-extern FILE fileSystem[];
-
-FILE * stdoutFile = &(fileSystem[STDOUT]);
-FILE * stdinFile = &(fileSystem[STDIN]);
-FILE * inattFile = &(fileSystem[IN_ATT]);
-FILE * outattFile = &(fileSystem[OUT_ATT]);
-
 int fputi(int i, FILE * stream) {
 	char msg[10];
 
@@ -24,10 +17,6 @@ int fputi(int i, FILE * stream) {
 	intToString(i, msg);
 
 	return fputs((const char *)msg, stream);
-}
-
-int puti(int i) {
-	return fputi(i, stdout);
 }
 
 int fputx(int num, FILE * stream) {
@@ -47,10 +36,6 @@ int fputx(int num, FILE * stream) {
 		num = num >> 4;
 	}
 	return fputs((const char *)msg, stream);
-}
-
-int putx(int num) {
-	return fputx(num, stdout);
 }
 
 int fputc ( int c, FILE * stream )

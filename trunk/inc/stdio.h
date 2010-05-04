@@ -15,20 +15,18 @@
 #include "string.h"
 #include "unistd.h"
 #include "file.h"
+#include "types.h"
 
 #define EOF	-1
-extern FILE * stdinFile;
-extern FILE * stdoutFile;
-extern FILE * inattFile;
-extern FILE * outattFile;
+
+extern FILE **fileSystem;
+extern process_t *runningProcess;
 
 /*
  *	Standard I/O Files Pointers
  */
-#define stdin (stdinFile)
-#define stdout (stdoutFile)
-#define inatt (inattFile)
-
+#define stdin (&(fileSystem[runningProcess->tty][STDIN]))
+#define stdout (&(fileSystem[runningProcess->tty][STDOUT]))
 
 /*
  *	Standard I/O Functions
@@ -36,14 +34,12 @@ extern FILE * outattFile;
 #define puts(str) fputs((str), stdout)
 #define putchar(c) fputc((c), stdout)
 #define getchar() fgetc(stdin)
+#define puti(i) fputi((i), stdout)
+#define putx(num) fputx((num), stdout)
 
 int fputi(int i, FILE * stream);
 
-int puti(int i);
-
 int fputx(int i, FILE * stream);
-
-int putx(int i);
 
 int fputs ( const char *s, FILE * stream );
 
