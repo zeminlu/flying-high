@@ -32,7 +32,7 @@ debug: action=report
 clock: sync=realtime
 
 #clock: sync=realtime
-cpu: ips=24000000
+cpu: ips=3000000
 
 mouse: enabled=1
 keyboard_mapping: enabled=1, map=$BXSHARE/keymaps/x11-pc-us.map

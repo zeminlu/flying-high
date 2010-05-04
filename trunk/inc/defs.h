@@ -98,5 +98,7 @@
  */
 #define NULL (void *)0x0
 
+#define MAX_OPEN_FILES 4
+
 #endif
 
