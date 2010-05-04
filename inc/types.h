@@ -17,6 +17,8 @@
  *	Type definitions
  */
 
+typedef unsigned char Keycode;
+
 typedef unsigned int size_t;
 
 typedef unsigned int ssize_t;
@@ -168,5 +170,28 @@ typedef struct {
   dword base;
 } IDTR;
 
+/*TTY*/
+
+typedef struct TTY{
+	tty_t			ttyId;
+	Keycode *		inTTY;
+	Keycode		 	TerminalBuffer[VIDEO_MEMORY_SIZE];
+	Keycode		 	*begin, *end;
+	int				hasScrolled;
+	pid_t			focusProcess;
+}TTY;
+
+typedef struct sysTTY{
+	int		qtyTTY;
+	TTY		ttys[MAX_TTY];
+	tty_t	focusTTY;
+}sysTTY;
+
+typedef struct stdInTTY{
+	Keycode stdIN[MAX_LINE];
+	int 	writeOffset;
+	int 	readOffset;
+	int 	empty;
+}stdInTTY;
 
 #endif

@@ -19,7 +19,7 @@ void kernel_main ( void  )
 	setup_IDT_entry (&idt[0x80], 0x08, (dword)&_int_80_handler, ACS_INT, 0);
 	loadExceptionHandlers();
 	
-	
+
 	/* Loading IDTR */
 	idtr.base = 0;
 	idtr.base +=(dword) &idt;
@@ -27,6 +27,10 @@ void kernel_main ( void  )
 	_lidt (&idtr);	
 
 	initPaging();
+	
+	initializeFileSystem();
+	
+	initializeTTY();
 	
 	clearScreen();
 
@@ -37,7 +41,7 @@ void kernel_main ( void  )
 	puts("\t\tInitializing Driver..............................................");
 	initVideo(CURSOR_START_VISIBLE, DISABLED);
 	
-	initializeTTY();
+	
 	
 	initMultitasker(init);
 	

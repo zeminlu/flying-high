@@ -1,5 +1,7 @@
 #include "sysProcess.h"
 
+extern FILE **fileSystem;
+
 process_t processTable[MAX_PROCESS];
 
 process_t *runningProcess = NULL;
@@ -19,7 +21,7 @@ int qtyProccessTable = 0;
 void chupala(){
 		
 	while(1){
-		sysPutChar( 'A', 0);
+		fputc( 'A', &(fileSystem[0][1]) );
 	}
 	return;
 }
@@ -27,7 +29,7 @@ void chupala(){
 void puto(){
 		
 	while(1){
-		sysPutChar( 'B', 1);
+		fputc( 'B', &(fileSystem[1][1]));
 	}
 	return;
 }

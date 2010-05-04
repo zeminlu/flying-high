@@ -8,7 +8,7 @@
 
 #define KEYBOARD_BUFFER_SIZE 256
 
-typedef unsigned char Keycode;
+#include "types.h"
 
 extern Keycode keyboardBuffer[];
 

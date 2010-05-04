@@ -26,6 +26,10 @@
 #define LOCAL_VARIABLES_SPACE	0x00000018
 #define MILISECONDS_PER_TICK	55
 
+size_t _sys_write ( int fd, char * buffer, size_t n );
+
+size_t _sys_read ( int fd, char * buffer, size_t n );
+
 pid_t _sys_create_process(char *name, pfunc_t main, int args, int level);
 
 void _sysExit(int status);

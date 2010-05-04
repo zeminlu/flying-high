@@ -10,28 +10,6 @@ static int cursorRow = CURSOR_START_ROW;
 
 static int cursorCol = CURSOR_START_COL;
 	
-typedef struct TTY{
-	tty_t			ttyId;
-	Keycode *		stdIn;
-	unsigned char 	TerminalBuffer[VIDEO_MEMORY_SIZE];
-	unsigned char 	*begin, *end;
-	int				hasScrolled;
-	pid_t			focusProcess;
-}TTY;
-
-typedef struct sysTTY{
-	int		qtyTTY;
-	TTY		ttys[MAX_TTY];
-	tty_t	focusTTY;
-}sysTTY;
-
-typedef struct stdInTTY{
-	Keycode stdIN[MAX_LINE];
-	int 	writeOffset;
-	int 	readOffset;
-	int 	empty;
-}stdInTTY;
-
 typedef void (*printFunctions)(unsigned char *, int, tty_t);
 
 sysTTY ttyTable;
@@ -77,8 +55,10 @@ static void decTTYCursor ( void )
 
 static void putLine( tty_t tty)
 {
-	sleepCondition[tty]++;
-	signalTty(tty);
+	if(write( STDIN , (char *)stdinTableTTY[tty].stdIN, stdinTableTTY[tty].writeOffset ) > 0){
+		sleepCondition[tty] = stdinTableTTY[tty].writeOffset;
+		signalTty(tty);
+	}
 }
 
 static void parseAlarmTTY( unsigned char * p, int where, tty_t tty )
@@ -253,16 +233,16 @@ void putCharTTY( char c, tty_t tty )
 void initializeTTY( void )
 {
 	int i;
-	
 	for( i = 0 ; i < MAX_TTY ; ++i )
 	{
 		ttyTable.ttys[i].ttyId = i;
-		ttyTable.ttys[i].stdIn = stdinTableTTY[i].stdIN;
+		ttyTable.ttys[i].inTTY = stdinTableTTY[i].stdIN;
 		ttyTable.ttys[i].hasScrolled = 0;
 		stdinTableTTY[i].writeOffset = 0;
 		stdinTableTTY[i].readOffset = 0;
 		stdinTableTTY[i].empty = TRUE;
 	}
+
 	ttyTable.qtyTTY = MAX_TTY;
  	ttyTable.focusTTY= 0;
 	ttyTable.ttys[0].focusProcess = 0;		/* Cuando arranca la TTY tiene al Idle corriendo */	
@@ -288,9 +268,9 @@ int changeFocusTTY( tty_t nextTty ){
 	refreshScreen();
 	return 0;
 }
-
-void putTTY(Keycode c, tty_t tty){
 	
+void putTTY(Keycode c, tty_t tty){
+/*
 	int aux = stdinTableTTY[tty].writeOffset;
 	
 	if(stdinTableTTY[tty].empty == TRUE ){
@@ -303,10 +283,12 @@ void putTTY(Keycode c, tty_t tty){
 		}
 		
 	}
-	sleepCondition[tty]++;
-	signalTty(tty);
-	
-}
+*/	
+	if(write( STDIN , (char *)&c, 1 ) > 0){
+		sleepCondition[tty]++;
+		signalTty(tty);
+		}
+	}
 
 static void refreshKeyboardBufferTTY( void ){
 	Keycode deChar = 0;
@@ -330,10 +312,20 @@ static void refreshKeyboardBufferTTY( void ){
 		}
 }
 
+static void refreshStdout(void){
+	int j;
+	char * aux;
+	
+	for(j = 0; read(STDOUT, aux, 1 ) != 0;j++){
+		putCharTTY( *aux, j );
+	}				
+}
+
 void refreshTTY(void){
 
 	if(runningProcess != NULL && runningProcess->pid > 0){
 		refreshKeyboardBufferTTY();
+		refreshStdout();
 		refreshScreen();
 	}
 
@@ -350,13 +342,13 @@ void sysSetFocusProcessTTY(pid_t pid, tty_t tty){
 pid_t sysGetFocusProcessTTY(tty_t tty){
 	return ttyTable.ttys[tty].focusProcess;
 }
-
+/*
 Keycode sysGetChar(tty_t tty){
 	Keycode aux ;
 	
-	do{
+	while(sleepCondition[tty] <= 0){
 		waitTty(tty);
-	}while(sleepCondition[tty] > 0);
+	}
 
 	if(stdinTableTTY[tty].readOffset == MAX_LINE){
 		stdinTableTTY[tty].readOffset = 0;
@@ -371,14 +363,6 @@ Keycode sysGetChar(tty_t tty){
 	}
 	
 	return  aux;
-
 }
+*/
 
-void sysPutChar(Keycode c, tty_t tty){
-	putCharTTY(c,tty);
-}
-
-void sysPutS(Keycode *name, int count,tty_t tty){
-	putsTTY( name,count, tty);
-}
-	

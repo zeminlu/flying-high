@@ -10,6 +10,10 @@
 #include "string.h"
 #include "keyboard_buffer.h"
 #include "sysProcess.h"
+#include "syscall.h"
+#include "types.h"
+#include "unistd.h"
+
 
 extern unsigned char videoBuffer[VIDEO_MEMORY_SIZE];
 
