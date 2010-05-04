@@ -21,7 +21,7 @@ void *getKernelHeap();
 size_t _sys_write ( int fd, char * buffer, size_t n )
 {
 	FILE file;
-	char * fileBufferEnd, *video = (char *) 0xb8000;
+	char * fileBufferEnd;
 	int i;
 
 	if ( buffer == NULL || n == 0 )
