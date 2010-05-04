@@ -314,11 +314,11 @@ static void refreshKeyboardBufferTTY( void ){
 
 static void refreshStdout(void){
 	int j;
-	char aux, *video = (char *) 0xb8000;
+	char aux = 'a', aux2, *video = (char *) 0xb8000;
 	
-	//write(STDOUT, &aux, 1);
-	read(STDOUT, &aux, 1);
-	*video = aux;
+	write(STDOUT, &aux, 1) + 0x30;
+	//read(STDOUT, &aux2, 1);
+	//*video = aux2;
 	//for(j = 0; read(STDOUT, &aux, 1 ) == 1 ; j++){
 	//	putCharTTY( aux, j );
 	//	*video=aux;

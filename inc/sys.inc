@@ -25,7 +25,7 @@ IN_ATT	equ 2
 ; File Table
 ;
 extern fileSystem
-MAX_OPEN_FILES	equ	20
+MAX_OPEN_FILES	equ	4
 _FS_FILE_SIZE	equ 24
 _READ equ 	0x01
 _WRITE equ 	0x02
