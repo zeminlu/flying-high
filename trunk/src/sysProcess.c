@@ -19,7 +19,6 @@ static pid_t ttyRestPlace[MAX_TTY];
 int qtyProccessTable = 0;
 
 void chupala(){
-	char aux = 'A';	
 		
 	while(1){
 		putchar('A');
@@ -253,4 +252,21 @@ void terminate(pid_t pid, int status) {
 	processTable[pid].state = TERMINATED;
 	processTable[pid].atomicity = UNATOMIC;
 	alertWaitingProcesses(pid, status);
+}
+
+void initializeFileSystem( void ){
+	int i,j;
+	char *auxBuffer;
+	fileSystem = kMalloc(sizeof(FILE *) * MAX_TTY);
+	for(i = 0; i < MAX_TTY ; ++i){
+		fileSystem[i] = kMalloc(sizeof(FILE)* MAX_OPEN_FILES);
+		for(j = 0; j < MAX_OPEN_FILES; j++){
+			auxBuffer = kMalloc(SCREEN_SIZE * sizeof(char));
+			fileSystem[i][j].buffer = auxBuffer;
+			fileSystem[i][j].fd = j;
+			fileSystem[i][j].ptr = auxBuffer;
+			fileSystem[i][j].flag = (_READ | _WRITE);
+			fileSystem[i][j].bufferSize = SCREEN_SIZE;
+		}
+	}
 }

@@ -8,6 +8,7 @@
 #include "schedule.h"
 #include "syscall.h"
 #include "stdio.h"
+#include "kMalloc.h"
 
 void forceMultitasker();
 
@@ -32,5 +33,8 @@ void signalTty(tty_t tty);
 tty_t sysGetTty(pid_t pid);
 
 tty_t sysSetTty(pid_t pid, tty_t tty);
+
+void initializeFileSystem( void );
+
 
 #endif
