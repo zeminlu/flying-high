@@ -404,11 +404,9 @@ int shell ( void )
 	int c;
 	unsigned char uc;
 
-	while (status ){
-		if ( firstRun )
-		{
+	while (status == RUNNING ){
+		if ( firstRun )	{
 			firstRun = 0;
-			status = RUNNING;
 			puts("Starting Shell...\n");
 			puts("\tEnter 'help' for a list of commands.\n");
 			puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");

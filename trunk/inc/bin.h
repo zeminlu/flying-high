@@ -3,6 +3,7 @@
 
 #include "sysProcess.h"
 #include "stdio.h"
+#include "shell.h"
 
 void init(void *args);
 
