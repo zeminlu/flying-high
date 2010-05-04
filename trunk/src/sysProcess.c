@@ -31,7 +31,7 @@ void chupala(){
 void puto(){
 		
 	while(1){
-		//putchar('B');
+		putchar('B');
 	}
 	return;
 }
