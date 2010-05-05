@@ -10,14 +10,14 @@ void init(void *args){
 		}
 		setTty(pid, i);
 	}
+/*	
+	pid = createProcess("chupala", chupala, NULL, FOREGROUND);
+	setTty(pid, 0);
+*/	pid = createProcess("puto", puto, NULL, FOREGROUND);
+	setTty(pid, 1);
 	
-	/*pid = createProcess("chupala", chupala, NULL, FOREGROUND);
-	setTty(pid, 0);
-	pid = createProcess("puto", puto, NULL, FOREGROUND);
-	setTty(pid, 0);
-	*/
-	while(1)
+	while(1){
 		asm volatile ("hlt");
-
+	}
 	return;
 }

@@ -4,7 +4,7 @@ void bufferMapper ( FILE *f/*, FILE *att*/ )
 {
 	char c;
 
-	while ( (c = fgetc(f)) != EOF )
+	//while ( (c = fgetc(f)) != EOF )
 		printChar(c);/*printColorChar(c,fgetc(att));*/
 }
 

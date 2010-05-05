@@ -15,7 +15,7 @@
 /*
  * Function Defines
  */
-
+extern Keycode *keyboardBuffer;
 
 static int curr = 0, tail = 0;
 
