@@ -412,11 +412,9 @@ int shell ( void )
 			puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
 			printPrompt();
 		}
-
 		c = getchar();
-
 		if ( c == EOF )
-			return status;
+			waitTty(getTty(getpid()));
 		uc = c;
 		if ( uc == '\n' )
 			parseCommand();

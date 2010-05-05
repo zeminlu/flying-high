@@ -16,7 +16,7 @@ sysTTY ttyTable;
 
 static stdInTTY stdinTableTTY[MAX_TTY];
 
-static int sleepCondition[MAX_TTY]= {0};
+int sleepCondition[MAX_TTY]= {0};
 
 /*
  *	Static functions for putcharTTY
@@ -55,9 +55,10 @@ static void decTTYCursor ( void )
 
 static void putLine( tty_t tty)
 {
-	if(write( STDIN , (char *)stdinTableTTY[tty].stdIN, stdinTableTTY[tty].writeOffset ) > 0){
-		sleepCondition[tty] = stdinTableTTY[tty].writeOffset;
+	if(write(STDIN , (char *)stdinTableTTY[tty].stdIN, stdinTableTTY[tty].writeOffset ) == stdinTableTTY[tty].writeOffset){
+		/*sleepCondition[tty] += stdinTableTTY[tty].writeOffset;*/
 		signalTty(tty);
+		
 	}
 }
 
@@ -93,6 +94,7 @@ static void parseNewLineTTY( unsigned char * p, int where, tty_t tty )
 		printNewLine();
 	
 	cursorOffset += SCREEN_WIDTH - (cursorOffset % SCREEN_WIDTH);
+	putLine( tty );
 }
 
 static void parseVTabTTY( unsigned char * p, int where, tty_t tty )
@@ -161,7 +163,7 @@ static int parseCharTTY( int c, tty_t tty )
 		return 0;
 	}else
 	{
-		(ttyTable.ttys[getCurrentTTY()].begin)[cursorOffset] = c;
+		((ttyTable.ttys[getCurrentTTY()]).begin++)[cursorOffset] = c;
 		if( tty == getCurrentTTY() )
 			printChar( c );
 		return 1;
@@ -295,7 +297,7 @@ static void refreshKeyboardBufferTTY( void ){
 	int color;
 	
 		color = getVideoColor();
-
+	
 		while( !kbBufferIsEmpty() ){
 			if( (deChar = charDeque()) != '\0' )
 			{
@@ -304,6 +306,7 @@ static void refreshKeyboardBufferTTY( void ){
 				}else{
 					if(runningProcess->ttyMode  == TTY_CANONICAL){
 						putCharTTY((int)deChar, getCurrentTTY());
+						
 					}else{
 						putTTY((int)deChar, getCurrentTTY());
 					}
@@ -312,10 +315,10 @@ static void refreshKeyboardBufferTTY( void ){
 		}
 }
 
-static void refreshStdout(void){
+void refreshStdout(void){
 	char aux;
 
-	while(read(STDOUT, &aux, 1 ) == 1 ){
+	while(read(STDOUT, &aux, 1 ) == 1){
 		putCharTTY(aux,  runningProcess->tty );
 	}
 

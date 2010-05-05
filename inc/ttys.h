@@ -23,7 +23,7 @@ extern process_t *runningProcess;
 
 extern process_t *initProcess;
 
-/*extern Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE];*/
+extern Keycode *keyboardBuffer;
 
 void putsTTY( unsigned char *name, int count, tty_t tty );
 

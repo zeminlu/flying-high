@@ -53,14 +53,8 @@ int fgetc ( FILE * stream )
 	
 	if ( stream == NULL )
 		return EOF;
-	
-	while ( (aux = read(stream->fd, &c, 1)) != 1 ){
-		if (aux == -1){
-			return EOF;
-		}
-		else{
-			waitTty(getTty(getpid()));
-		}
+	if(read(stream->fd, &c, 1) != 1 ){
+		return EOF;
 	}
 		
 	return c;

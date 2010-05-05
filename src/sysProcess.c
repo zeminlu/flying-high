@@ -24,19 +24,23 @@ void chupala(){
 	
 	while( (c=getchar()) ){
 		sysPutChar(c,0);
-	}*/
+	
 	
 	while(1){
 		putchar('A');
 	}
-	
+	}*/
+	while (1){
+		asm volatile("hlt");
+	}
 	return;
 }
 
 void puto(){
-		
-	while(1){
-		putchar('B');
+	
+	putchar('B');
+	while (1){
+		asm volatile("hlt");
 	}
 	return;
 }

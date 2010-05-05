@@ -10,6 +10,4 @@
 
 #include "types.h"
 
-extern Keycode keyboardBuffer[];
-
 #endif
