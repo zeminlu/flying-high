@@ -404,7 +404,7 @@ int shell ( void )
 	int c;
 	unsigned char uc;
 
-	while (status == RUNNING ){
+	while (1){
 		if ( firstRun )	{
 			firstRun = 0;
 			puts("Starting Shell...\n");
@@ -413,8 +413,12 @@ int shell ( void )
 			printPrompt();
 		}
 		c = getchar();
-		if ( c == EOF )
+		if ( c == EOF ){
+			puts("Me dormi...");
 			waitTty(getTty(getpid()));
+			puts("...y me desperte\n");		
+			continue;
+		}
 		uc = c;
 		if ( uc == '\n' )
 			parseCommand();

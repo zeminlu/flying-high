@@ -55,11 +55,20 @@ static void decTTYCursor ( void )
 
 static void putLine( tty_t tty)
 {
+	static char *video = (char *) 0xb8000;
+	
+	*video = 'L';
+	video += 2;
+	//MAAAAAAAAAALLLLLLLLLLLLLLLLLL STDINNNNN!!! el WRITE NO ANDAAAA...correjir todos los stdin y stdout!!
 	if(write(STDIN , (char *)stdinTableTTY[tty].stdIN, stdinTableTTY[tty].writeOffset ) == stdinTableTTY[tty].writeOffset){
+		*video = 'O';
+		video += 2;
 		/*sleepCondition[tty] += stdinTableTTY[tty].writeOffset;*/
 		signalTty(tty);
-		
+		*video = 'S';
+		video += 2;
 	}
+//	_debug();
 }
 
 static void parseAlarmTTY( unsigned char * p, int where, tty_t tty )
@@ -90,11 +99,11 @@ static void parseNewLineTTY( unsigned char * p, int where, tty_t tty )
 {
 	if( !where ) 
 		p[cursorOffset] = NEW_LINE;
-	else 
+	else {
 		printNewLine();
-	
+		putLine( tty );
+	}
 	cursorOffset += SCREEN_WIDTH - (cursorOffset % SCREEN_WIDTH);
-	putLine( tty );
 }
 
 static void parseVTabTTY( unsigned char * p, int where, tty_t tty )
@@ -120,7 +129,6 @@ static void parseLineFeedTTY( unsigned char * p, int where, tty_t tty )
 {
 	int curOffset;
 	
-	putLine( tty );
 	if( !where )
 		parseNewLineTTY(p,where, tty);
 	else
@@ -186,7 +194,7 @@ static void refreshScreenTTY( void )
 	bckOffset = cursorOffset;
 	cursorOffset = 0;
 	
-	setPointerPosition(0,0);
+	setCursorPosition(0,0);
 	if( ttyTable.ttys[getCurrentTTY()].hasScrolled > 0 )
 	{
 		ttyTable.ttys[getCurrentTTY()].end = ttyTable.ttys[getCurrentTTY()].begin + (SCREEN_WIDTH - (bckOffset % SCREEN_WIDTH));
@@ -259,17 +267,6 @@ void setFocusProcessTTY( tty_t tty, pid_t pid ){
 	
 	ttyTable.ttys[tty].focusProcess = pid;
 }
-
-int changeFocusTTY( tty_t nextTty ){	
-	
-	if( nextTty == getCurrentTTY() )
-		return 1;
-	clearScreen();
-	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
-	refreshScreenTTY();
-	refreshScreen();
-	return 0;
-}
 	
 void putTTY(Keycode c, tty_t tty){
 /*
@@ -315,6 +312,18 @@ static void refreshKeyboardBufferTTY( void ){
 		}
 }
 
+int changeFocusTTY( tty_t nextTty ){	
+	
+	if( nextTty == getCurrentTTY() )
+		return 1;
+	clearScreen();
+	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
+	setCursorPosition(0,0);
+//	refreshScreenTTY();
+//	refreshScreen();
+	return 0;
+}
+
 void refreshStdout(void){
 	char aux;
 
@@ -330,7 +339,6 @@ void refreshTTY(void){
 		refreshKeyboardBufferTTY();
 		refreshStdout();
 		refreshScreen();
-
 	}
 }
 

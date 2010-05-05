@@ -142,6 +142,31 @@ enum PROCCESS {
 	SCREEN_SAVER 
 };
 
+/*TTY*/
+
+typedef struct TTY{
+	tty_t			ttyId;
+	Keycode *		inTTY;
+	Keycode		 	TerminalBuffer[VIDEO_MEMORY_SIZE];
+	Keycode		 	*begin, *end;
+	int				hasScrolled;
+	pid_t			focusProcess;
+}TTY;
+
+typedef struct sysTTY{
+	int		qtyTTY;
+	TTY		ttys[MAX_TTY];
+	tty_t	focusTTY;
+}sysTTY;
+
+typedef struct stdInTTY{
+	Keycode stdIN[MAX_LINE];
+	int 	writeOffset;
+	int 	readOffset;
+	int 	empty;
+}stdInTTY;
+
+
 #pragma pack (1) 		/* Alinear las siguiente estructuras a 1 byte */
 
 /* Descriptor de segmento */
@@ -169,29 +194,5 @@ typedef struct {
   word  limit;
   dword base;
 } IDTR;
-
-/*TTY*/
-
-typedef struct TTY{
-	tty_t			ttyId;
-	Keycode *		inTTY;
-	Keycode		 	TerminalBuffer[VIDEO_MEMORY_SIZE];
-	Keycode		 	*begin, *end;
-	int				hasScrolled;
-	pid_t			focusProcess;
-}TTY;
-
-typedef struct sysTTY{
-	int		qtyTTY;
-	TTY		ttys[MAX_TTY];
-	tty_t	focusTTY;
-}sysTTY;
-
-typedef struct stdInTTY{
-	Keycode stdIN[MAX_LINE];
-	int 	writeOffset;
-	int 	readOffset;
-	int 	empty;
-}stdInTTY;
 
 #endif
