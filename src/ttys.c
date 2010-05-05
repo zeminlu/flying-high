@@ -55,18 +55,11 @@ static void decTTYCursor ( void )
 
 static void putLine( tty_t tty)
 {
-	static char *video = (char *) 0xb8000;
-	
-	*video = 'L';
-	video += 2;
-	//MAAAAAAAAAALLLLLLLLLLLLLLLLLL STDINNNNN!!! el WRITE NO ANDAAAA...correjir todos los stdin y stdout!!
-	if(write(STDIN , (char *)stdinTableTTY[tty].stdIN, stdinTableTTY[tty].writeOffset ) == stdinTableTTY[tty].writeOffset){
-		*video = 'O';
-		video += 2;
+
+	if(write(STDIN , (char *)stdinTableTTY[tty].stdIN, 5 ) == 5){
 		/*sleepCondition[tty] += stdinTableTTY[tty].writeOffset;*/
 		signalTty(tty);
-		*video = 'S';
-		video += 2;
+		
 	}
 //	_debug();
 }
@@ -78,32 +71,50 @@ static void parseAlarmTTY( unsigned char * p, int where, tty_t tty )
 
 static void parseBackSpaceTTY( unsigned char * p, int where, tty_t tty )
 {
+	static int cond = FALSE;
+	int i;
+	
 	if( !where )
 	{
-		decTTYCursor();
+		cond = FALSE;
+		if (p[cursorOffset] == TAB){
+			cursorOffset -= VIDEO_TAB_STOP;
+			cond = TRUE;
+		}
+		else
+			--cursorOffset;
 		p[cursorOffset] = ' ';
+	}
+	else{
+		if (cond){
+			for (i = 0 ; i < VIDEO_TAB_STOP ; ++i)
+				printBackspace ();
+			cond = FALSE;
+		}
+		else
+			printBackspace ();
 	}
 	return;
 }
 
 static void parseTabTTY(unsigned char * p, int where, tty_t tty )
-{
-	if( !where )
+{	
+	if( !where ){
+		cursorOffset += VIDEO_TAB_STOP;
 		p[cursorOffset] = TAB;
+	}
 	else 
 		printTab();
-	cursorOffset += VIDEO_TAB_STOP;	
 }
 
 static void parseNewLineTTY( unsigned char * p, int where, tty_t tty )
 {
-	if( !where ) 
+	if( !where ) {
 		p[cursorOffset] = NEW_LINE;
-	else {
-		printNewLine();
-		putLine( tty );
+		cursorOffset += SCREEN_WIDTH - (cursorOffset % SCREEN_WIDTH);
 	}
-	cursorOffset += SCREEN_WIDTH - (cursorOffset % SCREEN_WIDTH);
+	else
+		printNewLine();
 }
 
 static void parseVTabTTY( unsigned char * p, int where, tty_t tty )
@@ -149,7 +160,7 @@ static void parseReturnTTY( unsigned char * p, int where, tty_t tty )
 	}
 }
 
-static int parseCharTTY( int c, tty_t tty )
+static int parseCharTTY( int c, tty_t tty, int inStdIn)
 {
 	int bckOffset;
 	static printFunctions specialCharPrint[] = {
@@ -165,14 +176,16 @@ static int parseCharTTY( int c, tty_t tty )
 	{
 		bckOffset = cursorOffset;
 		specialCharPrint[c - '\a'](ttyTable.ttys[tty].begin, WRITE_ON_TTY, tty);
+		if (c == '\n' && inStdIn)
+			putLine( tty );
 		cursorOffset = bckOffset;
-		if( tty == getCurrentTTY() )
+		if( tty == getFocusTTY() )
 			specialCharPrint[c - '\a'](ttyTable.ttys[tty].begin, SEND_TO_VIDEO, tty);
 		return 0;
 	}else
 	{
-		((ttyTable.ttys[getCurrentTTY()]).begin++)[cursorOffset] = c;
-		if( tty == getCurrentTTY() )
+		((ttyTable.ttys[getFocusTTY()]).begin++)[cursorOffset] = c;
+		if( tty == getFocusTTY() )
 			printChar( c );
 		return 1;
 	}
@@ -195,22 +208,22 @@ static void refreshScreenTTY( void )
 	cursorOffset = 0;
 	
 	setCursorPosition(0,0);
-	if( ttyTable.ttys[getCurrentTTY()].hasScrolled > 0 )
+	if( ttyTable.ttys[getFocusTTY()].hasScrolled > 0 )
 	{
-		ttyTable.ttys[getCurrentTTY()].end = ttyTable.ttys[getCurrentTTY()].begin + (SCREEN_WIDTH - (bckOffset % SCREEN_WIDTH));
+		ttyTable.ttys[getFocusTTY()].end = ttyTable.ttys[getFocusTTY()].begin + (SCREEN_WIDTH - (bckOffset % SCREEN_WIDTH));
 		cursorOffset = bckOffset + (SCREEN_WIDTH - (bckOffset % SCREEN_WIDTH));
 	}
-	while( ttyTable.ttys[getCurrentTTY()].end != (ttyTable.ttys[getCurrentTTY()].begin + bckOffset) )
+	while( ttyTable.ttys[getFocusTTY()].end != (ttyTable.ttys[getFocusTTY()].begin + bckOffset) )
 	{
 		if( cursorOffset == VIDEO_MEMORY_SIZE )
 			cursorOffset = 0;
-		character = (ttyTable.ttys[getCurrentTTY()].end)[cursorOffset];
+		character = (ttyTable.ttys[getFocusTTY()].end)[cursorOffset];
 		if( '\a' <= character && character >= '\r' )
 		{
-			refreshCharPrint[character - '\a'](ttyTable.ttys[getCurrentTTY()].end, SEND_TO_VIDEO, getCurrentTTY());
+			refreshCharPrint[character - '\a'](ttyTable.ttys[getFocusTTY()].end, SEND_TO_VIDEO, getFocusTTY());
 		}else
 		{
-			printChar( (ttyTable.ttys[getCurrentTTY()].end)[cursorOffset] );
+			printChar( (ttyTable.ttys[getFocusTTY()].end)[cursorOffset] );
 			incTTYCursor();
 		}
 	}
@@ -220,10 +233,10 @@ static void refreshScreenTTY( void )
 void putsTTY( unsigned char *name, int count, tty_t tty )
 {
 	while( count-- >= 0 )
-		putCharTTY(*name++, tty);
+		putCharTTY(*name++, tty, TRUE);
 }
 
-void putCharTTY( char c, tty_t tty )
+void putCharTTY( char c, tty_t tty, int inStdIn )
 {	
 	int parse;
 	
@@ -233,7 +246,7 @@ void putCharTTY( char c, tty_t tty )
 		ttyTable.ttys[tty].begin = ttyTable.ttys[tty].TerminalBuffer;
 		ttyTable.ttys[tty].hasScrolled++;
 	}
-	parse = parseCharTTY(c, tty);
+	parse = parseCharTTY(c, tty, inStdIn);
 	if( parse )
 	{
 		++cursorOffset;
@@ -258,7 +271,7 @@ void initializeTTY( void )
 	ttyTable.ttys[STD_TTY].focusProcess = 0;		/* Cuando arranca la TTY tiene al Idle corriendo */	
 }
 
-int getCurrentTTY( void ) 
+int getFocusTTY( void ) 
 {
 	return ttyTable.focusTTY;
 }
@@ -283,11 +296,11 @@ void putTTY(Keycode c, tty_t tty){
 		
 	}
 */	
-	if(write( STDIN , (char *)&c, 1 ) > 0){
+	if(write( STDIN , (char *)&c, 1 ) == 1){
 		sleepCondition[tty]++;
 		signalTty(tty);
-		}
-	}
+	}	
+}
 
 static void refreshKeyboardBufferTTY( void ){
 	Keycode deChar = 0;
@@ -302,10 +315,10 @@ static void refreshKeyboardBufferTTY( void ){
 					changeFocusTTY( (deChar - 0x81) );
 				}else{
 					if(runningProcess->ttyMode  == TTY_CANONICAL){
-						putCharTTY((int)deChar, getCurrentTTY());
+						putCharTTY((int)deChar, getFocusTTY(), TRUE);
 						
 					}else{
-						putTTY((int)deChar, getCurrentTTY());
+						putTTY((int)deChar, getFocusTTY());
 					}
 				}
 			}
@@ -314,7 +327,7 @@ static void refreshKeyboardBufferTTY( void ){
 
 int changeFocusTTY( tty_t nextTty ){	
 	
-	if( nextTty == getCurrentTTY() )
+	if( nextTty == getFocusTTY() )
 		return 1;
 	clearScreen();
 	ttyTable.focusTTY = ttyTable.ttys[nextTty].ttyId;
@@ -328,7 +341,7 @@ void refreshStdout(void){
 	char aux;
 
 	while(read(STDOUT, &aux, 1 ) == 1){
-		putCharTTY(aux,  runningProcess->tty );
+		putCharTTY(aux,  runningProcess->tty, FALSE);
 	}
 
 }
@@ -336,9 +349,11 @@ void refreshStdout(void){
 void refreshTTY(void){
 
 	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0){
-		refreshKeyboardBufferTTY();
 		refreshStdout();
-		refreshScreen();
+		//if(runningProcess->tty == getFocusTTY()){
+			refreshKeyboardBufferTTY();
+			refreshScreen();
+		//}	
 	}
 }
 
