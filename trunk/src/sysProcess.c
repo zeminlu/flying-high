@@ -38,9 +38,9 @@ void chupala(){
 
 void puto(){
 	
-	putchar('B');
+	
 	while (1){
-		asm volatile("hlt");
+		putchar('B');
 	}
 	return;
 }
