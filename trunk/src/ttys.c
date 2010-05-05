@@ -299,8 +299,8 @@ static void refreshKeyboardBufferTTY( void ){
 		while( !kbBufferIsEmpty() ){
 			if( (deChar = charDeque()) != '\0' )
 			{
-				if( 0x8001 >= deChar && deChar >= 0x8008  ){
-					changeFocusTTY( deChar - 0x8001 );
+				if( 0x81 <= deChar && deChar <= 0x88  ){
+					changeFocusTTY( (deChar - 0x81) );
 				}else{
 					if(runningProcess->ttyMode  == TTY_CANONICAL){
 						putCharTTY((int)deChar, getCurrentTTY());

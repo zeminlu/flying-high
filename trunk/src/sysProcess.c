@@ -20,6 +20,12 @@ int qtyProccessTable = 0;
 
 void chupala(){
 		
+	/*int c;
+	
+	while( (c=getchar()) ){
+		sysPutChar(c,0);
+	}*/
+	
 	while(1){
 		putchar('A');
 	}
