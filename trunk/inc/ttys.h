@@ -27,11 +27,11 @@ extern Keycode *keyboardBuffer;
 
 void putsTTY( unsigned char *name, int count, tty_t tty );
 
-void putCharTTY( char c, tty_t tty );
+void putCharTTY( char c, tty_t tty, int inStdIn );
 
 void initializeTTY( void );
 
-int getCurrentTTY( void );
+int getFocusTTY( void );
 
 void setFocusProcessTTY( tty_t tty, pid_t pid );
 
