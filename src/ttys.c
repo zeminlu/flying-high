@@ -18,7 +18,7 @@ static int readCol = CURSOR_START_COL;
 
 typedef void (*videoParser)( void );
 
-typedef void (*printFunctions)(unsigned char *, int, tty_t);
+typedef void (*printFunctions)( int, tty_t);
 
 sysTTY ttyTable;
 
@@ -39,6 +39,19 @@ printAlarm,
 /*
 *	Static functions for putcharTTY
 */
+static void loadPointer( tty_t tty, int what ){
+	
+	if( what == SAVE ){
+		ttyTable.listTTY[tty]->writePointer = writePointer;
+		ttyTable.listTTY[tty]->writeCol = writeCol;
+		ttyTable.listTTY[tty]->writeRow = writeRow;
+	}else{
+		writePointer = ttyTable.listTTY[tty]->writePointer;
+		writeCol = ttyTable.listTTY[tty]->writeCol;
+		writeRow = ttyTable.listTTY[tty]->writeRow;
+	}
+}
+
 
 static void incReadOffset ( void )
 {
@@ -109,12 +122,12 @@ static void putLine( tty_t tty)
 	ttyTable.listTTY[tty]->stdIn->writeOffset = 0;
 }
 
-static void parseAlarmTTY( unsigned char * p, int where, tty_t tty )
+static void parseAlarmTTY( int where, tty_t tty )
 {
 }
 
 
-static void parseBackSpaceTTY( unsigned char * p, int where, tty_t tty )
+static void parseBackSpaceTTY( int where, tty_t tty )
 {
 	static int cond = FALSE;
 	int i;
@@ -122,13 +135,13 @@ static void parseBackSpaceTTY( unsigned char * p, int where, tty_t tty )
 	if( !where )
 	{
 		cond = FALSE;
-		if (p[writePointer] == TAB){
+		if ((ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] == TAB){
 			writePointer -= VIDEO_TAB_STOP;
 			cond = TRUE;
 		}
 		else
 			decwritePointer();
-		p[writePointer] = ' ';
+		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] = ' ';
 	}
 	else{
 		if (cond){
@@ -142,17 +155,17 @@ static void parseBackSpaceTTY( unsigned char * p, int where, tty_t tty )
 	return;
 }
 
-static void parseTabTTY(unsigned char * p, int where, tty_t tty )
+static void parseTabTTY( int where, tty_t tty )
 {	
 	int i, prevRow;
 	
 	if( !where ){
-		p[writePointer] = TAB;
+		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] = TAB;
 		for ( i = 0, prevRow = writeRow; i < VIDEO_TAB_STOP; ++i )
 		{
 			if ( prevRow != writeRow )
 				break;
-			p[writePointer] = ' ';
+			(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] = ' ';
 			incwritePointer();
 		}
 	}
@@ -161,16 +174,16 @@ static void parseTabTTY(unsigned char * p, int where, tty_t tty )
 		{
 			if ( prevRow != readRow )
 				break;
-			p[readPointer] = ' ';
+			(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[readPointer] = ' ';
 			incReadOffset();
 		}
 	}
 }
 
-static void parseNewLineTTY( unsigned char * p, int where, tty_t tty )
+static void parseNewLineTTY( int where, tty_t tty )
 {
 	if( !where ){
-		p[writePointer] = NEW_LINE;
+		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] = NEW_LINE;
 		do
 		{
 			incwritePointer();
@@ -184,15 +197,15 @@ static void parseNewLineTTY( unsigned char * p, int where, tty_t tty )
 	}
 }
 
-static void parseVTabTTY( unsigned char * p, int where, tty_t tty )
+static void parseVTabTTY( int where, tty_t tty )
 {
 	int i, col;
 	
 	if( !where ){
-		p[writePointer] = VTAB;
+		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] = VTAB;
 		col = writeCol - 1;
 		for ( i = 0; i < VIDEO_VTAB_STOP; ++i )
-			parseNewLineTTY(p, where, tty);
+			parseNewLineTTY( where, tty);
 		while ( writeCol < col )
 			incwritePointer();
 	} 
@@ -200,19 +213,19 @@ static void parseVTabTTY( unsigned char * p, int where, tty_t tty )
 		printVTab();
 		col = readCol - 1;
 		for ( i = 0; i < VIDEO_VTAB_STOP; ++i )
-			parseNewLineTTY(p, where, tty);
+			parseNewLineTTY( where, tty);
 		while ( readCol < col )
 			incReadOffset();
 	}
 }
 
-static void parseLineFeedTTY( unsigned char * p, int where, tty_t tty )
+static void parseLineFeedTTY( int where, tty_t tty )
 {
 	int col;
 	
 	if( !where ){
-		p[writePointer] = LINE_FEED;
-		parseNewLineTTY(p,where, tty);
+		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] = LINE_FEED;
+		parseNewLineTTY(where, tty);
 		col = writeCol;
 		do
 		{
@@ -229,10 +242,10 @@ static void parseLineFeedTTY( unsigned char * p, int where, tty_t tty )
 	}
 }
 
-static void parseReturnTTY( unsigned char * p, int where, tty_t tty )
+static void parseReturnTTY( int where, tty_t tty )
 {
 	if( !where ){
-		p[writePointer] = RETURN;
+		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[writePointer] = RETURN;
 		while ( writeCol != 0 )
 			decwritePointer();
 	}else{
@@ -256,7 +269,7 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 
 	if( '\a' <= c && c <= '\r' )
 	{
-		specialCharPrint[c - '\a'](ttyTable.listTTY[tty]->stdOut->begin, WRITE_ON_TTY, tty);
+		specialCharPrint[c - '\a']( WRITE_ON_TTY, tty);
 		if (c == '\n' && tty == getFocusTTY() && inStdIn)
 			putLine( tty );
 		if( tty == getFocusTTY() )
@@ -264,7 +277,7 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 		return 0;
 	}else
 	{
-		((ttyTable.listTTY[tty])->stdOut->begin)[writePointer] = c;
+		((ttyTable.listTTY[tty])->stdOut->stdOutBuffer)[writePointer] = c;
 		if( inStdIn && getFocusTTY() == tty )
 			ttyTable.listTTY[tty]->stdIn->stdInBuffer[(ttyTable.listTTY[tty]->stdIn->writeOffset)++]= c;
 		if( tty == getFocusTTY() )
@@ -292,15 +305,15 @@ static void refreshScreenTTY( void )
 		readRow = writeRow + 1;
 	}
 	while( readPointer != writePointer ){
-		if( readPointer == VIDEO_MEMORY_SIZE / 2 )
+		if( readPointer == SCREEN_SIZE )
 			readPointer = 0;
-		character = (ttyTable.listTTY[getFocusTTY()]->stdOut->end)[readPointer];
+		character = (ttyTable.listTTY[getFocusTTY()]->stdOut->stdOutBuffer)[readPointer];
 		if( '\a' <= character && character >= '\r' )
 		{
-			refreshCharPrint[character - '\a'](ttyTable.listTTY[getFocusTTY()]->stdOut->end, SEND_TO_VIDEO, getFocusTTY());
+			refreshCharPrint[character - '\a'](SEND_TO_VIDEO, getFocusTTY());
 		}else
 		{
-			printChar((ttyTable.listTTY[getFocusTTY()]->stdOut->end)[readPointer]);
+			printChar((ttyTable.listTTY[getFocusTTY()]->stdOut->stdOutBuffer)[readPointer]);
 			/*write( STDIN, &(ttyTable.ttys[getFocusTTY()].end)[readPointer], 1 );
 			*/
 			incReadOffset();
@@ -321,7 +334,6 @@ void putCharTTY( char c, tty_t tty, int inStdIn )
 	if( writePointer == VIDEO_MEMORY_SIZE )
 	{
 		writePointer = 0;
-		ttyTable.listTTY[tty]->stdOut->begin = ttyTable.listTTY[tty]->stdOut->stdOutBuffer;
 		ttyTable.listTTY[tty]->hasScrolled++;
 	}
 	parse = parseCharTTY(c, tty, inStdIn);
@@ -349,6 +361,9 @@ void initializeTTY( void )
 		ttyTable.listTTY[i]->hasScrolled = 0;
 		ttyTable.listTTY[i]->focusProcess  = 0;
 		ttyTable.listTTY[i]->stdOut->begin = ttyTable.listTTY[i]->stdOut->end = ttyTable.listTTY[i]->stdOut->stdOutBuffer;
+		ttyTable.listTTY[i]->writePointer = 0;
+		ttyTable.listTTY[i]->writeCol = CURSOR_START_COL;
+		ttyTable.listTTY[i]->writeRow = CURSOR_START_ROW;
 	}
 }
 
@@ -407,12 +422,24 @@ static void refreshKeyboardBufferTTY( void ){
 
 int changeFocusTTY( tty_t nextTty ){	
 	
+	/*char *p = kMalloc( sizeof(char) * 10);
+	*/
 	if( nextTty == getFocusTTY() )
 		return 1;
 	clearScreen();
 	ttyTable.focusTTY = ttyTable.listTTY[nextTty]->ttyId;
 	setCursorPosition(0,0);
-/*	refreshScreenTTY();*/
+	
+	/*puts(intToString(writePointer,p));
+	puts(intToString(writeCol,p));
+	puts(intToString(writeRow,p));
+	puts(intToString(readPointer,p));
+	puts(intToString(readCol,p));
+	puts(intToString(readRow,p));
+	*/
+	loadPointer( getFocusTTY(), SAVE );
+	loadPointer( nextTty, LOAD );
+//	refreshScreenTTY();
 	refreshScreen();
 	return 0;
 }
