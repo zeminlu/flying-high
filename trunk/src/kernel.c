@@ -30,7 +30,7 @@ void kernel_main ( void  )
 		
 	clearScreen();
 
-	initializeFileSystem();
+//	initializeFileSystem();
 	
 	initializeTTY();
 

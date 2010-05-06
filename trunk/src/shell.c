@@ -144,7 +144,7 @@ static int mouseEnable (char *value)
 	return 1;
 }*/
 
-static int screenSaverTime (char *value)
+/*static int screenSaverTime (char *value)
 {
 	int time;
 	if ( isAllNumb(value) )
@@ -160,7 +160,7 @@ static int screenSaverTime (char *value)
 		return 0;	
 	}
 	return 1;
-}
+}*/
 
 static propertyT properties[] = {
 	{"pointer-color", pointerColor, "Changes the mouse pointer's color. Valid colors: BLUE, GREEN, CYAN, RED and MAGENTA."},
@@ -168,7 +168,7 @@ static propertyT properties[] = {
 	{"tab-stop", tabStop, "Changes amount of spaces a tab stop inserts into a line."},
 	/*{"mouse-rate", mouseRate, "Changes the mouse rate. The amount of ticks before the mouse refreshes it's position."},
 	{"mouse-enable", mouseEnable, "Turn on/off the mouse. Valid values 'true' or 'false'"},*/
-	{"screensaver-time", screenSaverTime, "Changes the non-activity time required by the screensaver to be launched."},
+	/*{"screensaver-time", screenSaverTime, "Changes the non-activity time required by the screensaver to be launched."},*/
 	{"", NULL}
 };
 
@@ -257,7 +257,7 @@ static void reboot(char *value)
 static void clear ( char * args )
 {
 	wait(500);
-	flushStdScreen();
+	/*flushStdScreen();*/
 	setPointerVisibility(0);
 	clearScreen();
 	setCursorPosition(0, 0);

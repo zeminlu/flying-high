@@ -47,7 +47,7 @@ typedef struct {
 /*
  *	File System Table Definition
  */
-FILE fileSystem[MAX_TTY][MAX_OPEN_FILES];
+/*FILE fileSystem[MAX_TTY][MAX_FILES];*/
 /*
 void initFilesystem(){
 	int i, j;

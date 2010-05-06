@@ -26,16 +26,16 @@ size_t _sys_write ( int fd, char * buffer, size_t n )
 
 	if ( buffer == NULL || n == 0 )
 		return -1;
-	if ( fd < 0 || fd >= MAX_OPEN_FILES )
+	if ( fd < 0 || fd >= MAX_FILES )
 		return -1;
 
-	file = fileSystem[runningProcess->tty][fd];
+	file = *(runningProcess->files[fd]);
 	if ( file.flag == 0 || (file.flag & _WRITE) != _WRITE )
 		return -1;
 	fileBufferEnd = file.buffer + file.bufferSize - 1;
 	for ( i = 0; n && file.ptr <= fileBufferEnd; ++i, --n )
 		*(file.ptr++) = *buffer++;
-	fileSystem[runningProcess->tty][fd] = file;
+	*(runningProcess->files[fd]) = file;
 
 	return i;
 }
@@ -48,10 +48,10 @@ size_t _sys_read ( int fd, char * buffer, size_t n )
 
 	if ( buffer == NULL || n == 0 )
 		return -1;
-	if ( fd < 0 || fd >= MAX_OPEN_FILES )
+	if ( fd < 0 || fd >= MAX_FILES )
 		return -1;
 
-	file = fileSystem[runningProcess->tty][fd];
+	file = *(runningProcess->files[fd]);
 	if ( file.buffer == file.ptr )
 		return -1;
 	if ( file.flag == 0 || (file.flag & _READ) != _READ )
@@ -66,7 +66,7 @@ size_t _sys_read ( int fd, char * buffer, size_t n )
 		memcpy(file.buffer, file.buffer + i, remaining);
 		file.ptr = file.buffer + remaining;
 	}
-	fileSystem[runningProcess->tty][fd] = file;
+	*(runningProcess->files[fd]) = file;
 
 	return i;
 }
@@ -175,6 +175,15 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 		process->childs[i] = -1;
 	
 	process->childsQty = 0;
+	
+	for (i = 0 ; i < MAX_FILES ; ++i){
+		process->files[i] = kMalloc(sizeof(FILE));
+		process->files[i]->buffer = process->files[i]->ptr = kMalloc(SCREEN_SIZE * sizeof(char));
+		process->files[i]->fd = j;
+		process->files[i]->flag = (_READ | _WRITE);
+		process->files[i]->bufferSize = SCREEN_SIZE;
+	}
+	
 	if ( name != NULL ) {
 		memset(process->name, '\0', MAX_PROCESS_NAME + 1);
 		if ( (nameLen = strlen(name)) > MAX_PROCESS_NAME )

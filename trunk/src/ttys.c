@@ -257,16 +257,16 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 	if( '\a' <= c && c <= '\r' )
 	{
 		specialCharPrint[c - '\a'](ttyTable.listTTY[tty]->stdOut->begin, WRITE_ON_TTY, tty);
-		if (c == '\n' && inStdIn)
+		if (c == '\n' && tty == getFocusTTY() && inStdIn)
 			putLine( tty );
 		if( tty == getFocusTTY() )
 			videoParserFunctions[c - '\a']();
 		return 0;
 	}else
 	{
-		((ttyTable.listTTY[getFocusTTY()])->stdOut->begin)[writePointer] = c;
-		if( inStdIn == FALSE )
-			ttyTable.listTTY[getFocusTTY()]->stdIn->stdInBuffer[(ttyTable.listTTY[getFocusTTY()]->stdIn->writeOffset)++]= c;
+		((ttyTable.listTTY[tty])->stdOut->begin)[writePointer] = c;
+		if( inStdIn && getFocusTTY() == tty )
+			ttyTable.listTTY[tty]->stdIn->stdInBuffer[(ttyTable.listTTY[tty]->stdIn->writeOffset)++]= c;
 		if( tty == getFocusTTY() )
 			printChar(c);
 		return 1;
@@ -334,6 +334,7 @@ void putCharTTY( char c, tty_t tty, int inStdIn )
 void initializeTTY( void )
 {
 	int i;
+	
 	ttyTable.qtyTTY = MAX_TTY;
 	ttyTable.listTTY = kMalloc(sizeof(tty_s *) * MAX_TTY);
 	ttyTable.focusTTY = STD_TTY;
@@ -411,7 +412,7 @@ int changeFocusTTY( tty_t nextTty ){
 	clearScreen();
 	ttyTable.focusTTY = ttyTable.listTTY[nextTty]->ttyId;
 	setCursorPosition(0,0);
-//	refreshScreenTTY();
+/*	refreshScreenTTY();*/
 	refreshScreen();
 	return 0;
 }
@@ -429,10 +430,10 @@ void refreshTTY(void){
 
 	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0){
 		refreshStdout();
-		//if(runningProcess->tty == getFocusTTY()){
+		//if (runningProcess->tty == getFocusTTY()){
 			refreshKeyboardBufferTTY();
 			refreshScreen();
-		//}	
+		//}
 	}
 }
 
