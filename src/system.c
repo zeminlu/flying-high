@@ -32,8 +32,8 @@ static int terminal ( void )
 
 static proccessT applications[] = {
 	terminal,
-	shell,
-	screenSaver
+	shell/*,
+	screenSaver*/
 };
 
 void launchApp ( int app )

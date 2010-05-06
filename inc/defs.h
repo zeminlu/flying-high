@@ -29,7 +29,7 @@
 #define UNATOMIC		!ATOMIC
 #define	FOREGROUND		0
 #define	BACKGROUND		1
-#define MAX_FILES		3
+#define MAX_FILES		2
 
 /*	Units Definitions */
 #define KB							* (1 << 10)
@@ -97,8 +97,6 @@
  *	NULL Pointer Definition
  */
 #define NULL (void *)0x0
-
-#define MAX_OPEN_FILES 4
 
 #endif
 

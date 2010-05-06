@@ -92,7 +92,7 @@ typedef struct process_t {
 	int childsQty;
 	char name[MAX_PROCESS_NAME + 1];
 	int state;
-	FILE * files[MAX_FILES];
+	FILE *files[MAX_FILES];
 	int rpgPrior;
 	unsigned tickCounter;
 	int priority;

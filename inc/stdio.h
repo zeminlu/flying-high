@@ -19,14 +19,14 @@
 
 #define EOF	-1
 
-extern FILE **fileSystem;
+/*extern FILE **fileSystem;*/
 extern process_t *runningProcess;
 
 /*
  *	Standard I/O Files Pointers
  */
-#define stdin (&(fileSystem[runningProcess->tty][STDIN]))
-#define stdout (&(fileSystem[runningProcess->tty][STDOUT]))
+#define stdin (runningProcess->files[STDIN])
+#define stdout (runningProcess->files[STDOUT])
 
 /*
  *	Standard I/O Functions

@@ -20,14 +20,11 @@ int qtyProccessTable = 0;
 
 void chupala(){
 		
-	int c;
-	
-	while(1){
-		putchar('A');
-		asm volatile("hlt");
-	}
-		
-	return;
+		while (1){
+			putchar('B');
+	//		asm volatile("hlt");
+		}
+		return;
 }
 
 void puto(){
@@ -35,7 +32,7 @@ void puto(){
 	
 	while (1){
 		putchar('B');
-		asm volatile("hlt");
+//		asm volatile("hlt");
 	}
 	return;
 }
@@ -124,8 +121,8 @@ int initMultitasker(pfunc_t init) {
 	for ( i = 0; i < MAX_TTY; ++i )
 		ttyRestPlace[i] = -1;
 	initProcess = &processTable[pid];
-//	initProcess->files[0] = stdin;
-//	initProcess->files[1] = stdout;
+/*	initProcess->files[0] = stdin;
+	initProcess->files[1] = stdout;*/
 	initProcess->priority = 0;
 	nextProcess = initProcess;
 	mtActivated = TRUE;
@@ -260,12 +257,12 @@ void terminate(pid_t pid, int status) {
 }
 
 void initializeFileSystem( void ){
-	int i,j;
+/*	int i,j;
 	char *auxBuffer;
 	fileSystem = kMalloc(sizeof(FILE *) * MAX_TTY);
 	for(i = 0; i < MAX_TTY ; ++i){
-		fileSystem[i] = kMalloc(sizeof(FILE)* MAX_OPEN_FILES);
-		for(j = 0; j < MAX_OPEN_FILES; j++){
+		fileSystem[i] = kMalloc(sizeof(FILE)* MAX_FILES);
+		for(j = 0; j < MAX_FILES; j++){
 			auxBuffer = kMalloc(SCREEN_SIZE * sizeof(char));
 			fileSystem[i][j].buffer = auxBuffer;
 			fileSystem[i][j].fd = j;
@@ -273,5 +270,5 @@ void initializeFileSystem( void ){
 			fileSystem[i][j].flag = (_READ | _WRITE);
 			fileSystem[i][j].bufferSize = SCREEN_SIZE;
 		}
-	}
+	}*/
 }
