@@ -20,6 +20,9 @@
 #define	TTY_RAW			0
 #define	TTY_CANONICAL	1
 
+#define	LOAD			0
+#define	SAVE			1
+
 #define STDIN 	0
 #define STDOUT 	1
 #define IN_ATT	2

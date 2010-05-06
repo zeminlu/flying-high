@@ -160,6 +160,9 @@ typedef struct tty_s{
 	stdOutTTY		*stdOut;
 	int				hasScrolled;
 	pid_t			focusProcess;
+	int				writePointer;
+	int				writeCol;
+	int				writeRow;
 }tty_s;
 
 typedef struct sysTTY{
