@@ -13,6 +13,7 @@
 #include "syscall.h"
 #include "types.h"
 #include "unistd.h"
+#include "kMalloc.h"
 
 
 extern unsigned char videoBuffer[VIDEO_MEMORY_SIZE];

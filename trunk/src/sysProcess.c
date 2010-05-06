@@ -20,19 +20,13 @@ int qtyProccessTable = 0;
 
 void chupala(){
 		
-	/*int c;
-	
-	while( (c=getchar()) ){
-		sysPutChar(c,0);
-	
+	int c;
 	
 	while(1){
 		putchar('A');
-	}
-	}*/
-	while (1){
 		asm volatile("hlt");
 	}
+		
 	return;
 }
 
@@ -41,6 +35,7 @@ void puto(){
 	
 	while (1){
 		putchar('B');
+		asm volatile("hlt");
 	}
 	return;
 }
