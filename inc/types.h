@@ -143,7 +143,33 @@ enum PROCCESS {
 };
 
 /*TTY*/
+typedef struct stdInTTY{
+	Keycode 	*stdInBuffer;
+	int 		writeOffset;
+}stdInTTY;
 
+typedef struct stdOutTTY{
+	Keycode 	*stdOutBuffer;
+	Keycode		*begin;
+	Keycode		*end;
+}stdOutTTY;
+
+typedef struct tty_s{
+	tty_t			ttyId;
+	stdInTTY		*stdIn;
+	stdOutTTY		*stdOut;
+	int				hasScrolled;
+	pid_t			focusProcess;
+}tty_s;
+
+typedef struct sysTTY{
+	int			qtyTTY;
+	tty_s		**listTTY;
+	tty_t		focusTTY;
+}sysTTY;
+
+
+/*
 typedef struct TTY{
 	tty_t			ttyId;
 	Keycode *		inTTY;
@@ -160,12 +186,10 @@ typedef struct sysTTY{
 }sysTTY;
 
 typedef struct stdInTTY{
-	Keycode stdIN[MAX_LINE];
+	Keycode stdIn[MAX_LINE];
 	int 	writeOffset;
-	int 	readOffset;
-	int 	empty;
 }stdInTTY;
-
+*/
 
 #pragma pack (1) 		/* Alinear las siguiente estructuras a 1 byte */
 
