@@ -265,9 +265,9 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 	}else
 	{
 		((ttyTable.listTTY[getFocusTTY()])->stdOut->begin)[writePointer] = c;
-		ttyTable.listTTY[getFocusTTY()]->stdIn->stdInBuffer[(ttyTable.listTTY[getFocusTTY()]->stdIn->writeOffset)++]= c;
+		if( inStdIn == FALSE )
+			ttyTable.listTTY[getFocusTTY()]->stdIn->stdInBuffer[(ttyTable.listTTY[getFocusTTY()]->stdIn->writeOffset)++]= c;
 		if( tty == getFocusTTY() )
-			/*write( STDIN , (char *)&c, 1 );*/
 			printChar(c);
 		return 1;
 	}
@@ -347,6 +347,7 @@ void initializeTTY( void )
 		ttyTable.listTTY[i]->stdOut->stdOutBuffer = kMalloc(sizeof(Keycode) * VIDEO_MEMORY_SIZE);
 		ttyTable.listTTY[i]->hasScrolled = 0;
 		ttyTable.listTTY[i]->focusProcess  = 0;
+		ttyTable.listTTY[i]->stdOut->begin = ttyTable.listTTY[i]->stdOut->end = ttyTable.listTTY[i]->stdOut->stdOutBuffer;
 	}
 }
 
