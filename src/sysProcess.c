@@ -21,7 +21,7 @@ int qtyProccessTable = 0;
 void chupala(){
 		
 		while (1){
-			putchar('B');
+			puts('ABCDEFGHIJK\n');
 	//		asm volatile("hlt");
 		}
 		return;
@@ -31,7 +31,7 @@ void puto(){
 	
 	
 	while (1){
-		putchar('B');
+		puts('ABCDEFGHIJK\n');
 //		asm volatile("hlt");
 	}
 	return;
@@ -110,6 +110,7 @@ int initMultitasker(pfunc_t init) {
 	for ( i = 0; i < MAX_PROCESS; ++i ) {
 		processTable[i].pid = -1;
 		processTable[i].state = DEAD;
+		processTable[i].childsQty = 0;
 		for ( j = 0; j < MAX_FILES; ++j )
 			processTable[i].files[j] = NULL;
 	}
@@ -136,7 +137,7 @@ void multitasker(void) {
 		return;
 	if ( runningProcess != NULL && runningProcess->atomicity == ATOMIC )
 		return;
-	nextProcess = (runningProcess == NULL) ? nextProcess : getNextTask() /*roundRobinSched()*/ /* prioritySched()*/;
+	nextProcess = (runningProcess == NULL) ? nextProcess : getNextTask();
 	if ( nextProcess != runningProcess ) {
 		/* This is done when loading the init process for the first time */
 		if ( runningProcess != NULL ) {

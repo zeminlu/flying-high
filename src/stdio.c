@@ -49,7 +49,7 @@ int fputc ( int c, FILE * stream )
 
 int fgetc ( FILE * stream )
 {
-	int c, aux;
+	int c;
 	
 	if ( stream == NULL )
 		return EOF;

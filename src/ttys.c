@@ -448,20 +448,22 @@ void refreshStdout(void){
 	char aux;
 
 	while(read(STDOUT, &aux, 1 ) == 1){
-		putCharTTY(aux,  runningProcess->tty, FALSE);
+		putCharTTY(aux, runningProcess->tty, FALSE);
 	}
 
 }
 
 void refreshTTY(void){
 
-	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0){
+	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0 && runningProcess->tty != -1){
 		refreshStdout();
 		//if (runningProcess->tty == getFocusTTY()){
 			refreshKeyboardBufferTTY();
 			refreshScreen();
 		//}
 	}
+	
+	return;
 }
 
 /*

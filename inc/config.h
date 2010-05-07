@@ -37,8 +37,8 @@
 #define DEFAULT_SCREENSAVER_TIME 540
 #define STD_TTY 0
 
-#define MAX_PROCESS			24
-#define MAX_CHILDS			30
+#define MAX_PROCESS			32
+#define MAX_CHILDS			4
 #define MAX_PROCESS_NAME	36
 #define MAX_PRIORITIES		4
 #define MAX_TTY				8

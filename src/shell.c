@@ -416,9 +416,10 @@ int shell ( void )
 		if ( c == EOF ){
 			puts("Me dormi...");
 			waitTty(getTty(getpid()));
-			puts("...y me desperte\n");		
+			puts("y me desperte\n");	
 			continue;
 		}
+		puts("Lei 1 caracter...\n");
 		uc = c;
 		if ( uc == '\n' )
 			parseCommand();
