@@ -320,7 +320,7 @@ void initVideo ( int cursorEnabled, int pointerEnabled )
 	outportb(CRTCAddress, temp);
 	
 	setCursorVisibility(cursorEnabled);
-	setPointerVisibility(pointerEnabled);
+	//setPointerVisibility(pointerEnabled);
 	refreshCursor();
 }
 

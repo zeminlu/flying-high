@@ -55,7 +55,7 @@ void kernel_main ( void  )
 	initMultitasker(init);
 	
 	_Cli();
-		_mascaraPIC1(0xF8);
+		_mascaraPIC1(0xFC);
 		_mascaraPIC2(0xFF);
 	_Sti();
 	
