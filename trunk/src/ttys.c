@@ -26,8 +26,18 @@ static stdInTTY stdinTableTTY[MAX_TTY];
 
 int sleepCondition[MAX_TTY]= {0};
 
+tty_s TTYsList[MAX_TTY];
+
+stdInTTY TTYstdIns[MAX_TTY];
+
+stdOutTTY TTYstdOuts[MAX_TTY];
+
+Keycode stdInBuffers[MAX_TTY][MAX_LINE];
+
+Keycode stdOutBuffers[MAX_TTY][VIDEO_MEMORY_SIZE];
+
 static videoParser videoParserFunctions[] = {
-printAlarm,
+	printAlarm,
 	printBackspace,
 	printTab,
 	printNewLine,
@@ -35,6 +45,30 @@ printAlarm,
 	printLineFeed,
 	printReturn
 };
+
+
+void initializeTTY( void )
+{
+	int i;
+	
+	ttyTable.qtyTTY = MAX_TTY;
+	ttyTable.focusTTY = STD_TTY;
+	for( i = 0 ; i < MAX_TTY ; ++i ){
+		ttyTable.listTTY[i] = &(TTYsList[i]);
+		ttyTable.listTTY[i]->ttyId = i;
+		ttyTable.listTTY[i]->stdIn = &(TTYstdIns[i]);
+		ttyTable.listTTY[i]->stdIn->stdInBuffer = stdInBuffers[i];
+		ttyTable.listTTY[i]->stdIn->writeOffset = 0;
+		ttyTable.listTTY[i]->stdOut = &(TTYstdOuts[i]);
+		ttyTable.listTTY[i]->stdOut->stdOutBuffer = stdOutBuffers[i];
+		ttyTable.listTTY[i]->hasScrolled = 0;
+		ttyTable.listTTY[i]->focusProcess  = 0;
+		ttyTable.listTTY[i]->stdOut->begin = ttyTable.listTTY[i]->stdOut->end = ttyTable.listTTY[i]->stdOut->stdOutBuffer;
+		ttyTable.listTTY[i]->writePointer = 0;
+		ttyTable.listTTY[i]->writeCol = CURSOR_START_COL;
+		ttyTable.listTTY[i]->writeRow = CURSOR_START_ROW;
+	}
+}
 
 /*
 *	Static functions for putcharTTY
@@ -343,30 +377,6 @@ void putCharTTY( char c, tty_t tty, int inStdIn )
 	}
 }
 
-void initializeTTY( void )
-{
-	int i;
-	
-	ttyTable.qtyTTY = MAX_TTY;
-	ttyTable.listTTY = kMalloc(sizeof(tty_s *) * MAX_TTY);
-	ttyTable.focusTTY = STD_TTY;
-	for( i = 0 ; i < MAX_TTY ; ++i ){
-		ttyTable.listTTY[i] = kMalloc(sizeof(tty_s));
-		ttyTable.listTTY[i]->ttyId = i;
-		ttyTable.listTTY[i]->stdIn = kMalloc(sizeof(stdInTTY));
-		ttyTable.listTTY[i]->stdIn->stdInBuffer = kMalloc(sizeof(Keycode) * MAX_LINE);
-		ttyTable.listTTY[i]->stdIn->writeOffset = 0;
-		ttyTable.listTTY[i]->stdOut = kMalloc(sizeof(stdOutTTY));
-		ttyTable.listTTY[i]->stdOut->stdOutBuffer = kMalloc(sizeof(Keycode) * VIDEO_MEMORY_SIZE);
-		ttyTable.listTTY[i]->hasScrolled = 0;
-		ttyTable.listTTY[i]->focusProcess  = 0;
-		ttyTable.listTTY[i]->stdOut->begin = ttyTable.listTTY[i]->stdOut->end = ttyTable.listTTY[i]->stdOut->stdOutBuffer;
-		ttyTable.listTTY[i]->writePointer = 0;
-		ttyTable.listTTY[i]->writeCol = CURSOR_START_COL;
-		ttyTable.listTTY[i]->writeRow = CURSOR_START_ROW;
-	}
-}
-
 int getFocusTTY( void ) 
 {
 	return ttyTable.focusTTY;
@@ -457,10 +467,10 @@ void refreshTTY(void){
 
 	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0 && runningProcess->tty != -1){
 		refreshStdout();
-		refreshKeyboardBufferTTY();
-		refreshScreen();
 		//if (runningProcess->tty == getFocusTTY()){
+		refreshKeyboardBufferTTY();
 		//}
+		refreshScreen();
 	}
 	
 	return;

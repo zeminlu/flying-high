@@ -16,12 +16,17 @@ static pid_t ttyRestPlace[MAX_TTY];
 
 /*static pid_t nextPID = 1;*/
 
+FILE fileSystems[MAX_PROCESS][MAX_FILES];
+
+char fileBuffers[MAX_PROCESS][MAX_FILES][SCREEN_SIZE];
+
 int qtyProccessTable = 0;
 
 void chupala(){
 		
 		while (1){
-			puts("ABCDEFGHIJK\n");
+			putchar('B');
+	//		puts("ABCDEFGHIJK\n");
 	//		asm volatile("hlt");
 		}
 		return;
@@ -31,7 +36,8 @@ void puto(){
 	
 	
 	while (1){
-		puts("LMNOPQRSTUVW\n");
+		putchar('A');
+//		puts("LMNOPQRSTUVW\n");
 //		asm volatile("hlt");
 	}
 	return;
@@ -111,8 +117,13 @@ int initMultitasker(pfunc_t init) {
 		processTable[i].pid = -1;
 		processTable[i].state = DEAD;
 		processTable[i].childsQty = 0;
-		for ( j = 0; j < MAX_FILES; ++j )
-			processTable[i].files[j] = NULL;
+		for ( j = 0; j < MAX_FILES; ++j ){
+			processTable[i].files[j] = &(fileSystems[i][j]);
+			processTable[i].files[j]->ptr = processTable[i].files[j]->buffer = fileBuffers[i][j];
+			processTable[i].files[j]->fd = j;
+			processTable[i].files[j]->flag = (_READ | _WRITE);
+			processTable[i].files[j]->bufferSize = SCREEN_SIZE;
+		}
 	}
 	
 	if ( (pid = _sys_create_process("init", init, 0, BACKGROUND)) == -1 ) {

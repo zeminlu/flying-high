@@ -167,7 +167,7 @@ typedef struct tty_s{
 
 typedef struct sysTTY{
 	int			qtyTTY;
-	tty_s		**listTTY;
+	tty_s		*listTTY[MAX_TTY];
 	tty_t		focusTTY;
 }sysTTY;
 
