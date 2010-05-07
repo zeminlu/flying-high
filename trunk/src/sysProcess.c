@@ -21,7 +21,7 @@ int qtyProccessTable = 0;
 void chupala(){
 		
 		while (1){
-			puts('ABCDEFGHIJK\n');
+			puts("ABCDEFGHIJK\n");
 	//		asm volatile("hlt");
 		}
 		return;
@@ -31,7 +31,7 @@ void puto(){
 	
 	
 	while (1){
-		puts('ABCDEFGHIJK\n');
+		puts("LMNOPQRSTUVW\n");
 //		asm volatile("hlt");
 	}
 	return;
