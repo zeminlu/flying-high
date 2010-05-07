@@ -3,10 +3,9 @@
 /*Falta agregar el true y el false*/
 
 static int asigment = FALSE;
+static memArea_t auxMem;
 
-static memArea_t * getMem(){
-	static memArea_t auxMem;
-	
+static memArea_t * getMem(){	
 	if(!asigment){
 		asigment = TRUE;
 		auxMem.address = memmap(TRUE);
