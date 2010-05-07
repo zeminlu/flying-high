@@ -178,7 +178,8 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	
 	/*for (i = 0 ; i < MAX_FILES ; ++i){
 		process->files[i] = kMalloc(sizeof(FILE));
-		process->files[i]->buffer = process->files[i]->ptr = kMalloc(SCREEN_SIZE * sizeof(char));
+		process->files[i]->buffer = kMalloc(SCREEN_SIZE * sizeof(char));
+		process->files[i]->ptr = process->files[i]->buffer;
 		process->files[i]->fd = i;
 		process->files[i]->flag = (_READ | _WRITE);
 		process->files[i]->bufferSize = SCREEN_SIZE;

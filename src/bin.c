@@ -1,5 +1,6 @@
 #include "bin.h"
 
+
 void init(void *args){
 	int i;
 	pid_t pid;

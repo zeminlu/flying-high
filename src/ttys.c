@@ -342,12 +342,12 @@ static void refreshScreenTTY( void )
 		if( readPointer == SCREEN_SIZE )
 			readPointer = 0;
 		character = (ttyTable.listTTY[getFocusTTY()]->stdOut->stdOutBuffer)[readPointer];
-		if( '\a' <= character && character >= '\r' )
+		if( '\a' <= character && character <= '\r' )
 		{
 			refreshCharPrint[character - '\a'](SEND_TO_VIDEO, getFocusTTY());
 		}else
 		{
-			printChar((ttyTable.listTTY[getFocusTTY()]->stdOut->stdOutBuffer)[readPointer]);
+			printChar(character);
 			/*write( STDIN, &(ttyTable.ttys[getFocusTTY()].end)[readPointer], 1 );
 			*/
 			incReadOffset();
@@ -449,7 +449,7 @@ int changeFocusTTY( tty_t nextTty ){
 	*/
 	loadPointer( getFocusTTY(), SAVE );
 	loadPointer( nextTty, LOAD );
-//	refreshScreenTTY();
+	refreshScreenTTY();
 	refreshScreen();
 	return 0;
 }

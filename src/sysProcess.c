@@ -267,9 +267,9 @@ void terminate(pid_t pid, int status) {
 	processTable[pid].atomicity = UNATOMIC;
 	alertWaitingProcesses(pid, status);
 }
-
+/*
 void initializeFileSystem( void ){
-/*	int i,j;
+	int i,j;
 	char *auxBuffer;
 	fileSystem = kMalloc(sizeof(FILE *) * MAX_TTY);
 	for(i = 0; i < MAX_TTY ; ++i){
@@ -282,5 +282,5 @@ void initializeFileSystem( void ){
 			fileSystem[i][j].flag = (_READ | _WRITE);
 			fileSystem[i][j].bufferSize = SCREEN_SIZE;
 		}
-	}*/
-}
+	}
+}*/
