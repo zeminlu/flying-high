@@ -163,6 +163,9 @@ typedef struct tty_s{
 	int				writePointer;
 	int				writeCol;
 	int				writeRow;
+	int				readPointer;
+	int				readCol;
+	int				readRow;
 }tty_s;
 
 typedef struct sysTTY{
