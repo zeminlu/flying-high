@@ -38,7 +38,7 @@
 #define STD_TTY 0
 
 #define MAX_PROCESS			32
-#define MAX_CHILDS			4
+#define MAX_CHILDS			MAX_PROCESS - 1
 #define MAX_PROCESS_NAME	36
 #define MAX_PRIORITIES		4
 #define MAX_TTY				8

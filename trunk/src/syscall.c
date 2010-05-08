@@ -11,7 +11,6 @@ extern process_t *runningProcess;
 extern process_t *nextProcess;
 extern process_t *initProcess;
 extern process_t processTable[MAX_PROCESS];
-extern FILE **fileSystem;
 static int cliAmm = 0;
 
 void forceMultitasker();
