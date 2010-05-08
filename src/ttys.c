@@ -440,9 +440,10 @@ void refreshStdout(void){
 void refreshTTY(void){
 
 	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0 && runningProcess->tty != -1){
+		refreshKeyboardBufferTTY();
 		refreshStdout();
 		//if (runningProcess->tty == getFocusTTY()){
-		refreshKeyboardBufferTTY();
+		
 		//}
 		refreshScreen();
 	}

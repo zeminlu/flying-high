@@ -225,4 +225,30 @@ typedef struct {
   dword base;
 } IDTR;
 
+/*SHEL */
+
+typedef void (*shellFuncT)(char *);
+
+typedef struct {
+	char * command;
+	shellFuncT func;
+	char * helpMsg;
+} commandT;
+
+typedef int (*pFuncT)(char*);
+
+typedef struct {
+	char * name;
+	pFuncT func;
+	char * helpMsg;
+} propertyT;
+
+typedef struct{
+	int status;
+	char lineBuffer[MAX_LINE];
+	char enteredCommand[MAX_LINE];
+	int index;
+	int firstRun;
+	}dataSlotShell;
+
 #endif

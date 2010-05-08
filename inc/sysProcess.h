@@ -16,6 +16,10 @@ void chupala();
 
 void puto();
 
+void chupala2();
+
+void puto2();
+
 int isMTActivated();
 
 int initMultitasker(pfunc_t init);

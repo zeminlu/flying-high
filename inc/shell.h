@@ -28,4 +28,6 @@
  */
 int shell ( void );
 
+void initDataShell(void);
+
 #endif

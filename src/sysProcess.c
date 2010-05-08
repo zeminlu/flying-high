@@ -43,6 +43,27 @@ void puto(){
 	return;
 }
 
+void chupala2(){
+		
+		while (1){
+			putchar('D');
+	//		puts("ABCDEFGHIJK\n");
+	//		asm volatile("hlt");
+		}
+		return;
+}
+
+void puto2(){
+	
+	
+	while (1){
+		putchar('E');
+//		puts("LMNOPQRSTUVW\n");
+//		asm volatile("hlt");
+	}
+	return;
+}
+
 int getProccessByPid( pid_t pid )
 {
 	int i;
