@@ -7,29 +7,28 @@
  *
  */
 #include "shell.h"
+static char * prompt = "root@flyingHighOS$>";
 
+/*
 static int firstRun = 1;
 static int status = RUNNING;
 static char lineBuffer[MAX_LINE];
 static char enteredCommand[MAX_LINE];
 static int index = 0;
 static char * prompt = "root@flyingHighOS$>";
+*/
 
-typedef void (*shellFuncT)(char *);
+static dataSlotShell tableDataShell[MAX_TTY];
 
-typedef struct {
-	char * command;
-	shellFuncT func;
-	char * helpMsg;
-} commandT;
-
-typedef int (*pFuncT)(char*);
-
-typedef struct {
-	char * name;
-	pFuncT func;
-	char * helpMsg;
-} propertyT;
+void initDataShell(void){
+	int i;
+	
+	for( i = 0; i < MAX_TTY; i++){
+		tableDataShell[i].status = RUNNING;
+		tableDataShell[i].index = 0;
+		tableDataShell[i].firstRun = TRUE;
+	}
+}
 
 /* SYSTEM PROPERTIES */
 static int getColor(char *value, int * color)
@@ -274,7 +273,7 @@ void logout ( char * args )
 {
 	puts("[logout]\n");
 	puts("Exiting Shell...\n");
-	status = DEAD;
+	tableDataShell[getpid() - 1].status = DEAD;
 }
 
 static void help ( char * args )
@@ -346,41 +345,41 @@ static void parseCommand ( void )
 	char *command, *args;
 
 	putchar('\n');
-	if ( index == 0 )
+	if ( tableDataShell[getpid()-1].index == 0 )
 	{
 		printPrompt();
 		return;
 	}
-	lineBuffer[index] = '\0';
-	strcpy(enteredCommand, lineBuffer);
-	command = strtok(enteredCommand, " ");
+	tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index] = '\0';
+	strcpy(tableDataShell[getpid()-1].enteredCommand, tableDataShell[getpid()-1].lineBuffer);
+	command = strtok(tableDataShell[getpid()-1].enteredCommand, " ");
 	args = strtok(NULL, "");
 	if ( (cmd = getCommand(command)) != NULL )
 		cmd->func(args);
 	else
 	{
 		puts("shell: ");
-		puts(lineBuffer);
+		puts(tableDataShell[getpid()-1].lineBuffer);
 		puts(": Invalid Command\n");
 	}
 
-	index = 0;
-	if ( status == RUNNING ) printPrompt();
+	tableDataShell[getpid()-1].index = 0;
+	if ( tableDataShell[getpid()-1].status == RUNNING ) printPrompt();
 }
 
 static void putBackspace ( void )
 {
-	if ( index == 0 )
+	if ( tableDataShell[getpid()-1].index == 0 )
 		return;
 	putchar('\b');
-	--index;
+	--tableDataShell[getpid()-1].index;
 }
 
 static void parseBackspace ( void )
 {
 	int i, ts;
 
-	if ( lineBuffer[index] == '\t' )
+	if ( tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index] == '\t' )
 		for ( i = 0, ts = getVideoTabStop(); i < ts; ++i)
 			putBackspace();
 	else
@@ -394,8 +393,8 @@ static void autoComplete ( void )
 	 */
 
 	/* If command could not be autocompleted print tab*/
-	index += getVideoTabStop();
-	lineBuffer[index] = '\t';
+	tableDataShell[getpid()-1].index += getVideoTabStop();
+	tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index] = '\t';
 	putchar('\t');
 }
 
@@ -405,8 +404,8 @@ int shell ( void )
 	unsigned char uc;
 
 	while (1){
-		if ( firstRun )	{
-			firstRun = 0;
+		if ( tableDataShell[getpid()-1].firstRun )	{
+			tableDataShell[getpid()-1].firstRun = FALSE;
 			puts("Starting Shell...\n");
 			puts("\tEnter 'help' for a list of commands.\n");
 			puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
@@ -427,13 +426,13 @@ int shell ( void )
 			parseBackspace();
 		else if ( uc == '\t' )
 			autoComplete();*/
-		else if ( index < MAX_LINE  - 1)
+		else if ( tableDataShell[getpid()-1].index < MAX_LINE  - 1)
 		{
-			lineBuffer[index++] = uc;
+			tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index++] = uc;
 		}
 
 		/*return status;*/
 	}
 	
-	return status;
+	return tableDataShell[getpid()-1].status;
 }
