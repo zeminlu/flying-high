@@ -1,7 +1,5 @@
 #include "sysProcess.h"
 
-extern FILE **fileSystem;
-
 process_t processTable[MAX_PROCESS];
 
 process_t *runningProcess = NULL;
@@ -25,9 +23,9 @@ int qtyProccessTable = 0;
 void chupala(){
 		
 		while (1){
-			putchar('B');
+	//		putchar('B');
 	//		puts("ABCDEFGHIJK\n");
-	//		asm volatile("hlt");
+			asm volatile("hlt");
 		}
 		return;
 }
@@ -36,9 +34,9 @@ void puto(){
 	
 	
 	while (1){
-		putchar('A');
+//		putchar('A');
 //		puts("LMNOPQRSTUVW\n");
-//		asm volatile("hlt");
+		asm volatile("hlt");
 	}
 	return;
 }
@@ -46,9 +44,9 @@ void puto(){
 void chupala2(){
 		
 		while (1){
-			putchar('D');
+	//		putchar('D');
 	//		puts("ABCDEFGHIJK\n");
-	//		asm volatile("hlt");
+			asm volatile("hlt");
 		}
 		return;
 }
@@ -57,9 +55,9 @@ void puto2(){
 	
 	
 	while (1){
-		putchar('E');
+//		putchar('E');
 //		puts("LMNOPQRSTUVW\n");
-//		asm volatile("hlt");
+		asm volatile("hlt");
 	}
 	return;
 }

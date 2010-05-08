@@ -22,7 +22,7 @@ stdOutTTY TTYstdOuts[MAX_TTY];
 
 Keycode stdInBuffers[MAX_TTY][MAX_LINE];
 
-Keycode stdOutBuffers[MAX_TTY][VIDEO_MEMORY_SIZE];
+Keycode stdOutBuffers[MAX_TTY][SCREEN_SIZE];
 
 static videoParser videoParserFunctions[] = {
 	printAlarm,
@@ -51,7 +51,6 @@ void initializeTTY( void )
 		ttyTable.listTTY[i]->stdOut->stdOutBuffer = stdOutBuffers[i];
 		ttyTable.listTTY[i]->hasScrolled = 0;
 		ttyTable.listTTY[i]->focusProcess  = 0;
-		ttyTable.listTTY[i]->stdOut->begin = ttyTable.listTTY[i]->stdOut->end = ttyTable.listTTY[i]->stdOut->stdOutBuffer;
 		ttyTable.listTTY[i]->writePointer = 0;
 		ttyTable.listTTY[i]->writeCol = CURSOR_START_COL;
 		ttyTable.listTTY[i]->writeRow = CURSOR_START_ROW;
