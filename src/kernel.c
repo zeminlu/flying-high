@@ -27,30 +27,28 @@ void kernel_main ( void  )
 	_lidt (&idtr);	
 
 	initPaging();
-		
+				
 	clearScreen();
-
-//	initializeFileSystem();
 	
 	initializeTTY();
 
-
 	msg = "\n\tWelcome, you're Flying-High at 0.2 meters!!\n\n";
-//	putsInStdTTY(msg);
+/*	putsInStdTTY(msg);
 	
-	/* Initializing Driver */
-//	putsInStdTTY("\t\tInitializing Drivers..............................................");
+	// Initializing Driver
+	putsInStdTTY("\t\tInitializing Drivers..............................................");
+	
+	
+	//initMouse();
+	putsInStdTTY("Done.\n");
+	
+	// Enabling Interrupts
+	putsInStdTTY("\n\t\tEnabling Interrupts..............................................");
+	putsInStdTTY("Done.\n");
+	
+	putsInStdTTY("\n\tReady.\n\n");
+*/
 	initVideo(CURSOR_START_VISIBLE, DISABLED);
-	
-	
-	/*initMouse();*/
-//	putsInStdTTY("Done.\n");
-	
-	/* Enabling Interrupts */
-//	putsInStdTTY("\n\t\tEnabling Interrupts..............................................");
-//	putsInStdTTY("Done.\n");
-	
-//	putsInStdTTY("\n\tReady.\n\n");
 
 	initMultitasker(init);
 	

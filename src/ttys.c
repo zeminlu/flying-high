@@ -10,8 +10,6 @@ typedef void (*printFunctions)( int, tty_t);
 
 sysTTY ttyTable;
 
-static stdInTTY stdinTableTTY[MAX_TTY];
-
 int sleepCondition[MAX_TTY]= {0};
 
 tty_s TTYsList[MAX_TTY];
@@ -33,7 +31,6 @@ static videoParser videoParserFunctions[] = {
 	printLineFeed,
 	printReturn
 };
-
 
 void initializeTTY( void )
 {
@@ -441,9 +438,6 @@ void refreshTTY(void){
 	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0 && runningProcess->tty != -1){
 		refreshKeyboardBufferTTY();
 		refreshStdout();
-		//if (runningProcess->tty == getFocusTTY()){
-		
-		//}
 		refreshScreen();
 	}
 	

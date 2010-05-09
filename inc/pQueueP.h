@@ -50,9 +50,9 @@ pQueueADT newPQueue( void (*freeFn)(void *), void * (*cpyFn)(void *) );
 void freePQueue( pQueueADT queue );
 
 /**
- *	\fn	int push ( pQueueADT queue, void * data, int priority );
+ *	\fn	int enque ( pQueueADT queue, void * data, int priority );
  *
- *	\brief 	This function push the element in the correct
+ *	\brief 	This function enque the element in the correct
  *			priority node and it will be added at last of
  *			the list.
  *	\code
@@ -60,30 +60,30 @@ void freePQueue( pQueueADT queue );
  *			int data = 9;
  *			queue = newPQueue();
  *			...
- *			push(queue, (void*)(&data) );
+ *			enque(queue, (void*)(&data) );
  *	\endcode
  */
 
-int push( pQueueADT queue, void* data, int priority );
+int enque( pQueueADT queue, void* data, int priority );
 
 /**
- *	\fn	void * pop ( pQueueADT queue );
+ *	\fn	void * deque ( pQueueADT queue );
  *
  *	\brief	This function return the first element of the queue.
- *			After you call to pop, if the proccess doesn't finish
- *			you must push again the control block, if not you don't
+ *			After you call to deque, if the proccess doesn't finish
+ *			you must enque again the control block, if not you don't
  *			do anything.
  *	\code
  *			pQueue * queue;
  *			int	data = 10, ret;
  *
  *			queue = newPQueue();
- *			push( (void*)(&data) );
- *			ret = *((int *)pop(queue));
+ *			enque( (void*)(&data) );
+ *			ret = *((int *)deque(queue));
  *	\endcode
  */
 
-void * pop( pQueueADT queue );
+void * deque( pQueueADT queue );
 
 /**
  *	\fn	int isEmpty( pQueueADT queue);

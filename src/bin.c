@@ -2,31 +2,42 @@
 
 extern dataSlotShell *tableDataShell;
 void init(void *args){
-	int i;
+/*	int i;*/
 	pid_t pid;
-
-	//_Cli();
 		
-	pid = createProcess("puto", puto, NULL, FOREGROUND);
+	pid = createProcess("chupala", chupala, NULL, FOREGROUND);
 	printChar(pid + 0x30);
 	setTty(pid, 0);
 	refreshScreen();
-	
-	
-	pid = createProcess("chupala", chupala, NULL, FOREGROUND);
+		
+	pid = createProcess("puto", puto, NULL, FOREGROUND);
 	setTty(pid, 1);
 	printChar(pid + 0x30);
 	refreshScreen();
 	
-	pid = createProcess("puto", puto2, NULL, FOREGROUND);
+	pid = createProcess("de", de, NULL, FOREGROUND);
 	setTty(pid, 2);
 	printChar(pid + 0x30);
 	refreshScreen();
 	
-	_debug();
-	pid = createProcess("chupala", chupala2, NULL, FOREGROUND);
+	pid = createProcess("mierda", mierda, NULL, FOREGROUND);
 	setTty(pid, 3);
 	printChar(pid + 0x30);
+	refreshScreen();
+
+	pid = createProcess("anda", anda, NULL, FOREGROUND);
+	printChar(pid + 0x30);
+	setTty(pid, 4);
+	refreshScreen();
+
+	pid = createProcess("todo", todo, NULL, FOREGROUND);
+	printChar(pid + 0x30);
+	setTty(pid, 5);
+	refreshScreen();
+
+	pid = createProcess("carajo", carajo, NULL, FOREGROUND);
+	printChar(pid + 0x30);
+	setTty(pid, 6);
 	refreshScreen();
 	
 /*	initDataShell();
@@ -38,7 +49,6 @@ void init(void *args){
 		setTty(pid, i);
 	}
 */		
-	//_Sti();	
 		
 	while(1){
 		asm volatile ("hlt");

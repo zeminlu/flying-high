@@ -75,15 +75,15 @@ void printQueue( pQueueADT queueADT )
 	int num1 = 1, num2 = 2, num3 = 3, ret1,ret2,ret3;
 	
 	queue= newPQueue(freeNode, copyNum);
-	push(queue, (void*)(&num1), 0);
-	push(queue, (void*)(&num3), 3);
+	enque(queue, (void*)(&num1), 0);
+	enque(queue, (void*)(&num3), 3);
 	
 	printQueue(queue);
-	ret1 = *((int*)pop(queue));
-	push(queue, (void*)(&num2), 2);
+	ret1 = *((int*)deque(queue));
+	enque(queue, (void*)(&num2), 2);
 	
-	ret2 = *((int*)pop(queue));
-	ret3 = *((int*)pop(queue));
+	ret2 = *((int*)deque(queue));
+	ret3 = *((int*)deque(queue));
 	
 	printf("num1: %d num2: %d num3: %d\n", ret1, ret2, ret3);
 	freePQueue(queue);
@@ -140,7 +140,7 @@ void freePQueue( pQueueADT queueADT )
 	free(queueADT);
 }
 
-int push( pQueueADT queue, void* data, int prio )
+int enque( pQueueADT queue, void* data, int prio )
 {
 	
 	if( (queue->queue)[prio].pQueueDim == 0 )
@@ -166,7 +166,7 @@ int push( pQueueADT queue, void* data, int prio )
 	return 0;
 }
 
-void * pop( pQueueADT queue )
+void * deque( pQueueADT queue )
 {
 	int i;
 	void * cpyData = NULL;

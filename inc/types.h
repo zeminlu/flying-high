@@ -47,7 +47,7 @@ typedef page_t pageTable_t[PAGE_ENTRIES_PER_TABLE];
 
 typedef struct directory {
 	pageTable_t tables[PAGE_TABLES_QTY];
-	pageTable_t pageTable;
+	pageTable_t pageDirectory;
 } directory_t;
 
 typedef struct frameLocation {

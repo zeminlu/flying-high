@@ -88,5 +88,5 @@ void flush ( FILE * stream )
 }
 
 int putsInStdTTY(const char  *s){
-	return 0;// fputs(s, &(fileSystem[STD_TTY][STDOUT]));
+	return 0;
 }
