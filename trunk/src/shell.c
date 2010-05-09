@@ -367,15 +367,15 @@ static void parseCommand ( void )
 	if ( tableDataShell[getpid()-1].status == RUNNING ) printPrompt();
 }
 
-static void putBackspace ( void )
+/*static void putBackspace ( void )
 {
 	if ( tableDataShell[getpid()-1].index == 0 )
 		return;
 	putchar('\b');
 	--tableDataShell[getpid()-1].index;
-}
+}*/
 
-static void parseBackspace ( void )
+/*static void parseBackspace ( void )
 {
 	int i, ts;
 
@@ -384,19 +384,19 @@ static void parseBackspace ( void )
 			putBackspace();
 	else
 		putBackspace();
-}
+}*/
 
-static void autoComplete ( void )
+/*static void autoComplete ( void )
 {
-	/*
+*/	/*
 	 * Code for autocompliting command
 	 */
 
 	/* If command could not be autocompleted print tab*/
-	tableDataShell[getpid()-1].index += getVideoTabStop();
+/*	tableDataShell[getpid()-1].index += getVideoTabStop();
 	tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index] = '\t';
 	putchar('\t');
-}
+}*/
 
 int shell ( void )
 {

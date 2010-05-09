@@ -21,34 +21,32 @@ void * getKernelHeap(){
 }
 
 void loadCR3(){
-	unsigned int cr0;
-
-	asm volatile("mov %0, %%cr3":: "r"(&(kernelDir->pageTable)));
-	asm volatile("mov %%cr0, %0": "=r"(cr0));
-	cr0 |= 0x80000000;
-	asm volatile("mov %0, %%cr0":: "r"(cr0));
+	asm volatile("mov %0, %%cr3":: "r"(&(kernelDir->pageDirectory)));
 	
 	return;
 }
 
 int initPaging(){
-	unsigned int i;
+	unsigned int i, cr0;
 
 	memset(kernelDir, 0, sizeof(directory_t));
 	memset(framesTable, 0, sizeof(frame_t) * TOTAL_FRAMES_QTY);
 	
 	for (i = FIRST_KERNEL_TABLE ; i < KERNEL_TABLES_QTY ; ++i){
 		initKernelTable(kernelDir->tables[i]);
-		initPage(&(kernelDir->pageTable[i]), TRUE);
-		kernelDir->pageTable[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
+		initPage(&(kernelDir->pageDirectory[i]), TRUE);
+		kernelDir->pageDirectory[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
 	}
 	for ( ; i < PAGE_TABLES_QTY ; ++i){
 		initMallocTable(kernelDir->tables[i], i);
-		initPage(&(kernelDir->pageTable[i]), FALSE);
-		kernelDir->pageTable[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
+		initPage(&(kernelDir->pageDirectory[i]), FALSE);
+		kernelDir->pageDirectory[i].address = ((unsigned int)(&(kernelDir->tables[i]))) >> 12;
 	}
 	
 	loadCR3();
+	asm volatile("mov %%cr0, %0": "=r"(cr0));
+	cr0 |= 0x80000000;
+	asm volatile("mov %0, %%cr0":: "r"(cr0));
 		
 	kernelFrame = getFrame();
 	kernelHeap = (void *)kernelFrame->address;
@@ -106,14 +104,14 @@ int initMallocTable(pageTable_t mallocTable, int dirIndex){
 	dir = dirIndex << 22;
 	for (i = 0, j = 0 ; i < PAGE_ENTRIES_PER_TABLE ; ++i){
 		allocMPage(&(mallocTable[i]));
-		if (j == PAGES_PER_FRAME){
+		if (j == 0){
 			table = i << 12;
 			framesTable[frameIndex].address |= dir;
-			framesTable[frameIndex].address |= table; 
-			j = 0;
+			framesTable[frameIndex].address |= table;
 			++frameIndex;
-		}else{
 			++j;
+		}else{
+			j = ((j + 1) == PAGES_PER_FRAME) ? 0 : j + 1;
 		}
 	}
 
@@ -125,9 +123,9 @@ void setFramePresence(frame_t *frame, int state){
 	unsigned int dirIndex = 0, tableIndex = 0;
 	
 	dirIndex = frame->address >> 22;
+	tableIndex = (frame->address & 0x003FFFFF) >> 12;
 	for (i = 0 ; i < PAGES_PER_FRAME ; ++i){
-		tableIndex = (frame->address + i * PAGE_SIZE) >> 12;
-		((kernelDir->tables)[dirIndex][tableIndex]).present = state;
+		((kernelDir->tables)[dirIndex][tableIndex + i]).present = state;
 	}
 	return;
 }

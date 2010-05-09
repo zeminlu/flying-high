@@ -92,7 +92,7 @@ void _sysExit(int status) {
 
 static void createStackFrame(process_t *process, pfunc_t main, int args) {
 	unsigned *esp, espPushedReg;
-	
+
 	esp = (unsigned *)(((char *)process->stack) + PAGE_SIZE * PAGES_PER_FRAME  - 4);
 	
 	*esp-- = 0x00000000;

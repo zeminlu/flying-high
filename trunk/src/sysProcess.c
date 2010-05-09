@@ -22,41 +22,67 @@ int qtyProccessTable = 0;
 
 void chupala(){
 		
-		while (1){
-	//		putchar('B');
-	//		puts("ABCDEFGHIJK\n");
-			asm volatile("hlt");
-		}
-		return;
+	while (1){
+		puts("Chupala\n");
+		asm volatile("hlt");
+	}
+	return;
 }
 
 void puto(){
 	
 	
 	while (1){
-//		putchar('A');
-//		puts("LMNOPQRSTUVW\n");
+		puts("puto\n");
 		asm volatile("hlt");
 	}
 	return;
 }
 
-void chupala2(){
+void de(){
 		
-		while (1){
-	//		putchar('D');
-	//		puts("ABCDEFGHIJK\n");
-			asm volatile("hlt");
-		}
-		return;
+	while (1){
+		puts("de\n");
+		asm volatile("hlt");
+	}
+	return;
 }
 
-void puto2(){
+void mierda(){
 	
 	
 	while (1){
-//		putchar('E');
-//		puts("LMNOPQRSTUVW\n");
+		puts("mierdaaa!!\n");
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void anda(){
+	
+	
+	while (1){
+		puts("Anda\n");
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void todo(){
+	
+	
+	while (1){
+		puts("todo\n");
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void carajo(){
+	
+	
+	while (1){
+		puts("carajooo!!!!\n");
 		asm volatile("hlt");
 	}
 	return;
@@ -209,6 +235,22 @@ pid_t sysWait(int *status) {
 	*status = runningProcess->waitedStatus;
 	
 	return runningProcess->waitingPid;
+}
+
+void sysSelfBlock(){
+	runningProcess->state = BLOCKED;
+	forceMultitasker();
+	
+	return;
+}
+
+int sysUnblock(pid_t pid){
+	if (processTable[pid].state != BLOCKED){
+		return -1;
+	}
+	processTable[pid].state = READY;
+	
+	return 0;
 }
 
 pid_t sysWaitpid(pid_t pid, int *status, int options) {

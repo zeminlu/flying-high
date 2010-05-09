@@ -16,15 +16,25 @@ void chupala();
 
 void puto();
 
-void chupala2();
+void de();
 
-void puto2();
+void mierda();
+
+void anda();
+
+void todo();
+
+void carajo();
 
 int isMTActivated();
 
 int initMultitasker(pfunc_t init);
 
 void terminate(pid_t pid, int status);
+
+void sysSelfBlock();
+
+int sysUnblock(pid_t pid);
 
 pid_t sysWait(int *status);
 
