@@ -344,7 +344,7 @@ static void parseCommand ( void )
 	commandT * cmd;
 	char *command, *args;
 
-	//putchar('\n');
+	putchar('\n');
 	if ( tableDataShell[getpid()-1].index == 0 )
 	{
 		printPrompt();

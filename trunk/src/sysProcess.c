@@ -333,6 +333,9 @@ void terminate(pid_t pid, int status) {
 	/*setTtyFocusProcess(processTable[pid].tty, (processTable[pid].ppid > 0) ? processTable[pid].ppid: 0);*/
 	processTable[pid].state = TERMINATED;
 	processTable[pid].atomicity = UNATOMIC;
+	if (processTable[pid].level == FOREGROUND && processTable[pid].childsQty == 0){
+		sysSetTTYFocusedProcess(ppid, processTable[pid].tty);
+	}
 	alertWaitingProcesses(pid, status);
 }
 /*

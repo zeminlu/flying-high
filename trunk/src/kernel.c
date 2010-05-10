@@ -32,7 +32,11 @@ void kernel_main ( void  )
 	
 	initializeTTY();
 
-	msg = "\n\tWelcome, you're Flying-High at 0.2 meters!!\n\n";
+	initializeShMems();
+	
+	initializeSemaphores();
+
+	msg = "\n\tWelcome, you're Flying-High at 0.6 meters!!\n\n";
 /*	putsInStdTTY(msg);
 	
 	// Initializing Driver

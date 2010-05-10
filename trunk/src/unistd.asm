@@ -7,13 +7,13 @@
 ;-----------------------------------------------------------------------------;
 section .text
 
+%include "sys.inc"
+
 global write
 global read
 
 global fwrite
 global fread
-
-%include "sys.inc"
 
 kernel:
 	int 	0x80
