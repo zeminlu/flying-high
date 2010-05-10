@@ -11,7 +11,6 @@ extern process_t *runningProcess;
 extern process_t *nextProcess;
 extern process_t *initProcess;
 extern process_t processTable[MAX_PROCESS];
-static int cliAmm = 0;
 
 static FILE *rFile = NULL;
 static FILE *wFile = NULL;
@@ -214,15 +213,6 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	
 	process->childsQty = 0;
 	
-	/*for (i = 0 ; i < MAX_FILES ; ++i){
-		process->files[i] = kMalloc(sizeof(FILE));
-		process->files[i]->buffer = kMalloc(SCREEN_SIZE * sizeof(char));
-		process->files[i]->ptr = process->files[i]->buffer;
-		process->files[i]->fd = i;
-		process->files[i]->flag = (_READ | _WRITE);
-		process->files[i]->bufferSize = SCREEN_SIZE;
-	}*/
-	
 	if ( name != NULL ) {
 		memset(process->name, '\0', MAX_PROCESS_NAME + 1);
 		if ( (nameLen = strlen(name)) > MAX_PROCESS_NAME )
@@ -235,6 +225,10 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	setFramePresence(process->sFrame, FALSE);
 	
 	process->ttyMode = TTY_CANONICAL;
+	
+	if (process->tty > -1 && runningProcess->level == FOREGROUND){
+		sysSetTTYFocusedProcess(process->pid, process->tty);
+	}
 
 	return process->pid;
 }
@@ -273,20 +267,4 @@ int _sys_wait_pid(pid_t pid, int *status, int opt) {
 
 int _sys_kill(int fd1, int fd2) {
 	return 0;
-}
-
-
-void cli(void){
-	/*Deshabilita las interrupciones si cliAmm es igual a cero*/
-	if(cliAmm == 0){
-		_Cli();
-	}
-	++cliAmm;
-}
-
-void sti(void){
-	--cliAmm;
-	if(cliAmm == 0){
-		_Sti();
-	}
 }

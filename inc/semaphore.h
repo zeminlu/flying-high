@@ -1,17 +1,24 @@
 /*
  *	semaphore.h
  */
+#ifndef _SEMAPHORE_H_
+#define _SEMAPHORE_H_
 
 #include "types.h"
+#include "process.h"
 
 #define MAX_SEMS 64
-#define FREE 0
-#define USED !FREE
+#define UNUSED 0
+#define USED !UNUSED
 
-key_t sem_get( int value );
+key_t sem_get();
 
 void sem_free( key_t semid );
 
 void sem_wait( key_t sem, int count );
 
 void sem_signal( key_t sem, int count );
+
+void initializeSemaphores();
+
+#endif

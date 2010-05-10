@@ -2,6 +2,9 @@
  *	shMemory.h
  */
 
+#ifndef _SHMEMORY_H_
+#define _SHMEMORY_H_
+
 #include "semaphore.h"
 
 #define	IPC_RMID	1
@@ -20,3 +23,5 @@ char * shmat(int shmid, key_t *semid);
 int shmDetach(int shmid);
 
 void initializeShMems();
+
+#endif

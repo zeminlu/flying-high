@@ -16,5 +16,7 @@
 #include "bin.h"
 #include "ttys.h"
 #include "file.h"
+#include "shMemory.h"
+#include "semaphore.h"
 
 #endif

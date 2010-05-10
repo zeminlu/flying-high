@@ -37,7 +37,7 @@ LD = ld
 LDFLAGS = -T $(SRC_DIR)link.ld -o
 #
 TARGET1 = kernel.bin
-OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o keyboard_driver.o int_handlers.o queue.o shell.o system.o int80.o process.o memModule.o sysProcess.o kMalloc.o sysMalloc.o uMalloc.o exceptions.o kernelDepth.o schedule.o ttys.o bin.o
+OBJECTS1 = kstart.o libc.o stdio.o libasm.o kernel.o unistd.o string.o syscall.o io.o video_driver.o keyboard_driver.o int_handlers.o queue.o shell.o system.o int80.o process.o memModule.o sysProcess.o kMalloc.o sysMalloc.o uMalloc.o exceptions.o kernelDepth.o schedule.o ttys.o bin.o semaphore.o shMemory.o
 # mouse_driver.o
 ###############################################################################
 .SILENT:
@@ -125,6 +125,10 @@ schedule.o: schedule.c schedule.h
 ttys.o: ttys.c ttys.h
 
 bin.o: bin.c bin.h
+
+semaphore.o: semaphore.c semaphore.h
+
+shMemory.o: shMemory.c shMemory.h
 
 clean:
 	@echo "Clearing" $(OUTPUT_DIR) "directory..."

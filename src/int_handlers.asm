@@ -9,73 +9,6 @@ section .text
 
 %include "sys.inc"
 
-GLOBAL returnAddress
-GLOBAL forceMultitasker
-
-global _int_80_handler
-global _int_08_handler
-global _int_74_handler
-global _int_09_handler
-
-GLOBAL _divide_e_hand
-GLOBAL _debug_e_hand
-GLOBAL _nmi_e_hand
-GLOBAL _break_point_e_hand
-GLOBAL _overflow_e_hand
-GLOBAL _bounds_check_e_hand
-GLOBAL _invalid_opcode_e_hand
-GLOBAL _copro_unavailable_e_hand
-GLOBAL _double_fault_e_hand
-GLOBAL _invalid_tss_e_hand
-GLOBAL _segment_not_present_e_hand
-GLOBAL _stack_e_hand
-GLOBAL _general_protection_e_hand
-GLOBAL _page_fault_e_hand
-GLOBAL _coprocessor_e_hand
-
-EXTERN divideExceptionHandler
-EXTERN debugExceptionHandler
-EXTERN NMIExceptionHandler
-EXTERN breakPointExceptionHandler
-EXTERN overflowExceptionHandler
-EXTERN boundsCheckExceptionHandler
-EXTERN invalidOpcodeExceptionHandler
-EXTERN coprocessorUnavailableExceptionHandler
-EXTERN doubleFaultExceptionHandler
-EXTERN invalidTSSExceptionHandler
-EXTERN segmentNotPresentExceptionHandler
-EXTERN stackExceptionHandler
-EXTERN generalProtectionExceptionHandler
-EXTERN pageFaultExceptionHandler
-EXTERN coprocessorExceptionHandler
-
-EXTERN increaseKernelDepth
-EXTERN decreaseKernelDepth
-
-;extern mouseDriver
-extern timerTick
-extern keyboard_driver
-extern _sys_write
-extern _sys_read
-extern _sys_fwrite
-extern _sys_fread
-extern _sys_create_process
-extern _sys_memmap
-extern _sys_get_tty
-extern _sys_set_tty
-extern sysGetTTYFocusedProcess
-extern sysSetTTYFocusedProcess
-extern _sys_get_pid
-extern _sys_get_ppid
-extern _sys_kill
-extern _sys_wait_pid
-extern multitasker
-extern _sysExit	
-extern refresh
-extern loadCR3
-extern refreshTTY
-extern _debug
-
 forceMultitasker:
 	push 	ebp
 	mov		ebp, esp
@@ -96,11 +29,9 @@ _int_08_handler:					;										   ;
 	pushad							;										   ;
 	call 	increaseKernelDepth		;										   ;
 	call	refreshTTY				;										   ;
-;	call	_debug					;										   ;
 	call	multitasker				;										   ;
 									;										   ;
 returnAddress:						;										   ;
-;	call	_debug					;										   ;
 	mov 	al, 20h					;										   ;
 	out 	20h, al					;										   ;
 	call	decreaseKernelDepth		;										   ;
@@ -151,7 +82,7 @@ __check_SYS_READ:					;	case _SYS_READ:						   ;
 	jmp		__int_80_ret			;										   ;
 
 __check_SYS_FWRITE:					; switch(eax) {							   ;
-	cmp		eax, _SYS_FWRITE			;	case _SYS_WRITE:					   ;
+	cmp		eax, _SYS_FWRITE		;	case _SYS_WRITE:					   ;
 	jnz		__check_SYS_FREAD		;		_sys_write(ebx, ecx, edx);		   ;
 	push	edx						;		break;							   ;
 	push	ecx						;										   ;
@@ -231,7 +162,6 @@ __check_SYS_SET_TTY_FP:				;										   ;
 	call	sysSetTTYFocusedProcess	;										   ;
 	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
-				
 									;										   ;
 __check_SYS_GET_PID:				;										   ;
 	cmp 	eax, _SYS_GET_PID		;										   ;
@@ -259,14 +189,70 @@ __check_SYS_WAIT_PID:				;										   ;
 									;										   ;
 __check_SYS_KILL:					;										   ;
 	cmp 	eax, _SYS_KILL			;										   ;
-	jnz		__int_80_ret			;										   ;
+	jnz		__check_SYS_SHMGET		;										   ;
 	push	ECX						;										   ;
 	push	EBX						;										   ;
 	call	_sys_kill				;										   ;
 	add		esp, 8					;										   ;
 	jmp		__int_80_ret			;										   ;
 
+__check_SYS_SHMGET:					;										   ;
+	cmp 	eax, _SYS_SHMGET		;										   ;
+	jnz		__check_SYS_SHMAT		;										   ;
+	push	ECX						;										   ;
+	push	EBX						;										   ;
+	call	_sys_shmget				;										   ;
+	add		esp, 8					;										   ;
+	jmp		__int_80_ret			;										   ;
 
+__check_SYS_SHMAT:					;										   ;
+	cmp 	eax, _SYS_SHMAT			;										   ;
+	jnz		__check_SYS_SHM_DETACH	;										   ;
+	push	ECX						;										   ;
+	push	EBX						;										   ;
+	call	_sys_shmat				;										   ;
+	add		esp, 8					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_SHM_DETACH:				;										   ;
+	cmp 	eax, _SYS_SHM_DETACH	;										   ;
+	jnz		__check_SYS_SEM_GET		;										   ;
+	push	EBX						;										   ;
+	call	_sys_shm_detach			;										   ;
+	add		esp, 4					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_SEM_GET:				;										   ;
+	cmp 	eax, _SYS_SEM_GET		;										   ;
+	jnz		__check_SYS_SEM_FREE	;										   ;
+	call	_sys_sem_get			;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_SEM_FREE:				;										   ;
+	cmp 	eax, _SYS_SEM_FREE		;										   ;
+	jnz		__check_SYS_SEM_WAIT	;										   ;
+	push	EBX						;										   ;
+	call	_sys_sem_free			;										   ;
+	add		esp, 4					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_SEM_WAIT:				;										   ;
+	cmp 	eax, _SYS_SEM_WAIT		;										   ;
+	jnz		__check_SYS_SEM_SIGNAL	;										   ;
+	push	ECX						;										   ;
+	push	EBX						;										   ;
+	call	_sys_sem_wait			;										   ;
+	add		esp, 8					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_SEM_SIGNAL:				;										   ;
+	cmp 	eax, _SYS_SEM_SIGNAL	;										   ;
+	jnz		__int_80_ret			;										   ;
+	push	ECX						;										   ;
+	push	EBX						;										   ;
+	call	_sys_sem_signal			;										   ;
+	add		esp, 8					;										   ;
+	jmp		__int_80_ret			;										   ;
 									;										   ;
 __int_80_ret:						;										   ;
 	pushad							;										   ;

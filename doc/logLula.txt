@@ -17,3 +17,7 @@ Un gran problema fue el hecho de darle, ante un newline, la linea que la tty aca
 Existe un problema con la shell que no pudimos resolver aun...consiste en que la reimplementacion del manejo de su buffer, que ahora son tantos como shells existan, falla en algun punto y por ello no procesa los comandos. ACTUALIZAR ESTO CUANDO SE SOLUCIONEEEE!!!
 
 Tuve que implementar fread y fwrite para poder escribir en un stream especifico y no unicamente poder hacer write sobre los streams del running process. Ahora con esto los putlines van a andar.
+
+Gracias al buen funcionamiento de paginacion, el malloc antes implementado vuelve a convertirse en una herramienta viable, que nos ayudara a inicializar dinamicamente todo lo que se necesite, de lo cual se puede destacar las variables de informacion de cada shell, dejando de ser los mismos estaticos.
+
+REVISAR: Surgio la duda de si las system calls de los modulos utilitarios como semaforos y shared memory deberian ir en un modulo particular o en conjunto en syscall con el resto de las mismas. Se resolvio ponerlas en syscall para mantener una organizacion coherente de las mismas.

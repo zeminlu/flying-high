@@ -18,9 +18,13 @@ typedef struct semaphore{
 	semQueue_t	waitQueue;
 }semaphore_t;
 
-static semQueue_t queues[MAX_SEMS]
+static semQueue_t queues[MAX_SEMS];
 
 static semaphore_t sems[MAX_SEMS];
+
+static int semIsEmpty(semQueue_t queue){
+	return !queue.pidsQty;
+}
 
 static int semEnque(semQueue_t queue){
 	if (queue.pidsQty == MAX_PROCESS){
@@ -40,11 +44,46 @@ static pid_t semDeque(semQueue_t queue){
 	return queue.pids[queue.actPos = (queue.actPos++ % MAX_SEMS)];	
 }
 
-key_t sem_get( int value ){
+void initializeSemaphores(){
 	int i;
 	
 	for (i = 0 ; i < MAX_SEMS ; ++i){
-		if (sems[i].state == FREE){
+		sems[i].semid = i;
+		sems[i].state = UNUSED;
+		sems[i].sempid = -1;
+		sems[i].semval = 0;
+		sems[i].waitQueue = queues[i];
+		sems[i].waitQueue.actPos = 0;
+		sems[i].waitQueue.pidsQty = 0;
+	}
+	
+	return;
+}
+
+key_t sem_get(){
+	return (key_t)int80(_SYS_SEM_GET, NULL, NULL, NULL);
+}
+
+void sem_free( key_t semid ){
+	int80(_SYS_SEM_FREE, (void *)semid, NULL, NULL);
+	return;
+}
+
+void sem_wait( key_t sem, int count ){
+	int80(_SYS_SEM_WAIT, (void *)sem, (void *)count, NULL);
+	return;
+}
+
+void sem_signal( key_t sem, int count ){
+	int80(_SYS_SEM_SIGNAL, (void *)sem, (void *)count, NULL);
+	return;
+}
+
+key_t _sys_sem_get(){
+	int i;
+	
+	for (i = 0 ; i < MAX_SEMS ; ++i){
+		if (sems[i].state == UNUSED){
 			break;
 		}
 	}
@@ -53,22 +92,19 @@ key_t sem_get( int value ){
 		return -1;
 	}
 	
-	if ((sems[i].waitQueue = newPQueue()) == NULL){
-		return -1;
-	}
 	sems[i].state = USED;
 	sems[i].sempid = getpid();
 		
-	return semid;
+	return sems[i].semid;
 }
 
-void sem_free( key_t semid ){
-	if (sems[semid].state != FREE){
+void _sys_sem_free( key_t semid ){
+	if (sems[semid].state != UNUSED){
 		return;
 	}
 	
 	sems[semid].semval = 0;
-	sems[semid].state = FREE;
+	sems[semid].state = UNUSED;
 	sems[semid].sempid = -1;
 	sems[semid].waitQueue.actPos = 0;
 	sems[semid].waitQueue.pidsQty = 0;
@@ -76,10 +112,10 @@ void sem_free( key_t semid ){
 	return;
 }
 
-int sem_wait(key_t semid){
+int _sys_sem_wait(key_t semid){
 	
 	if (sems[semid].semval != 0){
-		if (enque(sems[semid].waitQueue == -1){
+		if (semEnque(sems[semid].waitQueue) == -1){
 			return -1;
 		}
 		sysSelfBlock();
@@ -89,31 +125,14 @@ int sem_wait(key_t semid){
 	return 0;
 }
 
-int sem_signal(key_t semid){
+int _sys_sem_signal(key_t semid){
 	if (sems[semid].semval != 1){
 		return -1;
 	}
 	
-	if (!isEmpty(semsπ[semid].waitQueue)){
+	if (!semIsEmpty(sems[semid].waitQueue)){
 		sysUnblock(semDeque(sems[semid].waitQueue));
 	}
 	
 	return --sems[semid].semval;
-}
-
-void initializeSemaphores(){
-	int i;
-	
-	for (i = 0 ; i < MAX_SEMS ; ++i){
-		sems[i].semid = i;
-		sems[i].state = FREE;
-		sems[i].sempid = -1;
-		sems[i].semval = 0;
-		sems[i].processQty = 0;
-		sems[i].waitQueue = queues[i];
-		sems[i].waitQueue.actPos = 0;
-		sems[i].waitQueue.pidsQty = 0;
-	}
-	
-	return;
 }

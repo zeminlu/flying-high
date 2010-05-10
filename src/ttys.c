@@ -291,7 +291,7 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 		specialCharPrint[c - '\a'](WRITE_ON_TTY, tty);
 		if (c == '\n' && inStdIn)
 			putLine();
-		if (inStdIn || tty == focusTTY)
+		if ((inStdIn && c != '\n') || (tty == focusTTY && !inStdIn))
 			videoParserFunctions[c - '\a']();
 		return 0;
 	}else

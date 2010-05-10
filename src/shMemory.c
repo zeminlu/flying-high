@@ -10,21 +10,65 @@
 static int freeShMems = MAX_SHMEMS;
 
 typedef struct shMem{
-	int			shmid;
-	key_t		key;
-	int 		shMemSize;
-	frame_t		*shMemFrame;
-	char *		shMemP;
-	key_t 		semid;
-	int			state;
-	int			permFlags;
-	int			appnProcessesAmm;
-	pid_t		appnProcessesPids[MAX_SHMAPPN];
+	int				shmid;
+	key_t			key;
+	int 			shMemSize;
+	frame_t			*shMemFrame;
+	unsigned int	shMemP;
+	key_t 			semid;
+	int				state;
+	int				permFlags;
+	int				appnProcessesAmm;
+	pid_t			appnProcessesPids[MAX_SHMAPPN];
 }shMem_t;
 
 static shMem_t shMemories[MAX_SHMEMS];
 
 int shmget(key_t key, int size){
+	return (int)int80(_SYS_SHMGET, (void *)key, (void *)size, NULL);
+}
+
+char * shmat(int shmid, key_t *semid){
+	return (char *)int80(_SYS_SHMAT, (void *)shmid, (void *)semid, NULL);
+}
+
+int shmDetach(int shmid){
+	return (int)int80(_SYS_SHM_DETACH, (void *)shmid, NULL, NULL);
+}
+
+static void shmDestroy(int shmid){
+	if (shMemories[shmid].state != FREE){
+		return;
+	}
+	shMemories[shmid].state = FREE;
+	shMemories[shmid].key = -1;
+	setFramePresence(shMemories[shmid].shMemFrame, FALSE);
+	freeFrame(shMemories[shmid].shMemFrame);
+	shMemories[shmid].shMemP = 0;
+	shMemories[shmid].shMemSize = 0;
+	sem_free(shMemories[shmid].semid);
+	shMemories[shmid].semid = -1;
+	++freeShMems;
+	
+	return;
+}
+
+void initializeShMems(){
+	int i;
+	
+	for (i = 0 ; i < MAX_SHMEMS ; ++i){
+		shMemories[i].shmid = i;
+		shMemories[i].key = -1;
+		shMemories[i].shMemSize = 0;
+		shMemories[i].shMemFrame = NULL;
+		shMemories[i].shMemP = 0;
+		shMemories[i].semid = -1;
+		shMemories[i].state = FREE;
+		shMemories[i].permFlags = (_READ | _WRITE);
+	}
+}
+
+int _sys_shmget(key_t key, int size){
 	int i, freePos;
 	
 	if (!freeShMems || size > PAGE_SIZE * PAGES_PER_FRAME){
@@ -51,7 +95,7 @@ int shmget(key_t key, int size){
 		return -1;
 	}
 	
-	setFramePresence(shMemories[shmid].shMemFrame, TRUE);
+	setFramePresence(shMemories[freePos].shMemFrame, TRUE);
 	
 	shMemories[freePos].shMemP = shMemories[freePos].shMemFrame->address;
 	
@@ -64,7 +108,7 @@ int shmget(key_t key, int size){
 	return freePos;
 }
 
-char * shmat(int shmid){
+char * _sys_shmat(int shmid){
 	int i;
 	
 	if (shmid >= MAX_SHMEMS || shMemories[shmid].state != BUSY || shMemories[shmid].key == -1 || shMemories[shmid].appnProcessesAmm >= MAX_SHMAPPN){
@@ -81,61 +125,29 @@ char * shmat(int shmid){
 		return NULL;
 	}
 	
-	return shMemories[shmid].shMemP;
+	return (char *)shMemories[shmid].shMemP;
 }
 
-static void shmDestroy(int shmid){
-	if (shMemories[shmid].state != FREE){
-		return;
-	}
-	shMemories[shmid].state = FREE;
-	shMemories[shmid].key = -1;
-	setFramePresence(shMemories[shmid].shMemFrame, FALSE);
-	freeFrame(shMemories[shmid].shMemFrame);
-	shMemories[shmid].shMemP = NULL;
-	shMemories[shmid].size = 0;
-	sem_free(shMemories[shmid].semid);
-	shMemories[shmid].semid = -1;
-	++freeShMems;
-	
-	return;
-}
-
-int shmDetach(int shmid){
+int _sys_shm_detach(int shmid){
 	int i;
 	
 	if (shmid < 0 || shmid >= MAX_SHMEMS){
 		return -1;
 	}
 	
-	for (i = 0 ; i < MAX_SHMAPPNPROCESSES ; ++i){
-		if (shMemories[shmid].appnProcessesPids == getpid()){
-			shMemories[shmid].appnProcessesPids = -1;
+	for (i = 0 ; i < MAX_SHMAPPN ; ++i){
+		if (shMemories[shmid].appnProcessesPids[i] == getpid()){
+			shMemories[shmid].appnProcessesPids[i] = -1;
 			--shMemories[shmid].appnProcessesAmm;
 			break;
 		}
 	}
-	if (i == MAX_SHMAPPNPROCESSES){
+	if (i == MAX_SHMAPPN){
 		return -1;
 	}
-	if (!shmid[shmid].appnProcessesAmm){
+	if (!(shMemories[shmid].appnProcessesAmm)){
 		shmDestroy(shmid);
 	}
 	
-	return shmid[shmid].appnProcessesAmm;
-}
-
-void initializeShMems(){
-	int i;
-	
-	for (i = 0 ; i < MAX_SHMEMS ; ++i){
-		shMemories[i].shmid = i;
-		shMemories[i].key = -1;
-		shMemories[i].shMemSize = 0;
-		shMemories[i].shMemFrame = NULL;
-		shMemories[i].shMemP = NULL;
-		shMemories[i].semid = -1;
-		shMemories[i].state = FREE;
-		shMemories[i].permFlags = (_READ | _WRITE);
-	}
+	return shMemories[shmid].appnProcessesAmm;
 }
