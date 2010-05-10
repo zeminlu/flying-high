@@ -42,7 +42,7 @@ int fputc ( int c, FILE * stream )
 {
 	if ( stream == NULL  )
 		return EOF;
-	if ( write(stream->fd, &c, 1) != 1 )
+	if ( fwrite(stream, &c, 1) != 1 )
 		return EOF;
 	return c;
 }
@@ -53,7 +53,7 @@ int fgetc ( FILE * stream )
 	
 	if ( stream == NULL )
 		return EOF;
-	if(read(stream->fd, &c, 1) != 1 ){
+	if(fread(stream, &c, 1) != 1 ){
 		return EOF;
 	}
 		
@@ -66,7 +66,7 @@ int fputs ( const char * s, FILE * stream )
 
 	if ( s == NULL || stream == NULL )
 		return EOF;
-	if ( (ret = write(stream->fd, s, strlen(s))) == EOF )
+	if ( (ret = fwrite(stream, (char *)s, strlen(s))) == EOF )
 		return EOF;
 	return ret;
 }
@@ -75,7 +75,7 @@ char * fgets ( char * s, int size, FILE * stream )
 {
 	if ( stream == NULL || s == NULL || size <= 0 )
 		return NULL;
-	if ( read(stream->fd, s, size) == EOF )
+	if ( fread(stream, s, size) == EOF )
 		return NULL;
 	return s;
 }

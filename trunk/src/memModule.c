@@ -50,6 +50,7 @@ int initPaging(){
 		
 	kernelFrame = getFrame();
 	kernelHeap = (void *)kernelFrame->address;
+	setKernelHeapPresence(FALSE);
 	
 	return 0;
 }

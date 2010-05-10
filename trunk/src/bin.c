@@ -2,10 +2,10 @@
 
 extern dataSlotShell *tableDataShell;
 void init(void *args){
-/*	int i;*/
+	int i;
 	pid_t pid;
 		
-	pid = createProcess("chupala", chupala, NULL, FOREGROUND);
+/*	pid = createProcess("chupala", chupala, NULL, FOREGROUND);
 	printChar(pid + 0x30);
 	setTty(pid, 0);
 	refreshScreen();
@@ -39,16 +39,19 @@ void init(void *args){
 	printChar(pid + 0x30);
 	setTty(pid, 6);
 	refreshScreen();
-	
-/*	initDataShell();
-	for ( i = 0; i < 3; ++i ) {
+*/	
+
+	initDataShell();
+	for ( i = 0; i < MAX_TTY; ++i ) {
 		if ( (pid = createProcess("sh", shell, NULL, FOREGROUND)) == -1 ) {
 			puts("ERROR: A Shell could not be created.\n");
 		}
-		printChar(pid + 0x30);
 		setTty(pid, i);
+		sysSetTTYFocusedProcess(pid, i);
 	}
-*/		
+		
+	pid = createProcess("idle", idle, NULL, BACKGROUND);
+	setTty(pid, 0);
 		
 	while(1){
 		asm volatile ("hlt");

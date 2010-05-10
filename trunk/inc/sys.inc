@@ -14,6 +14,10 @@ _SYS_GET_PID	equ 7
 _SYS_GET_PPID	equ 8
 _SYS_WAIT_PID	equ 9
 _SYS_KILL		equ 10
+_SYS_FREAD		equ 11
+_SYS_FWRITE		equ	12
+_SYS_GET_TTY_FP equ 13
+_SYS_SET_TTY_FP equ 14
 ;
 ; Standard File Descriptors
 ;

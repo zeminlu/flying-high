@@ -20,6 +20,13 @@ char fileBuffers[MAX_PROCESS][MAX_FILES][SCREEN_SIZE];
 
 int qtyProccessTable = 0;
 
+void idle(){
+	while (1){
+		asm volatile("hlt");
+	}
+	return;
+}
+
 void chupala(){
 		
 	while (1){

@@ -13,6 +13,9 @@ extern process_t *initProcess;
 extern process_t processTable[MAX_PROCESS];
 static int cliAmm = 0;
 
+static FILE *rFile = NULL;
+static FILE *wFile = NULL;
+
 void forceMultitasker();
 void returnAddress();
 void *getKernelHeap();
@@ -28,13 +31,17 @@ size_t _sys_write ( int fd, char * buffer, size_t n )
 	if ( fd < 0 || fd >= MAX_FILES )
 		return -1;
 
-	file = *(runningProcess->files[fd]);
+	file = (wFile == NULL) ? *(runningProcess->files[fd]) : *wFile;
 	if ( file.flag == 0 || (file.flag & _WRITE) != _WRITE )
 		return -1;
 	fileBufferEnd = file.buffer + file.bufferSize - 1;
 	for ( i = 0; n && file.ptr <= fileBufferEnd; ++i, --n )
 		*(file.ptr++) = *buffer++;
-	*(runningProcess->files[fd]) = file;
+	if (wFile == NULL){
+		*(runningProcess->files[fd]) = file;
+	}else{
+		*wFile = file;
+	} 
 
 	return i;
 }
@@ -50,7 +57,7 @@ size_t _sys_read ( int fd, char * buffer, size_t n )
 	if ( fd < 0 || fd >= MAX_FILES )
 		return -1;
 
-	file = *(runningProcess->files[fd]);
+	file = (rFile == NULL) ? *(runningProcess->files[fd]) : *rFile;
 	if ( file.buffer == file.ptr )
 		return -1;
 	if ( file.flag == 0 || (file.flag & _READ) != _READ )
@@ -65,9 +72,37 @@ size_t _sys_read ( int fd, char * buffer, size_t n )
 		memcpy(file.buffer, file.buffer + i, remaining);
 		file.ptr = file.buffer + remaining;
 	}
-	*(runningProcess->files[fd]) = file;
-
+	if (rFile == NULL){
+		*(runningProcess->files[fd]) = file;
+	}else{
+		*rFile = file;
+	}
+	
 	return i;
+}
+
+size_t _sys_fread(FILE *stream, char * buffer, size_t n){
+	size_t ret;
+	
+	rFile = stream;
+	
+	ret = read(stream->fd, buffer, n);
+	
+	rFile = NULL;
+	
+	return ret;
+}
+
+size_t _sys_fwrite(FILE *stream, char * buffer, size_t n){
+	size_t ret;
+	
+	wFile = stream;
+	
+	ret = write(stream->fd, buffer, n);
+	
+	wFile = NULL;
+	
+	return ret;
 }
 
 void * _sys_memmap(int isKernel){
@@ -146,8 +181,12 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	}
 	
 	process->sFrame = getFrame();
+	setFramePresence(process->sFrame, FALSE);
 	process->pFrame = getFrame();
+	setFramePresence(process->pFrame, FALSE);
 	process->hFrame = getFrame();
+	setFramePresence(process->hFrame, FALSE);
+	
 	process->stack = (void *)(process->sFrame->address);
 	process->heap = (void *)(process->hFrame->address);
 	runningProcess->childsQty++;

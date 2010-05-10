@@ -46,6 +46,10 @@ tty_t setTty(pid_t pid, tty_t tty);
 
 tty_t getTty(pid_t pid);
 
+tty_t setTTYFocusedProcess(pid_t pid, tty_t tty);
+
+tty_t getTTYFocusedProcess(tty_t tty);
+
 pid_t getpid(void);
 
 pid_t getppid();

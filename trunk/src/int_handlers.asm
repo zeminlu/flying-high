@@ -57,10 +57,14 @@ extern timerTick
 extern keyboard_driver
 extern _sys_write
 extern _sys_read
+extern _sys_fwrite
+extern _sys_fread
 extern _sys_create_process
 extern _sys_memmap
 extern _sys_get_tty
 extern _sys_set_tty
+extern sysGetTTYFocusedProcess
+extern sysSetTTYFocusedProcess
 extern _sys_get_pid
 extern _sys_get_ppid
 extern _sys_kill
@@ -138,11 +142,31 @@ __check_SYS_WRITE:					; switch(eax) {							   ;
 									;										   ;
 __check_SYS_READ:					;	case _SYS_READ:						   ;
 	cmp		eax, _SYS_READ			;		_sys_read(ebx, ecx, eds);		   ;
-	jnz		__check_SYS_CREATE		;		break;							   ;
+	jnz		__check_SYS_FWRITE		;		break;							   ;
 	push	edx						;										   ;
 	push	ecx						;										   ;
 	push	ebx						;										   ;
 	call	_sys_read				;										   ;
+	add		esp,12					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_FWRITE:					; switch(eax) {							   ;
+	cmp		eax, _SYS_FWRITE			;	case _SYS_WRITE:					   ;
+	jnz		__check_SYS_FREAD		;		_sys_write(ebx, ecx, edx);		   ;
+	push	edx						;		break;							   ;
+	push	ecx						;										   ;
+	push	ebx						;										   ;
+	call	_sys_fwrite				;										   ;
+	add		esp, 12					;										   ;
+	jmp		__int_80_ret			;										   ;
+									;										   ;
+__check_SYS_FREAD:					;	case _SYS_READ:						   ;
+	cmp		eax, _SYS_FREAD			;		_sys_read(ebx, ecx, eds);		   ;
+	jnz		__check_SYS_CREATE		;		break;							   ;
+	push	edx						;										   ;
+	push	ecx						;										   ;
+	push	ebx						;										   ;
+	call	_sys_fread				;										   ;
 	add		esp,12					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
@@ -190,6 +214,24 @@ __check_SYS_GET_TTY:				;										   ;
 	call	_sys_get_tty			;										   ;
 	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
+				
+__check_SYS_GET_TTY_FP:				;										   ;
+	cmp 	eax, _SYS_GET_TTY_FP	;										   ;
+	jnz		__check_SYS_SET_TTY_FP	;										   ;
+	push	ECX						;										   ;
+	push	EBX						;										   ;
+	call	sysGetTTYFocusedProcess	;										   ;
+	add		esp, 8					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_SET_TTY_FP:				;										   ;
+	cmp 	eax, _SYS_SET_TTY_FP	;										   ;
+	jnz		__check_SYS_GET_PID		;										   ;
+	push	EBX						;										   ;
+	call	sysSetTTYFocusedProcess	;										   ;
+	add		esp, 4					;										   ;
+	jmp		__int_80_ret			;										   ;
+				
 									;										   ;
 __check_SYS_GET_PID:				;										   ;
 	cmp 	eax, _SYS_GET_PID		;										   ;
@@ -223,6 +265,8 @@ __check_SYS_KILL:					;										   ;
 	call	_sys_kill				;										   ;
 	add		esp, 8					;										   ;
 	jmp		__int_80_ret			;										   ;
+
+
 									;										   ;
 __int_80_ret:						;										   ;
 	pushad							;										   ;

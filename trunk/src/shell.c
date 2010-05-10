@@ -344,7 +344,7 @@ static void parseCommand ( void )
 	commandT * cmd;
 	char *command, *args;
 
-	putchar('\n');
+	//putchar('\n');
 	if ( tableDataShell[getpid()-1].index == 0 )
 	{
 		printPrompt();
@@ -404,6 +404,7 @@ int shell ( void )
 	unsigned char uc;
 
 	while (1){
+		asm volatile("hlt");
 		if ( tableDataShell[getpid()-1].firstRun )	{
 			tableDataShell[getpid()-1].firstRun = FALSE;
 			puts("Starting Shell...\n");
@@ -413,12 +414,9 @@ int shell ( void )
 		}
 		c = getchar();
 		if ( c == EOF ){
-			puts("Me dormi...");
 			waitTty(getTty(getpid()));
-			puts("y me desperte\n");	
 			continue;
 		}
-		puts("Lei 1 caracter...\n");
 		uc = c;
 		if ( uc == '\n' )
 			parseCommand();
