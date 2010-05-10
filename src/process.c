@@ -23,6 +23,14 @@ tty_t setTty(pid_t pid, tty_t tty) {
 	return (tty_t)int80(_SYS_SET_TTY, (void *)pid, (void *)tty, NULL);
 }
 
+tty_t setTTYFocusedProcess(pid_t pid, tty_t tty) {
+	return (tty_t)int80(_SYS_SET_TTY_FP, (void *)pid, (void *)tty, NULL);
+}
+
+tty_t getTTYFocusedProcess(tty_t tty) {
+	return (tty_t)int80(_SYS_GET_TTY_FP, (void *)tty, NULL, NULL);
+}
+
 tty_t getTty(pid_t pid) {
 	return (tty_t)int80(_SYS_GET_TTY, (void *)pid, NULL, NULL);
 }

@@ -71,4 +71,8 @@ ssize_t write ( int fileds, const void * buffer, size_t count );
  */
 ssize_t read ( int fileds, void * buffer, size_t count );
 
+size_t fread(FILE *stream, void * buffer, size_t count);
+
+size_t fwrite(FILE *stream, void * buffer, size_t count);
+
 #endif

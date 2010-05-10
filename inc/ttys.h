@@ -32,9 +32,7 @@ void putCharTTY( char c, tty_t tty, int inStdIn );
 
 void initializeTTY( void );
 
-int getFocusTTY( void );
-
-void setFocusProcessTTY( tty_t tty, pid_t pid );
+int getFocusedTTY( void );
 
 int changeFocusTTY( tty_t nextTty );
 
@@ -46,9 +44,8 @@ void sysPutS(Keycode *name, int count,tty_t tty);
 
 void sysPutChar(Keycode c, tty_t tty);
 
-void sysSetFocusProcessTTY(pid_t pid, tty_t tty);
+void sysSetTTYFocusedProcess(pid_t pid, tty_t tty);
 
-pid_t sysGetFocusProcessTTY(tty_t tty);
-
+pid_t sysGetTTYFocusedProcess(tty_t tty);
 
 #endif

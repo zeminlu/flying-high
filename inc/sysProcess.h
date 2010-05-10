@@ -12,6 +12,8 @@
 
 void forceMultitasker();
 
+void idle();
+
 void chupala();
 
 void puto();
