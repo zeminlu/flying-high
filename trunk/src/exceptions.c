@@ -143,10 +143,13 @@ void handleException(registers_t regs) {
 	 */
 	puts((const char *)"--------------------------------------------------------------------------------");
 	
-/*	sysKill(sysGetpid(), SIGKILL);
-	signalTty(getFocusTTY());*/
+	kill(getpid());
+	signalTty(getFocusedTTY());
 	refreshTTY();
-while(1);	
+	while(1){
+		asm volatile("hlt");
+	}
+		
 	return;
 }
 

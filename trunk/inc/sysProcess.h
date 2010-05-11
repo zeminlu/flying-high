@@ -32,25 +32,22 @@ int isMTActivated();
 
 int initMultitasker(pfunc_t init);
 
-void terminate(pid_t pid, int status);
+pid_t sysWait(int *status);
+
+pid_t sysWaitpid(pid_t pid, int *status, int options);
 
 void sysSelfBlock();
 
 int sysUnblock(pid_t pid);
 
-pid_t sysWait(int *status);
-
-pid_t sysWaitpid(pid_t pid, int *status, int options);
-
 void waitTty(tty_t tty);
 
 void signalTty(tty_t tty);
 
-tty_t sysGetTty(pid_t pid);
+void terminate(pid_t pid, int status);
 
-tty_t sysSetTty(pid_t pid, tty_t tty);
+process_t *getProcessTable(void);
 
-void initializeFileSystem( void );
-
+char *getProcessName(pid_t pid);
 
 #endif

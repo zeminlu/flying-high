@@ -58,3 +58,67 @@ void init(void *args){
 	}
 	return;
 }
+
+void top(int args) {
+	int i;
+	int status = FALSE;
+	process_t *processTable = getProcessTable();
+
+/*	setVideoOffSet(1, 0);*/
+	clearScreen();
+	while(1){
+		if(getFocusedTTY() != getTty(getpid()))
+			status = TRUE;
+	    if(getTty(getpid()) == getFocusedTTY()){
+			if(status){
+				/*setVideoOffSet(1, 0);*/
+				clearScreen();
+			}
+			/*setVideoOffSet(1, 0);*/
+			status = FALSE;
+		}
+		puts("TOP - Process List                                                          \n");
+		puts("pid    name            state        priority\n");
+		for ( i = 0; i < MAX_PROCESS; ++i ) {
+			if ( processTable[i].pid == -1 )
+				continue;
+
+			puti(i);
+			puts("     ");
+			puts(processTable[i].name);
+			puts("       ");
+			switch ( processTable[i].state ) {
+				case READY:
+					puts("READY");
+					break;
+				case BLOCKED:
+					puts("BLOCKED");
+					break;
+				case WAITING_PID:
+					puts("WAITING PID");
+					break;
+				case WAITING_TIME:
+					puts("WAITING TIME");
+					break;
+				case WAITING_CHILD:
+					puts("WAITING_CHILD");
+					break;
+				case TERMINATED:
+					puts("TERMINATED");
+					break;
+				case RUNNING:
+					puts("RUNNING");
+					break;
+				case DEAD:
+					puts("DEAD");
+					break;
+				default:
+					puts("-------");
+					break;
+			}
+			puts("     ");
+			puti(processTable[i].priority);
+			puts("     \n");
+		}
+	}
+}

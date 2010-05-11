@@ -7,4 +7,6 @@
 
 void init(void *args);
 
+void top(int args);
+
 #endif

@@ -261,10 +261,87 @@ pid_t _sys_get_ppid(){
 	return (runningProcess != NULL) ? runningProcess->ppid:-1;
 }
 
-int _sys_wait_pid(pid_t pid, int *status, int opt) {
+pid_t _sys_wait(int *status) {
+	runningProcess->state = WAITING_CHILD;
+	
+	forceMultitasker();
+	
+	*status = runningProcess->waitedStatus;
+	return runningProcess->waitingPid;
+}
+
+int _sys_wait_pid(pid_t pid, int *status) {
+	if ( pid < 0 || pid >= MAX_PROCESS || status == NULL || processTable[pid].pid == -1 || processTable[pid].ppid != runningProcess->pid )
+		return -1;
+	processTable[pid].sleepingPid = runningProcess->pid;
+	runningProcess->state = WAITING_CHILD;
+
+	forceMultitasker();
+	*status = runningProcess->waitedStatus;
+	return pid;
+}
+
+int _sys_kill(int pid) {
+	int i;
+	pid_t gid;
+		
+	if ( pid >= MAX_PROCESS || pid < 0 ) {
+		return -1;
+	}
+
+	if ( pid == 0 )
+		for ( i = 0; i < MAX_PROCESS; ++i ) {
+			gid = runningProcess->gid;
+			if ( processTable[i].gid == gid )
+				terminate(i, KILL_EXIT_STATUS);
+		}
+	else{
+		for ( i = 0; i < MAX_CHILDS; ++i ) 
+			if(processTable[pid].childs[i] != -1)
+				terminate(processTable[pid].childs[i], KILL_EXIT_STATUS);
+		terminate(pid, KILL_EXIT_STATUS);
+	}
+	
+	forceMultitasker();
 	return 0;
 }
 
-int _sys_kill(int fd1, int fd2) {
+int _sys_set_level(int level) {
+	if ( level != FOREGROUND || level != BACKGROUND || runningProcess == NULL  )
+		return FALSE;
+	runningProcess->level = level;
+	return TRUE;
+}
+
+int _sys_get_level() {
+	return (runningProcess != NULL)?runningProcess->level:-1;
+}
+
+int _sys_get_priority() {
+	return (runningProcess != NULL)?runningProcess->priority:-1;
+}
+
+int _sys_set_priority(pid_t pid, int prio ) {
+	if ( pid <= 0 || pid >= MAX_PROCESS )
+	    return -1;
+	if ( processTable[pid].pid == -1)
+		return -1;
+	if ( prio < 1 )
+	    return -1;
+	return processTable[pid].priority = prio;
+}
+
+unsigned _sys_time(void) {
+	if (runningProcess == NULL)
+		return 0;
+	return runningProcess->tickCounter * MILISECONDS_PER_TICK;
+}
+
+int _sys_set_atomicity(pid_t pid, int atomic){
+	if (pid < 0 || pid > MAX_PROCESS || (atomic != ATOMIC && atomic != UNATOMIC)){
+		return -1;
+	}
+	processTable[pid].atomicity = atomic;
+	
 	return 0;
 }

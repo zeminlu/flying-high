@@ -60,7 +60,7 @@ void runApp (void)
 	}
 }
 
-void wait ( int miliseconds )
+/*void wait ( int miliseconds )
 {
 	waitCounter = miliseconds / MILISECOND_PER_TICKS;
-}
+}*/
