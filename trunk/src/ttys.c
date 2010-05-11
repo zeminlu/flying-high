@@ -150,21 +150,25 @@ static void parseBackSpaceTTY( int where, tty_t tty )
 	static int cond = FALSE;
 	int i;
 	
-	if( !where )
+	if (!where)
 	{	
 		if (kbOffset[tty] > 0){
 			cond = FALSE;
 			--kbOffset[tty];
 			decWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow));
-			printBackspace();
 			if ((ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] == TAB){
 				for (i = 0 ; i < VIDEO_TAB_STOP - 1 ; ++i){
+					if ((ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] != TAB)
+						break;
+					printBackspace();
 					(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = ' ';
 					decWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow));
-					printBackspace();
 				}
-				(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = ' ';
 				cond = TRUE;
+			}
+			if (!cond || (cond && i == VIDEO_TAB_STOP - 1)){
+				printBackspace();
+				(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = ' ';
 			}
 		}
 	}
@@ -177,6 +181,7 @@ static void parseBackSpaceTTY( int where, tty_t tty )
 		else
 			printBackspace ();
 	}
+	
 	return;
 }
 
@@ -185,16 +190,12 @@ static void parseTabTTY( int where, tty_t tty )
 	int i, prevRow;
 	
 	if( !where ){
-		for ( i = 0, prevRow = ttyTable.listTTY[tty]->writeRow; i < VIDEO_TAB_STOP - 1; ++i )
+		for ( i = 0, prevRow = ttyTable.listTTY[tty]->writeRow; i < VIDEO_TAB_STOP ; ++i )
 		{
 			if ( prevRow != ttyTable.listTTY[tty]->writeRow )
 				break;
-			(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = ' ';
-			incWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow) );		
-		}
-		if ( prevRow == ttyTable.listTTY[tty]->writeRow ){
 			(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = TAB;
-			incWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow));		
+			incWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow) );		
 		}
 	}
 	else{
@@ -306,8 +307,8 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 			videoParserFunctions[c - '\a']();
 		}
 		return 0;
-	}else
-	{
+	}
+	else{
 		((ttyTable.listTTY[tty])->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = c;
 		if (inStdIn){
 			ttyTable.listTTY[focusTTY]->stdIn->stdInBuffer[(ttyTable.listTTY[focusTTY]->stdIn->writeOffset)++]= c;
