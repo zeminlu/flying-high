@@ -60,4 +60,16 @@ int waitpid(pid_t pid, int *status);
 
 int kill(int pid);
 
+int setLevel(int level);
+
+int getLevel();
+
+int getPriority();
+
+int setPriority(pid_t pid, int prio);
+
+unsigned time(void);
+
+int setProcessAtomicity(pid_t pid, int atomic);
+
 #endif
