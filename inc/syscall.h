@@ -44,12 +44,22 @@ pid_t _sys_get_pid();
 
 pid_t _sys_get_ppid();
 
-int _sys_wait_pid(pid_t pid, int *status, int opt);
+pid_t _sys_wait(int *status);
 
-int _sys_kill(int fd1, int fd2);
+int _sys_wait_pid(pid_t pid, int *status);
 
-void cli(void);
+int _sys_kill(int pid);
 
-void sti(void);
+int _sys_set_level(int level);
+
+int _sys_get_level();
+
+int _sys_get_priority();
+
+int _sys_set_priority(pid_t pid, int prio );
+
+unsigned _sys_time(void);
+
+int _sys_set_atomicity(pid_t pid, int atomic);
 
 #endif

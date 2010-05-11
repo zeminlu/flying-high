@@ -13,7 +13,7 @@
 void showSplashScreen();
 
 /* Tiempo de espera */
-void wait(int time);
+/*void wait(int time);*/
 
 /* Limpia la pantalla */
 void k_clear_screen();

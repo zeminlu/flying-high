@@ -95,44 +95,6 @@ void carajo(){
 	return;
 }
 
-int getProccessByPid( pid_t pid )
-{
-	int i;
-	
-	/*if( pid == 0 )
-	{
-		return initProcess;
-	}*/
-	for( i = 0 ; i < MAX_PROCESS ; ++i )
-	{
-		if( processTable[i].pid == pid )
-			return i;
-	}
-	return -1;
-}
-
-int getProccessByName( char * name )
-{
-	int i;
-	
-	if( !strcmp(name, "Idle") )
-	{
-		return -1;
-	}
-	for( i = 0 ; i < MAX_PROCESS ; ++i )
-	{
-		if( !strcmp(processTable[i].name, name) )
-			return i;
-	}
-	return -1;
-}
-
-
-
-void refresh(){
-	refreshTTY();
-}
-
 int isMTActivated(){
 	return mtActivated;
 }
@@ -244,6 +206,18 @@ pid_t sysWait(int *status) {
 	return runningProcess->waitingPid;
 }
 
+pid_t sysWaitpid(pid_t pid, int *status, int options) {
+	if ( pid < 0 || pid >= MAX_PROCESS || status == NULL || processTable[pid].pid == -1 || processTable[pid].ppid != runningProcess->pid )
+		return -1;
+	
+	processTable[pid].sleepingPid = runningProcess->pid;
+	runningProcess->state = WAITING_CHILD;
+	forceMultitasker();
+	*status = runningProcess->waitedStatus;
+	
+	return pid;
+}
+
 void sysSelfBlock(){
 	runningProcess->state = BLOCKED;
 	forceMultitasker();
@@ -258,18 +232,6 @@ int sysUnblock(pid_t pid){
 	processTable[pid].state = READY;
 	
 	return 0;
-}
-
-pid_t sysWaitpid(pid_t pid, int *status, int options) {
-	if ( pid < 0 || pid >= MAX_PROCESS || status == NULL || processTable[pid].pid == -1 || processTable[pid].ppid != runningProcess->pid )
-		return -1;
-	
-	processTable[pid].sleepingPid = runningProcess->pid;
-	runningProcess->state = WAITING_CHILD;
-	forceMultitasker();
-	*status = runningProcess->waitedStatus;
-	
-	return pid;
 }
 
 void waitTty(tty_t tty) {
@@ -330,28 +292,20 @@ void terminate(pid_t pid, int status) {
 			processTable[ppid].childs[i] = -1;
 	
 	processTable[ppid].childsQty--;
-	/*setTtyFocusProcess(processTable[pid].tty, (processTable[pid].ppid > 0) ? processTable[pid].ppid: 0);*/
+	if (processTable[pid].level == FOREGROUND && processTable[pid].childsQty == 0){
+		sysSetTTYFocusedProcess((ppid > 0) ? ppid : 0, processTable[pid].tty);
+	}
 	processTable[pid].state = TERMINATED;
 	processTable[pid].atomicity = UNATOMIC;
-	if (processTable[pid].level == FOREGROUND && processTable[pid].childsQty == 0){
-		sysSetTTYFocusedProcess(ppid, processTable[pid].tty);
-	}
 	alertWaitingProcesses(pid, status);
 }
-/*
-void initializeFileSystem( void ){
-	int i,j;
-	char *auxBuffer;
-	fileSystem = kMalloc(sizeof(FILE *) * MAX_TTY);
-	for(i = 0; i < MAX_TTY ; ++i){
-		fileSystem[i] = kMalloc(sizeof(FILE)* MAX_FILES);
-		for(j = 0; j < MAX_FILES; j++){
-			auxBuffer = kMalloc(SCREEN_SIZE * sizeof(char));
-			fileSystem[i][j].buffer = auxBuffer;
-			fileSystem[i][j].fd = j;
-			fileSystem[i][j].ptr = auxBuffer;
-			fileSystem[i][j].flag = (_READ | _WRITE);
-			fileSystem[i][j].bufferSize = SCREEN_SIZE;
-		}
-	}
-}*/
+
+process_t *getProcessTable(void) {
+	return processTable;
+}
+
+char *getProcessName(pid_t pid) {
+	if ( pid > MAX_PROCESS || pid < 0 )
+		return NULL;
+	return processTable[pid].name;
+}

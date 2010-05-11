@@ -112,62 +112,10 @@ static int tabStop (char * value)
 	return 1;
 }
 
-/*static int mouseRate (char *value)
-{
-	int rate = toInt(value);
-	setMouseRate(rate);
-	return 1;
-}
-
-static int mouseEnable (char *value)
-{
-	toLowerCase(value);
-	if (strcmp(value, "true") == 0)
-	{
-		setPointerVisibility(1);
-		setMouseState(ENABLED);
-	}
-	else if (strcmp(value, "false") == 0)
-	{
-		setPointerVisibility(0);
-		setMouseState(DISABLED);
-	}
-	else
-	{
-		puts("Error: Invalid value - ");
-		puts(value);
-		puts(".\n");
-		return 0;	
-	}
-	refreshScreen();
-	return 1;
-}*/
-
-/*static int screenSaverTime (char *value)
-{
-	int time;
-	if ( isAllNumb(value) )
-	{
-		time = toInt(value) * TICKS_PER_SECOND;
-		setScreenSaverTime(time);
-	}
-	else
-	{
-		puts("Error: Invalid value - ");
-		puts(value);
-		puts(".\n");
-		return 0;	
-	}
-	return 1;
-}*/
-
 static propertyT properties[] = {
 	{"pointer-color", pointerColor, "Changes the mouse pointer's color. Valid colors: BLUE, GREEN, CYAN, RED and MAGENTA."},
 	{"video-color", videoColor, "Changes the video color. Valid colors: BLUE, GREEN, CYAN, RED and MAGENTA."},
 	{"tab-stop", tabStop, "Changes amount of spaces a tab stop inserts into a line."},
-	/*{"mouse-rate", mouseRate, "Changes the mouse rate. The amount of ticks before the mouse refreshes it's position."},
-	{"mouse-enable", mouseEnable, "Turn on/off the mouse. Valid values 'true' or 'false'"},*/
-	/*{"screensaver-time", screenSaverTime, "Changes the non-activity time required by the screensaver to be launched."},*/
 	{"", NULL}
 };
 
@@ -255,7 +203,7 @@ static void reboot(char *value)
 
 static void clear ( char * args )
 {
-	wait(500);
+	/*wait(500);*/
 	/*flushStdScreen();*/
 	setPointerVisibility(0);
 	clearScreen();
@@ -418,18 +366,13 @@ int shell ( void )
 			continue;
 		}
 		uc = c;
-		if ( uc == '\n' )
+		if ( uc == '\n' ){
 			parseCommand();
-		/*else if ( uc == '\b' ) 
-			parseBackspace();
-		else if ( uc == '\t' )
-			autoComplete();*/
+		}
 		else if ( tableDataShell[getpid()-1].index < MAX_LINE  - 1)
 		{
 			tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index++] = uc;
 		}
-
-		/*return status;*/
 	}
 	
 	return tableDataShell[getpid()-1].status;

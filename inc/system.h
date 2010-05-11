@@ -73,6 +73,6 @@ int isAppRunning (int app);
  * 		\brief Stops the the execution for n miliseconds.
  *
  */
-void wait ( int miliseconds );
+/*void wait ( int miliseconds );*/
 
 #endif

@@ -25,6 +25,14 @@ _SYS_SEM_GET	equ 18
 _SYS_SEM_FREE	equ 19
 _SYS_SEM_WAIT	equ 20
 _SYS_SEM_SIGNAL	equ 21
+_SYS_WAIT		equ 22
+_SYS_SET_LEVEL	equ 23
+_SYS_GET_LEVEL	equ 24
+_SYS_GET_PRIO	equ 25
+_SYS_SET_PRIO	equ 26
+_SYS_TIME		equ 27
+_SYS_SET_ATOM	equ 28
+
 ;
 ; Standard File Descriptors
 ;
@@ -102,7 +110,14 @@ EXTERN sysSetTTYFocusedProcess
 EXTERN _sys_get_pid
 EXTERN _sys_get_ppid
 EXTERN _sys_kill
+EXTERN _sys_wait
 EXTERN _sys_wait_pid
+EXTERN _sys_set_level
+EXTERN _sys_get_level
+EXTERN _sys_set_priority
+EXTERN _sys_get_priority
+EXTERN _sys_time
+EXTERN _sys_set_atomicity
 EXTERN multitasker
 EXTERN _sysExit	
 EXTERN refresh

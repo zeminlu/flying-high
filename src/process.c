@@ -23,16 +23,16 @@ tty_t setTty(pid_t pid, tty_t tty) {
 	return (tty_t)int80(_SYS_SET_TTY, (void *)pid, (void *)tty, NULL);
 }
 
+tty_t getTty(pid_t pid) {
+	return (tty_t)int80(_SYS_GET_TTY, (void *)pid, NULL, NULL);
+}
+
 tty_t setTTYFocusedProcess(pid_t pid, tty_t tty) {
 	return (tty_t)int80(_SYS_SET_TTY_FP, (void *)pid, (void *)tty, NULL);
 }
 
 tty_t getTTYFocusedProcess(tty_t tty) {
 	return (tty_t)int80(_SYS_GET_TTY_FP, (void *)tty, NULL, NULL);
-}
-
-tty_t getTty(pid_t pid) {
-	return (tty_t)int80(_SYS_GET_TTY, (void *)pid, NULL, NULL);
 }
 
 pid_t getpid(void) {
@@ -43,10 +43,38 @@ pid_t getppid() {
 	return (pid_t)int80(_SYS_GET_PPID, NULL, NULL, NULL);
 }
 
-int waitpid(pid_t pid, int *status, int opt) {
-	return (int)int80(_SYS_WAIT_PID, (void *)pid, (void *)status, (void *)opt);
+int wait(int *status) {
+	return (int)int80(_SYS_WAIT, (void *)status, NULL, NULL);
 }
 
-int kill(int fd1, int fd2) {
-	return (int)int80(_SYS_KILL, (void *)fd1, (void *)fd2, NULL);
+int waitpid(pid_t pid, int *status) {
+	return (int)int80(_SYS_WAIT_PID, (void *)pid, (void *)status, NULL);
+}
+
+int kill(int pid) {
+	return (int)int80(_SYS_KILL, (void *)pid, NULL, NULL);
+}
+
+int setLevel(int level){
+	return (int)int80(_SYS_SET_LEVEL, (void *)level, NULL, NULL);
+}
+
+int getLevel(){
+	return (int)int80(_SYS_GET_LEVEL, NULL, NULL, NULL);
+}
+
+int getPriority(){
+	return (int)int80(_SYS_GET_PRIO, NULL, NULL, NULL);
+}
+
+int setPriority(pid_t pid, int prio){
+	return (int)int80(_SYS_SET_PRIO, (void *)pid, (void *)prio, NULL);
+}
+
+unsigned time(void){
+	return (unsigned)int80(_SYS_TIME, NULL, NULL, NULL);
+}
+
+int setProcessAtomicity(pid_t pid, int atomic) {
+	return (int)int80(_SYS_SET_ATOM, (void *)pid, (void *)atomic, NULL);
 }

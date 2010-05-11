@@ -54,8 +54,10 @@ pid_t getpid(void);
 
 pid_t getppid();
 
-int waitpid(pid_t pid, int *status, int opt);
+int wait(int *status);
 
-int kill(int fd1, int fd2);
+int waitpid(pid_t pid, int *status);
+
+int kill(int pid);
 
 #endif
