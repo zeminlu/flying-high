@@ -8,26 +8,53 @@
  */
 #include "shell.h"
 static char * prompt = "root@flyingHighOS$>";
-
-/*
-static int firstRun = 1;
-static int status = RUNNING;
-static char lineBuffer[MAX_LINE];
-static char enteredCommand[MAX_LINE];
-static int index = 0;
-static char * prompt = "root@flyingHighOS$>";
-*/
+char bufferA[MAX_LINE];
+char bufferB[MAX_LINE];
 
 static dataSlotShell tableDataShell[MAX_TTY];
 
-void initDataShell(void){
+int initGlobalDataShell(){
 	int i;
 	
 	for( i = 0; i < MAX_TTY; i++){
-		tableDataShell[i].status = RUNNING;
-		tableDataShell[i].index = 0;
-		tableDataShell[i].firstRun = TRUE;
+		tableDataShell[i].pid = 0;
 	}
+	return 0;
+}
+
+static int initDataShell(){
+	int i;
+	pid_t pid ;
+	pid = getpid();
+	
+	if(pid > 0){
+		for( i = 0; i < MAX_TTY; i++){
+			if(tableDataShell[i].pid == 0){
+				tableDataShell[i].pid = pid;
+				tableDataShell[i].status = RUNNING;
+				tableDataShell[i].index = 0;
+				tableDataShell[i].lineBuffer = malloc(sizeof(char)* MAX_LINE);
+				tableDataShell[i].enteredCommand = malloc(sizeof(char)* MAX_LINE);
+				return TRUE;	
+			}
+		}
+	}
+	return FALSE;
+}
+
+static int getGlobalDataIndex(){
+	int i;
+	pid_t pid;
+	
+	pid = getpid();
+	
+	for( i = 0; i < MAX_TTY; i++){
+		if(tableDataShell[i].pid == pid){
+			return i;
+		}
+	}
+	/*Exit with error, no a valid pid, or No sta en la tabla*/
+	return -1;	
 }
 
 /* SYSTEM PROPERTIES */
@@ -83,11 +110,11 @@ static int videoColor ( char * value )
 	if ( getColor(value, &color) )
 	{
 		color &= 0xF;
-		setPointerVisibility(0);
+		/*setPointerVisibility(0);*/
 		setVideoColor(color);
 		updateColor();
 		refreshScreen();
-		setPointerVisibility(1);
+		/*setPointerVisibility(1);*/
 	}
 	else
 	{
@@ -160,6 +187,7 @@ static void reboot(char *);
 static void shutdown(char *);
 static void mkdir(char *);
 static void printPhrasing(char *);
+static void startTop(char *);
 
 static commandT commands[] = {
 	{"clear", clear, "Clears Screen."},
@@ -172,6 +200,7 @@ static commandT commands[] = {
 	{"mkdir", mkdir, "Makes a new directory."},
 	{"print-sysproperties", printProperties, "Prints the lisf of system properties that can be set by the set command."},
 	{"print-statement", printPhrasing, "Prints the statment of the project."},
+	{"top", startTop, "Runs the top process."},
 	{"", NULL, ""}
 };
 
@@ -208,7 +237,7 @@ static void clear ( char * args )
 	setPointerVisibility(0);
 	clearScreen();
 	setCursorPosition(0, 0);
-	setPointerVisibility(1);
+//	setPointerVisibility(1);
 }
 
 static void echo ( char * args )
@@ -219,9 +248,18 @@ static void echo ( char * args )
 
 void logout ( char * args )
 {
+	int indexDT;
+	
+	indexDT = getGlobalDataIndex();	
+	
+	if(indexDT != -1){
+		/*el pid ingresado no es valido hay que salir con error*/
+		return;
+	}
+	
 	puts("[logout]\n");
 	puts("Exiting Shell...\n");
-	tableDataShell[getpid() - 1].status = DEAD;
+	tableDataShell[indexDT].status = DEAD;
 }
 
 static void help ( char * args )
@@ -270,6 +308,17 @@ static void set ( char * args )
 	setProperty(property, value);
 }
 
+static void startTop(char *args){
+	pid_t pid;
+	int status;
+	
+	if ((pid = createProcess("top", top, NULL, FOREGROUND)) == -1 ) {
+		puts("ERROR: Top could not be created.\n");
+	}
+	waitpid(pid, &status);
+	return;		
+}
+
 /* END SHELL COMMANDS */
 
 static commandT * getCommand ( char * command )
@@ -291,28 +340,35 @@ static void parseCommand ( void )
 {
 	commandT * cmd;
 	char *command, *args;
-
+	int indexDT;
+	
+	indexDT = getGlobalDataIndex();
+	if(indexDT == -1){
+		/*EL pid ingresado es invalido,*/
+		return;
+	}
+	
 	putchar('\n');
-	if ( tableDataShell[getpid()-1].index == 0 )
+	if ( tableDataShell[indexDT].index == 0 )
 	{
 		printPrompt();
 		return;
 	}
-	tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index] = '\0';
-	strcpy(tableDataShell[getpid()-1].enteredCommand, tableDataShell[getpid()-1].lineBuffer);
-	command = strtok(tableDataShell[getpid()-1].enteredCommand, " ");
+	tableDataShell[indexDT].lineBuffer[tableDataShell[indexDT].index] = '\0';
+	strcpy(tableDataShell[indexDT].enteredCommand, tableDataShell[indexDT].lineBuffer);
+	command = strtok(tableDataShell[indexDT].enteredCommand, " ");
 	args = strtok(NULL, "");
 	if ( (cmd = getCommand(command)) != NULL )
 		cmd->func(args);
 	else
 	{
 		puts("shell: ");
-		puts(tableDataShell[getpid()-1].lineBuffer);
+		puts(tableDataShell[indexDT].lineBuffer);
 		puts(": Invalid Command\n");
 	}
 
-	tableDataShell[getpid()-1].index = 0;
-	if ( tableDataShell[getpid()-1].status == RUNNING ) printPrompt();
+	tableDataShell[indexDT].index = 0;
+	if ( tableDataShell[indexDT].status == RUNNING ) printPrompt();
 }
 
 /*static void putBackspace ( void )
@@ -350,16 +406,27 @@ int shell ( void )
 {
 	int c;
 	unsigned char uc;
+	int indexDT, status;
+	
+	setProcessAtomicity(getpid(), ATOMIC);
+	status = initDataShell();
+	setProcessAtomicity(getpid(), UNATOMIC);
 
+	if(status == FALSE){
+		/* hay que salir con error*/
+		return -1;
+	}
+	
+	indexDT = getGlobalDataIndex();
+	puts("Starting Shell Nr.:");
+	puti(getTty(getpid()) + 1);
+	puts("...\n");
+	puts("\tEnter 'help' for a list of commands.\n");
+	puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
+	printPrompt();
+	
 	while (1){
 		asm volatile("hlt");
-		if ( tableDataShell[getpid()-1].firstRun )	{
-			tableDataShell[getpid()-1].firstRun = FALSE;
-			puts("Starting Shell...\n");
-			puts("\tEnter 'help' for a list of commands.\n");
-			puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
-			printPrompt();
-		}
 		c = getchar();
 		if ( c == EOF ){
 			waitTty(getTty(getpid()));
@@ -369,11 +436,10 @@ int shell ( void )
 		if ( uc == '\n' ){
 			parseCommand();
 		}
-		else if ( tableDataShell[getpid()-1].index < MAX_LINE  - 1)
-		{
-			tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index++] = uc;
+		else if ( tableDataShell[indexDT].index < MAX_LINE  - 1){
+			tableDataShell[indexDT].lineBuffer[tableDataShell[indexDT].index++] = uc;
 		}
 	}
 	
-	return tableDataShell[getpid()-1].status;
+	return tableDataShell[indexDT].status;
 }

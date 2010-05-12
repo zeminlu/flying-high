@@ -7,6 +7,6 @@
 
 void init(void *args);
 
-void top(int args);
+void top(char *args);
 
 #endif

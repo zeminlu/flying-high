@@ -19,6 +19,8 @@
 #include "video_adapter.h"
 #include "types.h"
 #include "process.h"
+#include "uMalloc.h"
+#include "bin.h"
 
 /**
  * \fn int shell ( void )
@@ -28,6 +30,6 @@
  */
 int shell ( void );
 
-void initDataShell(void);
+int initGlobalDataShell(void);
 
 #endif
