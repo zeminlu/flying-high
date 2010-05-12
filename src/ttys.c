@@ -410,9 +410,7 @@ void putCharTTY( char c, tty_t tty, int inStdIn )
 	if( ttyTable.listTTY[tty]->writePointer == SCREEN_SIZE )
 	{
 		ttyTable.listTTY[tty]->writePointer = 0;
-		/*ttyTable.listTTY[tty]->writeCol = 0;
-		ttyTable.listTTY[tty]->writeRow = 0;
-		*/ttyTable.listTTY[tty]->hasScrolled++;
+		ttyTable.listTTY[tty]->hasScrolled++;
 	}
 	parse = parseCharTTY(c, tty, inStdIn);
 }
@@ -541,4 +539,42 @@ Keycode sysGetChar(tty_t tty){
 	return  aux;
 }
 */
+
+void clearTTYScreen( void )
+{
+	int clear = 0, focus;
+	
+	focus = getFocusedTTY();
+	while( clear != SCREEN_SIZE )
+	{
+		(ttyTable.listTTY[focus]->stdOut->stdOutBuffer)[clear] = ' ';
+		clear++;
+	}
+	clearScreen();
+}
+
+void setTTYCursorPosition( int x, int y)
+{
+	int focus;
+	
+	if( x >= SCREEN_HEIGTH || y >= SCREEN_WIDTH )
+		return;
+	
+	focus = getFocusedTTY();
+	ttyTable.listTTY[focus]->writePointer = SCREEN_WIDTH * x + y;
+	ttyTable.listTTY[focus]->writeRow = x;
+	ttyTable.listTTY[focus]->writeCol = y;
+	setPointerPosition(x,y); 
+	
+}
+
+void putCharATTTYPosition( int c, int row, int col)
+{
+	if( row >= SCREEN_HEIGTH || col >= SCREEN_WIDTH )
+		return;
+	setTTYCursorPosition(row, col);
+	putCharTTY(c, getFocusedTTY(), FALSE);
+	putCharAtFixedPos(c, getVideoColor(), row, col );
+	refreshScreen();
+}
 
