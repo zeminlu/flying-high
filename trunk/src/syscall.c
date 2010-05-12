@@ -11,6 +11,7 @@ extern process_t *runningProcess;
 extern process_t *nextProcess;
 extern process_t *initProcess;
 extern process_t processTable[MAX_PROCESS];
+extern unsigned int tickCount;
 
 static FILE *rFile = NULL;
 static FILE *wFile = NULL;
@@ -341,6 +342,10 @@ unsigned _sys_time(void) {
 	if (runningProcess == NULL)
 		return 0;
 	return runningProcess->tickCounter * MILISECONDS_PER_TICK;
+}
+
+unsigned _sys_uptime(){
+	return tickCount * MILISECONDS_PER_TICK;
 }
 
 int _sys_set_atomicity(pid_t pid, int atomic){

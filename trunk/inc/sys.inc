@@ -32,6 +32,7 @@ _SYS_GET_PRIO	equ 25
 _SYS_SET_PRIO	equ 26
 _SYS_TIME		equ 27
 _SYS_SET_ATOM	equ 28
+_SYS_UPTIME		equ 29
 
 ;
 ; Standard File Descriptors
@@ -95,6 +96,8 @@ EXTERN coprocessorExceptionHandler
 EXTERN increaseKernelDepth
 EXTERN decreaseKernelDepth
 
+EXTERN tickCount
+
 EXTERN timerTick
 EXTERN keyboard_driver
 EXTERN _sys_write
@@ -117,6 +120,7 @@ EXTERN _sys_get_level
 EXTERN _sys_set_priority
 EXTERN _sys_get_priority
 EXTERN _sys_time
+EXTERN _sys_uptime
 EXTERN _sys_set_atomicity
 EXTERN multitasker
 EXTERN _sysExit	
