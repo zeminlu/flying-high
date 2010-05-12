@@ -189,6 +189,10 @@ static void mkdir(char *);
 static void printPhrasing(char *);
 static void startTop(char *);
 static void startKill(char *);
+static void startPrintA(char *);
+static void startPrintB(char *);
+static void startNothing(char *);
+static void startPageFault(char *);
 
 static commandT commands[] = {
 	{"clear", clear, "Clears Screen."},
@@ -203,6 +207,10 @@ static commandT commands[] = {
 	{"print-statement", printPhrasing, "Prints the statment of the project."},
 	{"top", startTop, "Runs the top process."},
 	{"kill",startKill, "Takes the pid of the standar input, and Kill the process associated."},
+	{"printA", startPrintA, "Prints 'A' in the stdout, could be running in background."},
+	{"printB", startPrintB, "Prints 'B' in the stdout, could be running in background."},
+	{"nothing", startNothing, "An idle process, could be running in background."},
+	{"pageFault", startPageFault, "Force a page fault exception."},
 	{"", NULL, ""}
 };
 
@@ -330,6 +338,65 @@ static void startKill(char *args){
 	kill((pid_t)pid);
 }
 
+static void startPrintA(char *args){
+	pid_t pid;
+	int status;
+	int mode;
+	
+	mode = *args =='&' ? BACKGROUND:FOREGROUND;
+	
+	if ((pid = createProcess("printA", (void(*)(void *))printA, NULL, mode)) == -1 ) {
+		puts("ERROR: printA could not be created.\n");
+	}
+	if(mode == FOREGROUND){
+		waitpid(pid, &status);
+	}
+	return;
+}
+
+static void startPrintB(char *args){
+	pid_t pid;
+	int status;
+	int mode;
+	
+	mode = *args =='&' ? BACKGROUND:FOREGROUND;
+	
+	if ((pid = createProcess("printB", (void(*)(void *))printB, NULL, mode)) == -1 ) {
+		puts("ERROR: printB could not be created.\n");
+	}
+	if(mode == FOREGROUND){
+		waitpid(pid, &status);
+	}
+	return;
+}
+
+static void startNothing(char *args){
+	pid_t pid;
+	int status;
+	int mode;
+	
+	mode = *args =='&' ? BACKGROUND:FOREGROUND;
+	
+	if ((pid = createProcess("nothing", (void(*)(void *))nothing, NULL, mode)) == -1 ) {
+		puts("ERROR: nothing could not be created.\n");
+	}
+	if(mode == FOREGROUND){
+		waitpid(pid, &status);
+	}
+	return;
+}
+
+static void startPageFault(char *args){
+	pid_t pid;
+	int status;
+	
+	if ((pid = createProcess("nothing", (void(*)(void *))pageFault, NULL, FOREGROUND)) == -1 ) {
+		puts("ERROR: nothing could not be created.\n");
+	}
+	waitpid(pid, &status);
+
+	return;
+}
 /* END SHELL COMMANDS */
 
 static commandT * getCommand ( char * command )
