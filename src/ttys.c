@@ -369,6 +369,7 @@ static void refreshScreenTTY( void )
 	if( ttyTable.listTTY[focusTTY]->hasScrolled > 0 ){
 		
 		ttyTable.listTTY[focusTTY]->readPointer = ttyTable.listTTY[focusTTY]->writePointer;
+		ttyTable.listTTY[focusTTY]->readCol = ttyTable.listTTY[focusTTY]->writeCol;
 		do{
 			incReadPointer( &(ttyTable.listTTY[focusTTY]->readPointer), &(ttyTable.listTTY[focusTTY]->readCol), &(ttyTable.listTTY[focusTTY]->readRow));
 		}while( ttyTable.listTTY[focusTTY]->readCol != 0 );
@@ -381,6 +382,8 @@ static void refreshScreenTTY( void )
 		
 		if( ttyTable.listTTY[focusTTY]->readPointer == SCREEN_SIZE ){
 			ttyTable.listTTY[focusTTY]->readPointer = 0;
+			ttyTable.listTTY[focusTTY]->readCol = 0;
+			ttyTable.listTTY[focusTTY]->readRow = 0;
 		}
 		character = (ttyTable.listTTY[focusTTY]->stdOut->stdOutBuffer)[ttyTable.listTTY[focusTTY]->readPointer];
 		if( '\a' <= character && character <= '\r' )
@@ -407,7 +410,9 @@ void putCharTTY( char c, tty_t tty, int inStdIn )
 	if( ttyTable.listTTY[tty]->writePointer == SCREEN_SIZE )
 	{
 		ttyTable.listTTY[tty]->writePointer = 0;
-		ttyTable.listTTY[tty]->hasScrolled++;
+		/*ttyTable.listTTY[tty]->writeCol = 0;
+		ttyTable.listTTY[tty]->writeRow = 0;
+		*/ttyTable.listTTY[tty]->hasScrolled++;
 	}
 	parse = parseCharTTY(c, tty, inStdIn);
 }
