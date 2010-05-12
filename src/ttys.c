@@ -61,6 +61,31 @@ void initializeTTY( void )
 /*
 *	Static functions for putcharTTY
 */
+void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow){
+	*readPointer = ttyTable.listTTY[tty]->readPointer;
+	*readCol = ttyTable.listTTY[tty]->readCol;
+	*readRow = ttyTable.listTTY[tty]->readRow;
+}
+
+void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow){
+	*writePointer = ttyTable.listTTY[tty]->writePointer;
+	*writeCol = ttyTable.listTTY[tty]->writeCol;
+	*writeRow = ttyTable.listTTY[tty]->writeRow;
+	
+}
+
+void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow){
+	ttyTable.listTTY[tty]->readPointer = readPointer;
+	ttyTable.listTTY[tty]->readCol = readCol;
+	ttyTable.listTTY[tty]->readRow = readRow;
+	
+}
+
+void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow){
+	ttyTable.listTTY[tty]->writePointer = writePointer;
+	ttyTable.listTTY[tty]->writeCol = writeCol;
+	ttyTable.listTTY[tty]->writeRow = writeRow;	
+}
 
 static void incReadPointer ( int *readPointer, int *readCol, int *readRow )
 {
@@ -156,6 +181,7 @@ static void parseBackSpaceTTY( int where, tty_t tty )
 			cond = FALSE;
 			--kbOffset[tty];
 			decWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow));
+			(ttyTable.listTTY[tty]->stdIn->writeOffset)--;
 			if ((ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] == TAB){
 				for (i = 0 ; i < VIDEO_TAB_STOP - 1 ; ++i){
 					if ((ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] != TAB)
@@ -163,6 +189,7 @@ static void parseBackSpaceTTY( int where, tty_t tty )
 					printBackspace();
 					(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = ' ';
 					decWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow));
+					--(ttyTable.listTTY[tty]->stdIn->writeOffset);
 				}
 				cond = TRUE;
 			}
@@ -297,9 +324,10 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 
 	if ('\a' <= c && c <= '\r')
 	{
-		specialCharPrint[c - '\a'](WRITE_ON_TTY, tty);
 		if (c == '\n' && inStdIn)
 			putLine();
+		else
+			specialCharPrint[c - '\a'](WRITE_ON_TTY, tty);
 		if (c == '\t' && inStdIn){
 			++kbOffset[tty];
 		}

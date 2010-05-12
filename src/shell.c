@@ -236,9 +236,9 @@ static void clear ( char * args )
 {
 	/*wait(500);*/
 	/*flushStdScreen();*/
-	setPointerVisibility(0);
-	clearScreen();
-	setCursorPosition(0, 0);
+//	setPointerVisibility(0);
+//	clearTYTScreen();
+//	setTTYCursorPosition(0, 0);
 /*	setPointerVisibility(1);*/
 }
 
@@ -253,8 +253,7 @@ void logout ( char * args )
 	int indexDT;
 	
 	indexDT = getGlobalDataIndex();	
-	
-	if(indexDT != -1){
+	if(indexDT == -1){
 		/*el pid ingresado no es valido hay que salir con error*/
 		return;
 	}
@@ -329,7 +328,6 @@ static void startKill(char *args){
 	puts(processTable[pid].name);
 	puts("...\n");
 	kill((pid_t)pid);
-	
 }
 
 /* END SHELL COMMANDS */
@@ -418,7 +416,6 @@ static void parseCommand ( void )
 int shell ( void )
 {
 	int c;
-	int aux;
 	unsigned char uc;
 	int indexDT, status;
 	
@@ -433,14 +430,13 @@ int shell ( void )
 	
 	indexDT = getGlobalDataIndex();
 	puts("Starting Shell Nr.:");
-	aux = getFocusedTTY();
-/*	puti(getFocusedTTY());*/
+	puti(runningProcess->tty + 1);
 	puts("...\n");
 	puts("\tEnter 'help' for a list of commands.\n");
 	puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");
 	printPrompt();
 	
-	while (1){
+	while (tableDataShell[indexDT].status == RUNNING){
 		asm volatile("hlt");
 		c = getchar();
 		if ( c == EOF ){

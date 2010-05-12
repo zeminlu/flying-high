@@ -26,6 +26,14 @@ extern process_t *initProcess;
 
 extern Keycode *keyboardBuffer;
 
+void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow);
+
+void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow);
+
+void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow);
+
+void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow);
+
 void putsTTY( unsigned char *name, int count, tty_t tty );
 
 void putCharTTY( char c, tty_t tty, int inStdIn );

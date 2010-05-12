@@ -32,10 +32,6 @@ int isMTActivated();
 
 int initMultitasker(pfunc_t init);
 
-pid_t sysWait(int *status);
-
-pid_t sysWaitpid(pid_t pid, int *status, int options);
-
 void sysSelfBlock();
 
 int sysUnblock(pid_t pid);
@@ -49,5 +45,9 @@ void terminate(pid_t pid, int status);
 process_t *getProcessTable(void);
 
 char *getProcessName(pid_t pid);
+
+void refreshProcessesCPUs();
+
+void clearProcessesTicks();
 
 #endif

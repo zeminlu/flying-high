@@ -278,11 +278,12 @@ pid_t _sys_wait(int *status) {
 int _sys_wait_pid(pid_t pid, int *status) {
 	if ( pid < 0 || pid >= MAX_PROCESS || status == NULL || processTable[pid].pid == -1 || processTable[pid].ppid != runningProcess->pid )
 		return -1;
-	processTable[pid].sleepingPid = runningProcess->pid;
-	runningProcess->state = WAITING_CHILD;
+	runningProcess->waitingPid = pid;
+	runningProcess->state = WAITING_PID;
 
 	forceMultitasker();
 	*status = runningProcess->waitedStatus;
+	
 	return pid;
 }
 

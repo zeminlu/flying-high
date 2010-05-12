@@ -101,6 +101,7 @@ typedef struct process_t {
 	FILE *files[MAX_FILES];
 	int rpgPrior;
 	unsigned tickCounter;
+	double cpuPercent;
 	int priority;
 	int level;
 	pid_t waitingPid;

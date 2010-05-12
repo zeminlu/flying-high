@@ -23,6 +23,7 @@ int qtyProccessTable = 0;
 void idle(){
 	while (1){
 		asm volatile("hlt");
+		asm volatile("hlt");
 	}
 	return;
 }
@@ -147,8 +148,6 @@ int initMultitasker(pfunc_t init) {
 	for ( i = 0; i < MAX_TTY; ++i )
 		ttyRestPlace[i] = -1;
 	initProcess = &processTable[pid];
-/*	initProcess->files[0] = stdin;
-	initProcess->files[1] = stdout;*/
 	initProcess->priority = 0;
 	nextProcess = initProcess;
 	mtActivated = TRUE;
@@ -185,6 +184,7 @@ void multitasker(void) {
 	}
 	freeTerminatedProcesses();
 	runningProcess = nextProcess;
+	++runningProcess->tickCounter;
 	/*if ( runningProcess->level == FOREGROUND ) 
 		setTtyFocusProcess(runningProcess->tty, runningProcess->pid);
 	*/
@@ -196,26 +196,6 @@ static void wakeUpProcess(process_t *process, int status) {
 	process->state = READY;
 
 	return;
-}
-
-pid_t sysWait(int *status) {
-	runningProcess->state = WAITING_CHILD;
-	forceMultitasker();
-	*status = runningProcess->waitedStatus;
-	
-	return runningProcess->waitingPid;
-}
-
-pid_t sysWaitpid(pid_t pid, int *status, int options) {
-	if ( pid < 0 || pid >= MAX_PROCESS || status == NULL || processTable[pid].pid == -1 || processTable[pid].ppid != runningProcess->pid )
-		return -1;
-	
-	processTable[pid].sleepingPid = runningProcess->pid;
-	runningProcess->state = WAITING_CHILD;
-	forceMultitasker();
-	*status = runningProcess->waitedStatus;
-	
-	return pid;
 }
 
 void sysSelfBlock(){
@@ -295,9 +275,36 @@ void terminate(pid_t pid, int status) {
 	if (processTable[pid].level == FOREGROUND && processTable[pid].childsQty == 0){
 		sysSetTTYFocusedProcess((ppid > 0) ? ppid : 0, processTable[pid].tty);
 	}
+	alertWaitingProcesses(pid, status);
 	processTable[pid].state = TERMINATED;
 	processTable[pid].atomicity = UNATOMIC;
-	alertWaitingProcesses(pid, status);
+}
+
+void refreshProcessesCPUs(){
+	int i;
+	double total = 0;
+	
+	for (i = 0 ; i < MAX_PROCESS ; ++i){
+		if (processTable[i].pid != -1){
+			total += processTable[i].tickCounter;
+		}
+	}
+	for (i = 0 ; i < MAX_PROCESS ; ++i){
+		if (processTable[i].pid != -1){
+			processTable[i].cpuPercent = processTable[i].tickCounter / total * 100;
+		}
+	}
+	return;
+}
+
+void clearProcessesTicks(){
+	int i;
+	
+	for (i = 0 ; i < MAX_PROCESS ; ++i){
+		if (processTable[i].pid != -1){
+			processTable[i].tickCounter = 0;
+		}
+	}
 }
 
 process_t *getProcessTable(void) {

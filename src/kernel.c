@@ -5,6 +5,7 @@ IDTR idtr;					/* IDTR */
 
 void kernel_main ( void  ) 
 {
+	/*int status;*/
 	char *msg;
 	
 	_Cli();
@@ -61,12 +62,14 @@ void kernel_main ( void  )
 		_mascaraPIC2(0xFF);
 	_Sti();
 	
+	/*waitpid(0, &status);
 	
+	
+	*/
 	/* Main loop */
 	
 	/*launchApp(SHELL);*/
 	while (1)
-		/*runApp();*/
 
 		asm volatile("hlt");
 }
