@@ -28,40 +28,42 @@ void idle(){
 	return;
 }
 
-void chupala(){
+void printA(){
+	while (1){
+		puts("A");
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void printB(){
+	while (1){
+		puts("B");
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void nothing(){
 		
 	while (1){
-		puts("Chupala\n");
 		asm volatile("hlt");
 	}
 	return;
 }
 
-void puto(){
+void pageFault(){
+	char * aux;
 	
-	
-	while (1){
-		puts("puto\n");
-		asm volatile("hlt");
-	}
-	return;
-}
-
-void de(){
-		
-	while (1){
-		puts("de\n");
-		asm volatile("hlt");
-	}
-	return;
-}
-
-void mierda(){
-	
-	
-	while (1){
-		puts("mierdaaa!!\n");
-		asm volatile("hlt");
+	puts("Quiero escribir en  la posicion de memoria ");
+	if(getpid() - 1 >= 0){
+		aux = processTable[getpid() - 1].dataUmalloc.mallocMem.allocp;
+		putx((int)aux);
+		*aux = 'a';	
+	}else{
+		aux = processTable[getpid() + 1].dataUmalloc.mallocMem.allocp;
+		putx((int)aux);
+		*aux = 'a';
 	}
 	return;
 }

@@ -14,13 +14,13 @@ void forceMultitasker();
 
 void idle();
 
-void chupala();
+void printA();
 
-void puto();
+void printB();
 
-void de();
+void nothing();
 
-void mierda();
+void pageFault();
 
 void anda();
 
