@@ -229,7 +229,12 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	if (process->tty > -1 && runningProcess->level == FOREGROUND){
 		sysSetTTYFocusedProcess(process->pid, process->tty);
 	}
-
+	
+	process->dataUmalloc.asigment = TRUE;
+	process->dataUmalloc.mallocMem.allocp = process->heap;
+	process->dataUmalloc.mallocMem.address = process->heap;
+	process->dataUmalloc.mallocMem.size = PAGES_PER_FRAME * PAGE_SIZE;
+	
 	return process->pid;
 }
 

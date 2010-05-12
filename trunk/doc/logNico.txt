@@ -31,3 +31,11 @@
 *Solo se refresca el stdout de la terminal cuando es necesarioo.
 
 *Se agrega una variable size para saber cuanto tenemos que ller del stdout para luego imprimir en pantalla!
+
+
+*Los datos globales de las shell, son almacendados en un vector glabal estatico, que almacena punteros a las estructuras que almacena lo necesario.
+
+*Cada vez que se iniciliza una shel hay que llamar initGlobalDataShell,  que es la encargada de asociar el pid con los datos, como esta funcion llama a uMalloc, los datos pertenecientes a cada shell estan protegidos por la pag, ya que cuando corre la shell todas las pag de las demas shells no estan, es un buen mecanismo de seguridad. Por esa razon el metodo getGlobalDataIndex, no tiene argumentos ya que siempre se va apedir por el pid del de la shell que esta corriendo , brindando asi mayor privacidad y deguridad en los datos.
+
+*El malloc de Kerenel llama una sola vez, a al funcion memory map, en cambio el malloc, de usuario llama a memori map , que asigna las paginas asociadas al heap de ese proceso.
+Toda la informacion de malloc esta almacenada en la tabla de procesos. 

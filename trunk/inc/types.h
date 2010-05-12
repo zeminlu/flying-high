@@ -68,6 +68,7 @@ typedef struct frame{
 typedef struct memArea{
 	void *address;
 	size_t size;
+	char * allocp;
 } memArea_t;
 
 typedef frame_t framesTable_t[TOTAL_FRAMES_QTY];
@@ -82,6 +83,11 @@ typedef struct {
 	int flag;
 	size_t bufferSize;
 } FILE;
+
+typedef struct heapStatus{
+	int asigment;
+	memArea_t mallocMem;
+	} heapStatus;
 
 typedef struct process_t {
 	pid_t pid;
@@ -109,6 +115,8 @@ typedef struct process_t {
 	frame_t *hFrame;
 	int atomicity;
 	int	ttyMode;
+	heapStatus dataUmalloc;
+	
 } process_t;
 
 enum SYSCALL_IDS{
@@ -234,12 +242,14 @@ typedef struct {
 } propertyT;
 
 typedef struct{
+	pid_t pid;
 	int status;
-	char lineBuffer[MAX_LINE];
-	char enteredCommand[MAX_LINE];
+	char *lineBuffer;
+	char *enteredCommand;
 	int index;
-	int firstRun;
 }dataSlotShell;
+
+typedef dataSlotShell* dataShell;
 
 #pragma pack (1) 		/* Alinear las siguiente estructuras a 1 byte */
 

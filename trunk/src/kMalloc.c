@@ -8,8 +8,9 @@ static memArea_t auxMem;
 static memArea_t * getMem(){	
 	if(!asigment){
 		asigment = TRUE;
+		auxMem.allocp = NULL;
 		auxMem.address = memmap(TRUE);
-		auxMem.size = (8 * PAGE_SIZE);
+		auxMem.size = (PAGES_PER_FRAME * PAGE_SIZE);
 	}
 
 	return &auxMem;

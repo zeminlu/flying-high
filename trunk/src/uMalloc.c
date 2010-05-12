@@ -1,16 +1,8 @@
 #include "../inc/uMalloc.h"
 
-static int asigment = FALSE;
 
 static memArea_t * getMem(){
-	static memArea_t auxMem;
-	if(!asigment){
-		asigment = TRUE;
-		auxMem.address = memmap(FALSE);
-		auxMem.size = (8 * PAGE_SIZE);
-	}
-	return &auxMem;
-
+	return &(runningProcess->dataUmalloc.mallocMem);
 }
 
 void free(void *ap){

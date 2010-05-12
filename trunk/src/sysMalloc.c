@@ -3,7 +3,7 @@
  * 	Defines
  * 	=======
  */
-static char * allocp = NULL;
+
 
 static void *baseMalloc(size_t nbytes, memArea_t * memArea){
 	unsigned int aux1;
@@ -11,13 +11,13 @@ static void *baseMalloc(size_t nbytes, memArea_t * memArea){
 	
 	aux1 = (unsigned int)memArea->address;
 	aux2 = (unsigned int)memArea->size;
-	if(allocp == NULL){
-		allocp = memArea->address;
-	}
+/*	if(memArea->allocp == NULL){
+		memArea->allocp = memArea->address;
+	}*/
 	
-	if((aux1 + aux2 - (unsigned int)allocp) >= nbytes){
-		allocp += nbytes;
-		return allocp - nbytes;
+	if((aux1 + aux2 - (unsigned int)memArea->allocp) >= nbytes){
+		memArea->allocp += nbytes;
+		return memArea->allocp - nbytes;
 	}else{
 		return NULL;
 	}
