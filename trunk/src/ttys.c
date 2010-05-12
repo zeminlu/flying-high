@@ -553,17 +553,15 @@ void clearTTYScreen( void )
 	clearScreen();
 }
 
-void setTTYCursorPosition( int x, int y)
+void setTTYCursorPosition( int x, int y, tty_t tty)
 {
-	int focus;
 	
 	if( x >= SCREEN_HEIGTH || y >= SCREEN_WIDTH )
 		return;
 	
-	focus = getFocusedTTY();
-	ttyTable.listTTY[focus]->writePointer = SCREEN_WIDTH * x + y;
-	ttyTable.listTTY[focus]->writeRow = x;
-	ttyTable.listTTY[focus]->writeCol = y; 
+	ttyTable.listTTY[tty]->writePointer = SCREEN_WIDTH * x + y;
+	ttyTable.listTTY[tty]->writeRow = x;
+	ttyTable.listTTY[tty]->writeCol = y; 
 }
 
 void putCharATTTYPosition( int c, int row, int col, tty_t tty)
@@ -572,13 +570,13 @@ void putCharATTTYPosition( int c, int row, int col, tty_t tty)
 	if( row >= SCREEN_HEIGTH || col >= SCREEN_WIDTH )
 		return;
 	
-	auxPointer = ttyTable.listTTY[focus]->writePointer;
-	auxRow = ttyTable.listTTY[focus]->writeRow;
-	auxCol = ttyTable.listTTY[focus]->writeCol;
+	auxPointer = ttyTable.listTTY[tty]->writePointer;
+	auxRow = ttyTable.listTTY[tty]->writeRow;
+	auxCol = ttyTable.listTTY[tty]->writeCol;
 	setTTYCursorPosition(row, col);
-	ttyTable.listTTY[focus]->writePointer = auxPointer;
-	ttyTable.listTTY[focus]->writeRow = auxRow;
-	ttyTable.listTTY[focus]->writeCol = auxCol;
+	ttyTable.listTTY[tty]->writePointer = auxPointer;
+	ttyTable.listTTY[tty]->writeRow = auxRow;
+	ttyTable.listTTY[tty]->writeCol = auxCol;
 	
 	putCharTTY(c, tty, FALSE);
 	if( tty == getFocusedTTY() ){
