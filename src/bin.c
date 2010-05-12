@@ -42,10 +42,12 @@ void top(char * args) {
 	processTable = getProcessTable();
 
 	/*	setVideoOffSet(1, 0);*/
-	/*while(1){*/
+	clearTTYScreen();
+	while(1){
 		setProcessAtomicity(getpid(), ATOMIC);
 		refreshProcessesCPUs();
 		clearProcessesTicks();
+		clearTTYScreen();
 		setProcessAtomicity(getpid(), UNATOMIC);	
 	/*	if(getFocusedTTY() != getTty(getpid()))
 			status = TRUE;
@@ -184,5 +186,5 @@ void top(char * args) {
 		for (j = 0 ; j < SCREEN_WIDTH ; ++j){
 			putchar('-');
 		}
-/*	}*/
+	}
 }

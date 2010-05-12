@@ -540,47 +540,63 @@ Keycode sysGetChar(tty_t tty){
 }
 */
 
-void clearTTYScreen( tty_t tty )
+void clearTTYScreen()
 {
 	int clear = 0;
+	tty_t tty;
+	
+	if ((tty = runningProcess->tty) < 0 || tty > MAX_TTY)
+		return;
 	
 	while( clear != SCREEN_SIZE )
 	{
 		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[clear] = ' ';
 		clear++;
 	}
-	clearScreen();
+	if (tty == getFocusedTTY()){
+		clearScreen();
+		setCursorPosition(0, 0);
+	}
 }
 
-void setTTYCursorPosition( int x, int y, tty_t tty)
+void setTTYCursorPosition( int x, int y)
 {
+	tty_t tty;
 	
-	if( x >= SCREEN_HEIGTH || y >= SCREEN_WIDTH )
+	tty = runningProcess->tty;
+	
+	if( x >= SCREEN_HEIGTH || y >= SCREEN_WIDTH || tty < 0 || tty > MAX_TTY)
 		return;
-	
+		
 	ttyTable.listTTY[tty]->writePointer = SCREEN_WIDTH * x + y;
 	ttyTable.listTTY[tty]->writeRow = x;
 	ttyTable.listTTY[tty]->writeCol = y; 
 }
 
-void putCharATTTYPosition( int c, int row, int col, tty_t tty)
+void putTTYCharAtPosition( int c, int row, int col)
 {
 	int auxPointer, auxCol, auxRow;
-	if( row >= SCREEN_HEIGTH || col >= SCREEN_WIDTH )
+	tty_t tty;
+	
+	tty = runningProcess->tty;
+	
+	if( row >= SCREEN_HEIGTH || col >= SCREEN_WIDTH || tty < 0 || tty > MAX_TTY)
 		return;
 	
 	auxPointer = ttyTable.listTTY[tty]->writePointer;
 	auxRow = ttyTable.listTTY[tty]->writeRow;
 	auxCol = ttyTable.listTTY[tty]->writeCol;
-	setTTYCursorPosition(row, col, tty);
+	setTTYCursorPosition(row, col);
+	putCharTTY(c, tty, FALSE);
 	ttyTable.listTTY[tty]->writePointer = auxPointer;
 	ttyTable.listTTY[tty]->writeRow = auxRow;
 	ttyTable.listTTY[tty]->writeCol = auxCol;
 	
-	putCharTTY(c, tty, FALSE);
 	if( tty == getFocusedTTY() ){
 		putCharAtFixedPos(c, getVideoColor(), row, col );
 		refreshScreen();
 	}
+	
+	return;
 }
 

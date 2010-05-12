@@ -56,10 +56,10 @@ void sysSetTTYFocusedProcess(pid_t pid, tty_t tty);
 
 pid_t sysGetTTYFocusedProcess(tty_t tty);
 
-void clearTTYScreen( tty_t tty );
+void clearTTYScreen();
 
-void setTTYCursorPosition( int x, int y, tty_t tty);
+void setTTYCursorPosition( int x, int y);
 
-void putCharATTTYPosition( int c, int row, int col, tty_t tty);
+void putTTYCharAtPosition( int c, int row, int col);
 
 #endif
