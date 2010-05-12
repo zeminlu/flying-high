@@ -4,6 +4,7 @@
 #include "sysProcess.h"
 #include "stdio.h"
 #include "shell.h"
+#include "string.h"
 
 void init(void *args);
 

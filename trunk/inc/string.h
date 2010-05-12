@@ -73,6 +73,8 @@ int toInt(char * string);
 
 char *intToString(int num, char *str);
 
+char *doubleToString(double num, char *str);
+
 char *toLowerCase(char * string);
 
 

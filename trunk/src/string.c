@@ -39,6 +39,28 @@ char *intToString(int num, char *str) {
 	return ritoa(num, str, &i);
 }
 
+char *doubleToString(double num, char *str){
+	int i, left, right;
+
+	left = (int)num;
+	right = (int)((num - left) * 100);
+	if ( str == NULL )
+		return NULL;
+	
+	i = 0;
+	if ( num < 0 ) {
+		num *= -1;
+		str[0] = '-';
+		str++;
+	}
+	ritoa(left, str, &i);
+	str[i] = '.';
+	i++;
+	ritoa(right, str, &i);
+	str[i] = '\0';
+	return str;
+}
+
 int stringHasChar(const char *string, const char c){
     int i, len=strlen(string);
     for(i=0; i<len; ++i)
