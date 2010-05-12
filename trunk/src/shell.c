@@ -237,8 +237,8 @@ static void clear ( char * args )
 	/*wait(500);*/
 	/*flushStdScreen();*/
 //	setPointerVisibility(0);
-//	clearTYTScreen();
-//	setTTYCursorPosition(0, 0);
+	clearTTYScreen();
+	setTTYCursorPosition(0, 0);
 /*	setPointerVisibility(1);*/
 }
 
