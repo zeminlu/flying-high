@@ -216,7 +216,7 @@ static void printPhrasing(char * value)
 
 static void mkdir(char *value)
 {
-	puts("jejejeje are you crazy!!!");
+	puts("jejejeje are you crazy!!!\n");
 }
 
 static void shutdown(char *value)
