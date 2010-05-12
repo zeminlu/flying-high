@@ -224,7 +224,7 @@ void keyboard_driver(){
 			if( auxScan != 0 )
 				charEnque(auxScan);
 		}
-		else if( flag & FLAG_CTRL && ((auxScan = scanTableNoShift[scan]) == 'c' || ((auxScan = scanTableWithShift[scan]) == 'C') )
+		else if( flag & FLAG_CTRL && ((auxScan = scanTableNoShift[scan]) == 'c' || (auxScan = scanTableWithShift[scan]) == 'C') )
 		{
 			charEnque( 0x8A );
 		}
