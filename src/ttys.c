@@ -424,10 +424,16 @@ static void refreshKeyboardBufferTTY( void ){
 			if( 0x81 <= deChar && deChar <= 0x88  ){
 				changeFocusTTY( (deChar - 0x81) );
 				break;
-			}else{
+			}
+			else if( deChar == 0x8A ){
+				;
+				/* HACER LA SEÑAL DE MATAR AL PROCESO */
+			}
+			else{
 				if(runningProcess->ttyMode  == TTY_CANONICAL){
-					putCharTTY((int)deChar, getFocusedTTY(), TRUE);				
-				}else{
+					putCharTTY((int)deChar, getFocusedTTY(), TRUE);
+				}
+				else{
 					putTTY((int)deChar);
 				}
 			}
