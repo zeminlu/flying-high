@@ -540,14 +540,13 @@ Keycode sysGetChar(tty_t tty){
 }
 */
 
-void clearTTYScreen( void )
+void clearTTYScreen( tty_t tty )
 {
-	int clear = 0, focus;
+	int clear = 0;
 	
-	focus = getFocusedTTY();
 	while( clear != SCREEN_SIZE )
 	{
-		(ttyTable.listTTY[focus]->stdOut->stdOutBuffer)[clear] = ' ';
+		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[clear] = ' ';
 		clear++;
 	}
 	clearScreen();
@@ -573,7 +572,7 @@ void putCharATTTYPosition( int c, int row, int col, tty_t tty)
 	auxPointer = ttyTable.listTTY[tty]->writePointer;
 	auxRow = ttyTable.listTTY[tty]->writeRow;
 	auxCol = ttyTable.listTTY[tty]->writeCol;
-	setTTYCursorPosition(row, col);
+	setTTYCursorPosition(row, col, tty);
 	ttyTable.listTTY[tty]->writePointer = auxPointer;
 	ttyTable.listTTY[tty]->writeRow = auxRow;
 	ttyTable.listTTY[tty]->writeCol = auxCol;
