@@ -75,6 +75,10 @@ unsigned time(void){
 	return (unsigned)int80(_SYS_TIME, NULL, NULL, NULL);
 }
 
+unsigned upTime(){
+	return (unsigned)int80(_SYS_UPTIME, NULL, NULL, NULL);
+}
+
 int setProcessAtomicity(pid_t pid, int atomic) {
 	return (int)int80(_SYS_SET_ATOM, (void *)pid, (void *)atomic, NULL);
 }

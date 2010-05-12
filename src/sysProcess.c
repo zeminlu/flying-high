@@ -1,5 +1,7 @@
 #include "sysProcess.h"
 
+unsigned int tickCount = 0;
+
 process_t processTable[MAX_PROCESS];
 
 process_t *runningProcess = NULL;

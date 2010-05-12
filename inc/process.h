@@ -70,6 +70,8 @@ int setPriority(pid_t pid, int prio);
 
 unsigned time(void);
 
+unsigned upTime();
+
 int setProcessAtomicity(pid_t pid, int atomic);
 
 #endif

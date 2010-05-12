@@ -60,6 +60,8 @@ int _sys_set_priority(pid_t pid, int prio );
 
 unsigned _sys_time(void);
 
+unsigned _sys_uptime();
+
 int _sys_set_atomicity(pid_t pid, int atomic);
 
 #endif

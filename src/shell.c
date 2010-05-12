@@ -325,6 +325,8 @@ static void startTop(char *args){
 		puts("ERROR: Top could not be created.\n");
 	}
 	waitpid(pid, &status);
+	clearTTYScreen();
+	
 	return;		
 }
 

@@ -553,6 +553,7 @@ void clearTTYScreen()
 		(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[clear] = ' ';
 		clear++;
 	}
+	setTTYCursorPosition(0, 0);
 	if (tty == getFocusedTTY()){
 		clearScreen();
 		setCursorPosition(0, 0);
@@ -570,7 +571,10 @@ void setTTYCursorPosition( int x, int y)
 		
 	ttyTable.listTTY[tty]->writePointer = SCREEN_WIDTH * x + y;
 	ttyTable.listTTY[tty]->writeRow = x;
-	ttyTable.listTTY[tty]->writeCol = y; 
+	ttyTable.listTTY[tty]->writeCol = y;
+	if (tty == getFocusedTTY()){
+		setCursorPosition(x, y);
+	}
 }
 
 void putTTYCharAtPosition( int c, int row, int col)
@@ -588,14 +592,12 @@ void putTTYCharAtPosition( int c, int row, int col)
 	auxCol = ttyTable.listTTY[tty]->writeCol;
 	setTTYCursorPosition(row, col);
 	putCharTTY(c, tty, FALSE);
-	ttyTable.listTTY[tty]->writePointer = auxPointer;
-	ttyTable.listTTY[tty]->writeRow = auxRow;
-	ttyTable.listTTY[tty]->writeCol = auxCol;
-	
 	if( tty == getFocusedTTY() ){
-		putCharAtFixedPos(c, getVideoColor(), row, col );
+		putCharAtCurrentPos(c, getVideoColor());
 		refreshScreen();
 	}
+	setTTYCursorPosition(auxRow, auxCol);
+	
 	
 	return;
 }

@@ -40,14 +40,65 @@ void top(char * args) {
 	char *title = "TOP - Process List", *l1 = "PID", *l2 = "PPID", *l3 = "Name", *l4 = "% CPU", *l5 = "Childs", *l6 = "Used Mem (B)", *l7 = "Prio", *l8 = "State", *tmp, tmp2[10];
 
 	processTable = getProcessTable();
-
-	/*	setVideoOffSet(1, 0);*/
 	clearTTYScreen();
+	for (j = 0 ; j < (SCREEN_WIDTH - strlen(title)) / 2 ; ++j)
+		putchar(' ');
+	puts(title);
+	putchar('\n');
+	for (j = 0 ; j < SCREEN_WIDTH ; ++j){
+		putchar('-');
+	}
+	putchar(' ');
+	puts(l1);
+	for (j = 0 ; j < c1 - (strlen(l1)) - 2 ; ++j)
+		putchar(' ');
+	putchar('|');
+	putchar(' ');
+	puts(l2);
+	for (j = 0 ; j < c2 - (strlen(l2)) - 2 ; ++j)
+		putchar(' ');
+	putchar('|');
+	putchar(' ');
+	for (j = 0 ; j < (c3 - (strlen(l3)) - 2) / 2 ; ++j)
+		putchar(' ');
+	puts(l3);
+	for (j = 0 ; j < (c3 - (strlen(l3)) - 2) / 2 ; ++j)
+		putchar(' ');
+	putchar(' ');	
+	putchar('|');
+	putchar(' ');
+	puts(l4);
+	for (j = 0 ; j < c4 - (strlen(l4)) - 2 ; ++j)
+		putchar(' ');
+	putchar('|');
+	putchar(' ');
+	puts(l5);
+	for (j = 0 ; j < c5 - (strlen(l5)) - 2 ; ++j)
+		putchar(' ');
+	putchar('|');
+	putchar(' ');
+	puts(l6);
+	for (j = 0 ; j < c6 - (strlen(l6)) - 2 ; ++j)
+		putchar(' ');
+	putchar('|');
+	putchar(' ');
+	puts(l7);
+	for (j = 0 ; j < c7 - (strlen(l7)) - 2 ; ++j)
+		putchar(' ');
+	putchar('|');
+	putchar(' ');
+	puts(l8);
+	for (j = 0 ; j < c8 - (strlen(l8)) - 1 ; ++j)
+		putchar(' ');
+	for (j = 0 ; j < SCREEN_WIDTH ; ++j){
+		putchar('-');
+	}
 	while(1){
+		asm volatile("hlt");
 		setProcessAtomicity(getpid(), ATOMIC);
 		refreshProcessesCPUs();
 		clearProcessesTicks();
-		clearTTYScreen();
+		setTTYCursorPosition(4, 0);
 		setProcessAtomicity(getpid(), UNATOMIC);	
 	/*	if(getFocusedTTY() != getTty(getpid()))
 			status = TRUE;
@@ -59,58 +110,6 @@ void top(char * args) {
 		//	setVideoOffSet(1, 0);
 			status = FALSE;
 		}*/
-		for (j = 0 ; j < (SCREEN_WIDTH - strlen(title)) / 2 ; ++j)
-			putchar(' ');
-		puts(title);
-		putchar('\n');
-		for (j = 0 ; j < SCREEN_WIDTH ; ++j){
-			putchar('-');
-		}
-		putchar(' ');
-		puts(l1);
-		for (j = 0 ; j < c1 - (strlen(l1)) - 2 ; ++j)
-			putchar(' ');
-		putchar('|');
-		putchar(' ');
-		puts(l2);
-		for (j = 0 ; j < c2 - (strlen(l2)) - 2 ; ++j)
-			putchar(' ');
-		putchar('|');
-		putchar(' ');
-		for (j = 0 ; j < (c3 - (strlen(l3)) - 2) / 2 ; ++j)
-			putchar(' ');
-		puts(l3);
-		for (j = 0 ; j < (c3 - (strlen(l3)) - 2) / 2 ; ++j)
-			putchar(' ');
-		putchar(' ');	
-		putchar('|');
-		putchar(' ');
-		puts(l4);
-		for (j = 0 ; j < c4 - (strlen(l4)) - 2 ; ++j)
-			putchar(' ');
-		putchar('|');
-		putchar(' ');
-		puts(l5);
-		for (j = 0 ; j < c5 - (strlen(l5)) - 2 ; ++j)
-			putchar(' ');
-		putchar('|');
-		putchar(' ');
-		puts(l6);
-		for (j = 0 ; j < c6 - (strlen(l6)) - 2 ; ++j)
-			putchar(' ');
-		putchar('|');
-		putchar(' ');
-		puts(l7);
-		for (j = 0 ; j < c7 - (strlen(l7)) - 2 ; ++j)
-			putchar(' ');
-		putchar('|');
-		putchar(' ');
-		puts(l8);
-		for (j = 0 ; j < c8 - (strlen(l8)) - 1 ; ++j)
-			putchar(' ');
-		for (j = 0 ; j < SCREEN_WIDTH ; ++j){
-			putchar('-');
-		}
 		for ( i = 0; i < MAX_PROCESS; ++i ) {
 			if ( processTable[i].pid == -1 )
 				continue;

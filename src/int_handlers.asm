@@ -27,6 +27,7 @@ forceMultitasker:
 _int_08_handler:					;										   ;
 	cli								;										   ;
 	pushad							;										   ;
+	inc		byte [tickCount]		;										   ;
 	call 	increaseKernelDepth		;										   ;
 	call	refreshTTY				;										   ;
 	call	multitasker				;										   ;
@@ -235,12 +236,19 @@ __check_SYS_TIME:					;										   ;
 
 __check_SYS_SET_ATOM:				;										   ;
 	cmp 	eax, _SYS_SET_ATOM		;										   ;
-	jnz		__check_SYS_SHMGET		;										   ;
+	jnz		__check_SYS_UPTIME		;										   ;
 	push	ECX						;										   ;
 	push	EBX						;										   ;
 	call	_sys_set_atomicity		;										   ;
 	add		esp, 8					;										   ;
 	jmp		__int_80_ret			;										   ;
+
+__check_SYS_UPTIME:					;										   ;
+	cmp 	eax, _SYS_UPTIME		;										   ;
+	jnz		__check_SYS_SHMGET		;										   ;
+	call	_sys_uptime				;										   ;
+	jmp		__int_80_ret			;										   ;
+
 
 __check_SYS_SHMGET:					;										   ;
 	cmp 	eax, _SYS_SHMGET		;										   ;
