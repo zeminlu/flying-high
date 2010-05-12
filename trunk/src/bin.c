@@ -7,7 +7,7 @@ void init(void *args){
 	
 	initGlobalDataShell();
 	
-	for ( i = 0; i < MAX_TTY - 2; ++i ) {
+	for ( i = 0; i < MAX_TTY; ++i ) {
 		setProcessAtomicity(getpid(), ATOMIC);
 		if ( (pid = createProcess("sh", (void (*)(void *))shell, NULL, FOREGROUND)) == -1 ) {
 			puts("ERROR: A Shell could not be created.\n");
