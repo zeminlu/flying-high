@@ -41,8 +41,8 @@ getInput(int *px,int *py) {
     fputs(": ",stdout);
     fgets(buf,sizeof buf,stdin);
     for ( cp=buf; *cp; ++cp )
-        if ( islower(*cp) )
-            *cp = toupper(*cp);
+        if ( *cp >= 'a' && * <= 'z' )
+            *cp = *cp - 0x20;
 
     cx = buf[1];
     cy = buf[0];

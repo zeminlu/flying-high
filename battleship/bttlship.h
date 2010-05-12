@@ -2,7 +2,7 @@
 #ifndef _bttlship_h_
 #define _bttlship_h_
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -13,6 +13,16 @@
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <sys/shm.h>
+*/
+
+#include "video_driver.h"
+#include "stdio.h"
+#include "string.h"
+#include "types.h"
+#include "process.h"
+#include "defs.h"
+#include "shMemory.h"
+#include "semaphore.h"
 
 union semun {
         int val;                    /* value for SETVAL */
