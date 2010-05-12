@@ -188,6 +188,7 @@ static void shutdown(char *);
 static void mkdir(char *);
 static void printPhrasing(char *);
 static void startTop(char *);
+static void startKill(char *);
 
 static commandT commands[] = {
 	{"clear", clear, "Clears Screen."},
@@ -201,6 +202,7 @@ static commandT commands[] = {
 	{"print-sysproperties", printProperties, "Prints the lisf of system properties that can be set by the set command."},
 	{"print-statement", printPhrasing, "Prints the statment of the project."},
 	{"top", startTop, "Runs the top process."},
+	{"kill",startKill, "Takes the pid of the standar input, and Kill the process associated."},
 	{"", NULL, ""}
 };
 
@@ -237,7 +239,7 @@ static void clear ( char * args )
 	setPointerVisibility(0);
 	clearScreen();
 	setCursorPosition(0, 0);
-//	setPointerVisibility(1);
+/*	setPointerVisibility(1);*/
 }
 
 static void echo ( char * args )
@@ -312,11 +314,22 @@ static void startTop(char *args){
 	pid_t pid;
 	int status;
 	
-	if ((pid = createProcess("top", top, NULL, FOREGROUND)) == -1 ) {
+	if ((pid = createProcess("top", (void(*)(void *))top, NULL, FOREGROUND)) == -1 ) {
 		puts("ERROR: Top could not be created.\n");
 	}
 	waitpid(pid, &status);
 	return;		
+}
+
+static void startKill(char *args){
+	int pid;
+	
+	pid = toInt(args);	
+	puts("Killing process ");
+	puts(processTable[pid].name);
+	puts("...\n");
+	kill((pid_t)pid);
+	
 }
 
 /* END SHELL COMMANDS */
@@ -405,6 +418,7 @@ static void parseCommand ( void )
 int shell ( void )
 {
 	int c;
+	int aux;
 	unsigned char uc;
 	int indexDT, status;
 	
@@ -419,7 +433,8 @@ int shell ( void )
 	
 	indexDT = getGlobalDataIndex();
 	puts("Starting Shell Nr.:");
-	puti(getTty(getpid()) + 1);
+	aux = getFocusedTTY();
+/*	puti(getFocusedTTY());*/
 	puts("...\n");
 	puts("\tEnter 'help' for a list of commands.\n");
 	puts("\tEnter 'help cmd' for the help message of 'cmd'.\n\n");

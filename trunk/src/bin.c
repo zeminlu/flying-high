@@ -32,7 +32,7 @@ void init(void *args){
 	
 	for ( i = 0; i < MAX_TTY; ++i ) {
 		setProcessAtomicity(getpid(), ATOMIC);
-		if ( (pid = createProcess("sh", shell, NULL, FOREGROUND)) == -1 ) {
+		if ( (pid = createProcess("sh", (void (*)(void *))shell, NULL, FOREGROUND)) == -1 ) {
 			puts("ERROR: A Shell could not be created.\n");
 		}		
 		setTty(pid, i);
@@ -55,14 +55,15 @@ void top(char * args) {
 	process_t *processTable = getProcessTable();
 
 /*	setVideoOffSet(1, 0);*/
-//	clearScreen();
-	//while(1){
+/*	clearScreen();
+	while(1){
+	*/
 		if(getFocusedTTY() != getTty(getpid()))
 			status = TRUE;
 	    if(getTty(getpid()) == getFocusedTTY()){
 			if(status){
 				/*setVideoOffSet(1, 0);*/
-//				clearScreen();
+/*				clearScreen();*/
 			}
 			/*setVideoOffSet(1, 0);*/
 			status = FALSE;
@@ -110,5 +111,5 @@ void top(char * args) {
 			puti(processTable[i].priority);
 			puts("     \n");
 		}
-//	}
+/*	}*/
 }

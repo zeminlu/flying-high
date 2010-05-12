@@ -67,5 +67,6 @@ void kernel_main ( void  )
 	/*launchApp(SHELL);*/
 	while (1)
 		/*runApp();*/
+
 		asm volatile("hlt");
 }
