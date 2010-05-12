@@ -1,8 +1,5 @@
--aprolijar gui de top (incl. videoOff)
--cachear ctrl+c
 -testear shm y sems
 -poner refreshKB en driver kb
--arreglar scroll choteado de shell
 -jueguito
 -comentar codigo (dogygen)
 -informe
