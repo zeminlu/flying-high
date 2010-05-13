@@ -134,15 +134,15 @@ genBattle(void) {
     int x, y, z, dir;
     int count = 0;
     int drawn = 0;
-    time_t t;
+    /*time_t t;*/
     
     memset(table->sea,'.',sizeof table->sea);
     memset(table->flg,0,sizeof table->flg);
 
     do  {
         if ( count > 10000 ) {
-            time(&t);
-            srand(t);       /* Re-seed the generator */
+            /*time(&t);*/
+            srand(time());       /* Re-seed the generator */
             count = 0;
         } else
             ++count;        /* Increment the safety cnt */
@@ -206,10 +206,10 @@ showBattle(void) {
 
     showRow();
     recount();
-    printf("ENEMY HAS %03d BOMB SITES LEFT\n",
+    /*printf("ENEMY HAS %03d BOMB SITES LEFT\n",
         table->player[them].bsites);
     printf("YOU HAVE  %03d BOMB SITES LEFT\n",
-        table->player[us].bsites);
+        table->player[us].bsites);*/
 }
 
 /* End game.c */

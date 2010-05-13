@@ -26,14 +26,13 @@ main(int argc,char **argv) {
         /*
          * Create a new game :
          */
-        atexit(cleanup);
+        atexit(cleanup);		/* Carga la funcion para ejecutar cuando terminar el proceso */
 
         /*
          * Create Shared Memory
          */
-        shmid = shmget(IPC_PRIVATE,sizeof *table,0666);
+        shmid = shmget(IPC_PRIVATE,sizeof *table);
         if ( shmid == -1 ) {
-            perror("shmget()");
             return 13;
         }
 
@@ -42,9 +41,9 @@ main(int argc,char **argv) {
         /*
          * Create a binary semaphore set :
          */
-        semid = semget(IPC_PRIVATE,2,0666);
+        /*semid = semget(IPC_PRIVATE,2,0666);*/
+		semid = sem_get();
         if ( semid == -1 ) {
-            perror("semget()");
             return 13;
         }
         
@@ -76,10 +75,18 @@ main(int argc,char **argv) {
         showBattle();
         UNLOCK;                     /* Notify semaphore */
 
-        printf("\n*** GAME # %d ***\n",shmid);
+        /*printf("\n*** GAME # %d ***\n",shmid);*/
+		putchar('\n');
+		puts("*** GAME #");
+		puti(shmid);
+		puts(" ***");
+		putchar('\n');
         puts("Waiting for opponent...");
+
         WAIT2;
-        puts("\nTHE BATTLE BEGINS!\n");
+		putchar('\n');
+        puts("THE BATTLE BEGINS!");
+		putchar('\n');
     } else {
         /*
          * Opponent is joining a game :
@@ -101,18 +108,22 @@ main(int argc,char **argv) {
         UNLOCK;                 /* Notify semaphore */
 
         if ( p2 != getpid() ) {
-            printf("Sorry: PID %ld and %ld are already "
-                "playing.\n",(long)p1,(long)p2);
+			puts("Sorry: PID ");
+			puti(p1);
+			puts(" are already playing.");
+			putchar('\n');
             return 1;
         }
 
-        printf("You are battling PID %ld\n",(long)p1);
+		puts("You are battling PID ");
+		puti(p1);
+		putchar('\n');
 
         LOCK;
         showBattle();
         UNLOCK;
 
-        fputs("Press RETURN: ",stdout);
+        puts("Press RETURN: ");
         fgets(buf,sizeof buf,stdin);
 
         NOTIFY2;                /* Notify player1 */
@@ -126,7 +137,8 @@ main(int argc,char **argv) {
             LOCK;               /* Lock semaphore */
             showBattle();       /* Display battle scene */
             UNLOCK;             /* Unlock semaphore */
-            fflush(stdout);
+            /*fflush(stdout);*/
+			refreshScreen();
         } else {  /* INP_YX */
             LOCK;               /* Lock semaphore */
             bomb(x,y);          /* Bomb this location */

@@ -12,23 +12,23 @@ cleanup(void) {
     /*
      * Detach shared memory if it is attached:
      */
-    if ( shmp != 0 && shmp != (char *)(-1) )
-        if ( shmdt(shmp) == -1 )
-            perror("shmdt()");
-
+    /*if ( shmp != 0 && shmp != (char *)(-1) )
+        if ( shmdt(shmp) == -1 ){
+			puts("Error al borrar Shm si esta atachada");
+		}
+*/
     /*
      * Destroy shared memory:
      */
     if ( shmid != -1 )
-        if ( shmctl(shmid,IPC_RMID,0) == -1 )
-            perror("shmctl(IPC_RMID)");
-
+        if ( shmdt(shmid) == -1 )
+			puts("Error al borrar Shm");
     /*
      * Destroy semaphore:
      */
     if ( semid != -1 )
-        if ( semctl(semid,0,IPC_RMID,semarg) == -1 )
-            perror("semctl(IPC_RMID)");
+        if ( sem_free(semid) == -1 )
+            puts("Error al borrar semaforos");
 }
 
 /* End cleanup.c */

@@ -9,6 +9,7 @@
 #include "syscall.h"
 #include "stdio.h"
 #include "kMalloc.h"
+#include "rand.h"
 
 void forceMultitasker();
 

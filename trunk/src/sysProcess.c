@@ -31,8 +31,13 @@ void idle(){
 }
 
 void printA(){
-	while (1){
-		puts("A");
+	
+	int count = 10;
+	
+	srand(timeRand());
+	while ( count-- >= 0){
+		puti(rand());
+		putchar('\n');
 		asm volatile("hlt");
 	}
 	return;

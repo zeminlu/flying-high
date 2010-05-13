@@ -23,6 +23,7 @@
 #include "defs.h"
 #include "shMemory.h"
 #include "semaphore.h"
+#include "rand.h"
 
 union semun {
         int val;                    /* value for SETVAL */

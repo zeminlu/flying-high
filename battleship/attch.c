@@ -8,9 +8,9 @@ attachTable(void) {
     /*
      * Attach the shared memory :
      */
-    shmp = shmat(shmid,0,0);
+    shmp = shmat(shmid,0);
     if ( shmp == (char *)(-1) ) {
-        exit(13);
+        puts("Error al crear la shm");
     }
     table = (struct S_TABLE *)shmp;
 }
