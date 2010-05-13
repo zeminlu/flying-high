@@ -20,7 +20,7 @@ int shmget(key_t key, int size);
 
 char * shmat(int shmid, key_t *semid);
 
-int shmDetach(int shmid);
+int shmdt(int shmid);
 
 void initializeShMems();
 

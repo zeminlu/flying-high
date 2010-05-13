@@ -32,7 +32,7 @@ char * shmat(int shmid, key_t *semid){
 	return (char *)int80(_SYS_SHMAT, (void *)shmid, (void *)semid, NULL);
 }
 
-int shmDetach(int shmid){
+int shmdt(int shmid){
 	return (int)int80(_SYS_SHM_DETACH, (void *)shmid, NULL, NULL);
 }
 
@@ -146,7 +146,7 @@ int _sys_shm_detach(int shmid){
 		return -1;
 	}
 	if (!(shMemories[shmid].appnProcessesAmm)){
-		shmDestroy(shmid);
+		shmdt(shmid);
 	}
 	
 	return shMemories[shmid].appnProcessesAmm;
