@@ -142,7 +142,7 @@ genBattle(void) {
     do  {
         if ( count > 10000 ) {
             /*time(&t);*/
-            srand(time());       /* Re-seed the generator */
+            srand(timeRand());       /* Re-seed the generator */
             count = 0;
         } else
             ++count;        /* Increment the safety cnt */
@@ -206,6 +206,14 @@ showBattle(void) {
 
     showRow();
     recount();
+	puts("ENEMY HAS ");
+	puti(table->player[them].bsites);
+	puts(" BOMB SITES LEFT");
+	putchar('\n');
+	puts("YOU HAVE  ");
+	puti(table->player[us].bsites);
+	puts(" BOMB SITES LEFT");
+	putchar('\n');
     /*printf("ENEMY HAS %03d BOMB SITES LEFT\n",
         table->player[them].bsites);
     printf("YOU HAVE  %03d BOMB SITES LEFT\n",

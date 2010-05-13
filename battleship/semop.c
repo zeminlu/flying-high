@@ -25,8 +25,8 @@ lockTable(int semx,int bLock) {
     } while ( z == -1 && errno == EINTR );
 
     if ( z == -1 ) {
-        perror("semop()");          /* Should not happen */
-        exit(13);
+        puts("semop()");          /* Should not happen */
+		return;
     }
 }
 

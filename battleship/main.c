@@ -52,7 +52,7 @@ main(int argc,char **argv) {
          */
         semarg.array = seminit;
         if ( semctl(semid,0,SETALL,semarg) == -1 ) {
-            perror("semctl(SETALL)");
+            puts ("semctl(SETALL)");
             return 13;
         }
 
