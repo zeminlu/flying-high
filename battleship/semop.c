@@ -13,21 +13,20 @@
 void
 lockTable(int semx,int bLock) {
     int z;                          /* Return status */
-    static struct sembuf sops = { 0, -1, 0 };
 
-    /*
-     * Lock or unlock the semaphore
-     */
-    sops.sem_num = semx;            /* Select semaphore */
-    sops.sem_op = bLock ? -1 : 1;   /* Wait / Notify */
-    do  {
-        z = semop(semid,&sops,1);   /* Semaphore operation */
-    } while ( z == -1 && errno == EINTR );
-
-    if ( z == -1 ) {
-        puts("semop()");          /* Should not happen */
-		return;
-    }
+	if( !semx ){
+		if( block ){
+			sem_wait(table->semid);
+		}else{
+			sem_signal(table->semid);
+		}
+	}else{
+		if( block ){
+			sem_wait(table->waitSemid);
+		}else{
+			sem_signal(table->waitSemid);
+		}
+	}
 }
 
 /* End semop.c */

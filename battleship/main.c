@@ -5,6 +5,7 @@
 
 int shmid = -1;             /* Shared Memory IPC ID */
 int semid = -1;             /* Table locking semaphore */
+int waitSemid = -1;
 char *shmp = 0;             /* Pointer to shared memory */
 int us = 0;                 /* 0=starter / 1=challenger */
 int them = 0;               /* 1=challenger / 0=starter */
@@ -14,7 +15,7 @@ struct S_TABLE *table = 0;  /* Shared Memory Table */
 
 int
 main(int argc,char **argv) {
-    union semun semarg;         /* for semctl() */
+    /*union semun semarg;*/         /* for semctl() */
     ushort seminit[] = { 1, 0 };/* Initial sem values */
     pid_t p1, p2;               /* PID for player 1 & 2 */
     char buf[256];              /* For fgets() */
@@ -46,15 +47,20 @@ main(int argc,char **argv) {
         if ( semid == -1 ) {
             return 13;
         }
+
+		waitSemid = sem_get();
+        if ( waitSemid == -1 ) {
+            return 13;
+        }
         
         /*
          * Initialize semaphores:
          */
-        semarg.array = seminit;
+        /*semarg.array = seminit;
         if ( semctl(semid,0,SETALL,semarg) == -1 ) {
             puts ("semctl(SETALL)");
             return 13;
-        }
+        }*/
 
         /*
          * Initialize & Generate Battle in shared
@@ -62,6 +68,7 @@ main(int argc,char **argv) {
          */
         LOCK;                       /* Wait on semaphore */
         table->semid = semid;       /* Make IPC ID public */
+		table->waitSemid = waitSemid;
         table->player[0].pid = getpid();
         table->player[1].pid = 0;   /* No opponent yet */
         genBattle();                /* Generate battle */
@@ -99,6 +106,7 @@ main(int argc,char **argv) {
 
         /* No lock is required for this fetch: */
         semid = table->semid;   /* Locking semaphore ID */
+		waitSemid = table->waitSemid;
 
         LOCK;                   /* Wait on semaphore */
         p1 = table->player[0].pid;

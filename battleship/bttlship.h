@@ -25,14 +25,6 @@
 #include "semaphore.h"
 #include "rand.h"
 
-union semun {
-        int val;                    /* value for SETVAL */
-        struct semid_ds *buf;       /* buffer for IPC_STAT, IPC_SET */
-        unsigned short int *array;  /* array for GETALL, SETALL */
-        struct seminfo *__buf;      /* buffer for IPC_INFO */
-    };
-
-
 #define N_X         10      /* X dimension */
 #define N_Y         10      /* Y dimension */
 #define N_Z         5       /* Max length of ship */
@@ -62,6 +54,7 @@ union semun {
  */
 struct S_TABLE {
     int     semid;          /* Locking sem IPC ID */
+	int		waitSemid;
     struct  {
       pid_t pid;            /* Process ID of player */
       int   bsites;         /* Sites left for bombing */
