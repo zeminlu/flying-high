@@ -7,7 +7,7 @@
  */
 void
 cleanup(void) {
-    union semun semarg;
+    /*union semun semarg;*/
 
     /*
      * Detach shared memory if it is attached:

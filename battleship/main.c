@@ -26,7 +26,7 @@ main(int argc,char **argv) {
         /*
          * Create a new game :
          */
-        atexit(cleanup);		/* Carga la funcion para ejecutar cuando terminar el proceso */
+        /*atexit(cleanup);*/		/* Carga la funcion para ejecutar cuando terminar el proceso */
 
         /*
          * Create Shared Memory
@@ -138,6 +138,7 @@ main(int argc,char **argv) {
             showBattle();       /* Display battle scene */
             UNLOCK;             /* Unlock semaphore */
             /*fflush(stdout);*/
+			refreshStdout();
 			refreshScreen();
         } else {  /* INP_YX */
             LOCK;               /* Lock semaphore */
