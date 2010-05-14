@@ -14,16 +14,23 @@ int flg_game_over = 0;      /* != 0 => game over */
 struct S_TABLE *table = 0;  /* Shared Memory Table */
 
 int
-battleship(int argc,char **argv) {
+battleship() {
     /*union semun semarg;*/         /* for semctl() */
     ushort seminit[] = { 1, 0 };/* Initial sem values */
     pid_t p1, p2;               /* PID for player 1 & 2 */
-    char buf[256];              /* For fgets() */
+    char buf[256], auxChar;              /* For fgets() */
     int x, y, z;                /* move x,y and status z */
 
     srand(getpid());            /* Init random no.s */
+	
+	puts("Bienvenido a Flying-High-BattleShip\n\n");
+	puts("Debo hostear una partida?\n\tConteste S o N\n\n");
 
-    if ( argc == 1 ) {          /* No args? */
+	while ((auxChar = getchar()) != 'S' && auxChar != 'N') {
+		puts("Solo conteste S o N\n");
+	}
+
+    if ( auxChar == 'S' ) {          /* No args? */
         /*
          * Create a new game :
          */
@@ -100,8 +107,14 @@ battleship(int argc,char **argv) {
          */
         us = 1;                 /* We're player[1] */
         them = 0;               /* They're player[0] */
+		
+		puts("\nPor favor ingrese el id que el proceso que hostea le ha proporcionado:\n");
 
-        shmid = atoi(argv[1]);  /* Simple int conversion */
+		while (!isAllNumb(auxChar = getchar())){
+			puts("Ingrese un id entero por favor\n");
+		}
+		
+        shmid = toInt(auxChar);  /* Simple int conversion */
         attachTable();          /* Attach existing shm */
 
         /* No lock is required for this fetch: */
