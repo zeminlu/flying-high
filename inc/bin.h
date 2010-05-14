@@ -5,6 +5,7 @@
 #include "stdio.h"
 #include "shell.h"
 #include "string.h"
+#include "process.h"
 
 void init(void *args);
 

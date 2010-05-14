@@ -15,17 +15,6 @@
 #include "unistd.h"
 #include "kMalloc.h"
 
-
-extern unsigned char videoBuffer[VIDEO_MEMORY_SIZE];
-
-extern process_t processTable[MAX_PROCESS];
-
-extern process_t *runningProcess;
-
-extern process_t *initProcess;
-
-extern Keycode *keyboardBuffer;
-
 void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow);
 
 void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow);
@@ -43,6 +32,8 @@ void initializeTTY( void );
 int getFocusedTTY( void );
 
 int changeFocusTTY( tty_t nextTty );
+
+void refreshKeyboardBufferTTY( void );
 
 void refreshTTY(void);
 

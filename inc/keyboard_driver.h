@@ -8,7 +8,7 @@
 #include "queue.h"
 #include "io.h"
 #include "config.h"
-
+#include "ttys.h"
 
 /*
  *	Functions Section

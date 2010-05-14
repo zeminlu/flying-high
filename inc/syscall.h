@@ -24,7 +24,6 @@
 #define STACK_TRACE_LENGTH 		15
 #define KILL_EXIT_STATUS 		0
 #define LOCAL_VARIABLES_SPACE	0x00000018
-#define MILISECONDS_PER_TICK	55
 
 size_t _sys_write ( int fd, char * buffer, size_t n );
 
@@ -49,6 +48,10 @@ pid_t _sys_wait(int *status);
 int _sys_wait_pid(pid_t pid, int *status);
 
 int _sys_kill(int pid);
+
+int _sys_set_tty_mode(pid_t pid, int mode);
+
+int _sys_get_tty_mode(pid_t pid);
 
 int _sys_set_level(int level);
 

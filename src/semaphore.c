@@ -69,13 +69,13 @@ void sem_free( key_t semid ){
 	return;
 }
 
-void sem_wait( key_t sem, int count ){
-	int80(_SYS_SEM_WAIT, (void *)sem, (void *)count, NULL);
+void sem_wait( key_t sem){
+	int80(_SYS_SEM_WAIT, (void *)sem, NULL, NULL);
 	return;
 }
 
-void sem_signal( key_t sem, int count ){
-	int80(_SYS_SEM_SIGNAL, (void *)sem, (void *)count, NULL);
+void sem_signal( key_t sem){
+	int80(_SYS_SEM_SIGNAL, (void *)sem, NULL, NULL);
 	return;
 }
 

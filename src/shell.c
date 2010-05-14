@@ -321,11 +321,28 @@ static void set ( char * args )
 
 static void startTop(char *args){
 	pid_t pid;
+	int i;
 	int status;
+	process_t *processTable;
+	
+	processTable = getProcessTable();
+	
+	setProcessAtomicity(getpid(), ATOMIC);
+	
+	for (i = 0 ; i < MAX_PROCESS ; ++i){
+		if (!strcmp(processTable[i].name, "top")){
+			puts("El proceso top ya se encuentra corriendo en la tty ");
+			puti(processTable[i].tty);
+			putchar('\n');
+			setProcessAtomicity(getpid(), UNATOMIC);
+			return;
+		}
+	}
 	
 	if ((pid = createProcess("top", (void(*)(void *))top, NULL, FOREGROUND)) == -1 ) {
 		puts("ERROR: Top could not be created.\n");
 	}
+	setProcessAtomicity(getpid(), UNATOMIC);
 	waitpid(pid, &status);
 	clearTTYScreen();
 	
@@ -336,10 +353,13 @@ static void startKill(char *args){
 	int pid;
 	
 	pid = toInt(args);	
-	puts("Killing process ");
-	puts(processTable[pid].name);
-	puts("...\n");
-	kill((pid_t)pid);
+	if (kill((pid_t)pid) == 0){
+		puts("Killing process ");
+		puts(getProcessTable()[pid].name);
+		puts("...\n");
+	}
+	else
+		puts("No process for the given pid\n");
 }
 
 static void startPrintA(char *args){
@@ -379,11 +399,19 @@ static void startNothing(char *args){
 	int status;
 	int mode;
 	
-	mode = *args =='&' ? BACKGROUND:FOREGROUND;
+	mode = (*args == '&') ? BACKGROUND : FOREGROUND;
+	
+	setProcessAtomicity(getpid(), ATOMIC);
 	
 	if ((pid = createProcess("nothing", (void(*)(void *))nothing, NULL, mode)) == -1 ) {
 		puts("ERROR: nothing could not be created.\n");
 	}
+	if (mode == FOREGROUND){
+		setTTYMode(pid, TTY_CANONICAL);
+	}
+	setProcessAtomicity(getpid(), UNATOMIC);
+	
+	
 	if(mode == FOREGROUND){
 		waitpid(pid, &status);
 	}
@@ -504,7 +532,7 @@ int shell ( void )
 	}
 	
 	indexDT = getGlobalDataIndex();
-	puts("Starting Shell Nr.:");
+	puts("Starting Shell #");
 	puti(runningProcess->tty + 1);
 	puts("...\n");
 	puts("\tEnter 'help' for a list of commands.\n");

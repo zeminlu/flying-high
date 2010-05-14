@@ -12,7 +12,6 @@
 #include "screensaver.h"
 #include "shell.h"
 #include "io.h"
-#include "config.h"
 #include "types.h"
 
 /**

@@ -3,36 +3,38 @@ NULL	equ	0x0
 ;
 ; System Calls
 ;
-_SYS_WRITE		equ 0
-_SYS_READ		equ	1
-_SYS_MEMMAP 	equ 2
-_SYS_CREATE		equ 3
-_SYS_EXIT		equ 4
-_SYS_SET_TTY	equ 5	
-_SYS_GET_TTY	equ 6
-_SYS_GET_PID	equ 7
-_SYS_GET_PPID	equ 8
-_SYS_WAIT_PID	equ 9
-_SYS_KILL		equ 10
-_SYS_FREAD		equ 11
-_SYS_FWRITE		equ	12
-_SYS_GET_TTY_FP equ 13
-_SYS_SET_TTY_FP equ 14
-_SYS_SHMGET		equ 15
-_SYS_SHMAT		equ 16
-_SYS_SHM_DETACH equ 17
-_SYS_SEM_GET	equ 18
-_SYS_SEM_FREE	equ 19
-_SYS_SEM_WAIT	equ 20
-_SYS_SEM_SIGNAL	equ 21
-_SYS_WAIT		equ 22
-_SYS_SET_LEVEL	equ 23
-_SYS_GET_LEVEL	equ 24
-_SYS_GET_PRIO	equ 25
-_SYS_SET_PRIO	equ 26
-_SYS_TIME		equ 27
-_SYS_SET_ATOM	equ 28
-_SYS_UPTIME		equ 29
+_SYS_WRITE			equ 0
+_SYS_READ			equ	1
+_SYS_MEMMAP 		equ 2
+_SYS_CREATE			equ 3
+_SYS_EXIT			equ 4
+_SYS_SET_TTY		equ 5	
+_SYS_GET_TTY		equ 6
+_SYS_GET_PID		equ 7
+_SYS_GET_PPID		equ 8
+_SYS_WAIT_PID		equ 9
+_SYS_KILL			equ 10
+_SYS_FREAD			equ 11
+_SYS_FWRITE			equ	12
+_SYS_GET_TTY_FP	 	equ 13
+_SYS_SET_TTY_FP	 	equ 14
+_SYS_SHMGET			equ 15
+_SYS_SHMAT			equ 16
+_SYS_SHM_DETACH	 	equ 17
+_SYS_SEM_GET		equ 18
+_SYS_SEM_FREE		equ 19
+_SYS_SEM_WAIT		equ 20
+_SYS_SEM_SIGNAL		equ 21
+_SYS_WAIT			equ 22
+_SYS_SET_LEVEL		equ 23
+_SYS_GET_LEVEL		equ 24
+_SYS_GET_PRIO		equ 25
+_SYS_SET_PRIO		equ 26
+_SYS_TIME			equ 27
+_SYS_SET_ATOM		equ 28
+_SYS_UPTIME			equ 29
+_SYS_SET_TTY_MODE	equ 30
+_SYS_GET_TTY_MODE	equ 31
 
 ;
 ; Standard File Descriptors
@@ -115,6 +117,8 @@ EXTERN _sys_get_ppid
 EXTERN _sys_kill
 EXTERN _sys_wait
 EXTERN _sys_wait_pid
+EXTERN _sys_set_tty_mode
+EXTERN _sys_get_tty_mode
 EXTERN _sys_set_level
 EXTERN _sys_get_level
 EXTERN _sys_set_priority

@@ -156,7 +156,7 @@ static void createStackFrame(process_t *process, pfunc_t main, int args) {
 }
 
 pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
-	int i, j, nameLen;/*, *linkRet;*/
+	int i, j, nameLen;
 	process_t *process;
 
 	if ( main == NULL ) {
@@ -225,7 +225,7 @@ pid_t _sys_create_process(char *name, pfunc_t main, int args, int level) {
 	createStackFrame(process, main, args);
 	setFramePresence(process->sFrame, FALSE);
 	
-	process->ttyMode = TTY_CANONICAL;
+	process->ttyMode = TTY_RAW;
 	
 	if (process->tty > -1 && runningProcess->level == FOREGROUND){
 		sysSetTTYFocusedProcess(process->pid, process->tty);
@@ -271,8 +271,8 @@ pid_t _sys_wait(int *status) {
 	runningProcess->state = WAITING_CHILD;
 	
 	forceMultitasker();
-	
 	*status = runningProcess->waitedStatus;
+	
 	return runningProcess->waitingPid;
 }
 
@@ -303,14 +303,33 @@ int _sys_kill(int pid) {
 				terminate(i, KILL_EXIT_STATUS);
 		}
 	else{
-		for ( i = 0; i < MAX_CHILDS; ++i ) 
-			if(processTable[pid].childs[i] != -1)
-				terminate(processTable[pid].childs[i], KILL_EXIT_STATUS);
-		terminate(pid, KILL_EXIT_STATUS);
+		if (processTable[pid].pid > 0){
+			for ( i = 0; i < MAX_CHILDS; ++i ) {
+				if(processTable[pid].childs[i] != -1)
+					terminate(processTable[pid].childs[i], KILL_EXIT_STATUS);
+			}
+			terminate(pid, KILL_EXIT_STATUS);
+		}
+		else
+			return -1;
 	}
 	
 	forceMultitasker();
 	return 0;
+}
+
+int _sys_set_tty_mode(pid_t pid, int mode) {
+	if ( pid < 0 || pid > MAX_PROCESS || processTable[pid].pid < 0 || (mode != TTY_RAW && mode != TTY_CANONICAL))
+		return FALSE;
+	processTable[pid].ttyMode = mode;
+	return TRUE;
+}
+
+int _sys_get_tty_mode(pid_t pid) {
+	if ( pid < 0 || pid > MAX_PROCESS || processTable[pid].pid < 0)
+		return FALSE;
+	
+	return processTable[pid].ttyMode;
 }
 
 int _sys_set_level(int level) {
@@ -345,7 +364,7 @@ unsigned _sys_time(void) {
 }
 
 unsigned _sys_uptime(){
-	return tickCount * MILISECONDS_PER_TICK;
+	return tickCount;
 }
 
 int _sys_set_atomicity(pid_t pid, int atomic){
