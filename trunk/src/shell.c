@@ -193,6 +193,7 @@ static void startPrintA(char *);
 static void startPrintB(char *);
 static void startNothing(char *);
 static void startPageFault(char *);
+static void changeSchedule( char *);
 
 static commandT commands[] = {
 	{"clear", clear, "Clears Screen."},
@@ -211,6 +212,7 @@ static commandT commands[] = {
 	{"printB", startPrintB, "Prints 'B' in the stdout, could be running in background."},
 	{"nothing", startNothing, "An idle process, could be running in background."},
 	{"pageFault", startPageFault, "Force a page fault exception."},
+	{"scheduling", changeSchedule, "Change the Schedule, if it is running Round Robin it changes to RPG or viceverse"},
 	{"", NULL, ""}
 };
 
@@ -398,6 +400,10 @@ static void startPageFault(char *args){
 	waitpid(pid, &status);
 
 	return;
+}
+
+static void changeSchedule( char * args ){
+	changeAlgorithimSchedule();
 }
 /* END SHELL COMMANDS */
 

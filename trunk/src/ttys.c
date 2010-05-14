@@ -458,7 +458,6 @@ static void refreshKeyboardBufferTTY( void ){
 			}
 			else if( deChar == 0x8A ){
 				kill(ttyTable.listTTY[ttyTable.focusTTY]->focusProcess);
-				/* HACER LA SEÑAL DE MATAR AL PROCESO */
 			}
 			else{
 				if(runningProcess->ttyMode  == TTY_CANONICAL){
