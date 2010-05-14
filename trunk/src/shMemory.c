@@ -146,7 +146,7 @@ int _sys_shm_detach(int shmid){
 		return -1;
 	}
 	if (!(shMemories[shmid].appnProcessesAmm)){
-		shmdt(shmid);
+		shmDestroy(shmid);
 	}
 	
 	return shMemories[shmid].appnProcessesAmm;

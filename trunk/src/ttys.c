@@ -8,6 +8,16 @@ typedef void (*videoParser)( void );
 
 typedef void (*printFunctions)( int, tty_t);
 
+extern unsigned char videoBuffer[VIDEO_MEMORY_SIZE];
+
+extern process_t processTable[MAX_PROCESS];
+
+extern process_t *runningProcess;
+
+extern process_t *initProcess;
+
+extern Keycode *keyboardBuffer;
+
 static sysTTY ttyTable;
 
 static tty_s TTYsList[MAX_TTY];
@@ -186,6 +196,7 @@ static void parseBackSpaceTTY( int where, tty_t tty )
 				for (i = 0 ; i < VIDEO_TAB_STOP - 1 ; ++i){
 					if ((ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] != TAB)
 						break;
+					--kbOffset[tty];
 					printBackspace();
 					(ttyTable.listTTY[tty]->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = ' ';
 					decWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow));
@@ -322,29 +333,43 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 	
 	focusTTY = getFocusedTTY();
 
-	if ('\a' <= c && c <= '\r')
+	if ('\a' <= c && c <= '\r' && c != '\n')
 	{
-		if (c == '\n' && inStdIn)
+		if (!inStdIn || (inStdIn && (c != '\t' || kbOffset[tty] < MAX_LINE - VIDEO_TAB_STOP - 1)) ){
+		
+			specialCharPrint[c - '\a'](WRITE_ON_TTY, tty);
+		
+			if (c == '\t' && inStdIn){
+				kbOffset[tty] += VIDEO_TAB_STOP;
+			}
+			if ((inStdIn && c != '\b') || (tty == focusTTY && !inStdIn)){
+				videoParserFunctions[c - '\a']();
+			}
+		}
+		
+		return 0;
+	}
+	else if (c == '\n'){
+		if (inStdIn)
 			putLine();
 		else
 			specialCharPrint[c - '\a'](WRITE_ON_TTY, tty);
-		if (c == '\t' && inStdIn){
-			++kbOffset[tty];
-		}
-		if ((inStdIn && c != '\n' && c != '\b') || (tty == focusTTY && !inStdIn)){
+		if (tty == focusTTY && !inStdIn){
 			videoParserFunctions[c - '\a']();
 		}
 		return 0;
 	}
 	else{
-		((ttyTable.listTTY[tty])->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = c;
-		if (inStdIn){
-			ttyTable.listTTY[focusTTY]->stdIn->stdInBuffer[(ttyTable.listTTY[focusTTY]->stdIn->writeOffset)++]= c;
-			++kbOffset[tty];
+		if (!inStdIn || (inStdIn && kbOffset[tty] < MAX_LINE - 1)){
+			((ttyTable.listTTY[tty])->stdOut->stdOutBuffer)[ttyTable.listTTY[tty]->writePointer] = c;
+			if (inStdIn){
+				ttyTable.listTTY[focusTTY]->stdIn->stdInBuffer[(ttyTable.listTTY[focusTTY]->stdIn->writeOffset)++]= c;
+				++kbOffset[tty];
+			}
+			if (inStdIn || tty == focusTTY)
+				printChar(c);
+			incWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow) );		
 		}
-		if (inStdIn || tty == focusTTY)
-			printChar(c);
-		incWritePointer( &(ttyTable.listTTY[tty]->writePointer), &(ttyTable.listTTY[tty]->writeCol), &(ttyTable.listTTY[tty]->writeRow) );		
 		return 1;
 	}
 }
@@ -443,7 +468,7 @@ static void putTTY(Keycode c){
 	}	
 }
 
-static void refreshKeyboardBufferTTY( void ){
+void refreshKeyboardBufferTTY( void ){
 	Keycode deChar = 0;
 	int color;
 	
@@ -460,7 +485,7 @@ static void refreshKeyboardBufferTTY( void ){
 				kill(ttyTable.listTTY[ttyTable.focusTTY]->focusProcess);
 			}
 			else{
-				if(runningProcess->ttyMode  == TTY_CANONICAL){
+				if(getProcessTable()[ttyTable.listTTY[ttyTable.focusTTY]->focusProcess].ttyMode  == TTY_CANONICAL){
 					putCharTTY((int)deChar, getFocusedTTY(), TRUE);
 				}
 				else{
@@ -494,10 +519,9 @@ void refreshStdout(void){
 
 void refreshTTY(void){
 
+	refreshScreen();
 	if(runningProcess != NULL && runningProcess != initProcess && runningProcess->pid > 0 && runningProcess->tty != -1){
-		refreshKeyboardBufferTTY();
 		refreshStdout();
-		refreshScreen();
 	}
 	
 	return;

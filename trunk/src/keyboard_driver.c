@@ -241,6 +241,7 @@ void keyboard_driver(){
 	}
 	oldScanCode = scan;
 	keyboardActivity = 1;
+	refreshKeyboardBufferTTY();
 }
 
 void SetKeyState( Keycode scanCode )

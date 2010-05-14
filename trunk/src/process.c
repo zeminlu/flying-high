@@ -55,6 +55,14 @@ int kill(int pid) {
 	return (int)int80(_SYS_KILL, (void *)pid, NULL, NULL);
 }
 
+int setTTYMode(pid_t pid, int mode){
+	return (int)int80(_SYS_SET_TTY_MODE, (void *)pid, (void *)mode, NULL);
+}
+
+int getTTYMode(pid_t pid){
+	return (int)int80(_SYS_GET_TTY_MODE, (void *)pid, NULL, NULL);
+}
+
 int setLevel(int level){
 	return (int)int80(_SYS_SET_LEVEL, (void *)level, NULL, NULL);
 }

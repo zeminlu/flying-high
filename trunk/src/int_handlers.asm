@@ -197,9 +197,26 @@ __check_SYS_WAIT_PID:				;										   ;
 									;										   ;
 __check_SYS_KILL:					;										   ;
 	cmp 	eax, _SYS_KILL			;										   ;
-	jnz		__check_SYS_SET_LEVEL	;										   ;
+	jnz		__check_SYS_SET_TTY_MODE;										   ;
 	push	EBX						;										   ;
 	call	_sys_kill				;										   ;
+	add		esp, 4					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_SET_TTY_MODE:			;										   ;
+	cmp 	eax, _SYS_SET_TTY_MODE	;										   ;
+	jnz		__check_SYS_GET_TTY_MODE;										   ;
+	push	ECX						;										   ;
+	push	EBX						;										   ;
+	call	_sys_set_tty_mode		;										   ;
+	add		esp, 8					;										   ;
+	jmp		__int_80_ret			;										   ;
+
+__check_SYS_GET_TTY_MODE:			;										   ;
+	cmp 	eax, _SYS_GET_TTY_MODE	;										   ;
+	jnz		__check_SYS_SET_LEVEL	;										   ;
+	push	EBX						;										   ;
+	call	_sys_get_tty_mode		;										   ;
 	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
 
@@ -210,16 +227,19 @@ __check_SYS_SET_LEVEL:				;										   ;
 	call	_sys_set_level			;										   ;
 	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
+
 __check_SYS_GET_LEVEL:				;										   ;
 	cmp 	eax, _SYS_GET_LEVEL		;										   ;
 	jnz		__check_SYS_GET_PRIO	;										   ;
 	call	_sys_get_level			;										   ;
 	jmp		__int_80_ret			;										   ;
+
 __check_SYS_GET_PRIO:				;										   ;
 	cmp 	eax, _SYS_GET_PRIO		;										   ;
 	jnz		__check_SYS_SET_PRIO	;										   ;
 	call	_sys_get_priority		;										   ;
 	jmp		__int_80_ret			;										   ;
+
 __check_SYS_SET_PRIO:				;										   ;
 	cmp 	eax, _SYS_SET_PRIO		;										   ;
 	jnz		__check_SYS_TIME		;										   ;
@@ -228,6 +248,7 @@ __check_SYS_SET_PRIO:				;										   ;
 	call	_sys_set_priority		;										   ;
 	add		esp, 8					;										   ;
 	jmp		__int_80_ret			;										   ;
+
 __check_SYS_TIME:					;										   ;
 	cmp 	eax, _SYS_TIME			;										   ;
 	jnz		__check_SYS_SET_ATOM	;										   ;
@@ -248,7 +269,6 @@ __check_SYS_UPTIME:					;										   ;
 	jnz		__check_SYS_SHMGET		;										   ;
 	call	_sys_uptime				;										   ;
 	jmp		__int_80_ret			;										   ;
-
 
 __check_SYS_SHMGET:					;										   ;
 	cmp 	eax, _SYS_SHMGET		;										   ;
@@ -293,19 +313,17 @@ __check_SYS_SEM_FREE:				;										   ;
 __check_SYS_SEM_WAIT:				;										   ;
 	cmp 	eax, _SYS_SEM_WAIT		;										   ;
 	jnz		__check_SYS_SEM_SIGNAL	;										   ;
-	push	ECX						;										   ;
 	push	EBX						;										   ;
 	call	_sys_sem_wait			;										   ;
-	add		esp, 8					;										   ;
+	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
 
 __check_SYS_SEM_SIGNAL:				;										   ;
 	cmp 	eax, _SYS_SEM_SIGNAL	;										   ;
 	jnz		__int_80_ret			;										   ;
-	push	ECX						;										   ;
 	push	EBX						;										   ;
 	call	_sys_sem_signal			;										   ;
-	add		esp, 8					;										   ;
+	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
 									;										   ;
 __int_80_ret:						;										   ;

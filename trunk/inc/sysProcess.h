@@ -10,6 +10,11 @@
 #include "stdio.h"
 #include "kMalloc.h"
 #include "rand.h"
+#include "shell.h"
+
+void welcome();
+
+void goodbye();
 
 void forceMultitasker();
 

@@ -2,48 +2,68 @@
 
 
 void init(void *args){
-	int i;/*, status;*/
+	int i;
 	pid_t pid;
+	process_t *processTable;
 	
-	initGlobalDataShell();
+	processTable = getProcessTable();
 	
+	setProcessAtomicity(getpid(), ATOMIC);
+	if ( (pid = createProcess("welcome", (void (*)(void *))welcome, NULL, FOREGROUND)) == -1 ) {
+		puts("ERROR: Welcome could not be created.\n");
+	}		
+	setTty(pid, 0);
+	setProcessAtomicity(getpid(), UNATOMIC);
+	
+	while(processTable[0].childsQty){
+		asm volatile("hlt");
+	}
+	
+	setProcessAtomicity(getpid(), ATOMIC);
 	for ( i = 0; i < MAX_TTY; ++i ) {
-		setProcessAtomicity(getpid(), ATOMIC);
 		if ( (pid = createProcess("sh", (void (*)(void *))shell, NULL, FOREGROUND)) == -1 ) {
 			puts("ERROR: A Shell could not be created.\n");
 		}		
 		setTty(pid, i);
-		sysSetTTYFocusedProcess(pid, i);
-		setProcessAtomicity(getpid(), UNATOMIC);
-	}
+		setTTYMode(pid, TTY_CANONICAL);
+	}	
+	setProcessAtomicity(getpid(), UNATOMIC);
 		
-	pid = createProcess("idle", idle, NULL, BACKGROUND);
-	setTty(pid, 0);
-	
-	/*for (i = 0 ; i < MAX_TTY ; ++i){
-		waitpid(i + 1, &status);
-	}*/
-	/*
-	kill(pid);
-	rebootSystem();
-	*/	
-	while(1){
-		asm volatile ("hlt");
+	while(processTable[0].childsQty){
+		asm volatile("hlt");
 	}
+	
+	setProcessAtomicity(getpid(), ATOMIC);
+	if ( (pid = createProcess("goodbye", (void (*)(void *))goodbye, NULL, FOREGROUND)) == -1 ) {
+		puts("ERROR: Goodbye could not be created.\n");
+	}		
+	setTty(pid, 0);
+	setProcessAtomicity(getpid(), UNATOMIC);
+	
+	while(processTable[0].childsQty){
+		asm volatile("hlt");
+	}
+	
+	rebootSystem();
+	
 	return;
 }
 
 void top(char * args) {
 	int i, j, c1 = 6, c2 = 7, c3 = 13, c4 = 8, c5 = 9, c6 = 15, c7 = 7, c8 = 15;
-	int aux;/*status = FALSE, vCol, vRow, readPointer, writePointer, readCol, readRow, writeCol, writeRow;*/
+	int aux, dig = 1;
 	process_t *processTable;
 	char *title = "TOP - Process List", *l1 = "PID", *l2 = "PPID", *l3 = "Name", *l4 = "% CPU", *l5 = "Childs", *l6 = "Used Mem (B)", *l7 = "Prio", *l8 = "State", *tmp, tmp2[10];
 
 	processTable = getProcessTable();
 	clearTTYScreen();
+	
+	putchar('\n');
+	
 	for (j = 0 ; j < (SCREEN_WIDTH - strlen(title)) / 2 ; ++j)
 		putchar(' ');
 	puts(title);
+	putchar('\n');
 	putchar('\n');
 	for (j = 0 ; j < SCREEN_WIDTH ; ++j){
 		putchar('-');
@@ -98,18 +118,8 @@ void top(char * args) {
 		setProcessAtomicity(getpid(), ATOMIC);
 		refreshProcessesCPUs();
 		clearProcessesTicks();
-		setTTYCursorPosition(4, 0);
+		setTTYCursorPosition(6, 0);
 		setProcessAtomicity(getpid(), UNATOMIC);	
-	/*	if(getFocusedTTY() != getTty(getpid()))
-			status = TRUE;
-	    if(getTty(getpid()) == getFocusedTTY()){
-			if(status){
-				//setVideoOffSet(1, 0);
-				clearScreen();
-			}
-		//	setVideoOffSet(1, 0);
-			status = FALSE;
-		}*/
 		for ( i = 0; i < MAX_PROCESS; ++i ) {
 			if ( processTable[i].pid == -1 )
 				continue;
@@ -141,8 +151,13 @@ void top(char * args) {
 			putchar('|');
 			putchar(' ');
 			puti(aux = (processTable[i].dataUmalloc.mallocMem.allocp - (char *)processTable[i].dataUmalloc.mallocMem.address));
-			for (j = 0 ; j < c6 - ((aux / 10 > 9) ? 3 : ((aux / 10) ? 2 : 1)) - 2 ; ++j)
+			while (aux / 10 > 0 ){
+				aux /= 10;
+				++dig;
+			}
+			for (j = 0 ; j < c6 - dig - 2 ; ++j)
 				putchar(' ');
+			dig = 1;
 			putchar('|');
 			putchar(' ');
 			puti(processTable[i].priority);

@@ -5,9 +5,6 @@ IDTR idtr;					/* IDTR */
 
 void kernel_main ( void  ) 
 {
-	/*int status;*/
-	char *msg;
-	
 	_Cli();
 		_mascaraPIC1(0xFF);
 		_mascaraPIC2(0xFF);
@@ -37,22 +34,6 @@ void kernel_main ( void  )
 	
 	initializeSemaphores();
 
-	msg = "\n\tWelcome, you're Flying-High at 0.6 meters!!\n\n";
-/*	putsInStdTTY(msg);
-	
-	// Initializing Driver
-	putsInStdTTY("\t\tInitializing Drivers..............................................");
-	
-	
-	//initMouse();
-	putsInStdTTY("Done.\n");
-	
-	// Enabling Interrupts
-	putsInStdTTY("\n\t\tEnabling Interrupts..............................................");
-	putsInStdTTY("Done.\n");
-	
-	putsInStdTTY("\n\tReady.\n\n");
-*/
 	initVideo(CURSOR_START_VISIBLE, DISABLED);
 
 	initMultitasker(init);
@@ -70,6 +51,6 @@ void kernel_main ( void  )
 	
 	/*launchApp(SHELL);*/
 	while (1)
-
 		asm volatile("hlt");
+	
 }

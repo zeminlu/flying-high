@@ -22,9 +22,82 @@ char fileBuffers[MAX_PROCESS][MAX_FILES][SCREEN_SIZE];
 
 int qtyProccessTable = 0;
 
+void welcome(){
+	unsigned curTime;
+	int j = 0;
+	char *msg;
+	
+	curTime = upTime();
+	clearTTYScreen();
+	
+	msg = "\n\tWelcome, you're Flying-High at 0.8 meters!!\n\n";
+	
+	puts(msg);
+
+	puts("\t\tInitializing Drivers..............................................");
+
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+
+	puts("Done.\n");
+	
+	puts("\n\t\tEnabling Interrupts...............................................");
+
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("Done.\n");	
+
+	puts("\n\tInitializing Shells...................................................");
+
+	initGlobalDataShell();
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("Done.\n");
+	
+	puts("\n\tReady.\n\n");
+	
+	return;
+}
+
+void goodbye(){
+	unsigned curTime;
+	int j = 0;
+	
+	clearTTYScreen();
+	
+	curTime = upTime();
+	
+	puts("\nNo processes running, starting system reboot...\n\n");
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("\tShutting down drivers...");
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("...Done.\n\n");
+	
+	puts("Rebooting now...\n");
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	return;
+}
+
 void idle(){
 	while (1){
-		asm volatile("hlt");
 		asm volatile("hlt");
 	}
 	return;
@@ -54,6 +127,7 @@ void printB(){
 void nothing(){
 		
 	while (1){
+		getchar();
 		asm volatile("hlt");
 	}
 	return;
@@ -194,9 +268,9 @@ void multitasker(void) {
 	freeTerminatedProcesses();
 	runningProcess = nextProcess;
 	++runningProcess->tickCounter;
-	/*if ( runningProcess->level == FOREGROUND ) 
-		setTtyFocusProcess(runningProcess->tty, runningProcess->pid);
-	*/
+	if (runningProcess != initProcess && runningProcess->level == FOREGROUND ) 
+		sysSetTTYFocusedProcess(runningProcess->pid, runningProcess->tty);
+	
 	return;
 }
 

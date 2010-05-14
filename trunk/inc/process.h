@@ -60,6 +60,10 @@ int waitpid(pid_t pid, int *status);
 
 int kill(int pid);
 
+int setTTYMode(pid_t pid, int mode);
+
+int getTTYMode(pid_t pid);
+
 int setLevel(int level);
 
 int getLevel();
