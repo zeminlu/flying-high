@@ -215,6 +215,7 @@ int initMultitasker(pfunc_t init) {
 		processTable[i].pid = -1;
 		processTable[i].state = DEAD;
 		processTable[i].childsQty = 0;
+		processTable[i].rpgOld = 0;
 		for ( j = 0; j < MAX_FILES; ++j ){
 			processTable[i].files[j] = &(fileSystems[i][j]);
 			processTable[i].files[j]->ptr = processTable[i].files[j]->buffer = fileBuffers[i][j];

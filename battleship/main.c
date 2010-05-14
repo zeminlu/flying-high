@@ -14,7 +14,7 @@ int flg_game_over = 0;      /* != 0 => game over */
 struct S_TABLE *table = 0;  /* Shared Memory Table */
 
 int
-main(int argc,char **argv) {
+battleship(int argc,char **argv) {
     /*union semun semarg;*/         /* for semctl() */
     ushort seminit[] = { 1, 0 };/* Initial sem values */
     pid_t p1, p2;               /* PID for player 1 & 2 */
