@@ -212,7 +212,7 @@ static commandT commands[] = {
 	{"printB", startPrintB, "Prints 'B' in the stdout, could be running in background."},
 	{"nothing", startNothing, "An idle process, could be running in background."},
 	{"pageFault", startPageFault, "Force a page fault exception."},
-	{"scheduling", changeSchedule, "Change the Schedule, if it is running Round Robin it changes to RPG or viceverse"},
+	{"scheduling", changeSchedule, "Change the Schedule Algorithm, if it's running Round Robin, it changes to RPG and viceversa"},
 	{"", NULL, ""}
 };
 
@@ -431,7 +431,10 @@ static void startPageFault(char *args){
 }
 
 static void changeSchedule( char * args ){
+	setProcessAtomicity(getpid(), ATOMIC);
 	changeAlgorithimSchedule();
+	setProcessAtomicity(getpid(), UNATOMIC);
+	
 }
 /* END SHELL COMMANDS */
 
