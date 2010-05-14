@@ -15,9 +15,9 @@ key_t sem_get();
 
 void sem_free( key_t semid );
 
-void sem_wait( key_t sem, int count );
+void sem_wait( key_t sem );
 
-void sem_signal( key_t sem, int count );
+void sem_signal( key_t sem );
 
 void initializeSemaphores();
 
