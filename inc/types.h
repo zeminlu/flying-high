@@ -100,6 +100,7 @@ typedef struct process_t {
 	int state;
 	FILE *files[MAX_FILES];
 	int rpgPrior;
+	int	rpgOld;
 	unsigned tickCounter;
 	double cpuPercent;
 	int priority;
