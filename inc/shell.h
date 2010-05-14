@@ -21,6 +21,7 @@
 #include "process.h"
 #include "uMalloc.h"
 #include "bin.h"
+#include "schedule.h"
 
 /**
  * \fn int shell ( void )

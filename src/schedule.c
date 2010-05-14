@@ -20,6 +20,8 @@ extern process_t *initProcess;
 
 extern int qtyProccessTable;
 
+static int Algorithim = ROUND_ROBIN;
+
 /*
  *	Functions Section
  */
@@ -68,7 +70,7 @@ process_t * getNextTask()
 	process_t * proc;
 	/*char *video = (char*)0xb8002;*/
 	
-	proc = (ALGORITHIM == ROUND_ROBIN ? roundRobinSchedule() : rpgSchedule());
+	proc = (Algorithim == ROUND_ROBIN ? roundRobinSchedule() : rpgSchedule());
 	/*while(1){
 		*video = (proc->pid + 30);
 		*(video + 18) = 'A';
@@ -129,6 +131,10 @@ void increaseRPGCounter()
 			processTable[i].tickCounter = 1;
 		}
 	}
+}
+
+void changeAlgorithimSchedule( void ){
+	Algorithim = (Algorithim == ROUND_ROBIN ? ROUND_ROBIN : RPG);
 }
 
 void setupScheduler( void )
