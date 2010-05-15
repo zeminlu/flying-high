@@ -18,16 +18,21 @@ battleship() {
     /*union semun semarg;*/         /* for semctl() */
  //   ushort seminit[] = { 1, 0 };/* Initial sem values */
     pid_t p1, p2;               /* PID for player 1 & 2 */
-    char buf[256], auxChar;              /* For fgets() */
+    char buf[256], auxChar = '0';              /* For fgets() */
     int x, y, z;                /* move x,y and status z */
 
     srand(getpid());            /* Init random no.s */
 	
 	puts("Bienvenido a Flying-High-BattleShip\n\n");
-	puts("Debo hostear una partida?\n\tConteste S o N\n\n");
+	puts("Debo hostear una partida?\n\t");
 
-	while ((auxChar = getchar()) != 'S' && auxChar != 'N') {
+	while (auxChar != 'S' && auxChar != 'N') {
 		puts("Solo conteste S o N\n");
+		auxChar = getchar();
+		if(auxChar == EOF){
+			waitTty(getTty(getpid()));
+			continue;
+		}
 	}
 
     if ( auxChar == 'S' ) {          /* No args? */
@@ -39,7 +44,7 @@ battleship() {
         /*
          * Create Shared Memory
          */
-        shmid = shmget(IPC_PRIVATE,sizeof *table);
+        shmid = shmget(IPC_PRIVATE, sizeof *table);
         if ( shmid == -1 ) {
             return 13;
         }
@@ -107,13 +112,19 @@ battleship() {
          */
         us = 1;                 /* We're player[1] */
         them = 0;               /* They're player[0] */
+		auxChar = 'A';
 		
 		puts("\nPor favor ingrese el id que el proceso que hostea le ha proporcionado:\n");
 
-		while ((auxChar = getchar()) < '0' || auxChar > '9'){
+		while (auxChar < '0' || auxChar > '9') {
 			puts("Ingrese un id entero por favor\n");
+			auxChar = getchar();
+			if(auxChar == EOF){
+				waitTty(getTty(getpid()));
+				continue;
+			}
 		}
-		
+			
 		shmid = auxChar - '0';  /* Simple int conversion */
         attachTable();          /* Attach existing shm */
 
