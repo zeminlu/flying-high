@@ -26,8 +26,8 @@ battleship() {
 	puts("Bienvenido a Flying-High-BattleShip\n\n");
 	puts("Debo hostear una partida?\n\t");
 
-	while (auxChar != 'S' && auxChar != 'N') {
-		puts("Solo conteste S o N\n");
+	while (auxChar != 's' && auxChar != 'n') {
+		puts("Solo conteste s o n\n");
 		auxChar = getchar();
 		if(auxChar == EOF){
 			waitTty(getTty(getpid()));
@@ -35,7 +35,7 @@ battleship() {
 		}
 	}
 
-    if ( auxChar == 'S' ) {          /* No args? */
+    if ( auxChar == 's' ) {          /* No args? */
         /*
          * Create a new game :
          */
@@ -48,15 +48,16 @@ battleship() {
         if ( shmid == -1 ) {
             return 13;
         }
-
+		
         attachTable();          /* Attach new table */
-
+		
         /*
          * Create a binary semaphore set :
          */
         /*semid = semget(IPC_PRIVATE,2,0666);*/
 		semid = sem_get();
-        if ( semid == -1 ) {
+		
+		if ( semid == -1 ) {
             return 13;
         }
 
@@ -95,17 +96,12 @@ battleship() {
         UNLOCK;                     /* Notify semaphore */
 
         /*printf("\n*** GAME # %d ***\n",shmid);*/
-		putchar('\n');
-		puts("*** GAME #");
+		puts("\n*** GAME #");
 		puti(shmid);
-		puts(" ***");
-		putchar('\n');
-        puts("Waiting for opponent...");
+		puts(" ***\nWaiting for opponent...\n");
 
         WAIT2;
-		putchar('\n');
-        puts("THE BATTLE BEGINS!");
-		putchar('\n');
+        puts("\nTHE BATTLE BEGINS!\n");
     } else {
         /*
          * Opponent is joining a game :
