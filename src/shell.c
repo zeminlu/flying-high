@@ -194,6 +194,7 @@ static void startPrintB(char *);
 static void startNothing(char *);
 static void startPageFault(char *);
 static void changeSchedule( char *);
+static void startBattleShip(char *args);
 
 static commandT commands[] = {
 	{"clear", clear, "Clears Screen."},
@@ -213,6 +214,7 @@ static commandT commands[] = {
 	{"nothing", startNothing, "An idle process, could be running in background."},
 	{"pageFault", startPageFault, "Force a page fault exception."},
 	{"scheduling", changeSchedule, "Change the Schedule Algorithm, if it's running Round Robin, it changes to RPG and viceversa"},
+	{"battleship", startBattleShip, "Starts Battleship"},
 	{"", NULL, ""}
 };
 
@@ -360,6 +362,21 @@ static void startKill(char *args){
 	}
 	else
 		puts("No process for the given pid\n");
+}
+
+static void startBattleShip(char *args){
+	int pid, status;
+	
+	setProcessAtomicity(getpid(), UNATOMIC);
+	
+	if ((pid = createProcess("battleship", (void(*)(void *))battleship, NULL, FOREGROUND)) == -1 ) {
+		puts("ERROR: Battleship could not be created.\n");
+	}
+	setProcessAtomicity(getpid(), UNATOMIC);
+	waitpid(pid, &status);
+	puti(status);
+	//clearTTYScreen();
+	
 }
 
 static void startPrintA(char *args){

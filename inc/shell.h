@@ -22,6 +22,7 @@
 #include "uMalloc.h"
 #include "bin.h"
 #include "schedule.h"
+#include "bttlship.h"
 
 /**
  * \fn int shell ( void )

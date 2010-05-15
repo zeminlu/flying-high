@@ -86,4 +86,6 @@ extern void genBattle(void);
 extern void showRow(void);
 extern void showBattle(void);
 
+int battleship();
+
 #endif /* _bttlship_h_ */

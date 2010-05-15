@@ -69,7 +69,7 @@ void initializeShMems(){
 }
 
 int _sys_shmget(key_t key, int size){
-	int i, freePos;
+	int i, freePos = -1;
 	
 	if (!freeShMems || size > PAGE_SIZE * PAGES_PER_FRAME){
 		return -1;
@@ -84,7 +84,7 @@ int _sys_shmget(key_t key, int size){
 		}
 	}
 	
-	if (i >= MAX_SHMEMS){
+	if (freePos == -1){
 		return -1;
 	}
 	
