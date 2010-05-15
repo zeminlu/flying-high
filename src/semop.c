@@ -11,9 +11,8 @@
  *          1 : perform wait
  */
 void
-lockTable(int semx,int bLock) {
-    int z;                          /* Return status */
-
+lockTable(int semx,int block) {
+	
 	if( !semx ){
 		if( block ){
 			sem_wait(table->semid);

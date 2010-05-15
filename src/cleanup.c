@@ -27,8 +27,7 @@ cleanup(void) {
      * Destroy semaphore:
      */
     if ( semid != -1 )
-        if ( sem_free(semid) == -1 )
-            puts("Error al borrar semaforos");
+		sem_free(semid);
 }
 
 /* End cleanup.c */

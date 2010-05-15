@@ -33,6 +33,8 @@ int getFocusedTTY( void );
 
 int changeFocusTTY( tty_t nextTty );
 
+void refreshStdout(void);
+
 void refreshKeyboardBufferTTY( void );
 
 void refreshTTY(void);

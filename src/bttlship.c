@@ -16,7 +16,7 @@ struct S_TABLE *table = 0;  /* Shared Memory Table */
 int
 battleship() {
     /*union semun semarg;*/         /* for semctl() */
-    ushort seminit[] = { 1, 0 };/* Initial sem values */
+ //   ushort seminit[] = { 1, 0 };/* Initial sem values */
     pid_t p1, p2;               /* PID for player 1 & 2 */
     char buf[256], auxChar;              /* For fgets() */
     int x, y, z;                /* move x,y and status z */
@@ -110,11 +110,11 @@ battleship() {
 		
 		puts("\nPor favor ingrese el id que el proceso que hostea le ha proporcionado:\n");
 
-		while (!isAllNumb(auxChar = getchar())){
+		while ((auxChar = getchar()) < '0' || auxChar > '9'){
 			puts("Ingrese un id entero por favor\n");
 		}
 		
-        shmid = toInt(auxChar);  /* Simple int conversion */
+		shmid = auxChar - '0';  /* Simple int conversion */
         attachTable();          /* Attach existing shm */
 
         /* No lock is required for this fetch: */
