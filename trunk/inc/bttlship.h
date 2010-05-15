@@ -24,6 +24,7 @@
 #include "shMemory.h"
 #include "semaphore.h"
 #include "rand.h"
+#include "ttys.h"
 
 #define N_X         10      /* X dimension */
 #define N_Y         10      /* Y dimension */
