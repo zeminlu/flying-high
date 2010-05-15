@@ -11,6 +11,7 @@ static int freeShMems = MAX_SHMEMS;
 
 typedef struct shMem{
 	int				shmid;
+	int				busy;
 	key_t			key;
 	int 			shMemSize;
 	frame_t			*shMemFrame;
@@ -72,19 +73,22 @@ int _sys_shmget(key_t key, int size){
 	int i, freePos = -1;
 	
 	if (!freeShMems || size > PAGE_SIZE * PAGES_PER_FRAME){
+		/*puts("El tamaño es mayor al de una pagina");*/
 		return -1;
 	}
 	
 	for (i = 0 ; i < MAX_SHMEMS ; ++i){
 		if (shMemories[i].key == key){
+			/*puts("La key es igual");*/
 			return -1;
 		}
-		if (shMemories[i].shmid == -1 && freePos == -1){
+		if (shMemories[i].state == FREE && freePos == -1){
 			freePos = shMemories[i].shmid;
 		}
 	}
 	
 	if (freePos == -1){
+		/*puts("freepos == -1");*/
 		return -1;
 	}
 	
@@ -92,6 +96,7 @@ int _sys_shmget(key_t key, int size){
 	shMemories[freePos].key = key;
 	shMemories[freePos].shMemSize = PAGE_SIZE * PAGES_PER_FRAME;
 	if((shMemories[freePos].shMemFrame = getFrame()) == NULL){
+		/*puts("Pidiendo el frame");*/
 		return -1;
 	}
 	
@@ -100,6 +105,7 @@ int _sys_shmget(key_t key, int size){
 	shMemories[freePos].shMemP = shMemories[freePos].shMemFrame->address;
 	
 	if ((shMemories[freePos].semid = sem_get()) == -1){
+		/*puts("creando semaforo\n");*/
 		return -1;
 	}
 	

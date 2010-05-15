@@ -45,7 +45,7 @@ battleship() {
          * Create Shared Memory
          */
         shmid = shmget(IPC_PRIVATE, sizeof *table);
-        if ( shmid == -1 ) {
+		if ( shmid == -1 ) {
             return 13;
         }
 		
@@ -56,13 +56,12 @@ battleship() {
          */
         /*semid = semget(IPC_PRIVATE,2,0666);*/
 		semid = sem_get();
-		
 		if ( semid == -1 ) {
             return 13;
         }
 
 		waitSemid = sem_get();
-        if ( waitSemid == -1 ) {
+		if ( waitSemid == -1 ) {
             return 13;
         }
         
@@ -80,6 +79,7 @@ battleship() {
          * memory table :
          */
         LOCK;                       /* Wait on semaphore */
+		puts("Estoy lockeado\n");
         table->semid = semid;       /* Make IPC ID public */
 		table->waitSemid = waitSemid;
         table->player[0].pid = getpid();
