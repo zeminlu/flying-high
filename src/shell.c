@@ -367,7 +367,7 @@ static void startKill(char *args){
 static void startBattleShip(char *args){
 	int pid, status;
 	
-	setProcessAtomicity(getpid(), UNATOMIC);
+	setProcessAtomicity(getpid(), ATOMIC);
 	
 	if ((pid = createProcess("battleship", (void(*)(void *))battleship, NULL, FOREGROUND)) == -1 ) {
 		puts("ERROR: Battleship could not be created.\n");
