@@ -12,27 +12,7 @@
 #include "rand.h"
 #include "shell.h"
 
-void welcome();
-
-void goodbye();
-
 void forceMultitasker();
-
-void idle();
-
-void printA();
-
-void printB();
-
-void nothing();
-
-void pageFault();
-
-void anda();
-
-void todo();
-
-void carajo();
 
 int isMTActivated();
 

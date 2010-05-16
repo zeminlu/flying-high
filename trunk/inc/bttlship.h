@@ -1,19 +1,5 @@
-/* bttlship.h */
-#ifndef _bttlship_h_
-#define _bttlship_h_
-
-/*#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <ctype.h>
-#include <errno.h>
-#include <time.h>
-#include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/sem.h>
-#include <sys/shm.h>
-*/
+#ifndef _BTTLSHIP_H_
+#define _BTTLSHIP_H_
 
 #include "video_driver.h"
 #include "stdio.h"
@@ -88,4 +74,4 @@ extern void showBattle(void);
 
 int battleship();
 
-#endif /* _bttlship_h_ */
+#endif

@@ -1,5 +1,7 @@
 #include "bin.h"
 
+extern process_t *processTable;
+
 void init(void *args){
 	int i, status;
 	pid_t pid;
@@ -201,3 +203,124 @@ void top(char * args) {
 		}
 	}
 }
+
+void welcome(){
+	unsigned curTime;
+	int j = 0;
+	char *msg;
+	
+	curTime = upTime();
+	clearTTYScreen();
+	
+	msg = "\n\tWelcome, you're Flying-High at 0.8 meters!!\n\n";
+	
+	puts(msg);
+
+	puts("\t\tInitializing Drivers..............................................");
+
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+
+	puts("Done.\n");
+	
+	puts("\n\t\tEnabling Interrupts...............................................");
+
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("Done.\n");	
+
+	puts("\n\tInitializing Shells...................................................");
+
+	initGlobalDataShell();
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("Done.\n");
+	
+	puts("\n\tReady.\n\n");
+	
+	return;
+}
+
+void goodbye(){
+	unsigned curTime;
+	int j = 0;
+	
+	clearTTYScreen();
+	
+	curTime = upTime();
+	
+	puts("\nNo processes running, starting system reboot...\n\n");
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("\tShutting down drivers...");
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	puts("...Done.\n\n");
+	
+	puts("Rebooting now...\n");
+	
+	++j;
+	
+	while(upTime() < curTime + j * TICKS_PER_SECOND);
+	
+	return;
+}
+
+void printA(){
+	
+	int count = 10;
+	
+	srand(timeRand());
+	while ( count-- >= 0){
+		puti(rand());
+		putchar('\n');
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void printB(){
+	while (1){
+		puts("B");
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void nothing(){
+		
+	while (1){
+		getchar();
+		asm volatile("hlt");
+	}
+	return;
+}
+
+void pageFault(){
+	char * aux;
+	
+	puts("Quiero escribir en  la posicion de memoria ");
+	if(getpid() - 1 >= 0){
+		aux = processTable[getpid() - 1].dataUmalloc.mallocMem.allocp;
+		putx((int)aux);
+		*aux = 'a';	
+	}else{
+		aux = processTable[getpid() + 1].dataUmalloc.mallocMem.allocp;
+		putx((int)aux);
+		*aux = 'a';
+	}
+	return;
+}
+

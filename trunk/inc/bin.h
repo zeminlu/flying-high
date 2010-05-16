@@ -11,4 +11,16 @@ void init(void *args);
 
 void top(char *args);
 
+void welcome();
+
+void goodbye();
+
+void printA();
+
+void printB();
+
+void nothing();
+
+void pageFault();
+
 #endif

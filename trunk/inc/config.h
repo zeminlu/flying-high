@@ -42,6 +42,16 @@
 #define MAX_PROCESS_NAME	36
 #define MAX_PRIORITIES		4
 #define MAX_TTY				8
+#define MAX_FILES			2
+#define PAGES_PER_FRAME		8
+
+/* Kernel Heap Area */
+#define KERNEL_HEAP_PAGES_QTY		10
+
+/*
+ * Shell
+*/
+#define MAX_LINE 100
 
 #define	ALARM		'\a'
 #define BACKSPACE	'\b'

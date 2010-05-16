@@ -14,6 +14,9 @@
 #define OK	TRUE
 #define	ERROR FALSE
 
+#define _READ	0x01
+#define _WRITE	0x02
+
 #define	SEND_TO_VIDEO	1
 #define WRITE_ON_TTY	0
 
@@ -32,7 +35,6 @@
 #define UNATOMIC		!ATOMIC
 #define	FOREGROUND		0
 #define	BACKGROUND		1
-#define MAX_FILES		2
 
 /*	Units Definitions */
 #define KB							* (1 << 10)
@@ -54,7 +56,6 @@
 #define PAGE_TABLES_QTY				(KERNEL_TABLES_QTY + MALLOC_TABLES_QTY)
 
 /* Frame Definitions */
-#define PAGES_PER_FRAME				8
 #define FRAMES_PER_TABLE			(PAGE_ENTRIES_PER_TABLE / PAGES_PER_FRAME)
 #define TOTAL_FRAMES_QTY			(MALLOC_TABLES_QTY * FRAMES_PER_TABLE)
 
@@ -71,9 +72,6 @@
 #define getBitmapOffset(addr)		(0x00000001 << (((addr) / PAGE_SIZE) % PAGES_PER_INT))
 #define OFFSET_MASK					0xFFFFF000
 
-/* Kernel Heap Area */
-#define KERNEL_HEAP_PAGES_QTY		10
-
 /* Flags para derechos de acceso de los segmentos */
 #define ACS_PRESENT     0x80            /* segmento presente en memoria */
 #define ACS_CSEG        0x18            /* segmento de codigo */
@@ -88,11 +86,6 @@
 #define ACS_CODE        (ACS_PRESENT | ACS_CSEG | ACS_READ)
 #define ACS_DATA        (ACS_PRESENT | ACS_DSEG | ACS_WRITE)
 #define ACS_STACK       (ACS_PRESENT | ACS_DSEG | ACS_WRITE)
-
-/*
- * defines de la shell
-*/
-#define MAX_LINE 100
 
 /*
  *	NULL Pointer Definition
