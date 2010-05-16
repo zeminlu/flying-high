@@ -32,20 +32,35 @@ bomb(int x,int y) {
 
 int
 getInput(int *px,int *py) {
-    char buf[256];
-    char *cp;
+    char cr = 0, cc = 0;
     char cx, cy, mx, my;
 
     mx = 'A' + N_X - 1;
     my = 'A' + N_Y - 1;
-    fputs(": ",stdout);
-    fgets(buf,sizeof buf,stdin);
-    for ( cp=buf; *cp; ++cp )
-        if ( *cp >= 'a' && *cp <= 'z' )
-            *cp = *cp - 0x20;
 
-    cx = buf[1];
-    cy = buf[0];
+    puts("Next bomb: ");
+	
+	while ( cr < 'A' || cr > mx) {
+		cr = getchar();
+		if(cr == EOF){
+			waitTty(getTty(getpid()));
+			continue;
+		}
+	}
+	putchar(cr);
+	putchar(' ');
+	while ( cc < 'A' || cc > my) {
+		cc = getchar();
+		if(cc == EOF){
+			waitTty(getTty(getpid()));
+			continue;
+		}
+	}
+	putchar(cc);
+	putchar('\n');
+
+    cx = cr;
+    cy = cc;
     if ( cx < 'A' || cx > mx
     ||   cy < 'A' || cy > my )
         return INP_NONE; /* Bad -- show battle */
@@ -201,7 +216,7 @@ showBattle(void) {
             else
                 fputc('.',stdout);
         }
-        puts(" |");
+        puts(" |\n");
     }
 
     showRow();

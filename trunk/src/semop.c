@@ -15,18 +15,14 @@ lockTable(int semx,int block) {
 	
 	if( !semx ){
 		if( block ){
-			puts("semx = 0 && block = 1");
 			sem_wait(table->semid);
 		}else{
-			puts("semx = 0 && block = 0");
 			sem_signal(table->semid);
 		}
 	}else{
 		if( block ){
-			puts("semx = 1 && block = 1");
 			sem_wait(table->waitSemid);
 		}else{
-			puts("semx = 1 && block = 0");
 			sem_signal(table->waitSemid);
 		}
 	}

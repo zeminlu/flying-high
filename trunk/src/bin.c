@@ -1,8 +1,7 @@
 #include "bin.h"
 
-
 void init(void *args){
-	int i;
+	int i, status;
 	pid_t pid;
 	process_t *processTable;
 	
@@ -30,6 +29,7 @@ void init(void *args){
 	setProcessAtomicity(getpid(), UNATOMIC);
 		
 	while(processTable[0].childsQty){
+		wait(&status);
 		asm volatile("hlt");
 	}
 	
@@ -114,7 +114,6 @@ void top(char * args) {
 		putchar('-');
 	}
 	while(1){
-		asm volatile("hlt");
 		setProcessAtomicity(getpid(), ATOMIC);
 		refreshProcessesCPUs();
 		clearProcessesTicks();

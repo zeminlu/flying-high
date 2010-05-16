@@ -299,7 +299,9 @@ __check_SYS_SHM_DETACH:				;										   ;
 __check_SYS_SEM_GET:				;										   ;
 	cmp 	eax, _SYS_SEM_GET		;										   ;
 	jnz		__check_SYS_SEM_FREE	;										   ;
+	push	EBX						;										   ;
 	call	_sys_sem_get			;										   ;
+	add		esp, 4					;										   ;
 	jmp		__int_80_ret			;										   ;
 
 __check_SYS_SEM_FREE:				;										   ;

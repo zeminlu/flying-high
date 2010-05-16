@@ -11,7 +11,6 @@ static int freeShMems = MAX_SHMEMS;
 
 typedef struct shMem{
 	int				shmid;
-	int				busy;
 	key_t			key;
 	int 			shMemSize;
 	frame_t			*shMemFrame;
@@ -55,7 +54,7 @@ static void shmDestroy(int shmid){
 }
 
 void initializeShMems(){
-	int i;
+	int i, j;
 	
 	for (i = 0 ; i < MAX_SHMEMS ; ++i){
 		shMemories[i].shmid = i;
@@ -66,6 +65,10 @@ void initializeShMems(){
 		shMemories[i].semid = -1;
 		shMemories[i].state = FREE;
 		shMemories[i].permFlags = (_READ | _WRITE);
+		shMemories[i].appnProcessesAmm = 0;
+		for (j = 0 ; j < MAX_SHMAPPN ; ++j){
+			shMemories[i].appnProcessesPids[j] = -1;
+		}
 	}
 }
 
@@ -103,8 +106,8 @@ int _sys_shmget(key_t key, int size){
 	setFramePresence(shMemories[freePos].shMemFrame, TRUE);
 	
 	shMemories[freePos].shMemP = shMemories[freePos].shMemFrame->address;
-	
-	if ((shMemories[freePos].semid = sem_get()) == -1){
+		
+	if ((shMemories[freePos].semid = sem_get(BLOCK)) == -1){
 		/*puts("creando semaforo\n");*/
 		return -1;
 	}
@@ -114,7 +117,7 @@ int _sys_shmget(key_t key, int size){
 	return freePos;
 }
 
-char * _sys_shmat(int shmid){
+char * _sys_shmat(int shmid, key_t *semid){
 	int i;
 	
 	if (shmid >= MAX_SHMEMS || shMemories[shmid].state != BUSY || shMemories[shmid].key == -1 || shMemories[shmid].appnProcessesAmm >= MAX_SHMAPPN){
@@ -130,6 +133,8 @@ char * _sys_shmat(int shmid){
 	if (i == MAX_SHMAPPN){
 		return NULL;
 	}
+	
+	*semid = shMemories[shmid].semid;
 	
 	return (char *)shMemories[shmid].shMemP;
 }
