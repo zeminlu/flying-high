@@ -374,7 +374,6 @@ static void startBattleShip(char *args){
 	}
 	setProcessAtomicity(getpid(), UNATOMIC);
 	waitpid(pid, &status);
-	puti(status);
 	//clearTTYScreen();
 	
 }
@@ -560,9 +559,9 @@ int shell ( void )
 	printPrompt();
 	
 	while (tableDataShell[indexDT].status == RUNNING){
-		asm volatile("hlt");
 		c = getchar();
 		if ( c == EOF ){
+			asm volatile("hlt");
 			waitTty(getTty(getpid()));
 			continue;
 		}

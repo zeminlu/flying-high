@@ -18,7 +18,7 @@ battleship() {
     /*union semun semarg;*/         /* for semctl() */
  //   ushort seminit[] = { 1, 0 };/* Initial sem values */
     pid_t p1, p2;               /* PID for player 1 & 2 */
-    char buf[256], auxChar = '0';              /* For fgets() */
+    char auxChar = '0';              /* For fgets() */
     int x, y, z;                /* move x,y and status z */
 
     srand(getpid());            /* Init random no.s */
@@ -48,22 +48,25 @@ battleship() {
 		if ( shmid == -1 ) {
             return 13;
         }
-		
+
         attachTable();          /* Attach new table */
 		
         /*
          * Create a binary semaphore set :
          */
         /*semid = semget(IPC_PRIVATE,2,0666);*/
-		semid = sem_get();
+		semid = sem_get(BLOCK);
 		if ( semid == -1 ) {
             return 13;
         }
 
-		waitSemid = sem_get();
+		waitSemid = sem_get(WAIT);
 		if ( waitSemid == -1 ) {
             return 13;
         }
+
+		table->semid = semid;       /* Make IPC ID public */
+		table->waitSemid = waitSemid;
         
         /*
          * Initialize semaphores:
@@ -79,10 +82,7 @@ battleship() {
          * memory table :
          */
         LOCK;                       /* Wait on semaphore */
-		puts("Estoy lockeado\n");
-        table->semid = semid;       /* Make IPC ID public */
-		table->waitSemid = waitSemid;
-        table->player[0].pid = getpid();
+		table->player[0].pid = getpid();
         table->player[1].pid = 0;   /* No opponent yet */
         genBattle();                /* Generate battle */
 
@@ -122,14 +122,14 @@ battleship() {
 		}
 			
 		shmid = auxChar - '0';  /* Simple int conversion */
-        attachTable();          /* Attach existing shm */
+		attachTable();          /* Attach existing shm */
 
         /* No lock is required for this fetch: */
         semid = table->semid;   /* Locking semaphore ID */
 		waitSemid = table->waitSemid;
 
         LOCK;                   /* Wait on semaphore */
-        p1 = table->player[0].pid;
+		p1 = table->player[0].pid;
         p2 = table->player[1].pid;
         if ( p2 == 0 )          /* No opponent yet? */
             p2 = table->player[1].pid = getpid();
@@ -138,7 +138,7 @@ battleship() {
         if ( p2 != getpid() ) {
 			puts("Sorry: PID ");
 			puti(p1);
-			puts(" are already playing.");
+			puts(" is already playing.");
 			putchar('\n');
             return 1;
         }
@@ -151,9 +151,12 @@ battleship() {
         showBattle();
         UNLOCK;
 
-        puts("Press RETURN: ");
-        fgets(buf,sizeof buf,stdin);
-
+        puts("Press any key:");
+		while(getchar() == EOF){
+			waitTty(getTty(getpid()));
+		}
+		puts("\n\n");
+		
         NOTIFY2;                /* Notify player1 */
     }
 
@@ -182,7 +185,7 @@ battleship() {
     LOCK;
     showBattle();
     UNLOCK;
-    puts("GAME OVER!");
+    puts("GAME OVER!\n");
 
     if ( !us )      /* Player1? */
         WAIT2;      /* Yes, Wait for opponent to finish */

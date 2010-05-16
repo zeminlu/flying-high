@@ -246,24 +246,29 @@ void multitasker(void) {
 	if ( runningProcess != NULL && runningProcess->atomicity == ATOMIC )
 		return;
 	nextProcess = (runningProcess == NULL) ? nextProcess : getNextTask();
-	if ( nextProcess != runningProcess ) {
-		/* This is done when loading the init process for the first time */
-		if ( runningProcess != NULL ) {
-			if ( runningProcess->state == RUNNING )
-				runningProcess->state = READY;
-			asm volatile("mov %%esp, %0": "=r"(runningProcess->esp));
-			asm volatile("mov %%ebp, %0": "=r"(runningProcess->ebp));
+	if ( nextProcess != runningProcess) {
+		if (nextProcess == initProcess && runningProcess != NULL && runningProcess->state == RUNNING){
+			nextProcess = runningProcess;
 		}
-		/* Protection */
-		setFramePresence(nextProcess->sFrame, TRUE);
-		setFramePresence(nextProcess->hFrame, TRUE);
-		asm volatile("mov %0, %%esp":: "r"(nextProcess->esp));
-		asm volatile("mov %0, %%ebp":: "r"(nextProcess->ebp));
-		if ( runningProcess != NULL ) {
-			setFramePresence(runningProcess->sFrame, FALSE);
-			setFramePresence(runningProcess->hFrame, FALSE);
+		else{
+			/* This is done when loading the init process for the first time */
+			if ( runningProcess != NULL ) {
+				if ( runningProcess->state == RUNNING )
+					runningProcess->state = READY;
+				asm volatile("mov %%esp, %0": "=r"(runningProcess->esp));
+				asm volatile("mov %%ebp, %0": "=r"(runningProcess->ebp));
+			}
+			/* Protection */
+			setFramePresence(nextProcess->sFrame, TRUE);
+			setFramePresence(nextProcess->hFrame, TRUE);
+			asm volatile("mov %0, %%esp":: "r"(nextProcess->esp));
+			asm volatile("mov %0, %%ebp":: "r"(nextProcess->ebp));
+			if ( runningProcess != NULL ) {
+				setFramePresence(runningProcess->sFrame, FALSE);
+				setFramePresence(runningProcess->hFrame, FALSE);
+			}
+			nextProcess->state = RUNNING;
 		}
-		nextProcess->state = RUNNING;
 	}else {
 	}
 	freeTerminatedProcesses();
