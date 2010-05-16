@@ -3,7 +3,7 @@
 ;																			  ;
 ;		Brief: This file implements the system call defined in system.h		  ;
 ;																			  ;
-;		Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin			  ;
+;		Author: Luciano Zemin, Nicolas Magni, Nicolas Purita				  ;
 ;-----------------------------------------------------------------------------;
 section .text
 

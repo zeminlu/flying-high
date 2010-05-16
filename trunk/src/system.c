@@ -1,10 +1,12 @@
-/*
- *	File system.c
+/**
+ *	\file system.c
  *
- *		Brief:
+ *		\brief Brief.
  *
- *		Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
+
 #include "system.h"
 
 void rebootSystem(void)

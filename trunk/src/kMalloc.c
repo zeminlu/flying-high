@@ -1,3 +1,12 @@
+/**
+ *	\file kMalloc.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #include "../inc/kMalloc.h"
 
 /*Falta agregar el true y el false*/

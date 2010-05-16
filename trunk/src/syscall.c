@@ -1,10 +1,12 @@
 /**
- *	File syscall.c
+ *	\file syscall.c
  *
- * 		Brief: The implementation of all system calls
+ *		\brief Implementation off all system calls.
  *
- * 		Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
+
 #include "syscall.h"
 
 extern process_t *runningProcess;

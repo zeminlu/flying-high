@@ -1,6 +1,7 @@
 /*
- *	exceptions.c
- *
+ *	\file exceptions.c
+ *		
+ *		\brief
  * 		The implementation of all exception handlers.
  *
  *		Intel's 80386 Exceptions Table
@@ -25,7 +26,7 @@
  *		16           Coprocessor error
  *		17-31        (reserved)
  *		
- *		Author: Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  */
 #include "../inc/exceptions.h"
 

@@ -1,7 +1,11 @@
-/*
- *	shMemory.c
+/**
+ *	\file shMemory.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
-
 #include "shMemory.h"
 
 #define	FREE	1

@@ -1,3 +1,12 @@
+/**
+ *	\file bin.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #include "bin.h"
 
 extern process_t *processTable;
@@ -280,12 +289,8 @@ void goodbye(){
 
 void printA(){
 	
-	int count = 10;
-	
-	srand(timeRand());
-	while ( count-- >= 0){
-		puti(rand());
-		putchar('\n');
+	while (1){
+		putchar('A');
 		asm volatile("hlt");
 	}
 	return;
@@ -293,7 +298,7 @@ void printA(){
 
 void printB(){
 	while (1){
-		puts("B");
+		putchar('B');
 		asm volatile("hlt");
 	}
 	return;

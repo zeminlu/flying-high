@@ -1,5 +1,10 @@
-/*
- * ttys.c
+/**
+ *	\file ttys.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
 
 #include "ttys.h"
@@ -446,20 +451,6 @@ int getFocusedTTY( void )
 }
 	
 static void putTTY(Keycode c){
-/*
-	int aux = stdinTableTTY[tty].writePointer;
-	
-	if(stdinTableTTY[tty].empty == TRUE ){
-		if(aux == MAX_LINE){
-			aux = 0;
-		}
-		stdinTableTTY[tty].stdIN[aux++] = c;
-		if(aux == stdinTableTTY[tty].readOffset){
-			stdinTableTTY[tty].empty = FALSE;
-		}
-		
-	}
-*/	
 	tty_t tty;
 	
 	tty = getFocusedTTY();
@@ -538,30 +529,6 @@ void sysSetTTYFocusedProcess(pid_t pid, tty_t tty){
 pid_t sysGetTTYFocusedProcess(tty_t tty){
 	return ttyTable.listTTY[tty]->focusProcess;
 }
-
-/*
-Keycode sysGetChar(tty_t tty){
-	Keycode aux ;
-	
-	while(sleepCondition[tty] <= 0){
-		waitTty(tty);
-	}
-
-	if(stdinTableTTY[tty].readOffset == MAX_LINE){
-		stdinTableTTY[tty].readOffset = 0;
-	}
-	
-	aux = stdinTableTTY[tty].stdIN[stdinTableTTY[tty].readOffset++];
-	
-	if(runningProcess->ttyMode == TTY_CANONICAL && aux == NEW_LINE){
-		sleepCondition[tty] --;
-	}else if(runningProcess->ttyMode != TTY_CANONICAL){
-		sleepCondition[tty] --;
-	}
-	
-	return  aux;
-}
-*/
 
 void clearTTYScreen()
 {

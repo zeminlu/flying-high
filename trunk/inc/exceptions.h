@@ -1,9 +1,9 @@
-/*
- *	exceptions.h
+/**
+ *	\file exceptions.h
  *
- *		Functions related with exception handling.
+ *		\brief Functions related with exception handling.
  *
- *		Author: Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
 
@@ -18,6 +18,19 @@
 /*
  *	Loads all the exception handlers
  *	into the IDT.
+ */
+/**
+ * \fn void loadExceptionHandlers()
+ *
+ * 		\brief Brief.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
  */
 void loadExceptionHandlers();
 

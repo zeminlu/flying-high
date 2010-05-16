@@ -1,7 +1,11 @@
-/*
- *	semaphore.c
+/**
+ *	\file semaphore.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
-
 #include "semaphore.h"
 
 typedef struct semQueue{

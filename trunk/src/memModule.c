@@ -1,3 +1,12 @@
+/**
+ *	\file memModule.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #include "../inc/memModule.h"
 
 /* The System's page directory */

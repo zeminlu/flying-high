@@ -1,3 +1,12 @@
+/**
+ *	\file kernel.h
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #ifndef _KERNEL_H_
 #define _KERNEL_H_
 

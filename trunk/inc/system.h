@@ -3,13 +3,12 @@
  *	
  *		\brief  
  *
- *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  */
 
 #ifndef _SYSTEM_H_
 #define _SYSTEM_H_
 
-#include "screensaver.h"
 #include "shell.h"
 #include "io.h"
 #include "types.h"

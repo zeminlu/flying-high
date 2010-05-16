@@ -1,4 +1,11 @@
-/* cleanup.c */
+/**
+ *	\file cleanup.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
 
 #include "bttlship.h"
 

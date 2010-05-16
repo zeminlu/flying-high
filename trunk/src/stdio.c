@@ -1,11 +1,12 @@
-/*
- * 	File stdio.h
- *	
- * 		Brief
+/**
+ *	\file stdio.c
  *
- * 		Author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
+
 #include "stdio.h"
 
 #define NIBBLES_PER_INT sizeof(int) * 2

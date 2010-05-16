@@ -1,15 +1,14 @@
 /**
- *	\file	pQueue.c
+ *	\file pQueueP.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
-
 /*
  *	Includes Section
  */
-
-/*#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>*/
 
 #include "../inc/pQueueP.h"
 
@@ -68,28 +67,6 @@ void printQueue( pQueueADT queueADT )
 		}
 	}
 }
-
-/*int main (int argc, char const *argv[])
-{
-	pQueueADT	queue;
-	int num1 = 1, num2 = 2, num3 = 3, ret1,ret2,ret3;
-	
-	queue= newPQueue(freeNode, copyNum);
-	enque(queue, (void*)(&num1), 0);
-	enque(queue, (void*)(&num3), 3);
-	
-	printQueue(queue);
-	ret1 = *((int*)deque(queue));
-	enque(queue, (void*)(&num2), 2);
-	
-	ret2 = *((int*)deque(queue));
-	ret3 = *((int*)deque(queue));
-	
-	printf("num1: %d num2: %d num3: %d\n", ret1, ret2, ret3);
-	freePQueue(queue);
-	return 0;
-}*/
-
 
 pQueueADT newPQueue( void (*freeFnP)(void *), void * (*cpyFnP)(void *) )
 {
@@ -180,7 +157,6 @@ void * deque( pQueueADT queue )
 			cpyData = queue->cpyFn( (queue->queue)[i].first->data );
 			(queue->queue)[i].first = ((queue->queue)[i].first)->next;
 			queue->freeFn((void*)aux);
-			/*printf("cpyData: %d pQueueDim: %d\n", *((int*)cpyData), (queue->queue)[i].pQueueDim );*/
 			--(queue->queue)[i].pQueueDim;
 			return cpyData;
 		}

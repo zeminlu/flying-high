@@ -4,7 +4,7 @@
  * 		\brief Declaration of functions and constants related with direct access
  * 		to hardware
  *
- * 		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ * 		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
 

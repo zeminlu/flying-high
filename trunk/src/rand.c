@@ -1,7 +1,11 @@
-/*
- *	rand.h
+/**
+ *	\file rand.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
-
 #include "rand.h"
 
 static unsigned int seed;

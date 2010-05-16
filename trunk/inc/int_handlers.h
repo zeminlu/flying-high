@@ -3,7 +3,7 @@
  *
  *		\brief Declarations of all interrupt handlers
  *
- *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  */
 
 #ifndef _INT_HANDLERS_H_
@@ -30,8 +30,19 @@ void _int_08_handler ( void );
  */
 void _int_80_handler ( void );
 
-void _int_74_handler ( void );
-
+/**
+ * \fn void _int_09_handler ( void )
+ *
+ * 		\brief Brief.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void _int_09_handler ( void );
 
 #endif

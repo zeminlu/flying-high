@@ -1,9 +1,14 @@
 /**
- *	pQueue.h
+ *	\file pQueueP.h
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
 
-#ifndef _PQUEUE_
-#define _PQUEUE_ 	
+#ifndef _PQUEUEP_H_
+#define _PQUEUEP_H_ 	
 
 #include "string.h"
 #include "stdio.h"

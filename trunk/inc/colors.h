@@ -1,3 +1,12 @@
+/**
+ *	\file colors.h
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #ifndef _COLORS_H_
 #define _COLORS_H_
 

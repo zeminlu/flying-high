@@ -1,3 +1,12 @@
+/**
+ *	\file process.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #include "process.h"
 
 extern process_t processTable[MAX_PROCESS];

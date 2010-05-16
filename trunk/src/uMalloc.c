@@ -1,5 +1,13 @@
-#include "../inc/uMalloc.h"
+/**
+ *	\file uMalloc.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
 
+#include "../inc/uMalloc.h"
 
 static memArea_t * getMem(){
 	return &(runningProcess->dataUmalloc.mallocMem);

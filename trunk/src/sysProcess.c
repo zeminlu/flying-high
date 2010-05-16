@@ -1,3 +1,12 @@
+/**
+ *	\file sysProcess.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #include "sysProcess.h"
 
 unsigned int tickCount = 0;

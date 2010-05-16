@@ -3,7 +3,7 @@
  *
  *		\brief Definitions for all UNIX Standard system calls functions
  *		
- *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
 
@@ -71,8 +71,46 @@ ssize_t write ( int fileds, const void * buffer, size_t count );
  */
 ssize_t read ( int fileds, void * buffer, size_t count );
 
+/**
+ * \fn size_t fread(FILE *stream, void * buffer, size_t count)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param stream ParamBrief.
+ * 		\param buffer ParamBrief.
+ * 		\param count ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 size_t fread(FILE *stream, void * buffer, size_t count);
 
+/**
+ * \fn size_t fwrite(FILE *stream, void * buffer, size_t count)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param stream ParamBrief.
+ * 		\param buffer ParamBrief.
+ * 		\param count ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 size_t fwrite(FILE *stream, void * buffer, size_t count);
 
 #endif

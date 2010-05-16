@@ -1,11 +1,12 @@
 /*
- * 	file: keyboard_driver.c
+ * 	\file keyboard_driver.c
  *
- * 	\brief: This file contains the scancode table for all of the letter and
+ * 	\brief This file contains the scancode table for all of the letter and
  * 			their combination.
  *			-The incoming scancode of the keyboard select the row
  *			-The modifier status select the column
  *			-The intersection of two is the scan/ASCII code to put into the PC buffer ahead	
+ *	\author	Luciano Zemin, Nicolás Magni, Nicolás Purita
  */
 
 #include "keyboard_driver.h"
