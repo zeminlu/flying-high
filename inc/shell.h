@@ -16,7 +16,6 @@
 #include "system.h"
 #include "string.h"
 #include "colors.h"
-#include "video_adapter.h"
 #include "types.h"
 #include "process.h"
 #include "uMalloc.h"

@@ -14,7 +14,6 @@
 
 #include "string.h"
 #include "unistd.h"
-#include "file.h"
 #include "types.h"
 
 #define EOF	-1
