@@ -1,9 +1,13 @@
-#include "../inc/sysMalloc.h"
-/*
- * 	Defines
- * 	=======
+/**
+ *	\file sysMalloc.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
  */
 
+#include "sysMalloc.h"
 
 static void *baseMalloc(size_t nbytes, memArea_t * memArea){
 	unsigned int aux1;
@@ -11,9 +15,6 @@ static void *baseMalloc(size_t nbytes, memArea_t * memArea){
 	
 	aux1 = (unsigned int)memArea->address;
 	aux2 = (unsigned int)memArea->size;
-/*	if(memArea->allocp == NULL){
-		memArea->allocp = memArea->address;
-	}*/
 	
 	if((aux1 + aux2 - (unsigned int)memArea->allocp) >= nbytes){
 		memArea->allocp += nbytes;

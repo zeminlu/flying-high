@@ -4,7 +4,7 @@
  *		\brief Defines the basic function to manage the video screen, cursor &  mouse
  *		pointer.
  *
- *		\author Guido Marucci Blas, Nicolas Purita, Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
 
@@ -31,16 +31,15 @@ void refreshScreen ( void );
 
 
 /**
- * \fn void initVideo ( int cursorEnabled, int pointerEnabled )
+ * \fn void initVideo (int cursorEnabled)
  *
  *		\brief Initializes the video driver, by setting the initial
- *		cursor, pointer position, setting their visibility, enabling
+ *		cursor position, setting it's visibility, enabling
  *		the blinking cursor and defining cursor shape.
  *
  *		\param cursorEnabled zero to disable the cursor, not zero to enable the cursor.
- *		\param pointerEnabled zero to disable the cursor, not zero to enable the cursor.
  */
-void initVideo ( int cursorEnabled, int pointerEnabled );
+void initVideo (int cursorEnabled);
 
 /**
  * \fn void incCursor ( void )
@@ -109,88 +108,6 @@ int setCursorPositionByOffset ( int offset );
 void getCursorPosition ( int * row, int * col );
 
 /**
- *	\fn int setPointerPosition ( int row, int col )
- *
- *		\brief Sets the mouse pointer's position.
- *
- *		\param row the new row position.
- *		\param col the new col position.
- *
- *		\return the offset from (0, 0) incliding the attribute byte.
- *
- */
-int setPointerPosition ( int row, int col );
-
-
-/**
- *	\fn int setPointerPositionByOffset ( int offset )
- *
- *		\brief Sets the pointer's position.
- *
- *		\param offset the offset from (0,0) including the attribute byte.
- *
- */
-int setPointerPositionByOffset ( int offset );
-
-
-/**
- *	\fn int getPointerPosition ( int * row, int * col )
- *
- *		\brief Gets the pointer's position.
- *
- *		\row a pointer to int where the actual row position will be returned. Must not be NULL.
- *		\col a pointer to int where the actual col position will be returned. Must not be NLL.
- *
- *		\return the offset from (0,0) including the attribute offset.
- *
- */
-int getPointerPosition ( int * row, int * col );
-
-/**
- *	\fn int setPointerVisibility ( int b )
- *
- *		\brief Sets the pointer's visibility
- *
- *		\param b zero to turn it off, not zero to turn it on.
- *
- *		\return the actual state of visibility.
- *
- */
-int setPointerVisibility ( int b );
-
-/**
- *	\fn int isPointerVisible ( void )
- *
- *		\brief Gets the acutal state of visibility
- *
- *		\return the actul state of visibility.
- *
- */
-int isPointerVisible ( void );
-
-
-/**
- * \fn int getPointerColor ( void )
- *
- * 		\brief Gets the poiter's color
- *
- * 		\return A color code.
- *
- */
-int getPointerColor ( void );
-
-/**
- *	\fn int setPointerColor ( int color )
- *
- * 		\brief Sets the pointer's color
- *
- * 		\param color A color code.
- * 		\return the new pointer's color code.
- *
- */
-int setPointerColor ( int color );
-
-/**
  *	\fn int getVideoColor ( void )
  *
  *		\brief Gets the actual default video color
@@ -211,40 +128,6 @@ int getVideoColor ( void );
  *
  */
 int setVideoColor ( int color );
-
-
-/**
- *	\fn int paintArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y )
- *
- *		\brief Paints an area delimited by two opossite points by changing the background color
- *		with the font color.
- *
- *		\return A number different from zero if succed zero if not.
- *
- */
-int paintArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y );
-
-
-/**
- *	\fn int copyArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char * buffer )
- *
- *		\brief Copies an area delimited by two opposite points including the attribute byte into a buffer.
- *
- *
- *		\return A number different from zero if succed zero if not.
- *
- */
-int copyArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char * buffer );
-
-/**
- *	\fn int pasteArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char * buffer )
- *
- *		\brief Pastes a buffer into an area delimited by two opposite points including the attribute byte.
- *
- *		\return A number different from zero if succed zero if not.
- *
- */
-int pasteArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char * buffer );
 
 /**
  *	\fn void putCharAtCurrentPos ( int c, int color )
@@ -268,7 +151,6 @@ void putCharAtCurrentPos ( int c, int color );
  *
  */
 void printChar ( int c );
-
 
 /**
  *	\fn void printColorChar ( int c, int color )
@@ -370,19 +252,137 @@ int setVideoVTabStop ( int num );
  */
 void updateColor ( void  );
 
+/**
+ * \fn retType function(args)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param parameter ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void printAlarm ( void );
 
+/**
+ * \fn retType function(args)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param parameter ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void printBackspace ( void );
 
+/**
+ * \fn retType function(args)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param parameter ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void printNewLine ( void );
 
+/**
+ * \fn retType function(args)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param parameter ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void printLineFeed ( void );
 
+/**
+ * \fn retType function(args)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param parameter ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void printReturn ( void );
 
+/**
+ * \fn retType function(args)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param parameter ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void printTab ( void  );
 
+/**
+ * \fn retType function(args)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param parameter ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void printVTab ( void );
-
 
 #endif

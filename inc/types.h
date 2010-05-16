@@ -3,7 +3,7 @@
  *
  *		\brief Definition for system dependent types
  *
- * 		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ * 		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
 
@@ -17,20 +17,52 @@
  *	Type definitions
  */
 
+/**
+ * \var Keycode
+ * 		\brief Brief.
+ */
 typedef unsigned char Keycode;
 
+/**
+ * \var size_t
+ * 		\brief Brief.
+ */
 typedef unsigned int size_t;
 
+/**
+ * \var ssize_t
+ * 		\brief Brief.
+ */
 typedef unsigned int ssize_t;
 
+/**
+ * \var pid_t
+ * 		\brief Brief.
+ */
 typedef int pid_t;
 
+/**
+ * \var key_t
+ * 		\brief Brief.
+ */
 typedef int key_t;
 
+/**
+ * \var tty_t
+ * 		\brief Brief.
+ */
 typedef int tty_t;
 
+/**
+ * \var pfunc_t
+ * 		\brief Brief.
+ */
 typedef void (pfunc_t)(void *);
 
+/**
+ * \struct page_t
+ * 		\brief Brief.
+ */
 typedef struct page {
 	unsigned int present 		: 1;
 	unsigned int writeable 		: 1;
@@ -43,38 +75,70 @@ typedef struct page {
 	unsigned int address		: 20;
 } page_t;
 
+/**
+ * \struct pageTable_t
+ * 		\brief Brief.
+ */
 typedef page_t pageTable_t[PAGE_ENTRIES_PER_TABLE];
 
+/**
+ * \struct directory_t
+ * 		\brief Brief.
+ */
 typedef struct directory {
 	pageTable_t tables[PAGE_TABLES_QTY];
 	pageTable_t pageDirectory;
 } directory_t;
 
+/**
+ * \struct frameLocation_t
+ * 		\brief Brief.
+ */
 typedef struct frameLocation {
 	unsigned int table;
 	unsigned int pageEntry;
 } frameLocation_t;
 
+/**
+ * \struct usedMemBitmap_t
+ * 		\brief Brief.
+ */
 typedef struct usedMemBitmap {
 	int usedPages;
 	unsigned int bitmap[BITMAP_SIZE];
 } usedMemBitmap_t;
 
+/**
+ * \struct frame_t
+ * 		\brief Brief.
+ */
 typedef struct frame{
 	int assigned;
 	unsigned int address;
 } frame_t;
 
+/**
+ * \struct memArea_t
+ * 		\brief Brief.
+ */
 typedef struct memArea{
 	void *address;
 	size_t size;
 	char * allocp;
 } memArea_t;
 
+/**
+ * \struct framesTable_t
+ * 		\brief Brief.
+ */
 typedef frame_t framesTable_t[TOTAL_FRAMES_QTY];
 
 /*
  *	FILE Type Definition
+ */
+/**
+ * \struct FILE
+ * 		\brief Brief.
  */
 typedef struct {
 	int fd;
@@ -84,11 +148,19 @@ typedef struct {
 	size_t bufferSize;
 } FILE;
 
+/**
+ * \struct heapStatus
+ * 		\brief Brief.
+ */
 typedef struct heapStatus{
 	int asigment;
 	memArea_t mallocMem;
 	} heapStatus;
 
+/**
+ * \struct process_t
+ * 		\brief Brief.
+ */
 typedef struct process_t {
 	pid_t pid;
 	pid_t ppid;
@@ -121,6 +193,10 @@ typedef struct process_t {
 	
 } process_t;
 
+/**
+ * \enum SYSCALL_IDS
+ * 		\brief Brief.
+ */
 enum SYSCALL_IDS{
 	_SYS_WRITE,
 	_SYS_READ,
@@ -156,6 +232,10 @@ enum SYSCALL_IDS{
 	_SYS_GET_TTY_MODE
 };
 
+/**
+ * \enum STATES
+ * 		\brief Brief.
+ */
 enum STATES{
 	RUNNING,
 	READY,
@@ -167,24 +247,30 @@ enum STATES{
 	DEAD
 };
 
-enum PROCCESS { 
-	TERMINAL, 
-	SHELL, 
-	SCREEN_SAVER 
-};
-
 /*TTY*/
+/**
+ * \struct stdInTTY
+ * 		\brief Brief.
+ */
 typedef struct stdInTTY{
 	Keycode 	*stdInBuffer;
 	int 		writeOffset;
 }stdInTTY;
 
+/**
+ * \struct stdOutTTY
+ * 		\brief Brief.
+ */
 typedef struct stdOutTTY{
 	Keycode 	*stdOutBuffer;
 	Keycode		*begin;
 	Keycode		*end;
 }stdOutTTY;
 
+/**
+ * \struct tty_s
+ * 		\brief Brief.
+ */
 typedef struct tty_s{
 	tty_t			ttyId;
 	stdInTTY		*stdIn;
@@ -199,53 +285,54 @@ typedef struct tty_s{
 	int				readRow;
 }tty_s;
 
+/**
+ * \struct sysTTY
+ * 		\brief Brief.
+ */
 typedef struct sysTTY{
 	int			qtyTTY;
 	tty_s		*listTTY[MAX_TTY];
 	tty_t		focusTTY;
 }sysTTY;
 
+/*SHELL */
 
-/*
-typedef struct TTY{
-	tty_t			ttyId;
-	Keycode *		inTTY;
-	Keycode		 	TerminalBuffer[VIDEO_MEMORY_SIZE];
-	Keycode		 	*begin, *end;
-	int				hasScrolled;
-	pid_t			focusProcess;
-}TTY;
-
-typedef struct sysTTY{
-	int		qtyTTY;
-	TTY		ttys[MAX_TTY];
-	tty_t	focusTTY;
-}sysTTY;
-
-typedef struct stdInTTY{
-	Keycode stdIn[MAX_LINE];
-	int 	writeOffset;
-}stdInTTY;
-*/
-
-/*SHEL */
-
+/**
+ * \var shellFuncT
+ * 		\brief Brief.
+ */
 typedef void (*shellFuncT)(char *);
 
+/**
+ * \struct commandT
+ * 		\brief Brief.
+ */
 typedef struct {
 	char * command;
 	shellFuncT func;
 	char * helpMsg;
 } commandT;
 
+/**
+ * \var pFuncT
+ * 		\brief Brief.
+ */
 typedef int (*pFuncT)(char*);
 
+/**
+ * \struct propertyT
+ * 		\brief Brief.
+ */
 typedef struct {
 	char * name;
 	pFuncT func;
 	char * helpMsg;
 } propertyT;
 
+/**
+ * \struct dataSlotShell
+ * 		\brief Brief.
+ */
 typedef struct{
 	pid_t pid;
 	int status;
@@ -254,11 +341,19 @@ typedef struct{
 	int index;
 }dataSlotShell;
 
+/**
+ * \var dataShell
+ * 		\brief Brief.
+ */
 typedef dataSlotShell* dataShell;
 
 #pragma pack (1) 		/* Alinear las siguiente estructuras a 1 byte */
 
 /* Descriptor de segmento */
+/**
+ * \struct DESCR_SEG
+ * 		\brief Brief.
+ */
 typedef struct {
   word limit,
        base_l;
@@ -270,6 +365,10 @@ typedef struct {
 
 
 /* Descriptor de interrupcion */
+/**
+ * \struct DESCR_INT
+ * 		\brief Brief.
+ */
 typedef struct {
   word      offset_l,
             selector;
@@ -279,6 +378,10 @@ typedef struct {
 } DESCR_INT;
 
 /* IDTR  */
+/**
+ * \struct IDTR
+ * 		\brief Brief.
+ */
 typedef struct {
   word  limit;
   dword base;

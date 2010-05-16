@@ -1,4 +1,12 @@
-/* game.c */
+/**
+ *	\file game.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #include "bttlship.h"
 
 void

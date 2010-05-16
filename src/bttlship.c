@@ -1,5 +1,11 @@
-/* main.c */
-
+/**
+ *	\file bttlship.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
 
 #include "bttlship.h"
 
@@ -194,4 +200,3 @@ battleship() {
 
     return 0; /* Cleanup removes IPC resource for player1 */
 }
-

@@ -1,3 +1,12 @@
+/**
+ *	\file kernelDepth.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #include "../inc/kernelDepth.h"
 
 static int atomicCounter = 0;

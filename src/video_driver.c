@@ -1,9 +1,9 @@
-/*
- *	File: video_driver.c
+/**
+ *	\file video_driver.c
  *
- *		Brief Implementation of the video_driver.h file
+ *		\brief Implementation of video_driver.h file.
  *
- * 		Author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
 
@@ -46,18 +46,6 @@ static unsigned char videoBuffer[VIDEO_MEMORY_SIZE];
 
 static unsigned char videoColor = VIDEO_COLOR;
 
-static int pointerCol = POINTER_START_COL;
-
-static int pointerRow = POINTER_START_ROW;
-
-static short pointerOffset = getOffset(POINTER_START_ROW, POINTER_START_COL);
-
-static unsigned char pointerColor = POINTER_COLOR;
-
-static int pointerVisibility = 0;
-
-static unsigned char  oldPointedColor = VIDEO_COLOR;
-
 static int CRTCAddress, CRTCData;
 
 static int vtabStop = VIDEO_VTAB_STOP;
@@ -78,8 +66,6 @@ static void fillLine ( int c )
 	{
 		videoBuffer[i] = c;
 		videoBuffer[i + 1] = videoColor;
-		if ( i  == pointerOffset )
-			oldPointedColor = videoColor;
 	}
 }
 
@@ -150,71 +136,8 @@ void printVTab ( void )
 
 static int parseCharacter ( int c, int offset )
 {
-	/*static printFunctionT specialCharFunctions[] = {
-		printAlarm,
-		printBackspace,
-		printTab,
-		printNewLine,
-		printVTab,
-		printLineFeed,
-		printReturn
-	};
-	if ( '\a' <= c && c <= '\r' )
-	{
-		specialCharFunctions[c - '\a']();
-		return 0;
-	}
-	else
-	{
-		videoBuffer[offset] = c;
-		return 1;
-	}*/
 	videoBuffer[offset] = c;
 	return 1;
-}
-
-static void pointerOn ( void  )
-{
-	if ( pointerVisibility )
-	{
-		oldPointedColor =  videoBuffer[pointerOffset + 1];
-		videoBuffer[pointerOffset + 1] = pointerColor;
-	}
-}
-
-static void pointerOff ( void )
-{
-	if ( pointerVisibility )
-	{
-		videoBuffer[pointerOffset + 1] = oldPointedColor;
-	}
-}
-
-static int transverseArea ( int leftUpper_x, int leftUpper_y, int rightLower_x,
-	int rightLower_y, void (*callback)(unsigned char *, unsigned char *,void *), void * callbackArgs )
-{
-	int i, j, offset;
-
-	if ( leftUpper_x < 0 || leftUpper_x >= SCREEN_WIDTH || leftUpper_y < 0 || leftUpper_y >= SCREEN_HEIGTH ||
-		 rightLower_x < 0 || rightLower_x >= SCREEN_WIDTH || rightLower_y < 0 || rightLower_y >= SCREEN_HEIGTH ||
-		 leftUpper_y > rightLower_y || leftUpper_x > rightLower_x )
-		return 0;
-	
-	for ( i = leftUpper_y; i <= rightLower_y; ++i )
-		for ( j = leftUpper_x; j <=  rightLower_x; ++j )
-		{
-			offset = getOffset(i, j);
-			if ( offset == pointerOffset  )
-				callback(&(videoBuffer[offset]), &(oldPointedColor), callbackArgs);
-			else
-				callback(&(videoBuffer[offset]), &(videoBuffer[offset + 1]), callbackArgs);
-		}
-	return 1;
-}
-
-static void paintChar ( unsigned char * c, unsigned char * color, void * notUsed )
-{
-	*color = colorMask(*color);
 }
 
 typedef struct indexedBuffer {
@@ -222,25 +145,9 @@ typedef struct indexedBuffer {
 	int index;
 } indexedBufferT;
 
-static void copyChar ( unsigned char * c, unsigned char * color, void * package )
-{
-	char * buffer = ((indexedBufferT *)package)->buffer;
-	buffer[((indexedBufferT *)package)->index++] =  *c;
-	buffer[((indexedBufferT *)package)->index++] = *color;
-}
-
-static void pasteChar ( unsigned char * c, unsigned char * color, void * package )
-{
-	char * buffer = ((indexedBufferT *)package)->buffer;
-	*c = buffer[((indexedBufferT *)package)->index++];
-	*color = buffer[((indexedBufferT *)package)->index++];
-}
-
 static void scrollScreen()
 {
-	pointerOff();
 	memcpy(videoBuffer, videoBuffer + (SCREEN_WIDTH * 2), VIDEO_MEMORY_SIZE - (SCREEN_WIDTH * 2));
-	pointerOn();
 	cursorRow = SCREEN_HEIGTH -1;
 	cursorCol = 0;
 	cursorOffset = getOffset(cursorRow, cursorCol);
@@ -266,7 +173,7 @@ static void refreshCursor ( void )
  *	Public Function Section
  */
 
-void initVideo ( int cursorEnabled, int pointerEnabled ) 
+void initVideo ( int cursorEnabled) 
 {
 	int temp, temp2, miscVGARegister, CRTControler, cursorStart,
 		cursorEnd, maxScanLineRegister;
@@ -320,7 +227,6 @@ void initVideo ( int cursorEnabled, int pointerEnabled )
 	outportb(CRTCAddress, temp);
 	
 	setCursorVisibility(cursorEnabled);
-	/*setPointerVisibility(pointerEnabled);*/
 	refreshCursor();
 }
 
@@ -414,79 +320,6 @@ void getCursorPosition ( int * row, int * col )
 	*col = cursorCol;
 }
 
-/* Mouse Pointer Functions */
-
-int setPointerPosition ( int row, int col )
-{
-	if ( row >= SCREEN_HEIGTH )
-		pointerRow = SCREEN_HEIGTH - 1;
-	else if ( row < 0 )
-		pointerRow = 0;
-	else
-		pointerRow = row;
-
-	if ( col >= SCREEN_WIDTH )
-		pointerCol = SCREEN_WIDTH - 1;
-	else if ( col < 0 )
-		pointerCol = 0;
-	else
-		pointerCol = col;
-
-	pointerOff();
-	pointerOffset = getOffset(pointerRow, pointerCol);
-	pointerOn();
-	
-	return pointerOffset;
-}
-
-int setPointerPositionByOffset ( int offset )
-{
-	if ( offset >= SCREEN_SIZE || offset < 0 )
-		return -1;
-	
-	pointerOff();
-	pointerOffset = offset % 2;
-	pointerOn();
-	
-	return pointerOffset;
-}
-
-int getPointerPosition ( int * row, int * col )
-{
-	*row = pointerRow;
-	*col = pointerCol;
-	return pointerOffset;
-}
-
-int setPointerVisibility ( int b )
-{
-	if ( b && !pointerVisibility  )
-	{
-		pointerOn();
-		pointerVisibility = !pointerVisibility;
-	}
-	else if ( !b && pointerVisibility )
-	{
-		pointerOff();
-		pointerVisibility = !pointerVisibility;
-	}
-	return pointerVisibility;
-}
-
-int isPointerVisible ( void )
-{
-	return pointerVisibility;
-}
-
-int getPointerColor ( void )
-{
-	return pointerColor;
-}
-
-int setPointerColor ( int color )
-{
-	return pointerColor = color;
-}
 
 /*	Screen Properties Getters & Setters */
 
@@ -525,34 +358,10 @@ int setVideoVTabStop ( int num )
 }
 /* Video Driver Functions */
 
-int paintArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y )
-{
-	return transverseArea(leftUpper_x, leftUpper_y, rightLower_x, rightLower_y, paintChar, NULL);
-}
-
-int copyArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char * buffer )
-{
-	indexedBufferT package;
-	package.buffer = buffer;
-	package.index = 0;
-	return transverseArea(leftUpper_x, leftUpper_y, rightLower_x, rightLower_y, copyChar, &package);
-}
-
-int pasteArea ( int leftUpper_x, int leftUpper_y, int rightLower_x, int rightLower_y, char * buffer )
-{
-	indexedBufferT package;
-	package.buffer = buffer;
-	package.index = 0;
-	return transverseArea(leftUpper_x, leftUpper_y, rightLower_x, rightLower_y, pasteChar, &package);
-}
-
 void putCharAtCurrentPos ( int c, int color )
 {
 	parseCharacter(c, cursorOffset);
-	if ( cursorOffset != pointerOffset )
-		videoBuffer[cursorOffset + 1] = videoColor;
-	else
-		oldPointedColor = color;
+	videoBuffer[cursorOffset + 1] = videoColor;
 }
 
 void printChar ( int c )
@@ -563,10 +372,7 @@ void printChar ( int c )
 void printColorChar ( int c, int color )
 {
 	int inc = parseCharacter(c, cursorOffset);
-	if ( cursorOffset != pointerOffset )
-		videoBuffer[cursorOffset + 1] = color;
-	else
-		oldPointedColor = color;
+	videoBuffer[cursorOffset + 1] = color;
 	if ( inc )
 		incCursor();
 }
@@ -580,11 +386,8 @@ int putCharAtFixedPos ( int c, int color, int row, int col )
 	
 	i = getOffset(row, col);
 	parseCharacter(c, cursorOffset);
-	if ( cursorOffset != pointerOffset )
-		videoBuffer[i + 1] = videoColor;
-	else
-		oldPointedColor = videoColor;
-
+	videoBuffer[i + 1] = videoColor;
+	
 	return 1;
 }
 
@@ -598,20 +401,10 @@ int putColoredStringAtFixedPos ( char * s, int * color, int length, int row, int
 	for ( i = getOffset(row, col), j = 0; j < length && j < VIDEO_MEMORY_SIZE; ++i, ++j )
 	{
 		parseCharacter(s[j], i++);
-		if ( cursorOffset != pointerOffset ) 
-		{
-			if ( color == NULL )
-				videoBuffer[i] = videoColor;
-			else
-				videoBuffer[i] = color[j];
-		}
+		if ( color == NULL )
+			videoBuffer[i] = videoColor;
 		else
-		{
-			if ( color == NULL )
-				oldPointedColor = videoColor;
-			else
-				oldPointedColor = color[j];
-		}
+			videoBuffer[i] = color[j];
 	}
 
 	return j;

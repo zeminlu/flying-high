@@ -1,3 +1,12 @@
+/**
+ *	\file bttlship.h
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #ifndef _BTTLSHIP_H_
 #define _BTTLSHIP_H_
 

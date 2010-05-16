@@ -1,3 +1,12 @@
+/**
+ *	\file libc.h
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #ifndef _LIBC_H_
 #define _LIBC_H_
 

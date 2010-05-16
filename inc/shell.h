@@ -3,7 +3,7 @@
  *
  *		\brief
  *
- *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
 
@@ -31,6 +31,21 @@
  */
 int shell ( void );
 
+/**
+ * \fn int initGlobalDataShell(void)
+ *
+ * 		\brief Brief.
+ *
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int initGlobalDataShell(void);
 
 #endif

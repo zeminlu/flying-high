@@ -1,9 +1,9 @@
 /*
- *	File string.c
+ *	\file string.c
  *
- *		Brief: Implementation of string.h. String releated functions.
+ *		\brief Implementation of string.h. String releated functions.
  *
- * 		Author: Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ * 		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  */
 #include "string.h"
 
@@ -18,11 +18,6 @@ static char *ritoa(int num, char *str, int *i) {
 	*i = (*i) + 1;
 	return str;
 }
-
-/*
-* Public functions
-* ================
-*/
 
 char *intToString(int num, char *str) {
 	int i;
@@ -125,12 +120,7 @@ char *strcpy(char *dst, const char *source){
 	return dst;
 }
 
-/**	@fn  char *strstr(const char *haystack, const char *needle)
- * 		@brief The strstr() function finds the first occurrence of the substring needle in the string haystack.  The terminating '\0' characters are not compared.
- * 		@return These functions return a pointer to the beginning of the substring, or NULL if the substring is not found.
- */
 char *strstr(const char *haystack, const char *needle){
-   /* hay algoritmos mas eficientes para esto (lo vi en eda) pero con esto alcanza */
     int len=strlen(haystack), i;
     for(i=0; i<len; ++i){
 	   if(strncmp(haystack+i, needle, strlen(needle)) == 0)

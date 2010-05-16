@@ -1,6 +1,6 @@
 /*
  *  \file queue.c
- *  \author Nicolas Purita
+ *  \author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  *  \brief 	Make a circular buffer queue. The first time that the keyboard want to enqueue, this
  *  		buffer start to save in position 1 and then continue as normally. If the pointer where it
@@ -8,9 +8,7 @@
  *  		time it will enqueue to the position 0.
  */
 
-
 #include "queue.h"
-
 
 /*
  * Function Defines

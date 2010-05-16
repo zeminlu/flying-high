@@ -1,9 +1,14 @@
+/**
+ *	\file keyboard_driver.h
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
+
 #ifndef _KEYBOARD_DRIVER_H_
 #define _KEYBOARD_DRIVER_H_
-
-/*
- *  keyboard_driver.h
- */ 
 
 #include "queue.h"
 #include "io.h"
@@ -14,7 +19,7 @@
  *	Functions Section
  */
 
-/*
+/**
  * \fn void keyboard_driver ( void )
  *
  * \brief This function is the manager of interpretate what key 
@@ -30,7 +35,7 @@
 
 void keyboard_driver( void );
 
-/*
+/**
  *
  *  \fn void SetKeyState(Keycode scancode )
  *
@@ -40,16 +45,16 @@ void keyboard_driver( void );
 
 void SetKeyState( Keycode  scanCode );
 
-/*
+/**
  *
- * \fn int shiftPressed(void)
+ * \fn int shiftIsPressed(void)
  *
  * \brief Return TRUE if the shift key was pressed
  */
 
 int shiftIsPressed( void );
 
-/*
+/**
  *
  * \fn int capsIsPressed(void)
  *
@@ -59,9 +64,9 @@ int shiftIsPressed( void );
 
 int capsIsPressed ( void );
 
-/*
+/**
  *
- * \fn int ctrlPressed(void)
+ * \fn int ctrlIsPressed(void)
  *
  * \brief Return TRUE if control key was pressed
 */
@@ -69,14 +74,42 @@ int capsIsPressed ( void );
 int ctrlIsPressed( void );
 
 
-
+/**
+ * \fn int getRepetition(void )
+ *
+ * 		\brief Brief.
+ *
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int getRepetition(void );
 
 
-
+/**
+ * \fn void setRepetition(int newRep)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param newRep ParamBrief.
+ * 		
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 void setRepetition(int newRep);
 
-/*
+/**
  * \fn int checkKeyboardActivity(void)
  *
  * \brief 	Return a 1 if the keyboard routine was called, so the keyboard
@@ -86,7 +119,7 @@ void setRepetition(int newRep);
 
 int checkKeyboardActivity(void);
 
-/*
+/**
  * \fn void setKeyboardActivity(void)
  *
  * \brief Set the keyboard activity flag to 0.

@@ -1,11 +1,12 @@
-/*
- *	File shell.c
- *	
- *		Brief 
+/**
+ *	\file shell.c
  *
- *		Author Guido Marucci Blas, Nicolas Purita & Luciano Zemin
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
  */
+
 #include "shell.h"
 static char * prompt = "root@flyingHighOS$>";
 char bufferA[MAX_LINE];
@@ -82,27 +83,6 @@ static int getColor(char *value, int * color)
 	return 1;
 }
 
-static int pointerColor ( char * value )
-{
-	int color, row, col;
-
-	if ( getColor(value, &color) )
-	{
-		setPointerColor(color);
-		getPointerPosition(&row, &col);
-		setPointerPosition(row, col);
-		refreshScreen();
-	}
-	else
-	{
-		puts("Error: Invalid Color - ");
-		puts(value);
-		puts(".\n");
-		return 0;
-	}
-	return 1;
-}
-
 static int videoColor ( char * value )
 {
 	int color;
@@ -140,7 +120,6 @@ static int tabStop (char * value)
 }
 
 static propertyT properties[] = {
-	{"pointer-color", pointerColor, "Changes the mouse pointer's color. Valid colors: BLUE, GREEN, CYAN, RED and MAGENTA."},
 	{"video-color", videoColor, "Changes the video color. Valid colors: BLUE, GREEN, CYAN, RED and MAGENTA."},
 	{"tab-stop", tabStop, "Changes amount of spaces a tab stop inserts into a line."},
 	{"", NULL}
@@ -246,12 +225,8 @@ static void reboot(char *value)
 
 static void clear ( char * args )
 {
-	/*wait(500);*/
-	/*flushStdScreen();*/
-//	setPointerVisibility(0);
 	clearTTYScreen();
 	setTTYCursorPosition(0, 0);
-/*	setPointerVisibility(1);*/
 }
 
 static void echo ( char * args )
@@ -504,37 +479,6 @@ static void parseCommand ( void )
 	if ( tableDataShell[indexDT].status == RUNNING ) printPrompt();
 }
 
-/*static void putBackspace ( void )
-{
-	if ( tableDataShell[getpid()-1].index == 0 )
-		return;
-	putchar('\b');
-	--tableDataShell[getpid()-1].index;
-}*/
-
-/*static void parseBackspace ( void )
-{
-	int i, ts;
-
-	if ( tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index] == '\t' )
-		for ( i = 0, ts = getVideoTabStop(); i < ts; ++i)
-			putBackspace();
-	else
-		putBackspace();
-}*/
-
-/*static void autoComplete ( void )
-{
-*/	/*
-	 * Code for autocompliting command
-	 */
-
-	/* If command could not be autocompleted print tab*/
-/*	tableDataShell[getpid()-1].index += getVideoTabStop();
-	tableDataShell[getpid()-1].lineBuffer[tableDataShell[getpid()-1].index] = '\t';
-	putchar('\t');
-}*/
-
 int shell ( void )
 {
 	int c;
@@ -546,7 +490,6 @@ int shell ( void )
 	setProcessAtomicity(getpid(), UNATOMIC);
 
 	if(status == FALSE){
-		/* hay que salir con error*/
 		return -1;
 	}
 	

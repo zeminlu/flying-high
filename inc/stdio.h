@@ -5,7 +5,7 @@
  * 		declaration of all functions to send/recive data to/from
  *		standar input/output.
  *
- *		\author Guido Marucci Blas, Nicolas Purita & Luciano Zemin	
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita	
  *
  */
 
@@ -36,20 +36,162 @@ extern process_t *runningProcess;
 #define puti(i) fputi((i), stdout)
 #define putx(num) fputx((num), stdout)
 
+/**
+ * \fn int fputi(int i, FILE * stream)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param i ParamBrief.
+ * 		\param stream ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int fputi(int i, FILE * stream);
 
+/**
+ * \fn int fputx(int i, FILE * stream)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param i ParamBrief.
+ * 		\param stream ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int fputx(int i, FILE * stream);
 
+/**
+ * \fn int fputs ( const char *s, FILE * stream )
+ *
+ * 		\brief Brief.
+ *
+ * 		\param s ParamBrief.
+ * 		\param stream ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int fputs ( const char *s, FILE * stream );
 
+/**
+ * \fn int fputc ( int c, FILE * stream )
+ *
+ * 		\brief Brief.
+ *
+ * 		\param c ParamBrief.
+ * 		\param stream ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int fputc ( int c, FILE * stream );
 
+/**
+ * \fn char * fgets ( char * s, int size, FILE * stream )
+ *
+ * 		\brief Brief.
+ *
+ * 		\param s ParamBrief.
+ * 		\param size ParamBrief.
+ * 		\param stream ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 char * fgets ( char * s, int size, FILE * stream );
 
+/**
+ * \fn int fgetc ( FILE * stream )
+ *
+ * 		\brief Brief.
+ *
+ * 		\param stream ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int fgetc ( FILE * stream );
 
-void flush ( FILE * strema );
+/**
+ * \fn void flush ( FILE * stream )
+ *
+ * 		\brief Brief.
+ *
+ * 		\param stream ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
+void flush ( FILE * stream );
 
+/**
+ * \fn int putsInStdTTY(const char  *s)
+ *
+ * 		\brief Brief.
+ *
+ * 		\param s ParamBrief.
+ * 		
+ * 		\return Description.
+ *
+ * 		Use:
+ * 		\code
+ *		
+ *		\endcode
+ *
+ * 		\sa f1() f2()
+ *
+ */
 int putsInStdTTY(const char  *s);
 
 #endif

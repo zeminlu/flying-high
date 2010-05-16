@@ -1,4 +1,11 @@
-/* attch.c */
+/**
+ *	\file attch.c
+ *
+ *		\brief Brief.
+ *
+ *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
+ *
+ */
 
 #include "bttlship.h"
 
@@ -17,5 +24,3 @@ attachTable(void) {
 
     table = (struct S_TABLE *)shmp;
 }
-
-/* End attch.c */
