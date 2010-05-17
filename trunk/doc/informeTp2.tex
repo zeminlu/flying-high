@@ -1,0 +1,145 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\author{Magni Nicol\'as, Purita Nicol\'as, Zemin Luciano R.  }
+\title{Multitasker}
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\clearpage
+
+\section{Introducci\'on}
+	\subsection{Objetivo}
+		Se debe crear un sistema Operativo Multitarea, asignandoles a cada proceso un tiempo de ejecuci\'on. El multitasker corre directamente sobre memoria y montado sobre una base de un sistema monotarea. Para cargar el Sistema Operativo se utiliza el bootloader GRUB de Unix.
+	\subsection{Enunciado}
+Se desea implementar un Multitasker, cuyo objetivo  principal es asignar tiempo de ejecuci \'on a\ diferentes procesos en memoria. El sistema deber\'a ser implementado para plataformas Intel de 32 bits, utilizando el procesador en modo protegido. El multitasker debera ser preemptivo, es decir, cualquier tarea puede ser desalojada del microprocesador. El encargado de administrar el CPU es el scheduler el cual tomar\'a como base de tiempo la interrupci\'on de hardware INT8 correspondiente al timer tick, para realizar la asignaci\'on de tiempo ( time slot ).
+
+	\subsection{Actividades}
+		\begin{enumerate}	
+			\item Se deber\'a elegir la forma en resguardar el contexto de cada tarea, se debera elejir entre las siguientes opciones
+			\begin{itemize}
+				\item Utilizar los TSS que provee el microprocesador Intel 386 
+				\item Realizar una implementaci\'on propia de c\'odigo.
+			\end{itemize}
+
+			\item Se debera implementar dos tipos de scheduling distintos . Principalmente uno de ellos deber \'a considerar la prioridad de los procesos para asignar los slots de tiempo.
+
+			\item El sistema deber\'a estar programado de manera que se diferencien los estados b\'asicos de Corriendo, Esperando y Listo. Por otra parte, cada proceso deber \'a tener un valor de prioridad entre 0 y 4 que indique la importancia del proceso.  Adem\'as se deber\'an demostrar el funcionamiento de los mismos con programas de prueba y se deber\'a poder corroborar el estado del proceso y el porcentaje de procesador que est\'a ocupando con la ayuda del comando top. Tambi\'en deber \'a haber un comando kill que permita matar procesos en ejecuci\'on. Tener en cuenta que kill debe matar tambi\'en a todos los hijos de ese proceso.
+
+
+			\item Se debera poder tener al menos 4 terminales distintas y alternar entre ellas de manera similar a Linux.
+
+			\item Se debera poder ejecutar diferentes tareas a trav\'es de comandos ingresados por teclado. La sintaxis de los comandos quedan a elecci\'on del desarrollador.
+
+			\item El sistema debe tener la posibilidad de correr los mismos procesos tanto en foreground como en background. Para este ultimo se deber\'a utilizar el caracter & al igual que en UNIX.
+
+			\item El sistema debe tener un m\'odulo de administraci\'on de memoria mediante paginaci\'on para los procesos, el mismo se encargar\'a de lo siguiente:
+			\begin{itemize}
+				\item Cada proceso tendr\'a su stack propio en una p\'agina, a la cual solamente  \'el tendr\'a acceso. Cada proceso podr\'a leer y escribir libremente sobre esta p\'agina pero no p\'aginas de otros procesos.
+				\item Los procesos no poseer\'an un heap propio, ya que est\'an corriendo sobre la misma zona de datos del SO.
+				\item Ningu\'n proceso deber\'a leer o escribir directamente ninguna variable global del SO. En caso de que haya variables globales que est\'en pensadas para ser leidas por procesos usuario, deber\'an tener una funci\'on que las copie a una zona de heap propia al proceso, simulando un system call.
+			\end{itemize}
+		\end{enumerate}
+
+\section{Material entregado}
+	
+\section{Lineamientos de desarrolo}
+
+\section{Kernel}
+	\subsection{Objetivo}
+	\subsection{Modelo}
+	\subsection{Esquema general}
+	\subsubsection{LLamadas a Sistema}
+	\subsubsection{Drivers y Perisf\'ericos}
+
+\section{Paginacion}
+	\subsection{Objetivo}
+		El sistema operativo debe tener un m\'odulo de paginaci\'on, por lo tanto cada proceso debe tener asociado cierta cantidad de p\'aginas. Por consecuente se debe implementar la excepci\'on correspondiente a paginaci\'on ya que el m\'odulo de administraci\'on de memoria debe verificar que un proceso no utilize p\'aginas no asignadas a \'el. Todos los procesos comparten el heap, es decir que no existen variables globales dentro del sistema operativo y en el caso que se existiesen deben estar en el heap del kernel, por lo tanto si el proceso desea obtener algun valor de alguna variable debe simular un system call y copiar la variables al heap propio del proceso.
+	\subsection{Modelo}
+	\subsection{Esquema general}
+		Como se implement\'o un m\'odulo de administraci\'on de memoria, se debio implemantar un \textit{malloc}. Un criterio tomado es que el kernel llama una sola vez al memory map donde obtiene todo su espacio kernel,en cambio el malloc llama reiteradas veces al memory map donde se asignan las p\'aginas asociadas al heap de ese proceso. Toda la informaci\'on de las p\'aginas asignadas se encuentran en la tabla de procesos.
+	\subsection{Problemas y soluciones}
+		Un gran problema que obtuvimos por medio de la paginaci\'on fue que no podiamos crear mas de 4 procesos en simult\'aneo, esto se produjo ya que luego de ver reiteradas veces el c\'odigo y no darnos cuenta cual era la cause del Page Fault, decidimos seguirlo desde c\'odigo Assembler donde pudimos encontrar la raz\'on por la que se lanzaba la excepci\'on y era porque el \textbf{CR2} tenia carada una direcci\'on de una p\'agina invalida por lo tanto no estaba presente y lanzaba Page Fault. El principal problema fue en el armado de los frames de las p\'aginas, donde el algoritmo no contemplaba un caso donde habia que dar de baja un frame, levantar otro y asi consecutivamente. Luego de una gran reestructuraci\'on de nuestro sistema se nos paso asignar los nuevos valores definidos en \textit{defs.h} para llevar a cabo la paginaci\'on, por lo tant retornaba direcciones no deseadas.
+	\subsection{Limitaciones}
+		Como no se utiliz\'o segmentacion de p\'aginas, el malloc siempre retornaba p\'aginas contiguas y no se almacenaba ningun registro sobre segmentos otorgados.
+
+\section{File System}
+	\subsection{Objetivo}
+	\subsection{Modelado}
+	\subsection{Esquema general}
+	\subsection{Problemas y soluciones}
+	\subsection{Limitaciones}
+
+\section{TTY}
+	\subsection{Objetivo}
+	\subsection{Modelo}
+	\subsection{Esquema general}
+	\subsection{Problemas y soluciones}
+	\subsection{Limitaciones}
+
+\section{Procesos}
+	\subsection{Objetivo}
+	\subsection{Modelado}
+	\subsection{Esquema general}
+	\subsection{Creacion de procesos}
+	\subsection{Herencia de TTY's}
+	\subsection{Muerte de un proceso}
+	\subsection{Procesos ejecutados en background}
+	\subsection{Procesos especiales}
+	\subsubsection{Top}
+	\subsection{Problemas y soluciones}
+	\subsection{Limitaciones}
+
+\subsection{Problemas y soluciones}
+	\subsection{Limitaciones}
+
+
+\section{Multitasker}
+	\subsection{Objetivo}
+	\subsection{Modelo}
+	\subsection{Esquema general}
+	\subsection{Problemas y soluciones}
+	\subsection{Limitaciones}
+
+\section{Scheduler}
+	\subsection{RPG}
+	\subsubsection{Modelo}
+		Implementar un algoritmo basado en juegos RPG. El algoritmo consite en asignarle un puntaje a un proceso en cada llamado del scheduler. Cuando un proceso llega al puntaje designado como m\'aximo se lo agrega a la lista de procesos listos para ejecutar. Luego se verifica que proceso es el que tiene mas antiguedad. Una vez devuelto el proceso a procesar, se reinicia el contador de puntos rpg y la antiguedad.
+	\subsubsection{Problemas y soluciones}
+		Principalmente tuvimos un problema manejando la antiguedad de los procesos, luego decidimos tomar una funci\'on de evaluaci\'on que nos permite ir pasando por todos los procesos, que no alcanzen inmediatamente el puntaje m\'aximo de rpg, para luego ser atendido.
+	\subsubsection{Limitaciones}
+		La funci\'on de evaluaci\'on en el caso de que se aumente la cantidad de procesos o disminuya habria que cambiarla, porque es en funci\'on de prioridades y cantidad m\'axima de procesos, tambien habria que modificar el puntaje m\'aximo de rpg a alcanzar
+
+\subsection{Round-Robin}
+	\subsubsection{Objetivo}
+		Implementar un algoritmo del tipo Round Robin. Basicamente se comporta como una lista circular donde se van devolviendo todos los procesos que esten en estado \textbf{READY} en el orden que se encuentran en la tabla de procesos.
+	\subsubsection{Modelo}
+		El modelo tomado es el siguiente, en el que la gran mayor\'ia debe utilizar. Se toma la lista de procesos y se la recorre en forma lineal verificando si algun proceso se encuentra listo para ser atendido, en el caso de que haya alguno se lo devuelvo y en la pr\'oxima llamada se arranca a recorrer desde esa posicion y se realiza el mismo recorrido ya explicado anteriormente.
+	\subsubsection{Problemas y soluciones}
+		En un principio el algoritmo se quedaba en un loop infinito ya que buscasa desde init y como siempre estaba listo lo devolvia y a veces no retornaba o era interrumpido. Por lo tanto una soluci\'on fue llamar al scheduler en caso de que haya algun proceso para correr distinto de init. En un principio teniamos problemas con el algoritmo porque compilabamos con la opci\'on de optimizaci\'on y se agregaban funciones en el c\'odigo que no queriamos, luego de darnos cuenta de ese error comenz\'o a andar el algoritmo.
+	\subsubsection{Limitaciones}
+		El algoritmo en si no maneja el tema de prioridades, sino en el orden el cual fueron creados los procesos. Se podria hacer que la creaci\'on de procesos los inserte en forma ordenada en la tabla de procesos por lo tanto el algortimo \textit{Round Robin} de alguna forma estar\'ia teniendo en cuenta el tema de prioridades.
+
+\subsection{IPCs Implementaciones}
+	\subsubsection{Shared memory}
+		Se implement\'o un IPC basado en Shared memory, donde la cantidad de shared memory esta definida por un define. Se decidi\'o utilizar la estructura que utiliza System Five para la shared memory y Posix para los sem\'aforos. Cada shared memory ya tiene asociado un sem\'aforo y la cantidad de frames que tiene desiganados para utilizar.
+	\subsubsection{Objetivo}
+		Implementar un juego en donde se pueda verificar la comunicaci\'on entre los dos procesos mediante un IPC, en nuestro caso \textbf{Shared Memory}.
+	\subsubsection{Modelo}
+		En un principio se decidi\'o implementar como juego un Chat entre varias shells, pero finalmente se eligi\'o hacer la batalla naval con cierta restricciones. La creaci\'on de barcos se genera en forma aleatoria, es decir que se implement\'o un random muy b\'asico donde usa un polinomio de grado 1 y como semilla utiliza los tick realizados por el timer tick hasta el momento. El juego es de dos personas unicamente, como la tradicional batalla naval.
+	\subsubsection{Esquema general}
+		La forma que se nos ocurrio para comunicar los dos procesos es que cuando crea ese procesa el juego te da la opci\'on de ser host o unirte a una partida ya creada. Por lo tanto cuando creo el primer proceso puedo elegir entre ser host o unirme a una partida ya creada, la forma de unirse es que el host cuando crea se le muestra en pantalla el ID de la shared memory creada, por lo tanto el jugador 2 debe ingresar ese id para unirse a esa partida. Una vez ya pasados los primeros pasos comienza el juego. La comunicaci\'on que viaja por la shared memory son las posiciones del tablero en donde se ubicaron las bombas. En un principio se habia dicho de poner el tablero de cada jugador en la shared memory y que el jugador escriba directamente sobre esa posicion, pero nos dimos cuenta que en verdad la informaci\'on que necesitan los dos son las posiciones del tablero para cada uno actualizar donde fue puesta la bomba y verificar si le dio a algun barco o si fue agua. \\
+		Cada vez que un usuario ingresa una posici\'on en donde desea ubicar la bomba se bloquea el tablero y una vez enviado el mensaje se desbloquea. De esta forma evitamos que los dos jugadores pongan en el mismo instante dos posiciones distintas y se mezclen sus ubicaciones.
+	\subsubsection{Problemas y limitaciones}
+		Un problema fue tomar la decisi\'on de ubicar los barcos, si el usuario los podia ubicar o si lo generabamos nosotros, se opto por la segunda y los barcos pueden estar unicamente verticales y horizontales, no diagonales. \\
+		Otro problema que nos surgio fue que los sem\'aforos se quedaban esperando pero se seguia imprimiendo el tablero esperando la conexi\'on de algun usuario al juego, por lo tanto decidimos modificar los sem\'aforos para que se queden esperando y no pueda realizar otra cosa, entonces cuando alguien ingresa una posici\'on se refresca el tablero.  
+
+\subsection{Conclusi\'on}
+
+\subsection{Bibliograf'ia y fuentes}
+
+\end{document}
