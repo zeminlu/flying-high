@@ -22,14 +22,15 @@
 /**
  * \fn void loadExceptionHandlers()
  *
- * 		\brief Brief.
+ * 		\brief Load the handler of the exception that
+ *				was produced.
  *
  * 		Use:
  * 		\code
- *		
+ *			
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void loadExceptionHandlers();

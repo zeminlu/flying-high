@@ -16,16 +16,17 @@
 /**
  * \fn unsigned int timeRand()
  *
- * 		\brief Brief.
+ * 		\brief This function load the amount of ticks. It calls
+ *				to the a system call.
  *
- * 		\return Description.
+ * 		\return The amount of tick
  *
  * 		Use:
  * 		\code
- *		
+ *			srand(timeRand());
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa _system_uptime
  *
  */
 unsigned int timeRand();
@@ -33,16 +34,14 @@ unsigned int timeRand();
 /**
  * \fn int rand()
  *
- * 		\brief Brief.
+ * 		\brief Generate a random number with a linear equation.
  *
- * 		\return Description.
+ * 		\return A random number
  *
  * 		Use:
  * 		\code
- *		
+ *			int ran = rand();
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 int rand();
@@ -50,18 +49,16 @@ int rand();
 /**
  * \fn void srand( unsigned int seedP )
  *
- * 		\brief Brief.
+ * 		\brief Set the seed to generate random numbers
  *
- * 		\param seedP ParamBrief.
+ * 		\param seedP The seed to set.
  * 		
- * 		\return Description.
- *
  * 		Use:
  * 		\code
- *		
+ *			srand(timeRand());
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void srand( unsigned int seedP );
