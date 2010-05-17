@@ -22,39 +22,25 @@
 /**
  * \fn void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow)
  *
- * 		\brief Brief.
+ * 		\brief This function obtain read pointers of the tty.
  *
- * 		\param tty ParamBrief.
- * 		\param readPointer ParamBrief.
- * 		\param readCol ParamBrief.
- * 		\param readRow ParamBrief.
+ * 		\param tty The tty where the function obtain the pointers
+ * 		\param readPointer The position of the pointer where it is reading
+ * 		\param readCol The col position of the stdout where it is reading
+ * 		\param readRow The row position of the stdout where it is reading
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
  */
 void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow);
 
 /**
  * \fn void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow)
  *
- * 		\brief Brief.
+ * 		\brief This function obtain writer pointers of the tty.
  *
- * 		\param tty ParamBrief.
- * 		\param writePointer ParamBrief.
- * 		\param writeCol ParamBrief.
- * 		\param writeRow ParamBrief.
- * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\param tty The tty where the function obtain the pointers
+ * 		\param writePointer The position of the pointer where it is writting
+ * 		\param writeCol The col position of the stdout where it is writting
+ * 		\param writeRow The row position of the stdout where it is writting
  *
  */
 void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow);
@@ -62,19 +48,15 @@ void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow)
 /**
  * \fn void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow)
  *
- * 		\brief Brief.
+ * 		\brief This function save the read pointers of the tty that is indicated
+ *				in the signature. This function is called when change the tty who
+ *				is in focus, so it has to backup his pointer
  *
- * 		\param tty ParamBrief.
- * 		\param readPointer ParamBrief.
- * 		\param readCol ParamBrief.
- * 		\param readRow ParamBrief.
- * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
+ * 		\param tty The tty where the function save the pointers
+ * 		\param readPointer The position of the pointer where it is reading
+ * 		\param readCol The col position of the stdout where it is reading
+ * 		\param readRow The row position of the stdout where it is reading
  *
- * 		\sa f1() f2()
  *
  */
 void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow);
@@ -82,19 +64,14 @@ void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow);
 /**
  * \fn void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow)
  *
- * 		\brief Brief.
+ * 		\brief This function save the read pointers of the tty that is indicated
+ *				in the signature. This function is called when change the tty who
+ *				is in focus, so it has to backup his pointer
  *
- * 		\param tty ParamBrief.
- * 		\param writePointer ParamBrief.
- * 		\param writeCol ParamBrief.
- * 		\param writeRow ParamBrief.
- * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\param tty The tty where the function save the pointers
+ * 		\param readPointer The position of the pointer where it is writting
+ * 		\param readCol The col position of the stdout where it is writting
+ * 		\param readRow The row position of the stdout where it is writting
  *
  */
 void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow);
@@ -102,18 +79,24 @@ void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow);
 /**
  * \fn void putsTTY( unsigned char *name, int count, tty_t tty )
  *
- * 		\brief Brief.
+ * 		\brief This function prints a string in a specific tty.
+ *				It checks if it has to print only in the tty or in stdin too.
+ *				It called to putCharTTy while the length of the string was grater
+ *				than 0.
  *
- * 		\param name ParamBrief.
- * 		\param count ParamBrief.
- * 		\param tty ParamBrief.
+ * 		\param name The string to print
+ * 		\param count The size of the string
+ * 		\param tty The tty id where has to be printed the string
  * 		
  * 		Use:
  * 		\code
- *		
+ *			char *string = "test";
+ *			...
+ *			putsTTY(string);
+ *			...
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa putCharTTY
  *
  */
 void putsTTY( unsigned char *name, int count, tty_t tty );
@@ -121,18 +104,23 @@ void putsTTY( unsigned char *name, int count, tty_t tty );
 /**
  * \fn void putCharTTY( char c, tty_t tty, int inStdIn )
  *
- * 		\brief Brief.
+ * 		\brief It prints only one character in specific tty.
+ *				It verifies if the character is a control key or
+ *				it belongs to the ASCII table. It checks if the
+ *				tty is what are in focus, so it has to put the 
+ *				character in stdin buffer.
  *
- * 		\param c ParamBrief.
- * 		\param tty ParamBrief.
- * 		\param inStdIn ParamBrief.
+ * 		\param c The chacter to be printed
+ * 		\param tty The tty id where has to be printed
+ * 		\param inStdIn If it has to print in Stdin or not
  * 		
  * 		Use:
  * 		\code
- *		
+ *			char *string = "System";
+ *			while( *string != NULL )
+ *				putCharTTY(*string++, tty, (TRUE v FALSE) ):
  *		\endcode
  *
- * 		\sa f1() f2()
  *
  */
 void putCharTTY( char c, tty_t tty, int inStdIn );
@@ -140,14 +128,15 @@ void putCharTTY( char c, tty_t tty, int inStdIn );
 /**
  * \fn void initializeTTY( void )
  *
- * 		\brief Brief.
+ * 		\brief Create the table of ttys. The maximum of ttys
+ *				is a define.
  *
  * 		Use:
  * 		\code
- *		
+ *			...
+ *			initializeTTY();
+ *			...
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void initializeTTY( void );
@@ -155,16 +144,18 @@ void initializeTTY( void );
 /**
  * \fn int getFocusedTTY( void )
  *
- * 		\brief Brief.
+ * 		\brief This function returns the tty id of tty that are
+ *				in focus at this moment. It is a system called.
  *
- * 		\return Description.
+ * 		\return The id of tty that is in focus
  *
  * 		Use:
  * 		\code
- *		
+ *			int tty;
+ *			tty = getFocusedTTY();
+ *			putCharTTY( 'a', tty, TRUE );
+ *			...
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 int getFocusedTTY( void );
@@ -172,18 +163,28 @@ int getFocusedTTY( void );
 /**
  * \fn int changeFocusTTY( tty_t nextTty )
  *
- * 		\brief Brief.
+ * 		\brief This function change the tty focus id on
+ *				the next Tty that has to be in focus. This function
+ *				is called when the key that was pressed is between
+ *				"F1" and "F7". Of every "F" key that was pressed, is put
+ *				a value between 0x81 and 0x87. The number of the "F" key
+ *				+ 0x80
  *
- * 		\param nextTty ParamBrief.
+ * 		\param nextTty Next tty id
  * 		
- * 		\return Description.
+ * 		\return 1 if the next tty id is the current tty id in focus, 0 if it
+ *				has changed the focus.
  *
  * 		Use:
  * 		\code
- *		
+ *			unsigned int c;
+ *			while( !isEmptyKBBuffer() ){
+ *				c = deQueue();
+ *				...
+ *				if ( c >= 0x81 && c <= 0x87 )
+ *					changeFocusTTY( c - 0x81 );
+ *				
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 int changeFocusTTY( tty_t nextTty );
@@ -191,14 +192,13 @@ int changeFocusTTY( tty_t nextTty );
 /**
  * \fn void refreshStdout(void)
  *
- * 		\brief Brief.
+ * 		\brief Put all of character that are in the STDOUT and
+ *			and put in the tty STDOUT who is in focus.
  *
  * 		Use:
  * 		\code
- *		
+ *			
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void refreshStdout(void);
@@ -206,11 +206,18 @@ void refreshStdout(void);
 /**
  * \fn void refreshKeyboardBufferTTY( void )
  *
- * 		\brief Brief.
+ * 		\brief Leave all of character that are in the KeyboradBuffer
+ *				and put in the correct tty stdout if the tty mode is
+ *				CANONICAL, if not it prints directly in the STDIN of
+ *				tty who is in focus. The timet tick is the responsible to
+ *				call this function.
  *
  * 		Use:
  * 		\code
- *		
+ *			...
+ *			call Scheculer
+ *			call refreshKeyboardBufferTTY
+ *			...
  *		\endcode
  *
  * 		\sa f1() f2()
@@ -221,69 +228,20 @@ void refreshKeyboardBufferTTY( void );
 /**
  * \fn void refreshTTY(void)
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief This functions check if the proccess if different of init
+ *				and the running process has a valid pid, it only refreshes
+ *				the stdout.
  *
  */
 void refreshTTY(void);
-
-/**
- * \fn void sysPutS(Keycode *name, int count, tty_t tty)
- *
- * 		\brief Brief.
- *
- * 		\param name ParamBrief.
- * 		\param count ParamBrief.
- * 		\param parameter ParamBrief.
- * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
- */
-void sysPutS(Keycode *name, int count, tty_t tty);
-
-/**
- * \fn void sysPutChar(Keycode c, tty_t tty)
- *
- * 		\brief Brief.
- *
- * 		\param c ParamBrief.
- * 		\param tty ParamBrief.
- * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
- */
-void sysPutChar(Keycode c, tty_t tty);
-
 /**
  * \fn void sysSetTTYFocusedProcess(pid_t pid, tty_t tty)
  *
- * 		\brief Brief.
+ * 		\brief Set the pid to the process which is in focus
  *
- * 		\param pid ParamBrief.
- * 		\param tty ParamBrief.
+ * 		\param pid The pid of the process
+ * 		\param tty The tty where will be set the pid of the process
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void sysSetTTYFocusedProcess(pid_t pid, tty_t tty);
@@ -291,18 +249,10 @@ void sysSetTTYFocusedProcess(pid_t pid, tty_t tty);
 /**
  * \fn pid_t sysGetTTYFocusedProcess(tty_t tty)
  *
- * 		\brief Brief.
+ * 		\brief Return the pid of the process that is in this tty
  *
- * 		\param tty ParamBrief.
+ * 		\param tty The tty where it is saved the pid of the focus process
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 pid_t sysGetTTYFocusedProcess(tty_t tty);
@@ -310,14 +260,7 @@ pid_t sysGetTTYFocusedProcess(tty_t tty);
 /**
  * \fn void clearTTYScreen()
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief It clears the stdout of the tty that is in focus
  *
  */
 void clearTTYScreen();
@@ -325,17 +268,12 @@ void clearTTYScreen();
 /**
  * \fn void setTTYCursorPosition( int x, int y)
  *
- * 		\brief Brief.
+ * 		\brief It set the cursor in an specific position of the
+ *				tty stdout.
  *
- * 		\param x ParamBrief.
- * 		\param y ParamBrief.
+ * 		\param x The row of the stdout
+ * 		\param y The column of the stdout
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void setTTYCursorPosition( int x, int y);
@@ -343,18 +281,14 @@ void setTTYCursorPosition( int x, int y);
 /**
  * \fn void putTTYCharAtPosition( int c, int row, int col)
  *
- * 		\brief Brief.
+ * 		\brief It put a character in a specific position of the
+ *				tty stdout. It prints the character at the position
+ *				but it keeps the previous position.
  *
- * 		\param c ParamBrief.
- * 		\param row ParamBrief.
- * 		\param col ParamBrief.
+ * 		\param c The character to be printed
+ * 		\param row The row where has to be printed
+ * 		\param col The column where has to be printed
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void putTTYCharAtPosition( int c, int row, int col);
