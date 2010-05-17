@@ -22,5 +22,6 @@ attachTable(void) {
 		return;
     }
 
-    table = (struct S_TABLE *)shmp;
+    table[0] = (struct S_TABLE *)shmp;
+	table[1] = (struct S_TABLE *)shmp;
 }

@@ -13,19 +13,18 @@ int shmid = -1;             /* Shared Memory IPC ID */
 int semid = -1;             /* Table locking semaphore */
 int waitSemid = -1;
 char *shmp = 0;             /* Pointer to shared memory */
-int us = 0;                 /* 0=starter / 1=challenger */
-int them = 0;               /* 1=challenger / 0=starter */
+int us[2] = {0,0};                 /* 0=starter / 1=challenger */
+int them[2] = {0,0};               /* 1=challenger / 0=starter */
 int flg_game_over = 0;      /* != 0 => game over */
 
-struct S_TABLE *table = 0;  /* Shared Memory Table */
+struct S_TABLE *table[2] = {0,0};  /* Shared Memory Table */
 
 int
 battleship() {
-    /*union semun semarg;*/         /* for semctl() */
- //   ushort seminit[] = { 1, 0 };/* Initial sem values */
-    pid_t p1, p2;               /* PID for player 1 & 2 */
-    char auxChar = '0';              /* For fgets() */
-    int x, y, z;                /* move x,y and status z */
+ 
+   pid_t p1, p2;               /* PID for player 1 & 2 */
+   char auxChar = '0';              /* For fgets() */
+   int x, y, z;                /* move x,y and status z */
 
     srand(getpid());            /* Init random no.s */
 	
@@ -42,25 +41,17 @@ battleship() {
 	}
 
     if ( auxChar == 's' ) {          /* No args? */
-        /*
-         * Create a new game :
-         */
-        /*atexit(cleanup);*/		/* Carga la funcion para ejecutar cuando terminar el proceso */
-
+      
         /*
          * Create Shared Memory
          */
-        shmid = shmget(IPC_PRIVATE, sizeof *table);
+        shmid = shmget(IPC_PRIVATE, sizeof **table);
 		if ( shmid == -1 ) {
             return 13;
         }
 
         attachTable();          /* Attach new table */
 		
-        /*
-         * Create a binary semaphore set :
-         */
-        /*semid = semget(IPC_PRIVATE,2,0666);*/
 		semid = sem_get(BLOCK);
 		if ( semid == -1 ) {
             return 13;
@@ -71,37 +62,31 @@ battleship() {
             return 13;
         }
 
-		table->semid = semid;       /* Make IPC ID public */
-		table->waitSemid = waitSemid;
+		table[0]->semid = semid;       /* Make IPC ID public */
+		table[0]->waitSemid = waitSemid;
+		table[1]->semid = semid;       /* Make IPC ID public */
+		table[1]->waitSemid = waitSemid;
         
-        /*
-         * Initialize semaphores:
-         */
-        /*semarg.array = seminit;
-        if ( semctl(semid,0,SETALL,semarg) == -1 ) {
-            puts ("semctl(SETALL)");
-            return 13;
-        }*/
-
         /*
          * Initialize & Generate Battle in shared
          * memory table :
          */
         LOCK;                       /* Wait on semaphore */
-		table->player[0].pid = getpid();
-        table->player[1].pid = 0;   /* No opponent yet */
-        genBattle();                /* Generate battle */
+		table[0]->player[0].pid = getpid();
+        table[0]->player[1].pid = 0;   /* No opponent yet */
+		table[1]->player[0].pid = getpid();
+        table[1]->player[1].pid = 0;   /* No opponent yet */
+        genBattle(0);                /* Generate battle */
 
-        us = 0;                     /* We're player [0]  */
-        them = 1;                   /* They're player[1] */
+        us[0] = 0;                     /* We're player [0]  */
+        them[0] = 1;                   /* They're player[1] */
 
         /*
          * Wait for challenger to notify us :
          */
-        showBattle();
+        showBattle(0);
         UNLOCK;                     /* Notify semaphore */
 
-        /*printf("\n*** GAME # %d ***\n",shmid);*/
 		puts("\n*** GAME #");
 		puti(shmid);
 		puts(" ***\nWaiting for opponent...\n");
@@ -112,8 +97,8 @@ battleship() {
         /*
          * Opponent is joining a game :
          */
-        us = 1;                 /* We're player[1] */
-        them = 0;               /* They're player[0] */
+        us[1] = 1;                 /* We're player[1] */
+        them[1] = 0;               /* They're player[0] */
 		auxChar = 'A';
 		
 		puts("\nPor favor ingrese el id que el proceso que hostea le ha proporcionado:\n");
@@ -131,17 +116,17 @@ battleship() {
 		attachTable();          /* Attach existing shm */
 
         /* No lock is required for this fetch: */
-        semid = table->semid;   /* Locking semaphore ID */
-		waitSemid = table->waitSemid;
+        semid = table[0]->semid;   /* Locking semaphore ID */
+		waitSemid = table[0]->waitSemid;
 
         LOCK;                   /* Wait on semaphore */
-		p1 = table->player[0].pid;
-        p2 = table->player[1].pid;
+		p1 = table[0]->player[0].pid;
+        p2 = table[0]->player[1].pid;
         if ( p2 == 0 )          /* No opponent yet? */
-            p2 = table->player[1].pid = getpid();
+            p2 = table[0]->player[1].pid = getpid();
         UNLOCK;                 /* Notify semaphore */
-
-        if ( p2 != getpid() ) {
+		
+		if ( p2 != getpid() ) {
 			puts("Sorry: PID ");
 			puti(p1);
 			puts(" is already playing.");
@@ -154,7 +139,7 @@ battleship() {
 		putchar('\n');
 
         LOCK;
-        showBattle();
+        showBattle(1);
         UNLOCK;
 
         puts("Press any key:");
@@ -172,15 +157,23 @@ battleship() {
     while ( !flg_game_over ) {
         if ( (z = getInput(&x,&y)) == INP_NONE ) {
             LOCK;               /* Lock semaphore */
-            showBattle();       /* Display battle scene */
+            if( sysGetTTYFocusedProcess(getFocusedTTY()) == table[0]->player[0].pid )
+				showBattle(0);       /* Display battle scene */
+			else
+				showBattle(1);
             UNLOCK;             /* Unlock semaphore */
             /*fflush(stdout);*/
 			refreshStdout();
 			refreshScreen();
         } else {  /* INP_YX */
             LOCK;               /* Lock semaphore */
-            bomb(x,y);          /* Bomb this location */
-            showBattle();       /* Now show results */
+            if( sysGetTTYFocusedProcess(getFocusedTTY()) == table[0]->player[0].pid ){
+				bomb(x,y, 0);          /* Bomb this location */
+			    showBattle(0);       /* Now show results */
+			}else{
+				bomb(x,y,1);          /* Bomb this location */
+			    showBattle(1);       /* Now show results */
+			}
             UNLOCK;             /* Unlock semaphore */
         }
     }
@@ -189,11 +182,11 @@ battleship() {
      * Battle is over:
      */
     LOCK;
-    showBattle();
+    showBattle(0);
     UNLOCK;
     puts("GAME OVER!\n");
 
-    if ( !us )      /* Player1? */
+    if ( !us[0] )      /* Player1? */
         WAIT2;      /* Yes, Wait for opponent to finish */
     else
         NOTIFY2;    /* Notify player 1 that we're done */

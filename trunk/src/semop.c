@@ -21,15 +21,15 @@ lockTable(int semx,int block) {
 	
 	if( !semx ){
 		if( block ){
-			sem_wait(table->semid);
+			sem_wait(table[0]->semid);
 		}else{
-			sem_signal(table->semid);
+			sem_signal(table[0]->semid);
 		}
 	}else{
 		if( block ){
-			sem_wait(table->waitSemid);
+			sem_wait(table[0]->waitSemid);
 		}else{
-			sem_signal(table->waitSemid);
+			sem_signal(table[0]->waitSemid);
 		}
 	}
 }

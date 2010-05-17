@@ -59,13 +59,13 @@ struct S_TABLE {
     char    flg[N_X][N_Y];  /* Flags */
 };
 
-extern struct S_TABLE *table;
+extern struct S_TABLE *table[2];
 
 extern int shmid;           /* Shared Memory IPC ID */
 extern int semid;           /* Table locking semaphore */
 extern char *shmp;          /* Pointer to shared memory */
-extern int us;              /* 0=starter / 1=challenger */
-extern int them;            /* 1=challenger / 0=starter */
+extern int us[2];              /* 0=starter / 1=challenger */
+extern int them[2];            /* 1=challenger / 0=starter */
 extern int flg_game_over;   /* != 0 => game over */
 
 /**
@@ -115,7 +115,7 @@ extern void lockTable(int semx,int bLock);
  *
  */
 
-extern void recount(void);
+extern void recount(int player);
 
 /**
  * \fn void bomb(int x,int y)
@@ -128,7 +128,7 @@ extern void recount(void);
  *
  */
 
-extern void bomb(int x,int y);
+extern void bomb(int x,int y, int player);
 
 /**
  * \fn int getInput(int *px,int *py)
@@ -156,7 +156,7 @@ extern int getInput(int *px,int *py);
  *
  */
 
-extern int draw_hz(int sx,int sy,int z,int who);
+extern int draw_hz(int sx,int sy,int z,int who, int player);
 
 /**
  * \fn int draw_vt(int sx,int sy,int z,int who)
@@ -170,7 +170,7 @@ extern int draw_hz(int sx,int sy,int z,int who);
  *
  */
 
-extern int draw_vt(int sx,int sy,int z,int who);
+extern int draw_vt(int sx,int sy,int z,int who, int player);
 
 /**
  * \fn void genBattle(void)
@@ -178,7 +178,7 @@ extern int draw_vt(int sx,int sy,int z,int who);
  * 		\brief It generates the table
  */
 
-extern void genBattle(void);
+extern void genBattle(int player);
 
 /**
  * \fn void showRow(void)
@@ -195,7 +195,7 @@ extern void showRow(void);
  * 		\brief It prints the whole table of the battlehsip
  */
 
-extern void showBattle(void);
+extern void showBattle(int player);
 
 /**
  * \fn int battleship()
