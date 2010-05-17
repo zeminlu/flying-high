@@ -10,32 +10,32 @@
 #include "bttlship.h"
 
 void
-recount(void) {
+recount(int p) {
     int b, f, x, y, px;
 
-    table->player[0].bsites = table->player[1].bsites = 0;
+    table[p]->player[0].bsites = table[p]->player[1].bsites = 0;
     for ( y=0; y<N_Y; ++y ) {
         for ( x=0; x<N_X; ++x ) {
-            f = table->flg[x][y];
+            f = table[p]->flg[x][y];
             if ( !(f & (FLG_P1|FLG_P2)) )
                 continue;   /* Sea zone */
             px = f & FLG_P1 ? 0 : 1;
             if ( !(f & FLG_BOMBD) )
-                ++table->player[px].bsites;
-            b = table->sea[x][y];
+                ++table[p]->player[px].bsites;
+            b = table[p]->sea[x][y];
         }
     }
-    if ( !table->player[0].bsites
-    ||   !table->player[1].bsites )
+    if ( !table[p]->player[0].bsites
+    ||   !table[p]->player[1].bsites )
         flg_game_over = 1;
 }
 
 void
-bomb(int x,int y) {
-    if ( table->flg[x][y] & (FLG_P1|FLG_P2) )
-        table->flg[x][y] |= FLG_BOMBD;
+bomb(int x,int y, int player) {
+    if ( table[player]->flg[x][y] & (FLG_P1|FLG_P2) )
+        table[player]->flg[x][y] |= FLG_BOMBD;
     else
-        table->flg[x][y] |= FLG_SPLSH;
+        table[player]->flg[x][y] |= FLG_SPLSH;
 }
 
 int
@@ -79,7 +79,7 @@ getInput(int *px,int *py) {
 }
 
 int
-draw_hz(int sx,int sy,int z,int who) {
+draw_hz(int sx,int sy,int z,int who, int player) {
     int x, ex;
     char ch = who ? '=' : '-';
     char f = who ? FLG_P1 : FLG_P2;
@@ -88,35 +88,35 @@ draw_hz(int sx,int sy,int z,int who) {
         if ( (ex = sx - z) < 0 )
             return 0;       /* Can't */
         for ( x=sx; x>ex; --x )
-            if ( table->sea[x][sy] != '.'
-            || ( sy+1 < N_Y && table->sea[x][sy+1] != '.' )
-            || ( sy-1 >= 0  && table->sea[x][sy-1] != '.' ) )
+            if ( table[player]->sea[x][sy] != '.'
+            || ( sy+1 < N_Y && table[player]->sea[x][sy+1] != '.' )
+            || ( sy-1 >= 0  && table[player]->sea[x][sy-1] != '.' ) )
                 return 0;   /* Can't */
         for ( x=sx; x>ex+1; --x ) {
-            table->sea[x][sy] = ch;
-            table->flg[x][sy] = f;
+            table[player]->sea[x][sy] = ch;
+            table[player]->flg[x][sy] = f;
 	}    
-        table->sea[ex+1][sy] = '<';
-        table->flg[ex+1][sy] = f;
+        table[player]->sea[ex+1][sy] = '<';
+        table[player]->flg[ex+1][sy] = f;
     } else  {
         ex = sx + z;
         for ( x=sx; x<ex; ++x )
-            if ( table->sea[x][sy] != '.'
-            || ( sy+1 < N_Y && table->sea[x][sy+1] != '.' )
-            || ( sy-1 >= 0  && table->sea[x][sy-1] != '.' ) )
+            if ( table[player]->sea[x][sy] != '.'
+            || ( sy+1 < N_Y && table[player]->sea[x][sy+1] != '.' )
+            || ( sy-1 >= 0  && table[player]->sea[x][sy-1] != '.' ) )
                 return 0;   /* Can't */
         for ( x=sx; x<ex-1; ++x ) {
-            table->sea[x][sy] = ch;
-            table->flg[x][sy] = f;
+            table[player]->sea[x][sy] = ch;
+            table[player]->flg[x][sy] = f;
         }
-        table->sea[ex-1][sy] = '>';
-        table->flg[ex-1][sy] = f;
+        table[player]->sea[ex-1][sy] = '>';
+        table[player]->flg[ex-1][sy] = f;
     }
     return 1;   /* Drawn */
 }
 
 int
-draw_vt(int sx,int sy,int z,int who) {
+draw_vt(int sx,int sy,int z,int who, int player) {
     int y, ey;
     char ch = who ? '!' : '|';
     char f = who ? FLG_P1 : FLG_P2;
@@ -125,42 +125,44 @@ draw_vt(int sx,int sy,int z,int who) {
         if ( (ey = sy - z) < 0 )
             return 0;       /* Can't */
         for ( y=sy; y>ey; --y )
-            if ( table->sea[sx][y] != '.'
-            || ( sx+1 < N_X && table->sea[sx+1][y] != '.' )
-            || ( sx-1 >= 0  && table->sea[sx-1][y] != '.' ) )
+            if ( table[player]->sea[sx][y] != '.'
+            || ( sx+1 < N_X && table[player]->sea[sx+1][y] != '.' )
+            || ( sx-1 >= 0  && table[player]->sea[sx-1][y] != '.' ) )
                 return 0;   /* Can't */
         for ( y=sy; y>ey+1; --y ) {
-            table->sea[sx][y] = ch;
-            table->flg[sx][y] = f;
+            table[player]->sea[sx][y] = ch;
+            table[player]->flg[sx][y] = f;
         }
-        table->sea[sx][ey+1] = '^';
-        table->flg[sx][ey+1] = f;
+        table[player]->sea[sx][ey+1] = '^';
+        table[player]->flg[sx][ey+1] = f;
     } else {
         ey = sy + z;
         for ( y=sy; y<ey; ++y )
-            if ( table->sea[sx][y] != '.'
-            || ( sx+1 < N_X && table->sea[sx+1][y] != '.' )
-            || ( sx-1 >= 0  && table->sea[sx-1][y] != '.' ) )
+            if ( table[player]->sea[sx][y] != '.'
+            || ( sx+1 < N_X && table[player]->sea[sx+1][y] != '.' )
+            || ( sx-1 >= 0  && table[player]->sea[sx-1][y] != '.' ) )
                 return 0;   /* Can't */
         for ( y=sy; y<ey-1; ++y ) {
-            table->sea[sx][y] = ch;
-            table->flg[sx][y] = f;
+            table[player]->sea[sx][y] = ch;
+            table[player]->flg[sx][y] = f;
         }
-        table->sea[sx][ey-1] = 'V';
-        table->flg[sx][ey-1] = f;
+        table[player]->sea[sx][ey-1] = 'V';
+        table[player]->flg[sx][ey-1] = f;
     }        
     return 1;   /* Drawn */
 }
 
 void
-genBattle(void) {
+genBattle(int player) {
     int x, y, z, dir;
     int count = 0;
     int drawn = 0;
     /*time_t t;*/
     
-    memset(table->sea,'.',sizeof table->sea);
-    memset(table->flg,0,sizeof table->flg);
+    memset(table[1]->sea,'.',sizeof table[player]->sea);
+    memset(table[1]->flg,0,sizeof table[player]->flg);
+    memset(table[0]->sea,'.',sizeof table[player]->sea);
+    memset(table[0]->flg,0,sizeof table[player]->flg);
 
     do  {
         if ( count > 10000 ) {
@@ -175,12 +177,12 @@ genBattle(void) {
         x = rand() % N_X;
         y = rand() % N_Y;
         if ( dir ) {
-            if ( draw_hz(x,y,z,drawn&1)
-            ||   draw_vt(x,y,z,drawn&1) )
+            if ( draw_hz(x,y,z,drawn&1, 0)
+            ||   draw_vt(x,y,z,drawn&1, 0) )
                 ++drawn;
         } else {
-            if ( draw_vt(x,y,z,drawn&1)
-            ||   draw_hz(x,y,z,drawn&1) )
+            if ( draw_vt(x,y,z,drawn&1, 1)
+            ||   draw_hz(x,y,z,drawn&1, 1) )
                 ++drawn;
         }
     } while ( drawn < N_SHIPS );
@@ -199,9 +201,9 @@ showRow(void) {
 }
 
 void
-showBattle(void) {
+showBattle( int p ) {
     int x, y;
-    char f = !us
+    char f = !us[p]
         ? (FLG_SEEN1|FLG_P1)
         : (FLG_SEEN0|FLG_P2);
 
@@ -212,14 +214,14 @@ showBattle(void) {
         fputc('|',stdout);
         for ( x=0; x<N_X; ++x ) {
             fputc(' ',stdout);
-            if ( table->flg[x][y] & FLG_BOMBD ) {
-                if ( table->flg[x][y] & FLG_P1 )
+            if ( table[p]->flg[x][y] & FLG_BOMBD ) {
+                if ( table[p]->flg[x][y] & FLG_P1 )
                     fputc('@',stdout);
                 else
                     fputc('#',stdout);
-            } else if ( table->flg[x][y] & f )
-                fputc(table->sea[x][y],stdout);
-            else if ( table->flg[x][y] & FLG_SPLSH )
+            } else if ( table[p]->flg[x][y] & f )
+                fputc(table[p]->sea[x][y],stdout);
+            else if ( table[p]->flg[x][y] & FLG_SPLSH )
                 fputc('*',stdout);
             else
                 fputc('.',stdout);
@@ -228,19 +230,15 @@ showBattle(void) {
     }
 
     showRow();
-    recount();
+    recount(p);
 	puts("ENEMY HAS ");
-	puti(table->player[them].bsites);
+	puti(table[p]->player[them[p]].bsites);
 	puts(" BOMB SITES LEFT");
 	putchar('\n');
 	puts("YOU HAVE  ");
-	puti(table->player[us].bsites);
+	puti(table[p]->player[us[p]].bsites);
 	puts(" BOMB SITES LEFT");
 	putchar('\n');
-    /*printf("ENEMY HAS %03d BOMB SITES LEFT\n",
-        table->player[them].bsites);
-    printf("YOU HAVE  %03d BOMB SITES LEFT\n",
-        table->player[us].bsites);*/
 }
 
 /* End game.c */
