@@ -51,9 +51,11 @@ Se desea implementar un Multitasker, cuyo objetivo  principal es asignar tiempo 
 
 \section{Kernel}
 	\subsection{Objetivo}
-	\subsection{Modelo}
+		El \textit{Kernel} es el encargado de levantar todo el sistema operativo.
 	\subsection{Esquema general}
+		La funci\'on principal del \textit{Kernel} es cargar en la IDT las rutinas de atenci\'on del teclado, del timer tick y las interrupciones de la \textit{int 80}, iniciar la paginaci\'on, iniciar el multitasker e inicializar las TTYs. Ademas de todas estas inicializaciones, tambien inicia el driver de video, el m\'odulo de shared memory, los sem\'aforos y por \'ultimo habilita las entradas del Pic que correspondan para el Timer Tick y la del Teclado. 
 	\subsubsection{LLamadas a Sistema}
+		Para inicializar cada m\'odulo se realiza una llamada a sistema, ya que en ese instante que esta inicializando no puede perder el procesador, por lo tanto todas estas funciones antes desabilitan las interrupciones. Toda funci\'on que hayamos considerado que no pueden perder la atenci\'on hacen una llamada a sistema.
 	\subsubsection{Drivers y Perisf\'ericos}
 
 \section{Paginacion}
@@ -67,20 +69,28 @@ Se desea implementar un Multitasker, cuyo objetivo  principal es asignar tiempo 
 	\subsection{Limitaciones}
 		Como no se utiliz\'o segmentacion de p\'aginas, el malloc siempre retornaba p\'aginas contiguas y no se almacenaba ningun registro sobre segmentos otorgados.
 
-\section{File System}
-	\subsection{Objetivo}
+\section{File System} 
 	\subsection{Modelado}
+		Se implment\'o una simulaci\'on de un File System, pero unicamente teniendo los pseudoarchivos \textit{STDIN} y \textit{STDOUT}. Cada proceso tiene almacenado en su estructura estos pseudoarchivos.
 	\subsection{Esquema general}
 	\subsection{Problemas y soluciones}
 	\subsection{Limitaciones}
 
 \section{TTY}
 	\subsection{Objetivo}
+		El objetivo era implementar al menos 4 ttys y comenzar a dividir las tareas a realizar. Como el sistema en el cual esta basado el sistema operativo multitarea era mono tarea, el encargado de todas las operaciones sobre el imprimir, parsear caracteres, etc era el driver de video, se modific\'o para que las ttys sean las encargadas de hacer ese labor.
 	\subsection{Modelo}
+		El model diseñado para las ttys basicamente es que cada ttys tiene su \textit{STDOUT} donde mantiene el estado de la pantalla y un \textit{STDIN} tambien. El principal objetivo de la tty es traducir a un lenguaje indicado, de acuerdo al lenguaje que este manejando ese proceso. Los tipos de lenguajes que soporta son \textbf{Can\'onico} y \textbf{Crudo}, donde la principal diferencia es que el modo Crudo imprime el caracter directamente sin ser parseado y el Can\'onico realiza un parsea previo de los caracteres de control. En el stdout de la tty se almacena unicamente el lenguaje de la shell, es decir ya parseado.
 	\subsection{Esquema general}
+		Para cada TTY se creo una estructura del tipo \textit{FILE} donde se almacenan sus respectivos \textit{STDIN} y \textit{STDOUT}. Ademas la TTY almacena su \textit{id}, si se realizo un scroll y los desplazamientos realizados sobre el stdout ya se de escritura como de lectura. Como ya se mencion\'o anteriormente utilizamos dos modos de lenguajes que puede traducir la tty, el can\'onico y el crudo, el primer lenguaje mencionado parsea los caracteres y lo coloca en el \textit{stdout} de la tty indicada, existen excepciones como que cuando se ingresa un \textit{Newline} se baja todos los caracteres ingresados en el \textit{STDIN} y se los pasa a la Shell para que ella luego los procese como un comando. \\
+		Cuando se cambia de TTY es decir que se oprimio alguna de los F (entre el F1 y el F7), se realiza un cambio de tty, por lo tanto se llama a la funci\'on que refresca el \textit{STDOUT} y lo imprime en pantalla y salva las variables utilizadas para escribir y leer en la TTY que corresponda y carga las nuevas variables. Las teclas Fx, siendo x alg\'un n\'umero entre 1 y 7, no se ingresa en un ningun buffer de la TTY sino que el refresh del teclado llama a la funci\'on encargada de cambiar de TTY.\\
 	\subsection{Problemas y soluciones}
+		Se obtuvieron muchos problemas con la TTY ya que a medida que se iba leyendo algo o preguntando algo, nos dabamos cuenta que teniamos que mejorarlo por lo tanto, las TTYs sufieron muchos cambios.\\
+		El primer problema que nos surg\'io fue el tema de los lenguajes que manejaba la TTY, el tema de los buffers. En un principio teniamos un \'unico \textit{STDIN}, por lo que tuvimos que cambiarlo y asignarles un buffer \textit{STDIN} a cada TTY. \\
+		Otro problema con esto fue la diferenciaci\'on entre el \textit{STDIN} y \textit{stdin}, donde para nosotros el \textit{stdin} es la entrada est\'andar del proceso que estaba corriendo y no necesariamente es el que esta en foco en la TTY actual, menos aun podria serlo si es una shell que esta dormida. Por lo tanto se tuvieron que modificar los write y read para escriban sobre un \textit{stdin} y \textit{stdout} indicado.
+		Un problema de no gran envergadura fue el manejo de los indices, ya que en un principio se utiliz\'o dos variables de desplazamiento unicamente y se incrementaba de a un paso o en el caso que fuese un caracter de control se desplazaba lo indicado por ese caracter, pero por cuestiones de simplicidad se decidi\'o utilizar una varible que me indica la cantidad de caracteres que escribi\'o en el \textit{STDOUT} de la TTY, una variable que me dice la fila en la cual se encuentra y una variable para la columna. Del mismo modo para las variables de lectura, se siguio el mismo criterio.
 	\subsection{Limitaciones}
-
+		
 \section{Procesos}
 	\subsection{Objetivo}
 	\subsection{Modelado}
@@ -93,8 +103,7 @@ Se desea implementar un Multitasker, cuyo objetivo  principal es asignar tiempo 
 	\subsubsection{Top}
 	\subsection{Problemas y soluciones}
 	\subsection{Limitaciones}
-
-\subsection{Problemas y soluciones}
+	\subsection{Problemas y soluciones}
 	\subsection{Limitaciones}
 
 
