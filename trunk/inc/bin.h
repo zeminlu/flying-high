@@ -19,16 +19,16 @@
 /**
  * \fn void init(void *args)
  *
- * 		\brief Brief.
+ * 		\brief This functions initialize the process welcome,
+ *				all of shells and goddbye process. It you kill the process
+ *				init the system will be rebooted.
  *
- * 		\param args ParamBrief.
+ * 		\param args 
  * 		
  * 		Use:
  * 		\code
- *		
+ *			initMultitasker(init);
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void init(void *args);
@@ -36,16 +36,16 @@ void init(void *args);
 /**
  * \fn void top(char *args)
  *
- * 		\brief Brief.
+ * 		\brief This function show what percentage of the microprocessor
+ *				it is using each process. When you write the command top
+ *				in the shell, the process top will be created.
  *
- * 		\param args ParamBrief.
+ * 		\param args
  * 		
  * 		Use:
  * 		\code
- *		
+ *			createProcess("top", (void(*)(void *))top, NULL, FOREGROUND);
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void top(char *args);
@@ -53,14 +53,15 @@ void top(char *args);
 /**
  * \fn  void welcome()
  *
- * 		\brief Brief.
+ * 		\brief This function just print the welcome message to
+ *				Flying-High SO
  *
  * 		Use:
  * 		\code
- *		
+ *			createProcess("welcome", (void(*)(void *))welcome, NULL, FOREGROUND)
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void welcome();
@@ -68,14 +69,14 @@ void welcome();
 /**
  * \fn void goodbye()
  *
- * 		\brief Brief.
+ * 		\brief This function just said goddbye and reboot the system.
  *
  * 		Use:
  * 		\code
- *		
+ *			createProcess("goodbye", (void(*)(void *))goodbye, NULL, FOREGROUND);
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void goodbye();
@@ -83,14 +84,14 @@ void goodbye();
 /**
  * \fn void printA()
  *
- * 		\brief Brief.
+ * 		\brief This functions print A letter to the infinity
  *
  * 		Use:
  * 		\code
- *		
+ *			createProcess("printA", (void(*)(void *))printA, NULL, FOREGROUND)
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void printA();
@@ -98,14 +99,14 @@ void printA();
 /**
  * \fn void printB()
  *
- * 		\brief Brief.
+ * 		\brief This functions print B letter to the infinity
  *
  * 		Use:
  * 		\code
- *		
+ *			createProcess("printB", (void(*)(void *))printB, NULL, FOREGROUND)
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void printB();
@@ -113,14 +114,14 @@ void printB();
 /**
  * \fn void nothing()
  *
- * 		\brief Brief.
+ * 		\brief This function only consume the microprocessor
  *
  * 		Use:
  * 		\code
- *		
+ *			createProcess("nothing", (void(*)(void *))nothing, NULL, FOREGROUND)
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void nothing();
@@ -128,14 +129,14 @@ void nothing();
 /**
  * \fn void pageFault()
  *
- * 		\brief Brief.
+ * 		\brief This function create a page fault exception
  * 		
  * 		Use:
  * 		\code
- *		
+ *			createProcess("pageFault", (void(*)(void *))pageFault, NULL, FOREGROUND)
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa
  *
  */
 void pageFault();

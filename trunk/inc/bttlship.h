@@ -193,8 +193,6 @@ extern void showRow(void);
  * \fn void showBattle(void)
  *
  * 		\brief It prints the whole table of the battlehsip
- *
- *
  */
 
 extern void showBattle(void);

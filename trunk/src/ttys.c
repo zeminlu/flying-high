@@ -46,7 +46,7 @@ static videoParser videoParserFunctions[] = {
 	printLineFeed,
 	printReturn
 };
-
+/* Initialize the structures of each TTYs */
 void initializeTTY( void )
 {
 	int i;
@@ -76,12 +76,15 @@ void initializeTTY( void )
 /*
 *	Static functions for putcharTTY
 */
+
+/* Obtain the read pointer of the specific TTY */
 void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow){
 	*readPointer = ttyTable.listTTY[tty]->readPointer;
 	*readCol = ttyTable.listTTY[tty]->readCol;
 	*readRow = ttyTable.listTTY[tty]->readRow;
 }
 
+/* Obtain the write Pointer of the specific TTY */
 void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow){
 	*writePointer = ttyTable.listTTY[tty]->writePointer;
 	*writeCol = ttyTable.listTTY[tty]->writeCol;
@@ -89,6 +92,7 @@ void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow)
 	
 }
 
+/* Backup the reads variables of the tty */
 void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow){
 	ttyTable.listTTY[tty]->readPointer = readPointer;
 	ttyTable.listTTY[tty]->readCol = readCol;
@@ -96,12 +100,14 @@ void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow){
 	
 }
 
+/* Backup the writers variables of the tty */
 void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow){
 	ttyTable.listTTY[tty]->writePointer = writePointer;
 	ttyTable.listTTY[tty]->writeCol = writeCol;
 	ttyTable.listTTY[tty]->writeRow = writeRow;	
 }
 
+/* increment the read pointers */
 static void incReadPointer ( int *readPointer, int *readCol, int *readRow )
 {
 	(*readPointer)++;
@@ -115,6 +121,7 @@ static void incReadPointer ( int *readPointer, int *readCol, int *readRow )
 		(*readRow) = 0;
 }
 
+/* decrement the read pointers */
 static void decReadPointer ( int *readPointer, int *readCol, int *readRow )
 {
 	if ( ((*readPointer)--) < 0 )
@@ -133,6 +140,7 @@ static void decReadPointer ( int *readPointer, int *readCol, int *readRow )
 	}
 }
 
+/* increment the write pointers */
 static void incWritePointer ( int *writePointer, int *writeCol, int *writeRow )
 {
 	(*writePointer)++;
@@ -146,6 +154,7 @@ static void incWritePointer ( int *writePointer, int *writeCol, int *writeRow )
 		(*writeRow) = 0;
 }
 
+/* decrement the read pointers */
 static void decWritePointer ( int *writePointer, int *writeCol, int *writeRow )
 {
 	if ( ( (*writePointer)--) < 0 )
@@ -164,10 +173,12 @@ static void decWritePointer ( int *writePointer, int *writeCol, int *writeRow )
 	}
 }
 
+/* return the FILE * of the specific tty */
 static FILE * sysGetTTYFocusedProcessStream(tty_t tty, int fd){
 	return processTable[sysGetTTYFocusedProcess(tty)].files[fd];
 }
 
+/* send to the buffer shell the enter line */
 static void putLine(void)
 {
 	int tty;
@@ -181,10 +192,12 @@ static void putLine(void)
 	kbOffset[tty] = 0;
 }
 
+/* Parse the alarm control character */
 static void parseAlarmTTY( int where, tty_t tty )
 {
 }
 
+/* Parse the backspace control character */
 static void parseBackSpaceTTY( int where, tty_t tty )
 {
 	static int cond = FALSE;
@@ -228,6 +241,7 @@ static void parseBackSpaceTTY( int where, tty_t tty )
 	return;
 }
 
+/* Parse the tab control character */
 static void parseTabTTY( int where, tty_t tty )
 {	
 	int i, prevRow;
@@ -247,6 +261,7 @@ static void parseTabTTY( int where, tty_t tty )
 	}
 }
 
+/* Parse the newline control character */
 static void parseNewLineTTY( int where, tty_t tty )
 {
 	if( !where ){
@@ -265,6 +280,7 @@ static void parseNewLineTTY( int where, tty_t tty )
 	}
 }
 
+/* Parse the vertical tab control character */
 static void parseVTabTTY( int where, tty_t tty )
 {
 	int i, col;
@@ -287,6 +303,7 @@ static void parseVTabTTY( int where, tty_t tty )
 	}
 }
 
+/* Parse the line feed control character */
 static void parseLineFeedTTY( int where, tty_t tty )
 {
 	int col;
@@ -310,6 +327,7 @@ static void parseLineFeedTTY( int where, tty_t tty )
 	}
 }
 
+/* Parse the return control character */
 static void parseReturnTTY( int where, tty_t tty )
 {
 	if( !where ){
@@ -323,6 +341,7 @@ static void parseReturnTTY( int where, tty_t tty )
 	}
 }
 
+/* Parse the character and determine what it has to do */
 static int parseCharTTY( int c, tty_t tty, int inStdIn)
 {
 	tty_t focusTTY;
@@ -379,6 +398,7 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 	}
 }
 
+/* Refresh all buffers of the tty */
 static void refreshScreenTTY( void )
 {
 	int character;
@@ -427,12 +447,14 @@ static void refreshScreenTTY( void )
 	}
 }
 
+/* Print a stirng in the specific tty */
 void putsTTY( unsigned char *name, int count, tty_t tty )
 {
 	while( count-- >= 0 )
 		putCharTTY(*name++, tty, TRUE);
 }
 
+/* Put a char into the tty and verifies if it has to put in Stdin too */
 void putCharTTY( char c, tty_t tty, int inStdIn )
 {	
 	int parse;
@@ -445,11 +467,13 @@ void putCharTTY( char c, tty_t tty, int inStdIn )
 	parse = parseCharTTY(c, tty, inStdIn);
 }
 
+/* return the id of the tty that is in focus */
 int getFocusedTTY( void ) 
 {
 	return ttyTable.focusTTY;
 }
-	
+
+/* put a char into the tty that is in focus */
 static void putTTY(Keycode c){
 	tty_t tty;
 	
@@ -459,6 +483,7 @@ static void putTTY(Keycode c){
 	}	
 }
 
+/* dequeue characters from the keyboard buffer, and decides if it has to putchar or change tty */
 void refreshKeyboardBufferTTY( void ){
 	Keycode deChar = 0;
 	int color;
@@ -487,6 +512,7 @@ void refreshKeyboardBufferTTY( void ){
 	}
 }
 
+/* Change the focus tty */
 int changeFocusTTY( tty_t nextTty ){	
 	
 	if( nextTty == getFocusedTTY() )
@@ -499,6 +525,7 @@ int changeFocusTTY( tty_t nextTty ){
 	return 0;
 }
 
+/* Put chars into the STDOUT of the running process */
 void refreshStdout(void){
 	char aux;
 
@@ -508,6 +535,7 @@ void refreshStdout(void){
 
 }
 
+/* Refresh focus tty */
 void refreshTTY(void){
 
 	refreshScreen();
@@ -522,14 +550,16 @@ void refreshTTY(void){
  *Public Functions
  */
 
+/* Set the pid to the process that is in focus, for this tty */
 void sysSetTTYFocusedProcess(pid_t pid, tty_t tty){
 	ttyTable.listTTY[tty]->focusProcess = pid; 
 }
-
+ /* get the pid of the process that is in focus of this tty */
 pid_t sysGetTTYFocusedProcess(tty_t tty){
 	return ttyTable.listTTY[tty]->focusProcess;
 }
 
+/* Clean the stdout buffer of the running process tty */
 void clearTTYScreen()
 {
 	int clear = 0;
@@ -550,6 +580,7 @@ void clearTTYScreen()
 	}
 }
 
+/* Put the pointer in x,y position */
 void setTTYCursorPosition( int x, int y)
 {
 	tty_t tty;
@@ -567,6 +598,7 @@ void setTTYCursorPosition( int x, int y)
 	}
 }
 
+/* put chat at tty position buffer */
 void putTTYCharAtPosition( int c, int row, int col)
 {
 	int auxPointer, auxCol, auxRow;
