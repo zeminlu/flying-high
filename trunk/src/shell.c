@@ -347,6 +347,7 @@ static void startBattleShip(char *args){
 	if ((pid = createProcess("battleship", (void(*)(void *))battleship, NULL, FOREGROUND)) == -1 ) {
 		puts("ERROR: Battleship could not be created.\n");
 	}
+	setPriority(pid, 0);
 	setProcessAtomicity(getpid(), UNATOMIC);
 	waitpid(pid, &status);
 	//clearTTYScreen();
@@ -358,14 +359,17 @@ static void startPrintA(char *args){
 	int status;
 	int mode;
 	
+	setProcessAtomicity(getpid(), ATOMIC);
 	mode = *args =='&' ? BACKGROUND:FOREGROUND;
 	
 	if ((pid = createProcess("printA", (void(*)(void *))printA, NULL, mode)) == -1 ) {
 		puts("ERROR: printA could not be created.\n");
 	}
+	setPriority(pid, 4);
 	if(mode == FOREGROUND){
 		waitpid(pid, &status);
 	}
+	setProcessAtomicity(getpid(), UNATOMIC);
 	return;
 }
 
@@ -374,14 +378,17 @@ static void startPrintB(char *args){
 	int status;
 	int mode;
 	
+	setProcessAtomicity(getpid(), ATOMIC);
 	mode = *args =='&' ? BACKGROUND:FOREGROUND;
 	
 	if ((pid = createProcess("printB", (void(*)(void *))printB, NULL, mode)) == -1 ) {
 		puts("ERROR: printB could not be created.\n");
 	}
+	setPriority(pid, 2);
 	if(mode == FOREGROUND){
 		waitpid(pid, &status);
 	}
+	setProcessAtomicity(getpid(), UNATOMIC);
 	return;
 }
 

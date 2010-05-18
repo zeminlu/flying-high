@@ -25,7 +25,7 @@ extern process_t *initProcess;
 
 extern int qtyProccessTable;
 
-static int Algorithim = RPG;
+static int Algorithim = ROUND_ROBIN;
 
 static int prevPro = 0;
 
@@ -112,23 +112,6 @@ void increaseRPGCounter()
 
 void changeAlgorithimSchedule( void ){
 	Algorithim = (Algorithim == ROUND_ROBIN ? RPG : ROUND_ROBIN);
-}
-
-void setupScheduler( void )
-{
-	/*int i;*/
-	
-	initProcess->pid = 0;
-	initProcess->level = FOREGROUND;
-	initProcess->priority = 4;
-	initProcess->ppid = 0;
-	initProcess->gid = 0;
-	initProcess->tty = 0;
-	initProcess->childsQty = 0;
-	memcpy(initProcess->name, "Idle", 5);
-	initProcess->state = RUNNING;
-	initProcess->stack = malloc(0x200);
-	/*createStackFrame(initProcess, );*/
 }
 
 
