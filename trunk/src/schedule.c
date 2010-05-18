@@ -50,7 +50,7 @@ static process_t * roundRobinSchedule()
 		++i;
 		
 		if( i == MAX_PROCESS ){
-			i = 0;
+			i = 1;
 		}
 	}
 	return initProcess;
