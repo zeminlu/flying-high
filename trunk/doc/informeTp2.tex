@@ -4,6 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{makeidx}
+\usepackage[pdftex]{graphicx}
 \author{Magni Nicol\'as, Purita Nicol\'as, Zemin Luciano R.  }
 \title{Multitasker}
 \begin{document}
@@ -35,7 +36,7 @@ Se desea implementar un Multitasker, cuyo objetivo  principal es asignar tiempo 
 
 			\item Se debera poder ejecutar diferentes tareas a trav\'es de comandos ingresados por teclado. La sintaxis de los comandos quedan a elecci\'on del desarrollador.
 
-			\item El sistema debe tener la posibilidad de correr los mismos procesos tanto en foreground como en background. Para este ultimo se deber\'a utilizar el caracter & al igual que en UNIX.
+			\item El sistema debe tener la posibilidad de correr los mismos procesos tanto en foreground como en background. Para este ultimo se deber\'a utilizar el caracter \& al igual que en UNIX.
 
 			\item El sistema debe tener un m\'odulo de administraci\'on de memoria mediante paginaci\'on para los procesos, el mismo se encargar\'a de lo siguiente:
 			\begin{itemize}
@@ -78,37 +79,81 @@ Se desea implementar un Multitasker, cuyo objetivo  principal es asignar tiempo 
 
 \section{TTY}
 	\subsection{Objetivo}
-		El objetivo era implementar al menos 4 ttys y comenzar a dividir las tareas a realizar. Como el sistema en el cual esta basado el sistema operativo multitarea era mono tarea, el encargado de todas las operaciones sobre el imprimir, parsear caracteres, etc era el driver de video, se modific\'o para que las ttys sean las encargadas de hacer ese labor.
+		Dado un numero maximo de tty's estas son creadas en la inicializaci\'on del  sistema. Estas almacenan informacion que solo es modificada por la TTY, ya que esta es la encargada de traducir los distintos lenguajes que se manejan en el sistema. 
 	\subsection{Modelo}
-		El model diseñado para las ttys basicamente es que cada ttys tiene su \textit{STDOUT} donde mantiene el estado de la pantalla y un \textit{STDIN} tambien. El principal objetivo de la tty es traducir a un lenguaje indicado, de acuerdo al lenguaje que este manejando ese proceso. Los tipos de lenguajes que soporta son \textbf{Can\'onico} y \textbf{Crudo}, donde la principal diferencia es que el modo Crudo imprime el caracter directamente sin ser parseado y el Can\'onico realiza un parsea previo de los caracteres de control. En el stdout de la tty se almacena unicamente el lenguaje de la shell, es decir ya parseado.
+		Al comienzo del desarrollo del proyecto, no estaba claro el concepto de TTY, por esta razon se decidio investigar sobre el mismo. Se decidio seguir a grandes rasgos el modelo de unix, con los respectivos ajustes. Al inicial el sistema se crea una cantidad fijate tty's, alli se almacena toda la informaci\'on necesaria para el buen funcionamiento, y luego es seteada la tty en foco, que sera modificada ante cualquier entrada o salida de datos . Cada tty se le asocia un proceso corriendo en ella, como asi tambi\'en son almacenados buffers de entrada y salida de datos. Respecto a los demas campos que tiene , son utilizados para menejo correcto de los buffers. Estos solamente son accedidos por la tty,en el stdin se pueden encontrar todos los caracteres ingresados por el teclado, y seran almacenados en la tty en foco. Respecto al stdout de la tty, es un buffer circular de tama\~o igual a la pantalla, y se mantiene el scrrol de la pantalla, mateniendo el estdo actual de la misma. En este la informaci\'on almaceanda es en lenguaje shell. Se hizo de esa forma , para que sea mas facil parcear el stdout, en el caso de querer redireccionar el sdtout.
+		El comportamiento de la tty puede variar dependiendo del tipo de comunicaci\'on que el proceso puede interpretar. En el modo \textbf{Canonico}, se interpretan los caracteres de control y se llama a la funci\'on que maneja el caracter ingresado(handler), sino es un caracter de control se lo almacena en el buffer interno. Al momento de interpretar que el usuario a precionado un \textbf{enter}, todos los caracteres ingresados son colocados en el stdout del proceso que se encuentra en foco en la tty. 
+		En el modo \textbf{Raw}, todo lo ingresado es colocado en el stdout del proceso, el unico caracter que es parceado son los \textbf{F1, F2, ...}, ya que es la unica manera de poder cambiar de tty. 
+		Todo pasaje de informaci\'on del buffer de la tty hacia los stdout de los procesos se hace mediante las primitivas write y read, para poder mantener la circularidad de los buffers del file system.
+
 	\subsection{Esquema general}
-		Para cada TTY se creo una estructura del tipo \textit{FILE} donde se almacenan sus respectivos \textit{STDIN} y \textit{STDOUT}. Ademas la TTY almacena su \textit{id}, si se realizo un scroll y los desplazamientos realizados sobre el stdout ya se de escritura como de lectura. Como ya se mencion\'o anteriormente utilizamos dos modos de lenguajes que puede traducir la tty, el can\'onico y el crudo, el primer lenguaje mencionado parsea los caracteres y lo coloca en el \textit{stdout} de la tty indicada, existen excepciones como que cuando se ingresa un \textit{Newline} se baja todos los caracteres ingresados en el \textit{STDIN} y se los pasa a la Shell para que ella luego los procese como un comando. \\
-		Cuando se cambia de TTY es decir que se oprimio alguna de los F (entre el F1 y el F7), se realiza un cambio de tty, por lo tanto se llama a la funci\'on que refresca el \textit{STDOUT} y lo imprime en pantalla y salva las variables utilizadas para escribir y leer en la TTY que corresponda y carga las nuevas variables. Las teclas Fx, siendo x alg\'un n\'umero entre 1 y 7, no se ingresa en un ningun buffer de la TTY sino que el refresh del teclado llama a la funci\'on encargada de cambiar de TTY.\\
+En esta seccion se explicara el flujo de informaci\'on dentro del sistema. Se comenzara en modo \textbf{raw}, un proceso intenta leer de su stdin alg\'un caracter ingresado, como no el bufer se encuentra vacio se duerme. Una vez que el usuario preciona una tecla es alamacena en el buffer del teclado, el driver de teclado coloca el caracter ingresado en el stdin de la tty, esta toma el carcter los procesa, si es un caracter de control se ejecuta la funci\'on asociada al mismo caracter, sino se lo coloca en el stdout de la tty que esta en foco, y se procede a levantar el proceso dormido en la tty si es necesario.\\
+		En el modo \textbf{Canonico} a diferencia de lo explicado anteriormente, los datos son alctualizados al sdtout del proceso una vez que se halla ingresado un \textbf{new line}\\
+		Si un proceso quisiera escribir en pantalla, se realizarian los siguientes pasos. En modo \textbf{Canocnico}, el porceso es el encargado mediante la primitiva write de colocar los caracteres en el sdtout que le pertenece. En modo  \textbf{Raw} se utiliza una api encargada de colocar en pantalla los caracteres, esta api ha sido dise\~nada inspirada en  \textbf{ncurse}. Ambos sdtous, son actualizados en cada interrupcion del timer tick al igual que la pantalla.\\
+		 
+		En la figura 1 se muestra el flujo de datos, entre los dirvers, y la tty. En la figura 2 se muestra el flujo de datos entre los procesos y la tty. \\
+	\begin{figure}
+	\begin{center} 
+	\includegraphics[angle=0, width=1\textwidth , height=0.3\textheight]{flujoTTY.png} 
+	\caption{ Flujo de datos entre los driver, y la tty. }
+	\end{center} 
+	\end{figure}
+	
+	\begin{figure}
+	\begin{center} 
+	\includegraphics[angle=0, width=1\textwidth , height=0.3\textheight]{flujoTTY2.png} 
+	\caption{Flugo de datos entre los procesos, la tty y el stdout}
+	\end{center} 
+	\end{figure}
+
 	\subsection{Problemas y soluciones}
-		Se obtuvieron muchos problemas con la TTY ya que a medida que se iba leyendo algo o preguntando algo, nos dabamos cuenta que teniamos que mejorarlo por lo tanto, las TTYs sufieron muchos cambios.\\
+		Se obtuvieron muchos problemas con la TTY ya que a medida que se iba leyendo caracteres o preguntando algo, nos dabamos cuenta que teniamos que mejorarlo por lo tanto, las TTYs sufieron muchos cambios.\\
 		El primer problema que nos surg\'io fue el tema de los lenguajes que manejaba la TTY, el tema de los buffers. En un principio teniamos un \'unico \textit{STDIN}, por lo que tuvimos que cambiarlo y asignarles un buffer \textit{STDIN} a cada TTY. \\
 		Otro problema con esto fue la diferenciaci\'on entre el \textit{STDIN} y \textit{stdin}, donde para nosotros el \textit{stdin} es la entrada est\'andar del proceso que estaba corriendo y no necesariamente es el que esta en foco en la TTY actual, menos aun podria serlo si es una shell que esta dormida. Por lo tanto se tuvieron que modificar los write y read para escriban sobre un \textit{stdin} y \textit{stdout} indicado.
 		Un problema de no gran envergadura fue el manejo de los indices, ya que en un principio se utiliz\'o dos variables de desplazamiento unicamente y se incrementaba de a un paso o en el caso que fuese un caracter de control se desplazaba lo indicado por ese caracter, pero por cuestiones de simplicidad se decidi\'o utilizar una varible que me indica la cantidad de caracteres que escribi\'o en el \textit{STDOUT} de la TTY, una variable que me dice la fila en la cual se encuentra y una variable para la columna. Del mismo modo para las variables de lectura, se siguio el mismo criterio.
 	\subsection{Limitaciones}
-		
+		Se tuvieron que tomar siertas consideraciones para poder desarrollar el sistema, una de ellas es , una limitada catidad de caracteres que se pueden lamacenar en modo Raw, debido a que si no se presiona \textbf{new line}, el buffer de la tty no es refresacado, por esa razon se perderian los caracteres ingresados una vez que el buffer este completo.
 \section{Procesos}
 	\subsection{Objetivo}
+	Se lanzaran inicialmente nueve procesos, y seran creados en el siguiente orden, init, shell1, shell2, ... ,shell8. En la figura 3, se presentan un diagrama de arbol, demostrando la relacion entre ellos. Al comenzar a correr init se dureme en espera del retorno de sus hijos. Por otrolado las shells son bloquedas por un getchar.
 	\subsection{Modelado}
+	A diferecncia de linux, los procesos corren el mismo archivo binario, por esa razon se debe tener mucho cuidado con las variables globales. Cada proceso al ser creado obtiene un frame , que luego sera utilizado como heap. 
 	\subsection{Esquema general}
+	A continuaci\'on en la figura 3,  se muestra un diagrama del estado inicial del sistema una vez completada la inicializaci\'on. En la figura 4, se puede ver que pasaria si el usuario quiesiera ejecutar el proceso top.
+	
+		\begin{figure}
+	\begin{center} 
+	\includegraphics[angle=0, width=1\textwidth ]{procesos.png} 
+	\caption{ Estado inicial del sistema, los proceso que estan en azul estan blockeados, y los que estan en naraja esperan a que termines sus hijos. El sentido de las flechas define a quien se esta esperando }
+	\end{center} 
+	\end{figure}
+	
+	\begin{figure}
+	\begin{center} 
+	\includegraphics[angle=0, width=1\textwidth ]{proceso2.png} 
+	\caption{Estado inicial del sistema, los proceso que estan en azul estan blockeados, y los que estan en naraja esperan a que termines sus hijos, y rojo el proceso que se esta ejecutando. El sentido de las flechas define a quien se esta esperando}
+	\end{center} 
+	\end{figure}
+
 	\subsection{Creacion de procesos}
 	\subsection{Herencia de TTY's}
 	\subsection{Muerte de un proceso}
 	\subsection{Procesos ejecutados en background}
 	\subsection{Procesos especiales}
 	\subsubsection{Top}
+	\subsubsection{Shell}
+	En esta secci\'on se hablara acerca de como fue adaptada la shell para poder funcionar en un sistema multi tarea. \\ 
+	Como la shell que se tomo como base fue dise\~nada para correr en un sistema multi tarea, se tuvieron que realizar ciertas adaptciones. Una de ellas fue, que las variables globales deberian pertenecer solamente a esa shell, por esa razon se realizo un vector donde sfueron almacenadas estruras con todos los datos pertinentes para el correcto funcionamiento de la shell. Cada shell almacenaba en su heap dichas estructuras, esto asegura un nivel mas de seguridad, ya que una shell no podra acceder a datos de otra, por que no estarina presentes las paginas. \\
+	En la misma se colocaron proceso de pruba que se pueden ejecutar para probar la funcionalidad del sistema.
+
 	\subsection{Problemas y soluciones}
 	\subsection{Limitaciones}
-	\subsection{Problemas y soluciones}
-	\subsection{Limitaciones}
+	
 
 
 \section{Multitasker}
 	\subsection{Objetivo}
+	Intercambiar tareas mediante software, y una correcta construcci\'ion del stack frame.
 	\subsection{Modelo}
 	\subsection{Esquema general}
 	\subsection{Problemas y soluciones}
@@ -148,6 +193,12 @@ Se desea implementar un Multitasker, cuyo objetivo  principal es asignar tiempo 
 		Otro problema que nos surgio fue que los sem\'aforos se quedaban esperando pero se seguia imprimiendo el tablero esperando la conexi\'on de algun usuario al juego, por lo tanto decidimos modificar los sem\'aforos para que se queden esperando y no pueda realizar otra cosa, entonces cuando alguien ingresa una posici\'on se refresca el tablero.  
 
 \subsection{Conclusi\'on}
+Fue de mayor importancia, seguir algunas convenciones de unix, ya que se facilito el dise\~no del proyecto en general. Por ortro lado es bastante complejo adaptar un sistema mono tarea a multi tarea como tuvimos que hacer, debido a esto genero problemas serios en el desarrolo del trabajo, mas que nada en las ultimas etapas. Se quiere resaltar que si  no se toman desiciones correctas en la etapa de dise\~no del proyecto, se puede llegar aun punto en donde no se tenga otra solucion que tener que realizar una restructuracion importante. Por esta razon se decidio como se dijo anteriormente aplicar a grandes rasgos las estrucutara que utiliza unix.\\
+Se opto por un kernel monolitico, por una cuestion de eficiencia, y codificacion simple. El cambio de contexto resulto muy complejo, ya que este implica una precicion a la que no estabamos acostumbrados. Se hace incapie en este tema mas que nada en la cosntrucci\'on del stackframe.\\
+A diferencia de proyectos anteriores, se realizo una programci\' on en parejas, ya que se necesitaba una atencion constante. Se pudo optar por esta metodologia por que el codigo no era extenso, sino que complejo.\\
+Al momento de desarrollar el juego se decidio buscar un juego y adaptarlo a las necesidades, ya que el trabajo no estaba apuntado a esa tarea.\\
+Se pudieron afianzar conocimientos sobre la estructura y la funcionalidad de un sistema operativo,  creacion de procesos  y cambios de contexto. Quedo en evidencia la razon de muchas deciciones que toman los sistemas , cuando estos estan en etapa de desarrolo.\\ 
+
 
 \subsection{Bibliograf'ia y fuentes}
 
