@@ -63,6 +63,9 @@ typedef struct S_TABLE {
  *
  * 		\brief Destroys the used shared memory and semaphores
  *
+ *		\param shmid The id of the shared memory segment.
+ *		\param semid The id of the semaphore.
+ *
  */
 extern void cleanup(key_t shmid, key_t semid);
 
@@ -72,11 +75,15 @@ extern void cleanup(key_t shmid, key_t semid);
  * 		\brief It attaches itself to the already
  *				created memory.
  *
+ *		\param table The adress of the table.
+ *		\param shmid The shared memory segment id.
+ *		\param shmp The adress where to store the shared memory segment pointer.
+ *
  */
 extern void attachTable(S_TABLE **table, key_t shmid, char **shmp);
 
 /**
- * \fn void lockTable(int semx,int block, S_TABLE **tableS))
+ * \fn void lockTable(int semx,int block, S_TABLE **tableS)
  *
  * 		\brief It decides if it has to lock the table
  *				or wait for the opponent. Peform semaphore wait/notifies:
@@ -88,78 +95,84 @@ extern void attachTable(S_TABLE **table, key_t shmid, char **shmp);
  *
  * 		\param semx It is the parameter to decide what have to do with semaphore
  * 		\param block It decides what have to do with the table
+ *		\param tableS The adress of the table.
  * 		
- *
  */
 extern void lockTable(int semx,int block, S_TABLE **tableS);
 
 /**
- * \fn void recount(S_TABLE **table, int *flg_game_over)
+ * \fn void recount(S_TABLE **tableS, int *flg_game_over)
  *
  * 		\brief It counts the amount of bombs that the player has left
  *
- * 		
+ *		\param tableS The address of the table.
+ *		\param flg_game_over The adress of the game status.
  *
  */
-extern void recount(S_TABLE **table, int *flg_game_over);
+extern void recount(S_TABLE **tableS, int *flg_game_over);
 
 /**
- * \fn void bomb(int x, int y, S_TABLE **tableS))
+ * \fn void bomb(int x, int y, S_TABLE **tableS)
  *
  * 		\brief It puts the bomb on a specific position of the table
  *
  * 		\param x The row of the table
  * 		\param y The column of the table
- * 		
+ *		\param tableS The address of the table.
  *
  */
-extern void bomb(int x, int y, S_TABLE **table);
+extern void bomb(int x, int y, S_TABLE **tableS);
 
 /**
- * \fn int getInput(int *px,int *py, S_TABLE **tableS))
+ * \fn int getInput(int *px,int *py, S_TABLE **table)
  *
  * 		\brief It obtains the the row and the column of the table
  *				from STDIN
  *
  * 		\param px The row of the table
  * 		\param py The column of the table
- * 		
+ *		\param table The address of the table.
  *
  */
 extern int getInput(int *px,int *py, S_TABLE **table);
 
 /**
- * \fn int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS))
+ * \fn int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS)
  *
  * 		\brief It draws the horizontal ship
  *
- * 		\param sx
- * 		\param sy
- * 		\param z
- *		\param who
+ * 		\param sx Inner use.
+ * 		\param sy Inner use.
+ * 		\param z Inner use.
+ *		\param who Iner use.
+ *		\param tableS The address of the table.
  *
  */
-extern int draw_hz(int sx,int sy,int z,int who, S_TABLE **table);
+extern int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS);
 
 /**
- * \fn int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS))
+ * \fn int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS)
  *
  * 		\brief It draws the horizontal ship
  *
- * 		\param sx
- * 		\param sy
- * 		\param z
- *		\param who
+ * 		\param sx Inner use.
+ * 		\param sy Inner use.
+ * 		\param z Inner use.
+ *		\param who Inner use.
+ *		\param tableS The address of the table.
  *
  */
-extern int draw_vt(int sx,int sy,int z,int who, S_TABLE **table);
+extern int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS);
 
 /**
- * \fn void genBattle(S_TABLE **tableS))
+ * \fn void genBattle(S_TABLE **tableS)
  *
  * 		\brief It generates the table
+ *
+ *		\param tableS The address of the table.
+ *
  */
-extern void genBattle(S_TABLE **table);
+extern void genBattle(S_TABLE **tableS);
 
 /**
  * \fn void showRow(void)
@@ -170,11 +183,17 @@ extern void genBattle(S_TABLE **table);
 extern void showRow(void);
 
 /**
- * \fn void showBattle(S_TABLE **table, int us, int them, int *flg_game_over)
+ * \fn void showBattle(S_TABLE **tableS, int us, int them, int *flg_game_over)
  *
  * 		\brief It prints the table of the battlehsip
+ *
+ *		\param tableS The address of the table.
+ *		\param us Inner use.
+ *		\param them Inner use.
+ *		\param flg_game_over The address of the game status.
+ *
  */
-extern void showBattle(S_TABLE **table, int us, int them, int *flg_game_over);
+extern void showBattle(S_TABLE **tableS, int us, int them, int *flg_game_over);
 
 /**
  * \fn int battleship()

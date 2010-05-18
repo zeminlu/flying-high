@@ -36,35 +36,6 @@
 void * memmap(int isKernel);
 
 /**
- * \fn pid_t getpid()
- *
- * 		\brief Gets a pointer to the current process heap, or kernel heap.
- *
- * 		\param isKernel TRUE if it's kernel, FALSE if normal process.
- * 		
- * 		\return A pointer to the heap space.
- *
- */
-pid_t getpid();
-
-/**
- * \fn pid_t getppid()
- *
- * 		\brief Brief.
- *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
- */
-pid_t getppid();
-
-/**
  *	\fn pid_t createProcess(char *name, pfunc_t main, void *args, int level)
  *		
  *		\brief Creates a new process into the system and sets
