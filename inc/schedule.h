@@ -23,16 +23,18 @@
 /**
  * \fn process_t * rpgSchedule()
  *
- * 		\brief Brief.
+ * 		\brief 	This function simulate the RPG scheduling. The algorithim is about
+ *				that when a process achieve the maximum value of RPG, it is adding to
+ *				a queue. After that the functions just founf the oldest process who are
+ *				waiting to be attending.
  *
- * 		\return Description.
+ * 		\return The process to be attended
  *
  * 		Use:
  * 		\code
- *		
+ *			if( ALGORITHIM == RPG )
+ *				return rpgSchedule();
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 process_t * rpgSchedule();
@@ -40,16 +42,15 @@ process_t * rpgSchedule();
 /**
  * \fn process_t * getNextTask( void )
  *
- * 		\brief Brief.
+ * 		\brief  This function return the next task that should be
+ *				attended.
  *
- * 		\return Description.
+ * 		\return The next process
  *
  * 		Use:
  * 		\code
- *		
+ *			changeContext(getNextTask());
  *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 process_t * getNextTask( void );
@@ -57,73 +58,30 @@ process_t * getNextTask( void );
 /**
  * \fn int checkWhatAreReady( void )
  *
- * 		\brief Brief.
+ * 		\brief This function check what process are ready using RPG
+ *				Algorithim
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return the index of table process
  *
  */
 int checkWhatAreReady( void );
 
 /**
- * \fn int getTheOlder( process_t * pro[] )
- *
- * 		\brief Brief.
- *
- * 		\param pro ParamBrief.
- * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
- */
-int getTheOlder( process_t * pro[] );
-
-/**
  * \fn void increaseRPGCounter( void )
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief This function increase the current rpg value
+ *				of each process.
  *
  */
-void increaseRPGCounter( void );
 
-/**
- * \fn void setupScheduler( void )
- *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
- */
-void setupScheduler( void );
+void increaseRPGCounter( void );
 
 /**
  * \fn void changeAlgorithimSchedule( void )
  *
- * 		\brief Brief.
+ * 		\brief 	This function change the Algorithim
+ *				variable, if the current algorithim is RoundRobin
+ *				it changes to RPG and viceversa.
  *
  * 		Use:
  * 		\code
