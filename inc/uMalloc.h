@@ -1,7 +1,7 @@
 /**
  *	\file uMalloc.h
  *
- *		\brief Brief.
+ *		\brief User malloc module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -21,12 +21,7 @@
  *
  * 		\param ap ParamBrief.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa malloc() realloc()
  *
  */
 void free(void *ap);
@@ -40,12 +35,7 @@ void free(void *ap);
  * 		
  * 		\return Description.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa free() realloc()
  *
  */
 void *malloc(size_t nbytes);
@@ -60,12 +50,7 @@ void *malloc(size_t nbytes);
  * 		
  * 		\return Description.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa free malloc()
  *
  */
 void *realloc(void *ap, size_t size);

@@ -1,7 +1,7 @@
 /**
  *	\file shMemory.h
  *
- *		\brief Brief.
+ *		\brief The shared memory IPC module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -23,19 +23,14 @@
 /**
  * \fn int shmget(key_t key, int size)
  *
- * 		\brief Brief.
+ * 		\brief Gets a new shared memory with the given key and size.
  *
- * 		\param key ParamBrief.
- * 		\param size ParamBrief.
+ * 		\param key The key for the shared memory segment.
+ * 		\param size The shared memory size.
  * 		
- * 		\return Description.
+ * 		\return The id of the shared memory on success, -1 on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa shmat() shmdt()
  *
  */
 int shmget(key_t key, int size);
@@ -43,19 +38,14 @@ int shmget(key_t key, int size);
 /**
  * \fn char * shmat(int shmid, key_t *semid)
  *
- * 		\brief Brief.
+ * 		\brief Attaches the current process to the shmid shared memory.
  *
- * 		\param shmid ParamBrief.
- * 		\param semid ParamBrief.
+ * 		\param shmid The id of the shared memory segment.
+ * 		\param semid A pointer to a key_t variable where to store the shared memory inner semaphore id.
  * 		
- * 		\return Description.
+ * 		\return A pointer to the shared memory space.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa shmget() shmdt()
  *
  */
 char * shmat(int shmid, key_t *semid);
@@ -63,18 +53,13 @@ char * shmat(int shmid, key_t *semid);
 /**
  * \fn int shmdt(int shmid)
  *
- * 		\brief Brief.
+ * 		\brief Detaches the current process form the shmid shared memory segment.
  *
- * 		\param shmid ParamBrief.
+ * 		\param shmid The id of the shared memory segment.
  * 		
- * 		\return Description.
+ * 		\return 0 on success, -1 on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa shmget() shmat()
  *
  */
 int shmdt(int shmid);
@@ -82,14 +67,7 @@ int shmdt(int shmid);
 /**
  * \fn void initializeShMems()
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief Initializes all the shared memories.
  *
  */
 void initializeShMems();

@@ -1,7 +1,7 @@
 /**
  *	\file kernel.h
  *
- *		\brief Brief.
+ *		\brief Kernel header file.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -14,7 +14,7 @@
 #include "kc.h"
 #include "system.h"
 #include "int_handlers.h"
-#include "config.h"
+#include "types.h"
 #include "stdio.h"
 #include "string.h"
 #include "video_driver.h"

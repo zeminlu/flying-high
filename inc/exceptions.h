@@ -15,22 +15,11 @@
 #include "kc.h"
 #include "ttys.h"
 
-/*
- *	Loads all the exception handlers
- *	into the IDT.
- */
 /**
  * \fn void loadExceptionHandlers()
  *
- * 		\brief Load the handler of the exception that
+ * 		\brief Loads the handler of the exception that
  *				was produced.
- *
- * 		Use:
- * 		\code
- *			
- *		\endcode
- *
- * 		\sa
  *
  */
 void loadExceptionHandlers();

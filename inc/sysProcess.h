@@ -1,7 +1,7 @@
 /**
  *	\file sysProcess.h
  *
- *		\brief Brief.
+ *		\brief OS system utilities.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -24,14 +24,7 @@
 /**
  * \fn void forceMultitasker()
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief Forces the call to the multitasker.
  *
  */
 void forceMultitasker();
@@ -39,16 +32,9 @@ void forceMultitasker();
 /**
  * \fn int isMTActivated()
  *
- * 		\brief Brief.
+ * 		\brief Checks wether the multitasker is activated or not.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return True if it's activated, False if not.
  *
  */
 int isMTActivated();
@@ -56,18 +42,13 @@ int isMTActivated();
 /**
  * \fn int initMultitasker(pfunc_t init)
  *
- * 		\brief Brief.
+ * 		\brief Initializes the multitasker and creates the init process.
  *
- * 		\param init ParamBrief.
+ * 		\param init A pointer to the init function.
  * 		
- * 		\return Description.
+ * 		\return 0 on success, -1 on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa multitasker()
  *
  */
 int initMultitasker(pfunc_t init);
@@ -75,14 +56,9 @@ int initMultitasker(pfunc_t init);
 /**
  * \fn void sysSelfBlock()
  *
- * 		\brief Brief.
+ * 		\brief Blocks the calling process.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sysUnblock()
  *
  */
 void sysSelfBlock();
@@ -90,18 +66,13 @@ void sysSelfBlock();
 /**
  * \fn int sysUnblock(pid_t pid)
  *
- * 		\brief Brief.
+ * 		\brief Unblocks the given pid process.
  *
- * 		\param pid ParamBrief.
+ * 		\param pid The pid of the process to be unlocked.
  * 		
- * 		\return Description.
+ * 		\return 0 on success, -1 on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sysSelfBlock()
  *
  */
 int sysUnblock(pid_t pid);
@@ -109,16 +80,11 @@ int sysUnblock(pid_t pid);
 /**
  * \fn void waitTty(tty_t tty)
  *
- * 		\brief Brief.
+ * 		\brief Blocks the calling process until it's tty is signaled.
  *
- * 		\param tty ParamBrief.
+ * 		\param tty The tty of the process to be blocked.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa signalTty()
  *
  */
 void waitTty(tty_t tty);
@@ -126,16 +92,11 @@ void waitTty(tty_t tty);
 /**
  * \fn void signalTty(tty_t tty)
  *
- * 		\brief Brief.
+ * 		\brief Signals the given tty so that any blocked process from it can be unblocked.
  *
- * 		\param tty ParamBrief.
+ * 		\param tty The tty to be signaled.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa waitTty()
  *
  */
 void signalTty(tty_t tty);
@@ -143,34 +104,20 @@ void signalTty(tty_t tty);
 /**
  * \fn void terminate(pid_t pid, int status)
  *
- * 		\brief Brief.
+ * 		\brief Terminates the given process with the given status.
  *
- * 		\param pid ParamBrief.
- * 		\param status ParamBrief.
+ * 		\param pid The pid number from the process to be terminated.
+ * 		\param status The status upon which the process is being terminated.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
  */
 void terminate(pid_t pid, int status);
 
 /**
  * \fn process_t *getProcessTable(void)
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the OS process table.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return A pointer to the OS process table.
  *
  */
 process_t *getProcessTable(void);
@@ -178,18 +125,11 @@ process_t *getProcessTable(void);
 /**
  * \fn char *getProcessName(pid_t pid)
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the given pid process name.
  *
- * 		\param pid ParamBrief.
+ * 		\param pid The pid from the process who's name to be retrieven.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The process' name.
  *
  */
 char *getProcessName(pid_t pid);
@@ -197,14 +137,9 @@ char *getProcessName(pid_t pid);
 /**
  * \fn void refreshProcessesCPUs()
  *
- * 		\brief Brief.
+ * 		\brief Refreshes the process comsumption of every process.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa clearProcessesTicks()
  *
  */
 void refreshProcessesCPUs();
@@ -212,14 +147,9 @@ void refreshProcessesCPUs();
 /**
  * \fn void clearProcessesTicks()
  *
- * 		\brief Brief.
+ * 		\brief Clears the current tickcount of every process.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa refreshProcesses()
  *
  */
 void clearProcessesTicks();

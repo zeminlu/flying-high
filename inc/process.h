@@ -1,7 +1,7 @@
 /**
  *	\file process.h
  *
- *		\brief Brief.
+ *		\brief All the process functions that invoke syscalls.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -38,16 +38,11 @@ void * memmap(int isKernel);
 /**
  * \fn pid_t getpid()
  *
- * 		\brief Brief.
+ * 		\brief Gets a pointer to the current process heap, or kernel heap.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\param isKernel TRUE if it's kernel, FALSE if normal process.
+ * 		
+ * 		\return A pointer to the heap space.
  *
  */
 pid_t getpid();
@@ -69,16 +64,18 @@ pid_t getpid();
  */
 pid_t getppid();
 
-tty_t getCurrentTTY();
 /**
- *	\fn pid_t createProcess(char *name, pfunc_t main, void *args)
+ *	\fn pid_t createProcess(char *name, pfunc_t main, void *args, int level)
  *		
  *		\brief Creates a new process into the system and sets
  *		it ready to run. The process will be created in unatomic
  *		mode(preemptive mode) and with tty -1.
+ *		
  *		\param name The process' name
  *		\param main The process' main function. Must Not Be NULL.
  *		\param args A pointer to an argument list.
+ *		\param level FOREGROUND or BACKGROUND.
+ *
  *		\return The new process' pid or -1 in case of error.
  *
  */
@@ -98,12 +95,12 @@ void exit(int status);
 /**
  * \fn tty_t setTty(pid_t pid, tty_t tty)
  *
- * 		\brief Brief.
+ * 		\brief Sets the given process tty id.
  *
- * 		\param pid ParamBrief.
- * 		\param tty ParamBrief.
+ * 		\param pid The process' pid who's tty id will be set.
+ * 		\param tty The tty id to be set.
  * 		
- * 		\return Description.
+ * 		\return 0 on success, -1 on error.
  *
  * 		Use:
  * 		\code
@@ -118,18 +115,13 @@ tty_t setTty(pid_t pid, tty_t tty);
 /**
  * \fn tty_t getTty(pid_t pid)
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the given process pid's tty.
  *
- * 		\param pid ParamBrief.
+ * 		\param pid The pid of the process.
  * 		
- * 		\return Description.
+ * 		\return The tty id.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa setTty()
  *
  */
 tty_t getTty(pid_t pid);
@@ -137,55 +129,38 @@ tty_t getTty(pid_t pid);
 /**
  * \fn tty_t setTTYFocusedProcess(pid_t pid, tty_t tty)
  *
- * 		\brief Brief.
+ * 		\brief Sets the given tty focused process with the given pid process.
  *
- * 		\param pid ParamBrief.
- * 		\param tty ParamBrief.
+ * 		\param pid The process to be set as focused process.
+ * 		\param tty The tty who's focused process will be set.
  * 		
- * 		\return Description.
+ * 		\return 0 on success, -1 on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa getTTYFocusedProcess()
  *
  */
 tty_t setTTYFocusedProcess(pid_t pid, tty_t tty);
 
 /**
- * \fn tty_t getTTYFocusedProcess(tty_t tty)
+ * \fn pid_t getTTYFocusedProcess(tty_t tty)
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the given tty focused process pid.
  *
- * 		\param tty ParamBrief.
+ * 		\param tty The tty id.
  * 		
- * 		\return Description.
+ * 		\return The pid of the tty focused process.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa setTTYFocusedProcess()
  *
  */
-tty_t getTTYFocusedProcess(tty_t tty);
+pid_t getTTYFocusedProcess(tty_t tty);
 
 /**
  * \fn pid_t getpid(void)
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the calling process' pid.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The calling process' pid.
  *
  */
 pid_t getpid(void);
@@ -193,18 +168,9 @@ pid_t getpid(void);
 /**
  * \fn pid_t getppid()
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the calling process' parent pid.
  *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The calling process' parent pid.
  *
  */
 pid_t getppid();
@@ -212,18 +178,13 @@ pid_t getppid();
 /**
  * \fn int wait(int *status)
  *
- * 		\brief Brief.
+ * 		\brief Blocks the calling process until a child returns.
  *
- * 		\param status ParamBrief.
+ * 		\param status A pointer where to store the return state of the child process.
  * 		
- * 		\return Description.
+ * 		\return Returns the pid of the child process that recently returned.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa waitpid()
  *
  */
 int wait(int *status);

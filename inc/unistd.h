@@ -74,20 +74,21 @@ ssize_t read ( int fileds, void * buffer, size_t count );
 /**
  * \fn size_t fread(FILE *stream, void * buffer, size_t count)
  *
- * 		\brief Brief.
+ * 		\brief Idem to the read() function, but from the given stream.
  *
- * 		\param stream ParamBrief.
- * 		\param buffer ParamBrief.
- * 		\param count ParamBrief.
+ * 		\param stream The stream where to read from.
+ * 		\param buffer A pointer to the buffer where the information is going to written.
+ * 		\param count Number of bytes that will be written in the buffeer from the file.
  * 		
- * 		\return Description.
+ * 		\return The amount of bytes that were successfully read from the file or -1 in case of error.
  *
  * 		Use:
  * 		\code
- *		
+ *			if ( read(stream, buffer, VIDEO_SIZE) != VIDEO_SIZE )
+ *					printf("Error: video memory could not be read\n");
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa fwrite()
  *
  */
 size_t fread(FILE *stream, void * buffer, size_t count);
@@ -95,20 +96,21 @@ size_t fread(FILE *stream, void * buffer, size_t count);
 /**
  * \fn size_t fwrite(FILE *stream, void * buffer, size_t count)
  *
- * 		\brief Brief.
+ * 		\brief Idem to the write() function, but to the given stream.
  *
- * 		\param stream ParamBrief.
- * 		\param buffer ParamBrief.
- * 		\param count ParamBrief.
+ * 		\param stream The stream where to write to.
+ *		\param buffer pointer to the buffer where the information to be written is hold.
+ * 		\param count number of bytes that will be written in the file from the buffer.
  * 		
- * 		\return Description.
+ * 		\return The amount of bytes that were successfully read from the file or -1 in case of error.
  *
  * 		Use:
  * 		\code
- *		
+ *			char * message = "Hello World!\n";
+ *			write(stream, (const void *)message, strlen(message));
  *		\endcode
  *
- * 		\sa f1() f2()
+ * 		\sa fread()
  *
  */
 size_t fwrite(FILE *stream, void * buffer, size_t count);

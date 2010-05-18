@@ -1,7 +1,7 @@
 /**
  *	\file shell.h
  *
- *		\brief
+ *		\brief The shell process module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -34,16 +34,9 @@ int shell ( void );
 /**
  * \fn int initGlobalDataShell(void)
  *
- * 		\brief Brief.
+ * 		\brief Initializes the data structures for the shells.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int initGlobalDataShell(void);

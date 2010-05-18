@@ -1,7 +1,7 @@
 /**
  *	\file int80.h
  *
- *		\brief Brief.
+ *		\brief int 80 generic calls.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -10,30 +10,17 @@
 #ifndef _INT80_H_
 #define _INT80_H_
 
-/*
- * Function: void * int80( int eax, void * ebx, void * ecx, void * edx)
- *	
- *		Description: copy to the processor registers the parameters
- *
- */
 /**
  * \fn void * int80( int eax, void * ebx, void * ecx, void * edx )
  *
- * 		\brief Brief.
+ * 		\brief copy the parameters to the processor registers.
  *
- * 		\param eax ParamBrief.
- * 		\param ebx ParamBrief.
- * 		\param ecx ParamBrief.
- * 		\param edx ParamBrief.
+ * 		\param eax eax register.
+ * 		\param ebx ebx register.
+ * 		\param ecx ecx register.
+ * 		\param edx edx register.
  * 		
- * 		\return Description.
-
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The value returned by the function that the int 80 invoked.
  *
  */
 void * int80( int eax, void * ebx, void * ecx, void * edx );
@@ -41,23 +28,16 @@ void * int80( int eax, void * ebx, void * ecx, void * edx );
 /**
  * \fn void * int80ext(int eax, void *ebx, void *ecx, void *edx, void *edi, void *esi)
  *
- * 		\brief Brief.
+ * 		\brief copy the parameters to the processor registers.
  *
- * 		\param eax ParamBrief.
- * 		\param ebx ParamBrief.
- * 		\param ecx ParamBrief.
- * 		\param edx ParamBrief.
- * 		\param edi ParamBrief.
- * 		\param esi ParamBrief.
+ * 		\param eax eax register.
+ * 		\param ebx ebx register.
+ * 		\param ecx ecx register.
+ * 		\param edx edx register.
+ * 		\param edi edi register.
+ * 		\param esi esi register.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The value returned by the function that the int 80 invoked.
  *
  */
 void * int80ext(int eax, void *ebx, void *ecx, void *edx, void *edi, void *esi); 

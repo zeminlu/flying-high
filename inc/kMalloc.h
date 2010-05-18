@@ -1,7 +1,7 @@
 /**
  *	\file kMalloc.h
  *
- *		\brief Brief.
+ *		\brief The kernel malloc module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -22,12 +22,7 @@
  *
  * 		\param ap ParamBrief.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa kMalloc() kRealloc()
  *
  */
 void kFree(void *ap);
@@ -41,12 +36,7 @@ void kFree(void *ap);
  * 		
  * 		\return Description.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa kFree() kRealloc()
  *
  */
 void *kMalloc(size_t nbytes);
@@ -61,12 +51,7 @@ void *kMalloc(size_t nbytes);
  * 		
  * 		\return Description.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa kFree() kMalloc()
  *
  */
 void *kRealloc(void *ap, size_t size);

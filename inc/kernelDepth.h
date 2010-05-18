@@ -1,7 +1,7 @@
 /**
  *	\file kernelDepth.h
  *
- *		\brief Brief.
+ *		\brief Kernel syscalls depth utilities.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -16,14 +16,10 @@
 /**
  * \fn void increaseKernelDepth(void)
  *
- * 		\brief Brief.
+ * 		\brief This function increases the depth relating to the iteration of system calls
+ *				maintaining the presence of the kernel heap pages.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa decreaseKernelDepth()
  *
  */
 void increaseKernelDepth(void);
@@ -31,14 +27,10 @@ void increaseKernelDepth(void);
 /**
  * \fn void decreaseKernelDepth(void)
  *
- * 		\brief Brief.
+ * 		\brief This function decreases the depth relating to the iteration of system calls
+ *				maintaining the presence of the kernel heap pages if needed.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa decreaseKernelDepth()
  *
  */
 void decreaseKernelDepth(void);

@@ -125,6 +125,7 @@ void top(char * args) {
 		putchar('-');
 	}
 	while(1){
+		asm volatile("hlt");
 		setProcessAtomicity(getpid(), ATOMIC);
 		refreshProcessesCPUs();
 		clearProcessesTicks();

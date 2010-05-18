@@ -40,8 +40,8 @@ tty_t setTTYFocusedProcess(pid_t pid, tty_t tty) {
 	return (tty_t)int80(_SYS_SET_TTY_FP, (void *)pid, (void *)tty, NULL);
 }
 
-tty_t getTTYFocusedProcess(tty_t tty) {
-	return (tty_t)int80(_SYS_GET_TTY_FP, (void *)tty, NULL, NULL);
+pid_t getTTYFocusedProcess(tty_t tty) {
+	return (pid_t)int80(_SYS_GET_TTY_FP, (void *)tty, NULL, NULL);
 }
 
 pid_t getpid(void) {

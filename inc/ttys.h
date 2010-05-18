@@ -1,7 +1,7 @@
 /**
  *	\file ttys.h
  *
- *		\brief Brief.
+ *		\brief The tty header file.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -22,7 +22,7 @@
 /**
  * \fn void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow)
  *
- * 		\brief This function obtain read pointers of the tty.
+ * 		\brief This function obtains read pointers of the tty.
  *
  * 		\param tty The tty where the function obtain the pointers
  * 		\param readPointer The position of the pointer where it is reading
@@ -35,7 +35,7 @@ void getReadPointer(tty_t tty, int *readPointer, int *readCol, int *readRow);
 /**
  * \fn void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow)
  *
- * 		\brief This function obtain writer pointers of the tty.
+ * 		\brief This function obtains writer pointers of the tty.
  *
  * 		\param tty The tty where the function obtain the pointers
  * 		\param writePointer The position of the pointer where it is writting
@@ -48,9 +48,9 @@ void getWritePointer(tty_t tty, int *writePointer, int *writeCol, int *writeRow)
 /**
  * \fn void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow)
  *
- * 		\brief This function save the read pointers of the tty that is indicated
- *				in the signature. This function is called when change the tty who
- *				is in focus, so it has to backup his pointer
+ * 		\brief This function saves the reads pointers of the tty that is indicated
+ *				in the signature. This function is called when change the tty that
+ *				is in focus, so it has to backup it's pointer
  *
  * 		\param tty The tty where the function save the pointers
  * 		\param readPointer The position of the pointer where it is reading
@@ -64,14 +64,14 @@ void setReadPointer(tty_t tty, int readPointer, int readCol, int readRow);
 /**
  * \fn void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow)
  *
- * 		\brief This function save the read pointers of the tty that is indicated
+ * 		\brief This function saves the reads pointers of the tty that is indicated
  *				in the signature. This function is called when change the tty who
  *				is in focus, so it has to backup his pointer
  *
  * 		\param tty The tty where the function save the pointers
- * 		\param readPointer The position of the pointer where it is writting
- * 		\param readCol The col position of the stdout where it is writting
- * 		\param readRow The row position of the stdout where it is writting
+ * 		\param writePointer The position of the pointer where it is writting
+ * 		\param writeCol The col position of the stdout where it is writting
+ * 		\param writeRow The row position of the stdout where it is writting
  *
  */
 void setWritePointer(tty_t tty, int writePointer, int writeCol, int writeRow);
@@ -163,7 +163,7 @@ int getFocusedTTY( void );
 /**
  * \fn int changeFocusTTY( tty_t nextTty )
  *
- * 		\brief This function change the tty focus id on
+ * 		\brief This function changes the tty focus id on
  *				the next Tty that has to be in focus. This function
  *				is called when the key that was pressed is between
  *				"F1" and "F7". Of every "F" key that was pressed, is put
@@ -192,8 +192,8 @@ int changeFocusTTY( tty_t nextTty );
 /**
  * \fn void refreshStdout(void)
  *
- * 		\brief Put all of character that are in the STDOUT and
- *			and put in the tty STDOUT who is in focus.
+ * 		\brief Pust all of character that are in the STDOUT and
+ *			and puts in the tty STDOUT who is in focus.
  *
  * 		Use:
  * 		\code
@@ -206,7 +206,7 @@ void refreshStdout(void);
 /**
  * \fn void refreshKeyboardBufferTTY( void )
  *
- * 		\brief Leave all of character that are in the KeyboradBuffer
+ * 		\brief Leaves all of character that are in the KeyboradBuffer
  *				and put in the correct tty stdout if the tty mode is
  *				CANONICAL, if not it prints directly in the STDIN of
  *				tty who is in focus. The timet tick is the responsible to
@@ -237,7 +237,7 @@ void refreshTTY(void);
 /**
  * \fn void sysSetTTYFocusedProcess(pid_t pid, tty_t tty)
  *
- * 		\brief Set the pid to the process which is in focus
+ * 		\brief Sets the pid to the process which is in focus
  *
  * 		\param pid The pid of the process
  * 		\param tty The tty where will be set the pid of the process
@@ -249,7 +249,7 @@ void sysSetTTYFocusedProcess(pid_t pid, tty_t tty);
 /**
  * \fn pid_t sysGetTTYFocusedProcess(tty_t tty)
  *
- * 		\brief Return the pid of the process that is in this tty
+ * 		\brief Returns the pid of the process that is in this tty
  *
  * 		\param tty The tty where it is saved the pid of the focus process
  * 		
@@ -268,7 +268,7 @@ void clearTTYScreen();
 /**
  * \fn void setTTYCursorPosition( int x, int y)
  *
- * 		\brief It set the cursor in an specific position of the
+ * 		\brief It sets the cursor in an specific position of the
  *				tty stdout.
  *
  * 		\param x The row of the stdout
@@ -281,7 +281,7 @@ void setTTYCursorPosition( int x, int y);
 /**
  * \fn void putTTYCharAtPosition( int c, int row, int col)
  *
- * 		\brief It put a character in a specific position of the
+ * 		\brief It puts a character in a specific position of the
  *				tty stdout. It prints the character at the position
  *				but it keeps the previous position.
  *

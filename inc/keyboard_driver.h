@@ -1,7 +1,7 @@
 /**
  *	\file keyboard_driver.h
  *
- *		\brief Brief.
+ *		\brief The keyboard driver module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -12,7 +12,7 @@
 
 #include "queue.h"
 #include "io.h"
-#include "config.h"
+#include "types.h"
 #include "ttys.h"
 
 /*
@@ -75,18 +75,11 @@ int ctrlIsPressed( void );
 
 
 /**
- * \fn int getRepetition(void )
+ * \fn int getRepetition(void)
  *
- * 		\brief Brief.
+ * 		\brief Gets the actual repetition interval.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The actual repetition interval.
  *
  */
 int getRepetition(void );
@@ -95,17 +88,10 @@ int getRepetition(void );
 /**
  * \fn void setRepetition(int newRep)
  *
- * 		\brief Brief.
+ * 		\brief Sets the repetition interval.
  *
- * 		\param newRep ParamBrief.
+ * 		\param newRep The new repetition value.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
  */
 void setRepetition(int newRep);
 

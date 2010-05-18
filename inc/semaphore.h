@@ -1,7 +1,7 @@
 /**
  *	\file semaphore.h
  *
- *		\brief Brief.
+ *		\brief The OS semaphore module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -22,18 +22,13 @@
 /**
  * \fn key_t sem_get(int mode)
  *
- * 		\brief Brief.
+ * 		\brief Gets a semaphore for the given mode.
  *
- * 		\param mode ParamBrief.
+ * 		\param mode Block or Wait modes.
  * 		
- * 		\return Description.
+ * 		\return The key of the semaphore.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sem_free()
  *
  */
 key_t sem_get(int mode);
@@ -41,16 +36,11 @@ key_t sem_get(int mode);
 /**
  * \fn void sem_free( key_t semid )
  *
- * 		\brief Brief.
+ * 		\brief Frees up the given semid semaphore.
  *
- * 		\param semid ParamBrief.
+ * 		\param semid The id of the semaphore.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sem_get()
  *
  */
 void sem_free( key_t semid );
@@ -58,18 +48,11 @@ void sem_free( key_t semid );
 /**
  * \fn void sem_wait( key_t sem )
  *
- * 		\brief Brief.
+ * 		\brief Waits for the semaphore to be available..
  *
- * 		\param sem ParamBrief.
+ * 		\param sem The semaphore id.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sem_signal()
  *
  */
 void sem_wait( key_t sem );
@@ -77,16 +60,11 @@ void sem_wait( key_t sem );
 /**
  * \fn void sem_signal( key_t sem )
  *
- * 		\brief Brief.
+ * 		\brief Signals the given semaphore to enable it for other users.
  *
- * 		\param sem ParamBrief.
+ * 		\param sem The semaphore id.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sem_free()
  *
  */
 void sem_signal( key_t sem );
@@ -94,14 +72,7 @@ void sem_signal( key_t sem );
 /**
  * \fn void initializeSemaphores()
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief Initializes all semaphores.
  *
  */
 void initializeSemaphores();

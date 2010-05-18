@@ -1,7 +1,7 @@
 /**
  *	\file queue.h
  *
- *		\brief Brief.
+ *		\brief Keyboard queue module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -10,13 +10,8 @@
 #ifndef _QUEUE_H_
 #define _QUEUE_H_
 
-/*
- *	\file queue.h
- *	\author Guido Marucci Blas, Luciano Zemin & Nicolas Purita
- *
- */
 #include "keyboard_buffer.h"
-#include "defs.h"
+#include "types.h"
 /*
  * Define Section
  */
@@ -26,9 +21,9 @@
  */
 
 /**
- * 	\fn void charEnque ( keycode elem )
+ * 	\fn void charEnque ( Keycode elem )
  *
- * 	\param keycode 	This function receive the ASCII code of the key to enqueue in the buffer.
+ * 	\param elem	This function receive the ASCII code of the key to enqueue in the buffer.
  *
  * 	\return	TRUE if the key was added or FALSE if the buffer is FULL
  */
