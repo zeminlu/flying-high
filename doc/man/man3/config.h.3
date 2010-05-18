@@ -1,0 +1,320 @@
+.TH "inc/config.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/config.h \- 
+.PP
+OS configuration defines.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'colors.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSCREEN_WIDTH\fP   80"
+.br
+.RI "\fIThe width of the screen. \fP"
+.ti -1c
+.RI "#define \fBSCREEN_HEIGTH\fP   25"
+.br
+.RI "\fIThe height of the screen. \fP"
+.ti -1c
+.RI "#define \fBSCREEN_SIZE\fP   SCREEN_WIDTH * SCREEN_HEIGTH"
+.br
+.RI "\fIReal screen size without color attribute. \fP"
+.ti -1c
+.RI "#define \fBVIDEO_MEMORY_SIZE\fP   SCREEN_SIZE * 2"
+.br
+.RI "\fIReal screen size with color attributes. \fP"
+.ti -1c
+.RI "#define \fBCURSOR_START_COL\fP   0"
+.br
+.RI "\fIThe starter column position. \fP"
+.ti -1c
+.RI "#define \fBCURSOR_START_ROW\fP   0"
+.br
+.RI "\fIThe starter row position. \fP"
+.ti -1c
+.RI "#define \fBVIDEO_TAB_STOP\fP   4"
+.br
+.RI "\fIThe spaces that tab prints. \fP"
+.ti -1c
+.RI "#define \fBVIDEO_VTAB_STOP\fP   4"
+.br
+.RI "\fIThe vertical tab spaces. \fP"
+.ti -1c
+.RI "#define \fBCURSOR_START_VISIBLE\fP   1"
+.br
+.RI "\fIThe state of the cursor, Visible = 1 v NotVisible = 0. \fP"
+.ti -1c
+.RI "#define \fBVIDEO_COLOR\fP   setColor(BLACK, WHITE)"
+.br
+.RI "\fISet color of letters and screen. \fP"
+.ti -1c
+.RI "#define \fBKEYBOARD_REPETITION\fP   3"
+.br
+.RI "\fIThe amount of key press repetitions. \fP"
+.ti -1c
+.RI "#define \fBENABLED\fP   1"
+.br
+.RI "\fIEnabled cursor. \fP"
+.ti -1c
+.RI "#define \fBDISABLED\fP   0"
+.br
+.RI "\fIDisabled cursor. \fP"
+.ti -1c
+.RI "#define \fBMILISECONDS_PER_TICK\fP   55"
+.br
+.RI "\fIThe amount of miliseconds per tick. \fP"
+.ti -1c
+.RI "#define \fBTICKS_PER_SECOND\fP   18"
+.br
+.RI "\fIThe amount of ticks in one second. \fP"
+.ti -1c
+.RI "#define \fBSTD_TTY\fP   0"
+.br
+.ti -1c
+.RI "#define \fBMAX_PROCESS\fP   32"
+.br
+.RI "\fIThe maximum amount of process. \fP"
+.ti -1c
+.RI "#define \fBMAX_CHILDS\fP   MAX_PROCESS - 1"
+.br
+.RI "\fIThe maximum amount of childs that a process could have. \fP"
+.ti -1c
+.RI "#define \fBMAX_PROCESS_NAME\fP   36"
+.br
+.RI "\fIThe maximum length of process name. \fP"
+.ti -1c
+.RI "#define \fBMAX_PRIORITIES\fP   4"
+.br
+.RI "\fIThe amount of priority that the system accept. \fP"
+.ti -1c
+.RI "#define \fBMAX_TTY\fP   8"
+.br
+.RI "\fIThe maximum amount of ttys. \fP"
+.ti -1c
+.RI "#define \fBMAX_FILES\fP   2"
+.br
+.RI "\fIThe maximum amount of files. \fP"
+.ti -1c
+.RI "#define \fBPAGES_PER_FRAME\fP   8"
+.br
+.RI "\fIThe amount of pages per frame. \fP"
+.ti -1c
+.RI "#define \fBKERNEL_HEAP_PAGES_QTY\fP   10"
+.br
+.RI "\fIThe amount of pages that the kernel has in his heap. \fP"
+.ti -1c
+.RI "#define \fBMAX_LINE\fP   100"
+.br
+.RI "\fIThe length of the shell buffer. \fP"
+.ti -1c
+.RI "#define \fBALARM\fP   '\\a'"
+.br
+.RI "\fIThe alarm control ascii value. \fP"
+.ti -1c
+.RI "#define \fBBACKSPACE\fP   '\\b'"
+.br
+.RI "\fIThe backspace control ascii value. \fP"
+.ti -1c
+.RI "#define \fBLINE_FEED\fP   '\\f'"
+.br
+.RI "\fIThe line feed control ascii value. \fP"
+.ti -1c
+.RI "#define \fBNEW_LINE\fP   '\\n'"
+.br
+.RI "\fIThe new line control ascii value. \fP"
+.ti -1c
+.RI "#define \fBRETURN\fP   '\\r'"
+.br
+.RI "\fIThe return control ascii value. \fP"
+.ti -1c
+.RI "#define \fBTAB\fP   '\\t'"
+.br
+.RI "\fIThe tabular control ascii value. \fP"
+.ti -1c
+.RI "#define \fBVTAB\fP   '\\v'"
+.br
+.RI "\fIThe vertical tab control ascii value. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+OS configuration defines. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBconfig.h\fP.
+.SH "Define Documentation"
+.PP 
+.SS "#define ALARM   '\\a'"
+.PP
+The alarm control ascii value. 
+.PP
+Definition at line 155 of file config.h.
+.SS "#define BACKSPACE   '\\b'"
+.PP
+The backspace control ascii value. 
+.PP
+Definition at line 160 of file config.h.
+.SS "#define CURSOR_START_COL   0"
+.PP
+The starter column position. 
+.PP
+Definition at line 43 of file config.h.
+.SS "#define CURSOR_START_ROW   0"
+.PP
+The starter row position. 
+.PP
+Definition at line 48 of file config.h.
+.SS "#define CURSOR_START_VISIBLE   1"
+.PP
+The state of the cursor, Visible = 1 v NotVisible = 0. 
+.PP
+Definition at line 63 of file config.h.
+.SS "#define DISABLED   0"
+.PP
+Disabled cursor. 
+.PP
+Definition at line 83 of file config.h.
+.SS "#define ENABLED   1"
+.PP
+Enabled cursor. 
+.PP
+Definition at line 78 of file config.h.
+.SS "#define KERNEL_HEAP_PAGES_QTY   10"
+.PP
+The amount of pages that the kernel has in his heap. 
+.PP
+Definition at line 140 of file config.h.
+.SS "#define KEYBOARD_REPETITION   3"
+.PP
+The amount of key press repetitions. 
+.PP
+Definition at line 73 of file config.h.
+.SS "#define LINE_FEED   '\\f'"
+.PP
+The line feed control ascii value. 
+.PP
+Definition at line 165 of file config.h.
+.SS "#define MAX_CHILDS   MAX_PROCESS - 1"
+.PP
+The maximum amount of childs that a process could have. 
+.PP
+Definition at line 108 of file config.h.
+.SS "#define MAX_FILES   2"
+.PP
+The maximum amount of files. 
+.PP
+Definition at line 128 of file config.h.
+.SS "#define MAX_LINE   100"
+.PP
+The length of the shell buffer. 
+.PP
+Definition at line 149 of file config.h.
+.SS "#define MAX_PRIORITIES   4"
+.PP
+The amount of priority that the system accept. 
+.PP
+Definition at line 118 of file config.h.
+.SS "#define MAX_PROCESS   32"
+.PP
+The maximum amount of process. 
+.PP
+Definition at line 103 of file config.h.
+.SS "#define MAX_PROCESS_NAME   36"
+.PP
+The maximum length of process name. 
+.PP
+Definition at line 113 of file config.h.
+.SS "#define MAX_TTY   8"
+.PP
+The maximum amount of ttys. 
+.PP
+Definition at line 123 of file config.h.
+.SS "#define MILISECONDS_PER_TICK   55"
+.PP
+The amount of miliseconds per tick. 
+.PP
+Definition at line 88 of file config.h.
+.SS "#define NEW_LINE   '\\n'"
+.PP
+The new line control ascii value. 
+.PP
+Definition at line 170 of file config.h.
+.SS "#define PAGES_PER_FRAME   8"
+.PP
+The amount of pages per frame. 
+.PP
+Definition at line 133 of file config.h.
+.SS "#define RETURN   '\\r'"
+.PP
+The return control ascii value. 
+.PP
+Definition at line 175 of file config.h.
+.SS "#define SCREEN_HEIGTH   25"
+.PP
+The height of the screen. 
+.PP
+Definition at line 28 of file config.h.
+.SS "#define SCREEN_SIZE   SCREEN_WIDTH * SCREEN_HEIGTH"
+.PP
+Real screen size without color attribute. 
+.PP
+Definition at line 33 of file config.h.
+.SS "#define SCREEN_WIDTH   80"
+.PP
+The width of the screen. 
+.PP
+Definition at line 23 of file config.h.
+.SS "#define STD_TTY   0"
+.PP
+Definition at line 98 of file config.h.
+.SS "#define TAB   '\\t'"
+.PP
+The tabular control ascii value. 
+.PP
+Definition at line 180 of file config.h.
+.SS "#define TICKS_PER_SECOND   18"
+.PP
+The amount of ticks in one second. 
+.PP
+Definition at line 93 of file config.h.
+.SS "#define VIDEO_COLOR   setColor(BLACK, WHITE)"
+.PP
+Set color of letters and screen. 
+.PP
+Definition at line 68 of file config.h.
+.SS "#define VIDEO_MEMORY_SIZE   SCREEN_SIZE * 2"
+.PP
+Real screen size with color attributes. 
+.PP
+Definition at line 38 of file config.h.
+.SS "#define VIDEO_TAB_STOP   4"
+.PP
+The spaces that tab prints. 
+.PP
+Definition at line 53 of file config.h.
+.SS "#define VIDEO_VTAB_STOP   4"
+.PP
+The vertical tab spaces. 
+.PP
+Definition at line 58 of file config.h.
+.SS "#define VTAB   '\\v'"
+.PP
+The vertical tab control ascii value. 
+.PP
+Definition at line 185 of file config.h.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

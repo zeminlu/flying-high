@@ -1,0 +1,129 @@
+.TH "inc/pQueueP.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/pQueueP.h \- 
+.PP
+The priority queue module.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'string.h'\fP
+.br
+\fC#include 'stdio.h'\fP
+.br
+\fC#include 'sysProcess.h'\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBpQueueCDT\fP * \fBpQueueADT\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpQueueADT\fP \fBnewPQueue\fP (void(*freeFn)(void *), void *(*cpyFn)(void *))"
+.br
+.RI "\fIThis function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_ priorities. It receives the function to copy an element and free an element. \fP"
+.ti -1c
+.RI "void \fBfreePQueue\fP (\fBpQueueADT\fP queue)"
+.br
+.RI "\fIThis function frees the whole pQueue. \fP"
+.ti -1c
+.RI "int \fBenque\fP (\fBpQueueADT\fP queue, void *data, int priority)"
+.br
+.RI "\fIThis function enque the element in the correct priority node and it will be added at last of the list. \fP"
+.ti -1c
+.RI "void * \fBdeque\fP (\fBpQueueADT\fP queue)"
+.br
+.RI "\fIThis function return the first element of the queue. After you call to deque, if the proccess doesn't finish you must enque again the control block, if not you don't do anything. \fP"
+.ti -1c
+.RI "int \fBisEmpty\fP (\fBpQueueADT\fP queue)"
+.br
+.RI "\fIThis function the amount of proccess that are in the priority queue. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The priority queue module. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBpQueueP.h\fP.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBpQueueCDT\fP* \fBpQueueADT\fP"
+.PP
+Definition at line 20 of file pQueueP.h.
+.SH "Function Documentation"
+.PP 
+.SS "void * deque (\fBpQueueADT\fP queue)"
+.PP
+This function return the first element of the queue. After you call to deque, if the proccess doesn't finish you must enque again the control block, if not you don't do anything. .PP
+.nf
+                   pQueue * queue;
+                        int     data = 10, ret;
+
+                        queue = newPQueue();
+                        enque( (void*)(&data) );
+                        ret = *((int *)deque(queue));
+.fi
+.PP
+ 
+.PP
+Definition at line 146 of file pQueueP.c.
+.SS "int enque (\fBpQueueADT\fP queue, void * data, int priority)"
+.PP
+This function enque the element in the correct priority node and it will be added at last of the list. .PP
+.nf
+                      pQueue * queue;
+                        int data = 9;
+                        queue = newPQueue();
+                        ...
+                        enque(queue, (void*)(&data) );
+.fi
+.PP
+ 
+.PP
+Definition at line 120 of file pQueueP.c.
+.SS "void freePQueue (\fBpQueueADT\fP queue)"
+.PP
+This function frees the whole pQueue. .PP
+.nf
+                   ...
+                        freePQueue( queue );
+                        ...
+.fi
+.PP
+ 
+.PP
+Definition at line 98 of file pQueueP.c.
+.SS "int isEmpty (\fBpQueueADT\fP queue)"
+.PP
+This function the amount of proccess that are in the priority queue. 
+.PP
+Definition at line 167 of file pQueueP.c.
+.SS "\fBpQueueADT\fP newPQueue (void(*)(void *) freeFn, void *(*)(void *) cpyFn)"
+.PP
+This function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_ priorities. It receives the function to copy an element and free an element. .PP
+.nf
+               
+                pQueue * queue;
+                queue = newPQueue();
+.fi
+.PP
+ 
+.PP
+Definition at line 71 of file pQueueP.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

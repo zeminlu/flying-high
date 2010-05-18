@@ -1,0 +1,53 @@
+.TH "inc/int_handlers.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/int_handlers.h \- 
+.PP
+Declarations of all interrupt handlers.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_int_08_handler\fP (void)"
+.br
+.RI "\fIThis function handles the timer tick interrupt. \fP"
+.ti -1c
+.RI "void \fB_int_80_handler\fP (void)"
+.br
+.RI "\fIThis function handles the kernel system calls. Posible system calls: _SYS_WRITE _SYS_READ This rutine must be load into the IDT in the position 0x80. \fP"
+.ti -1c
+.RI "void \fB_int_09_handler\fP (void)"
+.br
+.RI "\fIThis function handles the keyboard interrupt. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Declarations of all interrupt handlers. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBint_handlers.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void _int_08_handler (void)"
+.PP
+This function handles the timer tick interrupt. 
+.SS "void _int_09_handler (void)"
+.PP
+This function handles the keyboard interrupt. 
+.SS "void _int_80_handler (void)"
+.PP
+This function handles the kernel system calls. Posible system calls: _SYS_WRITE _SYS_READ This rutine must be load into the IDT in the position 0x80. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

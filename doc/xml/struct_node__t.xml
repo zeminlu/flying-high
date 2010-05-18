@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="struct_node__t" kind="struct" prot="public">
+    <compoundname>Node_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_node__t_1a735984d41155bc1032e09bece8f8d66d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="15" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="15" bodyend="-1"/>
+        <referencedby refid="p_queue_p_8c_1a7ee3c5c51cd1398ff0bc2006d32a8fe8" compoundref="p_queue_p_8c" startline="51" endline="69">printQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_node__t_1a5e58c48351200ad246d4db491634433c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_node__t" kindref="compound">Node_t</ref> *</type>
+        <definition>struct Node_t* next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="16" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="16" bodyend="-1"/>
+        <referencedby refid="p_queue_p_8c_1a2c853f35b6e0b2adc7626d27013638d6" compoundref="p_queue_p_8c" startline="98" endline="118">freePQueue</referencedby>
+        <referencedby refid="p_queue_p_8c_1a7ee3c5c51cd1398ff0bc2006d32a8fe8" compoundref="p_queue_p_8c" startline="51" endline="69">printQueue</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="84">
+        <label>Node_t</label>
+        <link refid="struct_node__t"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="19" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="19" bodyend="22"/>
+    <listofallmembers>
+      <member refid="struct_node__t_1a735984d41155bc1032e09bece8f8d66d" prot="public" virt="non-virtual"><scope>Node_t</scope><name>data</name></member>
+      <member refid="struct_node__t_1a5e58c48351200ad246d4db491634433c" prot="public" virt="non-virtual"><scope>Node_t</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

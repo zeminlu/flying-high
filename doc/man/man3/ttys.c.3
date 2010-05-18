@@ -1,0 +1,423 @@
+.TH "src/ttys.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ttys.c \- 
+.PP
+The tty module implementation.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ttys.h'\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void(* \fBvideoParser\fP )(void)"
+.br
+.ti -1c
+.RI "typedef void(* \fBprintFunctions\fP )(int, \fBtty_t\fP)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitializeTTY\fP (void)"
+.br
+.RI "\fICreate the table of ttys. The maximum of ttys is a define. \fP"
+.ti -1c
+.RI "void \fBgetReadPointer\fP (\fBtty_t\fP tty, int *readPointer, int *readCol, int *readRow)"
+.br
+.RI "\fIThis function obtains read pointers of the tty. \fP"
+.ti -1c
+.RI "void \fBgetWritePointer\fP (\fBtty_t\fP tty, int *writePointer, int *writeCol, int *writeRow)"
+.br
+.RI "\fIThis function obtains writer pointers of the tty. \fP"
+.ti -1c
+.RI "void \fBsetReadPointer\fP (\fBtty_t\fP tty, int readPointer, int readCol, int readRow)"
+.br
+.RI "\fIThis function saves the reads pointers of the tty that is indicated in the signature. This function is called when change the tty that is in focus, so it has to backup it's pointer. \fP"
+.ti -1c
+.RI "void \fBsetWritePointer\fP (\fBtty_t\fP tty, int writePointer, int writeCol, int writeRow)"
+.br
+.RI "\fIThis function saves the reads pointers of the tty that is indicated in the signature. This function is called when change the tty who is in focus, so it has to backup his pointer. \fP"
+.ti -1c
+.RI "void \fBputsTTY\fP (unsigned char *name, int count, \fBtty_t\fP tty)"
+.br
+.RI "\fIThis function prints a string in a specific tty. It checks if it has to print only in the tty or in stdin too. It called to putCharTTy while the length of the string was grater than 0. \fP"
+.ti -1c
+.RI "void \fBputCharTTY\fP (char c, \fBtty_t\fP tty, int inStdIn)"
+.br
+.RI "\fIIt prints only one character in specific tty. It verifies if the character is a control key or it belongs to the ASCII table. It checks if the tty is what are in focus, so it has to put the character in stdin buffer. \fP"
+.ti -1c
+.RI "int \fBgetFocusedTTY\fP (void)"
+.br
+.RI "\fIThis function returns the tty id of tty that are in focus at this moment. It is a system called. \fP"
+.ti -1c
+.RI "void \fBrefreshKeyboardBufferTTY\fP (void)"
+.br
+.RI "\fILeaves all of character that are in the KeyboradBuffer and put in the correct tty stdout if the tty mode is CANONICAL, if not it prints directly in the STDIN of tty who is in focus. The timet tick is the responsible to call this function. \fP"
+.ti -1c
+.RI "int \fBchangeFocusTTY\fP (\fBtty_t\fP nextTty)"
+.br
+.RI "\fIThis function changes the tty focus id on the next Tty that has to be in focus. This function is called when the key that was pressed is between 'F1' and 'F7'. Of every 'F' key that was pressed, is put a value between 0x81 and 0x87. The number of the 'F' key + 0x80. \fP"
+.ti -1c
+.RI "void \fBrefreshStdout\fP (void)"
+.br
+.RI "\fIPust all of character that are in the STDOUT and and puts in the tty STDOUT who is in focus. \fP"
+.ti -1c
+.RI "void \fBrefreshTTY\fP (void)"
+.br
+.RI "\fIThis functions check if the proccess if different of init and the running process has a valid pid, it only refreshes the stdout. \fP"
+.ti -1c
+.RI "void \fBsysSetTTYFocusedProcess\fP (\fBpid_t\fP pid, \fBtty_t\fP tty)"
+.br
+.RI "\fISets the pid to the process which is in focus. \fP"
+.ti -1c
+.RI "\fBpid_t\fP \fBsysGetTTYFocusedProcess\fP (\fBtty_t\fP tty)"
+.br
+.RI "\fIReturns the pid of the process that is in this tty. \fP"
+.ti -1c
+.RI "void \fBclearTTYScreen\fP ()"
+.br
+.RI "\fIIt clears the stdout of the tty that is in focus. \fP"
+.ti -1c
+.RI "void \fBsetTTYCursorPosition\fP (int x, int y)"
+.br
+.RI "\fIIt sets the cursor in an specific position of the tty stdout. \fP"
+.ti -1c
+.RI "void \fBputTTYCharAtPosition\fP (int c, int row, int col)"
+.br
+.RI "\fIIt puts a character in a specific position of the tty stdout. It prints the character at the position but it keeps the previous position. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "unsigned char \fBvideoBuffer\fP [VIDEO_MEMORY_SIZE]"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP \fBprocessTable\fP [MAX_PROCESS]"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBrunningProcess\fP"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBinitProcess\fP"
+.br
+.ti -1c
+.RI "\fBKeycode\fP * \fBkeyboardBuffer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The tty module implementation. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBttys.c\fP.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void(* \fBprintFunctions\fP)(int, \fBtty_t\fP)"
+.PP
+Definition at line 14 of file ttys.c.
+.SS "typedef void(* \fBvideoParser\fP)(void)"
+.PP
+Definition at line 12 of file ttys.c.
+.SH "Function Documentation"
+.PP 
+.SS "int changeFocusTTY (\fBtty_t\fP nextTty)"
+.PP
+This function changes the tty focus id on the next Tty that has to be in focus. This function is called when the key that was pressed is between 'F1' and 'F7'. Of every 'F' key that was pressed, is put a value between 0x81 and 0x87. The number of the 'F' key + 0x80. \fBParameters:\fP
+.RS 4
+\fInextTty\fP Next tty id
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 if the next tty id is the current tty id in focus, 0 if it has changed the focus.
+.RE
+.PP
+Use: 
+.PP
+.nf
+                     unsigned int c;
+                        while( !isEmptyKBBuffer() ){
+                                c = deQueue();
+                                ...
+                                if ( c >= 0x81 && c <= 0x87 )
+                                        changeFocusTTY( c - 0x81 );
+
+.fi
+.PP
+ 
+.PP
+Definition at line 516 of file ttys.c.
+.SS "void clearTTYScreen ()"
+.PP
+It clears the stdout of the tty that is in focus. 
+.PP
+Definition at line 563 of file ttys.c.
+.SS "int getFocusedTTY (void)"
+.PP
+This function returns the tty id of tty that are in focus at this moment. It is a system called. \fBReturns:\fP
+.RS 4
+The id of tty that is in focus
+.RE
+.PP
+Use: 
+.PP
+.nf
+                        int tty;
+                        tty = getFocusedTTY();
+                        putCharTTY( 'a', tty, TRUE );
+                        ...
+
+.fi
+.PP
+ 
+.PP
+Definition at line 471 of file ttys.c.
+.SS "void getReadPointer (\fBtty_t\fP tty, int * readPointer, int * readCol, int * readRow)"
+.PP
+This function obtains read pointers of the tty. \fBParameters:\fP
+.RS 4
+\fItty\fP The tty where the function obtain the pointers 
+.br
+\fIreadPointer\fP The position of the pointer where it is reading 
+.br
+\fIreadCol\fP The col position of the stdout where it is reading 
+.br
+\fIreadRow\fP The row position of the stdout where it is reading 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file ttys.c.
+.SS "void getWritePointer (\fBtty_t\fP tty, int * writePointer, int * writeCol, int * writeRow)"
+.PP
+This function obtains writer pointers of the tty. \fBParameters:\fP
+.RS 4
+\fItty\fP The tty where the function obtain the pointers 
+.br
+\fIwritePointer\fP The position of the pointer where it is writting 
+.br
+\fIwriteCol\fP The col position of the stdout where it is writting 
+.br
+\fIwriteRow\fP The row position of the stdout where it is writting 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file ttys.c.
+.SS "void initializeTTY (void)"
+.PP
+Create the table of ttys. The maximum of ttys is a define. Use: 
+.PP
+.nf
+                  ...
+                        initializeTTY();
+                        ...
+
+.fi
+.PP
+ 
+.PP
+Definition at line 50 of file ttys.c.
+.SS "void putCharTTY (char c, \fBtty_t\fP tty, int inStdIn)"
+.PP
+It prints only one character in specific tty. It verifies if the character is a control key or it belongs to the ASCII table. It checks if the tty is what are in focus, so it has to put the character in stdin buffer. \fBParameters:\fP
+.RS 4
+\fIc\fP The chacter to be printed 
+.br
+\fItty\fP The tty id where has to be printed 
+.br
+\fIinStdIn\fP If it has to print in Stdin or not
+.RE
+.PP
+Use: 
+.PP
+.nf
+                        char *string = 'System';
+                        while( *string != NULL )
+                                putCharTTY(*string++, tty, (TRUE v FALSE) ):
+
+.fi
+.PP
+ 
+.PP
+Definition at line 458 of file ttys.c.
+.SS "void putsTTY (unsigned char * name, int count, \fBtty_t\fP tty)"
+.PP
+This function prints a string in a specific tty. It checks if it has to print only in the tty or in stdin too. It called to putCharTTy while the length of the string was grater than 0. \fBParameters:\fP
+.RS 4
+\fIname\fP The string to print 
+.br
+\fIcount\fP The size of the string 
+.br
+\fItty\fP The tty id where has to be printed the string
+.RE
+.PP
+Use: 
+.PP
+.nf
+                      char *string = 'test';
+                        ...
+                        putsTTY(string);
+                        ...
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBputCharTTY\fP 
+.RE
+.PP
+
+.PP
+Definition at line 451 of file ttys.c.
+.SS "void putTTYCharAtPosition (int c, int row, int col)"
+.PP
+It puts a character in a specific position of the tty stdout. It prints the character at the position but it keeps the previous position. \fBParameters:\fP
+.RS 4
+\fIc\fP The character to be printed 
+.br
+\fIrow\fP The row where has to be printed 
+.br
+\fIcol\fP The column where has to be printed 
+.RE
+.PP
+
+.PP
+Definition at line 602 of file ttys.c.
+.SS "void refreshKeyboardBufferTTY (void)"
+.PP
+Leaves all of character that are in the KeyboradBuffer and put in the correct tty stdout if the tty mode is CANONICAL, if not it prints directly in the STDIN of tty who is in focus. The timet tick is the responsible to call this function. Use: 
+.PP
+.nf
+                       ...
+                        call Scheculer
+                        call refreshKeyboardBufferTTY
+                        ...
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+f1() f2() 
+.RE
+.PP
+
+.PP
+Definition at line 487 of file ttys.c.
+.SS "void refreshStdout (void)"
+.PP
+Pust all of character that are in the STDOUT and and puts in the tty STDOUT who is in focus. Use: 
+.PP
+.nf
+
+.fi
+.PP
+ 
+.PP
+Definition at line 529 of file ttys.c.
+.SS "void refreshTTY (void)"
+.PP
+This functions check if the proccess if different of init and the running process has a valid pid, it only refreshes the stdout. 
+.PP
+Definition at line 539 of file ttys.c.
+.SS "void setReadPointer (\fBtty_t\fP tty, int readPointer, int readCol, int readRow)"
+.PP
+This function saves the reads pointers of the tty that is indicated in the signature. This function is called when change the tty that is in focus, so it has to backup it's pointer. \fBParameters:\fP
+.RS 4
+\fItty\fP The tty where the function save the pointers 
+.br
+\fIreadPointer\fP The position of the pointer where it is reading 
+.br
+\fIreadCol\fP The col position of the stdout where it is reading 
+.br
+\fIreadRow\fP The row position of the stdout where it is reading 
+.RE
+.PP
+
+.PP
+Definition at line 96 of file ttys.c.
+.SS "void setTTYCursorPosition (int x, int y)"
+.PP
+It sets the cursor in an specific position of the tty stdout. \fBParameters:\fP
+.RS 4
+\fIx\fP The row of the stdout 
+.br
+\fIy\fP The column of the stdout 
+.RE
+.PP
+
+.PP
+Definition at line 584 of file ttys.c.
+.SS "void setWritePointer (\fBtty_t\fP tty, int writePointer, int writeCol, int writeRow)"
+.PP
+This function saves the reads pointers of the tty that is indicated in the signature. This function is called when change the tty who is in focus, so it has to backup his pointer. \fBParameters:\fP
+.RS 4
+\fItty\fP The tty where the function save the pointers 
+.br
+\fIwritePointer\fP The position of the pointer where it is writting 
+.br
+\fIwriteCol\fP The col position of the stdout where it is writting 
+.br
+\fIwriteRow\fP The row position of the stdout where it is writting 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file ttys.c.
+.SS "\fBpid_t\fP sysGetTTYFocusedProcess (\fBtty_t\fP tty)"
+.PP
+Returns the pid of the process that is in this tty. \fBParameters:\fP
+.RS 4
+\fItty\fP The tty where it is saved the pid of the focus process 
+.RE
+.PP
+
+.PP
+Definition at line 558 of file ttys.c.
+.SS "void sysSetTTYFocusedProcess (\fBpid_t\fP pid, \fBtty_t\fP tty)"
+.PP
+Sets the pid to the process which is in focus. \fBParameters:\fP
+.RS 4
+\fIpid\fP The pid of the process 
+.br
+\fItty\fP The tty where will be set the pid of the process 
+.RE
+.PP
+
+.PP
+Definition at line 554 of file ttys.c.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBprocess_t\fP* \fBinitProcess\fP"
+.PP
+Definition at line 18 of file sysProcess.c.
+.SS "\fBKeycode\fP* \fBkeyboardBuffer\fP"
+.PP
+Definition at line 180 of file keyboard_driver.c.
+.SS "\fBprocess_t\fP \fBprocessTable\fP[MAX_PROCESS]"
+.PP
+Definition at line 14 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBrunningProcess\fP"
+.PP
+Definition at line 16 of file sysProcess.c.
+.SS "unsigned char \fBvideoBuffer\fP[VIDEO_MEMORY_SIZE]"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

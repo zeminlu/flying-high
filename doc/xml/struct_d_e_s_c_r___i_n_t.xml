@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="struct_d_e_s_c_r___i_n_t" kind="struct" prot="public">
+    <compoundname>DESCR_INT</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_e_s_c_r___i_n_t_1ad333e6d5d9cab6ad3726a313057c04b4" prot="public" static="no" mutable="no">
+        <type>word</type>
+        <definition>word offset_l</definition>
+        <argsstring></argsstring>
+        <name>offset_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="351" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="351" bodyend="-1"/>
+        <referencedby refid="libc_8c_1a35291f4e9b708f17a281f51aa524979c" compoundref="libc_8c" startline="42" endline="49">setup_IDT_entry</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___i_n_t_1a8abb596f01128e9ee829157242ac3275" prot="public" static="no" mutable="no">
+        <type>word</type>
+        <definition>word selector</definition>
+        <argsstring></argsstring>
+        <name>selector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="352" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="351" bodyend="-1"/>
+        <referencedby refid="libc_8c_1a35291f4e9b708f17a281f51aa524979c" compoundref="libc_8c" startline="42" endline="49">setup_IDT_entry</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___i_n_t_1a10e7734359849a8225562be7f834bf5e" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte cero</definition>
+        <argsstring></argsstring>
+        <name>cero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="353" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="353" bodyend="-1"/>
+        <referencedby refid="libc_8c_1a35291f4e9b708f17a281f51aa524979c" compoundref="libc_8c" startline="42" endline="49">setup_IDT_entry</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___i_n_t_1a7a3205f563ba31a30efd817ea54561fd" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte access</definition>
+        <argsstring></argsstring>
+        <name>access</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="354" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="353" bodyend="-1"/>
+        <referencedby refid="libc_8c_1a35291f4e9b708f17a281f51aa524979c" compoundref="libc_8c" startline="42" endline="49">setup_IDT_entry</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___i_n_t_1a95502551327cda03ecf9272bef03280e" prot="public" static="no" mutable="no">
+        <type>word</type>
+        <definition>word offset_h</definition>
+        <argsstring></argsstring>
+        <name>offset_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="355" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="355" bodyend="-1"/>
+        <referencedby refid="libc_8c_1a35291f4e9b708f17a281f51aa524979c" compoundref="libc_8c" startline="42" endline="49">setup_IDT_entry</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>OS interrupt descriptor struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="350" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="350" bodyend="356"/>
+    <listofallmembers>
+      <member refid="struct_d_e_s_c_r___i_n_t_1a7a3205f563ba31a30efd817ea54561fd" prot="public" virt="non-virtual"><scope>DESCR_INT</scope><name>access</name></member>
+      <member refid="struct_d_e_s_c_r___i_n_t_1a10e7734359849a8225562be7f834bf5e" prot="public" virt="non-virtual"><scope>DESCR_INT</scope><name>cero</name></member>
+      <member refid="struct_d_e_s_c_r___i_n_t_1a95502551327cda03ecf9272bef03280e" prot="public" virt="non-virtual"><scope>DESCR_INT</scope><name>offset_h</name></member>
+      <member refid="struct_d_e_s_c_r___i_n_t_1ad333e6d5d9cab6ad3726a313057c04b4" prot="public" virt="non-virtual"><scope>DESCR_INT</scope><name>offset_l</name></member>
+      <member refid="struct_d_e_s_c_r___i_n_t_1a8abb596f01128e9ee829157242ac3275" prot="public" virt="non-virtual"><scope>DESCR_INT</scope><name>selector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

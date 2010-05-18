@@ -1,0 +1,253 @@
+\hypertarget{schedule_8c}{
+\section{src/schedule.c File Reference}
+\label{schedule_8c}\index{src/schedule.c@{src/schedule.c}}
+}
+
+
+The OS scheduler module.  
+
+
+{\ttfamily \#include \char`\"{}schedule.h\char`\"{}}\par
+Include dependency graph for schedule.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{schedule_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} $\ast$ \hyperlink{schedule_8c_a3ff76a95775e3eb0e8609b1c67cb5014}{rpgSchedule} ()
+\begin{DoxyCompactList}\small\item\em This function simulates the RPG scheduling. What this algorithm does, is that when a process achieves the maximum value of RPG, it adds it to a queue. After that the functions just find the oldest process that is waiting to be attended. \item\end{DoxyCompactList}\item 
+\hyperlink{structprocess__t}{process\_\-t} $\ast$ \hyperlink{schedule_8c_a8c619ef4910f0dc6a31bbafbf167e792}{getNextTask} ()
+\begin{DoxyCompactList}\small\item\em This function returns the next task that should be attended. \item\end{DoxyCompactList}\item 
+int \hyperlink{schedule_8c_a29be8fb1ec9e43332002a4396b615094}{checkWhatAreReady} (void)
+\begin{DoxyCompactList}\small\item\em This function checks what processes are ready using the RPG Algorithim. \item\end{DoxyCompactList}\item 
+void \hyperlink{schedule_8c_a2b69bd69a28b34a5da0d299dcfe8765e}{increaseRPGCounter} ()
+\begin{DoxyCompactList}\small\item\em This function increases the current rpg value of each process. \item\end{DoxyCompactList}\item 
+void \hyperlink{schedule_8c_a70a005f86f52baf57148ad4074e37f2c}{changeAlgorithimSchedule} (void)
+\begin{DoxyCompactList}\small\item\em This function changes the Algorithm variable, if the current algorithm is RoundRobin it changes to RPG and viceversa. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} \hyperlink{schedule_8c_a9a676b8b31337abb6fcf49d5b41d5921}{processTable} \mbox{[}MAX\_\-PROCESS\mbox{]}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} $\ast$ \hyperlink{schedule_8c_aa4fe1fb513349b18bfc91787f615e57f}{nextProcess}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} $\ast$ \hyperlink{schedule_8c_a8f3d19e4d5dfc217f2a8bd0492856f32}{initProcess}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} $\ast$ \hyperlink{schedule_8c_ab7f4e33be6189512770d5aaa43bd03fe}{runningProcess}
+\item 
+int \hyperlink{schedule_8c_a9f730f3b3543bd94a38c0b82ecd15a5b}{qtyProccessTable}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The OS scheduler module. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{schedule_8c_source}{schedule.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{schedule_8c_a70a005f86f52baf57148ad4074e37f2c}{
+\index{schedule.c@{schedule.c}!changeAlgorithimSchedule@{changeAlgorithimSchedule}}
+\index{changeAlgorithimSchedule@{changeAlgorithimSchedule}!schedule.c@{schedule.c}}
+\subsubsection[{changeAlgorithimSchedule}]{\setlength{\rightskip}{0pt plus 5cm}void changeAlgorithimSchedule (void)}}
+\label{schedule_8c_a70a005f86f52baf57148ad4074e37f2c}
+
+
+This function changes the Algorithm variable, if the current algorithm is RoundRobin it changes to RPG and viceversa. 
+
+
+
+Definition at line 111 of file schedule.c.
+
+\hypertarget{schedule_8c_a29be8fb1ec9e43332002a4396b615094}{
+\index{schedule.c@{schedule.c}!checkWhatAreReady@{checkWhatAreReady}}
+\index{checkWhatAreReady@{checkWhatAreReady}!schedule.c@{schedule.c}}
+\subsubsection[{checkWhatAreReady}]{\setlength{\rightskip}{0pt plus 5cm}int checkWhatAreReady (void)}}
+\label{schedule_8c_a29be8fb1ec9e43332002a4396b615094}
+
+
+This function checks what processes are ready using the RPG Algorithim. 
+
+\begin{DoxyReturn}{Returns}
+the index of table process 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file schedule.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{schedule_8c_a29be8fb1ec9e43332002a4396b615094_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{schedule_8c_a8c619ef4910f0dc6a31bbafbf167e792}{
+\index{schedule.c@{schedule.c}!getNextTask@{getNextTask}}
+\index{getNextTask@{getNextTask}!schedule.c@{schedule.c}}
+\subsubsection[{getNextTask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t}$\ast$ getNextTask (void)}}
+\label{schedule_8c_a8c619ef4910f0dc6a31bbafbf167e792}
+
+
+This function returns the next task that should be attended. 
+
+\begin{DoxyReturn}{Returns}
+The next process
+\end{DoxyReturn}
+Use: 
+\begin{DoxyCode}
+                        changeContext(getNextTask());
+\end{DoxyCode}
+ 
+
+Definition at line 69 of file schedule.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{schedule_8c_a8c619ef4910f0dc6a31bbafbf167e792_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=118pt]{schedule_8c_a8c619ef4910f0dc6a31bbafbf167e792_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{schedule_8c_a2b69bd69a28b34a5da0d299dcfe8765e}{
+\index{schedule.c@{schedule.c}!increaseRPGCounter@{increaseRPGCounter}}
+\index{increaseRPGCounter@{increaseRPGCounter}!schedule.c@{schedule.c}}
+\subsubsection[{increaseRPGCounter}]{\setlength{\rightskip}{0pt plus 5cm}void increaseRPGCounter (void)}}
+\label{schedule_8c_a2b69bd69a28b34a5da0d299dcfe8765e}
+
+
+This function increases the current rpg value of each process. 
+
+
+
+Definition at line 97 of file schedule.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{schedule_8c_a2b69bd69a28b34a5da0d299dcfe8765e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{schedule_8c_a3ff76a95775e3eb0e8609b1c67cb5014}{
+\index{schedule.c@{schedule.c}!rpgSchedule@{rpgSchedule}}
+\index{rpgSchedule@{rpgSchedule}!schedule.c@{schedule.c}}
+\subsubsection[{rpgSchedule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t}$\ast$ rpgSchedule ()}}
+\label{schedule_8c_a3ff76a95775e3eb0e8609b1c67cb5014}
+
+
+This function simulates the RPG scheduling. What this algorithm does, is that when a process achieves the maximum value of RPG, it adds it to a queue. After that the functions just find the oldest process that is waiting to be attended. 
+
+\begin{DoxyReturn}{Returns}
+The process to be attended
+\end{DoxyReturn}
+Use: 
+\begin{DoxyCode}
+                        if( ALGORITHIM == RPG )
+                                return rpgSchedule();
+\end{DoxyCode}
+ 
+
+Definition at line 57 of file schedule.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{schedule_8c_a3ff76a95775e3eb0e8609b1c67cb5014_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{schedule_8c_a3ff76a95775e3eb0e8609b1c67cb5014_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{schedule_8c_a8f3d19e4d5dfc217f2a8bd0492856f32}{
+\index{schedule.c@{schedule.c}!initProcess@{initProcess}}
+\index{initProcess@{initProcess}!schedule.c@{schedule.c}}
+\subsubsection[{initProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t}$\ast$ {\bf initProcess}}}
+\label{schedule_8c_a8f3d19e4d5dfc217f2a8bd0492856f32}
+
+
+Definition at line 18 of file sysProcess.c.
+
+\hypertarget{schedule_8c_aa4fe1fb513349b18bfc91787f615e57f}{
+\index{schedule.c@{schedule.c}!nextProcess@{nextProcess}}
+\index{nextProcess@{nextProcess}!schedule.c@{schedule.c}}
+\subsubsection[{nextProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t}$\ast$ {\bf nextProcess}}}
+\label{schedule_8c_aa4fe1fb513349b18bfc91787f615e57f}
+
+
+Definition at line 20 of file sysProcess.c.
+
+\hypertarget{schedule_8c_a9a676b8b31337abb6fcf49d5b41d5921}{
+\index{schedule.c@{schedule.c}!processTable@{processTable}}
+\index{processTable@{processTable}!schedule.c@{schedule.c}}
+\subsubsection[{processTable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t} {\bf processTable}\mbox{[}MAX\_\-PROCESS\mbox{]}}}
+\label{schedule_8c_a9a676b8b31337abb6fcf49d5b41d5921}
+
+
+Definition at line 14 of file sysProcess.c.
+
+\hypertarget{schedule_8c_a9f730f3b3543bd94a38c0b82ecd15a5b}{
+\index{schedule.c@{schedule.c}!qtyProccessTable@{qtyProccessTable}}
+\index{qtyProccessTable@{qtyProccessTable}!schedule.c@{schedule.c}}
+\subsubsection[{qtyProccessTable}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf qtyProccessTable}}}
+\label{schedule_8c_a9f730f3b3543bd94a38c0b82ecd15a5b}
+
+
+Definition at line 30 of file sysProcess.c.
+
+\hypertarget{schedule_8c_ab7f4e33be6189512770d5aaa43bd03fe}{
+\index{schedule.c@{schedule.c}!runningProcess@{runningProcess}}
+\index{runningProcess@{runningProcess}!schedule.c@{schedule.c}}
+\subsubsection[{runningProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t}$\ast$ {\bf runningProcess}}}
+\label{schedule_8c_ab7f4e33be6189512770d5aaa43bd03fe}
+
+
+Definition at line 16 of file sysProcess.c.
+

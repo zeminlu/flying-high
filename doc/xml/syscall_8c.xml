@@ -1,0 +1,1463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="syscall_8c" kind="file">
+    <compoundname>syscall.c</compoundname>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <incdepgraph>
+      <node id="4494">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4473" relation="include">
+        </childnode>
+      </node>
+      <node id="4477">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4501">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4499" relation="include">
+        </childnode>
+      </node>
+      <node id="4483">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4473">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4498" relation="include">
+        </childnode>
+        <childnode refid="4492" relation="include">
+        </childnode>
+        <childnode refid="4502" relation="include">
+        </childnode>
+        <childnode refid="4485" relation="include">
+        </childnode>
+      </node>
+      <node id="4492">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4493" relation="include">
+        </childnode>
+        <childnode refid="4488" relation="include">
+        </childnode>
+      </node>
+      <node id="4481">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4480">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4481" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4474">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4475" relation="include">
+        </childnode>
+        <childnode refid="4476" relation="include">
+        </childnode>
+      </node>
+      <node id="4490">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4491" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+        <childnode refid="4480" relation="include">
+        </childnode>
+      </node>
+      <node id="4495">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4480" relation="include">
+        </childnode>
+        <childnode refid="4488" relation="include">
+        </childnode>
+        <childnode refid="4481" relation="include">
+        </childnode>
+        <childnode refid="4496" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4477" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+        <childnode refid="4493" relation="include">
+        </childnode>
+        <childnode refid="4497" relation="include">
+        </childnode>
+        <childnode refid="4492" relation="include">
+        </childnode>
+        <childnode refid="4500" relation="include">
+        </childnode>
+      </node>
+      <node id="4498">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4496">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4495" relation="include">
+        </childnode>
+        <childnode refid="4489" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4488">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4489" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4484">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4485" relation="include">
+        </childnode>
+        <childnode refid="4487" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4492" relation="include">
+        </childnode>
+        <childnode refid="4473" relation="include">
+        </childnode>
+        <childnode refid="4480" relation="include">
+        </childnode>
+        <childnode refid="4490" relation="include">
+        </childnode>
+        <childnode refid="4494" relation="include">
+        </childnode>
+        <childnode refid="4495" relation="include">
+        </childnode>
+      </node>
+      <node id="4489">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4502">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4498" relation="include">
+        </childnode>
+      </node>
+      <node id="4491">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+      </node>
+      <node id="4476">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4477" relation="include">
+        </childnode>
+      </node>
+      <node id="4485">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4486" relation="include">
+        </childnode>
+        <childnode refid="4488" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4487" relation="include">
+        </childnode>
+        <childnode refid="4484" relation="include">
+        </childnode>
+        <childnode refid="4473" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4481" relation="include">
+        </childnode>
+        <childnode refid="4490" relation="include">
+        </childnode>
+      </node>
+      <node id="4500">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4488" relation="include">
+        </childnode>
+        <childnode refid="4480" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+        <childnode refid="4501" relation="include">
+        </childnode>
+        <childnode refid="4499" relation="include">
+        </childnode>
+        <childnode refid="4494" relation="include">
+        </childnode>
+        <childnode refid="4485" relation="include">
+        </childnode>
+      </node>
+      <node id="4479">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4487">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4482">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4473" relation="include">
+        </childnode>
+        <childnode refid="4483" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4484" relation="include">
+        </childnode>
+      </node>
+      <node id="4486">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4487" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4499">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+      </node>
+      <node id="4472">
+        <label>src/syscall.c</label>
+        <link refid="syscall.c"/>
+        <childnode refid="4473" relation="include">
+        </childnode>
+      </node>
+      <node id="4478">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4480" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+      </node>
+      <node id="4493">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4491" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+      </node>
+      <node id="4475">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4497">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4497" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4487" relation="include">
+        </childnode>
+        <childnode refid="4484" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4473" relation="include">
+        </childnode>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+        <childnode refid="4488" relation="include">
+        </childnode>
+        <childnode refid="4498" relation="include">
+        </childnode>
+        <childnode refid="4485" relation="include">
+        </childnode>
+        <childnode refid="4481" relation="include">
+        </childnode>
+        <childnode refid="4491" relation="include">
+        </childnode>
+        <childnode refid="4480" relation="include">
+        </childnode>
+        <childnode refid="4492" relation="include">
+        </childnode>
+        <childnode refid="4490" relation="include">
+        </childnode>
+        <childnode refid="4495" relation="include">
+        </childnode>
+        <childnode refid="4489" relation="include">
+        </childnode>
+        <childnode refid="4477" relation="include">
+        </childnode>
+        <childnode refid="4493" relation="include">
+        </childnode>
+        <childnode refid="4499" relation="include">
+        </childnode>
+        <childnode refid="4494" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="syscall_8c_1ab7f4e33be6189512770d5aaa43bd03fe" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* runningProcess</definition>
+        <argsstring></argsstring>
+        <name>runningProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="12" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="syscall_8c_1aa4fe1fb513349b18bfc91787f615e57f" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* nextProcess</definition>
+        <argsstring></argsstring>
+        <name>nextProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="13" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="syscall_8c_1a8f3d19e4d5dfc217f2a8bd0492856f32" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* initProcess</definition>
+        <argsstring></argsstring>
+        <name>initProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="14" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="syscall_8c_1a9a676b8b31337abb6fcf49d5b41d5921" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref></type>
+        <definition>process_t processTable[MAX_PROCESS]</definition>
+        <argsstring>[MAX_PROCESS]</argsstring>
+        <name>processTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="15" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="syscall_8c_1a50403f70d039eb253c1be121d72a9c5a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tickCount</definition>
+        <argsstring></argsstring>
+        <name>tickCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="16" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="12" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a49625be8c1454120bf8cb73d3daaaa6b" compoundref="syscall_8c" startline="368" endline="370">_sys_uptime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="syscall_8c_1afc84b7d2ff99f8f8e6b24a411e4d090a" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct_f_i_l_e" kindref="compound">FILE</ref> *</type>
+        <definition>FILE* rFile</definition>
+        <argsstring></argsstring>
+        <name>rFile</name>
+        <initializer> NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="18" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="syscall_8c_1a0251fa8c38f32937e133a1a6f630d8f2" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct_f_i_l_e" kindref="compound">FILE</ref> *</type>
+        <definition>FILE* wFile</definition>
+        <argsstring></argsstring>
+        <name>wFile</name>
+        <initializer> NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="19" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="syscall_8c_1a4e14e480ef0c76ed52ff2c261e9d13cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void forceMultitasker</definition>
+        <argsstring>()</argsstring>
+        <name>forceMultitasker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="21"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1afc2f31b9cdf0257b115fba46e500086b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void returnAddress</definition>
+        <argsstring>()</argsstring>
+        <name>returnAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="22"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a4f29a1d3d430da59e5e319adc716fce6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* getKernelHeap</definition>
+        <argsstring>()</argsstring>
+        <name>getKernelHeap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="23" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="28" bodyend="30"/>
+        <referencedby refid="syscall_8c_1a1e28d369e9c25e4ba00e24439a35f92e" compoundref="syscall_8c" startline="110" endline="112">_sys_memmap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a66b9bb4354c792ee6c467874ceb30cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+        <definition>size_t _sys_write</definition>
+        <argsstring>(int fd, char *buffer, size_t n)</argsstring>
+        <name>_sys_write</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="26" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="25" bodyend="49"/>
+        <references refid="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" compoundref="defs_8h" startline="58">_WRITE</references>
+        <references refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="types_8h" startline="124">FILE::buffer</references>
+        <references refid="struct_f_i_l_e_1a7be887a2ca0a258cf6b368d32fd87487" compoundref="types_8h" startline="127">FILE::bufferSize</references>
+        <references refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" compoundref="types_8h" startline="152">process_t::files</references>
+        <references refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" compoundref="types_8h" startline="126">FILE::flag</references>
+        <references refid="config_8h_1a2c5eecb22513a88c24ae5831a3265e54" compoundref="config_8h" startline="128">MAX_FILES</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" compoundref="types_8h" startline="125">FILE::ptr</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a3a8140629b64c39fb34eb595b2d1cce2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+        <definition>size_t _sys_read</definition>
+        <argsstring>(int fd, char *buffer, size_t n)</argsstring>
+        <name>_sys_read</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="52" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="51" bodyend="84"/>
+        <references refid="defs_8h_1a8026e8d87908b0239264d643c90183f5" compoundref="defs_8h" startline="53">_READ</references>
+        <references refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="types_8h" startline="124">FILE::buffer</references>
+        <references refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" compoundref="types_8h" startline="152">process_t::files</references>
+        <references refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" compoundref="types_8h" startline="126">FILE::flag</references>
+        <references refid="config_8h_1a2c5eecb22513a88c24ae5831a3265e54" compoundref="config_8h" startline="128">MAX_FILES</references>
+        <references refid="string_8h_1aba088e716bccbc96d42da97e96316df1" compoundref="string_8c" startline="141" endline="152">memcpy</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" compoundref="types_8h" startline="125">FILE::ptr</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1ae971be1b1f3083cc169d587cfc39f1e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+        <definition>size_t _sys_fread</definition>
+        <argsstring>(FILE *stream, char *buffer, size_t n)</argsstring>
+        <name>_sys_fread</name>
+        <param>
+          <type><ref refid="struct_f_i_l_e" kindref="compound">FILE</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="86" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="86" bodyend="96"/>
+        <references refid="struct_f_i_l_e_1a6f8059414f0228f0256115e024eeed4b" compoundref="types_8h" startline="123">FILE::fd</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="unistd_8h_1a116146ccc01b751779e5351615743547">read</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a164efe2f95b7739dbe1af7970ae89054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+        <definition>size_t _sys_fwrite</definition>
+        <argsstring>(FILE *stream, char *buffer, size_t n)</argsstring>
+        <name>_sys_fwrite</name>
+        <param>
+          <type><ref refid="struct_f_i_l_e" kindref="compound">FILE</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="98" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="98" bodyend="108"/>
+        <references refid="struct_f_i_l_e_1a6f8059414f0228f0256115e024eeed4b" compoundref="types_8h" startline="123">FILE::fd</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424">write</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a1e28d369e9c25e4ba00e24439a35f92e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* _sys_memmap</definition>
+        <argsstring>(int isKernel)</argsstring>
+        <name>_sys_memmap</name>
+        <param>
+          <type>int</type>
+          <declname>isKernel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="110" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="110" bodyend="112"/>
+        <references refid="mem_module_8c_1a4f29a1d3d430da59e5e319adc716fce6" compoundref="mem_module_8c" startline="28" endline="30">getKernelHeap</references>
+        <references refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" compoundref="types_8h" startline="165">process_t::heap</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a13d5257c80be9824dd100a5d21a6b1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sysExit</definition>
+        <argsstring>(int status)</argsstring>
+        <name>_sysExit</name>
+        <param>
+          <type>int</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="114" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="114" bodyend="128"/>
+        <references refid="kasm_8h_1a38b31cfe95df07495ffe67cc0b6a9c5d">_Sti</references>
+        <references refid="kernel_depth_8h_1a12d75a01091aa2aef0b93c98f76b859d" compoundref="kernel_depth_8c" startline="23" endline="28">decreaseKernelDepth</references>
+        <references refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb">forceMultitasker</references>
+        <references refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="types_8h" startline="144">process_t::pid</references>
+        <references refid="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" compoundref="sys_process_8c" startline="203" endline="221">terminate</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a89ab7197bad2df3e2a84bf3aa2af68b5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createStackFrame</definition>
+        <argsstring>(process_t *process, pfunc_t main, int args)</argsstring>
+        <name>createStackFrame</name>
+        <param>
+          <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+          <declname>process</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" kindref="member">pfunc_t</ref></type>
+          <declname>main</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="130" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="130" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t _sys_create_process</definition>
+        <argsstring>(char *name, pfunc_t main, int args, int level)</argsstring>
+        <name>_sys_create_process</name>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" kindref="member">pfunc_t</ref></type>
+          <declname>main</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="160" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="160" bodyend="242"/>
+        <references refid="structheap_status_1aa6ddfc2b6fa7dd2f05f6226e7d41d3a2" compoundref="types_8h" startline="135">heapStatus::asigment</references>
+        <references refid="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" compoundref="types_8h" startline="169">process_t::atomicity</references>
+        <references refid="defs_8h_1a850b2f07a67b73890889e63fb8a49fda" compoundref="defs_8h" startline="133">BACKGROUND</references>
+        <references refid="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" compoundref="types_8h" startline="148">process_t::childs</references>
+        <references refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" compoundref="types_8h" startline="149">process_t::childsQty</references>
+        <references refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" compoundref="types_8h" startline="171">process_t::dataUmalloc</references>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" compoundref="defs_8h" startline="128">FOREGROUND</references>
+        <references refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" compoundref="mem_module_8c" startline="143" endline="153">getFrame</references>
+        <references refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" compoundref="types_8h" startline="146">process_t::gid</references>
+        <references refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" compoundref="types_8h" startline="165">process_t::heap</references>
+        <references refid="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" compoundref="types_8h" startline="168">process_t::hFrame</references>
+        <references refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" compoundref="types_8h" startline="158">process_t::level</references>
+        <references refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" compoundref="types_8h" startline="136">heapStatus::mallocMem</references>
+        <references refid="config_8h_1aca2d241a951204f1f8e2d905f162dcbe" compoundref="config_8h" startline="108">MAX_CHILDS</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="config_8h_1ad49d6c18040b4ee47b8db7a2aeccc960" compoundref="config_8h" startline="113">MAX_PROCESS_NAME</references>
+        <references refid="string_8h_1aba088e716bccbc96d42da97e96316df1" compoundref="string_8c" startline="141" endline="152">memcpy</references>
+        <references refid="string_8h_1a1dfdc55c5334154353963674598faf1b" compoundref="string_8c" startline="134" endline="139">memset</references>
+        <references refid="structprocess__t_1a69756b34768c5818fb406d341c9b3e74" compoundref="types_8h" startline="150">process_t::name</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" compoundref="defs_8h" startline="179">PAGE_SIZE</references>
+        <references refid="config_8h_1a072812a1bebf92b7d4e6c4321573b9a1" compoundref="config_8h" startline="133">PAGES_PER_FRAME</references>
+        <references refid="structprocess__t_1afa88d15da39ad6f87338267449baaa26" compoundref="types_8h" startline="167">process_t::pFrame</references>
+        <references refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="types_8h" startline="144">process_t::pid</references>
+        <references refid="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" compoundref="types_8h" startline="145">process_t::ppid</references>
+        <references refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" compoundref="types_8h" startline="157">process_t::priority</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <references refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" compoundref="mem_module_8c" startline="131" endline="141">setFramePresence</references>
+        <references refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" compoundref="types_8h" startline="166">process_t::sFrame</references>
+        <references refid="structprocess__t_1a51c991682921a9f2a4de5cf819c29f17" compoundref="types_8h" startline="160">process_t::sleepingPid</references>
+        <references refid="structprocess__t_1afc0da95553742561773d762fa905fdab" compoundref="types_8h" startline="164">process_t::stack</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <references refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" compoundref="string_8c" startline="76" endline="80">strlen</references>
+        <references refid="ttys_8h_1aca07223864f88814919b02e6729569a5" compoundref="ttys_8c" startline="554" endline="556">sysSetTTYFocusedProcess</references>
+        <references refid="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" compoundref="types_8h" startline="155">process_t::tickCounter</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+        <references refid="defs_8h_1a057b722e3d1168cf748c4936f59b7769" compoundref="defs_8h" startline="75">TTY_RAW</references>
+        <references refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" compoundref="types_8h" startline="170">process_t::ttyMode</references>
+        <references refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" compoundref="defs_8h" startline="123">UNATOMIC</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a1f10047dfd0af83a976fc552222e97b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+        <definition>tty_t _sys_get_tty</definition>
+        <argsstring>(pid_t pid)</argsstring>
+        <name>_sys_get_tty</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="244" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="244" bodyend="250"/>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1acc308801f66fe10b81fc915fe5d6897c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+        <definition>tty_t _sys_set_tty</definition>
+        <argsstring>(pid_t pid, tty_t tty)</argsstring>
+        <name>_sys_set_tty</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="252" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="252" bodyend="261"/>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1ac4f145ecb7886299279cb31af7a45474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t _sys_get_pid</definition>
+        <argsstring>()</argsstring>
+        <name>_sys_get_pid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="264" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="263" bodyend="266"/>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="types_8h" startline="144">process_t::pid</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a95a772ff88b957728418d0423a038508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t _sys_get_ppid</definition>
+        <argsstring>()</argsstring>
+        <name>_sys_get_ppid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="268" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="268" bodyend="270"/>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" compoundref="types_8h" startline="145">process_t::ppid</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1ac14fb5dbd2e3d3a7f897dc6b1546b6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t _sys_wait</definition>
+        <argsstring>(int *status)</argsstring>
+        <name>_sys_wait</name>
+        <param>
+          <type>int *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="272" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="272" bodyend="279"/>
+        <references refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb">forceMultitasker</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <references refid="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" compoundref="types_8h" startline="161">process_t::waitedStatus</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a2ab3b1e8acf4975677202367f5bb0c21" compoundref="types_8h" startline="222">WAITING_CHILD</references>
+        <references refid="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" compoundref="types_8h" startline="159">process_t::waitingPid</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_wait_pid</definition>
+        <argsstring>(pid_t pid, int *status)</argsstring>
+        <name>_sys_wait_pid</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="281" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="281" bodyend="291"/>
+        <references refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb">forceMultitasker</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="types_8h" startline="144">process_t::pid</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <references refid="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" compoundref="types_8h" startline="161">process_t::waitedStatus</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a61a718eb0f51f850ecc7985cba8b7c4b" compoundref="types_8h" startline="224">WAITING_PID</references>
+        <references refid="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" compoundref="types_8h" startline="159">process_t::waitingPid</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1ae899f7ec6cb314499b5eb7fe8458fcce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_kill</definition>
+        <argsstring>(int pid)</argsstring>
+        <name>_sys_kill</name>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="293" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="293" bodyend="321"/>
+        <references refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb">forceMultitasker</references>
+        <references refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" compoundref="types_8h" startline="146">process_t::gid</references>
+        <references refid="syscall_8h_1a85a3cf79d2a8eb3015056b14811f501c" compoundref="syscall_8h" startline="24">KILL_EXIT_STATUS</references>
+        <references refid="config_8h_1aca2d241a951204f1f8e2d905f162dcbe" compoundref="config_8h" startline="108">MAX_CHILDS</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" compoundref="sys_process_8c" startline="203" endline="221">terminate</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_set_tty_mode</definition>
+        <argsstring>(pid_t pid, int mode)</argsstring>
+        <name>_sys_set_tty_mode</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="323" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="323" bodyend="328"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <references refid="defs_8h_1afd70646efe5984e361c17010322a5711" compoundref="defs_8h" startline="80">TTY_CANONICAL</references>
+        <references refid="defs_8h_1a057b722e3d1168cf748c4936f59b7769" compoundref="defs_8h" startline="75">TTY_RAW</references>
+        <references refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" compoundref="types_8h" startline="170">process_t::ttyMode</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a621de44efbbfa68c7d41b5387ee6051b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_get_tty_mode</definition>
+        <argsstring>(pid_t pid)</argsstring>
+        <name>_sys_get_tty_mode</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="330" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="330" bodyend="335"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" compoundref="types_8h" startline="170">process_t::ttyMode</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a283b696c91d432182271488d8d283004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_set_level</definition>
+        <argsstring>(int level)</argsstring>
+        <name>_sys_set_level</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="337" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="337" bodyend="342"/>
+        <references refid="defs_8h_1a850b2f07a67b73890889e63fb8a49fda" compoundref="defs_8h" startline="133">BACKGROUND</references>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" compoundref="defs_8h" startline="128">FOREGROUND</references>
+        <references refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" compoundref="types_8h" startline="158">process_t::level</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a1a5bc45712097f96eb8f29f3c8556c5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_get_level</definition>
+        <argsstring>()</argsstring>
+        <name>_sys_get_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="344" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="344" bodyend="346"/>
+        <references refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" compoundref="types_8h" startline="158">process_t::level</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a7e35393170d01151feb237e45374a318" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_get_priority</definition>
+        <argsstring>()</argsstring>
+        <name>_sys_get_priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="348" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="348" bodyend="350"/>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" compoundref="types_8h" startline="157">process_t::priority</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1abbdd4d0db4fa440f5aa99bc25fa8b0e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_set_priority</definition>
+        <argsstring>(pid_t pid, int prio)</argsstring>
+        <name>_sys_set_priority</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="352" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="352" bodyend="360"/>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" compoundref="types_8h" startline="157">process_t::priority</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1aa5a5e27a93dadcc8686704a4415c9cec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned _sys_time</definition>
+        <argsstring>(void)</argsstring>
+        <name>_sys_time</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="362" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="362" bodyend="366"/>
+        <references refid="config_8h_1aec93c5a909c2d118cf88f1b9001b85a9" compoundref="config_8h" startline="88">MILISECONDS_PER_TICK</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" compoundref="types_8h" startline="155">process_t::tickCounter</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a49625be8c1454120bf8cb73d3daaaa6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned _sys_uptime</definition>
+        <argsstring>()</argsstring>
+        <name>_sys_uptime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="368" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="368" bodyend="370"/>
+        <references refid="syscall_8c_1a50403f70d039eb253c1be121d72a9c5a" compoundref="sys_process_8c" startline="12">tickCount</references>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a68c2809dae69574f9b706325264a0675" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_set_atomicity</definition>
+        <argsstring>(pid_t pid, int atomic)</argsstring>
+        <name>_sys_set_atomicity</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>atomic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c" line="372" bodyfile="/Users/Luciano/Desktop/flying-high/src/syscall.c" bodystart="372" bodyend="379"/>
+        <references refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" compoundref="defs_8h" startline="118">ATOMIC</references>
+        <references refid="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" compoundref="types_8h" startline="169">process_t::atomicity</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" compoundref="defs_8h" startline="123">UNATOMIC</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation off all system calls. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound" tooltip="Implementation of every system call.">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="stdio_8h_1ab7f4e33be6189512770d5aaa43bd03fe" kindref="member">runningProcess</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="schedule_8c_1aa4fe1fb513349b18bfc91787f615e57f" kindref="member">nextProcess</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="process_8c_1a8f3d19e4d5dfc217f2a8bd0492856f32" kindref="member">initProcess</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/><ref refid="bin_8c_1a83e1a7341d63e92cd3d1733f87176a88" kindref="member">processTable</ref>[<ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref>];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a50403f70d039eb253c1be121d72a9c5a" kindref="member">tickCount</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>*rFile<sp/>=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>*wFile<sp/>=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb" kindref="member" tooltip="Forces the call to the multitasker.">forceMultitasker</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1afc2f31b9cdf0257b115fba46e500086b" kindref="member">returnAddress</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="mem_module_8c_1a4f29a1d3d430da59e5e319adc716fce6" kindref="member">getKernelHeap</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="syscall_8c_1a66b9bb4354c792ee6c467874ceb30cb3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a66b9bb4354c792ee6c467874ceb30cb3" kindref="member">_sys_write</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n<sp/>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>file;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>fileBufferEnd;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>buffer<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>||<sp/>n<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>fd<sp/>&lt;<sp/>0<sp/>||<sp/>fd<sp/>&gt;=<sp/><ref refid="config_8h_1a2c5eecb22513a88c24ae5831a3265e54" kindref="member" tooltip="The maximum amount of files.">MAX_FILES</ref><sp/>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file<sp/>=<sp/>(wFile<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>*(runningProcess-&gt;<ref refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" kindref="member">files</ref>[fd])<sp/>:<sp/>*wFile;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>file.<ref refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>==<sp/>0<sp/>||<sp/>(file.<ref refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>&amp;<sp/><ref refid="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" kindref="member" tooltip="DefineBrief.">_WRITE</ref>)<sp/>!=<sp/><ref refid="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" kindref="member" tooltip="DefineBrief.">_WRITE</ref><sp/>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileBufferEnd<sp/>=<sp/>file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>+<sp/>file.<ref refid="struct_f_i_l_e_1a7be887a2ca0a258cf6b368d32fd87487" kindref="member">bufferSize</ref><sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>n<sp/>&amp;&amp;<sp/>file.<ref refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" kindref="member">ptr</ref><sp/>&lt;=<sp/>fileBufferEnd;<sp/>++i,<sp/>--n<sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(file.<ref refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" kindref="member">ptr</ref>++)<sp/>=<sp/>*buffer++;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wFile<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(runningProcess-&gt;<ref refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" kindref="member">files</ref>[fd])<sp/>=<sp/>file;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*wFile<sp/>=<sp/>file;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="syscall_8c_1a3a8140629b64c39fb34eb595b2d1cce2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a3a8140629b64c39fb34eb595b2d1cce2" kindref="member">_sys_read</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n<sp/>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>file;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>remaining;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>buffer<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>||<sp/>n<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>fd<sp/>&lt;<sp/>0<sp/>||<sp/>fd<sp/>&gt;=<sp/><ref refid="config_8h_1a2c5eecb22513a88c24ae5831a3265e54" kindref="member" tooltip="The maximum amount of files.">MAX_FILES</ref><sp/>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file<sp/>=<sp/>(rFile<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>*(runningProcess-&gt;<ref refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" kindref="member">files</ref>[fd])<sp/>:<sp/>*rFile;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>==<sp/>file.<ref refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" kindref="member">ptr</ref><sp/>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>file.<ref refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>==<sp/>0<sp/>||<sp/>(file.<ref refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>&amp;<sp/><ref refid="defs_8h_1a8026e8d87908b0239264d643c90183f5" kindref="member" tooltip="DefineBrief.">_READ</ref>)<sp/>!=<sp/><ref refid="defs_8h_1a8026e8d87908b0239264d643c90183f5" kindref="member" tooltip="DefineBrief.">_READ</ref><sp/>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>(i<sp/>&lt;<sp/>n)<sp/>&amp;&amp;<sp/>((file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>+<sp/>i)<sp/>&lt;<sp/>file.<ref refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" kindref="member">ptr</ref>);<sp/>++i<sp/>)<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[i]<sp/>=<sp/>file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>[i];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<sp/>i<sp/>&lt;<sp/>n<sp/>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file.<ref refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" kindref="member">ptr</ref><sp/>=<sp/>file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remaining<sp/>=<sp/>(file.<ref refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" kindref="member">ptr</ref><sp/>-<sp/>(file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="string_8h_1aba088e716bccbc96d42da97e96316df1" kindref="member" tooltip="The memcpy() function copies n bytes from memory area src to memory area dest. The...">memcpy</ref>(file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>+<sp/>i,<sp/>remaining);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file.<ref refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" kindref="member">ptr</ref><sp/>=<sp/>file.<ref refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>+<sp/>remaining;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rFile<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(runningProcess-&gt;<ref refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" kindref="member">files</ref>[fd])<sp/>=<sp/>file;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*rFile<sp/>=<sp/>file;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="syscall_8c_1ae971be1b1f3083cc169d587cfc39f1e4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1ae971be1b1f3083cc169d587cfc39f1e4" kindref="member">_sys_fread</ref>(<ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>*stream,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rFile<sp/>=<sp/>stream;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="unistd_8h_1a116146ccc01b751779e5351615743547" kindref="member" tooltip="read() reads &amp;quot;count&amp;quot; bytes from the file descripted by the file descriptor...">read</ref>(stream-&gt;<ref refid="struct_f_i_l_e_1a6f8059414f0228f0256115e024eeed4b" kindref="member">fd</ref>,<sp/>buffer,<sp/>n);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rFile<sp/>=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="syscall_8c_1a164efe2f95b7739dbe1af7970ae89054" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a164efe2f95b7739dbe1af7970ae89054" kindref="member">_sys_fwrite</ref>(<ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>*stream,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wFile<sp/>=<sp/>stream;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" kindref="member" tooltip="write() writes &amp;quot;count&amp;quot; bytes from the buffer pointed by &amp;quot;buffer&amp;quot;...">write</ref>(stream-&gt;<ref refid="struct_f_i_l_e_1a6f8059414f0228f0256115e024eeed4b" kindref="member">fd</ref>,<sp/>buffer,<sp/>n);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wFile<sp/>=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="syscall_8c_1a1e28d369e9c25e4ba00e24439a35f92e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="syscall_8c_1a1e28d369e9c25e4ba00e24439a35f92e" kindref="member">_sys_memmap</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isKernel){</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isKernel<sp/>?<sp/><ref refid="mem_module_8c_1a4f29a1d3d430da59e5e319adc716fce6" kindref="member">getKernelHeap</ref>()<sp/>:<sp/>runningProcess-&gt;<ref refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" kindref="member">heap</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="syscall_8c_1a13d5257c80be9824dd100a5d21a6b1de" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a13d5257c80be9824dd100a5d21a6b1de" kindref="member">_sysExit</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>signalTty(getFocusTTY());*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>runningProcess<sp/>==<sp/>initProcess<sp/>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" kindref="member" tooltip="Terminates the given process with the given status.">terminate</ref>(runningProcess-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref>,<sp/>status);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb" kindref="member" tooltip="Forces the call to the multitasker.">forceMultitasker</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kernel_depth_8h_1a12d75a01091aa2aef0b93c98f76b859d" kindref="member" tooltip="This function decreases the depth relating to the iteration of system calls maintaining...">decreaseKernelDepth</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1a38b31cfe95df07495ffe67cc0b6a9c5d" kindref="member" tooltip="Brief.">_Sti</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createStackFrame(<ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*process,<sp/><ref refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" kindref="member" tooltip="pfunc_t typedef.">pfunc_t</ref><sp/>main,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>*esp,<sp/>espPushedReg;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>*)(((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)process-&gt;<ref refid="structprocess__t_1afc0da95553742561773d762fa905fdab" kindref="member">stack</ref>)<sp/>+<sp/><ref refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" kindref="member" tooltip="DefineBrief.">PAGE_SIZE</ref><sp/>*<sp/><ref refid="config_8h_1a072812a1bebf92b7d4e6c4321573b9a1" kindref="member" tooltip="The amount of pages per frame.">PAGES_PER_FRAME</ref><sp/><sp/>-<sp/>4);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0x00000000;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0x00000000;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0x00000000;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>(unsigned)args;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>(unsigned)<ref refid="process_8h_1a55e99c539cf7723ec15e856b7e0a8cee" kindref="member" tooltip="This function terminates the calling process and status is returned to whom is waiting...">exit</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/><ref refid="syscall_8h_1a3fd26591847c2db5cc08d1ac4de05c6a" kindref="member">EFLAGS</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/><ref refid="kasm_8h_1ae933e936bb66cef841f7e5ea9733cc09" kindref="member" tooltip="Brief.">getCodeSegment</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>espPushedReg<sp/>=<sp/>(unsigned)esp;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>(unsigned)main;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0xAAAAAAAA;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0XCCCCCCCC;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0xDDDDDDDD;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0xBBBBBBBB;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>espPushedReg;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0x11111111;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0xEEEEEEEE;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>0xFFFFFFFF;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp--<sp/>=<sp/>(unsigned)<ref refid="syscall_8c_1afc2f31b9cdf0257b115fba46e500086b" kindref="member">returnAddress</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*esp<sp/>=<sp/><sp/>(unsigned)(esp<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a9a4b64202371e10f27f3769b73537182" kindref="member">esp</ref><sp/>=<sp/>esp<sp/>-<sp/><ref refid="syscall_8h_1a1b7f28c455e4ca2f9b02c8b4b5982d44" kindref="member">LOCAL_VARIABLES_SPACE</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a27f83ceda788165817cb18a475c91062" kindref="member">ebp</ref><sp/>=<sp/>esp;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" refkind="member"><highlight class="normal"><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" kindref="member">_sys_create_process</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" kindref="member" tooltip="pfunc_t typedef.">pfunc_t</ref><sp/>main,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>args,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>nameLen;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*process;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>main<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>level<sp/>!=<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref><sp/>&amp;&amp;<sp/>level<sp/>!=<sp/><ref refid="defs_8h_1a850b2f07a67b73890889e63fb8a49fda" kindref="member" tooltip="DefineBrief.">BACKGROUND</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>processTable[i].pid<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>==<sp/>MAX_PROCESS<sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process<sp/>=<sp/>&amp;processTable[i];</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>runningProcess-&gt;<ref refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" kindref="member">childsQty</ref><sp/>==<sp/><ref refid="config_8h_1aca2d241a951204f1f8e2d905f162dcbe" kindref="member" tooltip="The maximum amount of childs that a process could have.">MAX_CHILDS</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" kindref="member">sFrame</ref><sp/>=<sp/><ref refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" kindref="member" tooltip="Gets a free frame.">getFrame</ref>();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(process-&gt;<ref refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" kindref="member">sFrame</ref>,<sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1afa88d15da39ad6f87338267449baaa26" kindref="member">pFrame</ref><sp/>=<sp/><ref refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" kindref="member" tooltip="Gets a free frame.">getFrame</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(process-&gt;<ref refid="structprocess__t_1afa88d15da39ad6f87338267449baaa26" kindref="member">pFrame</ref>,<sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" kindref="member">hFrame</ref><sp/>=<sp/><ref refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" kindref="member" tooltip="Gets a free frame.">getFrame</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(process-&gt;<ref refid="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" kindref="member">hFrame</ref>,<sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1afc0da95553742561773d762fa905fdab" kindref="member">stack</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)(process-&gt;<ref refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" kindref="member">sFrame</ref>-&gt;address);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" kindref="member">heap</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)(process-&gt;<ref refid="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" kindref="member">hFrame</ref>-&gt;address);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runningProcess-&gt;<ref refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" kindref="member">childsQty</ref>++;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="config_8h_1aca2d241a951204f1f8e2d905f162dcbe" kindref="member" tooltip="The maximum amount of childs that a process could have.">MAX_CHILDS</ref>;<sp/>++j<sp/>)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>runningProcess-&gt;<ref refid="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" kindref="member">childs</ref>[j]<sp/>==<sp/>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runningProcess-&gt;<ref refid="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" kindref="member">childs</ref>[j]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" kindref="member">ppid</ref><sp/>=<sp/>(runningProcess<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>runningProcess-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref><sp/>:<sp/>i;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" kindref="member">gid</ref><sp/>=<sp/>(runningProcess<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>runningProcess-&gt;<ref refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" kindref="member">gid</ref><sp/>:<sp/>i;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" kindref="member">tty</ref><sp/>=<sp/>(runningProcess<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>runningProcess-&gt;<ref refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" kindref="member">tty</ref><sp/>:<sp/>-1;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref><sp/>=<sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" kindref="member">READY</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" kindref="member">atomicity</ref><sp/>=<sp/><ref refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" kindref="member" tooltip="DefineBrief.">UNATOMIC</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" kindref="member">level</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" kindref="member">priority</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" kindref="member">tickCounter</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a51c991682921a9f2a4de5cf819c29f17" kindref="member">sleepingPid</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_CHILDS;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" kindref="member">childs</ref>[i]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" kindref="member">childsQty</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<sp/>name<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="string_8h_1a1dfdc55c5334154353963674598faf1b" kindref="member" tooltip="The memset() function sets n bytes from the memory area dest with the value of c...">memset</ref>(process-&gt;<ref refid="structprocess__t_1a69756b34768c5818fb406d341c9b3e74" kindref="member">name</ref>,<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,<sp/><ref refid="config_8h_1ad49d6c18040b4ee47b8db7a2aeccc960" kindref="member" tooltip="The maximum length of process name.">MAX_PROCESS_NAME</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(nameLen<sp/>=<sp/><ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(name))<sp/>&gt;<sp/><ref refid="config_8h_1ad49d6c18040b4ee47b8db7a2aeccc960" kindref="member" tooltip="The maximum length of process name.">MAX_PROCESS_NAME</ref><sp/>)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nameLen<sp/>=<sp/><ref refid="config_8h_1ad49d6c18040b4ee47b8db7a2aeccc960" kindref="member" tooltip="The maximum length of process name.">MAX_PROCESS_NAME</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="string_8h_1aba088e716bccbc96d42da97e96316df1" kindref="member" tooltip="The memcpy() function copies n bytes from memory area src to memory area dest. The...">memcpy</ref>(process-&gt;<ref refid="structprocess__t_1a69756b34768c5818fb406d341c9b3e74" kindref="member">name</ref>,<sp/>name,<sp/>nameLen);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(process-&gt;<ref refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" kindref="member">sFrame</ref>,<sp/><ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createStackFrame(process,<sp/>main,<sp/>args);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(process-&gt;<ref refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" kindref="member">sFrame</ref>,<sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" kindref="member">ttyMode</ref><sp/>=<sp/><ref refid="defs_8h_1a057b722e3d1168cf748c4936f59b7769" kindref="member" tooltip="DefineBrief.">TTY_RAW</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(process-&gt;<ref refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" kindref="member">tty</ref><sp/>&gt;<sp/>-1<sp/>&amp;&amp;<sp/>runningProcess-&gt;<ref refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" kindref="member">level</ref><sp/>==<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>){</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1aca07223864f88814919b02e6729569a5" kindref="member" tooltip="Sets the pid to the process which is in focus.">sysSetTTYFocusedProcess</ref>(process-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref>,<sp/>process-&gt;<ref refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" kindref="member">tty</ref>);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>.<ref refid="structheap_status_1aa6ddfc2b6fa7dd2f05f6226e7d41d3a2" kindref="member">asigment</ref><sp/>=<sp/><ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>.<ref refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" kindref="member">mallocMem</ref>.allocp<sp/>=<sp/>process-&gt;<ref refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" kindref="member">heap</ref>;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>.<ref refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" kindref="member">mallocMem</ref>.address<sp/>=<sp/>process-&gt;<ref refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" kindref="member">heap</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process-&gt;<ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>.<ref refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" kindref="member">mallocMem</ref>.size<sp/>=<sp/><ref refid="config_8h_1a072812a1bebf92b7d4e6c4321573b9a1" kindref="member" tooltip="The amount of pages per frame.">PAGES_PER_FRAME</ref><sp/>*<sp/><ref refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" kindref="member" tooltip="DefineBrief.">PAGE_SIZE</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>process-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="syscall_8c_1a1f10047dfd0af83a976fc552222e97b0" refkind="member"><highlight class="normal"><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/><ref refid="syscall_8c_1a1f10047dfd0af83a976fc552222e97b0" kindref="member">_sys_get_tty</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>&gt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>||<sp/>pid<sp/>&lt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>processTable[pid].pid<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>processTable[pid].<ref refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" kindref="member">tty</ref>;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="syscall_8c_1acc308801f66fe10b81fc915fe5d6897c" refkind="member"><highlight class="normal"><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/><ref refid="syscall_8c_1acc308801f66fe10b81fc915fe5d6897c" kindref="member">_sys_set_tty</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid,<sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>&gt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>||<sp/>pid<sp/>&lt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>processTable[pid].pid<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable[pid].<ref refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" kindref="member">tty</ref><sp/>=<sp/>tty;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tty;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="syscall_8c_1ac4f145ecb7886299279cb31af7a45474" refkind="member"><highlight class="normal"><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="syscall_8c_1ac4f145ecb7886299279cb31af7a45474" kindref="member">_sys_get_pid</ref>()</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(runningProcess<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>runningProcess-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref>:-1;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="syscall_8c_1a95a772ff88b957728418d0423a038508" refkind="member"><highlight class="normal"><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="syscall_8c_1a95a772ff88b957728418d0423a038508" kindref="member">_sys_get_ppid</ref>(){</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(runningProcess<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>runningProcess-&gt;<ref refid="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" kindref="member">ppid</ref>:-1;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="syscall_8c_1ac14fb5dbd2e3d3a7f897dc6b1546b6bb" refkind="member"><highlight class="normal"><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="syscall_8c_1ac14fb5dbd2e3d3a7f897dc6b1546b6bb" kindref="member">_sys_wait</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*status)<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runningProcess-&gt;<ref refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref><sp/>=<sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a2ab3b1e8acf4975677202367f5bb0c21" kindref="member">WAITING_CHILD</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb" kindref="member" tooltip="Forces the call to the multitasker.">forceMultitasker</ref>();</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*status<sp/>=<sp/>runningProcess-&gt;<ref refid="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" kindref="member">waitedStatus</ref>;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>runningProcess-&gt;<ref refid="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" kindref="member">waitingPid</ref>;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" kindref="member">_sys_wait_pid</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*status)<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>&lt;<sp/>0<sp/>||<sp/>pid<sp/>&gt;=<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>||<sp/>status<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>||<sp/>processTable[pid].pid<sp/>==<sp/>-1<sp/>||<sp/>processTable[pid].ppid<sp/>!=<sp/>runningProcess-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref><sp/>)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runningProcess-&gt;<ref refid="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" kindref="member">waitingPid</ref><sp/>=<sp/>pid;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runningProcess-&gt;<ref refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref><sp/>=<sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a61a718eb0f51f850ecc7985cba8b7c4b" kindref="member">WAITING_PID</ref>;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb" kindref="member" tooltip="Forces the call to the multitasker.">forceMultitasker</ref>();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*status<sp/>=<sp/>runningProcess-&gt;<ref refid="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" kindref="member">waitedStatus</ref>;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pid;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="syscall_8c_1ae899f7ec6cb314499b5eb7fe8458fcce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1ae899f7ec6cb314499b5eb7fe8458fcce" kindref="member">_sys_kill</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pid)<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>gid;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>&gt;=<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>||<sp/>pid<sp/>&lt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gid<sp/>=<sp/>runningProcess-&gt;<ref refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" kindref="member">gid</ref>;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>processTable[i].gid<sp/>==<sp/>gid<sp/>)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" kindref="member" tooltip="Terminates the given process with the given status.">terminate</ref>(i,<sp/><ref refid="syscall_8h_1a85a3cf79d2a8eb3015056b14811f501c" kindref="member">KILL_EXIT_STATUS</ref>);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(processTable[pid].pid<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="config_8h_1aca2d241a951204f1f8e2d905f162dcbe" kindref="member" tooltip="The maximum amount of childs that a process could have.">MAX_CHILDS</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(processTable[pid].childs[i]<sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" kindref="member" tooltip="Terminates the given process with the given status.">terminate</ref>(processTable[pid].childs[i],<sp/><ref refid="syscall_8h_1a85a3cf79d2a8eb3015056b14811f501c" kindref="member">KILL_EXIT_STATUS</ref>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" kindref="member" tooltip="Terminates the given process with the given status.">terminate</ref>(pid,<sp/><ref refid="syscall_8h_1a85a3cf79d2a8eb3015056b14811f501c" kindref="member">KILL_EXIT_STATUS</ref>);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb" kindref="member" tooltip="Forces the call to the multitasker.">forceMultitasker</ref>();</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323" refid="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" kindref="member">_sys_set_tty_mode</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode)<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>&lt;<sp/>0<sp/>||<sp/>pid<sp/>&gt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>||<sp/>processTable[pid].pid<sp/>&lt;<sp/>0<sp/>||<sp/>(mode<sp/>!=<sp/><ref refid="defs_8h_1a057b722e3d1168cf748c4936f59b7769" kindref="member" tooltip="DefineBrief.">TTY_RAW</ref><sp/>&amp;&amp;<sp/>mode<sp/>!=<sp/><ref refid="defs_8h_1afd70646efe5984e361c17010322a5711" kindref="member" tooltip="DefineBrief.">TTY_CANONICAL</ref>))</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable[pid].<ref refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" kindref="member">ttyMode</ref><sp/>=<sp/>mode;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref>;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330" refid="syscall_8c_1a621de44efbbfa68c7d41b5387ee6051b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a621de44efbbfa68c7d41b5387ee6051b" kindref="member">_sys_get_tty_mode</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid)<sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>&lt;<sp/>0<sp/>||<sp/>pid<sp/>&gt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>||<sp/>processTable[pid].pid<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>processTable[pid].<ref refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" kindref="member">ttyMode</ref>;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337" refid="syscall_8c_1a283b696c91d432182271488d8d283004" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a283b696c91d432182271488d8d283004" kindref="member">_sys_set_level</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)<sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>level<sp/>!=<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref><sp/>||<sp/>level<sp/>!=<sp/><ref refid="defs_8h_1a850b2f07a67b73890889e63fb8a49fda" kindref="member" tooltip="DefineBrief.">BACKGROUND</ref><sp/>||<sp/>runningProcess<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/><sp/>)</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runningProcess-&gt;<ref refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" kindref="member">level</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="syscall_8c_1a1a5bc45712097f96eb8f29f3c8556c5f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a1a5bc45712097f96eb8f29f3c8556c5f" kindref="member">_sys_get_level</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(runningProcess<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)?runningProcess-&gt;<ref refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" kindref="member">level</ref>:-1;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348" refid="syscall_8c_1a7e35393170d01151feb237e45374a318" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a7e35393170d01151feb237e45374a318" kindref="member">_sys_get_priority</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(runningProcess<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)?runningProcess-&gt;<ref refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" kindref="member">priority</ref>:-1;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="syscall_8c_1abbdd4d0db4fa440f5aa99bc25fa8b0e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1abbdd4d0db4fa440f5aa99bc25fa8b0e9" kindref="member">_sys_set_priority</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prio<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pid<sp/>&lt;=<sp/>0<sp/>||<sp/>pid<sp/>&gt;=<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>processTable[pid].pid<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>prio<sp/>&lt;<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>processTable[pid].<ref refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" kindref="member">priority</ref><sp/>=<sp/>prio;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="syscall_8c_1aa5a5e27a93dadcc8686704a4415c9cec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1aa5a5e27a93dadcc8686704a4415c9cec" kindref="member">_sys_time</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(runningProcess<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>runningProcess-&gt;<ref refid="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" kindref="member">tickCounter</ref><sp/>*<sp/><ref refid="config_8h_1aec93c5a909c2d118cf88f1b9001b85a9" kindref="member" tooltip="The amount of miliseconds per tick.">MILISECONDS_PER_TICK</ref>;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="syscall_8c_1a49625be8c1454120bf8cb73d3daaaa6b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a49625be8c1454120bf8cb73d3daaaa6b" kindref="member">_sys_uptime</ref>(){</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a50403f70d039eb253c1be121d72a9c5a" kindref="member">tickCount</ref>;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372" refid="syscall_8c_1a68c2809dae69574f9b706325264a0675" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a68c2809dae69574f9b706325264a0675" kindref="member">_sys_set_atomicity</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>atomic){</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pid<sp/>&lt;<sp/>0<sp/>||<sp/>pid<sp/>&gt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>||<sp/>(atomic<sp/>!=<sp/><ref refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" kindref="member" tooltip="DefineBrief.">ATOMIC</ref><sp/>&amp;&amp;<sp/>atomic<sp/>!=<sp/><ref refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" kindref="member" tooltip="DefineBrief.">UNATOMIC</ref>)){</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable[pid].<ref refid="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" kindref="member">atomicity</ref><sp/>=<sp/>atomic;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/syscall.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$syscall_8c.html#ae899f7ec6cb314499b5eb7fe8458fcce" title="_sys_kill" alt="" coords="207,5,281,35"/>
+<area shape="rect" id="node5" href="$syscall_8c.html#ac14fb5dbd2e3d3a7f897dc6b1546b6bb" title="_sys_wait" alt="" coords="201,59,287,88"/>
+<area shape="rect" id="node7" href="$syscall_8c.html#a45dd6dc5a68765db7ee3300ad0349155" title="_sys_wait_pid" alt="" coords="188,112,300,141"/>
+<area shape="rect" id="node9" href="$syscall_8c.html#a13d5257c80be9824dd100a5d21a6b1de" title="_sysExit" alt="" coords="205,165,283,195"/>
+<area shape="rect" id="node11" href="$sys_process_8c.html#a1fd8ccd9bf174a1b3ff78daa2b87872d" title="Blocks the calling process." alt="" coords="192,219,296,248"/>
+<area shape="rect" id="node15" href="$sys_process_8c.html#a2cd7c071907edcb9f8151c8519d4b27e" title="Blocks the calling process until it&#39;s tty is signaled." alt="" coords="207,297,281,327"/>
+<area shape="rect" id="node13" href="$semaphore_8c.html#abada34c4103e3b6963caa4286ad82b4c" title="_sys_sem_wait" alt="" coords="349,205,472,235"/>
+<area shape="rect" id="node17" href="$bttlship_8c.html#a52e47768a66b91e89d5546a8cb0f168c" title="It&#39;s the main process of the battleship, it generates the whole table and ships..." alt="" coords="520,284,611,313"/>
+<area shape="rect" id="node19" href="$bttlship_8c.html#a4003a14058da5be60c7e7600713cd5c0" title="It obtains the the row and the column of the table from STDIN." alt="" coords="371,309,451,339"/>
+<area shape="rect" id="node22" href="$shell_8c.html#a225cd0af1ed8359b2973453e2a22a94b" title="The function that runs the shell application." alt="" coords="385,363,436,392"/>
+<area shape="rect" id="node24" href="$bin_8c.html#a5bfde7b5020b14bdcb1c9269ab308dc5" title="This functions initialize the welcome process, all the shells and goodbye process..." alt="" coords="544,363,587,392"/>
+<area shape="rect" id="node26" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="660,363,761,392"/>
+</map>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structstd_out_t_t_y" kind="struct" prot="public">
+    <compoundname>stdOutTTY</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structstd_out_t_t_y_1aef253d03c960d4ee76bc0f0f84236f8b" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref> *</type>
+        <definition>Keycode* stdOutBuffer</definition>
+        <argsstring></argsstring>
+        <name>stdOutBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="243" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="243" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structstd_out_t_t_y_1a07f2fe2975e6c3ee1e728566ec50cfab" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref> *</type>
+        <definition>Keycode* begin</definition>
+        <argsstring></argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="244" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstd_out_t_t_y_1a69c1bb32d9b06f32161aff7f1c822c97" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref> *</type>
+        <definition>Keycode* end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="245" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The tty stdout struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="242" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="242" bodyend="246"/>
+    <listofallmembers>
+      <member refid="structstd_out_t_t_y_1a07f2fe2975e6c3ee1e728566ec50cfab" prot="public" virt="non-virtual"><scope>stdOutTTY</scope><name>begin</name></member>
+      <member refid="structstd_out_t_t_y_1a69c1bb32d9b06f32161aff7f1c822c97" prot="public" virt="non-virtual"><scope>stdOutTTY</scope><name>end</name></member>
+      <member refid="structstd_out_t_t_y_1aef253d03c960d4ee76bc0f0f84236f8b" prot="public" virt="non-virtual"><scope>stdOutTTY</scope><name>stdOutBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

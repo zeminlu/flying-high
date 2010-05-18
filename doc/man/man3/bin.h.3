@@ -1,0 +1,245 @@
+.TH "inc/bin.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/bin.h \- 
+.PP
+All the OS processes.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'sysProcess.h'\fP
+.br
+\fC#include 'types.h'\fP
+.br
+\fC#include 'keyboard_buffer.h'\fP
+.br
+\fC#include 'sysProcess.h'\fP
+.br
+\fC#include 'string.h'\fP
+.br
+\fC#include 'syscall.h'\fP
+.br
+\fC#include 'memModule.h'\fP
+.br
+\fC#include 'process.h'\fP
+.br
+\fC#include 'video_driver.h'\fP
+.br
+\fC#include 'kasm.h'\fP
+.br
+\fC#include 'ttys.h'\fP
+.br
+\fC#include 'unistd.h'\fP
+.br
+\fC#include 'sysMalloc.h'\fP
+.br
+\fC#include 'stdio.h'\fP
+.br
+\fC#include 'schedule.h'\fP
+.br
+\fC#include 'kMalloc.h'\fP
+.br
+\fC#include 'shell.h'\fP
+.br
+\fC#include 'io.h'\fP
+.br
+\fC#include 'colors.h'\fP
+.br
+\fC#include 'uMalloc.h'\fP
+.br
+\fC#include 'semaphore.h'\fP
+.br
+\fC#include 'rand.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (void *args)"
+.br
+.RI "\fIThis functions initialize the welcome process, all the shells and goodbye process. If you kill the process init the system will be rebooted. \fP"
+.ti -1c
+.RI "void \fBtop\fP (char *args)"
+.br
+.RI "\fIThis function show what percentage of the microprocessor it is using each process. When you write the command top in the shell, the process top will be created. \fP"
+.ti -1c
+.RI "void \fBwelcome\fP ()"
+.br
+.RI "\fIThis function just prints the welcome message to Flying-High OS. \fP"
+.ti -1c
+.RI "void \fBgoodbye\fP ()"
+.br
+.RI "\fIThis function just says goodbye and reboots the system. \fP"
+.ti -1c
+.RI "void \fBprintA\fP ()"
+.br
+.RI "\fIThis function prints infinite A letters. \fP"
+.ti -1c
+.RI "void \fBprintB\fP ()"
+.br
+.RI "\fIThis functions prints infinite A letters. \fP"
+.ti -1c
+.RI "void \fBnothing\fP ()"
+.br
+.RI "\fIThis function only consumes the microprocessor. \fP"
+.ti -1c
+.RI "void \fBpageFault\fP ()"
+.br
+.RI "\fIThis function generates a page fault exception. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+All the OS processes. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBbin.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void goodbye ()"
+.PP
+This function just says goodbye and reboots the system. Use: 
+.PP
+.nf
+                    createProcess('goodbye', (void(*)(void *))goodbye, NULL, FOREGROUND);
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 260 of file bin.c.
+.SS "void init (void * args)"
+.PP
+This functions initialize the welcome process, all the shells and goodbye process. If you kill the process init the system will be rebooted. \fBParameters:\fP
+.RS 4
+\fIargs\fP 
+.RE
+.PP
+Use: 
+.PP
+.nf
+                 initMultitasker(init);
+
+.fi
+.PP
+ 
+.PP
+Definition at line 14 of file bin.c.
+.SS "void nothing ()"
+.PP
+This function only consumes the microprocessor. Use: 
+.PP
+.nf
+                  createProcess('nothing', (void(*)(void *))nothing, NULL, FOREGROUND)
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 308 of file bin.c.
+.SS "void pageFault ()"
+.PP
+This function generates a page fault exception. Use: 
+.PP
+.nf
+                       createProcess('pageFault', (void(*)(void *))pageFault, NULL, FOREGROUND)
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 317 of file bin.c.
+.SS "void printA ()"
+.PP
+This function prints infinite A letters. Use: 
+.PP
+.nf
+                  createProcess('printA', (void(*)(void *))printA, NULL, FOREGROUND)
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 291 of file bin.c.
+.SS "void printB ()"
+.PP
+This functions prints infinite A letters. Use: 
+.PP
+.nf
+                  createProcess('printB', (void(*)(void *))printB, NULL, FOREGROUND)
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 300 of file bin.c.
+.SS "void top (char * args)"
+.PP
+This function show what percentage of the microprocessor it is using each process. When you write the command top in the shell, the process top will be created. \fBParameters:\fP
+.RS 4
+\fIargs\fP Use: 
+.PP
+.nf
+                  createProcess('top', (void(*)(void *))top, NULL, FOREGROUND);
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file bin.c.
+.SS "void welcome ()"
+.PP
+This function just prints the welcome message to Flying-High OS. Use: 
+.PP
+.nf
+                  createProcess('welcome', (void(*)(void *))welcome, NULL, FOREGROUND)
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 217 of file bin.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

@@ -1,0 +1,214 @@
+.TH "src/exceptions.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/exceptions.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '../inc/exceptions.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBregisters\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBregisters\fP \fBregisters_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_divide_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_debug_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_nmi_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_break_point_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_overflow_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_bounds_check_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_invalid_opcode_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_copro_unavailable_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_double_fault_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_invalid_tss_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_segment_not_present_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_stack_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_general_protection_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_page_fault_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fB_coprocessor_e_hand\fP ()"
+.br
+.ti -1c
+.RI "void \fBhandleException\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBdivideExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBdebugExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBNMIExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBbreakPointExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBoverflowExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBboundsCheckExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBinvalidOpcodeExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBcoprocessorUnavailableExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBdoubleFaultExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBinvalidTSSExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBsegmentNotPresentExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBstackExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBgeneralProtectionExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBpageFaultExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBcoprocessorExceptionHandler\fP (\fBregisters_t\fP regs)"
+.br
+.ti -1c
+.RI "void \fBloadExceptionHandlers\fP ()"
+.br
+.RI "\fILoads the handler of the exception that was produced. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBDESCR_INT\fP \fBidt\fP []"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBregisters\fP  \fBregisters_t\fP"
+.SH "Function Documentation"
+.PP 
+.SS "void _bounds_check_e_hand ()"
+.SS "void _break_point_e_hand ()"
+.SS "void _copro_unavailable_e_hand ()"
+.SS "void _coprocessor_e_hand ()"
+.SS "void _debug_e_hand ()"
+.SS "void _divide_e_hand ()"
+.SS "void _double_fault_e_hand ()"
+.SS "void _general_protection_e_hand ()"
+.SS "void _invalid_opcode_e_hand ()"
+.SS "void _invalid_tss_e_hand ()"
+.SS "void _nmi_e_hand ()"
+.SS "void _overflow_e_hand ()"
+.SS "void _page_fault_e_hand ()"
+.SS "void _segment_not_present_e_hand ()"
+.SS "void _stack_e_hand ()"
+.SS "void boundsCheckExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 181 of file exceptions.c.
+.SS "void breakPointExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 169 of file exceptions.c.
+.SS "void coprocessorExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 262 of file exceptions.c.
+.SS "void coprocessorUnavailableExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 193 of file exceptions.c.
+.SS "void debugExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 157 of file exceptions.c.
+.SS "void divideExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 151 of file exceptions.c.
+.SS "void doubleFaultExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 199 of file exceptions.c.
+.SS "void generalProtectionExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 223 of file exceptions.c.
+.SS "void handleException (\fBregisters_t\fP regs)"
+.PP
+Definition at line 136 of file exceptions.c.
+.SS "void invalidOpcodeExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 187 of file exceptions.c.
+.SS "void invalidTSSExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 205 of file exceptions.c.
+.SS "void loadExceptionHandlers ()"
+.PP
+Loads the handler of the exception that was produced. 
+.PP
+Definition at line 273 of file exceptions.c.
+.SS "void NMIExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 163 of file exceptions.c.
+.SS "void overflowExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 175 of file exceptions.c.
+.SS "void pageFaultExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 229 of file exceptions.c.
+.SS "void segmentNotPresentExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 211 of file exceptions.c.
+.SS "void stackExceptionHandler (\fBregisters_t\fP regs)"
+.PP
+Definition at line 217 of file exceptions.c.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBDESCR_INT\fP \fBidt\fP[]"
+.PP
+Definition at line 12 of file kernel.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="attch_8c" kind="file">
+    <compoundname>attch.c</compoundname>
+    <includes refid="bttlship_8h" local="yes">bttlship.h</includes>
+    <incdepgraph>
+      <node id="4465">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4453" relation="include">
+        </childnode>
+      </node>
+      <node id="4448">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4471">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4469" relation="include">
+        </childnode>
+      </node>
+      <node id="4470">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4453">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4455" relation="include">
+        </childnode>
+        <childnode refid="4456" relation="include">
+        </childnode>
+        <childnode refid="4459" relation="include">
+        </childnode>
+        <childnode refid="4460" relation="include">
+        </childnode>
+      </node>
+      <node id="4456">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4457" relation="include">
+        </childnode>
+        <childnode refid="4443" relation="include">
+        </childnode>
+      </node>
+      <node id="4441">
+        <label>src/attch.c</label>
+        <link refid="attch.c"/>
+        <childnode refid="4442" relation="include">
+        </childnode>
+      </node>
+      <node id="4451">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4449">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4445">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4446" relation="include">
+        </childnode>
+        <childnode refid="4447" relation="include">
+        </childnode>
+      </node>
+      <node id="4464">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4458" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+      </node>
+      <node id="4466">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4443" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+        <childnode refid="4467" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4457" relation="include">
+        </childnode>
+        <childnode refid="4468" relation="include">
+        </childnode>
+        <childnode refid="4456" relation="include">
+        </childnode>
+        <childnode refid="4442" relation="include">
+        </childnode>
+      </node>
+      <node id="4455">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4467">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4466" relation="include">
+        </childnode>
+        <childnode refid="4444" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4443">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4463">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4460" relation="include">
+        </childnode>
+        <childnode refid="4462" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4456" relation="include">
+        </childnode>
+        <childnode refid="4453" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4464" relation="include">
+        </childnode>
+        <childnode refid="4465" relation="include">
+        </childnode>
+        <childnode refid="4466" relation="include">
+        </childnode>
+      </node>
+      <node id="4444">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4459">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4455" relation="include">
+        </childnode>
+      </node>
+      <node id="4458">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+      </node>
+      <node id="4447">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4448" relation="include">
+        </childnode>
+      </node>
+      <node id="4460">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4461" relation="include">
+        </childnode>
+        <childnode refid="4443" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4462" relation="include">
+        </childnode>
+        <childnode refid="4463" relation="include">
+        </childnode>
+        <childnode refid="4453" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+        <childnode refid="4464" relation="include">
+        </childnode>
+      </node>
+      <node id="4450">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4442">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4443" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4471" relation="include">
+        </childnode>
+        <childnode refid="4469" relation="include">
+        </childnode>
+        <childnode refid="4465" relation="include">
+        </childnode>
+        <childnode refid="4460" relation="include">
+        </childnode>
+      </node>
+      <node id="4462">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4452">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4453" relation="include">
+        </childnode>
+        <childnode refid="4470" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4463" relation="include">
+        </childnode>
+      </node>
+      <node id="4461">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4462" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4469">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+      </node>
+      <node id="4454">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4457">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4458" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+      </node>
+      <node id="4446">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4468">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4468" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4462" relation="include">
+        </childnode>
+        <childnode refid="4463" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4453" relation="include">
+        </childnode>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4443" relation="include">
+        </childnode>
+        <childnode refid="4455" relation="include">
+        </childnode>
+        <childnode refid="4460" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+        <childnode refid="4458" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4456" relation="include">
+        </childnode>
+        <childnode refid="4464" relation="include">
+        </childnode>
+        <childnode refid="4466" relation="include">
+        </childnode>
+        <childnode refid="4444" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+        <childnode refid="4457" relation="include">
+        </childnode>
+        <childnode refid="4469" relation="include">
+        </childnode>
+        <childnode refid="4465" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="attch_8c_1a03d7f39ab8509bab171aecf4d4fc7b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void attachTable</definition>
+        <argsstring>(S_TABLE **table, key_t shmid, char **shmp)</argsstring>
+        <name>attachTable</name>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref></type>
+          <declname>shmid</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>shmp</declname>
+        </param>
+        <briefdescription>
+<para>It attaches itself to the already created memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adress of the table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shmid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shared memory segment id. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adress where to store the shared memory segment pointer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/attch.c" line="13" bodyfile="/Users/Luciano/Desktop/flying-high/src/attch.c" bodystart="13" bodyend="26"/>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="sh_memory_8h_1a5c3d92af6a333b8c351c9b7e5aeb98e1" compoundref="sh_memory_8c" startline="35" endline="37">shmat</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="13" endline="186">battleship</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Brief. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bttlship_8h" kindref="compound" tooltip="The header file of the battleship game.">bttlship.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="attch_8c_1a03d7f39ab8509bab171aecf4d4fc7b9e" refkind="member"><highlight class="normal"><ref refid="bttlship_8h_1a03d7f39ab8509bab171aecf4d4fc7b9e" kindref="member" tooltip="It attaches itself to the already created memory.">attachTable</ref>(<sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**table,<sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>shmid,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**shmp)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Attach<sp/>the<sp/>shared<sp/>memory<sp/>:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>a;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>*shmp<sp/>=<sp/><ref refid="sh_memory_8h_1a5c3d92af6a333b8c351c9b7e5aeb98e1" kindref="member" tooltip="Attaches the current process to the shmid shared memory.">shmat</ref>(shmid,<sp/>&amp;a);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>*shmp<sp/>==<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)(-1)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Error<sp/>al<sp/>crear<sp/>la<sp/>shm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>(*table)<sp/>=<sp/>*((<ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**)shmp);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/attch.c"/>
+  </compounddef>
+</doxygen>

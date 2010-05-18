@@ -1,0 +1,1460 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="ttys_8h" kind="file">
+    <compoundname>ttys.h</compoundname>
+    <includes refid="queue_8h" local="yes">queue.h</includes>
+    <includes refid="video__driver_8h" local="yes">video_driver.h</includes>
+    <includes refid="string_8h" local="yes">string.h</includes>
+    <includes refid="keyboard__buffer_8h" local="yes">keyboard_buffer.h</includes>
+    <includes refid="sys_process_8h" local="yes">sysProcess.h</includes>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="unistd_8h" local="yes">unistd.h</includes>
+    <includes refid="k_malloc_8h" local="yes">kMalloc.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="bttlship_8h" local="yes">inc/bttlship.h</includedby>
+    <includedby refid="exceptions_8h" local="yes">inc/exceptions.h</includedby>
+    <includedby refid="kernel_8h" local="yes">inc/kernel.h</includedby>
+    <includedby refid="keyboard__driver_8h" local="yes">inc/keyboard_driver.h</includedby>
+    <includedby refid="syscall_8h" local="yes">inc/syscall.h</includedby>
+    <includedby refid="sys_process_8h" local="yes">inc/sysProcess.h</includedby>
+    <includedby refid="ttys_8c" local="yes">src/ttys.c</includedby>
+    <incdepgraph>
+      <node id="3828">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3823" relation="include">
+        </childnode>
+      </node>
+      <node id="3811">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3834">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3832" relation="include">
+        </childnode>
+      </node>
+      <node id="3826">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="3823">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3822" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3824" relation="include">
+        </childnode>
+        <childnode refid="3819" relation="include">
+        </childnode>
+        <childnode refid="3825" relation="include">
+        </childnode>
+        <childnode refid="3805" relation="include">
+        </childnode>
+      </node>
+      <node id="3819">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3820" relation="include">
+        </childnode>
+        <childnode refid="3812" relation="include">
+        </childnode>
+      </node>
+      <node id="3818">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3817">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3818" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3808">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3809" relation="include">
+        </childnode>
+        <childnode refid="3810" relation="include">
+        </childnode>
+      </node>
+      <node id="3827">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3821" relation="include">
+        </childnode>
+        <childnode refid="3822" relation="include">
+        </childnode>
+        <childnode refid="3817" relation="include">
+        </childnode>
+      </node>
+      <node id="3829">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3812" relation="include">
+        </childnode>
+        <childnode refid="3818" relation="include">
+        </childnode>
+        <childnode refid="3830" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3811" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3822" relation="include">
+        </childnode>
+        <childnode refid="3820" relation="include">
+        </childnode>
+        <childnode refid="3831" relation="include">
+        </childnode>
+        <childnode refid="3819" relation="include">
+        </childnode>
+        <childnode refid="3833" relation="include">
+        </childnode>
+      </node>
+      <node id="3824">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3830">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3829" relation="include">
+        </childnode>
+        <childnode refid="3813" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3812">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="3813" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3815">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3805" relation="include">
+        </childnode>
+        <childnode refid="3807" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3819" relation="include">
+        </childnode>
+        <childnode refid="3823" relation="include">
+        </childnode>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3827" relation="include">
+        </childnode>
+        <childnode refid="3828" relation="include">
+        </childnode>
+        <childnode refid="3829" relation="include">
+        </childnode>
+      </node>
+      <node id="3813">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="3825">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3824" relation="include">
+        </childnode>
+      </node>
+      <node id="3821">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+      </node>
+      <node id="3810">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3811" relation="include">
+        </childnode>
+      </node>
+      <node id="3805">
+        <label>inc/ttys.h</label>
+        <link refid="ttys.h"/>
+        <childnode refid="3806" relation="include">
+        </childnode>
+        <childnode refid="3812" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3807" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+        <childnode refid="3823" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3818" relation="include">
+        </childnode>
+        <childnode refid="3827" relation="include">
+        </childnode>
+      </node>
+      <node id="3833">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3812" relation="include">
+        </childnode>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3822" relation="include">
+        </childnode>
+        <childnode refid="3834" relation="include">
+        </childnode>
+        <childnode refid="3832" relation="include">
+        </childnode>
+        <childnode refid="3828" relation="include">
+        </childnode>
+        <childnode refid="3805" relation="include">
+        </childnode>
+      </node>
+      <node id="3814">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3807">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3822">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3823" relation="include">
+        </childnode>
+        <childnode refid="3826" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+      </node>
+      <node id="3806">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3807" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3832">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3822" relation="include">
+        </childnode>
+      </node>
+      <node id="3816">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+      </node>
+      <node id="3820">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3821" relation="include">
+        </childnode>
+        <childnode refid="3822" relation="include">
+        </childnode>
+      </node>
+      <node id="3809">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="3831">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3831" relation="include">
+        </childnode>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3807" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3823" relation="include">
+        </childnode>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3822" relation="include">
+        </childnode>
+        <childnode refid="3812" relation="include">
+        </childnode>
+        <childnode refid="3824" relation="include">
+        </childnode>
+        <childnode refid="3805" relation="include">
+        </childnode>
+        <childnode refid="3818" relation="include">
+        </childnode>
+        <childnode refid="3821" relation="include">
+        </childnode>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3819" relation="include">
+        </childnode>
+        <childnode refid="3827" relation="include">
+        </childnode>
+        <childnode refid="3829" relation="include">
+        </childnode>
+        <childnode refid="3813" relation="include">
+        </childnode>
+        <childnode refid="3811" relation="include">
+        </childnode>
+        <childnode refid="3820" relation="include">
+        </childnode>
+        <childnode refid="3832" relation="include">
+        </childnode>
+        <childnode refid="3828" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3851">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3843" relation="include">
+        </childnode>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3852" relation="include">
+        </childnode>
+      </node>
+      <node id="3837">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3838" relation="include">
+        </childnode>
+      </node>
+      <node id="3862">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3864">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="3864" relation="include">
+        </childnode>
+      </node>
+      <node id="3844">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="3847">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3843" relation="include">
+        </childnode>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3848" relation="include">
+        </childnode>
+      </node>
+      <node id="3850">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3842" relation="include">
+        </childnode>
+        <childnode refid="3851" relation="include">
+        </childnode>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3835" relation="include">
+        </childnode>
+        <childnode refid="3853" relation="include">
+        </childnode>
+      </node>
+      <node id="3855">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3839" relation="include">
+        </childnode>
+        <childnode refid="3850" relation="include">
+        </childnode>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3856" relation="include">
+        </childnode>
+      </node>
+      <node id="3856">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3863">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="3861">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="3845">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3835" relation="include">
+        </childnode>
+      </node>
+      <node id="3839">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3860" relation="include">
+        </childnode>
+        <childnode refid="3862" relation="include">
+        </childnode>
+      </node>
+      <node id="3858">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="3858" relation="include">
+        </childnode>
+      </node>
+      <node id="3860">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3839" relation="include">
+        </childnode>
+        <childnode refid="3861" relation="include">
+        </childnode>
+      </node>
+      <node id="3840">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3841" relation="include">
+        </childnode>
+        <childnode refid="3842" relation="include">
+        </childnode>
+        <childnode refid="3835" relation="include">
+        </childnode>
+        <childnode refid="3858" relation="include">
+        </childnode>
+        <childnode refid="3859" relation="include">
+        </childnode>
+      </node>
+      <node id="3848">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="3865">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="3866" relation="include">
+        </childnode>
+      </node>
+      <node id="3835">
+        <label>inc/ttys.h</label>
+        <link refid="ttys.h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3843" relation="include">
+        </childnode>
+        <childnode refid="3864" relation="include">
+        </childnode>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3865" relation="include">
+        </childnode>
+        <childnode refid="3850" relation="include">
+        </childnode>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3867" relation="include">
+        </childnode>
+      </node>
+      <node id="3843">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3839" relation="include">
+        </childnode>
+        <childnode refid="3844" relation="include">
+        </childnode>
+      </node>
+      <node id="3842">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3843" relation="include">
+        </childnode>
+        <childnode refid="3845" relation="include">
+        </childnode>
+        <childnode refid="3846" relation="include">
+        </childnode>
+        <childnode refid="3839" relation="include">
+        </childnode>
+        <childnode refid="3850" relation="include">
+        </childnode>
+        <childnode refid="3854" relation="include">
+        </childnode>
+        <childnode refid="3857" relation="include">
+        </childnode>
+      </node>
+      <node id="3859">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="3857">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="3849">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="3846">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3843" relation="include">
+        </childnode>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3847" relation="include">
+        </childnode>
+        <childnode refid="3849" relation="include">
+        </childnode>
+      </node>
+      <node id="3853">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="3838">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="3852">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="3867">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="3866">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="3854">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3855" relation="include">
+        </childnode>
+        <childnode refid="3839" relation="include">
+        </childnode>
+      </node>
+      <node id="3836">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3839" relation="include">
+        </childnode>
+        <childnode refid="3863" relation="include">
+        </childnode>
+      </node>
+      <node id="3841">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ttys_8h_1a5cab16b9bb408c134bba477fa1436919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getReadPointer</definition>
+        <argsstring>(tty_t tty, int *readPointer, int *readCol, int *readRow)</argsstring>
+        <name>getReadPointer</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>readPointer</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>readCol</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>readRow</declname>
+        </param>
+        <briefdescription>
+<para>This function obtains read pointers of the tty. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty where the function obtain the pointers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readPointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the pointer where it is reading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readCol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The col position of the stdout where it is reading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row position of the stdout where it is reading </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="33" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="81" bodyend="85"/>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="structtty__s_1a38beda239dc9e9eb6f58cc2e818fbaa6" compoundref="types_8h" startline="262">tty_s::readCol</references>
+        <references refid="structtty__s_1aa0a6145a711115035caf96d6d1c7d9fb" compoundref="types_8h" startline="261">tty_s::readPointer</references>
+        <references refid="structtty__s_1a0aef55ec53e97b2ad384eb814d316e9b" compoundref="types_8h" startline="263">tty_s::readRow</references>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a5c29772760b26cdfca93bc1284b60732" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getWritePointer</definition>
+        <argsstring>(tty_t tty, int *writePointer, int *writeCol, int *writeRow)</argsstring>
+        <name>getWritePointer</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>writePointer</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>writeCol</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>writeRow</declname>
+        </param>
+        <briefdescription>
+<para>This function obtains writer pointers of the tty. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty where the function obtain the pointers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writePointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the pointer where it is writting </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writeCol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The col position of the stdout where it is writting </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writeRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row position of the stdout where it is writting </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="46" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="88" bodyend="93"/>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" compoundref="types_8h" startline="259">tty_s::writeCol</references>
+        <references refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" compoundref="types_8h" startline="258">tty_s::writePointer</references>
+        <references refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" compoundref="types_8h" startline="260">tty_s::writeRow</references>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1ae286c1ea11787c6fcf410fb0474c2626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setReadPointer</definition>
+        <argsstring>(tty_t tty, int readPointer, int readCol, int readRow)</argsstring>
+        <name>setReadPointer</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>readPointer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>readCol</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>readRow</declname>
+        </param>
+        <briefdescription>
+<para>This function saves the reads pointers of the tty that is indicated in the signature. This function is called when change the tty that is in focus, so it has to backup it&apos;s pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty where the function save the pointers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readPointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the pointer where it is reading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readCol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The col position of the stdout where it is reading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row position of the stdout where it is reading </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="62" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="96" bodyend="101"/>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="structtty__s_1a38beda239dc9e9eb6f58cc2e818fbaa6" compoundref="types_8h" startline="262">tty_s::readCol</references>
+        <references refid="structtty__s_1aa0a6145a711115035caf96d6d1c7d9fb" compoundref="types_8h" startline="261">tty_s::readPointer</references>
+        <references refid="structtty__s_1a0aef55ec53e97b2ad384eb814d316e9b" compoundref="types_8h" startline="263">tty_s::readRow</references>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1af5041dd94c379cc8189ec93b816c3a20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setWritePointer</definition>
+        <argsstring>(tty_t tty, int writePointer, int writeCol, int writeRow)</argsstring>
+        <name>setWritePointer</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>writePointer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>writeCol</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>writeRow</declname>
+        </param>
+        <briefdescription>
+<para>This function saves the reads pointers of the tty that is indicated in the signature. This function is called when change the tty who is in focus, so it has to backup his pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty where the function save the pointers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writePointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the pointer where it is writting </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writeCol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The col position of the stdout where it is writting </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writeRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row position of the stdout where it is writting </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="77" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="104" bodyend="108"/>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" compoundref="types_8h" startline="259">tty_s::writeCol</references>
+        <references refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" compoundref="types_8h" startline="258">tty_s::writePointer</references>
+        <references refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" compoundref="types_8h" startline="260">tty_s::writeRow</references>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a0ecf720256fc5769d712a4e4190946f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void putsTTY</definition>
+        <argsstring>(unsigned char *name, int count, tty_t tty)</argsstring>
+        <name>putsTTY</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <briefdescription>
+<para>This function prints a string in a specific tty. It checks if it has to print only in the tty or in stdin too. It called to putCharTTy while the length of the string was grater than 0. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty id where has to be printed the string</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;test&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a0ecf720256fc5769d712a4e4190946f1" kindref="member" tooltip="This function prints a string in a specific tty. It checks if it has to print only...">putsTTY</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="ttys_8c_1a8b368b52e988f2fb5f99aeb979fe4040" kindref="member">putCharTTY</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="102" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="451" bodyend="455"/>
+        <references refid="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" compoundref="ttys_8c" startline="458" endline="468">putCharTTY</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void putCharTTY</definition>
+        <argsstring>(char c, tty_t tty, int inStdIn)</argsstring>
+        <name>putCharTTY</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>inStdIn</declname>
+        </param>
+        <briefdescription>
+<para>It prints only one character in specific tty. It verifies if the character is a control key or it belongs to the ASCII table. It checks if the tty is what are in focus, so it has to put the character in stdin buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The chacter to be printed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty id where has to be printed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inStdIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If it has to print in Stdin or not</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;System&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" kindref="member" tooltip="It prints only one character in specific tty. It verifies if the character is a control...">putCharTTY</ref>(*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">++,<sp/>tty,<sp/>(<ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref><sp/>v<sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>)<sp/>):</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="126" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="458" bodyend="468"/>
+        <references refid="structtty__s_1a5be2ba5c5e17899443300974060fe13f" compoundref="types_8h" startline="256">tty_s::hasScrolled</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="config_8h_1a6cacb150853456c97c51481e67d0dabc" compoundref="config_8h" startline="33">SCREEN_SIZE</references>
+        <references refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" compoundref="types_8h" startline="258">tty_s::writePointer</references>
+        <referencedby refid="ttys_8c_1a0ecf720256fc5769d712a4e4190946f1" compoundref="ttys_8c" startline="451" endline="455">putsTTY</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+        <referencedby refid="ttys_8c_1a5543e64588b3c8d57ef150404d96c5a7" compoundref="ttys_8c" startline="529" endline="536">refreshStdout</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a9ee58440374f467ffe3fa7100485272c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeTTY</definition>
+        <argsstring>(void)</argsstring>
+        <name>initializeTTY</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Create the table of ttys. The maximum of ttys is a define. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a9ee58440374f467ffe3fa7100485272c" kindref="member" tooltip="Create the table of ttys. The maximum of ttys is a define.">initializeTTY</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="142" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="50" bodyend="74"/>
+        <references refid="config_8h_1a96df1fa5a1eb0452e87bad701a632eeb" compoundref="config_8h" startline="43">CURSOR_START_COL</references>
+        <references refid="config_8h_1a0918341b64efcf251a70fc2c188803fa" compoundref="config_8h" startline="48">CURSOR_START_ROW</references>
+        <references refid="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" compoundref="types_8h" startline="257">tty_s::focusProcess</references>
+        <references refid="structsys_t_t_y_1ad4f84dd55c369a7bd7d9f562fc76662f" compoundref="types_8h" startline="273">sysTTY::focusTTY</references>
+        <references refid="structtty__s_1a5be2ba5c5e17899443300974060fe13f" compoundref="types_8h" startline="256">tty_s::hasScrolled</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" compoundref="config_8h" startline="123">MAX_TTY</references>
+        <references refid="structsys_t_t_y_1a0bc680aada6c6392e4613573f212438b" compoundref="types_8h" startline="271">sysTTY::qtyTTY</references>
+        <references refid="structtty__s_1a38beda239dc9e9eb6f58cc2e818fbaa6" compoundref="types_8h" startline="262">tty_s::readCol</references>
+        <references refid="structtty__s_1aa0a6145a711115035caf96d6d1c7d9fb" compoundref="types_8h" startline="261">tty_s::readPointer</references>
+        <references refid="structtty__s_1a0aef55ec53e97b2ad384eb814d316e9b" compoundref="types_8h" startline="263">tty_s::readRow</references>
+        <references refid="config_8h_1ad16585962eaf6f3a114a237350a9ba97" compoundref="config_8h" startline="98">STD_TTY</references>
+        <references refid="structtty__s_1a44c2fc56a32fd5125ebc51b6b2c0e178" compoundref="types_8h" startline="254">tty_s::stdIn</references>
+        <references refid="structstd_in_t_t_y_1adbc1696a6e5a5d97b6761336fc185945" compoundref="types_8h" startline="234">stdInTTY::stdInBuffer</references>
+        <references refid="structtty__s_1a0651a2e4ac304fdc5837a8eb0b0bd166" compoundref="types_8h" startline="255">tty_s::stdOut</references>
+        <references refid="structstd_out_t_t_y_1aef253d03c960d4ee76bc0f0f84236f8b" compoundref="types_8h" startline="243">stdOutTTY::stdOutBuffer</references>
+        <references refid="structtty__s_1a7bdcbca143d0773edef7d01762d42aff" compoundref="types_8h" startline="253">tty_s::ttyId</references>
+        <references refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" compoundref="types_8h" startline="259">tty_s::writeCol</references>
+        <references refid="structstd_in_t_t_y_1ada738b143166d2de18a92ff55801f41b" compoundref="types_8h" startline="235">stdInTTY::writeOffset</references>
+        <references refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" compoundref="types_8h" startline="258">tty_s::writePointer</references>
+        <references refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" compoundref="types_8h" startline="260">tty_s::writeRow</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getFocusedTTY</definition>
+        <argsstring>(void)</argsstring>
+        <name>getFocusedTTY</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function returns the tty id of tty that are in focus at this moment. It is a system called. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The id of tty that is in focus</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tty;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tty<sp/>=<sp/><ref refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" kindref="member" tooltip="This function returns the tty id of tty that are in focus at this moment. It is a...">getFocusedTTY</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" kindref="member" tooltip="It prints only one character in specific tty. It verifies if the character is a control...">putCharTTY</ref>(<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">,<sp/>tty,<sp/><ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="161" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="471" bodyend="474"/>
+        <references refid="structsys_t_t_y_1ad4f84dd55c369a7bd7d9f562fc76662f" compoundref="types_8h" startline="273">sysTTY::focusTTY</references>
+        <referencedby refid="ttys_8c_1aac09c476e825138ad51c1c5948f47748" compoundref="ttys_8c" startline="516" endline="526">changeFocusTTY</referencedby>
+        <referencedby refid="ttys_8c_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</referencedby>
+        <referencedby refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+        <referencedby refid="ttys_8c_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1aac09c476e825138ad51c1c5948f47748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int changeFocusTTY</definition>
+        <argsstring>(tty_t nextTty)</argsstring>
+        <name>changeFocusTTY</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>nextTty</declname>
+        </param>
+        <briefdescription>
+<para>This function changes the tty focus id on the next Tty that has to be in focus. This function is called when the key that was pressed is between &quot;F1&quot; and &quot;F7&quot;. Of every &quot;F&quot; key that was pressed, is put a value between 0x81 and 0x87. The number of the &quot;F&quot; key + 0x80. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nextTty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Next tty id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the next tty id is the current tty id in focus, 0 if it has changed the focus.</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>!isEmptyKBBuffer()<sp/>){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>deQueue();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>c<sp/>&gt;=<sp/>0x81<sp/>&amp;&amp;<sp/>c<sp/>&lt;=<sp/>0x87<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1aac09c476e825138ad51c1c5948f47748" kindref="member" tooltip="This function changes the tty focus id on the next Tty that has to be in focus. This...">changeFocusTTY</ref>(<sp/>c<sp/>-<sp/>0x81<sp/>);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="190" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="516" bodyend="526"/>
+        <references refid="video__driver_8h_1a67e96e514d9f296c79378f7fbfba457a" compoundref="video__driver_8c" startline="425" endline="428">clearScreen</references>
+        <references refid="structsys_t_t_y_1ad4f84dd55c369a7bd7d9f562fc76662f" compoundref="types_8h" startline="273">sysTTY::focusTTY</references>
+        <references refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" compoundref="ttys_8c" startline="471" endline="474">getFocusedTTY</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="video__driver_8h_1ab59b086c41d506e55aa02729f9916be2" compoundref="video__driver_8c" startline="233" endline="236">refreshScreen</references>
+        <references refid="video__driver_8h_1aff96fa4091dd99b631277b28be9a5e65" compoundref="video__driver_8c" startline="305" endline="313">setCursorPosition</references>
+        <references refid="structtty__s_1a7bdcbca143d0773edef7d01762d42aff" compoundref="types_8h" startline="253">tty_s::ttyId</references>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a5543e64588b3c8d57ef150404d96c5a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void refreshStdout</definition>
+        <argsstring>(void)</argsstring>
+        <name>refreshStdout</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Pust all of character that are in the STDOUT and and puts in the tty STDOUT who is in focus. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting></programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="204" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="529" bodyend="536"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" compoundref="ttys_8c" startline="458" endline="468">putCharTTY</references>
+        <references refid="unistd_8h_1a116146ccc01b751779e5351615743547">read</references>
+        <references refid="defs_8h_1a8875037d0772a4fc34516f1e03d7e238" compoundref="defs_8h" startline="102">STDOUT</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="ttys_8c_1aa0c166c59cfd83d43839b76afe6ac3ce" compoundref="ttys_8c" startline="539" endline="547">refreshTTY</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1abbca9cfc412d307fa56ca4a4095f0f87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void refreshKeyboardBufferTTY</definition>
+        <argsstring>(void)</argsstring>
+        <name>refreshKeyboardBufferTTY</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Leaves all of character that are in the KeyboradBuffer and put in the correct tty stdout if the tty mode is CANONICAL, if not it prints directly in the STDIN of tty who is in focus. The timet tick is the responsible to call this function. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>call<sp/>Scheculer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>call<sp/><ref refid="ttys_8h_1abbca9cfc412d307fa56ca4a4095f0f87" kindref="member" tooltip="Leaves all of character that are in the KeyboradBuffer and put in the correct tty...">refreshKeyboardBufferTTY</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para>f1() f2() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="226" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="487" bodyend="513"/>
+        <references refid="ttys_8h_1aac09c476e825138ad51c1c5948f47748" compoundref="ttys_8c" startline="516" endline="526">changeFocusTTY</references>
+        <references refid="queue_8h_1af7d9739d980ebb59fabce9dab6379f3b" compoundref="queue_8c" startline="43" endline="51">charDeque</references>
+        <references refid="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" compoundref="types_8h" startline="257">tty_s::focusProcess</references>
+        <references refid="structsys_t_t_y_1ad4f84dd55c369a7bd7d9f562fc76662f" compoundref="types_8h" startline="273">sysTTY::focusTTY</references>
+        <references refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" compoundref="ttys_8c" startline="471" endline="474">getFocusedTTY</references>
+        <references refid="sys_process_8h_1aa1cd2078219adc47ca22033bf86a76be" compoundref="sys_process_8c" startline="250" endline="252">getProcessTable</references>
+        <references refid="video__driver_8h_1a9890a0e1d4b684976b56495795445c77" compoundref="video__driver_8c" startline="326" endline="329">getVideoColor</references>
+        <references refid="queue_8h_1ab50e760055a693e439a8ac83cedee6bd" compoundref="queue_8c" startline="54" endline="57">kbBufferIsEmpty</references>
+        <references refid="process_8h_1a650cf0caaaa8b75f653c1c92818d03a4" compoundref="process_8c" startline="63" endline="65">kill</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" compoundref="ttys_8c" startline="458" endline="468">putCharTTY</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <references refid="defs_8h_1afd70646efe5984e361c17010322a5711" compoundref="defs_8h" startline="80">TTY_CANONICAL</references>
+        <references refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" compoundref="types_8h" startline="170">process_t::ttyMode</references>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1aa0c166c59cfd83d43839b76afe6ac3ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void refreshTTY</definition>
+        <argsstring>(void)</argsstring>
+        <name>refreshTTY</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This functions check if the proccess if different of init and the running process has a valid pid, it only refreshes the stdout. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="236" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="539" bodyend="547"/>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="types_8h" startline="144">process_t::pid</references>
+        <references refid="video__driver_8h_1ab59b086c41d506e55aa02729f9916be2" compoundref="video__driver_8c" startline="233" endline="236">refreshScreen</references>
+        <references refid="ttys_8h_1a5543e64588b3c8d57ef150404d96c5a7" compoundref="ttys_8c" startline="529" endline="536">refreshStdout</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+        <referencedby refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1aca07223864f88814919b02e6729569a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sysSetTTYFocusedProcess</definition>
+        <argsstring>(pid_t pid, tty_t tty)</argsstring>
+        <name>sysSetTTYFocusedProcess</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pid to the process which is in focus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pid of the process </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty where will be set the pid of the process </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="247" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="554" bodyend="556"/>
+        <references refid="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" compoundref="types_8h" startline="257">tty_s::focusProcess</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="sys_process_8c_1ab5b0962abeaa4a1657d1fc3d5931a612" compoundref="sys_process_8c" startline="203" endline="221">terminate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a99a0a65415f2b25acb0d456bc9642905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t sysGetTTYFocusedProcess</definition>
+        <argsstring>(tty_t tty)</argsstring>
+        <name>sysGetTTYFocusedProcess</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <briefdescription>
+<para>Returns the pid of the process that is in this tty. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty where it is saved the pid of the focus process </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="258" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="558" bodyend="560"/>
+        <references refid="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" compoundref="types_8h" startline="257">tty_s::focusProcess</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearTTYScreen</definition>
+        <argsstring>()</argsstring>
+        <name>clearTTYScreen</name>
+        <briefdescription>
+<para>It clears the stdout of the tty that is in focus. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="266" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="563" bodyend="581"/>
+        <references refid="video__driver_8h_1a67e96e514d9f296c79378f7fbfba457a" compoundref="video__driver_8c" startline="425" endline="428">clearScreen</references>
+        <references refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" compoundref="ttys_8c" startline="471" endline="474">getFocusedTTY</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" compoundref="config_8h" startline="123">MAX_TTY</references>
+        <references refid="config_8h_1a6cacb150853456c97c51481e67d0dabc" compoundref="config_8h" startline="33">SCREEN_SIZE</references>
+        <references refid="video__driver_8h_1aff96fa4091dd99b631277b28be9a5e65" compoundref="video__driver_8c" startline="305" endline="313">setCursorPosition</references>
+        <references refid="ttys_8h_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</references>
+        <references refid="structtty__s_1a0651a2e4ac304fdc5837a8eb0b0bd166" compoundref="types_8h" startline="255">tty_s::stdOut</references>
+        <references refid="structstd_out_t_t_y_1aef253d03c960d4ee76bc0f0f84236f8b" compoundref="types_8h" startline="243">stdOutTTY::stdOutBuffer</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+        <referencedby refid="bin_8c_1ae2338f2b60de8c59eaa31a6a285c1fc0" compoundref="bin_8c" startline="260" endline="289">goodbye</referencedby>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+        <referencedby refid="bin_8c_1a236e454e493fc9b262f746305660a2eb" compoundref="bin_8c" startline="217" endline="258">welcome</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a77495bf57af4fe0554f55dc4be4a4600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setTTYCursorPosition</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>setTTYCursorPosition</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>It sets the cursor in an specific position of the tty stdout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row of the stdout </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column of the stdout </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="279" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="584" bodyend="599"/>
+        <references refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" compoundref="ttys_8c" startline="471" endline="474">getFocusedTTY</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" compoundref="config_8h" startline="123">MAX_TTY</references>
+        <references refid="config_8h_1a25f7ae536603397e929ff4941e253200" compoundref="config_8h" startline="28">SCREEN_HEIGTH</references>
+        <references refid="config_8h_1a2cd109632a6dcccaa80b43561b1ab700" compoundref="config_8h" startline="23">SCREEN_WIDTH</references>
+        <references refid="video__driver_8h_1aff96fa4091dd99b631277b28be9a5e65" compoundref="video__driver_8c" startline="305" endline="313">setCursorPosition</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+        <references refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" compoundref="types_8h" startline="259">tty_s::writeCol</references>
+        <references refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" compoundref="types_8h" startline="258">tty_s::writePointer</references>
+        <references refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" compoundref="types_8h" startline="260">tty_s::writeRow</references>
+        <referencedby refid="ttys_8c_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ttys_8h_1a0ae5938446774e4ebb46d0f5120458a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void putTTYCharAtPosition</definition>
+        <argsstring>(int c, int row, int col)</argsstring>
+        <name>putTTYCharAtPosition</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>It puts a character in a specific position of the tty stdout. It prints the character at the position but it keeps the previous position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to be printed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row where has to be printed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column where has to be printed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h" line="294" bodyfile="/Users/Luciano/Desktop/flying-high/src/ttys.c" bodystart="602" bodyend="625"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" compoundref="ttys_8c" startline="471" endline="474">getFocusedTTY</references>
+        <references refid="video__driver_8h_1a9890a0e1d4b684976b56495795445c77" compoundref="video__driver_8c" startline="326" endline="329">getVideoColor</references>
+        <references refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" compoundref="types_8h" startline="272">sysTTY::listTTY</references>
+        <references refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" compoundref="config_8h" startline="123">MAX_TTY</references>
+        <references refid="video__driver_8h_1afc86e1361fc55d70f7af70b21ba853f6" compoundref="video__driver_8c" startline="361" endline="365">putCharAtCurrentPos</references>
+        <references refid="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" compoundref="ttys_8c" startline="458" endline="468">putCharTTY</references>
+        <references refid="video__driver_8h_1ab59b086c41d506e55aa02729f9916be2" compoundref="video__driver_8c" startline="233" endline="236">refreshScreen</references>
+        <references refid="config_8h_1a25f7ae536603397e929ff4941e253200" compoundref="config_8h" startline="28">SCREEN_HEIGTH</references>
+        <references refid="config_8h_1a2cd109632a6dcccaa80b43561b1ab700" compoundref="config_8h" startline="23">SCREEN_WIDTH</references>
+        <references refid="ttys_8h_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</references>
+        <references refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" compoundref="types_8h" startline="147">process_t::tty</references>
+        <references refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" compoundref="types_8h" startline="259">tty_s::writeCol</references>
+        <references refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" compoundref="types_8h" startline="258">tty_s::writePointer</references>
+        <references refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" compoundref="types_8h" startline="260">tty_s::writeRow</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The tty header file. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>_TTYS_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_TTYS_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="queue_8h" kindref="compound" tooltip="Keyboard queue module.">queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="video__driver_8h" kindref="compound" tooltip="Defines the basic function to manage the video screen, cursor &amp;amp; mouse pointer...">video_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8h" kindref="compound" tooltip="Declaration of all functions that deals with strings and buffers.">string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="keyboard__buffer_8h" kindref="compound" tooltip="This is the internal keyboard buffer.">keyboard_buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sys_process_8h" kindref="compound" tooltip="OS system utilities.">sysProcess.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound" tooltip="Implementation of every system call.">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="unistd_8h" kindref="compound" tooltip="Definitions for all UNIX Standard system calls functions.">unistd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="k_malloc_8h" kindref="compound" tooltip="The kernel malloc module.">kMalloc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a5cab16b9bb408c134bba477fa1436919" kindref="member" tooltip="This function obtains read pointers of the tty.">getReadPointer</ref>(<ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*readPointer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*readCol,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*readRow);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a5c29772760b26cdfca93bc1284b60732" kindref="member" tooltip="This function obtains writer pointers of the tty.">getWritePointer</ref>(<ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*writePointer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*writeCol,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*writeRow);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1ae286c1ea11787c6fcf410fb0474c2626" kindref="member" tooltip="This function saves the reads pointers of the tty that is indicated in the signature...">setReadPointer</ref>(<ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>readPointer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>readCol,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>readRow);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1af5041dd94c379cc8189ec93b816c3a20" kindref="member" tooltip="This function saves the reads pointers of the tty that is indicated in the signature...">setWritePointer</ref>(<ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>writePointer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>writeCol,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>writeRow);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a0ecf720256fc5769d712a4e4190946f1" kindref="member" tooltip="This function prints a string in a specific tty. It checks if it has to print only...">putsTTY</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty<sp/>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a8b368b52e988f2fb5f99aeb979fe4040" kindref="member" tooltip="It prints only one character in specific tty. It verifies if the character is a control...">putCharTTY</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c,<sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inStdIn<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a9ee58440374f467ffe3fa7100485272c" kindref="member" tooltip="Create the table of ttys. The maximum of ttys is a define.">initializeTTY</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" kindref="member" tooltip="This function returns the tty id of tty that are in focus at this moment. It is a...">getFocusedTTY</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1aac09c476e825138ad51c1c5948f47748" kindref="member" tooltip="This function changes the tty focus id on the next Tty that has to be in focus. This...">changeFocusTTY</ref>(<sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>nextTty<sp/>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a5543e64588b3c8d57ef150404d96c5a7" kindref="member" tooltip="Pust all of character that are in the STDOUT and and puts in the tty STDOUT who is...">refreshStdout</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1abbca9cfc412d307fa56ca4a4095f0f87" kindref="member" tooltip="Leaves all of character that are in the KeyboradBuffer and put in the correct tty...">refreshKeyboardBufferTTY</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1aa0c166c59cfd83d43839b76afe6ac3ce" kindref="member" tooltip="This functions check if the proccess if different of init and the running process...">refreshTTY</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1aca07223864f88814919b02e6729569a5" kindref="member" tooltip="Sets the pid to the process which is in focus.">sysSetTTYFocusedProcess</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid,<sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="ttys_8h_1a99a0a65415f2b25acb0d456bc9642905" kindref="member" tooltip="Returns the pid of the process that is in this tty.">sysGetTTYFocusedProcess</ref>(<ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" kindref="member" tooltip="It clears the stdout of the tty that is in focus.">clearTTYScreen</ref>();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a77495bf57af4fe0554f55dc4be4a4600" kindref="member" tooltip="It sets the cursor in an specific position of the tty stdout.">setTTYCursorPosition</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ttys_8h_1a0ae5938446774e4ebb46d0f5120458a8" kindref="member" tooltip="It puts a character in a specific position of the tty stdout. It prints the character...">putTTYCharAtPosition</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/ttys.h"/>
+  </compounddef>
+</doxygen>

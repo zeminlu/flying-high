@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$mem_module_8h.html#a84fa8c324392664110d9da557624b7f2" title="Gets a free frame." alt="" coords="273,5,361,35"/>
+<area shape="rect" id="node5" href="$string_8h.html#aba088e716bccbc96d42da97e96316df1" title="The memcpy() function copies n bytes from memory area src to memory area dest. The..." alt="" coords="277,59,357,88"/>
+<area shape="rect" id="node7" href="$string_8h.html#a1dfdc55c5334154353963674598faf1b" title="The memset() function sets n bytes from the memory area dest with the value of c..." alt="" coords="277,112,357,141"/>
+<area shape="rect" id="node9" href="$mem_module_8h.html#a33bcef362cae377767738cdcc12fb340" title="Sets the presence bit of the pages from the given frame to the given state." alt="" coords="241,165,393,195"/>
+<area shape="rect" id="node11" href="$string_8h.html#ae6c8de953239811a34eeeab09458e55e" title="Returns the length of the string." alt="" coords="287,219,348,248"/>
+<area shape="rect" id="node13" href="$ttys_8h.html#aca07223864f88814919b02e6729569a5" title="Sets the pid to the process which is in focus." alt="" coords="217,272,417,301"/>
+</map>

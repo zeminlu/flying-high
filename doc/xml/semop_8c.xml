@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="semop_8c" kind="file">
+    <compoundname>semop.c</compoundname>
+    <includes refid="bttlship_8h" local="yes">bttlship.h</includes>
+    <incdepgraph>
+      <node id="4880">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4868" relation="include">
+        </childnode>
+      </node>
+      <node id="4863">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4886">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4884" relation="include">
+        </childnode>
+      </node>
+      <node id="4885">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4868">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4869" relation="include">
+        </childnode>
+        <childnode refid="4867" relation="include">
+        </childnode>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4870" relation="include">
+        </childnode>
+        <childnode refid="4871" relation="include">
+        </childnode>
+        <childnode refid="4874" relation="include">
+        </childnode>
+        <childnode refid="4875" relation="include">
+        </childnode>
+      </node>
+      <node id="4871">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4872" relation="include">
+        </childnode>
+        <childnode refid="4858" relation="include">
+        </childnode>
+      </node>
+      <node id="4866">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4864">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4866" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4860">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4861" relation="include">
+        </childnode>
+        <childnode refid="4862" relation="include">
+        </childnode>
+      </node>
+      <node id="4879">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4869" relation="include">
+        </childnode>
+        <childnode refid="4873" relation="include">
+        </childnode>
+        <childnode refid="4867" relation="include">
+        </childnode>
+        <childnode refid="4864" relation="include">
+        </childnode>
+      </node>
+      <node id="4881">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4864" relation="include">
+        </childnode>
+        <childnode refid="4858" relation="include">
+        </childnode>
+        <childnode refid="4866" relation="include">
+        </childnode>
+        <childnode refid="4882" relation="include">
+        </childnode>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4863" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4867" relation="include">
+        </childnode>
+        <childnode refid="4872" relation="include">
+        </childnode>
+        <childnode refid="4883" relation="include">
+        </childnode>
+        <childnode refid="4871" relation="include">
+        </childnode>
+        <childnode refid="4857" relation="include">
+        </childnode>
+      </node>
+      <node id="4870">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4882">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4881" relation="include">
+        </childnode>
+        <childnode refid="4859" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4858">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4859" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4878">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4875" relation="include">
+        </childnode>
+        <childnode refid="4877" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4869" relation="include">
+        </childnode>
+        <childnode refid="4871" relation="include">
+        </childnode>
+        <childnode refid="4868" relation="include">
+        </childnode>
+        <childnode refid="4864" relation="include">
+        </childnode>
+        <childnode refid="4879" relation="include">
+        </childnode>
+        <childnode refid="4880" relation="include">
+        </childnode>
+        <childnode refid="4881" relation="include">
+        </childnode>
+      </node>
+      <node id="4859">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4874">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4869" relation="include">
+        </childnode>
+        <childnode refid="4870" relation="include">
+        </childnode>
+      </node>
+      <node id="4873">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4869" relation="include">
+        </childnode>
+        <childnode refid="4865" relation="include">
+        </childnode>
+      </node>
+      <node id="4862">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4863" relation="include">
+        </childnode>
+      </node>
+      <node id="4875">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4876" relation="include">
+        </childnode>
+        <childnode refid="4858" relation="include">
+        </childnode>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4877" relation="include">
+        </childnode>
+        <childnode refid="4878" relation="include">
+        </childnode>
+        <childnode refid="4868" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4866" relation="include">
+        </childnode>
+        <childnode refid="4879" relation="include">
+        </childnode>
+      </node>
+      <node id="4865">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4857">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4858" relation="include">
+        </childnode>
+        <childnode refid="4864" relation="include">
+        </childnode>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4867" relation="include">
+        </childnode>
+        <childnode refid="4886" relation="include">
+        </childnode>
+        <childnode refid="4884" relation="include">
+        </childnode>
+        <childnode refid="4880" relation="include">
+        </childnode>
+        <childnode refid="4875" relation="include">
+        </childnode>
+      </node>
+      <node id="4877">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4867">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4868" relation="include">
+        </childnode>
+        <childnode refid="4885" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4878" relation="include">
+        </childnode>
+      </node>
+      <node id="4876">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4877" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4884">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4867" relation="include">
+        </childnode>
+      </node>
+      <node id="4869">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4864" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+      </node>
+      <node id="4856">
+        <label>src/semop.c</label>
+        <link refid="semop.c"/>
+        <childnode refid="4857" relation="include">
+        </childnode>
+      </node>
+      <node id="4872">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4869" relation="include">
+        </childnode>
+        <childnode refid="4873" relation="include">
+        </childnode>
+        <childnode refid="4867" relation="include">
+        </childnode>
+      </node>
+      <node id="4861">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4883">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4883" relation="include">
+        </childnode>
+        <childnode refid="4860" relation="include">
+        </childnode>
+        <childnode refid="4877" relation="include">
+        </childnode>
+        <childnode refid="4878" relation="include">
+        </childnode>
+        <childnode refid="4865" relation="include">
+        </childnode>
+        <childnode refid="4868" relation="include">
+        </childnode>
+        <childnode refid="4869" relation="include">
+        </childnode>
+        <childnode refid="4867" relation="include">
+        </childnode>
+        <childnode refid="4858" relation="include">
+        </childnode>
+        <childnode refid="4870" relation="include">
+        </childnode>
+        <childnode refid="4875" relation="include">
+        </childnode>
+        <childnode refid="4866" relation="include">
+        </childnode>
+        <childnode refid="4873" relation="include">
+        </childnode>
+        <childnode refid="4864" relation="include">
+        </childnode>
+        <childnode refid="4871" relation="include">
+        </childnode>
+        <childnode refid="4879" relation="include">
+        </childnode>
+        <childnode refid="4881" relation="include">
+        </childnode>
+        <childnode refid="4859" relation="include">
+        </childnode>
+        <childnode refid="4863" relation="include">
+        </childnode>
+        <childnode refid="4872" relation="include">
+        </childnode>
+        <childnode refid="4884" relation="include">
+        </childnode>
+        <childnode refid="4880" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="semop_8c_1af66d7960a49eb99b5260ba4d524e1ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lockTable</definition>
+        <argsstring>(int semx, int block, S_TABLE **tableS)</argsstring>
+        <name>lockTable</name>
+        <param>
+          <type>int</type>
+          <declname>semx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <briefdescription>
+<para>It decides if it has to lock the table or wait for the opponent. Peform semaphore wait/notifies: ARGUMENTS: semx 0 : table lock semaphore 1 : opponent notify semaphore block 0 : perform notify 1 : perform wait. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>semx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>It is the parameter to decide what have to do with semaphore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>It decides what have to do with the table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adress of the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/semop.c" line="20" bodyfile="/Users/Luciano/Desktop/flying-high/src/semop.c" bodystart="20" bodyend="37"/>
+        <references refid="semaphore_8h_1adf32347e1821519a91572b64a6c53101" compoundref="semaphore_8c" startline="89" endline="92">sem_signal</references>
+        <references refid="semaphore_8h_1a5d86815c472afe2d2175180835500008" compoundref="semaphore_8c" startline="84" endline="87">sem_wait</references>
+        <references refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" compoundref="bttlship_8h" startline="51">S_TABLE::semid</references>
+        <references refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" compoundref="bttlship_8h" startline="52">S_TABLE::waitSemid</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Brief. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bttlship_8h" kindref="compound" tooltip="The header file of the battleship game.">bttlship.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>Peform<sp/>semaphore<sp/>wait/notifies:</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>ARGUMENTS:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>semx<sp/><sp/><sp/><sp/>0<sp/>:<sp/>table<sp/>lock<sp/>semaphore</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>:<sp/>opponent<sp/>notify<sp/>semaphore</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>bLock<sp/><sp/><sp/>0<sp/>:<sp/>perform<sp/>notify</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>:<sp/>perform<sp/>wait</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="semop_8c_1af66d7960a49eb99b5260ba4d524e1ac8" refkind="member"><highlight class="normal"><ref refid="bttlship_8h_1af66d7960a49eb99b5260ba4d524e1ac8" kindref="member" tooltip="It decides if it has to lock the table or wait for the opponent. Peform semaphore...">lockTable</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semx,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>block,<sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>*table<sp/>=<sp/>*tableS;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!semx<sp/>){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>block<sp/>){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="semaphore_8h_1a5d86815c472afe2d2175180835500008" kindref="member" tooltip="Waits for the semaphore to be available..">sem_wait</ref>(table-&gt;<ref refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" kindref="member">semid</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="semaphore_8h_1adf32347e1821519a91572b64a6c53101" kindref="member" tooltip="Signals the given semaphore to enable it for other users.">sem_signal</ref>(table-&gt;<ref refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" kindref="member">semid</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>block<sp/>){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="semaphore_8h_1a5d86815c472afe2d2175180835500008" kindref="member" tooltip="Waits for the semaphore to be available..">sem_wait</ref>(table-&gt;<ref refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" kindref="member">waitSemid</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="semaphore_8h_1adf32347e1821519a91572b64a6c53101" kindref="member" tooltip="Signals the given semaphore to enable it for other users.">sem_signal</ref>(table-&gt;<ref refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" kindref="member">waitSemid</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>semop.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/semop.c"/>
+  </compounddef>
+</doxygen>

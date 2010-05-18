@@ -1,0 +1,146 @@
+.TH "src/schedule.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/schedule.c \- 
+.PP
+The OS scheduler module.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'schedule.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBprocess_t\fP * \fBrpgSchedule\fP ()"
+.br
+.RI "\fIThis function simulates the RPG scheduling. What this algorithm does, is that when a process achieves the maximum value of RPG, it adds it to a queue. After that the functions just find the oldest process that is waiting to be attended. \fP"
+.ti -1c
+.RI "\fBprocess_t\fP * \fBgetNextTask\fP ()"
+.br
+.RI "\fIThis function returns the next task that should be attended. \fP"
+.ti -1c
+.RI "int \fBcheckWhatAreReady\fP (void)"
+.br
+.RI "\fIThis function checks what processes are ready using the RPG Algorithim. \fP"
+.ti -1c
+.RI "void \fBincreaseRPGCounter\fP ()"
+.br
+.RI "\fIThis function increases the current rpg value of each process. \fP"
+.ti -1c
+.RI "void \fBchangeAlgorithimSchedule\fP (void)"
+.br
+.RI "\fIThis function changes the Algorithm variable, if the current algorithm is RoundRobin it changes to RPG and viceversa. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBprocess_t\fP \fBprocessTable\fP [MAX_PROCESS]"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBnextProcess\fP"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBinitProcess\fP"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBrunningProcess\fP"
+.br
+.ti -1c
+.RI "int \fBqtyProccessTable\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The OS scheduler module. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBschedule.c\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void changeAlgorithimSchedule (void)"
+.PP
+This function changes the Algorithm variable, if the current algorithm is RoundRobin it changes to RPG and viceversa. 
+.PP
+Definition at line 111 of file schedule.c.
+.SS "int checkWhatAreReady (void)"
+.PP
+This function checks what processes are ready using the RPG Algorithim. \fBReturns:\fP
+.RS 4
+the index of table process 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file schedule.c.
+.SS "\fBprocess_t\fP* getNextTask (void)"
+.PP
+This function returns the next task that should be attended. \fBReturns:\fP
+.RS 4
+The next process
+.RE
+.PP
+Use: 
+.PP
+.nf
+                        changeContext(getNextTask());
+
+.fi
+.PP
+ 
+.PP
+Definition at line 69 of file schedule.c.
+.SS "void increaseRPGCounter (void)"
+.PP
+This function increases the current rpg value of each process. 
+.PP
+Definition at line 97 of file schedule.c.
+.SS "\fBprocess_t\fP* rpgSchedule ()"
+.PP
+This function simulates the RPG scheduling. What this algorithm does, is that when a process achieves the maximum value of RPG, it adds it to a queue. After that the functions just find the oldest process that is waiting to be attended. \fBReturns:\fP
+.RS 4
+The process to be attended
+.RE
+.PP
+Use: 
+.PP
+.nf
+                 if( ALGORITHIM == RPG )
+                                return rpgSchedule();
+
+.fi
+.PP
+ 
+.PP
+Definition at line 57 of file schedule.c.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBprocess_t\fP* \fBinitProcess\fP"
+.PP
+Definition at line 18 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBnextProcess\fP"
+.PP
+Definition at line 20 of file sysProcess.c.
+.SS "\fBprocess_t\fP \fBprocessTable\fP[MAX_PROCESS]"
+.PP
+Definition at line 14 of file sysProcess.c.
+.SS "int \fBqtyProccessTable\fP"
+.PP
+Definition at line 30 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBrunningProcess\fP"
+.PP
+Definition at line 16 of file sysProcess.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

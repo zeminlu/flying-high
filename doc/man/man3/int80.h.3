@@ -1,0 +1,82 @@
+.TH "inc/int80.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/int80.h \- 
+.PP
+int 80 generic calls.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBint80\fP (int eax, void *ebx, void *ecx, void *edx)"
+.br
+.RI "\fIcopy the parameters to the processor registers. \fP"
+.ti -1c
+.RI "void * \fBint80ext\fP (int eax, void *ebx, void *ecx, void *edx, void *edi, void *esi)"
+.br
+.RI "\fIcopy the parameters to the processor registers. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+int 80 generic calls. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBint80.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void * int80 (int eax, void * ebx, void * ecx, void * edx)"
+.PP
+copy the parameters to the processor registers. \fBParameters:\fP
+.RS 4
+\fIeax\fP eax register. 
+.br
+\fIebx\fP ebx register. 
+.br
+\fIecx\fP ecx register. 
+.br
+\fIedx\fP edx register.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value returned by the function that the int 80 invoked. 
+.RE
+.PP
+
+.SS "void * int80ext (int eax, void * ebx, void * ecx, void * edx, void * edi, void * esi)"
+.PP
+copy the parameters to the processor registers. \fBParameters:\fP
+.RS 4
+\fIeax\fP eax register. 
+.br
+\fIebx\fP ebx register. 
+.br
+\fIecx\fP ecx register. 
+.br
+\fIedx\fP edx register. 
+.br
+\fIedi\fP edi register. 
+.br
+\fIesi\fP esi register.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value returned by the function that the int 80 invoked. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="libc_8c" kind="file">
+    <compoundname>libc.c</compoundname>
+    <includes refid="libc_8h" local="yes">libc.h</includes>
+    <incdepgraph>
+      <node id="4219">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4216">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4217" relation="include">
+        </childnode>
+        <childnode refid="4218" relation="include">
+        </childnode>
+      </node>
+      <node id="4214">
+        <label>libc.h</label>
+        <link refid="libc_8h"/>
+        <childnode refid="4215" relation="include">
+        </childnode>
+      </node>
+      <node id="4215">
+        <label>kc.h</label>
+        <link refid="kc_8h"/>
+        <childnode refid="4216" relation="include">
+        </childnode>
+      </node>
+      <node id="4218">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4219" relation="include">
+        </childnode>
+      </node>
+      <node id="4213">
+        <label>src/libc.c</label>
+        <link refid="libc.c"/>
+        <childnode refid="4214" relation="include">
+        </childnode>
+      </node>
+      <node id="4217">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="libc_8c_1aa839645b7336cc84b3f846d1ff5706d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void k_clear_screen</definition>
+        <argsstring>()</argsstring>
+        <name>k_clear_screen</name>
+        <briefdescription>
+<para>Brief. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting></programlisting></para><para><simplesect kind="see"><para>f1() f2() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/libc.c" line="19" bodyfile="/Users/Luciano/Desktop/flying-high/src/libc.c" bodystart="18" bodyend="29"/>
+        <references refid="kc_8h_1a112f26eec5098ceb1f28022a244dc34d" compoundref="kc_8h" startline="14">WHITE_TXT</references>
+      </memberdef>
+      <memberdef kind="function" id="libc_8c_1a35291f4e9b708f17a281f51aa524979c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup_IDT_entry</definition>
+        <argsstring>(DESCR_INT *item, byte selector, dword offset, byte access, byte cero)</argsstring>
+        <name>setup_IDT_entry</name>
+        <param>
+          <type><ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound">DESCR_INT</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>selector</declname>
+        </param>
+        <param>
+          <type>dword</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>access</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>cero</declname>
+        </param>
+        <briefdescription>
+<para>Brief. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>selector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>access</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use: <programlisting></programlisting></para><para><simplesect kind="see"><para>f1() f2() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/libc.c" line="43" bodyfile="/Users/Luciano/Desktop/flying-high/src/libc.c" bodystart="42" bodyend="49"/>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a7a3205f563ba31a30efd817ea54561fd" compoundref="types_8h" startline="353">DESCR_INT::access</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a10e7734359849a8225562be7f834bf5e" compoundref="types_8h" startline="353">DESCR_INT::cero</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a95502551327cda03ecf9272bef03280e" compoundref="types_8h" startline="355">DESCR_INT::offset_h</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1ad333e6d5d9cab6ad3726a313057c04b4" compoundref="types_8h" startline="351">DESCR_INT::offset_l</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a8abb596f01128e9ee829157242ac3275" compoundref="types_8h" startline="351">DESCR_INT::selector</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The C library module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libc_8h" kindref="compound" tooltip="The C library module.">libc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*k_clear_screen</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>Borra<sp/>la<sp/>pantalla<sp/>en<sp/>modo<sp/>texto<sp/>color.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">****************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="libc_8c_1aa839645b7336cc84b3f846d1ff5706d6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kc_8h_1aa839645b7336cc84b3f846d1ff5706d6" kindref="member" tooltip="Brief.">k_clear_screen</ref>()<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*vidmem<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>0xb8000;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(i<sp/>&lt;<sp/>(80*25*2))</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vidmem[i]=</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vidmem[i]=<ref refid="kc_8h_1a112f26eec5098ceb1f28022a244dc34d" kindref="member">WHITE_TXT</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*setup_IDT_entry</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/>Inicializa<sp/>un<sp/>descriptor<sp/>de<sp/>la<sp/>IDT</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*Recibe:<sp/>Puntero<sp/>a<sp/>elemento<sp/>de<sp/>la<sp/>IDT</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Selector<sp/>a<sp/>cargar<sp/>en<sp/>el<sp/>descriptor<sp/>de<sp/>interrupcion</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Puntero<sp/>a<sp/>rutina<sp/>de<sp/>atencion<sp/>de<sp/>interrupcion<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Derechos<sp/>de<sp/>acceso<sp/>del<sp/>segmento</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cero</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">****************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="libc_8c_1a35291f4e9b708f17a281f51aa524979c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(<ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound" tooltip="OS interrupt descriptor struct.">DESCR_INT</ref><sp/>*item,<sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/>selector,<sp/><ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref><sp/>offset,<sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/>access,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/>cero)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>item-&gt;<ref refid="struct_d_e_s_c_r___i_n_t_1a8abb596f01128e9ee829157242ac3275" kindref="member">selector</ref><sp/>=<sp/>selector;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>item-&gt;<ref refid="struct_d_e_s_c_r___i_n_t_1ad333e6d5d9cab6ad3726a313057c04b4" kindref="member">offset_l</ref><sp/>=<sp/>offset<sp/>&amp;<sp/>0xFFFF;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>item-&gt;<ref refid="struct_d_e_s_c_r___i_n_t_1a95502551327cda03ecf9272bef03280e" kindref="member">offset_h</ref><sp/>=<sp/>offset<sp/>&gt;&gt;<sp/>16;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>item-&gt;<ref refid="struct_d_e_s_c_r___i_n_t_1a7a3205f563ba31a30efd817ea54561fd" kindref="member">access</ref><sp/>=<sp/>access;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>item-&gt;<ref refid="struct_d_e_s_c_r___i_n_t_1a10e7734359849a8225562be7f834bf5e" kindref="member">cero</ref><sp/>=<sp/>cero;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/libc.c"/>
+  </compounddef>
+</doxygen>

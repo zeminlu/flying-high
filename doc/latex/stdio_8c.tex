@@ -1,0 +1,294 @@
+\hypertarget{stdio_8c}{
+\section{src/stdio.c File Reference}
+\label{stdio_8c}\index{src/stdio.c@{src/stdio.c}}
+}
+
+
+Definitions for all standard input and output and declaration of all functions to send/recive data to/from standar input/output.  
+
+
+{\ttfamily \#include \char`\"{}stdio.h\char`\"{}}\par
+Include dependency graph for stdio.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=105pt]{stdio_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stdio_8c_af6e16037bdac816060ed72c11b100cfb}{NIBBLES\_\-PER\_\-INT}~sizeof(int) $\ast$ 2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{stdio_8c_a299df7595d833020c4d9622877eba4f0}{fputi} (int i, \hyperlink{struct_f_i_l_e}{FILE} $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Writes the given integer to the given stream. \item\end{DoxyCompactList}\item 
+int \hyperlink{stdio_8c_ab478c2e59f39890f213687f1ebd59285}{fputx} (int num, \hyperlink{struct_f_i_l_e}{FILE} $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Writes the given integer as in hexadecimal format into the given stream. \item\end{DoxyCompactList}\item 
+int \hyperlink{stdio_8c_abe6299d5823dd023e610aaa619735a3f}{fputc} (int c, \hyperlink{struct_f_i_l_e}{FILE} $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Writes the given character to the given stream. \item\end{DoxyCompactList}\item 
+int \hyperlink{stdio_8c_ab11a990e4f8863a1e7736e3c1d430092}{fgetc} (\hyperlink{struct_f_i_l_e}{FILE} $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Reads a character ascii from the given stream and returns it. \item\end{DoxyCompactList}\item 
+int \hyperlink{stdio_8c_a68236e664c1f0da049b25fba1c1695f6}{fputs} (const char $\ast$s, \hyperlink{struct_f_i_l_e}{FILE} $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Writes the given string to the given stream. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{stdio_8c_a2b3df0e66b41edab3c039191fe6cc4f9}{fgets} (char $\ast$s, int size, \hyperlink{struct_f_i_l_e}{FILE} $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Reads a string of the given size from the given stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{stdio_8c_af7aa5c359f41db5ffe4a6545628c02d1}{flush} (\hyperlink{struct_f_i_l_e}{FILE} $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Flushes the given stream. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions for all standard input and output and declaration of all functions to send/recive data to/from standar input/output. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{stdio_8c_source}{stdio.c}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{stdio_8c_af6e16037bdac816060ed72c11b100cfb}{
+\index{stdio.c@{stdio.c}!NIBBLES\_\-PER\_\-INT@{NIBBLES\_\-PER\_\-INT}}
+\index{NIBBLES\_\-PER\_\-INT@{NIBBLES\_\-PER\_\-INT}!stdio.c@{stdio.c}}
+\subsubsection[{NIBBLES\_\-PER\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define NIBBLES\_\-PER\_\-INT~sizeof(int) $\ast$ 2}}
+\label{stdio_8c_af6e16037bdac816060ed72c11b100cfb}
+
+
+Definition at line 14 of file stdio.c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{stdio_8c_ab11a990e4f8863a1e7736e3c1d430092}{
+\index{stdio.c@{stdio.c}!fgetc@{fgetc}}
+\index{fgetc@{fgetc}!stdio.c@{stdio.c}}
+\subsubsection[{fgetc}]{\setlength{\rightskip}{0pt plus 5cm}int fgetc ({\bf FILE} $\ast$ {\em stream})}}
+\label{stdio_8c_ab11a990e4f8863a1e7736e3c1d430092}
+
+
+Reads a character ascii from the given stream and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stream}]The stream where to read the character from.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ascii from the read character.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{stdio_8h_abe6299d5823dd023e610aaa619735a3f}{fputc()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 53 of file stdio.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=84pt]{stdio_8c_ab11a990e4f8863a1e7736e3c1d430092_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{stdio_8c_a2b3df0e66b41edab3c039191fe6cc4f9}{
+\index{stdio.c@{stdio.c}!fgets@{fgets}}
+\index{fgets@{fgets}!stdio.c@{stdio.c}}
+\subsubsection[{fgets}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ fgets (char $\ast$ {\em s}, \/  int {\em size}, \/  {\bf FILE} $\ast$ {\em stream})}}
+\label{stdio_8c_a2b3df0e66b41edab3c039191fe6cc4f9}
+
+
+Reads a string of the given size from the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em s}]A pointer to the buffer where to write the string to. \item[{\em size}]The ammount of bytes to be read. \item[{\em stream}]The stream where to read the string from.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{stdio_8h_a68236e664c1f0da049b25fba1c1695f6}{fputs()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 77 of file stdio.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=84pt]{stdio_8c_a2b3df0e66b41edab3c039191fe6cc4f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{stdio_8c_af7aa5c359f41db5ffe4a6545628c02d1}{
+\index{stdio.c@{stdio.c}!flush@{flush}}
+\index{flush@{flush}!stdio.c@{stdio.c}}
+\subsubsection[{flush}]{\setlength{\rightskip}{0pt plus 5cm}void flush ({\bf FILE} $\ast$ {\em stream})}}
+\label{stdio_8c_af7aa5c359f41db5ffe4a6545628c02d1}
+
+
+Flushes the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stream}]The stream to be flushed. \end{DoxyParams}
+
+
+Definition at line 86 of file stdio.c.
+
+\hypertarget{stdio_8c_abe6299d5823dd023e610aaa619735a3f}{
+\index{stdio.c@{stdio.c}!fputc@{fputc}}
+\index{fputc@{fputc}!stdio.c@{stdio.c}}
+\subsubsection[{fputc}]{\setlength{\rightskip}{0pt plus 5cm}int fputc (int {\em c}, \/  {\bf FILE} $\ast$ {\em stream})}}
+\label{stdio_8c_abe6299d5823dd023e610aaa619735a3f}
+
+
+Writes the given character to the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em c}]The character ascii to be written. \item[{\em stream}]The stream where to write the character to.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{stdio_8h_ab11a990e4f8863a1e7736e3c1d430092}{fgetc()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file stdio.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=86pt]{stdio_8c_abe6299d5823dd023e610aaa619735a3f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{stdio_8c_abe6299d5823dd023e610aaa619735a3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{stdio_8c_a299df7595d833020c4d9622877eba4f0}{
+\index{stdio.c@{stdio.c}!fputi@{fputi}}
+\index{fputi@{fputi}!stdio.c@{stdio.c}}
+\subsubsection[{fputi}]{\setlength{\rightskip}{0pt plus 5cm}int fputi (int {\em i}, \/  {\bf FILE} $\ast$ {\em stream})}}
+\label{stdio_8c_a299df7595d833020c4d9622877eba4f0}
+
+
+Writes the given integer to the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em i}]The integer to write. \item[{\em stream}]The stream where to write to.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file stdio.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{stdio_8c_a299df7595d833020c4d9622877eba4f0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{stdio_8c_a68236e664c1f0da049b25fba1c1695f6}{
+\index{stdio.c@{stdio.c}!fputs@{fputs}}
+\index{fputs@{fputs}!stdio.c@{stdio.c}}
+\subsubsection[{fputs}]{\setlength{\rightskip}{0pt plus 5cm}int fputs (const char $\ast$ {\em s}, \/  {\bf FILE} $\ast$ {\em stream})}}
+\label{stdio_8c_a68236e664c1f0da049b25fba1c1695f6}
+
+
+Writes the given string to the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em s}]A null terminate string to be written. \item[{\em stream}]The stream where to write the string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{stdio_8h_a5e7ab996618ebc6b2fab4e0fa35f5a3f}{fgets()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 66 of file stdio.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=86pt]{stdio_8c_a68236e664c1f0da049b25fba1c1695f6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{stdio_8c_a68236e664c1f0da049b25fba1c1695f6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{stdio_8c_ab478c2e59f39890f213687f1ebd59285}{
+\index{stdio.c@{stdio.c}!fputx@{fputx}}
+\index{fputx@{fputx}!stdio.c@{stdio.c}}
+\subsubsection[{fputx}]{\setlength{\rightskip}{0pt plus 5cm}int fputx (int {\em num}, \/  {\bf FILE} $\ast$ {\em stream})}}
+\label{stdio_8c_ab478c2e59f39890f213687f1ebd59285}
+
+
+Writes the given integer as in hexadecimal format into the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em num}]The number to bw written. \item[{\em stream}]The stream where to write the number to.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file stdio.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{stdio_8c_ab478c2e59f39890f213687f1ebd59285_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,36 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$bin_8h.html" title="All the OS processes." alt="" coords="867,83,941,112"/>
+<area shape="rect" id="node6" href="$kernel_8h.html" title="Kernel header file." alt="" coords="431,701,529,731"/>
+<area shape="rect" id="node37" href="$exceptions_8h.html" title="Functions related with exception handling." alt="" coords="1984,701,2115,731"/>
+<area shape="rect" id="node45" href="$syscall_8h.html" title="Implementation of every system call." alt="" coords="1565,547,1667,576"/>
+<area shape="rect" id="node110" href="$kernel_depth_8h.html" title="Kernel syscalls depth utilities." alt="" coords="1913,469,2055,499"/>
+<area shape="rect" id="node11" href="$shell_8h.html" title="The shell process module." alt="" coords="663,160,748,189"/>
+<area shape="rect" id="node106" href="$bin_8c.html" title="All the OS processes." alt="" coords="1660,160,1737,189"/>
+<area shape="rect" id="node9" href="$kernel_8c.html" title="Kernel module." alt="" coords="431,779,529,808"/>
+<area shape="rect" id="node14" href="$sys_process_8h.html" title="OS system utilities." alt="" coords="1064,237,1195,267"/>
+<area shape="rect" id="node98" href="$system_8h.html" title="System reboot module." alt="" coords="469,237,576,267"/>
+<area shape="rect" id="node104" href="$shell_8c.html" title="The shell process module." alt="" coords="703,237,791,267"/>
+<area shape="rect" id="node18" href="$p_queue_p_8h.html" title="The priority queue module." alt="" coords="1071,315,1188,344"/>
+<area shape="rect" id="node20" href="$process_8h.html" title="All the process functions that invoke syscalls." alt="" coords="735,315,844,344"/>
+<area shape="rect" id="node33" href="$ttys_8h.html" title="The tty header file." alt="" coords="1708,624,1793,653"/>
+<area shape="rect" id="node93" href="$p_queue_p_8c.html" title="The priority queue module." alt="" coords="1212,315,1329,344"/>
+<area shape="rect" id="node96" href="$sys_process_8c.html" title="OS system utilities." alt="" coords="1377,315,1511,344"/>
+<area shape="rect" id="node23" href="$bttlship_8h.html" title="The header file of the battleship game." alt="" coords="240,701,347,731"/>
+<area shape="rect" id="node28" href="$k_malloc_8h.html" title="The kernel malloc module." alt="" coords="1455,392,1561,421"/>
+<area shape="rect" id="node63" href="$semaphore_8h.html" title="The OS semaphore module." alt="" coords="279,547,409,576"/>
+<area shape="rect" id="node78" href="$u_malloc_8h.html" title="User malloc module." alt="" coords="452,392,559,421"/>
+<area shape="rect" id="node90" href="$process_8c.html" title="All the process functions that invoke syscalls." alt="" coords="735,392,844,421"/>
+<area shape="rect" id="node26" href="$bttlship_8c.html" title="Battleship module." alt="" coords="239,779,348,808"/>
+<area shape="rect" id="node41" href="$keyboard__driver_8h.html" title="The keyboard driver module." alt="" coords="1712,701,1875,731"/>
+<area shape="rect" id="node61" href="$ttys_8c.html" title="The tty module implementation." alt="" coords="1603,701,1688,731"/>
+<area shape="rect" id="node43" href="$keyboard__driver_8c.html" title="src/keyboard_driver.c" alt="" coords="1712,779,1875,808"/>
+<area shape="rect" id="node49" href="$rand_8h.html" title="Random number generation module." alt="" coords="967,624,1052,653"/>
+<area shape="rect" id="node58" href="$syscall_8c.html" title="Implementation off all system calls." alt="" coords="1565,624,1667,653"/>
+<area shape="rect" id="node54" href="$rand_8c.html" title="Random number generation module." alt="" coords="967,701,1052,731"/>
+<area shape="rect" id="node68" href="$sh_memory_8h.html" title="The shared memory IPC module." alt="" coords="33,624,159,653"/>
+<area shape="rect" id="node74" href="$semaphore_8c.html" title="The OS semaphore module." alt="" coords="284,624,417,653"/>
+<area shape="rect" id="node72" href="$sh_memory_8c.html" title="The shared memory IPC module." alt="" coords="33,701,159,731"/>
+<area shape="rect" id="node81" href="$schedule_8h.html" title="The OS scheduler module." alt="" coords="543,469,660,499"/>
+<area shape="rect" id="node87" href="$schedule_8c.html" title="The OS scheduler module." alt="" coords="543,547,660,576"/>
+<area shape="rect" id="node102" href="$system_8c.html" title="System reboot module." alt="" coords="468,315,577,344"/>
+</map>

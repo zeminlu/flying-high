@@ -1,0 +1,1427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="types_8h" kind="file">
+    <compoundname>types.h</compoundname>
+    <includes refid="defs_8h" local="yes">defs.h</includes>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="bttlship_8h" local="yes">inc/bttlship.h</includedby>
+    <includedby refid="exceptions_8h" local="yes">inc/exceptions.h</includedby>
+    <includedby refid="kasm_8h" local="yes">inc/kasm.h</includedby>
+    <includedby refid="kc_8h" local="yes">inc/kc.h</includedby>
+    <includedby refid="kernel_8h" local="yes">inc/kernel.h</includedby>
+    <includedby refid="keyboard__buffer_8h" local="yes">inc/keyboard_buffer.h</includedby>
+    <includedby refid="keyboard__driver_8h" local="yes">inc/keyboard_driver.h</includedby>
+    <includedby refid="mem_module_8h" local="yes">inc/memModule.h</includedby>
+    <includedby refid="process_8h" local="yes">inc/process.h</includedby>
+    <includedby refid="queue_8h" local="yes">inc/queue.h</includedby>
+    <includedby refid="schedule_8h" local="yes">inc/schedule.h</includedby>
+    <includedby refid="semaphore_8h" local="yes">inc/semaphore.h</includedby>
+    <includedby refid="shell_8h" local="yes">inc/shell.h</includedby>
+    <includedby refid="stdio_8h" local="yes">inc/stdio.h</includedby>
+    <includedby refid="string_8h" local="yes">inc/string.h</includedby>
+    <includedby refid="syscall_8h" local="yes">inc/syscall.h</includedby>
+    <includedby refid="sys_process_8h" local="yes">inc/sysProcess.h</includedby>
+    <includedby refid="system_8h" local="yes">inc/system.h</includedby>
+    <includedby refid="ttys_8h" local="yes">inc/ttys.h</includedby>
+    <includedby refid="unistd_8h" local="yes">inc/unistd.h</includedby>
+    <includedby refid="video__driver_8h" local="yes">inc/video_driver.h</includedby>
+    <incdepgraph>
+      <node id="3871">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3868">
+        <label>inc/types.h</label>
+        <link refid="types.h"/>
+        <childnode refid="3869" relation="include">
+        </childnode>
+        <childnode refid="3870" relation="include">
+        </childnode>
+      </node>
+      <node id="3870">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3871" relation="include">
+        </childnode>
+      </node>
+      <node id="3869">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3888">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3889" relation="include">
+        </childnode>
+      </node>
+      <node id="3874">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3875" relation="include">
+        </childnode>
+      </node>
+      <node id="3904">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3884">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="3884" relation="include">
+        </childnode>
+      </node>
+      <node id="3881">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="3893">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3894" relation="include">
+        </childnode>
+      </node>
+      <node id="3887">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3879" relation="include">
+        </childnode>
+        <childnode refid="3888" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3890" relation="include">
+        </childnode>
+      </node>
+      <node id="3897">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3898" relation="include">
+        </childnode>
+      </node>
+      <node id="3898">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3921">
+        <label>inc/unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3917" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+      </node>
+      <node id="3917">
+        <label>inc/stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3884" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3882" relation="include">
+        </childnode>
+        <childnode refid="3914" relation="include">
+        </childnode>
+        <childnode refid="3878" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3900" relation="include">
+        </childnode>
+        <childnode refid="3918" relation="include">
+        </childnode>
+      </node>
+      <node id="3923">
+        <label>src/video_driver.c</label>
+        <link refid="video__driver_8c"/>
+      </node>
+      <node id="3920">
+        <label>src/string.c</label>
+        <link refid="string_8c"/>
+      </node>
+      <node id="3905">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="3903">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="3872">
+        <label>inc/types.h</label>
+        <link refid="types.h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3884" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3908" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3911" relation="include">
+        </childnode>
+        <childnode refid="3885" relation="include">
+        </childnode>
+        <childnode refid="3914" relation="include">
+        </childnode>
+        <childnode refid="3879" relation="include">
+        </childnode>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3897" relation="include">
+        </childnode>
+        <childnode refid="3892" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3917" relation="include">
+        </childnode>
+        <childnode refid="3919" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3902" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3921" relation="include">
+        </childnode>
+        <childnode refid="3922" relation="include">
+        </childnode>
+      </node>
+      <node id="3882">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+      </node>
+      <node id="3876">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3902" relation="include">
+        </childnode>
+        <childnode refid="3904" relation="include">
+        </childnode>
+      </node>
+      <node id="3906">
+        <label>inc/kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3884" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3907" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+      </node>
+      <node id="3900">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="3900" relation="include">
+        </childnode>
+      </node>
+      <node id="3902">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3903" relation="include">
+        </childnode>
+      </node>
+      <node id="3922">
+        <label>inc/video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3897" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3923" relation="include">
+        </childnode>
+      </node>
+      <node id="3877">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3878" relation="include">
+        </childnode>
+        <childnode refid="3879" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3900" relation="include">
+        </childnode>
+        <childnode refid="3901" relation="include">
+        </childnode>
+      </node>
+      <node id="3913">
+        <label>src/queue.c</label>
+        <link refid="queue_8c"/>
+      </node>
+      <node id="3909">
+        <label>inc/libc.h</label>
+        <link refid="libc_8h"/>
+        <childnode refid="3910" relation="include">
+        </childnode>
+      </node>
+      <node id="3907">
+        <label>inc/kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3887" relation="include">
+        </childnode>
+      </node>
+      <node id="3918">
+        <label>src/stdio.c</label>
+        <link refid="stdio_8c"/>
+      </node>
+      <node id="3894">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="3908">
+        <label>inc/kc.h</label>
+        <link refid="kc_8h"/>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3909" relation="include">
+        </childnode>
+      </node>
+      <node id="3885">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="3886" relation="include">
+        </childnode>
+      </node>
+      <node id="3915">
+        <label>inc/sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3882" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3916" relation="include">
+        </childnode>
+      </node>
+      <node id="3916">
+        <label>src/sysMalloc.c</label>
+        <link refid="sys_malloc_8c"/>
+      </node>
+      <node id="3883">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3884" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3885" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3891" relation="include">
+        </childnode>
+      </node>
+      <node id="3919">
+        <label>inc/string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3914" relation="include">
+        </childnode>
+        <childnode refid="3878" relation="include">
+        </childnode>
+        <childnode refid="3879" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3917" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3915" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3900" relation="include">
+        </childnode>
+        <childnode refid="3920" relation="include">
+        </childnode>
+      </node>
+      <node id="3880">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3881" relation="include">
+        </childnode>
+      </node>
+      <node id="3910">
+        <label>src/libc.c</label>
+        <link refid="libc_8c"/>
+      </node>
+      <node id="3911">
+        <label>inc/keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+      </node>
+      <node id="3879">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3882" relation="include">
+        </childnode>
+        <childnode refid="3892" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3899" relation="include">
+        </childnode>
+      </node>
+      <node id="3901">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="3912">
+        <label>inc/queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3885" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3913" relation="include">
+        </childnode>
+      </node>
+      <node id="3899">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="3895">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="3892">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3893" relation="include">
+        </childnode>
+        <childnode refid="3895" relation="include">
+        </childnode>
+      </node>
+      <node id="3890">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="3875">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="3889">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="3891">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="3914">
+        <label>inc/memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3907" relation="include">
+        </childnode>
+        <childnode refid="3882" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3915" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+      </node>
+      <node id="3886">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="3896">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3897" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+      </node>
+      <node id="3873">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3874" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3905" relation="include">
+        </childnode>
+      </node>
+      <node id="3878">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpage" prot="public">page</innerclass>
+    <innerclass refid="structdirectory" prot="public">directory</innerclass>
+    <innerclass refid="structframe" prot="public">frame</innerclass>
+    <innerclass refid="structmem_area" prot="public">memArea</innerclass>
+    <innerclass refid="struct_f_i_l_e" prot="public">FILE</innerclass>
+    <innerclass refid="structheap_status" prot="public">heapStatus</innerclass>
+    <innerclass refid="structprocess__t" prot="public">process_t</innerclass>
+    <innerclass refid="structstd_in_t_t_y" prot="public">stdInTTY</innerclass>
+    <innerclass refid="structstd_out_t_t_y" prot="public">stdOutTTY</innerclass>
+    <innerclass refid="structtty__s" prot="public">tty_s</innerclass>
+    <innerclass refid="structsys_t_t_y" prot="public">sysTTY</innerclass>
+    <innerclass refid="structcommand_t" prot="public">commandT</innerclass>
+    <innerclass refid="structproperty_t" prot="public">propertyT</innerclass>
+    <innerclass refid="structdata_slot_shell" prot="public">dataSlotShell</innerclass>
+    <innerclass refid="struct_d_e_s_c_r___s_e_g" prot="public">DESCR_SEG</innerclass>
+    <innerclass refid="struct_d_e_s_c_r___i_n_t" prot="public">DESCR_INT</innerclass>
+    <innerclass refid="struct_i_d_t_r" prot="public">IDTR</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="types_8h_1ab287c195e026dd24b42c98d06af3ce43" prot="public" static="no">
+        <name>SYSCALL_IDS</name>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a45630061b95cf610bb10ebd15248633a" prot="public">
+          <name>_SYS_WRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a1a8beed37be4eae76d81dc8b326e349e" prot="public">
+          <name>_SYS_READ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a26c795fae17bb83a8db0e9a8775f038f" prot="public">
+          <name>_SYS_MEMMAP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a55d7e6da5bfb44274939efdb1706c72b" prot="public">
+          <name>_SYS_CREATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a178d74416ae12f4160afda433bff2cdd" prot="public">
+          <name>_SYS_EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad04962e118d92d142d12447c7f57c6ac" prot="public">
+          <name>_SYS_SET_TTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4bcf28e3d1d1a5a0bbbefcf831081ba4" prot="public">
+          <name>_SYS_GET_TTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43adf8f337f7cd4bbfb7f750b8811813bf0" prot="public">
+          <name>_SYS_GET_PID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad6487098d4e51fc635ab823fb66d93d2" prot="public">
+          <name>_SYS_GET_PPID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a8b5b2b1ce117ff19f729c1cb6d207544" prot="public">
+          <name>_SYS_WAIT_PID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a8fd0e4eb19b4ba515c50beb190265a75" prot="public">
+          <name>_SYS_KILL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a2e55b24bd0bce649369d7b9dbbfd4139" prot="public">
+          <name>_SYS_FREAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a0b9c1211239cfeb58410d970f6ec6df0" prot="public">
+          <name>_SYS_FWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a7671988973f512e3a4a146a492bafbd6" prot="public">
+          <name>_SYS_GET_TTY_FP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a0a40addd8fef380942bd73c27d4a05bd" prot="public">
+          <name>_SYS_SET_TTY_FP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43aad35ded9ade9adffc5799de4bbf9a9ef" prot="public">
+          <name>_SYS_SHMGET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4dfea9bd4999361e67a6e7b6c90ee37f" prot="public">
+          <name>_SYS_SHMAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad759df680d924dc4e24c190dfc1023ce" prot="public">
+          <name>_SYS_SHM_DETACH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a3d8c8d58c8d93f421df06d22a2fee661" prot="public">
+          <name>_SYS_SEM_GET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a77aa510ee867b35c7fc08192d3aa91cf" prot="public">
+          <name>_SYS_SEM_FREE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43ab736039b36e06b1498250d40ef7f8dd6" prot="public">
+          <name>_SYS_SEM_WAIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a374d238db5f4d6c23fdb2fca1af57268" prot="public">
+          <name>_SYS_SEM_SIGNAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a58d28b7d0c79fbcdbd26f945bbc50c14" prot="public">
+          <name>_SYS_WAIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a37b02b0df158689aa7b290414ec756d6" prot="public">
+          <name>_SYS_SET_LEVEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a96393cc9ebd47a328594804fede2da38" prot="public">
+          <name>_SYS_GET_LEVEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a1effbd4915c587f22a417daebc9286f3" prot="public">
+          <name>_SYS_GET_PRIO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a5ab08eea20e4c08adcdd078a4eb31c36" prot="public">
+          <name>_SYS_SET_PRIO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad5386762707cd9dca45ad3c3dddf475a" prot="public">
+          <name>_SYS_TIME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a5df532ba7d0d586052cd588be1d9ec74" prot="public">
+          <name>_SYS_SET_ATOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a08cf8eec7c41604e74ad3aef1f8307c3" prot="public">
+          <name>_SYS_UPTIME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4af401b2e4c7b95817a502929adca4e3" prot="public">
+          <name>_SYS_SET_TTY_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad8d0c4e8d31923068e273fbd2d50888f" prot="public">
+          <name>_SYS_GET_TTY_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The Syscall id&apos;s enum. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="179" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="179" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="enum" id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9" prot="public" static="no">
+        <name>STATES</name>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a1061be6c3fb88d32829cba6f6b2be304" prot="public">
+          <name>RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" prot="public">
+          <name>READY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" prot="public">
+          <name>BLOCKED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a2ab3b1e8acf4975677202367f5bb0c21" prot="public">
+          <name>WAITING_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a407e57f0265d25fbfa718bb4d17fc356" prot="public">
+          <name>WAITING_TIME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a61a718eb0f51f850ecc7985cba8b7c4b" prot="public">
+          <name>WAITING_PID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a240c1965a48eaf409ba68c4cc9462ac5" prot="public">
+          <name>TERMINATED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a11fd9ca455f92c69c084484d5cd803c2" prot="public">
+          <name>DEAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The process states enum. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="218" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="218" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>Keycode</definition>
+        <argsstring></argsstring>
+        <name>Keycode</name>
+        <briefdescription>
+<para>Keycode typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="24" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>size_t</definition>
+        <argsstring></argsstring>
+        <name>size_t</name>
+        <briefdescription>
+<para>size_t typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="30" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a1bd78dbcdb69d819cb6ea4dfa78daaec" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>ssize_t</definition>
+        <argsstring></argsstring>
+        <name>ssize_t</name>
+        <briefdescription>
+<para>ssize_t typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="36" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" prot="public" static="no">
+        <type>int</type>
+        <definition>pid_t</definition>
+        <argsstring></argsstring>
+        <name>pid_t</name>
+        <briefdescription>
+<para>pid_t typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="42" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a158b5efbc244b8995c439d60c976c818" prot="public" static="no">
+        <type>int</type>
+        <definition>key_t</definition>
+        <argsstring></argsstring>
+        <name>key_t</name>
+        <briefdescription>
+<para>key_t typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="48" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a10bbb7176245baeab9f398547c410779" prot="public" static="no">
+        <type>int</type>
+        <definition>tty_t</definition>
+        <argsstring></argsstring>
+        <name>tty_t</name>
+        <briefdescription>
+<para>tty_t typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="54" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" prot="public" static="no">
+        <type>void(</type>
+        <definition>pfunc_t</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>pfunc_t</name>
+        <briefdescription>
+<para>pfunc_t typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="60" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a76113662e059e0926a92c5b15c098f4a" prot="public" static="no">
+        <type>struct <ref refid="structpage" kindref="compound">page</ref></type>
+        <definition>typedef struct page  page_t</definition>
+        <argsstring></argsstring>
+        <name>page_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="76"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1abb2d2ad747ee7e9d3a5711afce722a2c" prot="public" static="no">
+        <type><ref refid="structpage__t" kindref="compound">page_t</ref></type>
+        <definition>typedef page_t pageTable_t[PAGE_ENTRIES_PER_TABLE]</definition>
+        <argsstring>[PAGE_ENTRIES_PER_TABLE]</argsstring>
+        <name>pageTable_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="82" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a5bcce9a0f88de978b2f8f399a510b713" prot="public" static="no">
+        <type>struct <ref refid="structdirectory" kindref="compound">directory</ref></type>
+        <definition>typedef struct directory  directory_t</definition>
+        <argsstring></argsstring>
+        <name>directory_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="91"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a542f5dcb03ae8f6cace8920d0bc727cf" prot="public" static="no">
+        <type>struct <ref refid="structframe" kindref="compound">frame</ref></type>
+        <definition>typedef struct frame  frame_t</definition>
+        <argsstring></argsstring>
+        <name>frame_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="100"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1acc09fb52f760a85d09ca5bb6f6668bed" prot="public" static="no">
+        <type>struct <ref refid="structmem_area" kindref="compound">memArea</ref></type>
+        <definition>typedef struct memArea  memArea_t</definition>
+        <argsstring></argsstring>
+        <name>memArea_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="110"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1ac41f94c803b8edb27e83af69d900ca7a" prot="public" static="no">
+        <type><ref refid="structframe__t" kindref="compound">frame_t</ref></type>
+        <definition>typedef frame_t framesTable_t[TOTAL_FRAMES_QTY]</definition>
+        <argsstring>[TOTAL_FRAMES_QTY]</argsstring>
+        <name>framesTable_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="116" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a6308924ddf22587fa167e9deaa2a2d95" prot="public" static="no">
+        <type>struct <ref refid="structheap_status" kindref="compound">heapStatus</ref></type>
+        <definition>typedef struct heapStatus  heapStatus</definition>
+        <argsstring></argsstring>
+        <name>heapStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="137"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a83724a69fb4b48a34e05eed9f09eadba" prot="public" static="no">
+        <type>struct <ref refid="structprocess__t" kindref="compound">process_t</ref></type>
+        <definition>typedef struct process_t  process_t</definition>
+        <argsstring></argsstring>
+        <name>process_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="173"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a35162d5f5b3ee76b2fee81dafc46cda9" prot="public" static="no">
+        <type>struct <ref refid="structstd_in_t_t_y" kindref="compound">stdInTTY</ref></type>
+        <definition>typedef struct stdInTTY stdInTTY</definition>
+        <argsstring></argsstring>
+        <name>stdInTTY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="236"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1afb80ea4715d679f42cfc1b5c96af8e2a" prot="public" static="no">
+        <type>struct <ref refid="structstd_out_t_t_y" kindref="compound">stdOutTTY</ref></type>
+        <definition>typedef struct stdOutTTY stdOutTTY</definition>
+        <argsstring></argsstring>
+        <name>stdOutTTY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="246"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1aa99fba07179aa80f16f31690b2f859d3" prot="public" static="no">
+        <type>struct <ref refid="structtty__s" kindref="compound">tty_s</ref></type>
+        <definition>typedef struct tty_s tty_s</definition>
+        <argsstring></argsstring>
+        <name>tty_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="264"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a92eb03362dbba4354f05b0761d295087" prot="public" static="no">
+        <type>struct <ref refid="structsys_t_t_y" kindref="compound">sysTTY</ref></type>
+        <definition>typedef struct sysTTY sysTTY</definition>
+        <argsstring></argsstring>
+        <name>sysTTY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="274"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a4688631f0fdd9ac08d416e42573c9cf7" prot="public" static="no">
+        <type>void(*</type>
+        <definition>shellFuncT</definition>
+        <argsstring>)(char *)</argsstring>
+        <name>shellFuncT</name>
+        <briefdescription>
+<para>The shellFuncT typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="282" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a2551d4120f69e82950c9a349c650453d" prot="public" static="no">
+        <type>int(*</type>
+        <definition>pFuncT</definition>
+        <argsstring>)(char *)</argsstring>
+        <name>pFuncT</name>
+        <briefdescription>
+<para>the pFuncT typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="298" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1acdd4fbe88e38c972d3e89807914317c9" prot="public" static="no">
+        <type><ref refid="structdata_slot_shell" kindref="compound">dataSlotShell</ref> *</type>
+        <definition>dataShell</definition>
+        <argsstring></argsstring>
+        <name>dataShell</name>
+        <briefdescription>
+<para>The shell data struct typedef. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="326" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definition for system dependent types. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_TYPES_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_TYPES_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="defs_8h" kindref="compound" tooltip="OS inner defines.">defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound" tooltip="OS configuration defines.">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Type<sp/>definitions</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member" tooltip="size_t typedef.">size_t</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="types_8h_1a1bd78dbcdb69d819cb6ea4dfa78daaec" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a1bd78dbcdb69d819cb6ea4dfa78daaec" kindref="member" tooltip="ssize_t typedef.">ssize_t</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="types_8h_1a158b5efbc244b8995c439d60c976c818" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="types_8h_1a10bbb7176245baeab9f398547c410779" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(<ref refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" kindref="member" tooltip="pfunc_t typedef.">pfunc_t</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structpage" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpage" kindref="compound">page</ref><sp/>{</highlight></codeline>
+<codeline lineno="67" refid="structpage_1abc4c133346e4b24e2e71fe80ffc39a6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1abc4c133346e4b24e2e71fe80ffc39a6f" kindref="member">present</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="68" refid="structpage_1a053ea5deda2f64604e4541bf626bef9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1a053ea5deda2f64604e4541bf626bef9c" kindref="member">writeable</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="69" refid="structpage_1aaf4a05f547280bd4819e5df8c4523cd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1aaf4a05f547280bd4819e5df8c4523cd1" kindref="member">user</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="70" refid="structpage_1a8bcb7dbeb8dba19debc9a4a062f8a6bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1a8bcb7dbeb8dba19debc9a4a062f8a6bc" kindref="member">directWrite</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="71" refid="structpage_1afed734c6ffccf36d8318903bfe4e4e1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1afed734c6ffccf36d8318903bfe4e4e1b" kindref="member">disableCache</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="72" refid="structpage_1ad9199508706a6aaec358e5200bb389c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1ad9199508706a6aaec358e5200bb389c7" kindref="member">accessed</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="73" refid="structpage_1a930a1ab0130f619f847727300b9d156a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1a930a1ab0130f619f847727300b9d156a" kindref="member">dirty</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="74" refid="structpage_1a05d5cbcb44f437341bd9fa37d589aced" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1a05d5cbcb44f437341bd9fa37d589aced" kindref="member">reserved</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>5;</highlight></codeline>
+<codeline lineno="75" refid="structpage_1a2f55ff1f6cd45ca1b6431493ab5614eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpage_1a2f55ff1f6cd45ca1b6431493ab5614eb" kindref="member">address</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>20;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/><ref refid="structpage__t" kindref="compound" tooltip="The paging page struct.">page_t</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="types_8h_1abb2d2ad747ee7e9d3a5711afce722a2c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structpage__t" kindref="compound" tooltip="The paging page struct.">page_t</ref><sp/><ref refid="structpage_table__t" kindref="compound" tooltip="The page table typedef.">pageTable_t</ref>[<ref refid="defs_8h_1a8e5feaae0050abc2f048607651293efe" kindref="member" tooltip="DefineBrief.">PAGE_ENTRIES_PER_TABLE</ref>];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structdirectory" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdirectory" kindref="compound">directory</ref><sp/>{</highlight></codeline>
+<codeline lineno="89" refid="structdirectory_1a3e0d7ce1ada814ee34fecb417f482914" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpage_table__t" kindref="compound" tooltip="The page table typedef.">pageTable_t</ref><sp/><ref refid="structdirectory_1a3e0d7ce1ada814ee34fecb417f482914" kindref="member">tables</ref>[<ref refid="defs_8h_1a2fe5b1c83a789cd19496b550290a10e2" kindref="member" tooltip="DefineBrief.">PAGE_TABLES_QTY</ref>];</highlight></codeline>
+<codeline lineno="90" refid="structdirectory_1ace546e6a880b7429f91ee63ec5b6f4ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpage_table__t" kindref="compound" tooltip="The page table typedef.">pageTable_t</ref><sp/><ref refid="structdirectory_1ace546e6a880b7429f91ee63ec5b6f4ca" kindref="member">pageDirectory</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/><ref refid="structdirectory__t" kindref="compound" tooltip="The page directory typedef.">directory_t</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="structframe" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structframe" kindref="compound">frame</ref>{</highlight></codeline>
+<codeline lineno="98" refid="structframe_1a2602074f4e3c3e245e59f512aa565fcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structframe_1a2602074f4e3c3e245e59f512aa565fcc" kindref="member">assigned</ref>;</highlight></codeline>
+<codeline lineno="99" refid="structframe_1a2f55ff1f6cd45ca1b6431493ab5614eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structframe_1a2f55ff1f6cd45ca1b6431493ab5614eb" kindref="member">address</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}<sp/><ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="structmem_area" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmem_area" kindref="compound">memArea</ref>{</highlight></codeline>
+<codeline lineno="107" refid="structmem_area_1ab96816d317aa5196e2ef198d9a8d621b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structmem_area_1ab96816d317aa5196e2ef198d9a8d621b" kindref="member">address</ref>;</highlight></codeline>
+<codeline lineno="108" refid="structmem_area_1a854352f53b148adc24983a58a1866d66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structmem_area_1a854352f53b148adc24983a58a1866d66" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="109" refid="structmem_area_1aa781caae63dbdaa07fcac17a08e4f048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="structmem_area_1aa781caae63dbdaa07fcac17a08e4f048" kindref="member">allocp</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}<sp/><ref refid="structmem_area__t" kindref="compound" tooltip="The mem area malloc struct.">memArea_t</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="types_8h_1ac41f94c803b8edb27e83af69d900ca7a" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/><ref refid="structframes_table__t" kindref="compound" tooltip="The frames table typedef.">framesTable_t</ref>[<ref refid="defs_8h_1a7f80e4b553d435a097d07c74652ee861" kindref="member" tooltip="DefineBrief.">TOTAL_FRAMES_QTY</ref>];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="struct_f_i_l_e" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123" refid="struct_f_i_l_e_1a6f8059414f0228f0256115e024eeed4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd;</highlight></codeline>
+<codeline lineno="124" refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>buffer;</highlight></codeline>
+<codeline lineno="125" refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>ptr;</highlight></codeline>
+<codeline lineno="126" refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag;</highlight></codeline>
+<codeline lineno="127" refid="struct_f_i_l_e_1a7be887a2ca0a258cf6b368d32fd87487" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bufferSize;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}<sp/><ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="structheap_status" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheap_status" kindref="compound" tooltip="The heap status struct.">heapStatus</ref>{</highlight></codeline>
+<codeline lineno="135" refid="structheap_status_1aa6ddfc2b6fa7dd2f05f6226e7d41d3a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structheap_status_1aa6ddfc2b6fa7dd2f05f6226e7d41d3a2" kindref="member">asigment</ref>;</highlight></codeline>
+<codeline lineno="136" refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmem_area__t" kindref="compound" tooltip="The mem area malloc struct.">memArea_t</ref><sp/><ref refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" kindref="member">mallocMem</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structheap_status" kindref="compound" tooltip="The heap status struct.">heapStatus</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structprocess__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="144" refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref>;</highlight></codeline>
+<codeline lineno="145" refid="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" kindref="member">ppid</ref>;</highlight></codeline>
+<codeline lineno="146" refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" kindref="member">gid</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/><ref refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" kindref="member">tty</ref>;</highlight></codeline>
+<codeline lineno="148" refid="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" kindref="member">childs</ref>[<ref refid="config_8h_1aca2d241a951204f1f8e2d905f162dcbe" kindref="member" tooltip="The maximum amount of childs that a process could have.">MAX_CHILDS</ref>];</highlight></codeline>
+<codeline lineno="149" refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" kindref="member">childsQty</ref>;</highlight></codeline>
+<codeline lineno="150" refid="structprocess__t_1a69756b34768c5818fb406d341c9b3e74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1a69756b34768c5818fb406d341c9b3e74" kindref="member">name</ref>[<ref refid="config_8h_1ad49d6c18040b4ee47b8db7a2aeccc960" kindref="member" tooltip="The maximum length of process name.">MAX_PROCESS_NAME</ref><sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="151" refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="152" refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>*<ref refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" kindref="member">files</ref>[<ref refid="config_8h_1a2c5eecb22513a88c24ae5831a3265e54" kindref="member" tooltip="The maximum amount of files.">MAX_FILES</ref>];</highlight></codeline>
+<codeline lineno="153" refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" kindref="member">rpgPrior</ref>;</highlight></codeline>
+<codeline lineno="154" refid="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" kindref="member">rpgOld</ref>;</highlight></codeline>
+<codeline lineno="155" refid="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" kindref="member">tickCounter</ref>;</highlight></codeline>
+<codeline lineno="156" refid="structprocess__t_1ac7aa08806d7be189514d2daaf83e5b72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1ac7aa08806d7be189514d2daaf83e5b72" kindref="member">cpuPercent</ref>;</highlight></codeline>
+<codeline lineno="157" refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" kindref="member">priority</ref>;</highlight></codeline>
+<codeline lineno="158" refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" kindref="member">level</ref>;</highlight></codeline>
+<codeline lineno="159" refid="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" kindref="member">waitingPid</ref>;</highlight></codeline>
+<codeline lineno="160" refid="structprocess__t_1a51c991682921a9f2a4de5cf819c29f17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="structprocess__t_1a51c991682921a9f2a4de5cf819c29f17" kindref="member">sleepingPid</ref>;</highlight></codeline>
+<codeline lineno="161" refid="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" kindref="member">waitedStatus</ref>;</highlight></codeline>
+<codeline lineno="162" refid="structprocess__t_1a27f83ceda788165817cb18a475c91062" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structprocess__t_1a27f83ceda788165817cb18a475c91062" kindref="member">ebp</ref>;</highlight></codeline>
+<codeline lineno="163" refid="structprocess__t_1a9a4b64202371e10f27f3769b73537182" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structprocess__t_1a9a4b64202371e10f27f3769b73537182" kindref="member">esp</ref>;</highlight></codeline>
+<codeline lineno="164" refid="structprocess__t_1afc0da95553742561773d762fa905fdab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structprocess__t_1afc0da95553742561773d762fa905fdab" kindref="member">stack</ref>;</highlight></codeline>
+<codeline lineno="165" refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" kindref="member">heap</ref>;</highlight></codeline>
+<codeline lineno="166" refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/>*<ref refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" kindref="member">sFrame</ref>;</highlight></codeline>
+<codeline lineno="167" refid="structprocess__t_1afa88d15da39ad6f87338267449baaa26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/>*<ref refid="structprocess__t_1afa88d15da39ad6f87338267449baaa26" kindref="member">pFrame</ref>;</highlight></codeline>
+<codeline lineno="168" refid="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/>*<ref refid="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" kindref="member">hFrame</ref>;</highlight></codeline>
+<codeline lineno="169" refid="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" kindref="member">atomicity</ref>;</highlight></codeline>
+<codeline lineno="170" refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" kindref="member">ttyMode</ref>;</highlight></codeline>
+<codeline lineno="171" refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structheap_status" kindref="compound" tooltip="The heap status struct.">heapStatus</ref><sp/><ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}<sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43" kindref="member" tooltip="The Syscall id&amp;#39;s enum.">SYSCALL_IDS</ref>{</highlight></codeline>
+<codeline lineno="180" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a45630061b95cf610bb10ebd15248633a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a45630061b95cf610bb10ebd15248633a" kindref="member">_SYS_WRITE</ref>,</highlight></codeline>
+<codeline lineno="181" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a1a8beed37be4eae76d81dc8b326e349e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a1a8beed37be4eae76d81dc8b326e349e" kindref="member">_SYS_READ</ref>,</highlight></codeline>
+<codeline lineno="182" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a26c795fae17bb83a8db0e9a8775f038f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a26c795fae17bb83a8db0e9a8775f038f" kindref="member">_SYS_MEMMAP</ref>,</highlight></codeline>
+<codeline lineno="183" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a55d7e6da5bfb44274939efdb1706c72b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a55d7e6da5bfb44274939efdb1706c72b" kindref="member">_SYS_CREATE</ref>,</highlight></codeline>
+<codeline lineno="184" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a178d74416ae12f4160afda433bff2cdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a178d74416ae12f4160afda433bff2cdd" kindref="member">_SYS_EXIT</ref>,</highlight></codeline>
+<codeline lineno="185" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad04962e118d92d142d12447c7f57c6ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad04962e118d92d142d12447c7f57c6ac" kindref="member">_SYS_SET_TTY</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4bcf28e3d1d1a5a0bbbefcf831081ba4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4bcf28e3d1d1a5a0bbbefcf831081ba4" kindref="member">_SYS_GET_TTY</ref>,</highlight></codeline>
+<codeline lineno="187" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43adf8f337f7cd4bbfb7f750b8811813bf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43adf8f337f7cd4bbfb7f750b8811813bf0" kindref="member">_SYS_GET_PID</ref>,</highlight></codeline>
+<codeline lineno="188" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad6487098d4e51fc635ab823fb66d93d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad6487098d4e51fc635ab823fb66d93d2" kindref="member">_SYS_GET_PPID</ref>,</highlight></codeline>
+<codeline lineno="189" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a8b5b2b1ce117ff19f729c1cb6d207544" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a8b5b2b1ce117ff19f729c1cb6d207544" kindref="member">_SYS_WAIT_PID</ref>,</highlight></codeline>
+<codeline lineno="190" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a8fd0e4eb19b4ba515c50beb190265a75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a8fd0e4eb19b4ba515c50beb190265a75" kindref="member">_SYS_KILL</ref>,</highlight></codeline>
+<codeline lineno="191" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a2e55b24bd0bce649369d7b9dbbfd4139" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a2e55b24bd0bce649369d7b9dbbfd4139" kindref="member">_SYS_FREAD</ref>,</highlight></codeline>
+<codeline lineno="192" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a0b9c1211239cfeb58410d970f6ec6df0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a0b9c1211239cfeb58410d970f6ec6df0" kindref="member">_SYS_FWRITE</ref>,</highlight></codeline>
+<codeline lineno="193" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a7671988973f512e3a4a146a492bafbd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a7671988973f512e3a4a146a492bafbd6" kindref="member">_SYS_GET_TTY_FP</ref>,</highlight></codeline>
+<codeline lineno="194" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a0a40addd8fef380942bd73c27d4a05bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a0a40addd8fef380942bd73c27d4a05bd" kindref="member">_SYS_SET_TTY_FP</ref>,</highlight></codeline>
+<codeline lineno="195" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43aad35ded9ade9adffc5799de4bbf9a9ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43aad35ded9ade9adffc5799de4bbf9a9ef" kindref="member">_SYS_SHMGET</ref>,</highlight></codeline>
+<codeline lineno="196" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4dfea9bd4999361e67a6e7b6c90ee37f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4dfea9bd4999361e67a6e7b6c90ee37f" kindref="member">_SYS_SHMAT</ref>,</highlight></codeline>
+<codeline lineno="197" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad759df680d924dc4e24c190dfc1023ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad759df680d924dc4e24c190dfc1023ce" kindref="member">_SYS_SHM_DETACH</ref>,</highlight></codeline>
+<codeline lineno="198" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a3d8c8d58c8d93f421df06d22a2fee661" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a3d8c8d58c8d93f421df06d22a2fee661" kindref="member">_SYS_SEM_GET</ref>,</highlight></codeline>
+<codeline lineno="199" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a77aa510ee867b35c7fc08192d3aa91cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a77aa510ee867b35c7fc08192d3aa91cf" kindref="member">_SYS_SEM_FREE</ref>,</highlight></codeline>
+<codeline lineno="200" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ab736039b36e06b1498250d40ef7f8dd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ab736039b36e06b1498250d40ef7f8dd6" kindref="member">_SYS_SEM_WAIT</ref>,</highlight></codeline>
+<codeline lineno="201" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a374d238db5f4d6c23fdb2fca1af57268" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a374d238db5f4d6c23fdb2fca1af57268" kindref="member">_SYS_SEM_SIGNAL</ref>,</highlight></codeline>
+<codeline lineno="202" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a58d28b7d0c79fbcdbd26f945bbc50c14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a58d28b7d0c79fbcdbd26f945bbc50c14" kindref="member">_SYS_WAIT</ref>,</highlight></codeline>
+<codeline lineno="203" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a37b02b0df158689aa7b290414ec756d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a37b02b0df158689aa7b290414ec756d6" kindref="member">_SYS_SET_LEVEL</ref>,</highlight></codeline>
+<codeline lineno="204" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a96393cc9ebd47a328594804fede2da38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a96393cc9ebd47a328594804fede2da38" kindref="member">_SYS_GET_LEVEL</ref>,</highlight></codeline>
+<codeline lineno="205" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a1effbd4915c587f22a417daebc9286f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a1effbd4915c587f22a417daebc9286f3" kindref="member">_SYS_GET_PRIO</ref>,</highlight></codeline>
+<codeline lineno="206" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a5ab08eea20e4c08adcdd078a4eb31c36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a5ab08eea20e4c08adcdd078a4eb31c36" kindref="member">_SYS_SET_PRIO</ref>,</highlight></codeline>
+<codeline lineno="207" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad5386762707cd9dca45ad3c3dddf475a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad5386762707cd9dca45ad3c3dddf475a" kindref="member">_SYS_TIME</ref>,</highlight></codeline>
+<codeline lineno="208" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a5df532ba7d0d586052cd588be1d9ec74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a5df532ba7d0d586052cd588be1d9ec74" kindref="member">_SYS_SET_ATOM</ref>,</highlight></codeline>
+<codeline lineno="209" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a08cf8eec7c41604e74ad3aef1f8307c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a08cf8eec7c41604e74ad3aef1f8307c3" kindref="member">_SYS_UPTIME</ref>,</highlight></codeline>
+<codeline lineno="210" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4af401b2e4c7b95817a502929adca4e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4af401b2e4c7b95817a502929adca4e3" kindref="member">_SYS_SET_TTY_MODE</ref>,</highlight></codeline>
+<codeline lineno="211" refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad8d0c4e8d31923068e273fbd2d50888f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad8d0c4e8d31923068e273fbd2d50888f" kindref="member">_SYS_GET_TTY_MODE</ref></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9" kindref="member" tooltip="The process states enum.">STATES</ref>{</highlight></codeline>
+<codeline lineno="219" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a1061be6c3fb88d32829cba6f6b2be304" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a1061be6c3fb88d32829cba6f6b2be304" kindref="member">RUNNING</ref>,</highlight></codeline>
+<codeline lineno="220" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" kindref="member">READY</ref>,</highlight></codeline>
+<codeline lineno="221" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" kindref="member">BLOCKED</ref>,</highlight></codeline>
+<codeline lineno="222" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a2ab3b1e8acf4975677202367f5bb0c21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a2ab3b1e8acf4975677202367f5bb0c21" kindref="member">WAITING_CHILD</ref>,</highlight></codeline>
+<codeline lineno="223" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a407e57f0265d25fbfa718bb4d17fc356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a407e57f0265d25fbfa718bb4d17fc356" kindref="member">WAITING_TIME</ref>,</highlight></codeline>
+<codeline lineno="224" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a61a718eb0f51f850ecc7985cba8b7c4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a61a718eb0f51f850ecc7985cba8b7c4b" kindref="member">WAITING_PID</ref>,</highlight></codeline>
+<codeline lineno="225" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a240c1965a48eaf409ba68c4cc9462ac5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a240c1965a48eaf409ba68c4cc9462ac5" kindref="member">TERMINATED</ref>,</highlight></codeline>
+<codeline lineno="226" refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a11fd9ca455f92c69c084484d5cd803c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a11fd9ca455f92c69c084484d5cd803c2" kindref="member">DEAD</ref></highlight></codeline>
+<codeline lineno="227"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="structstd_in_t_t_y" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structstd_in_t_t_y" kindref="compound" tooltip="The tty stdin struct.">stdInTTY</ref>{</highlight></codeline>
+<codeline lineno="234" refid="structstd_in_t_t_y_1adbc1696a6e5a5d97b6761336fc185945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structstd_in_t_t_y_1adbc1696a6e5a5d97b6761336fc185945" kindref="member">stdInBuffer</ref>;</highlight></codeline>
+<codeline lineno="235" refid="structstd_in_t_t_y_1ada738b143166d2de18a92ff55801f41b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structstd_in_t_t_y_1ada738b143166d2de18a92ff55801f41b" kindref="member">writeOffset</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}<ref refid="structstd_in_t_t_y" kindref="compound" tooltip="The tty stdin struct.">stdInTTY</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="structstd_out_t_t_y" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structstd_out_t_t_y" kindref="compound" tooltip="The tty stdout struct.">stdOutTTY</ref>{</highlight></codeline>
+<codeline lineno="243" refid="structstd_out_t_t_y_1aef253d03c960d4ee76bc0f0f84236f8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structstd_out_t_t_y_1aef253d03c960d4ee76bc0f0f84236f8b" kindref="member">stdOutBuffer</ref>;</highlight></codeline>
+<codeline lineno="244" refid="structstd_out_t_t_y_1a07f2fe2975e6c3ee1e728566ec50cfab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structstd_out_t_t_y_1a07f2fe2975e6c3ee1e728566ec50cfab" kindref="member">begin</ref>;</highlight></codeline>
+<codeline lineno="245" refid="structstd_out_t_t_y_1a69c1bb32d9b06f32161aff7f1c822c97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structstd_out_t_t_y_1a69c1bb32d9b06f32161aff7f1c822c97" kindref="member">end</ref>;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}<ref refid="structstd_out_t_t_y" kindref="compound" tooltip="The tty stdout struct.">stdOutTTY</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="structtty__s" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtty__s" kindref="compound" tooltip="The tty_s struct.">tty_s</ref>{</highlight></codeline>
+<codeline lineno="253" refid="structtty__s_1a7bdcbca143d0773edef7d01762d42aff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1a7bdcbca143d0773edef7d01762d42aff" kindref="member">ttyId</ref>;</highlight></codeline>
+<codeline lineno="254" refid="structtty__s_1a44c2fc56a32fd5125ebc51b6b2c0e178" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structstd_in_t_t_y" kindref="compound" tooltip="The tty stdin struct.">stdInTTY</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structtty__s_1a44c2fc56a32fd5125ebc51b6b2c0e178" kindref="member">stdIn</ref>;</highlight></codeline>
+<codeline lineno="255" refid="structtty__s_1a0651a2e4ac304fdc5837a8eb0b0bd166" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structstd_out_t_t_y" kindref="compound" tooltip="The tty stdout struct.">stdOutTTY</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structtty__s_1a0651a2e4ac304fdc5837a8eb0b0bd166" kindref="member">stdOut</ref>;</highlight></codeline>
+<codeline lineno="256" refid="structtty__s_1a5be2ba5c5e17899443300974060fe13f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1a5be2ba5c5e17899443300974060fe13f" kindref="member">hasScrolled</ref>;</highlight></codeline>
+<codeline lineno="257" refid="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" kindref="member">focusProcess</ref>;</highlight></codeline>
+<codeline lineno="258" refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" kindref="member">writePointer</ref>;</highlight></codeline>
+<codeline lineno="259" refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" kindref="member">writeCol</ref>;</highlight></codeline>
+<codeline lineno="260" refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" kindref="member">writeRow</ref>;</highlight></codeline>
+<codeline lineno="261" refid="structtty__s_1aa0a6145a711115035caf96d6d1c7d9fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1aa0a6145a711115035caf96d6d1c7d9fb" kindref="member">readPointer</ref>;</highlight></codeline>
+<codeline lineno="262" refid="structtty__s_1a38beda239dc9e9eb6f58cc2e818fbaa6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1a38beda239dc9e9eb6f58cc2e818fbaa6" kindref="member">readCol</ref>;</highlight></codeline>
+<codeline lineno="263" refid="structtty__s_1a0aef55ec53e97b2ad384eb814d316e9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s_1a0aef55ec53e97b2ad384eb814d316e9b" kindref="member">readRow</ref>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">}<ref refid="structtty__s" kindref="compound" tooltip="The tty_s struct.">tty_s</ref>;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="structsys_t_t_y" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsys_t_t_y" kindref="compound" tooltip="The tty system struct.">sysTTY</ref>{</highlight></codeline>
+<codeline lineno="271" refid="structsys_t_t_y_1a0bc680aada6c6392e4613573f212438b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsys_t_t_y_1a0bc680aada6c6392e4613573f212438b" kindref="member">qtyTTY</ref>;</highlight></codeline>
+<codeline lineno="272" refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtty__s" kindref="compound" tooltip="The tty_s struct.">tty_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structsys_t_t_y_1a35ea653106226d6fe2191f4f8a203d67" kindref="member">listTTY</ref>[<ref refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" kindref="member" tooltip="The maximum amount of ttys.">MAX_TTY</ref>];</highlight></codeline>
+<codeline lineno="273" refid="structsys_t_t_y_1ad4f84dd55c369a7bd7d9f562fc76662f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsys_t_t_y_1ad4f84dd55c369a7bd7d9f562fc76662f" kindref="member">focusTTY</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}<ref refid="structsys_t_t_y" kindref="compound" tooltip="The tty system struct.">sysTTY</ref>;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">/*SHELL<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="types_8h_1a4688631f0fdd9ac08d416e42573c9cf7" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="types_8h_1a4688631f0fdd9ac08d416e42573c9cf7" kindref="member" tooltip="The shellFuncT typedef.">shellFuncT</ref>)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="structcommand_t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289" refid="structcommand_t_1ade9cba72805fe52685a1deea307a8e82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>command;</highlight></codeline>
+<codeline lineno="290" refid="structcommand_t_1aaadded894dece7b4c2b3d51d18ada303" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a4688631f0fdd9ac08d416e42573c9cf7" kindref="member" tooltip="The shellFuncT typedef.">shellFuncT</ref><sp/>func;</highlight></codeline>
+<codeline lineno="291" refid="structcommand_t_1aecae62b0d3cecad6022e749f64cc8a8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>helpMsg;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}<sp/><ref refid="structcommand_t" kindref="compound" tooltip="The command struct.">commandT</ref>;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="types_8h_1a2551d4120f69e82950c9a349c650453d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="types_8h_1a2551d4120f69e82950c9a349c650453d" kindref="member" tooltip="the pFuncT typedef.">pFuncT</ref>)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="structproperty_t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="305" refid="structproperty_t_1a5ac083a645d964373f022d03df4849c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>name;</highlight></codeline>
+<codeline lineno="306" refid="structproperty_t_1a6e26a6bc52b703ab5ccbce61991bf447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a2551d4120f69e82950c9a349c650453d" kindref="member" tooltip="the pFuncT typedef.">pFuncT</ref><sp/>func;</highlight></codeline>
+<codeline lineno="307" refid="structproperty_t_1aecae62b0d3cecad6022e749f64cc8a8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>helpMsg;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">}<sp/><ref refid="structproperty_t" kindref="compound" tooltip="The property struct.">propertyT</ref>;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="structdata_slot_shell" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="315" refid="structdata_slot_shell_1ae0d46a978d5cd6707411f276ad869b9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid;</highlight></codeline>
+<codeline lineno="316" refid="structdata_slot_shell_1a6e27f49150e9a14580fb313cc2777e00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="317" refid="structdata_slot_shell_1ae8b496c8abc98d4ba2e5f3d7992c93b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*lineBuffer;</highlight></codeline>
+<codeline lineno="318" refid="structdata_slot_shell_1a17d176b0ae4937f21ebecf9d335c1f9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*enteredCommand;</highlight></codeline>
+<codeline lineno="319" refid="structdata_slot_shell_1a750b5d744c39a06bfb13e6eb010e35d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}<ref refid="structdata_slot_shell" kindref="compound" tooltip="The shell data slot struct.">dataSlotShell</ref>;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="types_8h_1acdd4fbe88e38c972d3e89807914317c9" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structdata_slot_shell" kindref="compound" tooltip="The shell data slot struct.">dataSlotShell</ref>*<sp/><ref refid="structdata_slot_shell" kindref="compound" tooltip="The shell data slot struct.">dataShell</ref>;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack<sp/>(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Alinear<sp/>las<sp/>siguiente<sp/>estructuras<sp/>a<sp/>1<sp/>byte<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Descriptor<sp/>de<sp/>segmento<sp/>*/</highlight></codeline>
+<codeline lineno="335" refid="struct_d_e_s_c_r___s_e_g" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="336" refid="struct_d_e_s_c_r___s_e_g_1ab5c3c0a36eb16002f03ae8565e505e89" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defs_8h_1a836535f59bf515522a395858a8029d42" kindref="member" tooltip="DefineBrief.">word</ref><sp/>limit,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base_l;</highlight></codeline>
+<codeline lineno="338" refid="struct_d_e_s_c_r___s_e_g_1a5c4cfa8b9f24cf1ee0523cdc8ee7cbe3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/>base_m,</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>access,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribs,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base_h;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}<sp/><ref refid="struct_d_e_s_c_r___s_e_g" kindref="compound" tooltip="OS segment descriptor struct.">DESCR_SEG</ref>;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Descriptor<sp/>de<sp/>interrupcion<sp/>*/</highlight></codeline>
+<codeline lineno="350" refid="struct_d_e_s_c_r___i_n_t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="351" refid="struct_d_e_s_c_r___i_n_t_1a8abb596f01128e9ee829157242ac3275" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defs_8h_1a836535f59bf515522a395858a8029d42" kindref="member" tooltip="DefineBrief.">word</ref><sp/><sp/><sp/><sp/><sp/><sp/>offset_l,</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selector;</highlight></codeline>
+<codeline lineno="353" refid="struct_d_e_s_c_r___i_n_t_1a10e7734359849a8225562be7f834bf5e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/><sp/><sp/><sp/><sp/><sp/>cero,</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>access;</highlight></codeline>
+<codeline lineno="355" refid="struct_d_e_s_c_r___i_n_t_1a95502551327cda03ecf9272bef03280e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defs_8h_1a836535f59bf515522a395858a8029d42" kindref="member" tooltip="DefineBrief.">word</ref><sp/><sp/><sp/><sp/><sp/><sp/>offset_h;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal">}<sp/><ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound" tooltip="OS interrupt descriptor struct.">DESCR_INT</ref>;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IDTR<sp/><sp/>*/</highlight></codeline>
+<codeline lineno="363" refid="struct_i_d_t_r" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="364" refid="struct_i_d_t_r_1ab5c3c0a36eb16002f03ae8565e505e89" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defs_8h_1a836535f59bf515522a395858a8029d42" kindref="member" tooltip="DefineBrief.">word</ref><sp/><sp/>limit;</highlight></codeline>
+<codeline lineno="365" refid="struct_i_d_t_r_1acdee40c1e899300b428fdaee620723e5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref><sp/>base;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}<sp/><ref refid="struct_i_d_t_r" kindref="compound" tooltip="OS IDTR struct.">IDTR</ref>;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h"/>
+  </compounddef>
+</doxygen>

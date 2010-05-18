@@ -1,0 +1,286 @@
+.TH "src/sysProcess.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/sysProcess.c \- 
+.PP
+OS system utilities.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'sysProcess.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBisMTActivated\fP ()"
+.br
+.RI "\fIChecks wether the multitasker is activated or not. \fP"
+.ti -1c
+.RI "int \fBinitMultitasker\fP (\fBpfunc_t\fP init)"
+.br
+.RI "\fIInitializes the multitasker and creates the init process. \fP"
+.ti -1c
+.RI "void \fBmultitasker\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsysSelfBlock\fP ()"
+.br
+.RI "\fIBlocks the calling process. \fP"
+.ti -1c
+.RI "int \fBsysUnblock\fP (\fBpid_t\fP pid)"
+.br
+.RI "\fIUnblocks the given pid process. \fP"
+.ti -1c
+.RI "void \fBwaitTty\fP (\fBtty_t\fP tty)"
+.br
+.RI "\fIBlocks the calling process until it's tty is signaled. \fP"
+.ti -1c
+.RI "void \fBsignalTty\fP (\fBtty_t\fP tty)"
+.br
+.RI "\fISignals the given tty so that any blocked process from it can be unblocked. \fP"
+.ti -1c
+.RI "void \fBterminate\fP (\fBpid_t\fP pid, int status)"
+.br
+.RI "\fITerminates the given process with the given status. \fP"
+.ti -1c
+.RI "void \fBrefreshProcessesCPUs\fP ()"
+.br
+.RI "\fIRefreshes the process comsumption of every process. \fP"
+.ti -1c
+.RI "void \fBclearProcessesTicks\fP ()"
+.br
+.RI "\fIClears the current tickcount of every process. \fP"
+.ti -1c
+.RI "\fBprocess_t\fP * \fBgetProcessTable\fP (void)"
+.br
+.RI "\fIRetrieves the OS process table. \fP"
+.ti -1c
+.RI "char * \fBgetProcessName\fP (\fBpid_t\fP pid)"
+.br
+.RI "\fIRetrieves the given pid process name. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBtickCount\fP = 0"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP \fBprocessTable\fP [MAX_PROCESS]"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBrunningProcess\fP = NULL"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBinitProcess\fP = NULL"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBnextProcess\fP = NULL"
+.br
+.ti -1c
+.RI "\fBFILE\fP \fBfileSystems\fP [MAX_PROCESS][MAX_FILES]"
+.br
+.ti -1c
+.RI "char \fBfileBuffers\fP [MAX_PROCESS][MAX_FILES][SCREEN_SIZE]"
+.br
+.ti -1c
+.RI "int \fBqtyProccessTable\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OS system utilities. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBsysProcess.c\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void clearProcessesTicks ()"
+.PP
+Clears the current tickcount of every process. \fBSee also:\fP
+.RS 4
+refreshProcesses() 
+.RE
+.PP
+
+.PP
+Definition at line 240 of file sysProcess.c.
+.SS "char* getProcessName (\fBpid_t\fP pid)"
+.PP
+Retrieves the given pid process name. \fBParameters:\fP
+.RS 4
+\fIpid\fP The pid from the process whose name to be retrieven.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The process' name. 
+.RE
+.PP
+
+.PP
+Definition at line 254 of file sysProcess.c.
+.SS "\fBprocess_t\fP* getProcessTable (void)"
+.PP
+Retrieves the OS process table. \fBReturns:\fP
+.RS 4
+A pointer to the OS process table. 
+.RE
+.PP
+
+.PP
+Definition at line 250 of file sysProcess.c.
+.SS "int initMultitasker (\fBpfunc_t\fP init)"
+.PP
+Initializes the multitasker and creates the init process. \fBParameters:\fP
+.RS 4
+\fIinit\fP A pointer to the init function.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBmultitasker()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file sysProcess.c.
+.SS "int isMTActivated ()"
+.PP
+Checks wether the multitasker is activated or not. \fBReturns:\fP
+.RS 4
+True if it's activated, False if not. 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file sysProcess.c.
+.SS "void multitasker (void)"
+.PP
+Definition at line 93 of file sysProcess.c.
+.SS "void refreshProcessesCPUs ()"
+.PP
+Refreshes the process comsumption of every process. \fBSee also:\fP
+.RS 4
+\fBclearProcessesTicks()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 223 of file sysProcess.c.
+.SS "void signalTty (\fBtty_t\fP tty)"
+.PP
+Signals the given tty so that any blocked process from it can be unblocked. \fBParameters:\fP
+.RS 4
+\fItty\fP The tty to be signaled.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBwaitTty()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file sysProcess.c.
+.SS "void sysSelfBlock ()"
+.PP
+Blocks the calling process. \fBSee also:\fP
+.RS 4
+\fBsysUnblock()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file sysProcess.c.
+.SS "int sysUnblock (\fBpid_t\fP pid)"
+.PP
+Unblocks the given pid process. \fBParameters:\fP
+.RS 4
+\fIpid\fP The pid of the process to be unlocked.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBsysSelfBlock()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 148 of file sysProcess.c.
+.SS "void terminate (\fBpid_t\fP pid, int status)"
+.PP
+Terminates the given process with the given status. \fBParameters:\fP
+.RS 4
+\fIpid\fP The pid number from the process to be terminated. 
+.br
+\fIstatus\fP The status upon which the process is being terminated. 
+.RE
+.PP
+
+.PP
+Definition at line 203 of file sysProcess.c.
+.SS "void waitTty (\fBtty_t\fP tty)"
+.PP
+Blocks the calling process until it's tty is signaled. \fBParameters:\fP
+.RS 4
+\fItty\fP The tty of the process to be blocked.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBsignalTty()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 157 of file sysProcess.c.
+.SH "Variable Documentation"
+.PP 
+.SS "char \fBfileBuffers\fP[MAX_PROCESS][MAX_FILES][SCREEN_SIZE]"
+.PP
+Definition at line 28 of file sysProcess.c.
+.SS "\fBFILE\fP \fBfileSystems\fP[MAX_PROCESS][MAX_FILES]"
+.PP
+Definition at line 26 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBinitProcess\fP = NULL"
+.PP
+Definition at line 18 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBnextProcess\fP = NULL"
+.PP
+Definition at line 20 of file sysProcess.c.
+.SS "\fBprocess_t\fP \fBprocessTable\fP[MAX_PROCESS]"
+.PP
+Definition at line 14 of file sysProcess.c.
+.SS "int \fBqtyProccessTable\fP = 0"
+.PP
+Definition at line 30 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBrunningProcess\fP = NULL"
+.PP
+Definition at line 16 of file sysProcess.c.
+.SS "unsigned int \fBtickCount\fP = 0"
+.PP
+Definition at line 12 of file sysProcess.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

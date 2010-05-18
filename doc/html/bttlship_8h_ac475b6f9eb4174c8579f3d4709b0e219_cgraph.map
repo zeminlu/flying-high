@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$semaphore_8h.html#ad789c6f97a5592c78cb99d9413c9607b" title="Frees up the given semid semaphore." alt="" coords="129,5,215,35"/>
+<area shape="rect" id="node7" href="$sh_memory_8h.html#a1c89b0ee5786c3cf217319a997eb5add" title="Detaches the current process form the shmid shared memory segment." alt="" coords="140,59,204,88"/>
+<area shape="rect" id="node5" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="264,32,320,61"/>
+</map>

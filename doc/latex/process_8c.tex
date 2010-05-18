@@ -1,0 +1,871 @@
+\hypertarget{process_8c}{
+\section{src/process.c File Reference}
+\label{process_8c}\index{src/process.c@{src/process.c}}
+}
+
+
+All the process functions that invoke syscalls.  
+
+
+{\ttfamily \#include \char`\"{}process.h\char`\"{}}\par
+Include dependency graph for process.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{process_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{process_8c_ad56a3baae6f1c970d4eeb27f0abdb48c}{memmap} (int isKernel)
+\begin{DoxyCompactList}\small\item\em Brief. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} \hyperlink{process_8c_a400d6ff57b24d5bec48a1a28ad944081}{createProcess} (char $\ast$name, \hyperlink{types_8h_ac33fbdfb125ea93ff0028a9cccf0fe5d}{pfunc\_\-t} main, void $\ast$args, int level)
+\begin{DoxyCompactList}\small\item\em Creates a new process into the system and sets it ready to run. The process will be created in unatomic mode(preemptive mode) and with tty -\/1. \item\end{DoxyCompactList}\item 
+void \hyperlink{process_8c_a55e99c539cf7723ec15e856b7e0a8cee}{exit} (int status)
+\begin{DoxyCompactList}\small\item\em This function terminates the calling process and status is returned to whom is waiting for the calling process to exit. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_a10bbb7176245baeab9f398547c410779}{tty\_\-t} \hyperlink{process_8c_af886a211159a5c948f114280d2030a06}{setTty} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid, \hyperlink{types_8h_a10bbb7176245baeab9f398547c410779}{tty\_\-t} tty)
+\begin{DoxyCompactList}\small\item\em Sets the given process tty id. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_a10bbb7176245baeab9f398547c410779}{tty\_\-t} \hyperlink{process_8c_a109666f73149f2d6bbead68763749fbd}{getTty} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid)
+\begin{DoxyCompactList}\small\item\em Retrieves the given process pid's tty. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_a10bbb7176245baeab9f398547c410779}{tty\_\-t} \hyperlink{process_8c_a815d6c1ef38269f70826c824a5eab524}{setTTYFocusedProcess} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid, \hyperlink{types_8h_a10bbb7176245baeab9f398547c410779}{tty\_\-t} tty)
+\begin{DoxyCompactList}\small\item\em Sets the given tty focused process with the given pid process. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} \hyperlink{process_8c_a2933571ad11e89122adbe46a2a9147d6}{getTTYFocusedProcess} (\hyperlink{types_8h_a10bbb7176245baeab9f398547c410779}{tty\_\-t} tty)
+\begin{DoxyCompactList}\small\item\em Retrieves the given tty focused process pid. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} \hyperlink{process_8c_ac61b207337ca21b3b309593fd1a0cb82}{getpid} (void)
+\begin{DoxyCompactList}\small\item\em Retrieves the calling process' pid. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} \hyperlink{process_8c_a556b7b3c8a853a6c86d847da7f008fc0}{getppid} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the calling process' parent pid. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a6655447bab00753d59759423bf28e22e}{wait} (int $\ast$status)
+\begin{DoxyCompactList}\small\item\em Blocks the calling process until a child returns. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a750680863e18ddefd3f3eae7d04cbe96}{waitpid} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid, int $\ast$status)
+\begin{DoxyCompactList}\small\item\em This function blocks the calling process until the given pid child returns. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a650cf0caaaa8b75f653c1c92818d03a4}{kill} (int pid)
+\begin{DoxyCompactList}\small\item\em Kills the given pid process. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_aa4f3855e8a226d285a523789a377fe04}{setTTYMode} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid, int mode)
+\begin{DoxyCompactList}\small\item\em Sets the tty mode of the given pid process. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a7473b5c0ee016e409accc07718d23891}{getTTYMode} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid)
+\begin{DoxyCompactList}\small\item\em Retrieves the given pid process tty mode. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a04fead7e53a28d1b2d13bdebd80ddbea}{setLevel} (int level)
+\begin{DoxyCompactList}\small\item\em Sets the calling process level. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a8c6fea79d2b1d923386e86255bcf9317}{getLevel} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the calling process' level. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a8e1ac3494e27c30441640926f0f07b6f}{getPriority} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the calling process' priority. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_a8984ed6d44c45fc3a93b0c8fd217fab4}{setPriority} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid, int prio)
+\begin{DoxyCompactList}\small\item\em Sets the pid process priority. \item\end{DoxyCompactList}\item 
+unsigned \hyperlink{process_8c_a989eea779d2e0a14ed31f0a16aee69bc}{time} (void)
+\begin{DoxyCompactList}\small\item\em Retrieves the amount of miliseconds that the calling process' had the processor. \item\end{DoxyCompactList}\item 
+unsigned \hyperlink{process_8c_ae735fa27b5b798dab27c5d1077802faf}{upTime} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the amount of ticks since the system boot. \item\end{DoxyCompactList}\item 
+int \hyperlink{process_8c_ab5a4ab42ad24ecad7cb6354c4b5f7587}{setProcessAtomicity} (\hyperlink{types_8h_ab612a3a4eb0e2ced1e55ecff76260458}{pid\_\-t} pid, int atomic)
+\begin{DoxyCompactList}\small\item\em Sets the given pid process' atomicity. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} \hyperlink{process_8c_a9a676b8b31337abb6fcf49d5b41d5921}{processTable} \mbox{[}MAX\_\-PROCESS\mbox{]}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} $\ast$ \hyperlink{process_8c_ab7f4e33be6189512770d5aaa43bd03fe}{runningProcess}
+\item 
+\hyperlink{structprocess__t}{process\_\-t} $\ast$ \hyperlink{process_8c_a8f3d19e4d5dfc217f2a8bd0492856f32}{initProcess}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+All the process functions that invoke syscalls. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{process_8c_source}{process.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{process_8c_a400d6ff57b24d5bec48a1a28ad944081}{
+\index{process.c@{process.c}!createProcess@{createProcess}}
+\index{createProcess@{createProcess}!process.c@{process.c}}
+\subsubsection[{createProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pid\_\-t} createProcess (char $\ast$ {\em name}, \/  {\bf pfunc\_\-t} {\em main}, \/  void $\ast$ {\em args}, \/  int {\em level})}}
+\label{process_8c_a400d6ff57b24d5bec48a1a28ad944081}
+
+
+Creates a new process into the system and sets it ready to run. The process will be created in unatomic mode(preemptive mode) and with tty -\/1. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]The process' name \item[{\em main}]The process' main function. Must Not Be NULL. \item[{\em args}]A pointer to an argument list. \item[{\em level}]FOREGROUND or BACKGROUND.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new process' pid or -\/1 in case of error. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=116pt]{process_8c_a400d6ff57b24d5bec48a1a28ad944081_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{process_8c_a400d6ff57b24d5bec48a1a28ad944081_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a55e99c539cf7723ec15e856b7e0a8cee}{
+\index{process.c@{process.c}!exit@{exit}}
+\index{exit@{exit}!process.c@{process.c}}
+\subsubsection[{exit}]{\setlength{\rightskip}{0pt plus 5cm}void exit (int {\em status})}}
+\label{process_8c_a55e99c539cf7723ec15e856b7e0a8cee}
+
+
+This function terminates the calling process and status is returned to whom is waiting for the calling process to exit. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em status}]The process' exit status. \end{DoxyParams}
+
+
+Definition at line 26 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=80pt]{process_8c_a55e99c539cf7723ec15e856b7e0a8cee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a8c6fea79d2b1d923386e86255bcf9317}{
+\index{process.c@{process.c}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!process.c@{process.c}}
+\subsubsection[{getLevel}]{\setlength{\rightskip}{0pt plus 5cm}int getLevel ()}}
+\label{process_8c_a8c6fea79d2b1d923386e86255bcf9317}
+
+
+Retrieves the calling process' level. 
+
+\begin{DoxyReturn}{Returns}
+The calling process' level.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a04fead7e53a28d1b2d13bdebd80ddbea}{setLevel()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 79 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=92pt]{process_8c_a8c6fea79d2b1d923386e86255bcf9317_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_ac61b207337ca21b3b309593fd1a0cb82}{
+\index{process.c@{process.c}!getpid@{getpid}}
+\index{getpid@{getpid}!process.c@{process.c}}
+\subsubsection[{getpid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pid\_\-t} getpid (void)}}
+\label{process_8c_ac61b207337ca21b3b309593fd1a0cb82}
+
+
+Retrieves the calling process' pid. 
+
+\begin{DoxyReturn}{Returns}
+The calling process' pid. 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=86pt]{process_8c_ac61b207337ca21b3b309593fd1a0cb82_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{process_8c_ac61b207337ca21b3b309593fd1a0cb82_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a556b7b3c8a853a6c86d847da7f008fc0}{
+\index{process.c@{process.c}!getppid@{getppid}}
+\index{getppid@{getppid}!process.c@{process.c}}
+\subsubsection[{getppid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pid\_\-t} getppid ()}}
+\label{process_8c_a556b7b3c8a853a6c86d847da7f008fc0}
+
+
+Retrieves the calling process' parent pid. 
+
+\begin{DoxyReturn}{Returns}
+The calling process' parent pid. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=89pt]{process_8c_a556b7b3c8a853a6c86d847da7f008fc0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a8e1ac3494e27c30441640926f0f07b6f}{
+\index{process.c@{process.c}!getPriority@{getPriority}}
+\index{getPriority@{getPriority}!process.c@{process.c}}
+\subsubsection[{getPriority}]{\setlength{\rightskip}{0pt plus 5cm}int getPriority ()}}
+\label{process_8c_a8e1ac3494e27c30441640926f0f07b6f}
+
+
+Retrieves the calling process' priority. 
+
+\begin{DoxyReturn}{Returns}
+The calling process' priority.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a8984ed6d44c45fc3a93b0c8fd217fab4}{setPriority()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 83 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=97pt]{process_8c_a8e1ac3494e27c30441640926f0f07b6f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a109666f73149f2d6bbead68763749fbd}{
+\index{process.c@{process.c}!getTty@{getTty}}
+\index{getTty@{getTty}!process.c@{process.c}}
+\subsubsection[{getTty}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tty\_\-t} getTty ({\bf pid\_\-t} {\em pid})}}
+\label{process_8c_a109666f73149f2d6bbead68763749fbd}
+
+
+Retrieves the given process pid's tty. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The pid of the process.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The tty id.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_af886a211159a5c948f114280d2030a06}{setTty()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 35 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=87pt]{process_8c_a109666f73149f2d6bbead68763749fbd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{process_8c_a109666f73149f2d6bbead68763749fbd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a2933571ad11e89122adbe46a2a9147d6}{
+\index{process.c@{process.c}!getTTYFocusedProcess@{getTTYFocusedProcess}}
+\index{getTTYFocusedProcess@{getTTYFocusedProcess}!process.c@{process.c}}
+\subsubsection[{getTTYFocusedProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pid\_\-t} getTTYFocusedProcess ({\bf tty\_\-t} {\em tty})}}
+\label{process_8c_a2933571ad11e89122adbe46a2a9147d6}
+
+
+Retrieves the given tty focused process pid. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em tty}]The tty id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pid of the tty focused process.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a815d6c1ef38269f70826c824a5eab524}{setTTYFocusedProcess()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 43 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{process_8c_a2933571ad11e89122adbe46a2a9147d6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a7473b5c0ee016e409accc07718d23891}{
+\index{process.c@{process.c}!getTTYMode@{getTTYMode}}
+\index{getTTYMode@{getTTYMode}!process.c@{process.c}}
+\subsubsection[{getTTYMode}]{\setlength{\rightskip}{0pt plus 5cm}int getTTYMode ({\bf pid\_\-t} {\em pid})}}
+\label{process_8c_a7473b5c0ee016e409accc07718d23891}
+
+
+Retrieves the given pid process tty mode. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The pid of the process whose tty mode will be retrieved.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The tty mode.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_aa4f3855e8a226d285a523789a377fe04}{setTTYMode()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 71 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=101pt]{process_8c_a7473b5c0ee016e409accc07718d23891_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a650cf0caaaa8b75f653c1c92818d03a4}{
+\index{process.c@{process.c}!kill@{kill}}
+\index{kill@{kill}!process.c@{process.c}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}int kill (int {\em pid})}}
+\label{process_8c_a650cf0caaaa8b75f653c1c92818d03a4}
+
+
+Kills the given pid process. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The pid of the process to be killed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=76pt]{process_8c_a650cf0caaaa8b75f653c1c92818d03a4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{process_8c_a650cf0caaaa8b75f653c1c92818d03a4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_ad56a3baae6f1c970d4eeb27f0abdb48c}{
+\index{process.c@{process.c}!memmap@{memmap}}
+\index{memmap@{memmap}!process.c@{process.c}}
+\subsubsection[{memmap}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ memmap (int {\em isKernel})}}
+\label{process_8c_ad56a3baae6f1c970d4eeb27f0abdb48c}
+
+
+Brief. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em isKernel}]ParamBrief.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Description.
+\end{DoxyReturn}
+Use: 
+\begin{DoxyCode}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+f1() f2() 
+\end{DoxySeeAlso}
+
+
+Definition at line 18 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=94pt]{process_8c_ad56a3baae6f1c970d4eeb27f0abdb48c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a04fead7e53a28d1b2d13bdebd80ddbea}{
+\index{process.c@{process.c}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!process.c@{process.c}}
+\subsubsection[{setLevel}]{\setlength{\rightskip}{0pt plus 5cm}int setLevel (int {\em level})}}
+\label{process_8c_a04fead7e53a28d1b2d13bdebd80ddbea}
+
+
+Sets the calling process level. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em level}]FOREGROUND or BACKGROUND.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a8c6fea79d2b1d923386e86255bcf9317}{getLevel()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 75 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=92pt]{process_8c_a04fead7e53a28d1b2d13bdebd80ddbea_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a8984ed6d44c45fc3a93b0c8fd217fab4}{
+\index{process.c@{process.c}!setPriority@{setPriority}}
+\index{setPriority@{setPriority}!process.c@{process.c}}
+\subsubsection[{setPriority}]{\setlength{\rightskip}{0pt plus 5cm}int setPriority ({\bf pid\_\-t} {\em pid}, \/  int {\em prio})}}
+\label{process_8c_a8984ed6d44c45fc3a93b0c8fd217fab4}
+
+
+Sets the pid process priority. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The pid of the process whose priority will be changed. \item[{\em prio}]The priority to be set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+prio on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a8e1ac3494e27c30441640926f0f07b6f}{getPriority()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 87 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=96pt]{process_8c_a8984ed6d44c45fc3a93b0c8fd217fab4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_ab5a4ab42ad24ecad7cb6354c4b5f7587}{
+\index{process.c@{process.c}!setProcessAtomicity@{setProcessAtomicity}}
+\index{setProcessAtomicity@{setProcessAtomicity}!process.c@{process.c}}
+\subsubsection[{setProcessAtomicity}]{\setlength{\rightskip}{0pt plus 5cm}int setProcessAtomicity ({\bf pid\_\-t} {\em pid}, \/  int {\em atomic})}}
+\label{process_8c_ab5a4ab42ad24ecad7cb6354c4b5f7587}
+
+
+Sets the given pid process' atomicity. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The pid of the process whose atomicity will be set. \item[{\em atomic}]ATOMIC or UNATOMIC.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=123pt]{process_8c_ab5a4ab42ad24ecad7cb6354c4b5f7587_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{process_8c_ab5a4ab42ad24ecad7cb6354c4b5f7587_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_af886a211159a5c948f114280d2030a06}{
+\index{process.c@{process.c}!setTty@{setTty}}
+\index{setTty@{setTty}!process.c@{process.c}}
+\subsubsection[{setTty}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tty\_\-t} setTty ({\bf pid\_\-t} {\em pid}, \/  {\bf tty\_\-t} {\em tty})}}
+\label{process_8c_af886a211159a5c948f114280d2030a06}
+
+
+Sets the given process tty id. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The process' pid whose tty id will be set. \item[{\em tty}]The tty id to be set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error.
+\end{DoxyReturn}
+Use: 
+\begin{DoxyCode}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+f1() f2() 
+\end{DoxySeeAlso}
+
+
+Definition at line 31 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=87pt]{process_8c_af886a211159a5c948f114280d2030a06_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{process_8c_af886a211159a5c948f114280d2030a06_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a815d6c1ef38269f70826c824a5eab524}{
+\index{process.c@{process.c}!setTTYFocusedProcess@{setTTYFocusedProcess}}
+\index{setTTYFocusedProcess@{setTTYFocusedProcess}!process.c@{process.c}}
+\subsubsection[{setTTYFocusedProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tty\_\-t} setTTYFocusedProcess ({\bf pid\_\-t} {\em pid}, \/  {\bf tty\_\-t} {\em tty})}}
+\label{process_8c_a815d6c1ef38269f70826c824a5eab524}
+
+
+Sets the given tty focused process with the given pid process. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The process to be set as focused process. \item[{\em tty}]The tty whose focused process will be set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a2933571ad11e89122adbe46a2a9147d6}{getTTYFocusedProcess()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 39 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{process_8c_a815d6c1ef38269f70826c824a5eab524_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_aa4f3855e8a226d285a523789a377fe04}{
+\index{process.c@{process.c}!setTTYMode@{setTTYMode}}
+\index{setTTYMode@{setTTYMode}!process.c@{process.c}}
+\subsubsection[{setTTYMode}]{\setlength{\rightskip}{0pt plus 5cm}int setTTYMode ({\bf pid\_\-t} {\em pid}, \/  int {\em mode})}}
+\label{process_8c_aa4f3855e8a226d285a523789a377fe04}
+
+
+Sets the tty mode of the given pid process. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The pid of the process whose tty mode will be changed. \item[{\em mode}]The tty mode: TTY\_\-CANONICAL or TTY\_\-RAW.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a7473b5c0ee016e409accc07718d23891}{getTTYMode()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 67 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=101pt]{process_8c_aa4f3855e8a226d285a523789a377fe04_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{process_8c_aa4f3855e8a226d285a523789a377fe04_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a989eea779d2e0a14ed31f0a16aee69bc}{
+\index{process.c@{process.c}!time@{time}}
+\index{time@{time}!process.c@{process.c}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned time (void)}}
+\label{process_8c_a989eea779d2e0a14ed31f0a16aee69bc}
+
+
+Retrieves the amount of miliseconds that the calling process' had the processor. 
+
+\begin{DoxyReturn}{Returns}
+The amount of miliseconds that the calling process' had the processor. 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=82pt]{process_8c_a989eea779d2e0a14ed31f0a16aee69bc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_ae735fa27b5b798dab27c5d1077802faf}{
+\index{process.c@{process.c}!upTime@{upTime}}
+\index{upTime@{upTime}!process.c@{process.c}}
+\subsubsection[{upTime}]{\setlength{\rightskip}{0pt plus 5cm}unsigned upTime ()}}
+\label{process_8c_ae735fa27b5b798dab27c5d1077802faf}
+
+
+Retrieves the amount of ticks since the system boot. 
+
+\begin{DoxyReturn}{Returns}
+The amount of ticks since the system boot. 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=88pt]{process_8c_ae735fa27b5b798dab27c5d1077802faf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{process_8c_ae735fa27b5b798dab27c5d1077802faf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a6655447bab00753d59759423bf28e22e}{
+\index{process.c@{process.c}!wait@{wait}}
+\index{wait@{wait}!process.c@{process.c}}
+\subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}int wait (int $\ast$ {\em status})}}
+\label{process_8c_a6655447bab00753d59759423bf28e22e}
+
+
+Blocks the calling process until a child returns. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em status}]A pointer where to store the return state of the child process.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pid of the child process that recently returned.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a750680863e18ddefd3f3eae7d04cbe96}{waitpid()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 55 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=80pt]{process_8c_a6655447bab00753d59759423bf28e22e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{process_8c_a6655447bab00753d59759423bf28e22e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{process_8c_a750680863e18ddefd3f3eae7d04cbe96}{
+\index{process.c@{process.c}!waitpid@{waitpid}}
+\index{waitpid@{waitpid}!process.c@{process.c}}
+\subsubsection[{waitpid}]{\setlength{\rightskip}{0pt plus 5cm}int waitpid ({\bf pid\_\-t} {\em pid}, \/  int $\ast$ {\em status})}}
+\label{process_8c_a750680863e18ddefd3f3eae7d04cbe96}
+
+
+This function blocks the calling process until the given pid child returns. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pid}]The pid of the child process to wait. \item[{\em status}]A pointer where to store the child process return status.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pid of the child process.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{process_8h_a6655447bab00753d59759423bf28e22e}{wait()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 59 of file process.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=88pt]{process_8c_a750680863e18ddefd3f3eae7d04cbe96_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{process_8c_a8f3d19e4d5dfc217f2a8bd0492856f32}{
+\index{process.c@{process.c}!initProcess@{initProcess}}
+\index{initProcess@{initProcess}!process.c@{process.c}}
+\subsubsection[{initProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t}$\ast$ {\bf initProcess}}}
+\label{process_8c_a8f3d19e4d5dfc217f2a8bd0492856f32}
+
+
+Definition at line 18 of file sysProcess.c.
+
+\hypertarget{process_8c_a9a676b8b31337abb6fcf49d5b41d5921}{
+\index{process.c@{process.c}!processTable@{processTable}}
+\index{processTable@{processTable}!process.c@{process.c}}
+\subsubsection[{processTable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t} {\bf processTable}\mbox{[}MAX\_\-PROCESS\mbox{]}}}
+\label{process_8c_a9a676b8b31337abb6fcf49d5b41d5921}
+
+
+Definition at line 14 of file sysProcess.c.
+
+\hypertarget{process_8c_ab7f4e33be6189512770d5aaa43bd03fe}{
+\index{process.c@{process.c}!runningProcess@{runningProcess}}
+\index{runningProcess@{runningProcess}!process.c@{process.c}}
+\subsubsection[{runningProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf process\_\-t}$\ast$ {\bf runningProcess}}}
+\label{process_8c_ab7f4e33be6189512770d5aaa43bd03fe}
+
+
+Definition at line 16 of file sysProcess.c.
+

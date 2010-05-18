@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$sys_process_8h.html#a4e14e480ef0c76ed52ff2c261e9d13cb" title="Forces the call to the multitasker." alt="" coords="128,5,261,35"/>
+<area shape="rect" id="node5" href="$sys_process_8h.html#ab5b0962abeaa4a1657d1fc3d5931a612" title="Terminates the given process with the given status." alt="" coords="149,59,240,88"/>
+<area shape="rect" id="node7" href="$ttys_8h.html#aca07223864f88814919b02e6729569a5" title="Sets the pid to the process which is in focus." alt="" coords="311,59,511,88"/>
+</map>

@@ -1,0 +1,73 @@
+.TH "inc/syscall.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/syscall.h \- 
+.PP
+Implementation of every system call.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types.h'\fP
+.br
+\fC#include 'memModule.h'\fP
+.br
+\fC#include 'process.h'\fP
+.br
+\fC#include 'string.h'\fP
+.br
+\fC#include 'kasm.h'\fP
+.br
+\fC#include 'schedule.h'\fP
+.br
+\fC#include 'kernelDepth.h'\fP
+.br
+\fC#include 'ttys.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEFLAGS\fP   0x00200"
+.br
+.ti -1c
+.RI "#define \fBSTACK_TRACE_LENGTH\fP   15"
+.br
+.ti -1c
+.RI "#define \fBKILL_EXIT_STATUS\fP   0"
+.br
+.ti -1c
+.RI "#define \fBLOCAL_VARIABLES_SPACE\fP   0x00000018"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of every system call. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBsyscall.h\fP.
+.SH "Define Documentation"
+.PP 
+.SS "#define EFLAGS   0x00200"
+.PP
+Definition at line 22 of file syscall.h.
+.SS "#define KILL_EXIT_STATUS   0"
+.PP
+Definition at line 24 of file syscall.h.
+.SS "#define LOCAL_VARIABLES_SPACE   0x00000018"
+.PP
+Definition at line 25 of file syscall.h.
+.SS "#define STACK_TRACE_LENGTH   15"
+.PP
+Definition at line 23 of file syscall.h.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

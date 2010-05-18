@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$syscall_8c.html#a5cd71748fd2bf784c6e4f481809a9b15" title="_sys_create_process" alt="" coords="217,5,380,35"/>
+<area shape="rect" id="node5" href="$sh_memory_8c.html#a5c13ce26761ac9aee72a441624bcf571" title="_sys_shmget" alt="" coords="244,59,353,88"/>
+<area shape="rect" id="node7" href="$sys_process_8c.html#a9aa73aebdb67c7b8551305ec0ebf6087" title="multitasker" alt="" coords="249,112,348,141"/>
+<area shape="rect" id="node9" href="$mem_module_8c.html#ad2ea87727da761c9bcb36881d36bef21" title="Sets the presence bit of the kernel heap pages according to the given parameter." alt="" coords="205,165,392,195"/>
+<area shape="rect" id="node11" href="$kernel_depth_8c.html#a12d75a01091aa2aef0b93c98f76b859d" title="This function decreases the depth relating to the iteration of system calls maintaining..." alt="" coords="440,112,611,141"/>
+<area shape="rect" id="node15" href="$kernel_depth_8c.html#a60e4cee7d263ef4134a3d83ab35de9c6" title="This function increases the depth relating to the iteration of system calls maintaining..." alt="" coords="443,165,608,195"/>
+<area shape="rect" id="node17" href="$mem_module_8c.html#a7a9e898c2f9b5aae935f0668c962d02f" title="Initializes the pagination and turns it on." alt="" coords="483,219,568,248"/>
+<area shape="rect" id="node13" href="$syscall_8c.html#a13d5257c80be9824dd100a5d21a6b1de" title="_sysExit" alt="" coords="672,112,749,141"/>
+<area shape="rect" id="node19" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="660,219,761,248"/>
+</map>

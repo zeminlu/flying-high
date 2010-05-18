@@ -1,0 +1,196 @@
+\hypertarget{unistd_8h}{
+\section{inc/unistd.h File Reference}
+\label{unistd_8h}\index{inc/unistd.h@{inc/unistd.h}}
+}
+
+
+Definitions for all UNIX Standard system calls functions.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+Include dependency graph for unistd.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=82pt]{unistd_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{unistd_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a1bd78dbcdb69d819cb6ea4dfa78daaec}{ssize\_\-t} \hyperlink{unistd_8h_a52af614436e190ddabe1c00d82a2a424}{write} (int fileds, const void $\ast$buffer, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} count)
+\begin{DoxyCompactList}\small\item\em \hyperlink{unistd_8h_a52af614436e190ddabe1c00d82a2a424}{write()} writes \char`\"{}count\char`\"{} bytes from the buffer pointed by \char`\"{}buffer\char`\"{} into the file descripted by the file descriptor \char`\"{}fileds\char`\"{}. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_a1bd78dbcdb69d819cb6ea4dfa78daaec}{ssize\_\-t} \hyperlink{unistd_8h_a116146ccc01b751779e5351615743547}{read} (int fileds, void $\ast$buffer, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} count)
+\begin{DoxyCompactList}\small\item\em \hyperlink{unistd_8h_a116146ccc01b751779e5351615743547}{read()} reads \char`\"{}count\char`\"{} bytes from the file descripted by the file descriptor \char`\"{}fileds\char`\"{} and saves it into the buffer pointed by \char`\"{}buffer\char`\"{} \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} \hyperlink{unistd_8h_a5c221b4b7f606967759233ad35c1b924}{fread} (\hyperlink{struct_f_i_l_e}{FILE} $\ast$stream, void $\ast$buffer, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} count)
+\begin{DoxyCompactList}\small\item\em Idem to the \hyperlink{unistd_8h_a116146ccc01b751779e5351615743547}{read()} function, but from the given stream. \item\end{DoxyCompactList}\item 
+\hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} \hyperlink{unistd_8h_a681fc6e35e986fe5975afb7a110830a2}{fwrite} (\hyperlink{struct_f_i_l_e}{FILE} $\ast$stream, void $\ast$buffer, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} count)
+\begin{DoxyCompactList}\small\item\em Idem to the \hyperlink{unistd_8h_a52af614436e190ddabe1c00d82a2a424}{write()} function, but to the given stream. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions for all UNIX Standard system calls functions. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{unistd_8h_source}{unistd.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{unistd_8h_a5c221b4b7f606967759233ad35c1b924}{
+\index{unistd.h@{unistd.h}!fread@{fread}}
+\index{fread@{fread}!unistd.h@{unistd.h}}
+\subsubsection[{fread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\_\-t} fread ({\bf FILE} $\ast$ {\em stream}, \/  void $\ast$ {\em buffer}, \/  {\bf size\_\-t} {\em count})}}
+\label{unistd_8h_a5c221b4b7f606967759233ad35c1b924}
+
+
+Idem to the \hyperlink{unistd_8h_a116146ccc01b751779e5351615743547}{read()} function, but from the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stream}]The stream where to read from. \item[{\em buffer}]A pointer to the buffer where the information is going to written. \item[{\em count}]Number of bytes that will be written in the buffeer from the file.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were successfully read from the file or -\/1 in case of error.
+\end{DoxyReturn}
+Use: 
+\begin{DoxyCode}
+                        if ( read(stream, buffer, VIDEO_SIZE) != VIDEO_SIZE )
+                                        printf("Error: video memory could not be 
+      read\n");
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{unistd_8h_a681fc6e35e986fe5975afb7a110830a2}{fwrite()} 
+\end{DoxySeeAlso}
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=84pt]{unistd_8h_a5c221b4b7f606967759233ad35c1b924_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{unistd_8h_a681fc6e35e986fe5975afb7a110830a2}{
+\index{unistd.h@{unistd.h}!fwrite@{fwrite}}
+\index{fwrite@{fwrite}!unistd.h@{unistd.h}}
+\subsubsection[{fwrite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\_\-t} fwrite ({\bf FILE} $\ast$ {\em stream}, \/  void $\ast$ {\em buffer}, \/  {\bf size\_\-t} {\em count})}}
+\label{unistd_8h_a681fc6e35e986fe5975afb7a110830a2}
+
+
+Idem to the \hyperlink{unistd_8h_a52af614436e190ddabe1c00d82a2a424}{write()} function, but to the given stream. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stream}]The stream where to write to. \item[{\em buffer}]pointer to the buffer where the information to be written is hold. \item[{\em count}]number of bytes that will be written in the file from the buffer.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were successfully read from the file or -\/1 in case of error.
+\end{DoxyReturn}
+Use: 
+\begin{DoxyCode}
+                        char * message = "Hello World!\n";
+                        write(stream, (const void *)message, strlen(message));
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{unistd_8h_a5c221b4b7f606967759233ad35c1b924}{fread()} 
+\end{DoxySeeAlso}
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{unistd_8h_a681fc6e35e986fe5975afb7a110830a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{unistd_8h_a116146ccc01b751779e5351615743547}{
+\index{unistd.h@{unistd.h}!read@{read}}
+\index{read@{read}!unistd.h@{unistd.h}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ssize\_\-t} read (int {\em fileds}, \/  void $\ast$ {\em buffer}, \/  {\bf size\_\-t} {\em count})}}
+\label{unistd_8h_a116146ccc01b751779e5351615743547}
+
+
+\hyperlink{unistd_8h_a116146ccc01b751779e5351615743547}{read()} reads \char`\"{}count\char`\"{} bytes from the file descripted by the file descriptor \char`\"{}fileds\char`\"{} and saves it into the buffer pointed by \char`\"{}buffer\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em fileds}]the file descriptor for the file where the data is going to be read. \item[{\em buffer}]pointer to the buffer where the information is going to written. \item[{\em count}]number of bytes that will be written in the buffeer from the file.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the amount of bytes that were successfully read from the file or -\/1 in case of error.
+\end{DoxyReturn}
+Example 
+\begin{DoxyCode}
+                                if ( read(STDIN, buffer, VIDEO_SIZE) != VIDEO_SIZ
+      E )
+                                        printf("Error: video memory could not be 
+      read\n");
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{unistd_8h_a52af614436e190ddabe1c00d82a2a424}{write()} 
+\end{DoxySeeAlso}
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=357pt]{unistd_8h_a116146ccc01b751779e5351615743547_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{unistd_8h_a52af614436e190ddabe1c00d82a2a424}{
+\index{unistd.h@{unistd.h}!write@{write}}
+\index{write@{write}!unistd.h@{unistd.h}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ssize\_\-t} write (int {\em fileds}, \/  const void $\ast$ {\em buffer}, \/  {\bf size\_\-t} {\em count})}}
+\label{unistd_8h_a52af614436e190ddabe1c00d82a2a424}
+
+
+\hyperlink{unistd_8h_a52af614436e190ddabe1c00d82a2a424}{write()} writes \char`\"{}count\char`\"{} bytes from the buffer pointed by \char`\"{}buffer\char`\"{} into the file descripted by the file descriptor \char`\"{}fileds\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em fileds}]the file descriptor for the file where the data is going to be written. \item[{\em buffer}]pointer to the buffer where the information to be written is hold. \item[{\em count}]number of bytes that will be written in the file from the buffer.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the amount of bytes successfully written in the file or -\/1 in case of error.
+\end{DoxyReturn}
+Example: 
+\begin{DoxyCode}
+                                char * message = "Hello World!\n";
+                                write(STDOUT, (const void *)message, strlen(messa
+      ge));
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{unistd_8h_a116146ccc01b751779e5351615743547}{read()} 
+\end{DoxySeeAlso}
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=99pt]{unistd_8h_a52af614436e190ddabe1c00d82a2a424_icgraph}
+\end{center}
+\end{figure}
+
+

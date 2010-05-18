@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="rand_8c" kind="file">
+    <compoundname>rand.c</compoundname>
+    <includes refid="rand_8h" local="yes">rand.h</includes>
+    <incdepgraph>
+      <node id="4297">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4298" relation="include">
+        </childnode>
+      </node>
+      <node id="4302">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4325">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4323" relation="include">
+        </childnode>
+      </node>
+      <node id="4308">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4298">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+        <childnode refid="4326" relation="include">
+        </childnode>
+        <childnode refid="4310" relation="include">
+        </childnode>
+      </node>
+      <node id="4317">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4318" relation="include">
+        </childnode>
+        <childnode refid="4313" relation="include">
+        </childnode>
+      </node>
+      <node id="4306">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4305">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4306" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4299">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4300" relation="include">
+        </childnode>
+        <childnode refid="4301" relation="include">
+        </childnode>
+      </node>
+      <node id="4315">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
+        </childnode>
+      </node>
+      <node id="4319">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4305" relation="include">
+        </childnode>
+        <childnode refid="4313" relation="include">
+        </childnode>
+        <childnode refid="4306" relation="include">
+        </childnode>
+        <childnode refid="4320" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4302" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+        <childnode refid="4318" relation="include">
+        </childnode>
+        <childnode refid="4321" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+        <childnode refid="4324" relation="include">
+        </childnode>
+      </node>
+      <node id="4322">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4320">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4314" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4313">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4314" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4309">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4310" relation="include">
+        </childnode>
+        <childnode refid="4312" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+        <childnode refid="4298" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
+        </childnode>
+        <childnode refid="4315" relation="include">
+        </childnode>
+        <childnode refid="4297" relation="include">
+        </childnode>
+        <childnode refid="4319" relation="include">
+        </childnode>
+      </node>
+      <node id="4314">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4326">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+      </node>
+      <node id="4316">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+      </node>
+      <node id="4301">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4302" relation="include">
+        </childnode>
+      </node>
+      <node id="4310">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4311" relation="include">
+        </childnode>
+        <childnode refid="4313" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4312" relation="include">
+        </childnode>
+        <childnode refid="4309" relation="include">
+        </childnode>
+        <childnode refid="4298" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4306" relation="include">
+        </childnode>
+        <childnode refid="4315" relation="include">
+        </childnode>
+      </node>
+      <node id="4324">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4313" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+        <childnode refid="4323" relation="include">
+        </childnode>
+        <childnode refid="4297" relation="include">
+        </childnode>
+        <childnode refid="4310" relation="include">
+        </childnode>
+      </node>
+      <node id="4304">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4312">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4307">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4298" relation="include">
+        </childnode>
+        <childnode refid="4308" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4309" relation="include">
+        </childnode>
+      </node>
+      <node id="4311">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4312" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4323">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+      </node>
+      <node id="4296">
+        <label>src/rand.c</label>
+        <link refid="rand.c"/>
+        <childnode refid="4297" relation="include">
+        </childnode>
+      </node>
+      <node id="4303">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4318">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+      </node>
+      <node id="4300">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4321">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4321" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4312" relation="include">
+        </childnode>
+        <childnode refid="4309" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4298" relation="include">
+        </childnode>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+        <childnode refid="4313" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+        <childnode refid="4310" relation="include">
+        </childnode>
+        <childnode refid="4306" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+        <childnode refid="4315" relation="include">
+        </childnode>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4314" relation="include">
+        </childnode>
+        <childnode refid="4302" relation="include">
+        </childnode>
+        <childnode refid="4318" relation="include">
+        </childnode>
+        <childnode refid="4323" relation="include">
+        </childnode>
+        <childnode refid="4297" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="rand_8c_1ae21f357c223957d36046a0d71cc6aed7" prot="public" static="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/rand.c" line="11" bodyfile="/Users/Luciano/Desktop/flying-high/src/rand.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rand_8c_1a55e3beba53036a0b4b8ac14e6914753d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int timeRand</definition>
+        <argsstring>()</argsstring>
+        <name>timeRand</name>
+        <briefdescription>
+<para>This function loads the amount of ticks. It uses a system call. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The amount of tick</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" kindref="member" tooltip="Sets the seed to generate random numbers.">srand</ref>(<ref refid="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" kindref="member" tooltip="This function loads the amount of ticks. It uses a system call.">timeRand</ref>());</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para>_system_uptime </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/rand.c" line="13" bodyfile="/Users/Luciano/Desktop/flying-high/src/rand.c" bodystart="13" bodyend="15"/>
+        <references refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" compoundref="process_8c" startline="95" endline="97">upTime</references>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rand_8c_1a20e50ab9d6b10af0e2940d9419448f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rand</definition>
+        <argsstring>()</argsstring>
+        <name>rand</name>
+        <briefdescription>
+<para>Generates a random number with a linear equation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A random number</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ran<sp/>=<sp/><ref refid="rand_8h_1a20e50ab9d6b10af0e2940d9419448f42" kindref="member" tooltip="Generates a random number with a linear equation.">rand</ref>();</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/rand.c" line="17" bodyfile="/Users/Luciano/Desktop/flying-high/src/rand.c" bodystart="17" bodyend="24"/>
+        <references refid="rand_8h_1a690f251553b39fd4f31894826141b61a" compoundref="rand_8h" startline="14">RAND_MAX</references>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rand_8c_1a4158d0a4435ddf2a9ae2e1d2e270024e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void srand</definition>
+        <argsstring>(unsigned int seedP)</argsstring>
+        <name>srand</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>seedP</declname>
+        </param>
+        <briefdescription>
+<para>Sets the seed to generate random numbers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seedP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed to be set.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" kindref="member" tooltip="Sets the seed to generate random numbers.">srand</ref>(<ref refid="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" kindref="member" tooltip="This function loads the amount of ticks. It uses a system call.">timeRand</ref>());</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/rand.c" line="26" bodyfile="/Users/Luciano/Desktop/flying-high/src/rand.c" bodystart="26" bodyend="28"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Random number generation module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rand_8h" kindref="compound" tooltip="Random number generation module.">rand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="rand_8c_1a55e3beba53036a0b4b8ac14e6914753d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" kindref="member" tooltip="This function loads the amount of ticks. It uses a system call.">timeRand</ref>(){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="rand_8c_1a20e50ab9d6b10af0e2940d9419448f42" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rand_8h_1a20e50ab9d6b10af0e2940d9419448f42" kindref="member" tooltip="Generates a random number with a linear equation.">rand</ref>(){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>11035152;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>12345;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seed<sp/>=<sp/>(<sp/>a<sp/>*<sp/>seed<sp/>+<sp/>b<sp/>)<sp/>%<sp/><ref refid="rand_8h_1a690f251553b39fd4f31894826141b61a" kindref="member">RAND_MAX</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>seed;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="rand_8c_1a4158d0a4435ddf2a9ae2e1d2e270024e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" kindref="member" tooltip="Sets the seed to generate random numbers.">srand</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seedP<sp/>){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seed<sp/>=<sp/>seedP;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/rand.c"/>
+  </compounddef>
+</doxygen>

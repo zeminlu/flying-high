@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structdata_slot_shell" kind="struct" prot="public">
+    <compoundname>dataSlotShell</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdata_slot_shell_1ae0d46a978d5cd6707411f276ad869b9c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t pid</definition>
+        <argsstring></argsstring>
+        <name>pid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="315" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="315" bodyend="-1"/>
+        <referencedby refid="shell_8c_1a2879dea7c1ce73666eefe0dce44ea0d9" compoundref="shell_8c" startline="17" endline="24">initGlobalDataShell</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structdata_slot_shell_1a6e27f49150e9a14580fb313cc2777e00" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="316" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="316" bodyend="-1"/>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structdata_slot_shell_1ae8b496c8abc98d4ba2e5f3d7992c93b7" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* lineBuffer</definition>
+        <argsstring></argsstring>
+        <name>lineBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="317" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="317" bodyend="-1"/>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structdata_slot_shell_1a17d176b0ae4937f21ebecf9d335c1f9e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* enteredCommand</definition>
+        <argsstring></argsstring>
+        <name>enteredCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="318" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdata_slot_shell_1a750b5d744c39a06bfb13e6eb010e35d0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="319" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="319" bodyend="-1"/>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The shell data slot struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="314" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="314" bodyend="320"/>
+    <listofallmembers>
+      <member refid="structdata_slot_shell_1a17d176b0ae4937f21ebecf9d335c1f9e" prot="public" virt="non-virtual"><scope>dataSlotShell</scope><name>enteredCommand</name></member>
+      <member refid="structdata_slot_shell_1a750b5d744c39a06bfb13e6eb010e35d0" prot="public" virt="non-virtual"><scope>dataSlotShell</scope><name>index</name></member>
+      <member refid="structdata_slot_shell_1ae8b496c8abc98d4ba2e5f3d7992c93b7" prot="public" virt="non-virtual"><scope>dataSlotShell</scope><name>lineBuffer</name></member>
+      <member refid="structdata_slot_shell_1ae0d46a978d5cd6707411f276ad869b9c" prot="public" virt="non-virtual"><scope>dataSlotShell</scope><name>pid</name></member>
+      <member refid="structdata_slot_shell_1a6e27f49150e9a14580fb313cc2777e00" prot="public" virt="non-virtual"><scope>dataSlotShell</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

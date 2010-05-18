@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="struct_i_d_t_r" kind="struct" prot="public">
+    <compoundname>IDTR</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_i_d_t_r_1ab5c3c0a36eb16002f03ae8565e505e89" prot="public" static="no" mutable="no">
+        <type>word</type>
+        <definition>word limit</definition>
+        <argsstring></argsstring>
+        <name>limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="364" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="364" bodyend="-1"/>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_d_t_r_1acdee40c1e899300b428fdaee620723e5" prot="public" static="no" mutable="no">
+        <type>dword</type>
+        <definition>dword base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="365" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="365" bodyend="-1"/>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>OS <ref refid="struct_i_d_t_r" kindref="compound">IDTR</ref> struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="363" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="363" bodyend="366"/>
+    <listofallmembers>
+      <member refid="struct_i_d_t_r_1acdee40c1e899300b428fdaee620723e5" prot="public" virt="non-virtual"><scope>IDTR</scope><name>base</name></member>
+      <member refid="struct_i_d_t_r_1ab5c3c0a36eb16002f03ae8565e505e89" prot="public" virt="non-virtual"><scope>IDTR</scope><name>limit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

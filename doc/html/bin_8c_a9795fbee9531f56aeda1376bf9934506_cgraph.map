@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$sys_process_8h.html#accfbf2e870cb5b019499cd068db1eb07" title="Clears the current tickcount of every process." alt="" coords="108,5,265,35"/>
+<area shape="rect" id="node5" href="$ttys_8h.html#a6083aac7b79f2adcd3c4d6fbf479f283" title="It clears the stdout of the tty that is in focus." alt="" coords="124,109,249,139"/>
+<area shape="rect" id="node15" href="$ttys_8h.html#a77495bf57af4fe0554f55dc4be4a4600" title="It sets the cursor in an specific position of the tty stdout." alt="" coords="323,57,488,87"/>
+<area shape="rect" id="node19" href="$string_8h.html#a5aad25908949f4a9f515aff74d166cbe" title="Idem as intToString, but with double values." alt="" coords="127,163,247,192"/>
+<area shape="rect" id="node21" href="$process_8h.html#ac61b207337ca21b3b309593fd1a0cb82" title="Retrieves the calling process&#39; pid." alt="" coords="155,269,219,299"/>
+<area shape="rect" id="node25" href="$sys_process_8h.html#aa1cd2078219adc47ca22033bf86a76be" title="Retrieves the OS process table." alt="" coords="120,323,253,352"/>
+<area shape="rect" id="node27" href="$sys_process_8h.html#a18afd4bf4046ef60e7827333850e1bc6" title="Refreshes the process comsumption of every process." alt="" coords="100,376,273,405"/>
+<area shape="rect" id="node29" href="$process_8h.html#ab5a4ab42ad24ecad7cb6354c4b5f7587" title="Sets the given pid process&#39; atomicity." alt="" coords="105,216,268,245"/>
+<area shape="rect" id="node33" href="$string_8h.html#ae6c8de953239811a34eeeab09458e55e" title="Returns the length of the string." alt="" coords="156,429,217,459"/>
+<area shape="rect" id="node7" href="$video__driver_8h.html#a67e96e514d9f296c79378f7fbfba457a" title="clearScreen" alt="" coords="355,212,456,241"/>
+<area shape="rect" id="node11" href="$ttys_8h.html#ac625c448f0a3f2dd24c1409227e291e4" title="This function returns the tty id of tty that are in focus at this moment. It is a..." alt="" coords="544,69,669,99"/>
+<area shape="rect" id="node13" href="$video__driver_8h.html#aff96fa4091dd99b631277b28be9a5e65" title="Sets the cursor&#39;s position." alt="" coords="536,147,677,176"/>
+<area shape="rect" id="node9" href="$video__driver_8h.html#a49f60f2c7afcb3ffeb1890865dc440c0" title="Fills the screen with a character." alt="" coords="565,212,648,241"/>
+<area shape="rect" id="node23" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="377,268,433,297"/>
+</map>

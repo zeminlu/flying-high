@@ -1,0 +1,98 @@
+.TH "inc/io.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/io.h \- 
+.PP
+Declaration of functions and constants related with direct access to hardware.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBVIDEO_MEMORY_ADDRESS\fP   (void *)0xB8000"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBinportb\fP (int port)"
+.br
+.RI "\fIThis function grabs the value stored in the given port. \fP"
+.ti -1c
+.RI "void \fBoutportb\fP (int port, int value)"
+.br
+.RI "\fIThis function stores the given value in the given port. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Declaration of functions and constants related with direct access to hardware. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBio.h\fP.
+.SH "Define Documentation"
+.PP 
+.SS "#define VIDEO_MEMORY_ADDRESS   (void *)0xB8000"
+.PP
+Definition at line 17 of file io.h.
+.SH "Function Documentation"
+.PP 
+.SS "int inportb (int port)"
+.PP
+This function grabs the value stored in the given port. \fBParameters:\fP
+.RS 4
+\fIport\fP The desired port number. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+This function returns an int instance with the value obtained.
+.RE
+.PP
+.PP
+.nf
+                     int value;
+                        value = inport(0x60);
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+outport() 
+.RE
+.PP
+
+.SS "void outportb (int port, int value)"
+.PP
+This function stores the given value in the given port. \fBParameters:\fP
+.RS 4
+\fIport\fP Desired port number. 
+.br
+\fIvalue\fP Desired value to set.
+.RE
+.PP
+.PP
+.nf
+                     outport (0x64, 0x31)
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+inport() 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

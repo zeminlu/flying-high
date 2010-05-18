@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dir_bf38b334a5496cce188141bcdcfb2a29" kind="dir">
+    <compoundname>src/</compoundname>
+    <innerfile refid="bin_8c">bin.c</innerfile>
+    <innerfile refid="bttlship_8c">bttlship.c</innerfile>
+    <innerfile refid="exceptions_8c">exceptions.c</innerfile>
+    <innerfile refid="kernel_8c">kernel.c</innerfile>
+    <innerfile refid="kernel_depth_8c">kernelDepth.c</innerfile>
+    <innerfile refid="keyboard__driver_8c">keyboard_driver.c</innerfile>
+    <innerfile refid="k_malloc_8c">kMalloc.c</innerfile>
+    <innerfile refid="libc_8c">libc.c</innerfile>
+    <innerfile refid="mem_module_8c">memModule.c</innerfile>
+    <innerfile refid="p_queue_p_8c">pQueueP.c</innerfile>
+    <innerfile refid="process_8c">process.c</innerfile>
+    <innerfile refid="queue_8c">queue.c</innerfile>
+    <innerfile refid="rand_8c">rand.c</innerfile>
+    <innerfile refid="schedule_8c">schedule.c</innerfile>
+    <innerfile refid="semaphore_8c">semaphore.c</innerfile>
+    <innerfile refid="shell_8c">shell.c</innerfile>
+    <innerfile refid="sh_memory_8c">shMemory.c</innerfile>
+    <innerfile refid="stdio_8c">stdio.c</innerfile>
+    <innerfile refid="string_8c">string.c</innerfile>
+    <innerfile refid="syscall_8c">syscall.c</innerfile>
+    <innerfile refid="sys_malloc_8c">sysMalloc.c</innerfile>
+    <innerfile refid="sys_process_8c">sysProcess.c</innerfile>
+    <innerfile refid="system_8c">system.c</innerfile>
+    <innerfile refid="ttys_8c">ttys.c</innerfile>
+    <innerfile refid="u_malloc_8c">uMalloc.c</innerfile>
+    <innerfile refid="video__driver_8c">video_driver.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/src/"/>
+  </compounddef>
+</doxygen>

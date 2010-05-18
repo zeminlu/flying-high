@@ -1,0 +1,29 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$syscall_8c.html#a5cd71748fd2bf784c6e4f481809a9b15" title="_sys_create_process" alt="" coords="136,85,299,115"/>
+<area shape="rect" id="node5" href="$syscall_8c.html#a3a8140629b64c39fb34eb595b2d1cce2" title="_sys_read" alt="" coords="173,139,261,168"/>
+<area shape="rect" id="node7" href="$video__driver_8c.html#ab59b086c41d506e55aa02729f9916be2" title="Updates all changes made to video buffer into screen." alt="" coords="159,192,276,221"/>
+<area shape="rect" id="node51" href="$sys_malloc_8c.html#a9dd7a27b9a2dd7b9249af7fdef77fb4f" title="This function changes the original size of the logical memory to a new one if it&#39;s..." alt="" coords="171,299,264,328"/>
+<area shape="rect" id="node9" href="$bttlship_8c.html#a52e47768a66b91e89d5546a8cb0f168c" title="It&#39;s the main process of the battleship, it generates the whole table and ships..." alt="" coords="387,85,477,115"/>
+<area shape="rect" id="node11" href="$ttys_8c.html#aac09c476e825138ad51c1c5948f47748" title="This function changes the tty focus id on the next Tty that has to be in focus. This..." alt="" coords="365,139,499,168"/>
+<area shape="rect" id="node17" href="$ttys_8c.html#a0ae5938446774e4ebb46d0f5120458a8" title="It puts a character in a specific position of the tty stdout. It prints the character..." alt="" coords="348,192,516,221"/>
+<area shape="rect" id="node19" href="$ttys_8c.html#aa0c166c59cfd83d43839b76afe6ac3ce" title="This functions check if the proccess if different of init and the running process..." alt="" coords="385,245,479,275"/>
+<area shape="rect" id="node13" href="$ttys_8c.html#abbca9cfc412d307fa56ca4a4095f0f87" title="Leaves all of character that are in the KeyboradBuffer and put in the correct tty..." alt="" coords="567,72,764,101"/>
+<area shape="rect" id="node15" href="$keyboard__driver_8c.html#a354ce1ad1d33647cf9d227c04fe70f21" title="This function is the manager of interpretate what key was pressed or released. It..." alt="" coords="899,5,1027,35"/>
+<area shape="rect" id="node21" href="$exceptions_8c.html#a7bb93194b9711c5e41743a0b15e1f96d" title="handleException" alt="" coords="599,379,732,408"/>
+<area shape="rect" id="node23" href="$exceptions_8c.html#a32bab9bb09acbf2863846ccd6aa26501" title="boundsCheckExceptionHandler" alt="" coords="848,59,1077,88"/>
+<area shape="rect" id="node25" href="$exceptions_8c.html#a57d9e0521f1fc4ab7c8fc9f052204703" title="breakPointExceptionHandler" alt="" coords="856,112,1069,141"/>
+<area shape="rect" id="node27" href="$exceptions_8c.html#ac464c99d06c0c64de9c5bccd9d4d7534" title="coprocessorUnavailableExceptionHandler" alt="" coords="815,165,1111,195"/>
+<area shape="rect" id="node29" href="$exceptions_8c.html#a2b3302ed29ef81d473f026f64d9d1c66" title="debugExceptionHandler" alt="" coords="872,219,1053,248"/>
+<area shape="rect" id="node31" href="$exceptions_8c.html#a55f97a9e3220c454003172e2ff56c3e5" title="divideExceptionHandler" alt="" coords="873,272,1052,301"/>
+<area shape="rect" id="node33" href="$exceptions_8c.html#acba24c9be2bf08564cb8be1032541f1a" title="doubleFaultExceptionHandler" alt="" coords="853,325,1072,355"/>
+<area shape="rect" id="node35" href="$exceptions_8c.html#a178df3a61e259fb29152aa09c11ff4ab" title="generalProtectionExceptionHandler" alt="" coords="832,379,1093,408"/>
+<area shape="rect" id="node37" href="$exceptions_8c.html#ac2fadd7fa66a6cd401c7810c7055259c" title="invalidOpcodeExceptionHandler" alt="" coords="845,432,1080,461"/>
+<area shape="rect" id="node39" href="$exceptions_8c.html#a45d46ef062a935da4d949de18e015bb9" title="invalidTSSExceptionHandler" alt="" coords="860,485,1065,515"/>
+<area shape="rect" id="node41" href="$exceptions_8c.html#ad50c96900069ee0b4235d4132859d32b" title="NMIExceptionHandler" alt="" coords="880,539,1045,568"/>
+<area shape="rect" id="node43" href="$exceptions_8c.html#a5f51cb8cb4095770f020d157afe31def" title="overflowExceptionHandler" alt="" coords="864,592,1061,621"/>
+<area shape="rect" id="node45" href="$exceptions_8c.html#ae6fa1d6ef273ccd07a43bf324cccdadd" title="pageFaultExceptionHandler" alt="" coords="860,645,1065,675"/>
+<area shape="rect" id="node47" href="$exceptions_8c.html#a5e7dddcd8c830975521acbeacaa7bf62" title="segmentNotPresentExceptionHandler" alt="" coords="823,699,1103,728"/>
+<area shape="rect" id="node49" href="$exceptions_8c.html#ac8037344bd876e8299a5326a192456c1" title="stackExceptionHandler" alt="" coords="873,752,1052,781"/>
+<area shape="rect" id="node53" href="$k_malloc_8c.html#ad9fb012fb56b43ef1ab6078646973b3f" title="Calls sysRealloc, that changes the size of the original. It returns null if there..." alt="" coords="393,299,471,328"/>
+<area shape="rect" id="node55" href="$u_malloc_8c.html#a5ed3930d6e86bee548f632e2c571c736" title="Changes the original size of the continuous memory. If it is possible, it moves the..." alt="" coords="399,352,465,381"/>
+</map>

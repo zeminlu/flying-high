@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="struct_d_e_s_c_r___s_e_g" kind="struct" prot="public">
+    <compoundname>DESCR_SEG</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_e_s_c_r___s_e_g_1ab5c3c0a36eb16002f03ae8565e505e89" prot="public" static="no" mutable="no">
+        <type>word</type>
+        <definition>word limit</definition>
+        <argsstring></argsstring>
+        <name>limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="336" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___s_e_g_1a224f2e6e6450f9962b95fdb072f418b3" prot="public" static="no" mutable="no">
+        <type>word</type>
+        <definition>word base_l</definition>
+        <argsstring></argsstring>
+        <name>base_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="337" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___s_e_g_1a5c4cfa8b9f24cf1ee0523cdc8ee7cbe3" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte base_m</definition>
+        <argsstring></argsstring>
+        <name>base_m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="338" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___s_e_g_1a7a3205f563ba31a30efd817ea54561fd" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte access</definition>
+        <argsstring></argsstring>
+        <name>access</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="339" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___s_e_g_1addb2c00f31ab98af1ca1d6c8190059ac" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte attribs</definition>
+        <argsstring></argsstring>
+        <name>attribs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="340" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_e_s_c_r___s_e_g_1a65dd6766eb6584c25d200c8cb88bac0d" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte base_h</definition>
+        <argsstring></argsstring>
+        <name>base_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="341" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>OS segment descriptor struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="335" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="335" bodyend="342"/>
+    <listofallmembers>
+      <member refid="struct_d_e_s_c_r___s_e_g_1a7a3205f563ba31a30efd817ea54561fd" prot="public" virt="non-virtual"><scope>DESCR_SEG</scope><name>access</name></member>
+      <member refid="struct_d_e_s_c_r___s_e_g_1addb2c00f31ab98af1ca1d6c8190059ac" prot="public" virt="non-virtual"><scope>DESCR_SEG</scope><name>attribs</name></member>
+      <member refid="struct_d_e_s_c_r___s_e_g_1a65dd6766eb6584c25d200c8cb88bac0d" prot="public" virt="non-virtual"><scope>DESCR_SEG</scope><name>base_h</name></member>
+      <member refid="struct_d_e_s_c_r___s_e_g_1a224f2e6e6450f9962b95fdb072f418b3" prot="public" virt="non-virtual"><scope>DESCR_SEG</scope><name>base_l</name></member>
+      <member refid="struct_d_e_s_c_r___s_e_g_1a5c4cfa8b9f24cf1ee0523cdc8ee7cbe3" prot="public" virt="non-virtual"><scope>DESCR_SEG</scope><name>base_m</name></member>
+      <member refid="struct_d_e_s_c_r___s_e_g_1ab5c3c0a36eb16002f03ae8565e505e89" prot="public" virt="non-virtual"><scope>DESCR_SEG</scope><name>limit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

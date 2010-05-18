@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ttys_8h.html#a8b368b52e988f2fb5f99aeb979fe4040" title="It prints only one character in specific tty. It verifies if the character is a control..." alt="" coords="172,5,271,35"/>
+<area shape="rect" id="node5" href="$unistd_8h.html#a116146ccc01b751779e5351615743547" title="read() reads &quot;count&quot; bytes from the file descripted by the file descriptor..." alt="" coords="196,59,247,88"/>
+</map>

@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="p_queue_p_8h" kind="file">
+    <compoundname>pQueueP.h</compoundname>
+    <includes refid="string_8h" local="yes">string.h</includes>
+    <includes refid="stdio_8h" local="yes">stdio.h</includes>
+    <includes refid="sys_process_8h" local="yes">sysProcess.h</includes>
+    <incdepgraph>
+      <node id="3051">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3041" relation="include">
+        </childnode>
+      </node>
+      <node id="3032">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3057">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3055" relation="include">
+        </childnode>
+      </node>
+      <node id="3044">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="3041">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+        <childnode refid="3049" relation="include">
+        </childnode>
+        <childnode refid="3036" relation="include">
+        </childnode>
+      </node>
+      <node id="3046">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3047" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+      </node>
+      <node id="3034">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3033">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3029">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3030" relation="include">
+        </childnode>
+        <childnode refid="3031" relation="include">
+        </childnode>
+      </node>
+      <node id="3050">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3048" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+      </node>
+      <node id="3052">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+        <childnode refid="3053" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3032" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3047" relation="include">
+        </childnode>
+        <childnode refid="3054" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+        <childnode refid="3056" relation="include">
+        </childnode>
+      </node>
+      <node id="3045">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3053">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3052" relation="include">
+        </childnode>
+        <childnode refid="3040" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3039">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="3040" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3035">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3036" relation="include">
+        </childnode>
+        <childnode refid="3038" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+        <childnode refid="3041" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3050" relation="include">
+        </childnode>
+        <childnode refid="3051" relation="include">
+        </childnode>
+        <childnode refid="3052" relation="include">
+        </childnode>
+      </node>
+      <node id="3040">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="3049">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+      </node>
+      <node id="3048">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+      </node>
+      <node id="3031">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3032" relation="include">
+        </childnode>
+      </node>
+      <node id="3036">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3037" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3038" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+        <childnode refid="3041" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+        <childnode refid="3050" relation="include">
+        </childnode>
+      </node>
+      <node id="3056">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3057" relation="include">
+        </childnode>
+        <childnode refid="3055" relation="include">
+        </childnode>
+        <childnode refid="3051" relation="include">
+        </childnode>
+        <childnode refid="3036" relation="include">
+        </childnode>
+      </node>
+      <node id="3028">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3038">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3043">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3041" relation="include">
+        </childnode>
+        <childnode refid="3044" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+      </node>
+      <node id="3037">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3038" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3055">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+      </node>
+      <node id="3042">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+      </node>
+      <node id="3047">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3048" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+      </node>
+      <node id="3030">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="3054">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3054" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3038" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3041" relation="include">
+        </childnode>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+        <childnode refid="3036" relation="include">
+        </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+        <childnode refid="3048" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+        <childnode refid="3050" relation="include">
+        </childnode>
+        <childnode refid="3052" relation="include">
+        </childnode>
+        <childnode refid="3040" relation="include">
+        </childnode>
+        <childnode refid="3032" relation="include">
+        </childnode>
+        <childnode refid="3047" relation="include">
+        </childnode>
+        <childnode refid="3055" relation="include">
+        </childnode>
+        <childnode refid="3051" relation="include">
+        </childnode>
+      </node>
+      <node id="3027">
+        <label>inc/pQueueP.h</label>
+        <link refid="pQueueP.h"/>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="p_queue_p_8h_1ad7833c7256e151ecc7fb1ef7b6debdb9" prot="public" static="no">
+        <type>struct <ref refid="structp_queue_c_d_t" kindref="compound">pQueueCDT</ref> *</type>
+        <definition>typedef struct pQueueCDT* pQueueADT</definition>
+        <argsstring></argsstring>
+        <name>pQueueADT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h" line="20" bodyfile="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="p_queue_p_8h_1a410b753d802b615381198d60fd33cc12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structp_queue_c_d_t" kindref="compound">pQueueADT</ref></type>
+        <definition>pQueueADT newPQueue</definition>
+        <argsstring>(void(*freeFn)(void *), void *(*cpyFn)(void *))</argsstring>
+        <name>newPQueue</name>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>freeFn</declname>
+        </param>
+        <param>
+          <type>void *(*)(void *)</type>
+          <declname>cpyFn</declname>
+        </param>
+        <briefdescription>
+<para>This function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_ priorities. It receives the function to copy an element and free an element. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pQueue<sp/>*<sp/>queue;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue<sp/>=<sp/><ref refid="p_queue_p_8h_1a410b753d802b615381198d60fd33cc12" kindref="member" tooltip="This function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_...">newPQueue</ref>();</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h" line="41" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="71" bodyend="96"/>
+        <references refid="structp_queue_c_d_t_1abce72dff83b4c0563783ac39950547ac" compoundref="p_queue_p_8c" startline="33">pQueueCDT::cpyFn</references>
+        <references refid="structp_queue_c_d_t_1a1ea7dba004336f82292919dfead1aceb" compoundref="p_queue_p_8c" startline="34">pQueueCDT::freeFn</references>
+        <references refid="u_malloc_8h_1a31161ef8eddd18e7781cb947f6f627d5" compoundref="u_malloc_8c" startline="20" endline="22">malloc</references>
+        <references refid="config_8h_1a88b491593ae5e149772272b10dbad018" compoundref="config_8h" startline="118">MAX_PRIORITIES</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" compoundref="p_queue_p_8c" startline="32">pQueueCDT::queue</references>
+      </memberdef>
+      <memberdef kind="function" id="p_queue_p_8h_1a1da6471fc3cf61ea1ce047d0baafd72b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freePQueue</definition>
+        <argsstring>(pQueueADT queue)</argsstring>
+        <name>freePQueue</name>
+        <param>
+          <type><ref refid="structp_queue_c_d_t" kindref="compound">pQueueADT</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>This function frees the whole pQueue. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="p_queue_p_8h_1a1da6471fc3cf61ea1ce047d0baafd72b" kindref="member" tooltip="This function frees the whole pQueue.">freePQueue</ref>(<sp/>queue<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h" line="55" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="98" bodyend="118"/>
+        <references refid="u_malloc_8h_1adebb229f063e66907017098087cbe791" compoundref="u_malloc_8c" startline="16" endline="19">free</references>
+        <references refid="config_8h_1a88b491593ae5e149772272b10dbad018" compoundref="config_8h" startline="118">MAX_PRIORITIES</references>
+        <references refid="struct_node__t_1a5e58c48351200ad246d4db491634433c" compoundref="p_queue_p_8c" startline="16">Node_t::next</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" compoundref="p_queue_p_8c" startline="32">pQueueCDT::queue</references>
+      </memberdef>
+      <memberdef kind="function" id="p_queue_p_8h_1a2c6cfc95a906a00331462b78a5bd5cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int enque</definition>
+        <argsstring>(pQueueADT queue, void *data, int priority)</argsstring>
+        <name>enque</name>
+        <param>
+          <type><ref refid="structp_queue_c_d_t" kindref="compound">pQueueADT</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+<para>This function enque the element in the correct priority node and it will be added at last of the list. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pQueue<sp/>*<sp/>queue;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>data<sp/>=<sp/>9;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue<sp/>=<sp/><ref refid="p_queue_p_8h_1a410b753d802b615381198d60fd33cc12" kindref="member" tooltip="This function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_...">newPQueue</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="p_queue_p_8h_1a2c6cfc95a906a00331462b78a5bd5cf7" kindref="member" tooltip="This function enque the element in the correct priority node and it will be added...">enque</ref>(queue,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(&amp;data)<sp/>);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h" line="72" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="120" bodyend="144"/>
+        <references refid="structp_queue_c_d_t_1abce72dff83b4c0563783ac39950547ac" compoundref="p_queue_p_8c" startline="33">pQueueCDT::cpyFn</references>
+        <references refid="u_malloc_8h_1a31161ef8eddd18e7781cb947f6f627d5" compoundref="u_malloc_8c" startline="20" endline="22">malloc</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" compoundref="p_queue_p_8c" startline="32">pQueueCDT::queue</references>
+      </memberdef>
+      <memberdef kind="function" id="p_queue_p_8h_1a06d7f0a23562dd5158922dd40019254c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * deque</definition>
+        <argsstring>(pQueueADT queue)</argsstring>
+        <name>deque</name>
+        <param>
+          <type><ref refid="structp_queue_c_d_t" kindref="compound">pQueueADT</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>This function return the first element of the queue. After you call to deque, if the proccess doesn&apos;t finish you must enque again the control block, if not you don&apos;t do anything. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pQueue<sp/>*<sp/>queue;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>10,<sp/>ret;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue<sp/>=<sp/><ref refid="p_queue_p_8h_1a410b753d802b615381198d60fd33cc12" kindref="member" tooltip="This function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_...">newPQueue</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="p_queue_p_8h_1a2c6cfc95a906a00331462b78a5bd5cf7" kindref="member" tooltip="This function enque the element in the correct priority node and it will be added...">enque</ref>(<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(&amp;data)<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)<ref refid="p_queue_p_8h_1a06d7f0a23562dd5158922dd40019254c" kindref="member" tooltip="This function return the first element of the queue. After you call to deque, if...">deque</ref>(queue));</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h" line="91" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="146" bodyend="165"/>
+        <references refid="structp_queue_c_d_t_1abce72dff83b4c0563783ac39950547ac" compoundref="p_queue_p_8c" startline="33">pQueueCDT::cpyFn</references>
+        <references refid="structp_queue_c_d_t_1a1ea7dba004336f82292919dfead1aceb" compoundref="p_queue_p_8c" startline="34">pQueueCDT::freeFn</references>
+        <references refid="config_8h_1a88b491593ae5e149772272b10dbad018" compoundref="config_8h" startline="118">MAX_PRIORITIES</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" compoundref="p_queue_p_8c" startline="32">pQueueCDT::queue</references>
+      </memberdef>
+      <memberdef kind="function" id="p_queue_p_8h_1aef016839ece378b19c2ab903e53165b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isEmpty</definition>
+        <argsstring>(pQueueADT queue)</argsstring>
+        <name>isEmpty</name>
+        <param>
+          <type><ref refid="structp_queue_c_d_t" kindref="compound">pQueueADT</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>This function the amount of proccess that are in the priority queue. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h" line="100" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="167" bodyend="178"/>
+        <references refid="config_8h_1a88b491593ae5e149772272b10dbad018" compoundref="config_8h" startline="118">MAX_PRIORITIES</references>
+        <references refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" compoundref="p_queue_p_8c" startline="32">pQueueCDT::queue</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The priority queue module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_PQUEUEP_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_PQUEUEP_H_<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8h" kindref="compound" tooltip="Declaration of all functions that deals with strings and buffers.">string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdio_8h" kindref="compound" tooltip="Definitions for all standard input and output and declaration of all functions to...">stdio.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sys_process_8h" kindref="compound" tooltip="OS system utilities.">sysProcess.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Struct<sp/>Section</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="p_queue_p_8h_1ad7833c7256e151ecc7fb1ef7b6debdb9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structp_queue_c_d_t" kindref="compound">pQueueCDT</ref><sp/>*<sp/><ref refid="structp_queue_c_d_t" kindref="compound">pQueueADT</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Function<sp/>Sections</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">pQueueADT<sp/><ref refid="p_queue_p_8h_1a410b753d802b615381198d60fd33cc12" kindref="member" tooltip="This function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_...">newPQueue</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*<ref refid="structp_queue_c_d_t_1a1ea7dba004336f82292919dfead1aceb" kindref="member">freeFn</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>(*<ref refid="structp_queue_c_d_t_1abce72dff83b4c0563783ac39950547ac" kindref="member">cpyFn</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="p_queue_p_8h_1a1da6471fc3cf61ea1ce047d0baafd72b" kindref="member" tooltip="This function frees the whole pQueue.">freePQueue</ref>(<sp/>pQueueADT<sp/><ref refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" kindref="member">queue</ref><sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="p_queue_p_8h_1a2c6cfc95a906a00331462b78a5bd5cf7" kindref="member" tooltip="This function enque the element in the correct priority node and it will be added...">enque</ref>(<sp/>pQueueADT<sp/><ref refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" kindref="member">queue</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>priority<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="p_queue_p_8h_1a06d7f0a23562dd5158922dd40019254c" kindref="member" tooltip="This function return the first element of the queue. After you call to deque, if...">deque</ref>(<sp/>pQueueADT<sp/><ref refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" kindref="member">queue</ref><sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="p_queue_p_8h_1aef016839ece378b19c2ab903e53165b7" kindref="member" tooltip="This function the amount of proccess that are in the priority queue.">isEmpty</ref>(<sp/>pQueueADT<sp/><ref refid="structp_queue_c_d_t_1abd678f8ea5d396a97fd1938b4df23841" kindref="member">queue</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/pQueueP.h"/>
+  </compounddef>
+</doxygen>

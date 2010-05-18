@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$sys_malloc_8h.html" title="Generic malloc module." alt="" coords="129,83,228,112"/>
+<area shape="rect" id="node5" href="$mem_module_8h.html" title="The memory management / paging module." alt="" coords="60,160,177,189"/>
+<area shape="rect" id="node7" href="$string_8h.html" title="Declaration of all functions that deals with strings and buffers." alt="" coords="180,315,252,344"/>
+<area shape="rect" id="node9" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="45,392,117,421"/>
+<area shape="rect" id="node17" href="$stdio_8h.html" title="Definitions for all standard input and output and declaration of all functions to..." alt="" coords="73,237,140,267"/>
+<area shape="rect" id="node11" href="$defs_8h.html" title="OS inner defines." alt="" coords="5,469,67,499"/>
+<area shape="rect" id="node13" href="$config_8h.html" title="OS configuration defines." alt="" coords="91,469,165,499"/>
+<area shape="rect" id="node15" href="$colors_8h.html" title="Video Color defines." alt="" coords="92,547,164,576"/>
+<area shape="rect" id="node20" href="$unistd_8h.html" title="Definitions for all UNIX Standard system calls functions." alt="" coords="81,315,156,344"/>
+</map>

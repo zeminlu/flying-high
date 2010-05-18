@@ -1,0 +1,563 @@
+.TH "inc/defs.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/defs.h \- 
+.PP
+OS inner defines.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBbyte\fP   unsigned char"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBword\fP   short int"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBdword\fP   int"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBTRUE\fP   1"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBFALSE\fP   !TRUE"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBOK\fP   TRUE"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBERROR\fP   FALSE"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fB_READ\fP   0x01"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fB_WRITE\fP   0x02"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBSEND_TO_VIDEO\fP   1"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBWRITE_ON_TTY\fP   0"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBTTY_RAW\fP   0"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBTTY_CANONICAL\fP   1"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBLOAD\fP   0"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBSAVE\fP   1"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBSTDIN\fP   0"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBSTDOUT\fP   1"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBIN_ATT\fP   2"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBOUT_ATT\fP   3"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBATOMIC\fP   1"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBUNATOMIC\fP   !ATOMIC"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBFOREGROUND\fP   0"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBBACKGROUND\fP   1"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBKB\fP   * (1 << 10)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBMB\fP   * (1 << 20)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBKERNEL_SPACE\fP   0x00000000"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBKERNEL_SPACE_SIZE\fP   (8 MB)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBMALLOC_SPACE\fP   (KERNEL_SPACE + KERNEL_SPACE_SIZE)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBMALLOC_SPACE_SIZE\fP   (8 MB)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBTOTAL_MEMORY_SIZE\fP   (KERNEL_SPACE_SIZE + MALLOC_SPACE_SIZE)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBPAGE_SIZE\fP   (4 KB)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBPAGE_ENTRY_SIZE\fP   sizeof(unsigned int)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBPAGE_ENTRIES_PER_TABLE\fP   (PAGE_SIZE / PAGE_ENTRY_SIZE)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBKERNEL_TABLES_QTY\fP   (KERNEL_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBMALLOC_TABLES_QTY\fP   (MALLOC_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBPAGE_TABLES_QTY\fP   (KERNEL_TABLES_QTY + MALLOC_TABLES_QTY)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBFRAMES_PER_TABLE\fP   (PAGE_ENTRIES_PER_TABLE / PAGES_PER_FRAME)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBTOTAL_FRAMES_QTY\fP   (MALLOC_TABLES_QTY * FRAMES_PER_TABLE)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBFIRST_KERNEL_TABLE\fP   0"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBFIRST_MALLOC_TABLE\fP   FIRST_KERNEL_TABLE + KERNEL_TABLES_QTY"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBPAGES_PER_INT\fP   ((int)(sizeof(unsigned int)) * 8)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBINTS_PER_TABLE\fP   (PAGE_ENTRIES_PER_TABLE / 32)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBBITMAP_SIZE\fP   (INTS_PER_TABLE * MALLOC_TABLES_QTY)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBMAX_MAPPED_ADDRESS\fP   (TOTAL_MEMORY_SIZE - 1)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBgetBitmapIndex\fP(addr)   (((addr) / (unsigned)PAGE_SIZE) / (unsigned)PAGES_PER_INT)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBgetBitmapOffset\fP(addr)   (0x00000001 << (((addr) / PAGE_SIZE) % PAGES_PER_INT))"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBOFFSET_MASK\fP   0xFFFFF000"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_PRESENT\fP   0x80"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_CSEG\fP   0x18"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_DSEG\fP   0x10"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_READ\fP   0x02"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_WRITE\fP   0x02"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_IDT\fP   ACS_DSEG"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_INT_386\fP   0x0E"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_INT\fP   ( ACS_PRESENT | ACS_INT_386 )"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_CODE\fP   (ACS_PRESENT | ACS_CSEG | ACS_READ)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_DATA\fP   (ACS_PRESENT | ACS_DSEG | ACS_WRITE)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBACS_STACK\fP   (ACS_PRESENT | ACS_DSEG | ACS_WRITE)"
+.br
+.RI "\fIDefineBrief. \fP"
+.ti -1c
+.RI "#define \fBNULL\fP   (void *)0x0"
+.br
+.RI "\fINULL pointer definition. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+OS inner defines. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBdefs.h\fP.
+.SH "Define Documentation"
+.PP 
+.SS "#define _READ   0x01"
+.PP
+DefineBrief. 
+.PP
+Definition at line 53 of file defs.h.
+.SS "#define _WRITE   0x02"
+.PP
+DefineBrief. 
+.PP
+Definition at line 58 of file defs.h.
+.SS "#define ACS_CODE   (ACS_PRESENT | ACS_CSEG | ACS_READ)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 313 of file defs.h.
+.SS "#define ACS_CSEG   0x18"
+.PP
+DefineBrief. 
+.PP
+Definition at line 277 of file defs.h.
+.SS "#define ACS_DATA   (ACS_PRESENT | ACS_DSEG | ACS_WRITE)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 318 of file defs.h.
+.SS "#define ACS_DSEG   0x10"
+.PP
+DefineBrief. 
+.PP
+Definition at line 282 of file defs.h.
+.SS "#define ACS_IDT   ACS_DSEG"
+.PP
+DefineBrief. 
+.PP
+Definition at line 297 of file defs.h.
+.SS "#define ACS_INT   ( ACS_PRESENT | ACS_INT_386 )"
+.PP
+DefineBrief. 
+.PP
+Definition at line 307 of file defs.h.
+.SS "#define ACS_INT_386   0x0E"
+.PP
+DefineBrief. 
+.PP
+Definition at line 302 of file defs.h.
+.SS "#define ACS_PRESENT   0x80"
+.PP
+DefineBrief. 
+.PP
+Definition at line 272 of file defs.h.
+.SS "#define ACS_READ   0x02"
+.PP
+DefineBrief. 
+.PP
+Definition at line 287 of file defs.h.
+.SS "#define ACS_STACK   (ACS_PRESENT | ACS_DSEG | ACS_WRITE)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 323 of file defs.h.
+.SS "#define ACS_WRITE   0x02"
+.PP
+DefineBrief. 
+.PP
+Definition at line 292 of file defs.h.
+.SS "#define ATOMIC   1"
+.PP
+DefineBrief. 
+.PP
+Definition at line 118 of file defs.h.
+.SS "#define BACKGROUND   1"
+.PP
+DefineBrief. 
+.PP
+Definition at line 133 of file defs.h.
+.SS "#define BITMAP_SIZE   (INTS_PER_TABLE * MALLOC_TABLES_QTY)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 245 of file defs.h.
+.SS "#define byte   unsigned char"
+.PP
+DefineBrief. 
+.PP
+Definition at line 17 of file defs.h.
+.SS "#define dword   int"
+.PP
+DefineBrief. 
+.PP
+Definition at line 27 of file defs.h.
+.SS "#define ERROR   FALSE"
+.PP
+DefineBrief. 
+.PP
+Definition at line 47 of file defs.h.
+.SS "#define FALSE   !TRUE"
+.PP
+DefineBrief. 
+.PP
+Definition at line 37 of file defs.h.
+.SS "#define FIRST_KERNEL_TABLE   0"
+.PP
+DefineBrief. 
+.PP
+Definition at line 223 of file defs.h.
+.SS "#define FIRST_MALLOC_TABLE   FIRST_KERNEL_TABLE + KERNEL_TABLES_QTY"
+.PP
+DefineBrief. 
+.PP
+Definition at line 228 of file defs.h.
+.SS "#define FOREGROUND   0"
+.PP
+DefineBrief. 
+.PP
+Definition at line 128 of file defs.h.
+.SS "#define FRAMES_PER_TABLE   (PAGE_ENTRIES_PER_TABLE / PAGES_PER_FRAME)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 211 of file defs.h.
+.SS "#define getBitmapIndex(addr)   (((addr) / (unsigned)PAGE_SIZE) / (unsigned)PAGES_PER_INT)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 255 of file defs.h.
+.SS "#define getBitmapOffset(addr)   (0x00000001 << (((addr) / PAGE_SIZE) % PAGES_PER_INT))"
+.PP
+DefineBrief. 
+.PP
+Definition at line 260 of file defs.h.
+.SS "#define IN_ATT   2"
+.PP
+DefineBrief. 
+.PP
+Definition at line 107 of file defs.h.
+.SS "#define INTS_PER_TABLE   (PAGE_ENTRIES_PER_TABLE / 32)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 240 of file defs.h.
+.SS "#define KB   * (1 << 10)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 140 of file defs.h.
+.SS "#define KERNEL_SPACE   0x00000000"
+.PP
+DefineBrief. 
+.PP
+Definition at line 152 of file defs.h.
+.SS "#define KERNEL_SPACE_SIZE   (8 MB)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 157 of file defs.h.
+.SS "#define KERNEL_TABLES_QTY   (KERNEL_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))"
+.PP
+DefineBrief. 
+.PP
+Definition at line 194 of file defs.h.
+.SS "#define LOAD   0"
+.PP
+DefineBrief. 
+.PP
+Definition at line 86 of file defs.h.
+.SS "#define MALLOC_SPACE   (KERNEL_SPACE + KERNEL_SPACE_SIZE)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 162 of file defs.h.
+.SS "#define MALLOC_SPACE_SIZE   (8 MB)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 167 of file defs.h.
+.SS "#define MALLOC_TABLES_QTY   (MALLOC_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))"
+.PP
+DefineBrief. 
+.PP
+Definition at line 199 of file defs.h.
+.SS "#define MAX_MAPPED_ADDRESS   (TOTAL_MEMORY_SIZE - 1)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 250 of file defs.h.
+.SS "#define MB   * (1 << 20)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 145 of file defs.h.
+.SS "#define NULL   (void *)0x0"
+.PP
+NULL pointer definition. 
+.PP
+Definition at line 328 of file defs.h.
+.SS "#define OFFSET_MASK   0xFFFFF000"
+.PP
+DefineBrief. 
+.PP
+Definition at line 265 of file defs.h.
+.SS "#define OK   TRUE"
+.PP
+DefineBrief. 
+.PP
+Definition at line 42 of file defs.h.
+.SS "#define OUT_ATT   3"
+.PP
+DefineBrief. 
+.PP
+Definition at line 112 of file defs.h.
+.SS "#define PAGE_ENTRIES_PER_TABLE   (PAGE_SIZE / PAGE_ENTRY_SIZE)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 189 of file defs.h.
+.SS "#define PAGE_ENTRY_SIZE   sizeof(unsigned int)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 184 of file defs.h.
+.SS "#define PAGE_SIZE   (4 KB)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 179 of file defs.h.
+.SS "#define PAGE_TABLES_QTY   (KERNEL_TABLES_QTY + MALLOC_TABLES_QTY)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 204 of file defs.h.
+.SS "#define PAGES_PER_INT   ((int)(sizeof(unsigned int)) * 8)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 235 of file defs.h.
+.SS "#define SAVE   1"
+.PP
+DefineBrief. 
+.PP
+Definition at line 91 of file defs.h.
+.SS "#define SEND_TO_VIDEO   1"
+.PP
+DefineBrief. 
+.PP
+Definition at line 64 of file defs.h.
+.SS "#define STDIN   0"
+.PP
+DefineBrief. 
+.PP
+Definition at line 97 of file defs.h.
+.SS "#define STDOUT   1"
+.PP
+DefineBrief. 
+.PP
+Definition at line 102 of file defs.h.
+.SS "#define TOTAL_FRAMES_QTY   (MALLOC_TABLES_QTY * FRAMES_PER_TABLE)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 216 of file defs.h.
+.SS "#define TOTAL_MEMORY_SIZE   (KERNEL_SPACE_SIZE + MALLOC_SPACE_SIZE)"
+.PP
+DefineBrief. 
+.PP
+Definition at line 172 of file defs.h.
+.SS "#define TRUE   1"
+.PP
+DefineBrief. 
+.PP
+Definition at line 32 of file defs.h.
+.SS "#define TTY_CANONICAL   1"
+.PP
+DefineBrief. 
+.PP
+Definition at line 80 of file defs.h.
+.SS "#define TTY_RAW   0"
+.PP
+DefineBrief. 
+.PP
+Definition at line 75 of file defs.h.
+.SS "#define UNATOMIC   !ATOMIC"
+.PP
+DefineBrief. 
+.PP
+Definition at line 123 of file defs.h.
+.SS "#define word   short int"
+.PP
+DefineBrief. 
+.PP
+Definition at line 22 of file defs.h.
+.SS "#define WRITE_ON_TTY   0"
+.PP
+DefineBrief. 
+.PP
+Definition at line 69 of file defs.h.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

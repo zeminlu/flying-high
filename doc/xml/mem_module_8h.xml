@@ -1,0 +1,763 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="mem_module_8h" kind="file">
+    <compoundname>memModule.h</compoundname>
+    <includes refid="string_8h" local="yes">string.h</includes>
+    <includes refid="stdio_8h" local="yes">stdio.h</includes>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="kernel_8h" local="yes">inc/kernel.h</includedby>
+    <includedby refid="kernel_depth_8h" local="yes">inc/kernelDepth.h</includedby>
+    <includedby refid="k_malloc_8h" local="yes">inc/kMalloc.h</includedby>
+    <includedby refid="syscall_8h" local="yes">inc/syscall.h</includedby>
+    <includedby refid="sys_malloc_8h" local="yes">inc/sysMalloc.h</includedby>
+    <includedby refid="sys_process_8h" local="yes">inc/sysProcess.h</includedby>
+    <includedby refid="u_malloc_8h" local="yes">inc/uMalloc.h</includedby>
+    <incdepgraph>
+      <node id="2987">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="2989">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+      </node>
+      <node id="2988">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="2983" relation="include">
+        </childnode>
+        <childnode refid="2989" relation="include">
+        </childnode>
+        <childnode refid="2984" relation="include">
+        </childnode>
+      </node>
+      <node id="2984">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2985" relation="include">
+        </childnode>
+        <childnode refid="2986" relation="include">
+        </childnode>
+      </node>
+      <node id="2986">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2987" relation="include">
+        </childnode>
+      </node>
+      <node id="2983">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+      </node>
+      <node id="2982">
+        <label>inc/memModule.h</label>
+        <link refid="memModule.h"/>
+        <childnode refid="2983" relation="include">
+        </childnode>
+        <childnode refid="2988" relation="include">
+        </childnode>
+        <childnode refid="2984" relation="include">
+        </childnode>
+      </node>
+      <node id="2985">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3006">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3007" relation="include">
+        </childnode>
+      </node>
+      <node id="2992">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2993" relation="include">
+        </childnode>
+      </node>
+      <node id="3022">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3002">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="3002" relation="include">
+        </childnode>
+      </node>
+      <node id="2999">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="3011">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3012" relation="include">
+        </childnode>
+      </node>
+      <node id="3005">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3006" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3008" relation="include">
+        </childnode>
+      </node>
+      <node id="3015">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3016" relation="include">
+        </childnode>
+      </node>
+      <node id="3016">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3023">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="3021">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="3000">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+      </node>
+      <node id="2994">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="3022" relation="include">
+        </childnode>
+      </node>
+      <node id="3018">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="3018" relation="include">
+        </childnode>
+      </node>
+      <node id="3020">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="2995">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3018" relation="include">
+        </childnode>
+        <childnode refid="3019" relation="include">
+        </childnode>
+      </node>
+      <node id="3024">
+        <label>inc/kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3005" relation="include">
+        </childnode>
+      </node>
+      <node id="3012">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="3003">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="3004" relation="include">
+        </childnode>
+      </node>
+      <node id="3025">
+        <label>inc/sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="3000" relation="include">
+        </childnode>
+        <childnode refid="3014" relation="include">
+        </childnode>
+        <childnode refid="3026" relation="include">
+        </childnode>
+      </node>
+      <node id="3026">
+        <label>src/sysMalloc.c</label>
+        <link refid="sys_malloc_8c"/>
+      </node>
+      <node id="3001">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="3002" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+      </node>
+      <node id="2998">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+      </node>
+      <node id="2997">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="3000" relation="include">
+        </childnode>
+        <childnode refid="3010" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="3014" relation="include">
+        </childnode>
+        <childnode refid="3017" relation="include">
+        </childnode>
+      </node>
+      <node id="3019">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="3017">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="3013">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="3010">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3011" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+      </node>
+      <node id="3008">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="2993">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="3007">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="3009">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="2990">
+        <label>inc/memModule.h</label>
+        <link refid="memModule.h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3024" relation="include">
+        </childnode>
+        <childnode refid="3000" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="3025" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3014" relation="include">
+        </childnode>
+      </node>
+      <node id="3004">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="3014">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="3015" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+      </node>
+      <node id="2991">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+      </node>
+      <node id="2996">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mem_module_8h_1acc364a2b6a3687b69aa60fd922b178ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadCR3</definition>
+        <argsstring>()</argsstring>
+        <name>loadCR3</name>
+        <briefdescription>
+<para>Loads the CR3 into the processor register. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="23" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="32" bodyend="36"/>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1a7a9e898c2f9b5aae935f0668c962d02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initPaging</definition>
+        <argsstring>()</argsstring>
+        <name>initPaging</name>
+        <briefdescription>
+<para>Initializes the pagination and turns it on. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 on success, -1 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="33" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="38" bodyend="65"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="defs_8h_1a2cac3b477c52f9e0329f6b6d8050aa34" compoundref="defs_8h" startline="223">FIRST_KERNEL_TABLE</references>
+        <references refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" compoundref="mem_module_8c" startline="143" endline="153">getFrame</references>
+        <references refid="mem_module_8h_1a6a84b1dac3ab7d785283bf1b99da1e26" compoundref="mem_module_8c" startline="89" endline="97">initKernelTable</references>
+        <references refid="mem_module_8h_1ae7015dddbf16d196ea6e8cc66f2a8d2f" compoundref="mem_module_8c" startline="109" endline="129">initMallocTable</references>
+        <references refid="mem_module_8h_1ad19841b9dac7eb81c72b63088b80015c" compoundref="mem_module_8c" startline="71" endline="77">initPage</references>
+        <references refid="defs_8h_1a23bbe65918fee446b09dc6d3f92e0bac" compoundref="defs_8h" startline="194">KERNEL_TABLES_QTY</references>
+        <references refid="mem_module_8h_1acc364a2b6a3687b69aa60fd922b178ef" compoundref="mem_module_8c" startline="32" endline="36">loadCR3</references>
+        <references refid="string_8h_1a1dfdc55c5334154353963674598faf1b" compoundref="string_8c" startline="134" endline="139">memset</references>
+        <references refid="defs_8h_1a2fe5b1c83a789cd19496b550290a10e2" compoundref="defs_8h" startline="204">PAGE_TABLES_QTY</references>
+        <references refid="mem_module_8h_1ad2ea87727da761c9bcb36881d36bef21" compoundref="mem_module_8c" startline="67" endline="69">setKernelHeapPresence</references>
+        <references refid="defs_8h_1a7f80e4b553d435a097d07c74652ee861" compoundref="defs_8h" startline="216">TOTAL_FRAMES_QTY</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1ad2ea87727da761c9bcb36881d36bef21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setKernelHeapPresence</definition>
+        <argsstring>(int state)</argsstring>
+        <name>setKernelHeapPresence</name>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets the presence bit of the kernel heap pages according to the given parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True or False. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="43" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="67" bodyend="69"/>
+        <references refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" compoundref="mem_module_8c" startline="131" endline="141">setFramePresence</references>
+        <referencedby refid="kernel_depth_8c_1a12d75a01091aa2aef0b93c98f76b859d" compoundref="kernel_depth_8c" startline="23" endline="28">decreaseKernelDepth</referencedby>
+        <referencedby refid="kernel_depth_8c_1a60e4cee7d263ef4134a3d83ab35de9c6" compoundref="kernel_depth_8c" startline="14" endline="21">increaseKernelDepth</referencedby>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1ad19841b9dac7eb81c72b63088b80015c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initPage</definition>
+        <argsstring>(page_t *page, int isKernel)</argsstring>
+        <name>initPage</name>
+        <param>
+          <type><ref refid="structpage__t" kindref="compound">page_t</ref> *</type>
+          <declname>page</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>isKernel</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the given page with according permissions. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>page</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the page. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isKernel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Permissions, True or False. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="54" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="71" bodyend="77"/>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <referencedby refid="mem_module_8c_1a1056bbd0c7d38416134d0645668eaf7d" compoundref="mem_module_8c" startline="79" endline="87">allocKPage</referencedby>
+        <referencedby refid="mem_module_8c_1a868034315919cceedc278c3f24d06e04" compoundref="mem_module_8c" startline="99" endline="107">allocMPage</referencedby>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1a1056bbd0c7d38416134d0645668eaf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int allocKPage</definition>
+        <argsstring>(page_t *kernelPage)</argsstring>
+        <name>allocKPage</name>
+        <param>
+          <type><ref refid="structpage__t" kindref="compound">page_t</ref> *</type>
+          <declname>kernelPage</declname>
+        </param>
+        <briefdescription>
+<para>Allocs a Page for the kernel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kernelPage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the page.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="66" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="79" bodyend="87"/>
+        <references refid="mem_module_8h_1ad19841b9dac7eb81c72b63088b80015c" compoundref="mem_module_8c" startline="71" endline="77">initPage</references>
+        <references refid="defs_8h_1a94ad616f6fdced1466e60a7add259f3c" compoundref="defs_8h" startline="152">KERNEL_SPACE</references>
+        <references refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" compoundref="defs_8h" startline="179">PAGE_SIZE</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <referencedby refid="mem_module_8c_1a6a84b1dac3ab7d785283bf1b99da1e26" compoundref="mem_module_8c" startline="89" endline="97">initKernelTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1a6a84b1dac3ab7d785283bf1b99da1e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initKernelTable</definition>
+        <argsstring>(pageTable_t kernelTable)</argsstring>
+        <name>initKernelTable</name>
+        <param>
+          <type><ref refid="structpage_table__t" kindref="compound">pageTable_t</ref></type>
+          <declname>kernelTable</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a kernel page table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kernelTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to be initialized.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="78" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="89" bodyend="97"/>
+        <references refid="mem_module_8h_1a1056bbd0c7d38416134d0645668eaf7d" compoundref="mem_module_8c" startline="79" endline="87">allocKPage</references>
+        <references refid="defs_8h_1a8e5feaae0050abc2f048607651293efe" compoundref="defs_8h" startline="189">PAGE_ENTRIES_PER_TABLE</references>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1a868034315919cceedc278c3f24d06e04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int allocMPage</definition>
+        <argsstring>(page_t *mallocPage)</argsstring>
+        <name>allocMPage</name>
+        <param>
+          <type><ref refid="structpage__t" kindref="compound">page_t</ref> *</type>
+          <declname>mallocPage</declname>
+        </param>
+        <briefdescription>
+<para>Allocs a Page for the malloc section. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mallocPage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the page.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="90" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="99" bodyend="107"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="mem_module_8h_1ad19841b9dac7eb81c72b63088b80015c" compoundref="mem_module_8c" startline="71" endline="77">initPage</references>
+        <references refid="defs_8h_1aecbd22e428b6301e4e4c34e96af47b19" compoundref="defs_8h" startline="162">MALLOC_SPACE</references>
+        <references refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" compoundref="defs_8h" startline="179">PAGE_SIZE</references>
+        <referencedby refid="mem_module_8c_1ae7015dddbf16d196ea6e8cc66f2a8d2f" compoundref="mem_module_8c" startline="109" endline="129">initMallocTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1ae7015dddbf16d196ea6e8cc66f2a8d2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initMallocTable</definition>
+        <argsstring>(pageTable_t mallocTable, int dirIndex)</argsstring>
+        <name>initMallocTable</name>
+        <param>
+          <type><ref refid="structpage_table__t" kindref="compound">pageTable_t</ref></type>
+          <declname>mallocTable</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dirIndex</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a malloc page table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dirIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reserved. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mallocTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to be initialized.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="103" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="109" bodyend="129"/>
+        <references refid="mem_module_8h_1a868034315919cceedc278c3f24d06e04" compoundref="mem_module_8c" startline="99" endline="107">allocMPage</references>
+        <references refid="defs_8h_1a8e5feaae0050abc2f048607651293efe" compoundref="defs_8h" startline="189">PAGE_ENTRIES_PER_TABLE</references>
+        <references refid="config_8h_1a072812a1bebf92b7d4e6c4321573b9a1" compoundref="config_8h" startline="133">PAGES_PER_FRAME</references>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structframe__t" kindref="compound">frame_t</ref> *</type>
+        <definition>frame_t * getFrame</definition>
+        <argsstring>()</argsstring>
+        <name>getFrame</name>
+        <briefdescription>
+<para>Gets a free frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to a frame. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="113" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="143" bodyend="153"/>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="defs_8h_1a7f80e4b553d435a097d07c74652ee861" compoundref="defs_8h" startline="216">TOTAL_FRAMES_QTY</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" compoundref="sh_memory_8c" startline="79" endline="122">_sys_shmget</referencedby>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1a49336e498bea7c6948b194027bfa32d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int freeFrame</definition>
+        <argsstring>(frame_t *frame)</argsstring>
+        <name>freeFrame</name>
+        <param>
+          <type><ref refid="structframe__t" kindref="compound">frame_t</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Frees the given frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the frame.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="125" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="155" bodyend="163"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+      </memberdef>
+      <memberdef kind="function" id="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setFramePresence</definition>
+        <argsstring>(frame_t *frame, int state)</argsstring>
+        <name>setFramePresence</name>
+        <param>
+          <type><ref refid="structframe__t" kindref="compound">frame_t</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets the presence bit of the pages from the given frame to the given state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the frame. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True or False. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h" line="136" bodyfile="/Users/Luciano/Desktop/flying-high/src/memModule.c" bodystart="131" bodyend="141"/>
+        <references refid="config_8h_1a072812a1bebf92b7d4e6c4321573b9a1" compoundref="config_8h" startline="133">PAGES_PER_FRAME</references>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" compoundref="sh_memory_8c" startline="79" endline="122">_sys_shmget</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="mem_module_8c_1ad2ea87727da761c9bcb36881d36bef21" compoundref="mem_module_8c" startline="67" endline="69">setKernelHeapPresence</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The memory management / paging module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_MEMMODULE_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_MEMMODULE_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8h" kindref="compound" tooltip="Declaration of all functions that deals with strings and buffers.">string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdio_8h" kindref="compound" tooltip="Definitions for all standard input and output and declaration of all functions to...">stdio.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1acc364a2b6a3687b69aa60fd922b178ef" kindref="member" tooltip="Loads the CR3 into the processor register.">loadCR3</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1a7a9e898c2f9b5aae935f0668c962d02f" kindref="member" tooltip="Initializes the pagination and turns it on.">initPaging</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1ad2ea87727da761c9bcb36881d36bef21" kindref="member" tooltip="Sets the presence bit of the kernel heap pages according to the given parameter.">setKernelHeapPresence</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1ad19841b9dac7eb81c72b63088b80015c" kindref="member" tooltip="Initializes the given page with according permissions.">initPage</ref>(<ref refid="structpage__t" kindref="compound" tooltip="The paging page struct.">page_t</ref><sp/>*<ref refid="structpage" kindref="compound">page</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isKernel);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1a1056bbd0c7d38416134d0645668eaf7d" kindref="member" tooltip="Allocs a Page for the kernel.">allocKPage</ref>(<ref refid="structpage__t" kindref="compound" tooltip="The paging page struct.">page_t</ref><sp/>*kernelPage);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1a6a84b1dac3ab7d785283bf1b99da1e26" kindref="member" tooltip="Initializes a kernel page table.">initKernelTable</ref>(<ref refid="structpage_table__t" kindref="compound" tooltip="The page table typedef.">pageTable_t</ref><sp/>kernelTable);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1a868034315919cceedc278c3f24d06e04" kindref="member" tooltip="Allocs a Page for the malloc section.">allocMPage</ref>(<ref refid="structpage__t" kindref="compound" tooltip="The paging page struct.">page_t</ref><sp/>*mallocPage);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1ae7015dddbf16d196ea6e8cc66f2a8d2f" kindref="member" tooltip="Initializes a malloc page table.">initMallocTable</ref>(<ref refid="structpage_table__t" kindref="compound" tooltip="The page table typedef.">pageTable_t</ref><sp/>mallocTable,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dirIndex);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/>*<sp/><ref refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" kindref="member" tooltip="Gets a free frame.">getFrame</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1a49336e498bea7c6948b194027bfa32d4" kindref="member" tooltip="Frees the given frame.">freeFrame</ref>(<ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/>*<ref refid="structframe" kindref="compound">frame</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(<ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/>*<ref refid="structframe" kindref="compound">frame</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/memModule.h"/>
+  </compounddef>
+</doxygen>

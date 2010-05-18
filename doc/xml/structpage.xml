@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structpage" kind="struct" prot="public">
+    <compoundname>page</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpage_1abc4c133346e4b24e2e71fe80ffc39a6f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int present</definition>
+        <argsstring></argsstring>
+        <name>present</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="67" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1a053ea5deda2f64604e4541bf626bef9c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int writeable</definition>
+        <argsstring></argsstring>
+        <name>writeable</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="68" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1aaf4a05f547280bd4819e5df8c4523cd1" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int user</definition>
+        <argsstring></argsstring>
+        <name>user</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="69" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1a8bcb7dbeb8dba19debc9a4a062f8a6bc" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int directWrite</definition>
+        <argsstring></argsstring>
+        <name>directWrite</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="70" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1afed734c6ffccf36d8318903bfe4e4e1b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int disableCache</definition>
+        <argsstring></argsstring>
+        <name>disableCache</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="71" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1ad9199508706a6aaec358e5200bb389c7" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int accessed</definition>
+        <argsstring></argsstring>
+        <name>accessed</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="72" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1a930a1ab0130f619f847727300b9d156a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dirty</definition>
+        <argsstring></argsstring>
+        <name>dirty</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="73" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1a05d5cbcb44f437341bd9fa37d589aced" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int reserved</definition>
+        <argsstring></argsstring>
+        <name>reserved</name>
+        <bitfield> 5</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="74" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpage_1a2f55ff1f6cd45ca1b6431493ab5614eb" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <bitfield> 20</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="75" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="66" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="66" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structpage_1ad9199508706a6aaec358e5200bb389c7" prot="public" virt="non-virtual"><scope>page</scope><name>accessed</name></member>
+      <member refid="structpage_1a2f55ff1f6cd45ca1b6431493ab5614eb" prot="public" virt="non-virtual"><scope>page</scope><name>address</name></member>
+      <member refid="structpage_1a8bcb7dbeb8dba19debc9a4a062f8a6bc" prot="public" virt="non-virtual"><scope>page</scope><name>directWrite</name></member>
+      <member refid="structpage_1a930a1ab0130f619f847727300b9d156a" prot="public" virt="non-virtual"><scope>page</scope><name>dirty</name></member>
+      <member refid="structpage_1afed734c6ffccf36d8318903bfe4e4e1b" prot="public" virt="non-virtual"><scope>page</scope><name>disableCache</name></member>
+      <member refid="structpage_1abc4c133346e4b24e2e71fe80ffc39a6f" prot="public" virt="non-virtual"><scope>page</scope><name>present</name></member>
+      <member refid="structpage_1a05d5cbcb44f437341bd9fa37d589aced" prot="public" virt="non-virtual"><scope>page</scope><name>reserved</name></member>
+      <member refid="structpage_1aaf4a05f547280bd4819e5df8c4523cd1" prot="public" virt="non-virtual"><scope>page</scope><name>user</name></member>
+      <member refid="structpage_1a053ea5deda2f64604e4541bf626bef9c" prot="public" virt="non-virtual"><scope>page</scope><name>writeable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

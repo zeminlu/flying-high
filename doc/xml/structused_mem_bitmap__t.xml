@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structused_mem_bitmap__t" kind="struct" prot="public">
+    <compoundname>usedMemBitmap_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+    <briefdescription>
+<para>Brief. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="103"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

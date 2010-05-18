@@ -1,0 +1,34 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$kernel_8h.html" title="Kernel header file." alt="" coords="159,701,257,731"/>
+<area shape="rect" id="node8" href="$shell_8h.html" title="The shell process module." alt="" coords="1119,83,1204,112"/>
+<area shape="rect" id="node104" href="$system_8c.html" title="System reboot module." alt="" coords="1228,83,1337,112"/>
+<area shape="rect" id="node6" href="$kernel_8c.html" title="Kernel module." alt="" coords="159,779,257,808"/>
+<area shape="rect" id="node10" href="$bin_8h.html" title="All the OS processes." alt="" coords="1329,624,1404,653"/>
+<area shape="rect" id="node17" href="$sys_process_8h.html" title="OS system utilities." alt="" coords="860,160,991,189"/>
+<area shape="rect" id="node102" href="$shell_8c.html" title="The shell process module." alt="" coords="748,160,836,189"/>
+<area shape="rect" id="node15" href="$bin_8c.html" title="All the OS processes." alt="" coords="1328,701,1405,731"/>
+<area shape="rect" id="node21" href="$p_queue_p_8h.html" title="The priority queue module." alt="" coords="915,237,1032,267"/>
+<area shape="rect" id="node23" href="$process_8h.html" title="All the process functions that invoke syscalls." alt="" coords="1107,237,1216,267"/>
+<area shape="rect" id="node36" href="$ttys_8h.html" title="The tty header file." alt="" coords="681,392,767,421"/>
+<area shape="rect" id="node96" href="$p_queue_p_8c.html" title="The priority queue module." alt="" coords="376,237,493,267"/>
+<area shape="rect" id="node99" href="$sys_process_8c.html" title="OS system utilities." alt="" coords="541,237,675,267"/>
+<area shape="rect" id="node26" href="$bttlship_8h.html" title="The header file of the battleship game." alt="" coords="493,624,600,653"/>
+<area shape="rect" id="node31" href="$k_malloc_8h.html" title="The kernel malloc module." alt="" coords="773,315,880,344"/>
+<area shape="rect" id="node48" href="$syscall_8h.html" title="Implementation of every system call." alt="" coords="996,469,1097,499"/>
+<area shape="rect" id="node66" href="$semaphore_8h.html" title="The OS semaphore module." alt="" coords="1121,469,1252,499"/>
+<area shape="rect" id="node81" href="$u_malloc_8h.html" title="User malloc module." alt="" coords="1581,315,1688,344"/>
+<area shape="rect" id="node93" href="$process_8c.html" title="All the process functions that invoke syscalls." alt="" coords="1296,315,1405,344"/>
+<area shape="rect" id="node29" href="$bttlship_8c.html" title="Battleship module." alt="" coords="492,701,601,731"/>
+<area shape="rect" id="node40" href="$exceptions_8h.html" title="Functions related with exception handling." alt="" coords="541,469,672,499"/>
+<area shape="rect" id="node44" href="$keyboard__driver_8h.html" title="The keyboard driver module." alt="" coords="355,469,517,499"/>
+<area shape="rect" id="node64" href="$ttys_8c.html" title="The tty module implementation." alt="" coords="245,469,331,499"/>
+<area shape="rect" id="node46" href="$keyboard__driver_8c.html" title="src/keyboard_driver.c" alt="" coords="245,547,408,576"/>
+<area shape="rect" id="node52" href="$rand_8h.html" title="Random number generation module." alt="" coords="584,547,669,576"/>
+<area shape="rect" id="node61" href="$syscall_8c.html" title="Implementation off all system calls." alt="" coords="693,547,795,576"/>
+<area shape="rect" id="node57" href="$rand_8c.html" title="Random number generation module." alt="" coords="624,624,709,653"/>
+<area shape="rect" id="node71" href="$sh_memory_8h.html" title="The shared memory IPC module." alt="" coords="869,547,995,576"/>
+<area shape="rect" id="node77" href="$semaphore_8c.html" title="The OS semaphore module." alt="" coords="1120,547,1253,576"/>
+<area shape="rect" id="node75" href="$sh_memory_8c.html" title="The shared memory IPC module." alt="" coords="869,624,995,653"/>
+<area shape="rect" id="node84" href="$schedule_8h.html" title="The OS scheduler module." alt="" coords="1483,392,1600,421"/>
+<area shape="rect" id="node90" href="$schedule_8c.html" title="The OS scheduler module." alt="" coords="1531,469,1648,499"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$semaphore_8h.html#adf32347e1821519a91572b64a6c53101" title="Signals the given semaphore to enable it for other users." alt="" coords="137,5,231,35"/>
+<area shape="rect" id="node7" href="$semaphore_8h.html#a5d86815c472afe2d2175180835500008" title="Waits for the semaphore to be available.." alt="" coords="141,59,227,88"/>
+<area shape="rect" id="node5" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="280,32,336,61"/>
+</map>

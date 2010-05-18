@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="sys_malloc_8c" kind="file">
+    <compoundname>sysMalloc.c</compoundname>
+    <includes refid="sys_malloc_8h" local="yes">sysMalloc.h</includes>
+    <incdepgraph>
+      <node id="4511">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4513">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4508" relation="include">
+        </childnode>
+      </node>
+      <node id="4512">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4507" relation="include">
+        </childnode>
+        <childnode refid="4513" relation="include">
+        </childnode>
+        <childnode refid="4508" relation="include">
+        </childnode>
+      </node>
+      <node id="4508">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4509" relation="include">
+        </childnode>
+        <childnode refid="4510" relation="include">
+        </childnode>
+      </node>
+      <node id="4505">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4506" relation="include">
+        </childnode>
+        <childnode refid="4507" relation="include">
+        </childnode>
+      </node>
+      <node id="4504">
+        <label>src/sysMalloc.c</label>
+        <link refid="sysMalloc.c"/>
+        <childnode refid="4505" relation="include">
+        </childnode>
+      </node>
+      <node id="4510">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4511" relation="include">
+        </childnode>
+      </node>
+      <node id="4507">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4508" relation="include">
+        </childnode>
+      </node>
+      <node id="4506">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4507" relation="include">
+        </childnode>
+        <childnode refid="4512" relation="include">
+        </childnode>
+        <childnode refid="4508" relation="include">
+        </childnode>
+      </node>
+      <node id="4509">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sys_malloc_8c_1ad01942578baaa75b63be99338b487d13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>static void* baseMalloc</definition>
+        <argsstring>(size_t nbytes, memArea_t *memArea)</argsstring>
+        <name>baseMalloc</name>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <param>
+          <type><ref refid="structmem_area__t" kindref="compound">memArea_t</ref> *</type>
+          <declname>memArea</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" line="12" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" bodystart="12" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="sys_malloc_8c_1afc18fe654253c72492875d6b15506744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sysFree</definition>
+        <argsstring>(void *ap, memArea_t *(*getMemoryArea)())</argsstring>
+        <name>sysFree</name>
+        <param>
+          <type>void *</type>
+          <declname>ap</declname>
+        </param>
+        <param>
+          <type><ref refid="structmem_area__t" kindref="compound">memArea_t</ref> *(*)()</type>
+          <declname>getMemoryArea</declname>
+        </param>
+        <briefdescription>
+<para>Leaves avaiable the segment to be used in futures calls to sysMalloc. The memory segment is taken from the function pased by arguments. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical memory segment to be freed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getMemoryArea</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function that returns the memory frame that sysMalloc wold be used in the future.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="sys_malloc_8h_1adac4283ee6b45334ca1ea574599d7532" kindref="member">sysRealloc()</ref> <ref refid="sys_malloc_8h_1a7472d23b0529e946d8dcdf5a0de26c52" kindref="member">sysMalloc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" line="31" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" bodystart="31" bodyend="33"/>
+        <referencedby refid="u_malloc_8c_1adebb229f063e66907017098087cbe791" compoundref="u_malloc_8c" startline="16" endline="19">free</referencedby>
+        <referencedby refid="k_malloc_8c_1ab10ef73295572f6facd6e0c9c84e1357" compoundref="k_malloc_8c" startline="28" endline="31">kFree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_malloc_8c_1a9dd7a27b9a2dd7b9249af7fdef77fb4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sysRealloc</definition>
+        <argsstring>(void *ptr, size_t size, memArea_t *(*getMemoryArea)())</argsstring>
+        <name>sysRealloc</name>
+        <param>
+          <type>void *</type>
+          <declname>ap</declname>
+          <defname>ptr</defname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="structmem_area__t" kindref="compound">memArea_t</ref> *(*)()</type>
+          <declname>getMemoryArea</declname>
+        </param>
+        <briefdescription>
+<para>This function changes the original size of the logical memory to a new one if it&apos;s necesary.Returns null if theres not enough free space. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Old logical memory segment, that could be moved to a new one. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new size of the continuous memory segment. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getMemoryArea</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function that gives the frame to use be used by sysMalloc.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new continuous memory segment.</para></simplesect>
+<simplesect kind="see"><para><ref refid="sys_malloc_8h_1afc18fe654253c72492875d6b15506744" kindref="member">sysFree()</ref> <ref refid="sys_malloc_8h_1a7472d23b0529e946d8dcdf5a0de26c52" kindref="member">sysMalloc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" line="35" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" bodystart="35" bodyend="46"/>
+        <references refid="string_8h_1aba088e716bccbc96d42da97e96316df1" compoundref="string_8c" startline="141" endline="152">memcpy</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="sys_malloc_8h_1a7472d23b0529e946d8dcdf5a0de26c52" compoundref="sys_malloc_8c" startline="48" endline="57">sysMalloc</references>
+        <referencedby refid="k_malloc_8c_1ad9fb012fb56b43ef1ab6078646973b3f" compoundref="k_malloc_8c" startline="35" endline="37">kRealloc</referencedby>
+        <referencedby refid="u_malloc_8c_1a5ed3930d6e86bee548f632e2c571c736" compoundref="u_malloc_8c" startline="23" endline="25">realloc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_malloc_8c_1ace92c2d3af5c7f1f66548cd8f2e4412d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sysMalloc</definition>
+        <argsstring>(size_t nbytes, memArea_t *(*getMemoryArea)())</argsstring>
+        <name>sysMalloc</name>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <param>
+          <type><ref refid="structmem_area__t" kindref="compound">memArea_t</ref> *(*)()</type>
+          <declname>getMemoryArea</declname>
+        </param>
+        <briefdescription>
+<para>Function that gives a continuous segment of memory. This memory comes from the function getMemoryArea. It could return null if there is not enougth free space on that frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of continuous segment memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getMemoryArea</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Functions that gives the frame to use be used by sysMalloc.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The continuous segment of memory.</para></simplesect>
+<simplesect kind="see"><para><ref refid="sys_malloc_8h_1afc18fe654253c72492875d6b15506744" kindref="member">sysFree()</ref> <ref refid="sys_malloc_8h_1adac4283ee6b45334ca1ea574599d7532" kindref="member">sysRealloc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" line="48" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c" bodystart="48" bodyend="57"/>
+        <referencedby refid="k_malloc_8c_1a56f36ea42ec22a22158c4fb5f841e82e" compoundref="k_malloc_8c" startline="32" endline="34">kMalloc</referencedby>
+        <referencedby refid="u_malloc_8c_1a46627f45f4a4d33db3de37fce9b5a8a6" compoundref="u_malloc_8c" startline="20" endline="22">malloc</referencedby>
+        <referencedby refid="sys_malloc_8c_1a9dd7a27b9a2dd7b9249af7fdef77fb4f" compoundref="sys_malloc_8c" startline="35" endline="46">sysRealloc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic malloc module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sys_malloc_8h" kindref="compound" tooltip="Generic malloc module.">sysMalloc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*baseMalloc(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nbytes,<sp/><ref refid="structmem_area__t" kindref="compound" tooltip="The mem area malloc struct.">memArea_t</ref><sp/>*<sp/><ref refid="structmem_area" kindref="compound">memArea</ref>){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aux1;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aux2;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux1<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)memArea-&gt;address;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux2<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)memArea-&gt;size;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((aux1<sp/>+<sp/>aux2<sp/>-<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)memArea-&gt;allocp)<sp/>&gt;=<sp/>nbytes){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memArea-&gt;allocp<sp/>+=<sp/>nbytes;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>memArea-&gt;allocp<sp/>-<sp/>nbytes;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Public<sp/>Functions</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>================</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="sys_malloc_8c_1afc18fe654253c72492875d6b15506744" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_malloc_8h_1afc18fe654253c72492875d6b15506744" kindref="member" tooltip="Leaves avaiable the segment to be used in futures calls to sysMalloc. The memory...">sysFree</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ap,<sp/><ref refid="structmem_area__t" kindref="compound" tooltip="The mem area malloc struct.">memArea_t</ref><sp/>*<sp/>(*getMemoryArea)()){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="sys_malloc_8c_1a9dd7a27b9a2dd7b9249af7fdef77fb4f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="sys_malloc_8h_1adac4283ee6b45334ca1ea574599d7532" kindref="member" tooltip="This function changes the original size of the logical memory to a new one if it&amp;#39;s...">sysRealloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/><ref refid="structmem_area__t" kindref="compound" tooltip="The mem area malloc struct.">memArea_t</ref><sp/>*<sp/>(*getMemoryArea)()){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ret;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ptr<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="sys_malloc_8h_1a7472d23b0529e946d8dcdf5a0de26c52" kindref="member" tooltip="Function that gives a continuous segment of memory. This memory comes from the function...">sysMalloc</ref>(size,<sp/>getMemoryArea);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(ret=<ref refid="sys_malloc_8h_1a7472d23b0529e946d8dcdf5a0de26c52" kindref="member" tooltip="Function that gives a continuous segment of memory. This memory comes from the function...">sysMalloc</ref>(size,<sp/>getMemoryArea))<sp/>!=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>){</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="string_8h_1aba088e716bccbc96d42da97e96316df1" kindref="member" tooltip="The memcpy() function copies n bytes from memory area src to memory area dest. The...">memcpy</ref>(ret,<sp/>ptr,<sp/>size);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="sys_malloc_8c_1ace92c2d3af5c7f1f66548cd8f2e4412d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="sys_malloc_8h_1a7472d23b0529e946d8dcdf5a0de26c52" kindref="member" tooltip="Function that gives a continuous segment of memory. This memory comes from the function...">sysMalloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nbytes,<sp/><ref refid="structmem_area__t" kindref="compound" tooltip="The mem area malloc struct.">memArea_t</ref><sp/>*<sp/>(*getMemoryArea)()){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>debug;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmem_area__t" kindref="compound" tooltip="The mem area malloc struct.">memArea_t</ref><sp/>*<sp/>memArea;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memArea<sp/>=<sp/>getMemoryArea();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>debug<sp/><sp/>=<sp/>baseMalloc(nbytes,<sp/>memArea);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>debug;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/sysMalloc.c"/>
+  </compounddef>
+</doxygen>

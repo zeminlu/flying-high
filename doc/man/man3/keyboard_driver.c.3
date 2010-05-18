@@ -1,0 +1,551 @@
+.TH "src/keyboard_driver.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/keyboard_driver.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'keyboard_driver.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBKEY_RSHIFT_P\fP   0x2A"
+.br
+.ti -1c
+.RI "#define \fBKEY_LSHIFT_P\fP   0x36"
+.br
+.ti -1c
+.RI "#define \fBKEY_RSHIFT_R\fP   (KEY_RSHIFT_P + KB_KEY_RELEASE)"
+.br
+.ti -1c
+.RI "#define \fBKEY_LSHIFT_R\fP   (KEY_LSHIFT_P + KB_KEY_RELEASE)"
+.br
+.ti -1c
+.RI "#define \fBKEY_ALT_P\fP   0x38"
+.br
+.ti -1c
+.RI "#define \fBKEY_ALT_R\fP   (KEY_ALT_P + KB_KEY_RELEASE)"
+.br
+.ti -1c
+.RI "#define \fBKEY_CTRL_P\fP   0x1D"
+.br
+.ti -1c
+.RI "#define \fBKEY_CTRL_R\fP   (KEY_CTRL_P+KB_KEY_RELEASE)"
+.br
+.ti -1c
+.RI "#define \fBKEY_CAPS\fP   0x3A"
+.br
+.ti -1c
+.RI "#define \fBKB_KEY_RELEASE\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBKB_OUTPUT_FULL\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBDATA_PORT\fP   0x60"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_PORT\fP   0x64"
+.br
+.ti -1c
+.RI "#define \fBFLAG_SHIFT\fP   (0x01)"
+.br
+.ti -1c
+.RI "#define \fBFLAG_CTRL\fP   (0x02)"
+.br
+.ti -1c
+.RI "#define \fBFLAG_ALT\fP   (0x04)"
+.br
+.ti -1c
+.RI "#define \fBFLAG_CAPS\fP   (0x08)"
+.br
+.ti -1c
+.RI "#define \fBKEY_SPECIAL_FLAG\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBKEY_KEYPAD_FLAG\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBKEY_SHIFT_FLAG\fP   0x1000"
+.br
+.ti -1c
+.RI "#define \fBKEY_ALT_FLAG\fP   0x2000"
+.br
+.ti -1c
+.RI "#define \fBKEY_CTRL_FLAG\fP   0x4000"
+.br
+.ti -1c
+.RI "#define \fBKEY_RELEASE_FLAG\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fB_SPECIAL\fP(num)   (KEY_SPECIAL_FLAG & (num))"
+.br
+.ti -1c
+.RI "#define \fBKEY_UNKNOWN\fP   _SPECIAL(0)"
+.br
+.ti -1c
+.RI "#define \fBKEY_F1\fP   KB_KEY_RELEASE | 0x01"
+.br
+.ti -1c
+.RI "#define \fBKEY_F2\fP   KB_KEY_RELEASE | 0x02"
+.br
+.ti -1c
+.RI "#define \fBKEY_F3\fP   KB_KEY_RELEASE | 0x03"
+.br
+.ti -1c
+.RI "#define \fBKEY_F4\fP   KB_KEY_RELEASE | 0x04"
+.br
+.ti -1c
+.RI "#define \fBKEY_F5\fP   KB_KEY_RELEASE | 0x05"
+.br
+.ti -1c
+.RI "#define \fBKEY_F6\fP   KB_KEY_RELEASE | 0x06"
+.br
+.ti -1c
+.RI "#define \fBKEY_F7\fP   KB_KEY_RELEASE | 0x07"
+.br
+.ti -1c
+.RI "#define \fBKEY_F8\fP   KB_KEY_RELEASE | 0x08"
+.br
+.ti -1c
+.RI "#define \fBKEY_F9\fP   _SPECIAL(9)"
+.br
+.ti -1c
+.RI "#define \fBKEY_F10\fP   _SPECIAL(10)"
+.br
+.ti -1c
+.RI "#define \fBKEY_F11\fP   _SPECIAL(11)"
+.br
+.ti -1c
+.RI "#define \fBKEY_F12\fP   _SPECIAL(12)"
+.br
+.ti -1c
+.RI "#define \fBKEY_LCTRL\fP   _SPECIAL(13)"
+.br
+.ti -1c
+.RI "#define \fBKEY_RCTRL\fP   _SPECIAL(14)"
+.br
+.ti -1c
+.RI "#define \fBKEY_LSHIFT\fP   _SPECIAL(15)"
+.br
+.ti -1c
+.RI "#define \fBKEY_RSHIFT\fP   _SPECIAL(16)"
+.br
+.ti -1c
+.RI "#define \fBKEY_LALT\fP   _SPECIAL(17)"
+.br
+.ti -1c
+.RI "#define \fBKEY_RALT\fP   _SPECIAL(18)"
+.br
+.ti -1c
+.RI "#define \fBKEY_PRINTSCRN\fP   _SPECIAL(19)"
+.br
+.ti -1c
+.RI "#define \fBKEY_CAPSLOCK\fP   _SPECIAL(20)"
+.br
+.ti -1c
+.RI "#define \fBKEY_NUMLOCK\fP   _SPECIAL(21)"
+.br
+.ti -1c
+.RI "#define \fBKEY_SCRLOCK\fP   _SPECIAL(22)"
+.br
+.ti -1c
+.RI "#define \fBKEY_SYSREQ\fP   _SPECIAL(23)"
+.br
+.ti -1c
+.RI "#define \fBKEYPAD_START\fP   128"
+.br
+.ti -1c
+.RI "#define \fB_KEYPAD\fP(num)   (KEY_KEYPAD_FLAG & KEY_SPECIAL_FLAG & (num+KEYPAD_START))"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPHOME\fP   _KEYPAD(0)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPUP\fP   _KEYPAD(1)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPPGUP\fP   _KEYPAD(2)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPMINUS\fP   _KEYPAD(3)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPLEFT\fP   _KEYPAD(4)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPCENTER\fP   _KEYPAD(5)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPRIGHT\fP   _KEYPAD(6)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPPLUS\fP   _KEYPAD(7)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPEND\fP   _KEYPAD(8)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPDOWN\fP   _KEYPAD(9)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPPGDN\fP   _KEYPAD(10)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPINSERT\fP   _KEYPAD(11)"
+.br
+.ti -1c
+.RI "#define \fBKEY_KPDEL\fP   _KEYPAD(12)"
+.br
+.ti -1c
+.RI "#define \fBASCII_ESC\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBASCII_BS\fP   '\\b'"
+.br
+.ti -1c
+.RI "#define \fBASCII_ENTER\fP   '\\n'"
+.br
+.ti -1c
+.RI "#define \fBSCAN_TABLE_SIZE\fP   (sizeof(s_scanTableNoShift) / sizeof(\fBKeycode\fP))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkeyboard_driver\fP ()"
+.br
+.RI "\fIThis function is the manager of interpretate what key was pressed or released. It controls if the own keyboard buffer is full. The keys that are implemented are:
+.IP "\(bu" 2
+Letters ( upper and lower case )
+.IP "\(bu" 2
+Numbers ( If you press SHIFT it will interpretate the symbol associated with this key )
+.IP "\(bu" 2
+SHIFT buttom
+.IP "\(bu" 2
+CAPS-LOCK. 
+.PP
+\fP"
+.ti -1c
+.RI "void \fBSetKeyState\fP (\fBKeycode\fP scanCode)"
+.br
+.RI "\fIThis function detect if a control key was pressed and set his internal flag. \fP"
+.ti -1c
+.RI "int \fBshiftIsPressed\fP (void)"
+.br
+.RI "\fIReturn TRUE if the shift key was pressed. \fP"
+.ti -1c
+.RI "int \fBcapsIsPressed\fP (void)"
+.br
+.RI "\fIReturn TRUE if caps-lock key was pressed. \fP"
+.ti -1c
+.RI "int \fBctrlIsPressed\fP (void)"
+.br
+.RI "\fIReturn TRUE if control key was pressed. \fP"
+.ti -1c
+.RI "int \fBgetRepetition\fP ()"
+.br
+.RI "\fIGets the actual repetition interval. \fP"
+.ti -1c
+.RI "void \fBsetRepetition\fP (int newRep)"
+.br
+.RI "\fISets the repetition interval. \fP"
+.ti -1c
+.RI "int \fBcheckKeyboardActivity\fP (void)"
+.br
+.RI "\fIReturn a 1 if the keyboard routine was called, so the keyboard had interrupted. This funtcion is used by the screensaver, to turn off. \fP"
+.ti -1c
+.RI "void \fBsetKeyboardActivity\fP (void)"
+.br
+.RI "\fISet the keyboard activity flag to 0. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBKeycode\fP \fBkeyboardBuffer\fP [KEYBOARD_BUFFER_SIZE]"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define _KEYPAD(num)   (KEY_KEYPAD_FLAG & KEY_SPECIAL_FLAG & (num+KEYPAD_START))"
+.PP
+Definition at line 97 of file keyboard_driver.c.
+.SS "#define _SPECIAL(num)   (KEY_SPECIAL_FLAG & (num))"
+.PP
+Definition at line 67 of file keyboard_driver.c.
+.SS "#define ASCII_BS   '\\b'"
+.PP
+Definition at line 113 of file keyboard_driver.c.
+.SS "#define ASCII_ENTER   '\\n'"
+.PP
+Definition at line 114 of file keyboard_driver.c.
+.SS "#define ASCII_ESC   0x00"
+.PP
+Definition at line 112 of file keyboard_driver.c.
+.SS "#define CONTROL_PORT   0x64"
+.PP
+Definition at line 46 of file keyboard_driver.c.
+.SS "#define DATA_PORT   0x60"
+.PP
+Definition at line 45 of file keyboard_driver.c.
+.SS "#define FLAG_ALT   (0x04)"
+.PP
+Definition at line 53 of file keyboard_driver.c.
+.SS "#define FLAG_CAPS   (0x08)"
+.PP
+Definition at line 54 of file keyboard_driver.c.
+.SS "#define FLAG_CTRL   (0x02)"
+.PP
+Definition at line 52 of file keyboard_driver.c.
+.SS "#define FLAG_SHIFT   (0x01)"
+.PP
+Definition at line 51 of file keyboard_driver.c.
+.SS "#define KB_KEY_RELEASE   0x80"
+.PP
+Definition at line 42 of file keyboard_driver.c.
+.SS "#define KB_OUTPUT_FULL   0x01"
+.PP
+Definition at line 43 of file keyboard_driver.c.
+.SS "#define KEY_ALT_FLAG   0x2000"
+.PP
+Definition at line 59 of file keyboard_driver.c.
+.SS "#define KEY_ALT_P   0x38"
+.PP
+Definition at line 36 of file keyboard_driver.c.
+.SS "#define KEY_ALT_R   (KEY_ALT_P + KB_KEY_RELEASE)"
+.PP
+Definition at line 37 of file keyboard_driver.c.
+.SS "#define KEY_CAPS   0x3A"
+.PP
+Definition at line 40 of file keyboard_driver.c.
+.SS "#define KEY_CAPSLOCK   _SPECIAL(20)"
+.PP
+Definition at line 88 of file keyboard_driver.c.
+.SS "#define KEY_CTRL_FLAG   0x4000"
+.PP
+Definition at line 60 of file keyboard_driver.c.
+.SS "#define KEY_CTRL_P   0x1D"
+.PP
+Definition at line 38 of file keyboard_driver.c.
+.SS "#define KEY_CTRL_R   (KEY_CTRL_P+KB_KEY_RELEASE)"
+.PP
+Definition at line 39 of file keyboard_driver.c.
+.SS "#define KEY_F1   KB_KEY_RELEASE | 0x01"
+.PP
+Definition at line 69 of file keyboard_driver.c.
+.SS "#define KEY_F10   _SPECIAL(10)"
+.PP
+Definition at line 78 of file keyboard_driver.c.
+.SS "#define KEY_F11   _SPECIAL(11)"
+.PP
+Definition at line 79 of file keyboard_driver.c.
+.SS "#define KEY_F12   _SPECIAL(12)"
+.PP
+Definition at line 80 of file keyboard_driver.c.
+.SS "#define KEY_F2   KB_KEY_RELEASE | 0x02"
+.PP
+Definition at line 70 of file keyboard_driver.c.
+.SS "#define KEY_F3   KB_KEY_RELEASE | 0x03"
+.PP
+Definition at line 71 of file keyboard_driver.c.
+.SS "#define KEY_F4   KB_KEY_RELEASE | 0x04"
+.PP
+Definition at line 72 of file keyboard_driver.c.
+.SS "#define KEY_F5   KB_KEY_RELEASE | 0x05"
+.PP
+Definition at line 73 of file keyboard_driver.c.
+.SS "#define KEY_F6   KB_KEY_RELEASE | 0x06"
+.PP
+Definition at line 74 of file keyboard_driver.c.
+.SS "#define KEY_F7   KB_KEY_RELEASE | 0x07"
+.PP
+Definition at line 75 of file keyboard_driver.c.
+.SS "#define KEY_F8   KB_KEY_RELEASE | 0x08"
+.PP
+Definition at line 76 of file keyboard_driver.c.
+.SS "#define KEY_F9   _SPECIAL(9)"
+.PP
+Definition at line 77 of file keyboard_driver.c.
+.SS "#define KEY_KEYPAD_FLAG   0x00"
+.PP
+Definition at line 57 of file keyboard_driver.c.
+.SS "#define KEY_KPCENTER   _KEYPAD(5)"
+.PP
+Definition at line 103 of file keyboard_driver.c.
+.SS "#define KEY_KPDEL   _KEYPAD(12)"
+.PP
+Definition at line 110 of file keyboard_driver.c.
+.SS "#define KEY_KPDOWN   _KEYPAD(9)"
+.PP
+Definition at line 107 of file keyboard_driver.c.
+.SS "#define KEY_KPEND   _KEYPAD(8)"
+.PP
+Definition at line 106 of file keyboard_driver.c.
+.SS "#define KEY_KPHOME   _KEYPAD(0)"
+.PP
+Definition at line 98 of file keyboard_driver.c.
+.SS "#define KEY_KPINSERT   _KEYPAD(11)"
+.PP
+Definition at line 109 of file keyboard_driver.c.
+.SS "#define KEY_KPLEFT   _KEYPAD(4)"
+.PP
+Definition at line 102 of file keyboard_driver.c.
+.SS "#define KEY_KPMINUS   _KEYPAD(3)"
+.PP
+Definition at line 101 of file keyboard_driver.c.
+.SS "#define KEY_KPPGDN   _KEYPAD(10)"
+.PP
+Definition at line 108 of file keyboard_driver.c.
+.SS "#define KEY_KPPGUP   _KEYPAD(2)"
+.PP
+Definition at line 100 of file keyboard_driver.c.
+.SS "#define KEY_KPPLUS   _KEYPAD(7)"
+.PP
+Definition at line 105 of file keyboard_driver.c.
+.SS "#define KEY_KPRIGHT   _KEYPAD(6)"
+.PP
+Definition at line 104 of file keyboard_driver.c.
+.SS "#define KEY_KPUP   _KEYPAD(1)"
+.PP
+Definition at line 99 of file keyboard_driver.c.
+.SS "#define KEY_LALT   _SPECIAL(17)"
+.PP
+Definition at line 85 of file keyboard_driver.c.
+.SS "#define KEY_LCTRL   _SPECIAL(13)"
+.PP
+Definition at line 81 of file keyboard_driver.c.
+.SS "#define KEY_LSHIFT   _SPECIAL(15)"
+.PP
+Definition at line 83 of file keyboard_driver.c.
+.SS "#define KEY_LSHIFT_P   0x36"
+.PP
+Definition at line 33 of file keyboard_driver.c.
+.SS "#define KEY_LSHIFT_R   (KEY_LSHIFT_P + KB_KEY_RELEASE)"
+.PP
+Definition at line 35 of file keyboard_driver.c.
+.SS "#define KEY_NUMLOCK   _SPECIAL(21)"
+.PP
+Definition at line 89 of file keyboard_driver.c.
+.SS "#define KEY_PRINTSCRN   _SPECIAL(19)"
+.PP
+Definition at line 87 of file keyboard_driver.c.
+.SS "#define KEY_RALT   _SPECIAL(18)"
+.PP
+Definition at line 86 of file keyboard_driver.c.
+.SS "#define KEY_RCTRL   _SPECIAL(14)"
+.PP
+Definition at line 82 of file keyboard_driver.c.
+.SS "#define KEY_RELEASE_FLAG   0x8000"
+.PP
+Definition at line 61 of file keyboard_driver.c.
+.SS "#define KEY_RSHIFT   _SPECIAL(16)"
+.PP
+Definition at line 84 of file keyboard_driver.c.
+.SS "#define KEY_RSHIFT_P   0x2A"
+.PP
+Definition at line 32 of file keyboard_driver.c.
+.SS "#define KEY_RSHIFT_R   (KEY_RSHIFT_P + KB_KEY_RELEASE)"
+.PP
+Definition at line 34 of file keyboard_driver.c.
+.SS "#define KEY_SCRLOCK   _SPECIAL(22)"
+.PP
+Definition at line 90 of file keyboard_driver.c.
+.SS "#define KEY_SHIFT_FLAG   0x1000"
+.PP
+Definition at line 58 of file keyboard_driver.c.
+.SS "#define KEY_SPECIAL_FLAG   0x00"
+.PP
+Definition at line 56 of file keyboard_driver.c.
+.SS "#define KEY_SYSREQ   _SPECIAL(23)"
+.PP
+Definition at line 91 of file keyboard_driver.c.
+.SS "#define KEY_UNKNOWN   _SPECIAL(0)"
+.PP
+Definition at line 68 of file keyboard_driver.c.
+.SS "#define KEYPAD_START   128"
+.PP
+Definition at line 96 of file keyboard_driver.c.
+.SS "#define SCAN_TABLE_SIZE   (sizeof(s_scanTableNoShift) / sizeof(\fBKeycode\fP))"
+.PP
+Definition at line 144 of file keyboard_driver.c.
+.SH "Function Documentation"
+.PP 
+.SS "int capsIsPressed (void)"
+.PP
+Return TRUE if caps-lock key was pressed. 
+.PP
+Definition at line 276 of file keyboard_driver.c.
+.SS "int checkKeyboardActivity (void)"
+.PP
+Return a 1 if the keyboard routine was called, so the keyboard had interrupted. This funtcion is used by the screensaver, to turn off. 
+.PP
+Definition at line 296 of file keyboard_driver.c.
+.SS "int ctrlIsPressed (void)"
+.PP
+Return TRUE if control key was pressed. 
+.PP
+Definition at line 281 of file keyboard_driver.c.
+.SS "int getRepetition (void)"
+.PP
+Gets the actual repetition interval. \fBReturns:\fP
+.RS 4
+The actual repetition interval. 
+.RE
+.PP
+
+.PP
+Definition at line 286 of file keyboard_driver.c.
+.SS "void keyboard_driver (void)"
+.PP
+This function is the manager of interpretate what key was pressed or released. It controls if the own keyboard buffer is full. The keys that are implemented are:
+.IP "\(bu" 2
+Letters ( upper and lower case )
+.IP "\(bu" 2
+Numbers ( If you press SHIFT it will interpretate the symbol associated with this key )
+.IP "\(bu" 2
+SHIFT buttom
+.IP "\(bu" 2
+CAPS-LOCK. 
+.PP
+
+.PP
+Definition at line 188 of file keyboard_driver.c.
+.SS "void setKeyboardActivity (void)"
+.PP
+Set the keyboard activity flag to 0. 
+.PP
+Definition at line 306 of file keyboard_driver.c.
+.SS "void SetKeyState (\fBKeycode\fP scanCode)"
+.PP
+This function detect if a control key was pressed and set his internal flag. 
+.PP
+Definition at line 248 of file keyboard_driver.c.
+.SS "void setRepetition (int newRep)"
+.PP
+Sets the repetition interval. \fBParameters:\fP
+.RS 4
+\fInewRep\fP The new repetition value. 
+.RE
+.PP
+
+.PP
+Definition at line 291 of file keyboard_driver.c.
+.SS "int shiftIsPressed (void)"
+.PP
+Return TRUE if the shift key was pressed. 
+.PP
+Definition at line 271 of file keyboard_driver.c.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBKeycode\fP \fBkeyboardBuffer\fP[KEYBOARD_BUFFER_SIZE]"
+.PP
+Definition at line 180 of file keyboard_driver.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

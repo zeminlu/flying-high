@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="kc_8h" kind="file">
+    <compoundname>kc.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="kernel_8h" local="yes">inc/kernel.h</includedby>
+    <includedby refid="libc_8h" local="yes">inc/libc.h</includedby>
+    <incdepgraph>
+      <node id="2753">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="2750">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2751" relation="include">
+        </childnode>
+        <childnode refid="2752" relation="include">
+        </childnode>
+      </node>
+      <node id="2749">
+        <label>inc/kc.h</label>
+        <link refid="kc.h"/>
+        <childnode refid="2750" relation="include">
+        </childnode>
+      </node>
+      <node id="2752">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2753" relation="include">
+        </childnode>
+      </node>
+      <node id="2751">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2755">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="2755" relation="include">
+        </childnode>
+        <childnode refid="2756" relation="include">
+        </childnode>
+      </node>
+      <node id="2757">
+        <label>inc/libc.h</label>
+        <link refid="libc_8h"/>
+        <childnode refid="2758" relation="include">
+        </childnode>
+      </node>
+      <node id="2754">
+        <label>inc/kc.h</label>
+        <link refid="kc.h"/>
+        <childnode refid="2755" relation="include">
+        </childnode>
+        <childnode refid="2757" relation="include">
+        </childnode>
+      </node>
+      <node id="2758">
+        <label>src/libc.c</label>
+        <link refid="libc_8c"/>
+      </node>
+      <node id="2756">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="kc_8h_1a112f26eec5098ceb1f28022a244dc34d" prot="public" static="no">
+        <name>WHITE_TXT</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/kc.h" line="14" bodyfile="/Users/Luciano/Desktop/flying-high/inc/kc.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="libc_8c_1aa839645b7336cc84b3f846d1ff5706d6" compoundref="libc_8c" startline="18" endline="29">k_clear_screen</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kc_8h_1a9e2ab5c293f2bb7ccc3cb66c0468bfd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showSplashScreen</definition>
+        <argsstring>()</argsstring>
+        <name>showSplashScreen</name>
+        <briefdescription>
+<para>Brief. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting></programlisting></para><para><simplesect kind="see"><para>f1() f2() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/kc.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="kc_8h_1aa839645b7336cc84b3f846d1ff5706d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void k_clear_screen</definition>
+        <argsstring>()</argsstring>
+        <name>k_clear_screen</name>
+        <briefdescription>
+<para>Brief. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting></programlisting></para><para><simplesect kind="see"><para>f1() f2() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/kc.h" line="49" bodyfile="/Users/Luciano/Desktop/flying-high/src/libc.c" bodystart="18" bodyend="29"/>
+        <references refid="kc_8h_1a112f26eec5098ceb1f28022a244dc34d" compoundref="kc_8h" startline="14">WHITE_TXT</references>
+      </memberdef>
+      <memberdef kind="function" id="kc_8h_1a35291f4e9b708f17a281f51aa524979c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup_IDT_entry</definition>
+        <argsstring>(DESCR_INT *item, byte selector, dword offset, byte access, byte cero)</argsstring>
+        <name>setup_IDT_entry</name>
+        <param>
+          <type><ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound">DESCR_INT</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>selector</declname>
+        </param>
+        <param>
+          <type>dword</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>access</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>cero</declname>
+        </param>
+        <briefdescription>
+<para>Brief. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>selector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>access</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ParamBrief.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use: <programlisting></programlisting></para><para><simplesect kind="see"><para>f1() f2() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/kc.h" line="71" bodyfile="/Users/Luciano/Desktop/flying-high/src/libc.c" bodystart="42" bodyend="49"/>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a7a3205f563ba31a30efd817ea54561fd" compoundref="types_8h" startline="353">DESCR_INT::access</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a10e7734359849a8225562be7f834bf5e" compoundref="types_8h" startline="353">DESCR_INT::cero</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a95502551327cda03ecf9272bef03280e" compoundref="types_8h" startline="355">DESCR_INT::offset_h</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1ad333e6d5d9cab6ad3726a313057c04b4" compoundref="types_8h" startline="351">DESCR_INT::offset_l</references>
+        <references refid="struct_d_e_s_c_r___i_n_t_1a8abb596f01128e9ee829157242ac3275" compoundref="types_8h" startline="351">DESCR_INT::selector</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Brief. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>_KC_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_KC_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="kc_8h_1a112f26eec5098ceb1f28022a244dc34d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WHITE_TXT<sp/>0x07<sp/></highlight><highlight class="comment">/*<sp/>Atributo<sp/>de<sp/>video.<sp/>Letras<sp/>blancas,<sp/>fondo<sp/>negro<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Muestra<sp/>la<sp/>imagen<sp/>de<sp/>inicio<sp/>*/</highlight></codeline>
+<codeline lineno="30"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kc_8h_1a9e2ab5c293f2bb7ccc3cb66c0468bfd5" kindref="member" tooltip="Brief.">showSplashScreen</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Tiempo<sp/>de<sp/>espera<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*void<sp/>wait(int<sp/>time);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Limpia<sp/>la<sp/>pantalla<sp/>*/</highlight></codeline>
+<codeline lineno="49"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kc_8h_1aa839645b7336cc84b3f846d1ff5706d6" kindref="member" tooltip="Brief.">k_clear_screen</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Inicializa<sp/>la<sp/>entrada<sp/>del<sp/>IDT<sp/>*/</highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(<ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound" tooltip="OS interrupt descriptor struct.">DESCR_INT</ref><sp/>*item,<sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/>selector,<sp/><ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref><sp/>offset,<sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/>access,<sp/><ref refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" kindref="member" tooltip="DefineBrief.">byte</ref><sp/>cero);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/kc.h"/>
+  </compounddef>
+</doxygen>

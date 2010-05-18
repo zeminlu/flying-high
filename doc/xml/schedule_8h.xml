@@ -1,0 +1,842 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="schedule_8h" kind="file">
+    <compoundname>schedule.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="u_malloc_8h" local="yes">uMalloc.h</includes>
+    <includes refid="video__driver_8h" local="yes">video_driver.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="shell_8h" local="yes">inc/shell.h</includedby>
+    <includedby refid="syscall_8h" local="yes">inc/syscall.h</includedby>
+    <includedby refid="sys_process_8h" local="yes">inc/sysProcess.h</includedby>
+    <includedby refid="schedule_8c" local="yes">src/schedule.c</includedby>
+    <incdepgraph>
+      <node id="3248">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3238" relation="include">
+        </childnode>
+      </node>
+      <node id="3230">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3254">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3252" relation="include">
+        </childnode>
+      </node>
+      <node id="3255">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="3238">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3239" relation="include">
+        </childnode>
+        <childnode refid="3226" relation="include">
+        </childnode>
+        <childnode refid="3240" relation="include">
+        </childnode>
+        <childnode refid="3241" relation="include">
+        </childnode>
+      </node>
+      <node id="3226">
+        <label>inc/schedule.h</label>
+        <link refid="schedule.h"/>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3231" relation="include">
+        </childnode>
+        <childnode refid="3244" relation="include">
+        </childnode>
+      </node>
+      <node id="3235">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3234">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3227">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3228" relation="include">
+        </childnode>
+        <childnode refid="3229" relation="include">
+        </childnode>
+      </node>
+      <node id="3247">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3236" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+        <childnode refid="3234" relation="include">
+        </childnode>
+      </node>
+      <node id="3249">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3244" relation="include">
+        </childnode>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3250" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3230" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+        <childnode refid="3231" relation="include">
+        </childnode>
+        <childnode refid="3251" relation="include">
+        </childnode>
+        <childnode refid="3226" relation="include">
+        </childnode>
+        <childnode refid="3253" relation="include">
+        </childnode>
+      </node>
+      <node id="3239">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3250">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3249" relation="include">
+        </childnode>
+        <childnode refid="3245" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3244">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="3245" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3246">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3241" relation="include">
+        </childnode>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3226" relation="include">
+        </childnode>
+        <childnode refid="3238" relation="include">
+        </childnode>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3247" relation="include">
+        </childnode>
+        <childnode refid="3248" relation="include">
+        </childnode>
+        <childnode refid="3249" relation="include">
+        </childnode>
+      </node>
+      <node id="3245">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="3240">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3239" relation="include">
+        </childnode>
+      </node>
+      <node id="3236">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+      </node>
+      <node id="3229">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3230" relation="include">
+        </childnode>
+      </node>
+      <node id="3241">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3242" relation="include">
+        </childnode>
+        <childnode refid="3244" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3246" relation="include">
+        </childnode>
+        <childnode refid="3238" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3247" relation="include">
+        </childnode>
+      </node>
+      <node id="3253">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3244" relation="include">
+        </childnode>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+        <childnode refid="3254" relation="include">
+        </childnode>
+        <childnode refid="3252" relation="include">
+        </childnode>
+        <childnode refid="3248" relation="include">
+        </childnode>
+        <childnode refid="3241" relation="include">
+        </childnode>
+      </node>
+      <node id="3233">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3243">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3237">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3238" relation="include">
+        </childnode>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3246" relation="include">
+        </childnode>
+      </node>
+      <node id="3242">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3252">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+      </node>
+      <node id="3232">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3231">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3236" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+      </node>
+      <node id="3228">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="3251">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3251" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3246" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3238" relation="include">
+        </childnode>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+        <childnode refid="3244" relation="include">
+        </childnode>
+        <childnode refid="3239" relation="include">
+        </childnode>
+        <childnode refid="3241" relation="include">
+        </childnode>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3236" relation="include">
+        </childnode>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3226" relation="include">
+        </childnode>
+        <childnode refid="3247" relation="include">
+        </childnode>
+        <childnode refid="3249" relation="include">
+        </childnode>
+        <childnode refid="3245" relation="include">
+        </childnode>
+        <childnode refid="3230" relation="include">
+        </childnode>
+        <childnode refid="3231" relation="include">
+        </childnode>
+        <childnode refid="3252" relation="include">
+        </childnode>
+        <childnode refid="3248" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3272">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+      </node>
+      <node id="3258">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3286">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3268">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="3268" relation="include">
+        </childnode>
+      </node>
+      <node id="3265">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="3277">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+      </node>
+      <node id="3271">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3263" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+      </node>
+      <node id="3256">
+        <label>inc/schedule.h</label>
+        <link refid="schedule.h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3288" relation="include">
+        </childnode>
+      </node>
+      <node id="3288">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3287">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="3285">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="3266">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+      </node>
+      <node id="3260">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+      </node>
+      <node id="3282">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+      <node id="3284">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+      </node>
+      <node id="3261">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+        <childnode refid="3263" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3282" relation="include">
+        </childnode>
+        <childnode refid="3283" relation="include">
+        </childnode>
+      </node>
+      <node id="3278">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="3269">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="3270" relation="include">
+        </childnode>
+      </node>
+      <node id="3267">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+      </node>
+      <node id="3264">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+      </node>
+      <node id="3263">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3276" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+        <childnode refid="3280" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+      </node>
+      <node id="3283">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="3281">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="3279">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="3276">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+      </node>
+      <node id="3274">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="3259">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="3273">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="3275">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="3270">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="3280">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3256" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+      </node>
+      <node id="3257">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+      </node>
+      <node id="3262">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" prot="public" static="no">
+        <name>ROUND_ROBIN</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="16" bodyfile="/Users/Luciano/Desktop/flying-high/inc/schedule.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="schedule_8c_1a70a005f86f52baf57148ad4074e37f2c" compoundref="schedule_8c" startline="111" endline="117">changeAlgorithimSchedule</referencedby>
+        <referencedby refid="schedule_8c_1a8c619ef4910f0dc6a31bbafbf167e792" compoundref="schedule_8c" startline="69" endline="80">getNextTask</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" prot="public" static="no">
+        <name>RPG</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="17" bodyfile="/Users/Luciano/Desktop/flying-high/inc/schedule.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="schedule_8c_1a70a005f86f52baf57148ad4074e37f2c" compoundref="schedule_8c" startline="111" endline="117">changeAlgorithimSchedule</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="schedule_8h_1ab6ee1bd91261887de3d4df419442eea9" prot="public" static="no">
+        <name>MAX_RPG</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="18" bodyfile="/Users/Luciano/Desktop/flying-high/inc/schedule.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="schedule_8c_1a29be8fb1ec9e43332002a4396b615094" compoundref="schedule_8c" startline="82" endline="95">checkWhatAreReady</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="schedule_8h_1aac18aff76eae1aaf53f60e893d56d0a6" prot="public" static="no">
+        <name>evaluate</name>
+        <param><defname>x</defname></param>
+        <initializer>((x * 0.75) + ((x+2)/MAX_PROCESS) * 100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="20" bodyfile="/Users/Luciano/Desktop/flying-high/inc/schedule.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="schedule_8c_1a2b69bd69a28b34a5da0d299dcfe8765e" compoundref="schedule_8c" startline="97" endline="109">increaseRPGCounter</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="schedule_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a &gt; b) ? a : b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="21" bodyfile="/Users/Luciano/Desktop/flying-high/inc/schedule.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="schedule_8h_1a1f23daf143e53db80049ae389acc597d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t * rpgSchedule</definition>
+        <argsstring>()</argsstring>
+        <name>rpgSchedule</name>
+        <briefdescription>
+<para>This function simulates the RPG scheduling. What this algorithm does, is that when a process achieves the maximum value of RPG, it adds it to a queue. After that the functions just find the oldest process that is waiting to be attended. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The process to be attended</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>ALGORITHIM<sp/>==<sp/><ref refid="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" kindref="member">RPG</ref><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1a1f23daf143e53db80049ae389acc597d" kindref="member" tooltip="This function simulates the RPG scheduling. What this algorithm does, is that when...">rpgSchedule</ref>();</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="40" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="57" bodyend="67"/>
+        <references refid="schedule_8h_1a29be8fb1ec9e43332002a4396b615094" compoundref="schedule_8c" startline="82" endline="95">checkWhatAreReady</references>
+        <references refid="schedule_8h_1af95a92936b33c15af802b17f34f06cf8" compoundref="schedule_8c" startline="97" endline="109">increaseRPGCounter</references>
+        <references refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" compoundref="types_8h" startline="153">process_t::rpgPrior</references>
+        <referencedby refid="schedule_8c_1a8c619ef4910f0dc6a31bbafbf167e792" compoundref="schedule_8c" startline="69" endline="80">getNextTask</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8h_1a646e9b6a815f3a5bcbc2fdaf01913ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t * getNextTask</definition>
+        <argsstring>(void)</argsstring>
+        <name>getNextTask</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function returns the next task that should be attended. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The next process</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>changeContext(<ref refid="schedule_8h_1a646e9b6a815f3a5bcbc2fdaf01913ab8" kindref="member" tooltip="This function returns the next task that should be attended.">getNextTask</ref>());</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="56" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="69" bodyend="80"/>
+        <references refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" compoundref="schedule_8h" startline="16">ROUND_ROBIN</references>
+        <references refid="schedule_8h_1a1f23daf143e53db80049ae389acc597d" compoundref="schedule_8c" startline="57" endline="67">rpgSchedule</references>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8h_1a29be8fb1ec9e43332002a4396b615094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int checkWhatAreReady</definition>
+        <argsstring>(void)</argsstring>
+        <name>checkWhatAreReady</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function checks what processes are ready using the RPG Algorithim. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the index of table process </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="66" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="82" bodyend="95"/>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="schedule_8h_1ab6ee1bd91261887de3d4df419442eea9" compoundref="schedule_8h" startline="18">MAX_RPG</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <referencedby refid="schedule_8c_1a3ff76a95775e3eb0e8609b1c67cb5014" compoundref="schedule_8c" startline="57" endline="67">rpgSchedule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8h_1af95a92936b33c15af802b17f34f06cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void increaseRPGCounter</definition>
+        <argsstring>(void)</argsstring>
+        <name>increaseRPGCounter</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function increases the current rpg value of each process. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="76" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="97" bodyend="109"/>
+        <references refid="schedule_8h_1aac18aff76eae1aaf53f60e893d56d0a6" compoundref="schedule_8h" startline="20">evaluate</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <references refid="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" compoundref="types_8h" startline="154">process_t::rpgOld</references>
+        <references refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" compoundref="types_8h" startline="153">process_t::rpgPrior</references>
+        <referencedby refid="schedule_8c_1a3ff76a95775e3eb0e8609b1c67cb5014" compoundref="schedule_8c" startline="57" endline="67">rpgSchedule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8h_1a70a005f86f52baf57148ad4074e37f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void changeAlgorithimSchedule</definition>
+        <argsstring>(void)</argsstring>
+        <name>changeAlgorithimSchedule</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function changes the Algorithm variable, if the current algorithm is RoundRobin it changes to RPG and viceversa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h" line="86" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="111" bodyend="117"/>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" compoundref="schedule_8h" startline="16">ROUND_ROBIN</references>
+        <references refid="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" compoundref="schedule_8h" startline="17">RPG</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The OS scheduler module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>SCEHDULE</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SCEHDULE</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_malloc_8h" kindref="compound" tooltip="User malloc module.">uMalloc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="video__driver_8h" kindref="compound" tooltip="Defines the basic function to manage the video screen, cursor &amp;amp; mouse pointer...">video_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROUND_ROBIN<sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="17" refid="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RPG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline lineno="18" refid="schedule_8h_1ab6ee1bd91261887de3d4df419442eea9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAX_RPG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="schedule_8h_1aac18aff76eae1aaf53f60e893d56d0a6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>evaluate(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x<sp/>*<sp/>0.75)<sp/>+<sp/>((x+2)/MAX_PROCESS)<sp/>*<sp/>100)</highlight></codeline>
+<codeline lineno="21" refid="schedule_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAX(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a<sp/>&gt;<sp/>b)<sp/>?<sp/>a<sp/>:<sp/>b)</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<sp/><ref refid="schedule_8h_1a1f23daf143e53db80049ae389acc597d" kindref="member" tooltip="This function simulates the RPG scheduling. What this algorithm does, is that when...">rpgSchedule</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<sp/><ref refid="schedule_8h_1a646e9b6a815f3a5bcbc2fdaf01913ab8" kindref="member" tooltip="This function returns the next task that should be attended.">getNextTask</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1a29be8fb1ec9e43332002a4396b615094" kindref="member" tooltip="This function checks what processes are ready using the RPG Algorithim.">checkWhatAreReady</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1af95a92936b33c15af802b17f34f06cf8" kindref="member" tooltip="This function increases the current rpg value of each process.">increaseRPGCounter</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1a70a005f86f52baf57148ad4074e37f2c" kindref="member" tooltip="This function changes the Algorithm variable, if the current algorithm is RoundRobin...">changeAlgorithimSchedule</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/schedule.h"/>
+  </compounddef>
+</doxygen>

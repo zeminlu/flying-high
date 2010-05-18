@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$video__driver_8c.html#a8830e25eeec93f2edd0c4d2ee99d6c91" title="Initializes the video driver, by setting the initial cursor position, setting it&#39;s..." alt="" coords="315,86,395,116"/>
+<area shape="rect" id="node7" href="$keyboard__driver_8c.html#a354ce1ad1d33647cf9d227c04fe70f21" title="This function is the manager of interpretate what key was pressed or released. It..." alt="" coords="131,33,259,62"/>
+<area shape="rect" id="node9" href="$system_8c.html#ac8c8545f4a29ebb7d3e384467263cf50" title="Reboots the system." alt="" coords="136,140,253,169"/>
+<area shape="rect" id="node14" href="$video__driver_8c.html#ab7319ae93754c193869c17959927aafe" title="Sets the cursor&#39;s visibility. Zero to turn it off not zero to turn it on." alt="" coords="124,86,265,116"/>
+<area shape="rect" id="node5" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="444,113,545,142"/>
+<area shape="rect" id="node11" href="$bin_8c.html#a5bfde7b5020b14bdcb1c9269ab308dc5" title="This functions initialize the welcome process, all the shells and goodbye process..." alt="" coords="333,140,376,169"/>
+</map>

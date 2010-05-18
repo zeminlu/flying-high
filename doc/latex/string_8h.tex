@@ -1,0 +1,435 @@
+\hypertarget{string_8h}{
+\section{inc/string.h File Reference}
+\label{string_8h}\index{inc/string.h@{inc/string.h}}
+}
+
+
+Declaration of all functions that deals with strings and buffers.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+Include dependency graph for string.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=82pt]{string_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{string_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{string_8h_aaed18db97b5e36c8db44ed61803bb0c6}{strncpy} (char $\ast$dst, const char $\ast$source, int n)
+\begin{DoxyCompactList}\small\item\em Copies the first n bytes from the source string to the dst string. \item\end{DoxyCompactList}\item 
+int \hyperlink{string_8h_a839ba133fed8b10bbded09e332999153}{stringHasChar} (const char $\ast$string, const char c)
+\begin{DoxyCompactList}\small\item\em Checks wether the given string contains or not the given character. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{string_8h_a9517a4a50477f651785c09b27826d8ce}{strcat} (char $\ast$dst, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Concatenates the src string to the end of the dst string. \item\end{DoxyCompactList}\item 
+int \hyperlink{string_8h_ae6c8de953239811a34eeeab09458e55e}{strlen} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Returns the length of the string. \item\end{DoxyCompactList}\item 
+int \hyperlink{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{strcmp} (const char $\ast$s1, const char $\ast$s2)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{strcmp()} function compares the two strings s1 and s2. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{string_8h_aba088e716bccbc96d42da97e96316df1}{memcpy} (void $\ast$dest, const void $\ast$src, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} n)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{string_8h_aba088e716bccbc96d42da97e96316df1}{memcpy()} function copies n bytes from memory area src to memory area dest. The memory areas should not overlap. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{string_8h_a1dfdc55c5334154353963674598faf1b}{memset} (void $\ast$dest, int c, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} n)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{string_8h_a1dfdc55c5334154353963674598faf1b}{memset()} function sets n bytes from the memory area dest with the value of c. \item\end{DoxyCompactList}\item 
+int \hyperlink{string_8h_a07f4a84c11c106e95c32b6ab509346ef}{strncmp} (const char $\ast$s1, const char $\ast$s2, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} n)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{strcmp()} function compares the two strings s1 and s2 up to the nth character. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{string_8h_ad80e936d8fe6ed29ad12bb760536ec1d}{strcpy} (char $\ast$dst, const char $\ast$source)
+\begin{DoxyCompactList}\small\item\em Copies the source Null terminated string to the dst string. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{string_8h_a623f10afaacb826c45536f4191c18357}{strtok} (char $\ast$s, char $\ast$tokens)
+\begin{DoxyCompactList}\small\item\em Gets segments of the given string delimitated by the given tokens. \item\end{DoxyCompactList}\item 
+int \hyperlink{string_8h_a499020e544a321bb07fd3cb85102db46}{toInt} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Transforms the given string to an int. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{string_8h_a5047528a41494675d15fee6c643f8e7a}{intToString} (int num, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Transforms the given int number to a string. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{string_8h_a5aad25908949f4a9f515aff74d166cbe}{doubleToString} (double num, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Idem as intToString, but with double values. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{string_8h_a54d972ccd875da7d6e9ef4afc2d9f586}{toLowerCase} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Passes every UpperCase character from string to LowerCase. \item\end{DoxyCompactList}\item 
+int \hyperlink{string_8h_a8df8d0c23a868e43a921e790dd8cdd7b}{isAllNumb} (char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Checks wether the given string contains only numbers. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declaration of all functions that deals with strings and buffers. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{string_8h_source}{string.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{string_8h_a5aad25908949f4a9f515aff74d166cbe}{
+\index{string.h@{string.h}!doubleToString@{doubleToString}}
+\index{doubleToString@{doubleToString}!string.h@{string.h}}
+\subsubsection[{doubleToString}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ doubleToString (double {\em num}, \/  char $\ast$ {\em str})}}
+\label{string_8h_a5aad25908949f4a9f515aff74d166cbe}
+
+
+Idem as intToString, but with double values. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em num}]The double number to be transformed. \item[{\em str}]A pointer where to store the string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the transformed string on success, NULL on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{string_8h_a5047528a41494675d15fee6c643f8e7a}{intToString()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 37 of file string.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=102pt]{string_8h_a5aad25908949f4a9f515aff74d166cbe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{string_8h_a5047528a41494675d15fee6c643f8e7a}{
+\index{string.h@{string.h}!intToString@{intToString}}
+\index{intToString@{intToString}!string.h@{string.h}}
+\subsubsection[{intToString}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ intToString (int {\em num}, \/  char $\ast$ {\em str})}}
+\label{string_8h_a5047528a41494675d15fee6c643f8e7a}
+
+
+Transforms the given int number to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em num}]The number to be transformed. \item[{\em str}]A pointer where to write the string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the transformed string on success, NULL on error. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file string.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=96pt]{string_8h_a5047528a41494675d15fee6c643f8e7a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{string_8h_a8df8d0c23a868e43a921e790dd8cdd7b}{
+\index{string.h@{string.h}!isAllNumb@{isAllNumb}}
+\index{isAllNumb@{isAllNumb}!string.h@{string.h}}
+\subsubsection[{isAllNumb}]{\setlength{\rightskip}{0pt plus 5cm}int isAllNumb (char $\ast$ {\em value})}}
+\label{string_8h_a8df8d0c23a868e43a921e790dd8cdd7b}
+
+
+Checks wether the given string contains only numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]The string to be parsed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it's all numbers, False if not. 
+\end{DoxyReturn}
+
+
+Definition at line 217 of file string.c.
+
+\hypertarget{string_8h_aba088e716bccbc96d42da97e96316df1}{
+\index{string.h@{string.h}!memcpy@{memcpy}}
+\index{memcpy@{memcpy}!string.h@{string.h}}
+\subsubsection[{memcpy}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ memcpy (void $\ast$ {\em dest}, \/  const void $\ast$ {\em source}, \/  {\bf size\_\-t} {\em n})}}
+\label{string_8h_aba088e716bccbc96d42da97e96316df1}
+
+
+The \hyperlink{string_8h_aba088e716bccbc96d42da97e96316df1}{memcpy()} function copies n bytes from memory area src to memory area dest. The memory areas should not overlap. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em dest}]the destination memory address \item[{\em source}]the source memory address \item[{\em n}]the amount of bytes to be copied\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the copied memory. 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file string.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{string_8h_aba088e716bccbc96d42da97e96316df1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{string_8h_a1dfdc55c5334154353963674598faf1b}{
+\index{string.h@{string.h}!memset@{memset}}
+\index{memset@{memset}!string.h@{string.h}}
+\subsubsection[{memset}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ memset (void $\ast$ {\em dest}, \/  int {\em val}, \/  {\bf size\_\-t} {\em len})}}
+\label{string_8h_a1dfdc55c5334154353963674598faf1b}
+
+
+The \hyperlink{string_8h_a1dfdc55c5334154353963674598faf1b}{memset()} function sets n bytes from the memory area dest with the value of c. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em dest}]Where the memory will be setted. \item[{\em val}]The value with which the memory will be setted. \item[{\em len}]The ammount of bytes to be setted.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the setted memory. 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file string.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{string_8h_a1dfdc55c5334154353963674598faf1b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{string_8h_a9517a4a50477f651785c09b27826d8ce}{
+\index{string.h@{string.h}!strcat@{strcat}}
+\index{strcat@{strcat}!string.h@{string.h}}
+\subsubsection[{strcat}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ strcat (char $\ast$ {\em dst}, \/  const char $\ast$ {\em src})}}
+\label{string_8h_a9517a4a50477f651785c09b27826d8ce}
+
+
+Concatenates the src string to the end of the dst string. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em dst}]The destination string. \item[{\em src}]The source string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the concatenated string. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file string.c.
+
+\hypertarget{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{
+\index{string.h@{string.h}!strcmp@{strcmp}}
+\index{strcmp@{strcmp}!string.h@{string.h}}
+\subsubsection[{strcmp}]{\setlength{\rightskip}{0pt plus 5cm}int strcmp (const char $\ast$ {\em s1}, \/  const char $\ast$ {\em s2})}}
+\label{string_8h_a11bd144d7d44914099a3aeddf1c8567d}
+
+
+The \hyperlink{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{strcmp()} function compares the two strings s1 and s2. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em s1}]The first string to be compared. \item[{\em s2}]The second string to be compared.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns an integer less than, equal to, or greater than zero if s1 is found, respectively, to be less than, to match, or be greater than s2. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file string.c.
+
+\hypertarget{string_8h_ad80e936d8fe6ed29ad12bb760536ec1d}{
+\index{string.h@{string.h}!strcpy@{strcpy}}
+\index{strcpy@{strcpy}!string.h@{string.h}}
+\subsubsection[{strcpy}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ strcpy (char $\ast$ {\em dst}, \/  const char $\ast$ {\em source})}}
+\label{string_8h_ad80e936d8fe6ed29ad12bb760536ec1d}
+
+
+Copies the source Null terminated string to the dst string. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em dst}]Where to copy the string. \item[{\em source}]The Null terminated string to be copied.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the copied string. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file string.c.
+
+\hypertarget{string_8h_a839ba133fed8b10bbded09e332999153}{
+\index{string.h@{string.h}!stringHasChar@{stringHasChar}}
+\index{stringHasChar@{stringHasChar}!string.h@{string.h}}
+\subsubsection[{stringHasChar}]{\setlength{\rightskip}{0pt plus 5cm}int stringHasChar (const char $\ast$ {\em string}, \/  const char {\em c})}}
+\label{string_8h_a839ba133fed8b10bbded09e332999153}
+
+
+Checks wether the given string contains or not the given character. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]The string to be checked. \item[{\em c}]The character to be checked.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if found, False if not. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file string.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=107pt]{string_8h_a839ba133fed8b10bbded09e332999153_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{string_8h_ae6c8de953239811a34eeeab09458e55e}{
+\index{string.h@{string.h}!strlen@{strlen}}
+\index{strlen@{strlen}!string.h@{string.h}}
+\subsubsection[{strlen}]{\setlength{\rightskip}{0pt plus 5cm}int strlen (const char $\ast$ {\em str})}}
+\label{string_8h_ae6c8de953239811a34eeeab09458e55e}
+
+
+Returns the length of the string. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em str}]The string whose length will be calculated.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the given string. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file string.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{string_8h_ae6c8de953239811a34eeeab09458e55e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{string_8h_a07f4a84c11c106e95c32b6ab509346ef}{
+\index{string.h@{string.h}!strncmp@{strncmp}}
+\index{strncmp@{strncmp}!string.h@{string.h}}
+\subsubsection[{strncmp}]{\setlength{\rightskip}{0pt plus 5cm}int strncmp (const char $\ast$ {\em s1}, \/  const char $\ast$ {\em s2}, \/  {\bf size\_\-t} {\em n})}}
+\label{string_8h_a07f4a84c11c106e95c32b6ab509346ef}
+
+
+The \hyperlink{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{strcmp()} function compares the two strings s1 and s2 up to the nth character. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em s1}]The first string to be compared. \item[{\em s2}]The second string to be compared. \item[{\em n}]The amount of bytes to be taken into acount form each string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns an integer less than, equal to, or greater than zero if s1 is found, respectively, to be less than, to match, or be greater than s2. 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file string.c.
+
+\hypertarget{string_8h_aaed18db97b5e36c8db44ed61803bb0c6}{
+\index{string.h@{string.h}!strncpy@{strncpy}}
+\index{strncpy@{strncpy}!string.h@{string.h}}
+\subsubsection[{strncpy}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ strncpy (char $\ast$ {\em dst}, \/  const char $\ast$ {\em source}, \/  int {\em n})}}
+\label{string_8h_aaed18db97b5e36c8db44ed61803bb0c6}
+
+
+Copies the first n bytes from the source string to the dst string. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em dst}]The destination string. \item[{\em source}]The source string. \item[{\em n}]The ammount of bytes to be copied.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the copied string. 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file string.c.
+
+\hypertarget{string_8h_a623f10afaacb826c45536f4191c18357}{
+\index{string.h@{string.h}!strtok@{strtok}}
+\index{strtok@{strtok}!string.h@{string.h}}
+\subsubsection[{strtok}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ strtok (char $\ast$ {\em s}, \/  char $\ast$ {\em tokens})}}
+\label{string_8h_a623f10afaacb826c45536f4191c18357}
+
+
+Gets segments of the given string delimitated by the given tokens. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em s}]The string to be segmentated. \item[{\em tokens}]The tokens that limitate the segments.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the current segment. 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file string.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=87pt]{string_8h_a623f10afaacb826c45536f4191c18357_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{string_8h_a499020e544a321bb07fd3cb85102db46}{
+\index{string.h@{string.h}!toInt@{toInt}}
+\index{toInt@{toInt}!string.h@{string.h}}
+\subsubsection[{toInt}]{\setlength{\rightskip}{0pt plus 5cm}int toInt (char $\ast$ {\em string})}}
+\label{string_8h_a499020e544a321bb07fd3cb85102db46}
+
+
+Transforms the given string to an int. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]The string to be parsed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The int value of the string on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Definition at line 194 of file string.c.
+
+\hypertarget{string_8h_a54d972ccd875da7d6e9ef4afc2d9f586}{
+\index{string.h@{string.h}!toLowerCase@{toLowerCase}}
+\index{toLowerCase@{toLowerCase}!string.h@{string.h}}
+\subsubsection[{toLowerCase}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ toLowerCase (char $\ast$ {\em string})}}
+\label{string_8h_a54d972ccd875da7d6e9ef4afc2d9f586}
+
+
+Passes every UpperCase character from string to LowerCase. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]The string to be lowercased.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the lowercased string on success, NULL on error. 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file string.c.
+

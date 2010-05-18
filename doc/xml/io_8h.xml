@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="io_8h" kind="file">
+    <compoundname>io.h</compoundname>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="keyboard__driver_8h" local="yes">inc/keyboard_driver.h</includedby>
+    <includedby refid="system_8h" local="yes">inc/system.h</includedby>
+    <includedby refid="video__driver_8h" local="yes">inc/video_driver.h</includedby>
+    <invincdepgraph>
+      <node id="2689">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2690" relation="include">
+        </childnode>
+      </node>
+      <node id="2675">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2676" relation="include">
+        </childnode>
+      </node>
+      <node id="2705">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="2685">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="2685" relation="include">
+        </childnode>
+      </node>
+      <node id="2682">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="2694">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2695" relation="include">
+        </childnode>
+      </node>
+      <node id="2688">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2689" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2691" relation="include">
+        </childnode>
+      </node>
+      <node id="2698">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2688" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2699" relation="include">
+        </childnode>
+      </node>
+      <node id="2699">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="2708">
+        <label>src/video_driver.c</label>
+        <link refid="video__driver_8c"/>
+      </node>
+      <node id="2706">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="2704">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="2683">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+      </node>
+      <node id="2677">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2703" relation="include">
+        </childnode>
+        <childnode refid="2705" relation="include">
+        </childnode>
+      </node>
+      <node id="2701">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="2701" relation="include">
+        </childnode>
+      </node>
+      <node id="2703">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2704" relation="include">
+        </childnode>
+      </node>
+      <node id="2707">
+        <label>inc/video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2698" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2708" relation="include">
+        </childnode>
+      </node>
+      <node id="2678">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2679" relation="include">
+        </childnode>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2701" relation="include">
+        </childnode>
+        <childnode refid="2702" relation="include">
+        </childnode>
+      </node>
+      <node id="2673">
+        <label>inc/io.h</label>
+        <link refid="io.h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2686" relation="include">
+        </childnode>
+        <childnode refid="2703" relation="include">
+        </childnode>
+        <childnode refid="2707" relation="include">
+        </childnode>
+      </node>
+      <node id="2695">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="2686">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="2687" relation="include">
+        </childnode>
+      </node>
+      <node id="2684">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2686" relation="include">
+        </childnode>
+        <childnode refid="2688" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2692" relation="include">
+        </childnode>
+      </node>
+      <node id="2681">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+      </node>
+      <node id="2680">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2693" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2688" relation="include">
+        </childnode>
+        <childnode refid="2697" relation="include">
+        </childnode>
+        <childnode refid="2700" relation="include">
+        </childnode>
+      </node>
+      <node id="2702">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="2700">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="2696">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="2693">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2694" relation="include">
+        </childnode>
+        <childnode refid="2696" relation="include">
+        </childnode>
+      </node>
+      <node id="2691">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="2676">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="2690">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="2692">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="2687">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="2697">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2698" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+      </node>
+      <node id="2674">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2706" relation="include">
+        </childnode>
+      </node>
+      <node id="2679">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="io_8h_1a20cb09d28af0835280c004e0030d0ba4" prot="public" static="no">
+        <name>VIDEO_MEMORY_ADDRESS</name>
+        <initializer>(void *)0xB8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/io.h" line="17" bodyfile="/Users/Luciano/Desktop/flying-high/inc/io.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="io_8h_1ac17a6cfbeef702c55063c3350220c126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int inportb</definition>
+        <argsstring>(int port)</argsstring>
+        <name>inportb</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>This function grabs the value stored in the given port. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired port number. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns an int instance with the value obtained.</para></simplesect>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>inport(0x60);</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para>outport() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/io.h" line="38"/>
+        <referencedby refid="video__driver_8c_1a8830e25eeec93f2edd0c4d2ee99d6c91" compoundref="video__driver_8c" startline="176" endline="231">initVideo</referencedby>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+        <referencedby refid="system_8c_1ac8c8545f4a29ebb7d3e384467263cf50" compoundref="system_8c" startline="12" endline="18">rebootSystem</referencedby>
+        <referencedby refid="video__driver_8c_1ab7319ae93754c193869c17959927aafe" compoundref="video__driver_8c" startline="246" endline="272">setCursorVisibility</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="io_8h_1a816f57bd2dc5cfc848e5f6954476844c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void outportb</definition>
+        <argsstring>(int port, int value)</argsstring>
+        <name>outportb</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>This function stores the given value in the given port. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired port number. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired value to set.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outport<sp/>(0x64,<sp/>0x31)</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para>inport() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/io.h" line="54"/>
+        <referencedby refid="video__driver_8c_1a8830e25eeec93f2edd0c4d2ee99d6c91" compoundref="video__driver_8c" startline="176" endline="231">initVideo</referencedby>
+        <referencedby refid="system_8c_1ac8c8545f4a29ebb7d3e384467263cf50" compoundref="system_8c" startline="12" endline="18">rebootSystem</referencedby>
+        <referencedby refid="video__driver_8c_1ab7319ae93754c193869c17959927aafe" compoundref="video__driver_8c" startline="246" endline="272">setCursorVisibility</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Declaration of functions and constants related with direct access to hardware. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>_INOUT_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_INOUT_H_</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Video<sp/>Memory<sp/>Address</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="io_8h_1a20cb09d28af0835280c004e0030d0ba4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIDEO_MEMORY_ADDRESS<sp/>(void<sp/>*)0xB8000</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Port<sp/>Definitions</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="io_8h_1ac17a6cfbeef702c55063c3350220c126" kindref="member" tooltip="This function grabs the value stored in the given port.">inportb</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="io_8h_1a816f57bd2dc5cfc848e5f6954476844c" kindref="member" tooltip="This function stores the given value in the given port.">outportb</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/io.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$bttlship_8h.html#a6554029a39cab2edd50f67075f949926" title="It draws the horizontal ship." alt="" coords="149,5,227,35"/>
+<area shape="rect" id="node5" href="$bttlship_8h.html#a2d3705cb0dd809d88cd03e1bb39afb09" title="It draws the horizontal ship." alt="" coords="151,59,225,88"/>
+<area shape="rect" id="node7" href="$string_8h.html#a1dfdc55c5334154353963674598faf1b" title="The memset() function sets n bytes from the memory area dest with the value of c..." alt="" coords="148,112,228,141"/>
+<area shape="rect" id="node9" href="$rand_8h.html#a20e50ab9d6b10af0e2940d9419448f42" title="Generates a random number with a linear equation." alt="" coords="163,165,213,195"/>
+<area shape="rect" id="node11" href="$rand_8h.html#a4158d0a4435ddf2a9ae2e1d2e270024e" title="Sets the seed to generate random numbers." alt="" coords="159,219,217,248"/>
+<area shape="rect" id="node13" href="$rand_8h.html#a55e3beba53036a0b4b8ac14e6914753d" title="This function loads the amount of ticks. It uses a system call." alt="" coords="144,272,232,301"/>
+<area shape="rect" id="node15" href="$process_8h.html#ae735fa27b5b798dab27c5d1077802faf" title="Retrieves the amount of ticks since the system boot." alt="" coords="281,272,351,301"/>
+<area shape="rect" id="node17" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="400,272,456,301"/>
+</map>

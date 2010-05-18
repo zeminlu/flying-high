@@ -1,0 +1,690 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="schedule_8c" kind="file">
+    <compoundname>schedule.c</compoundname>
+    <includes refid="schedule_8h" local="yes">schedule.h</includes>
+    <incdepgraph>
+      <node id="4351">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4341" relation="include">
+        </childnode>
+      </node>
+      <node id="4333">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4357">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4355" relation="include">
+        </childnode>
+      </node>
+      <node id="4358">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4341">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4335" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4342" relation="include">
+        </childnode>
+        <childnode refid="4329" relation="include">
+        </childnode>
+        <childnode refid="4343" relation="include">
+        </childnode>
+        <childnode refid="4344" relation="include">
+        </childnode>
+      </node>
+      <node id="4329">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4334" relation="include">
+        </childnode>
+        <childnode refid="4347" relation="include">
+        </childnode>
+      </node>
+      <node id="4328">
+        <label>src/schedule.c</label>
+        <link refid="schedule.c"/>
+        <childnode refid="4329" relation="include">
+        </childnode>
+      </node>
+      <node id="4338">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4337">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4338" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4330">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4331" relation="include">
+        </childnode>
+        <childnode refid="4332" relation="include">
+        </childnode>
+      </node>
+      <node id="4350">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4335" relation="include">
+        </childnode>
+        <childnode refid="4339" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+      </node>
+      <node id="4352">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4337" relation="include">
+        </childnode>
+        <childnode refid="4347" relation="include">
+        </childnode>
+        <childnode refid="4338" relation="include">
+        </childnode>
+        <childnode refid="4353" relation="include">
+        </childnode>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4333" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+        <childnode refid="4334" relation="include">
+        </childnode>
+        <childnode refid="4354" relation="include">
+        </childnode>
+        <childnode refid="4329" relation="include">
+        </childnode>
+        <childnode refid="4356" relation="include">
+        </childnode>
+      </node>
+      <node id="4342">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4353">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4352" relation="include">
+        </childnode>
+        <childnode refid="4348" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4347">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4348" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4349">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4344" relation="include">
+        </childnode>
+        <childnode refid="4346" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4335" relation="include">
+        </childnode>
+        <childnode refid="4329" relation="include">
+        </childnode>
+        <childnode refid="4341" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+        <childnode refid="4350" relation="include">
+        </childnode>
+        <childnode refid="4351" relation="include">
+        </childnode>
+        <childnode refid="4352" relation="include">
+        </childnode>
+      </node>
+      <node id="4348">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4343">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4335" relation="include">
+        </childnode>
+        <childnode refid="4342" relation="include">
+        </childnode>
+      </node>
+      <node id="4339">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4335" relation="include">
+        </childnode>
+        <childnode refid="4336" relation="include">
+        </childnode>
+      </node>
+      <node id="4332">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4333" relation="include">
+        </childnode>
+      </node>
+      <node id="4344">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4345" relation="include">
+        </childnode>
+        <childnode refid="4347" relation="include">
+        </childnode>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4346" relation="include">
+        </childnode>
+        <childnode refid="4349" relation="include">
+        </childnode>
+        <childnode refid="4341" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4338" relation="include">
+        </childnode>
+        <childnode refid="4350" relation="include">
+        </childnode>
+      </node>
+      <node id="4356">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4347" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+        <childnode refid="4357" relation="include">
+        </childnode>
+        <childnode refid="4355" relation="include">
+        </childnode>
+        <childnode refid="4351" relation="include">
+        </childnode>
+        <childnode refid="4344" relation="include">
+        </childnode>
+      </node>
+      <node id="4336">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4346">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4340">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4341" relation="include">
+        </childnode>
+        <childnode refid="4358" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4349" relation="include">
+        </childnode>
+      </node>
+      <node id="4345">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4346" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4355">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+      </node>
+      <node id="4335">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4334">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4335" relation="include">
+        </childnode>
+        <childnode refid="4339" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+      </node>
+      <node id="4331">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4354">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4354" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+        <childnode refid="4346" relation="include">
+        </childnode>
+        <childnode refid="4349" relation="include">
+        </childnode>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4341" relation="include">
+        </childnode>
+        <childnode refid="4335" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+        <childnode refid="4347" relation="include">
+        </childnode>
+        <childnode refid="4342" relation="include">
+        </childnode>
+        <childnode refid="4344" relation="include">
+        </childnode>
+        <childnode refid="4338" relation="include">
+        </childnode>
+        <childnode refid="4339" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+        <childnode refid="4329" relation="include">
+        </childnode>
+        <childnode refid="4350" relation="include">
+        </childnode>
+        <childnode refid="4352" relation="include">
+        </childnode>
+        <childnode refid="4348" relation="include">
+        </childnode>
+        <childnode refid="4333" relation="include">
+        </childnode>
+        <childnode refid="4334" relation="include">
+        </childnode>
+        <childnode refid="4355" relation="include">
+        </childnode>
+        <childnode refid="4351" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="schedule_8c_1a9a676b8b31337abb6fcf49d5b41d5921" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref></type>
+        <definition>process_t processTable[MAX_PROCESS]</definition>
+        <argsstring>[MAX_PROCESS]</argsstring>
+        <name>processTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="20" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schedule_8c_1aa4fe1fb513349b18bfc91787f615e57f" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* nextProcess</definition>
+        <argsstring></argsstring>
+        <name>nextProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="22" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schedule_8c_1a8f3d19e4d5dfc217f2a8bd0492856f32" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* initProcess</definition>
+        <argsstring></argsstring>
+        <name>initProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="24" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schedule_8c_1ab7f4e33be6189512770d5aaa43bd03fe" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* runningProcess</definition>
+        <argsstring></argsstring>
+        <name>runningProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="26" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schedule_8c_1a9f730f3b3543bd94a38c0b82ecd15a5b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qtyProccessTable</definition>
+        <argsstring></argsstring>
+        <name>qtyProccessTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="28" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schedule_8c_1a996825b6a2621cf20eb2dd166141e8d8" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Algorithim</definition>
+        <argsstring></argsstring>
+        <name>Algorithim</name>
+        <initializer> RPG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="30" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schedule_8c_1ae2e1f9e0e0855d2058350422d9fecae9" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int prevPro</definition>
+        <argsstring></argsstring>
+        <name>prevPro</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="32" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="schedule_8c_1a686fafcd44bd73dfb770296cd6f1702b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>static process_t* roundRobinSchedule</definition>
+        <argsstring>()</argsstring>
+        <name>roundRobinSchedule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="39" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="38" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8c_1a3ff76a95775e3eb0e8609b1c67cb5014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* rpgSchedule</definition>
+        <argsstring>()</argsstring>
+        <name>rpgSchedule</name>
+        <briefdescription>
+<para>This function simulates the RPG scheduling. What this algorithm does, is that when a process achieves the maximum value of RPG, it adds it to a queue. After that the functions just find the oldest process that is waiting to be attended. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The process to be attended</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>ALGORITHIM<sp/>==<sp/><ref refid="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" kindref="member">RPG</ref><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1a1f23daf143e53db80049ae389acc597d" kindref="member" tooltip="This function simulates the RPG scheduling. What this algorithm does, is that when...">rpgSchedule</ref>();</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="58" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="57" bodyend="67"/>
+        <references refid="schedule_8h_1a29be8fb1ec9e43332002a4396b615094" compoundref="schedule_8c" startline="82" endline="95">checkWhatAreReady</references>
+        <references refid="schedule_8h_1af95a92936b33c15af802b17f34f06cf8" compoundref="schedule_8c" startline="97" endline="109">increaseRPGCounter</references>
+        <references refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" compoundref="types_8h" startline="153">process_t::rpgPrior</references>
+        <referencedby refid="schedule_8c_1a8c619ef4910f0dc6a31bbafbf167e792" compoundref="schedule_8c" startline="69" endline="80">getNextTask</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8c_1a8c619ef4910f0dc6a31bbafbf167e792" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* getNextTask</definition>
+        <argsstring>()</argsstring>
+        <name>getNextTask</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function returns the next task that should be attended. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The next process</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>changeContext(<ref refid="schedule_8h_1a646e9b6a815f3a5bcbc2fdaf01913ab8" kindref="member" tooltip="This function returns the next task that should be attended.">getNextTask</ref>());</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="70" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="69" bodyend="80"/>
+        <references refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" compoundref="schedule_8h" startline="16">ROUND_ROBIN</references>
+        <references refid="schedule_8h_1a1f23daf143e53db80049ae389acc597d" compoundref="schedule_8c" startline="57" endline="67">rpgSchedule</references>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8c_1a29be8fb1ec9e43332002a4396b615094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int checkWhatAreReady</definition>
+        <argsstring>(void)</argsstring>
+        <name>checkWhatAreReady</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function checks what processes are ready using the RPG Algorithim. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the index of table process </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="83" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="82" bodyend="95"/>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="schedule_8h_1ab6ee1bd91261887de3d4df419442eea9" compoundref="schedule_8h" startline="18">MAX_RPG</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <referencedby refid="schedule_8c_1a3ff76a95775e3eb0e8609b1c67cb5014" compoundref="schedule_8c" startline="57" endline="67">rpgSchedule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8c_1a2b69bd69a28b34a5da0d299dcfe8765e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void increaseRPGCounter</definition>
+        <argsstring>()</argsstring>
+        <name>increaseRPGCounter</name>
+        <briefdescription>
+<para>This function increases the current rpg value of each process. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="98" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="97" bodyend="109"/>
+        <references refid="schedule_8h_1aac18aff76eae1aaf53f60e893d56d0a6" compoundref="schedule_8h" startline="20">evaluate</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <references refid="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" compoundref="types_8h" startline="154">process_t::rpgOld</references>
+        <references refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" compoundref="types_8h" startline="153">process_t::rpgPrior</references>
+        <referencedby refid="schedule_8c_1a3ff76a95775e3eb0e8609b1c67cb5014" compoundref="schedule_8c" startline="57" endline="67">rpgSchedule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="schedule_8c_1a70a005f86f52baf57148ad4074e37f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void changeAlgorithimSchedule</definition>
+        <argsstring>(void)</argsstring>
+        <name>changeAlgorithimSchedule</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function changes the Algorithm variable, if the current algorithm is RoundRobin it changes to RPG and viceversa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c" line="111" bodyfile="/Users/Luciano/Desktop/flying-high/src/schedule.c" bodystart="111" bodyend="117"/>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" compoundref="schedule_8h" startline="16">ROUND_ROBIN</references>
+        <references refid="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" compoundref="schedule_8h" startline="17">RPG</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The OS scheduler module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>System<sp/>Includes</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="schedule_8h" kindref="compound" tooltip="The OS scheduler module.">schedule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Extern<sp/>and<sp/>local<sp/>variables</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/><ref refid="bin_8c_1a83e1a7341d63e92cd3d1733f87176a88" kindref="member">processTable</ref>[<ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref>];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="schedule_8c_1aa4fe1fb513349b18bfc91787f615e57f" kindref="member">nextProcess</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="process_8c_1a8f3d19e4d5dfc217f2a8bd0492856f32" kindref="member">initProcess</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="stdio_8h_1ab7f4e33be6189512770d5aaa43bd03fe" kindref="member">runningProcess</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="schedule_8c_1a9f730f3b3543bd94a38c0b82ecd15a5b" kindref="member">qtyProccessTable</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Algorithim<sp/>=<sp/><ref refid="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" kindref="member">RPG</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prevPro<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Functions<sp/>Section</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<sp/>roundRobinSchedule()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lastTask;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastTask<sp/>=<sp/>(runningProcess<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>)<sp/>?<sp/>-1<sp/>:<sp/>runningProcess-&gt;<ref refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>(lastTask<sp/>+<sp/>1<sp/>==<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>?<sp/>1<sp/>:<sp/>lastTask<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(i<sp/>!=<sp/>lastTask)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>processTable[i].pid<sp/>!=<sp/>-1<sp/>&amp;&amp;<sp/>processTable[i].state<sp/>==<sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" kindref="member">READY</ref><sp/>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;processTable[i];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>(i<sp/>+<sp/>1<sp/>==<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>?<sp/>0<sp/>:<sp/>i<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>initProcess;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="schedule_8c_1a3ff76a95775e3eb0e8609b1c67cb5014" refkind="member"><highlight class="normal"><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<sp/><ref refid="schedule_8h_1a1f23daf143e53db80049ae389acc597d" kindref="member" tooltip="This function simulates the RPG scheduling. What this algorithm does, is that when...">rpgSchedule</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>procPos;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>procPos<sp/>=<sp/><ref refid="schedule_8h_1a29be8fb1ec9e43332002a4396b615094" kindref="member" tooltip="This function checks what processes are ready using the RPG Algorithim.">checkWhatAreReady</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="schedule_8h_1af95a92936b33c15af802b17f34f06cf8" kindref="member" tooltip="This function increases the current rpg value of each process.">increaseRPGCounter</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable[procPos].<ref refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" kindref="member">rpgPrior</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*processTable[procPos].rpgOld<sp/>=<sp/>0;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prevPro<sp/>=<sp/>procPos;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;processTable[procPos];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>there<sp/>isn&apos;t<sp/>a<sp/>process<sp/>to<sp/>be<sp/>excecuted<sp/>it<sp/>return<sp/>Idle(0)<sp/>process<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="schedule_8c_1a8c619ef4910f0dc6a31bbafbf167e792" refkind="member"><highlight class="normal"><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<sp/><ref refid="schedule_8h_1a646e9b6a815f3a5bcbc2fdaf01913ab8" kindref="member" tooltip="This function returns the next task that should be attended.">getNextTask</ref>()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<sp/>proc;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*char<sp/>*video<sp/>=<sp/>(char*)0xb8002;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proc<sp/>=<sp/>(Algorithim<sp/>==<sp/><ref refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" kindref="member">ROUND_ROBIN</ref><sp/>?<sp/>roundRobinSchedule()<sp/>:<sp/><ref refid="schedule_8h_1a1f23daf143e53db80049ae389acc597d" kindref="member" tooltip="This function simulates the RPG scheduling. What this algorithm does, is that when...">rpgSchedule</ref>());</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*while(1){</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*video<sp/>=<sp/>(proc-&gt;pid<sp/>+<sp/>30);</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(video<sp/>+<sp/>18)<sp/>=<sp/>&apos;A&apos;;</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>proc;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="schedule_8c_1a29be8fb1ec9e43332002a4396b615094" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1a29be8fb1ec9e43332002a4396b615094" kindref="member" tooltip="This function checks what processes are ready using the RPG Algorithim.">checkWhatAreReady</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>proc;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>i<sp/>=<sp/>1,<sp/>proc<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>processTable[i].state<sp/>==<sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" kindref="member">READY</ref><sp/>&amp;&amp;<sp/>processTable[i].rpgPrior<sp/>&gt;=<sp/><ref refid="schedule_8h_1ab6ee1bd91261887de3d4df419442eea9" kindref="member">MAX_RPG</ref><sp/>&amp;&amp;<sp/>processTable[i].priority<sp/>&gt;<sp/>processTable[proc].priority<sp/>)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>i<sp/>!=<sp/>prevPro<sp/>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proc<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>proc;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="schedule_8c_1a2b69bd69a28b34a5da0d299dcfe8765e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1af95a92936b33c15af802b17f34f06cf8" kindref="member" tooltip="This function increases the current rpg value of each process.">increaseRPGCounter</ref>()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>i<sp/>=<sp/>1<sp/>;<sp/>i<sp/>&lt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref><sp/>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>processTable[i].state<sp/>==<sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" kindref="member">READY</ref><sp/>)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable[i].<ref refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" kindref="member">rpgPrior</ref><sp/>+=<sp/><ref refid="schedule_8h_1aac18aff76eae1aaf53f60e893d56d0a6" kindref="member">evaluate</ref>(processTable[i].priority);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable[i].<ref refid="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" kindref="member">rpgOld</ref>++;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="schedule_8c_1a70a005f86f52baf57148ad4074e37f2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="schedule_8h_1a70a005f86f52baf57148ad4074e37f2c" kindref="member" tooltip="This function changes the Algorithm variable, if the current algorithm is RoundRobin...">changeAlgorithimSchedule</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Algorithim<sp/>=<sp/>(Algorithim<sp/>==<sp/><ref refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" kindref="member">ROUND_ROBIN</ref><sp/>?<sp/><ref refid="schedule_8h_1a697beb0252d037c1873ab8bd02cede9f" kindref="member">RPG</ref><sp/>:<sp/><ref refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" kindref="member">ROUND_ROBIN</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>Algorithim<sp/>==<sp/><ref refid="schedule_8h_1ab8315d87b0e79533609387c90acce4b7" kindref="member">ROUND_ROBIN</ref><sp/>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Using<sp/>Round<sp/>Robin<sp/>scheduler...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Using<sp/>RPG<sp/>scheduler...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/schedule.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="libc_8h" kind="file">
+    <compoundname>libc.h</compoundname>
+    <includes refid="kc_8h" local="yes">kc.h</includes>
+    <includedby refid="libc_8c" local="yes">src/libc.c</includedby>
+    <incdepgraph>
+      <node id="2979">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="2976">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2977" relation="include">
+        </childnode>
+        <childnode refid="2978" relation="include">
+        </childnode>
+      </node>
+      <node id="2974">
+        <label>inc/libc.h</label>
+        <link refid="libc.h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+      </node>
+      <node id="2975">
+        <label>kc.h</label>
+        <link refid="kc_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+      </node>
+      <node id="2978">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2979" relation="include">
+        </childnode>
+      </node>
+      <node id="2977">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2980">
+        <label>inc/libc.h</label>
+        <link refid="libc.h"/>
+        <childnode refid="2981" relation="include">
+        </childnode>
+      </node>
+      <node id="2981">
+        <label>src/libc.c</label>
+        <link refid="libc_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>The C library module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_LIBC_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_LIBC_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="kc_8h" kindref="compound" tooltip="Brief.">kc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/libc.h"/>
+  </compounddef>
+</doxygen>

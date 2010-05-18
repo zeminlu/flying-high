@@ -1,0 +1,117 @@
+\hypertarget{shell_8h}{
+\section{inc/shell.h File Reference}
+\label{shell_8h}\index{inc/shell.h@{inc/shell.h}}
+}
+
+
+The shell process module.  
+
+
+{\ttfamily \#include \char`\"{}stdio.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}video\_\-driver.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}unistd.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}system.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}string.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}colors.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}process.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}uMalloc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}bin.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}schedule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}bttlship.h\char`\"{}}\par
+Include dependency graph for shell.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{shell_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{shell_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{shell_8h_a225cd0af1ed8359b2973453e2a22a94b}{shell} (void)
+\begin{DoxyCompactList}\small\item\em The function that runs the shell application. \item\end{DoxyCompactList}\item 
+int \hyperlink{shell_8h_a3bffbbc4425ed2ee988c21ea67c09202}{initGlobalDataShell} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the data structures for the shells. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The shell process module. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{shell_8h_source}{shell.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{shell_8h_a3bffbbc4425ed2ee988c21ea67c09202}{
+\index{shell.h@{shell.h}!initGlobalDataShell@{initGlobalDataShell}}
+\index{initGlobalDataShell@{initGlobalDataShell}!shell.h@{shell.h}}
+\subsubsection[{initGlobalDataShell}]{\setlength{\rightskip}{0pt plus 5cm}int initGlobalDataShell (void)}}
+\label{shell_8h_a3bffbbc4425ed2ee988c21ea67c09202}
+
+
+Initializes the data structures for the shells. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file shell.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{shell_8h_a3bffbbc4425ed2ee988c21ea67c09202_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shell_8h_a225cd0af1ed8359b2973453e2a22a94b}{
+\index{shell.h@{shell.h}!shell@{shell}}
+\index{shell@{shell}!shell.h@{shell.h}}
+\subsubsection[{shell}]{\setlength{\rightskip}{0pt plus 5cm}int shell (void)}}
+\label{shell_8h_a225cd0af1ed8359b2973453e2a22a94b}
+
+
+The function that runs the shell application. 
+
+
+
+Definition at line 497 of file shell.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{shell_8h_a225cd0af1ed8359b2973453e2a22a94b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{shell_8h_a225cd0af1ed8359b2973453e2a22a94b_icgraph}
+\end{center}
+\end{figure}
+
+

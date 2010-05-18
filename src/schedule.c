@@ -111,9 +111,9 @@ void increaseRPGCounter()
 void changeAlgorithimSchedule( void ){
 	Algorithim = (Algorithim == ROUND_ROBIN ? RPG : ROUND_ROBIN);
 	if( Algorithim == ROUND_ROBIN )
-		puts("Ahora esta corriendo Round Robin\n");
+		puts("Using Round Robin scheduler...\n");
 	else	
-		puts("Ahora esta corriendo RPG\n");
+		puts("Using RPG scheduler...\n");
 }
 
 

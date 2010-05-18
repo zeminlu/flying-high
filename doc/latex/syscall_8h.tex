@@ -1,0 +1,91 @@
+\hypertarget{syscall_8h}{
+\section{inc/syscall.h File Reference}
+\label{syscall_8h}\index{inc/syscall.h@{inc/syscall.h}}
+}
+
+
+Implementation of every system call.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}memModule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}process.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}string.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}kasm.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}schedule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}kernelDepth.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ttys.h\char`\"{}}\par
+Include dependency graph for syscall.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{syscall_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{syscall_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{syscall_8h_a3fd26591847c2db5cc08d1ac4de05c6a}{EFLAGS}~0x00200
+\item 
+\#define \hyperlink{syscall_8h_adfa01f41b915c20146870b4c15bf789a}{STACK\_\-TRACE\_\-LENGTH}~15
+\item 
+\#define \hyperlink{syscall_8h_a85a3cf79d2a8eb3015056b14811f501c}{KILL\_\-EXIT\_\-STATUS}~0
+\item 
+\#define \hyperlink{syscall_8h_a1b7f28c455e4ca2f9b02c8b4b5982d44}{LOCAL\_\-VARIABLES\_\-SPACE}~0x00000018
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of every system call. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{syscall_8h_source}{syscall.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{syscall_8h_a3fd26591847c2db5cc08d1ac4de05c6a}{
+\index{syscall.h@{syscall.h}!EFLAGS@{EFLAGS}}
+\index{EFLAGS@{EFLAGS}!syscall.h@{syscall.h}}
+\subsubsection[{EFLAGS}]{\setlength{\rightskip}{0pt plus 5cm}\#define EFLAGS~0x00200}}
+\label{syscall_8h_a3fd26591847c2db5cc08d1ac4de05c6a}
+
+
+Definition at line 22 of file syscall.h.
+
+\hypertarget{syscall_8h_a85a3cf79d2a8eb3015056b14811f501c}{
+\index{syscall.h@{syscall.h}!KILL\_\-EXIT\_\-STATUS@{KILL\_\-EXIT\_\-STATUS}}
+\index{KILL\_\-EXIT\_\-STATUS@{KILL\_\-EXIT\_\-STATUS}!syscall.h@{syscall.h}}
+\subsubsection[{KILL\_\-EXIT\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KILL\_\-EXIT\_\-STATUS~0}}
+\label{syscall_8h_a85a3cf79d2a8eb3015056b14811f501c}
+
+
+Definition at line 24 of file syscall.h.
+
+\hypertarget{syscall_8h_a1b7f28c455e4ca2f9b02c8b4b5982d44}{
+\index{syscall.h@{syscall.h}!LOCAL\_\-VARIABLES\_\-SPACE@{LOCAL\_\-VARIABLES\_\-SPACE}}
+\index{LOCAL\_\-VARIABLES\_\-SPACE@{LOCAL\_\-VARIABLES\_\-SPACE}!syscall.h@{syscall.h}}
+\subsubsection[{LOCAL\_\-VARIABLES\_\-SPACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOCAL\_\-VARIABLES\_\-SPACE~0x00000018}}
+\label{syscall_8h_a1b7f28c455e4ca2f9b02c8b4b5982d44}
+
+
+Definition at line 25 of file syscall.h.
+
+\hypertarget{syscall_8h_adfa01f41b915c20146870b4c15bf789a}{
+\index{syscall.h@{syscall.h}!STACK\_\-TRACE\_\-LENGTH@{STACK\_\-TRACE\_\-LENGTH}}
+\index{STACK\_\-TRACE\_\-LENGTH@{STACK\_\-TRACE\_\-LENGTH}!syscall.h@{syscall.h}}
+\subsubsection[{STACK\_\-TRACE\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define STACK\_\-TRACE\_\-LENGTH~15}}
+\label{syscall_8h_adfa01f41b915c20146870b4c15bf789a}
+
+
+Definition at line 23 of file syscall.h.
+

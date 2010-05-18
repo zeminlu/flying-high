@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structindexed_buffer" kind="struct" prot="public">
+    <compoundname>indexedBuffer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structindexed_buffer_1a368f7094dc38acca20612bbb392552f4" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/video_driver.c" line="144" bodyfile="/Users/Luciano/Desktop/flying-high/src/video_driver.c" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structindexed_buffer_1a750b5d744c39a06bfb13e6eb010e35d0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/video_driver.c" line="145" bodyfile="/Users/Luciano/Desktop/flying-high/src/video_driver.c" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/src/video_driver.c" line="143" bodyfile="/Users/Luciano/Desktop/flying-high/src/video_driver.c" bodystart="143" bodyend="146"/>
+    <listofallmembers>
+      <member refid="structindexed_buffer_1a368f7094dc38acca20612bbb392552f4" prot="public" virt="non-virtual"><scope>indexedBuffer</scope><name>buffer</name></member>
+      <member refid="structindexed_buffer_1a750b5d744c39a06bfb13e6eb010e35d0" prot="public" virt="non-virtual"><scope>indexedBuffer</scope><name>index</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

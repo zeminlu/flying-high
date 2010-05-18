@@ -1,0 +1,76 @@
+.TH "src/shell.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/shell.c \- 
+.PP
+The shell process module.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'shell.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBinitGlobalDataShell\fP ()"
+.br
+.RI "\fIInitializes the data structures for the shells. \fP"
+.ti -1c
+.RI "int \fBshell\fP (void)"
+.br
+.RI "\fIThe function that runs the shell application. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char \fBbufferA\fP [MAX_LINE]"
+.br
+.ti -1c
+.RI "char \fBbufferB\fP [MAX_LINE]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The shell process module. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBshell.c\fP.
+.SH "Function Documentation"
+.PP 
+.SS "int initGlobalDataShell (void)"
+.PP
+Initializes the data structures for the shells. \fBReturns:\fP
+.RS 4
+0 on success, -1 on error. 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file shell.c.
+.SS "int shell (void)"
+.PP
+The function that runs the shell application. 
+.PP
+Definition at line 497 of file shell.c.
+.SH "Variable Documentation"
+.PP 
+.SS "char \fBbufferA\fP[MAX_LINE]"
+.PP
+Definition at line 12 of file shell.c.
+.SS "char \fBbufferB\fP[MAX_LINE]"
+.PP
+Definition at line 13 of file shell.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

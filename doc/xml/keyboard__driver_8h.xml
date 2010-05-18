@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="keyboard__driver_8h" kind="file">
+    <compoundname>keyboard_driver.h</compoundname>
+    <includes refid="queue_8h" local="yes">queue.h</includes>
+    <includes refid="io_8h" local="yes">io.h</includes>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="ttys_8h" local="yes">ttys.h</includes>
+    <includedby refid="keyboard__driver_8c" local="yes">src/keyboard_driver.c</includedby>
+    <incdepgraph>
+      <node id="2902">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="2897" relation="include">
+        </childnode>
+      </node>
+      <node id="2884">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="2908">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="2906" relation="include">
+        </childnode>
+      </node>
+      <node id="2900">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="2897">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2898" relation="include">
+        </childnode>
+        <childnode refid="2893" relation="include">
+        </childnode>
+        <childnode refid="2899" relation="include">
+        </childnode>
+        <childnode refid="2886" relation="include">
+        </childnode>
+      </node>
+      <node id="2893">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2894" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+      </node>
+      <node id="2892">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2891">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2892" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2881">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2882" relation="include">
+        </childnode>
+        <childnode refid="2883" relation="include">
+        </childnode>
+      </node>
+      <node id="2901">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2895" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+      </node>
+      <node id="2903">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+        <childnode refid="2892" relation="include">
+        </childnode>
+        <childnode refid="2904" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2884" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2894" relation="include">
+        </childnode>
+        <childnode refid="2905" relation="include">
+        </childnode>
+        <childnode refid="2893" relation="include">
+        </childnode>
+        <childnode refid="2907" relation="include">
+        </childnode>
+      </node>
+      <node id="2898">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2904">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="2903" relation="include">
+        </childnode>
+        <childnode refid="2885" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2887">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="2885" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2889">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="2886" relation="include">
+        </childnode>
+        <childnode refid="2880" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2893" relation="include">
+        </childnode>
+        <childnode refid="2897" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2901" relation="include">
+        </childnode>
+        <childnode refid="2902" relation="include">
+        </childnode>
+        <childnode refid="2903" relation="include">
+        </childnode>
+      </node>
+      <node id="2885">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="2899">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2898" relation="include">
+        </childnode>
+      </node>
+      <node id="2878">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard_driver.h"/>
+        <childnode refid="2879" relation="include">
+        </childnode>
+        <childnode refid="2885" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2886" relation="include">
+        </childnode>
+      </node>
+      <node id="2895">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+      </node>
+      <node id="2883">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2884" relation="include">
+        </childnode>
+      </node>
+      <node id="2886">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="2879" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2880" relation="include">
+        </childnode>
+        <childnode refid="2889" relation="include">
+        </childnode>
+        <childnode refid="2897" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2892" relation="include">
+        </childnode>
+        <childnode refid="2901" relation="include">
+        </childnode>
+      </node>
+      <node id="2907">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="2887" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2908" relation="include">
+        </childnode>
+        <childnode refid="2906" relation="include">
+        </childnode>
+        <childnode refid="2902" relation="include">
+        </childnode>
+        <childnode refid="2886" relation="include">
+        </childnode>
+      </node>
+      <node id="2888">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2880">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2896">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="2897" relation="include">
+        </childnode>
+        <childnode refid="2900" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2889" relation="include">
+        </childnode>
+      </node>
+      <node id="2879">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="2880" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2906">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2890">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2894">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2895" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2882">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="2905">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="2905" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2880" relation="include">
+        </childnode>
+        <childnode refid="2889" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2897" relation="include">
+        </childnode>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+        <childnode refid="2898" relation="include">
+        </childnode>
+        <childnode refid="2886" relation="include">
+        </childnode>
+        <childnode refid="2892" relation="include">
+        </childnode>
+        <childnode refid="2895" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2893" relation="include">
+        </childnode>
+        <childnode refid="2901" relation="include">
+        </childnode>
+        <childnode refid="2903" relation="include">
+        </childnode>
+        <childnode refid="2885" relation="include">
+        </childnode>
+        <childnode refid="2884" relation="include">
+        </childnode>
+        <childnode refid="2894" relation="include">
+        </childnode>
+        <childnode refid="2906" relation="include">
+        </childnode>
+        <childnode refid="2902" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2909">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard_driver.h"/>
+        <childnode refid="2910" relation="include">
+        </childnode>
+      </node>
+      <node id="2910">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="keyboard__driver_8h_1a68ddb25c25a5436ebaaa03ce6ad735a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void keyboard_driver</definition>
+        <argsstring>(void)</argsstring>
+        <name>keyboard_driver</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function is the manager of interpretate what key was pressed or released. It controls if the own keyboard buffer is full. The keys that are implemented are:<itemizedlist>
+<listitem><para>Letters ( upper and lower case )</para></listitem><listitem><para>Numbers ( If you press SHIFT it will interpretate the symbol associated with this key )</para></listitem><listitem><para>SHIFT buttom</para></listitem><listitem><para>CAPS-LOCK. </para></listitem></itemizedlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="36" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="188" bodyend="246"/>
+        <references refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" compoundref="queue_8c" startline="21" endline="41">charEnque</references>
+        <references refid="keyboard__driver_8c_1a1ef7b9796fcb1fed4d40173fba9f52fc" compoundref="keyboard__driver_8c" startline="46">CONTROL_PORT</references>
+        <references refid="keyboard__driver_8c_1ab0c169c959c5be67954c866776329563" compoundref="keyboard__driver_8c" startline="45">DATA_PORT</references>
+        <references refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" compoundref="keyboard__driver_8c" startline="54">FLAG_CAPS</references>
+        <references refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" compoundref="keyboard__driver_8c" startline="52">FLAG_CTRL</references>
+        <references refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" compoundref="keyboard__driver_8c" startline="51">FLAG_SHIFT</references>
+        <references refid="io_8h_1ac17a6cfbeef702c55063c3350220c126">inportb</references>
+        <references refid="keyboard__driver_8c_1aea1fb123893c8dcc87ec0183b79d678b" compoundref="keyboard__driver_8c" startline="42">KB_KEY_RELEASE</references>
+        <references refid="keyboard__driver_8c_1a329d7321668d223f8cf445b723eaeadb" compoundref="keyboard__driver_8c" startline="43">KB_OUTPUT_FULL</references>
+        <references refid="ttys_8h_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</references>
+        <references refid="keyboard__driver_8h_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1ae8a256c73e7395a726e5609efef38ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetKeyState</definition>
+        <argsstring>(Keycode scanCode)</argsstring>
+        <name>SetKeyState</name>
+        <param>
+          <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref></type>
+          <declname>scanCode</declname>
+        </param>
+        <briefdescription>
+<para>This function detect if a control key was pressed and set his internal flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="46" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="248" bodyend="268"/>
+        <references refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" compoundref="keyboard__driver_8c" startline="54">FLAG_CAPS</references>
+        <references refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" compoundref="keyboard__driver_8c" startline="52">FLAG_CTRL</references>
+        <references refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" compoundref="keyboard__driver_8c" startline="51">FLAG_SHIFT</references>
+        <references refid="keyboard__driver_8c_1ae5a9cbd478a01961788027ab9685c294" compoundref="keyboard__driver_8c" startline="40">KEY_CAPS</references>
+        <references refid="keyboard__driver_8c_1a896de6986e3a1a2290166fba2f50e6af" compoundref="keyboard__driver_8c" startline="38">KEY_CTRL_P</references>
+        <references refid="keyboard__driver_8c_1a93f9269ddd48232917a079e8d0392db3" compoundref="keyboard__driver_8c" startline="39">KEY_CTRL_R</references>
+        <references refid="keyboard__driver_8c_1a7532780fdf03fa94b668c995e90da06b" compoundref="keyboard__driver_8c" startline="33">KEY_LSHIFT_P</references>
+        <references refid="keyboard__driver_8c_1a13720acdbecbb70c6168c3198b83bb69" compoundref="keyboard__driver_8c" startline="35">KEY_LSHIFT_R</references>
+        <references refid="keyboard__driver_8c_1a1c62bc798a230bd1a1558429c9bc26b6" compoundref="keyboard__driver_8c" startline="32">KEY_RSHIFT_P</references>
+        <references refid="keyboard__driver_8c_1aae9c6475165c3f23596fa25b9332a583" compoundref="keyboard__driver_8c" startline="34">KEY_RSHIFT_R</references>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1a1e982cb449d6c79c7e88c3f3c83fb0a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shiftIsPressed</definition>
+        <argsstring>(void)</argsstring>
+        <name>shiftIsPressed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return TRUE if the shift key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="55" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="271" bodyend="274"/>
+        <references refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" compoundref="keyboard__driver_8c" startline="51">FLAG_SHIFT</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1a5cd4040e5ce2d227365162f30a97bde6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int capsIsPressed</definition>
+        <argsstring>(void)</argsstring>
+        <name>capsIsPressed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return TRUE if caps-lock key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="65" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="276" bodyend="279"/>
+        <references refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" compoundref="keyboard__driver_8c" startline="54">FLAG_CAPS</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1a046fa8980fed8bb1b411239365e4f273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ctrlIsPressed</definition>
+        <argsstring>(void)</argsstring>
+        <name>ctrlIsPressed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return TRUE if control key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="74" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="281" bodyend="284"/>
+        <references refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" compoundref="keyboard__driver_8c" startline="52">FLAG_CTRL</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1a0f7d83a11b51b8609c96bd59f4a2e7f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getRepetition</definition>
+        <argsstring>(void)</argsstring>
+        <name>getRepetition</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the actual repetition interval. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The actual repetition interval. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="85" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="286" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1a192c6a0f85ccf24da7cbd741231ac621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setRepetition</definition>
+        <argsstring>(int newRep)</argsstring>
+        <name>setRepetition</name>
+        <param>
+          <type>int</type>
+          <declname>newRep</declname>
+        </param>
+        <briefdescription>
+<para>Sets the repetition interval. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newRep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new repetition value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="96" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="291" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1a7d6406fbcd82ed4c982d8b181573a89b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int checkKeyboardActivity</definition>
+        <argsstring>(void)</argsstring>
+        <name>checkKeyboardActivity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return a 1 if the keyboard routine was called, so the keyboard had interrupted. This funtcion is used by the screensaver, to turn off. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="106" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="296" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8h_1ad4bd2d43f0ac21af96967762a3412da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setKeyboardActivity</definition>
+        <argsstring>(void)</argsstring>
+        <name>setKeyboardActivity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set the keyboard activity flag to 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h" line="114" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="306" bodyend="309"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The keyboard driver module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_KEYBOARD_DRIVER_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_KEYBOARD_DRIVER_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="queue_8h" kindref="compound" tooltip="Keyboard queue module.">queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="io_8h" kindref="compound" tooltip="Declaration of functions and constants related with direct access to hardware.">io.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ttys_8h" kindref="compound" tooltip="The tty header file.">ttys.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Functions<sp/>Section</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a68ddb25c25a5436ebaaa03ce6ad735a0" kindref="member" tooltip="This function is the manager of interpretate what key was pressed or released. It...">keyboard_driver</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1ae8a256c73e7395a726e5609efef38ceb" kindref="member" tooltip="This function detect if a control key was pressed and set his internal flag.">SetKeyState</ref>(<sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/><sp/>scanCode<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a1e982cb449d6c79c7e88c3f3c83fb0a9" kindref="member" tooltip="Return TRUE if the shift key was pressed.">shiftIsPressed</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a5cd4040e5ce2d227365162f30a97bde6" kindref="member" tooltip="Return TRUE if caps-lock key was pressed.">capsIsPressed</ref><sp/>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a046fa8980fed8bb1b411239365e4f273" kindref="member" tooltip="Return TRUE if control key was pressed.">ctrlIsPressed</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a0f7d83a11b51b8609c96bd59f4a2e7f5" kindref="member" tooltip="Gets the actual repetition interval.">getRepetition</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a192c6a0f85ccf24da7cbd741231ac621" kindref="member" tooltip="Sets the repetition interval.">setRepetition</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newRep);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a7d6406fbcd82ed4c982d8b181573a89b" kindref="member" tooltip="Return a 1 if the keyboard routine was called, so the keyboard had interrupted. This...">checkKeyboardActivity</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1ad4bd2d43f0ac21af96967762a3412da2" kindref="member" tooltip="Set the keyboard activity flag to 0.">setKeyboardActivity</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/keyboard_driver.h"/>
+  </compounddef>
+</doxygen>

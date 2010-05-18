@@ -1,0 +1,31 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$mem_module_8h.html" title="The memory management / paging module." alt="" coords="377,701,495,731"/>
+<area shape="rect" id="node23" href="$sys_malloc_8h.html" title="Generic malloc module." alt="" coords="424,624,523,653"/>
+<area shape="rect" id="node27" href="$process_8h.html" title="All the process functions that invoke syscalls." alt="" coords="649,83,735,112"/>
+<area shape="rect" id="node5" href="$string_8h.html" title="Declaration of all functions that deals with strings and buffers." alt="" coords="1163,856,1235,885"/>
+<area shape="rect" id="node7" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="1408,933,1480,963"/>
+<area shape="rect" id="node15" href="$stdio_8h.html" title="Definitions for all standard input and output and declaration of all functions to..." alt="" coords="901,779,968,808"/>
+<area shape="rect" id="node9" href="$defs_8h.html" title="OS inner defines." alt="" coords="1459,1011,1520,1040"/>
+<area shape="rect" id="node11" href="$config_8h.html" title="OS configuration defines." alt="" coords="1360,1011,1435,1040"/>
+<area shape="rect" id="node13" href="$colors_8h.html" title="Video Color defines." alt="" coords="1361,1088,1433,1117"/>
+<area shape="rect" id="node18" href="$unistd_8h.html" title="Definitions for all UNIX Standard system calls functions." alt="" coords="897,856,972,885"/>
+<area shape="rect" id="node29" href="$syscall_8h.html" title="Implementation of every system call." alt="" coords="653,160,731,189"/>
+<area shape="rect" id="node62" href="$sys_process_8h.html" title="OS system utilities." alt="" coords="1088,315,1197,344"/>
+<area shape="rect" id="node140" href="$int80_8h.html" title="int 80 generic calls." alt="" coords="375,160,441,189"/>
+<area shape="rect" id="node35" href="$kasm_8h.html" title="Kernel utilities." alt="" coords="245,547,315,576"/>
+<area shape="rect" id="node38" href="$schedule_8h.html" title="The OS scheduler module." alt="" coords="1659,547,1752,576"/>
+<area shape="rect" id="node47" href="$kernel_depth_8h.html" title="Kernel syscalls depth utilities." alt="" coords="195,469,312,499"/>
+<area shape="rect" id="node51" href="$ttys_8h.html" title="The tty header file." alt="" coords="1112,237,1173,267"/>
+<area shape="rect" id="node42" href="$video__driver_8h.html" title="Defines the basic function to manage the video screen, cursor &amp; mouse pointer..." alt="" coords="1648,624,1763,653"/>
+<area shape="rect" id="node44" href="$io_8h.html" title="Declaration of functions and constants related with direct access to hardware." alt="" coords="1739,701,1784,731"/>
+<area shape="rect" id="node53" href="$queue_8h.html" title="Keyboard queue module." alt="" coords="1408,469,1483,499"/>
+<area shape="rect" id="node55" href="$keyboard__buffer_8h.html" title="This is the internal keyboard buffer." alt="" coords="1341,547,1483,576"/>
+<area shape="rect" id="node71" href="$k_malloc_8h.html" title="The kernel malloc module." alt="" coords="389,547,472,576"/>
+<area shape="rect" id="node77" href="$rand_8h.html" title="Random number generation module." alt="" coords="1053,547,1115,576"/>
+<area shape="rect" id="node80" href="$shell_8h.html" title="The shell process module." alt="" coords="2343,392,2407,421"/>
+<area shape="rect" id="node85" href="$system_8h.html" title="System reboot module." alt="" coords="2475,624,2560,653"/>
+<area shape="rect" id="node95" href="$bin_8h.html" title="All the OS processes." alt="" coords="792,469,845,499"/>
+<area shape="rect" id="node123" href="$bttlship_8h.html" title="The header file of the battleship game." alt="" coords="2000,469,2085,499"/>
+<area shape="rect" id="node117" href="$semaphore_8h.html" title="The OS semaphore module." alt="" coords="2120,624,2229,653"/>
+<area shape="rect" id="node130" href="$sh_memory_8h.html" title="The shared memory IPC module." alt="" coords="2131,547,2232,576"/>
+</map>
