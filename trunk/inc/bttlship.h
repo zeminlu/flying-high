@@ -58,34 +58,25 @@ typedef struct S_TABLE {
     char    flg[N_X][N_Y];  /* Flags */
 }S_TABLE;
 
-extern int shmid;           /* Shared Memory IPC ID */
-extern int semid;           /* Table locking semaphore */
-extern char *shmp;          /* Pointer to shared memory */
-extern int us;              /* 0=starter / 1=challenger */
-extern int them;            /* 1=challenger / 0=starter */
-extern int flg_game_over;   /* != 0 => game over */
-
 /**
- * \fn void cleanup(void)
+ * \fn void cleanup(key_t shmid, key_t semid)
  *
  * 		\brief Destroys the used shared memory and semaphores
  *
  */
-
-extern void cleanup(void);
+extern void cleanup(key_t shmid, key_t semid);
 
 /**
- * \fn void attachTable(void);
+ * \fn void attachTable(S_TABLE **table, key_t shmid, char **shmp);
  *
  * 		\brief It attaches itself to the already
  *				created memory.
  *
  */
-
-extern void attachTable(S_TABLE **table);
+extern void attachTable(S_TABLE **table, key_t shmid, char **shmp);
 
 /**
- * \fn void lockTable(int semx,int block)
+ * \fn void lockTable(int semx,int block, S_TABLE **tableS))
  *
  * 		\brief It decides if it has to lock the table
  *				or wait for the opponent. Peform semaphore wait/notifies:
@@ -100,22 +91,20 @@ extern void attachTable(S_TABLE **table);
  * 		
  *
  */
-
 extern void lockTable(int semx,int block, S_TABLE **tableS);
 
 /**
- * \fn void recount(void)
+ * \fn void recount(S_TABLE **table, int *flg_game_over)
  *
  * 		\brief It counts the amount of bombs that the player has left
  *
  * 		
  *
  */
-
-extern void recount(S_TABLE **table);
+extern void recount(S_TABLE **table, int *flg_game_over);
 
 /**
- * \fn void bomb(int x,int y)
+ * \fn void bomb(int x, int y, S_TABLE **tableS))
  *
  * 		\brief It puts the bomb on a specific position of the table
  *
@@ -124,11 +113,10 @@ extern void recount(S_TABLE **table);
  * 		
  *
  */
-
-extern void bomb(int x,int y, S_TABLE **table);
+extern void bomb(int x, int y, S_TABLE **table);
 
 /**
- * \fn int getInput(int *px,int *py)
+ * \fn int getInput(int *px,int *py, S_TABLE **tableS))
  *
  * 		\brief It obtains the the row and the column of the table
  *				from STDIN
@@ -138,11 +126,10 @@ extern void bomb(int x,int y, S_TABLE **table);
  * 		
  *
  */
-
 extern int getInput(int *px,int *py, S_TABLE **table);
 
 /**
- * \fn int draw_hz(int sx,int sy,int z,int who)
+ * \fn int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS))
  *
  * 		\brief It draws the horizontal ship
  *
@@ -152,11 +139,10 @@ extern int getInput(int *px,int *py, S_TABLE **table);
  *		\param who
  *
  */
-
 extern int draw_hz(int sx,int sy,int z,int who, S_TABLE **table);
 
 /**
- * \fn int draw_vt(int sx,int sy,int z,int who)
+ * \fn int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS))
  *
  * 		\brief It draws the horizontal ship
  *
@@ -166,15 +152,13 @@ extern int draw_hz(int sx,int sy,int z,int who, S_TABLE **table);
  *		\param who
  *
  */
-
 extern int draw_vt(int sx,int sy,int z,int who, S_TABLE **table);
 
 /**
- * \fn void genBattle(void)
+ * \fn void genBattle(S_TABLE **tableS))
  *
  * 		\brief It generates the table
  */
-
 extern void genBattle(S_TABLE **table);
 
 /**
@@ -183,16 +167,14 @@ extern void genBattle(S_TABLE **table);
  * 		\brief It prints each row of the table
  *
  */
-
 extern void showRow(void);
 
 /**
- * \fn void showBattle(void)
+ * \fn void showBattle(S_TABLE **table, int us, int them, int *flg_game_over)
  *
  * 		\brief It prints the table of the battlehsip
  */
-
-extern void showBattle(S_TABLE **table, int us, int them);
+extern void showBattle(S_TABLE **table, int us, int them, int *flg_game_over);
 
 /**
  * \fn int battleship()
@@ -201,7 +183,6 @@ extern void showBattle(S_TABLE **table, int us, int them);
  *				the whole table and ships.
  *
  */
-
 int battleship();
 
 #endif

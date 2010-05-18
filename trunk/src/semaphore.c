@@ -31,10 +31,13 @@ static int semIsEmpty(semQueue_t *queue){
 }
 
 static int semEnque(semQueue_t *queue){
+	pid_t pid;
+	
+	pid = getpid();
 	if (queue->pidsQty == MAX_PROCESS){
 		return -1;
 	}
-	queue->pids[(queue->actPos + queue->pidsQty) % MAX_PROCESS] = getpid();
+	queue->pids[(queue->actPos + queue->pidsQty) % MAX_PROCESS] = pid;
 	
 	return ++queue->pidsQty;
 }
@@ -90,7 +93,9 @@ void sem_signal( key_t sem){
 
 key_t _sys_sem_get(int mode){
 	int i;
+	pid_t pid;
 	
+	pid = getpid();
 	if (mode != WAIT && mode != BLOCK)
 		return -1;
 		
@@ -106,7 +111,7 @@ key_t _sys_sem_get(int mode){
 	
 	sems[i].semval = mode;
 	sems[i].state = USED;
-	sems[i].sempid = getpid();
+	sems[i].sempid = pid;
 		
 	return sems[i].semid;
 }
