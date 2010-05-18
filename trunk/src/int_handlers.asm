@@ -10,10 +10,7 @@ section .text
 %include "sys.inc"
 
 forceMultitasker:
-;	push 	ebp
-;	mov		ebp, esp
 	int		08h
-;	leave
 	ret
 	
 ;------------------------------------------------------------------------------;
