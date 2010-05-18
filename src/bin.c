@@ -222,7 +222,7 @@ void welcome(){
 	curTime = upTime();
 	clearTTYScreen();
 	
-	msg = "\n\tWelcome, you're Flying-High at 0.8 meters!!\n\n";
+	msg = "\n\tWelcome, you're Flying-High at 1.0 meters!!\n\n";
 	
 	puts(msg);
 
@@ -252,7 +252,7 @@ void welcome(){
 	
 	puts("Done.\n");
 	
-	puts("\n\tReady.\n\n");
+	puts("\n\tReady, have fun!!\n\n");
 	
 	return;
 }
@@ -279,7 +279,7 @@ void goodbye(){
 	
 	puts("...Done.\n\n");
 	
-	puts("Rebooting now...\n");
+	puts("Have a nice day!...Rebooting now...\n");
 	
 	++j;
 	

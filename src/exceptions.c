@@ -135,16 +135,11 @@ static void panic(char *msg, registers_t regs) {
 }
 
 void handleException(registers_t regs) {
-	/*
-	 *	TODO check wich one was the failling
-	 *	process and informe it, kill it and return
-	 *	cp control to the scheduler
-	 *	Probably this will be put in a separeted 
-	 *	function.
-	 */
+	pid_t pid;
 	puts((const char *)"--------------------------------------------------------------------------------");
 	
-	kill(getpid());
+	pid = getpid();
+	kill(pid);
 	signalTty(getFocusedTTY());
 	refreshTTY();
 	while(1){

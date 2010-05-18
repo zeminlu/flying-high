@@ -10,17 +10,17 @@
 #include "bttlship.h"
 
 void
-attachTable( S_TABLE **table) {
+attachTable( S_TABLE **table, key_t shmid, char **shmp) {
 
     /*
      * Attach the shared memory :
      */
 	key_t a;
-    shmp = shmat(shmid, &a);
-    if ( shmp == (char *)(-1) ) {
+    *shmp = shmat(shmid, &a);
+    if ( *shmp == (char *)(-1) ) {
         puts("Error al crear la shm");
 		return;
     }
 
-    (*table) = (S_TABLE *)shmp;
+    (*table) = *((S_TABLE **)shmp);
 }

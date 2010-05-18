@@ -13,7 +13,7 @@
  * Cleanup procedure called by atexit processing:
  */
 void
-cleanup(void) {
+cleanup(key_t shmid, key_t semid) {
 
     if ( shmid != -1 )
         if ( shmdt(shmid) == -1 )

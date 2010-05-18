@@ -359,7 +359,7 @@ static int parseCharTTY( int c, tty_t tty, int inStdIn)
 
 	if ('\a' <= c && c <= '\r' && c != '\n')
 	{
-		if (!inStdIn || (inStdIn && (c != '\t' || kbOffset[tty] < MAX_LINE - VIDEO_TAB_STOP - 1)) ){
+		if (!inStdIn || (inStdIn && c != '\t' && (c != '\t' || kbOffset[tty] < MAX_LINE - VIDEO_TAB_STOP - 1)) ){
 		
 			specialCharPrint[c - '\a'](WRITE_ON_TTY, tty);
 		

@@ -10,7 +10,7 @@
 #include "bttlship.h"
 
 void
-recount(S_TABLE **tableS) {
+recount(S_TABLE **tableS, int *flg_game_over) {
     int b, f, x, y, px;
 	S_TABLE *table = *tableS;
 	
@@ -28,7 +28,7 @@ recount(S_TABLE **tableS) {
     }
     if ( !table->player[0].bsites
     ||   !table->player[1].bsites )
-        flg_game_over = 1;
+        *flg_game_over = 1;
 }
 
 void
@@ -46,7 +46,10 @@ int
 getInput(int *px,int *py, S_TABLE **table) {
     char cr = 0, cc = 0;
     char cx, cy, mx, my;
-
+	pid_t pid;
+	
+	pid = getpid();
+	
     mx = 'A' + N_X - 1;
     my = 'A' + N_Y - 1;
 
@@ -55,7 +58,7 @@ getInput(int *px,int *py, S_TABLE **table) {
 	while ( cr < 'A' || cr > mx) {
 		cr = getchar();
 		if(cr == EOF){
-			waitTty(getTty(getpid()));
+			waitTty(getTty(pid));
 			continue;
 		}
 	}
@@ -64,7 +67,7 @@ getInput(int *px,int *py, S_TABLE **table) {
 	while ( cc < 'A' || cc > my) {
 		cc = getchar();
 		if(cc == EOF){
-			waitTty(getTty(getpid()));
+			waitTty(getTty(pid));
 			continue;
 		}
 	}
@@ -204,7 +207,7 @@ showRow(void) {
 }
 
 void
-showBattle( S_TABLE **tableS, int us, int them ) {
+showBattle( S_TABLE **tableS, int us, int them, int *flg_game_over) {
     int x, y;
     char f = !us
         ? (FLG_SEEN1|FLG_P1)
@@ -234,7 +237,7 @@ showBattle( S_TABLE **tableS, int us, int them ) {
     }
 
     showRow();
-    recount(tableS);
+    recount(tableS, flg_game_over);
 	puts("ENEMY HAS ");
 	puti(table->player[them].bsites);
 	puts(" BOMB SITES LEFT");

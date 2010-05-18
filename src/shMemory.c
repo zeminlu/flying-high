@@ -123,14 +123,17 @@ int _sys_shmget(key_t key, int size){
 
 char * _sys_shmat(int shmid, key_t *semid){
 	int i;
+	pid_t pid;
 	
+	pid = getpid();
 	if (shmid >= MAX_SHMEMS || shMemories[shmid].state != BUSY || shMemories[shmid].key == -1 || shMemories[shmid].appnProcessesAmm >= MAX_SHMAPPN){
 		return NULL;
 	}
+	
 	++shMemories[shmid].appnProcessesAmm;
 	for (i = 0 ; i < MAX_SHMAPPN ; ++i){
 		if (shMemories[shmid].appnProcessesPids[i] == -1){
-			shMemories[shmid].appnProcessesPids[i] = getpid();
+			shMemories[shmid].appnProcessesPids[i] = pid;
 			break;
 		}
 	}
@@ -145,13 +148,15 @@ char * _sys_shmat(int shmid, key_t *semid){
 
 int _sys_shm_detach(int shmid){
 	int i;
+	pid_t pid;
 	
+	pid = getpid();
 	if (shmid < 0 || shmid >= MAX_SHMEMS){
 		return -1;
 	}
 	
 	for (i = 0 ; i < MAX_SHMAPPN ; ++i){
-		if (shMemories[shmid].appnProcessesPids[i] == getpid()){
+		if (shMemories[shmid].appnProcessesPids[i] == pid){
 			shMemories[shmid].appnProcessesPids[i] = -1;
 			--shMemories[shmid].appnProcessesAmm;
 			break;

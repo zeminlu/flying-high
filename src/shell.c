@@ -209,7 +209,7 @@ static void printPhrasing(char * value)
 
 static void mkdir(char *value)
 {
-	puts("jejejeje are you crazy!!!\n");
+	puts("jejejeje...are you crazy!!!???\n");
 }
 
 static void shutdown(char *value)
@@ -297,21 +297,22 @@ static void set ( char * args )
 }
 
 static void startTop(char *args){
-	pid_t pid;
+	pid_t pid, ownPid;
 	int i;
 	int status;
 	process_t *processTable;
 	
+	ownPid = getpid();
 	processTable = getProcessTable();
 	
-	setProcessAtomicity(getpid(), ATOMIC);
+	setProcessAtomicity(ownPid, ATOMIC);
 	
 	for (i = 0 ; i < MAX_PROCESS ; ++i){
 		if (!strcmp(processTable[i].name, "top") && processTable[i].pid > 0){
 			puts("El proceso top ya se encuentra corriendo en la tty ");
 			puti(processTable[i].tty + 1);
 			putchar('\n');
-			setProcessAtomicity(getpid(), UNATOMIC);
+			setProcessAtomicity(ownPid, UNATOMIC);
 			return;
 		}
 	}
@@ -319,7 +320,7 @@ static void startTop(char *args){
 	if ((pid = createProcess("top", (void(*)(void *))top, NULL, FOREGROUND)) == -1 ) {
 		puts("ERROR: Top could not be created.\n");
 	}
-	setProcessAtomicity(getpid(), UNATOMIC);
+	setProcessAtomicity(ownPid, UNATOMIC);
 	waitpid(pid, &status);
 	clearTTYScreen();
 	
@@ -340,66 +341,70 @@ static void startKill(char *args){
 }
 
 static void startBattleShip(char *args){
-	int pid, status;
+	int status;
+	pid_t pid, ownPid;
 	
-	setProcessAtomicity(getpid(), ATOMIC);
+	ownPid = getpid();
+	setProcessAtomicity(ownPid, ATOMIC);
 	
 	if ((pid = createProcess("battleship", (void(*)(void *))battleship, NULL, FOREGROUND)) == -1 ) {
 		puts("ERROR: Battleship could not be created.\n");
 	}
-	setPriority(pid, 0);
-	setProcessAtomicity(getpid(), UNATOMIC);
+	setPriority(pid, 4);
+	setProcessAtomicity(ownPid, UNATOMIC);
 	waitpid(pid, &status);
 	//clearTTYScreen();
 	
 }
 
 static void startPrintA(char *args){
-	pid_t pid;
+	pid_t pid, ownPid;
 	int status;
 	int mode;
 	
-	setProcessAtomicity(getpid(), ATOMIC);
+	ownPid = getpid();
+	setProcessAtomicity(ownPid, ATOMIC);
 	mode = *args =='&' ? BACKGROUND:FOREGROUND;
 	
 	if ((pid = createProcess("printA", (void(*)(void *))printA, NULL, mode)) == -1 ) {
 		puts("ERROR: printA could not be created.\n");
 	}
 	setPriority(pid, 4);
+	setProcessAtomicity(ownPid, UNATOMIC);
 	if(mode == FOREGROUND){
 		waitpid(pid, &status);
 	}
-	setProcessAtomicity(getpid(), UNATOMIC);
 	return;
 }
 
 static void startPrintB(char *args){
-	pid_t pid;
+	pid_t pid, ownPid;
 	int status;
 	int mode;
 	
-	setProcessAtomicity(getpid(), ATOMIC);
+	ownPid = getpid();
+	setProcessAtomicity(ownPid, ATOMIC);
 	mode = *args =='&' ? BACKGROUND:FOREGROUND;
 	
 	if ((pid = createProcess("printB", (void(*)(void *))printB, NULL, mode)) == -1 ) {
 		puts("ERROR: printB could not be created.\n");
 	}
 	setPriority(pid, 2);
+	setProcessAtomicity(ownPid, UNATOMIC);
 	if(mode == FOREGROUND){
 		waitpid(pid, &status);
 	}
-	setProcessAtomicity(getpid(), UNATOMIC);
 	return;
 }
 
 static void startNothing(char *args){
-	pid_t pid;
+	pid_t pid, ownPid;
 	int status;
 	int mode;
 	
 	mode = (*args == '&') ? BACKGROUND : FOREGROUND;
-	
-	setProcessAtomicity(getpid(), ATOMIC);
+	ownPid = getpid();
+	setProcessAtomicity(ownPid, ATOMIC);
 	
 	if ((pid = createProcess("nothing", (void(*)(void *))nothing, NULL, mode)) == -1 ) {
 		puts("ERROR: nothing could not be created.\n");
@@ -407,7 +412,7 @@ static void startNothing(char *args){
 	if (mode == FOREGROUND){
 		setTTYMode(pid, TTY_CANONICAL);
 	}
-	setProcessAtomicity(getpid(), UNATOMIC);
+	setProcessAtomicity(ownPid, UNATOMIC);
 	
 	
 	if(mode == FOREGROUND){
@@ -429,9 +434,12 @@ static void startPageFault(char *args){
 }
 
 static void changeSchedule( char * args ){
-	setProcessAtomicity(getpid(), ATOMIC);
+	pid_t pid;
+	
+	pid = getpid();
+	setProcessAtomicity(pid, ATOMIC);
 	changeAlgorithimSchedule();
-	setProcessAtomicity(getpid(), UNATOMIC);
+	setProcessAtomicity(pid, UNATOMIC);
 	
 }
 /* END SHELL COMMANDS */
@@ -491,10 +499,12 @@ int shell ( void )
 	int c;
 	unsigned char uc;
 	int indexDT, status;
+	pid_t pid;
 	
-	setProcessAtomicity(getpid(), ATOMIC);
+	pid = getpid();
+	setProcessAtomicity(pid, ATOMIC);
 	status = initDataShell();
-	setProcessAtomicity(getpid(), UNATOMIC);
+	setProcessAtomicity(pid, UNATOMIC);
 
 	if(status == FALSE){
 		return -1;
@@ -512,7 +522,7 @@ int shell ( void )
 		c = getchar();
 		if ( c == EOF ){
 			asm volatile("hlt");
-			waitTty(getTty(getpid()));
+			waitTty(getTty(pid));
 			continue;
 		}
 		uc = c;

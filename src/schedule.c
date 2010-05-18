@@ -37,23 +37,19 @@ static int prevPro = 0;
 
 static process_t * roundRobinSchedule()
 {
-	static int lastTask = 0;
+	static int lastTask;
 	int i;
 	
-	i = lastTask + 1;
+	lastTask = (runningProcess == NULL) ? -1 : runningProcess->pid;
+	i = (lastTask + 1 == MAX_PROCESS ? 1 : lastTask + 1);
 	while(i != lastTask)
 	{
 		if( processTable[i].pid != -1 && processTable[i].state == READY )
 		{		
-			lastTask = i;
 			return &processTable[i];
 		}
 		
-		++i;
-		
-		if( i == MAX_PROCESS - 1 ){
-			return runningProcess;
-		}
+		i = (i + 1 == MAX_PROCESS ? 0 : i + 1);
 	}
 	return initProcess;
 }
