@@ -1,7 +1,9 @@
 /**
  *	\file stdio.c
  *
- *		\brief Brief.
+ *		\brief Definitions for all standard input and output and
+ * 		declaration of all functions to send/recive data to/from
+ *		standar input/output.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

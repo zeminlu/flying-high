@@ -1,7 +1,7 @@
 /**
  *	\file memModule.c
  *
- *		\brief Brief.
+ *		\brief The memory management / paging module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

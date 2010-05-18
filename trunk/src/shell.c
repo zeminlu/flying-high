@@ -1,7 +1,7 @@
 /**
  *	\file shell.c
  *
- *		\brief Brief.
+ *		\brief The shell process module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

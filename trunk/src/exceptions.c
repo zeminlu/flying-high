@@ -1,8 +1,7 @@
 /*
  *	\file exceptions.c
  *		
- *		\brief
- * 		The implementation of all exception handlers.
+ *		\brief The implementation of all exception handlers.
  *
  *		Intel's 80386 Exceptions Table
  *		------------------------------

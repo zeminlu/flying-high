@@ -1,7 +1,7 @@
 /**
  *	\file system.c
  *
- *		\brief Brief.
+ *		\brief System reboot module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

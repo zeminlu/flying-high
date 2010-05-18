@@ -1,7 +1,7 @@
 /**
  *	\file bin.c
  *
- *		\brief Brief.
+ *		\brief All the OS processes.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

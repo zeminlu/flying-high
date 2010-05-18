@@ -1,7 +1,7 @@
 /**
  *	\file pQueueP.c
  *
- *		\brief Brief.
+ *		\brief The priority queue module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

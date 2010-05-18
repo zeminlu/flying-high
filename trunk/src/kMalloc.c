@@ -1,7 +1,7 @@
 /**
  *	\file kMalloc.c
  *
- *		\brief Brief.
+ *		\brief The kernel malloc module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
