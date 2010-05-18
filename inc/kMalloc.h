@@ -31,11 +31,11 @@ void kFree(void *ap);
  * \fn void *kMalloc(size_t nbytes)
  *
  * 		\brief 	This funtion calls sysMalloc that gives the request size of memory. 
- *				This is given from the kernle memory. On error return null.
+ *				This is given from the kernel memory. On error returns null.
  *
- * 		\param	nbytes The memory size that would be returned, this is allways kernel memory,.
+ * 		\param	nbytes The memory size that would be returned, this is allways kernel memory.
  * 		
- * 		\return	Return the memory logic position , with continious memory to use.
+ * 		\return	Returns the logic memory position, with continious memory to use.
  *
  * 		\sa kFree() kRealloc()
  *
@@ -45,13 +45,13 @@ void *kMalloc(size_t nbytes);
 /**
  * \fn void *kRealloc(void *ap, size_t size)
  *
- * 		\brief	Calls sysRealloc, that change the size of the original. It returns null if 
- *				there is not enougth memory.
+ * 		\brief	Calls sysRealloc, that changes the size of the original. It returns null if 
+ *				there is not enough memory.
  *
  * 		\param ap The logic memory position that wold be extended.
  * 		\param size	The new size that would be used to increase the ap segment memory.
  * 		
- * 		\return	the new memory address that have a continious segment of kernel memory.
+ * 		\return	The new memory address that has a continuous segment of kernel memory.
  *
  * 		\sa kFree() kMalloc()
  *
