@@ -1,7 +1,7 @@
 /**
  *	\file rand.h
  *
- *		\brief Brief.
+ *		\brief Random number generation module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -16,8 +16,8 @@
 /**
  * \fn unsigned int timeRand()
  *
- * 		\brief This function load the amount of ticks. It calls
- *				to the a system call.
+ * 		\brief This function loads the amount of ticks. It uses
+ *				a system call.
  *
  * 		\return The amount of tick
  *
@@ -34,7 +34,7 @@ unsigned int timeRand();
 /**
  * \fn int rand()
  *
- * 		\brief Generate a random number with a linear equation.
+ * 		\brief Generates a random number with a linear equation.
  *
  * 		\return A random number
  *
@@ -49,9 +49,9 @@ int rand();
 /**
  * \fn void srand( unsigned int seedP )
  *
- * 		\brief Set the seed to generate random numbers
+ * 		\brief Sets the seed to generate random numbers
  *
- * 		\param seedP The seed to set.
+ * 		\param seedP The seed to be set.
  * 		
  * 		Use:
  * 		\code

@@ -13,7 +13,6 @@
 
 #include "io.h"
 #include "types.h"
-#include "config.h"
 
 void *memcpy(void *dest, const void *src, size_t n);
 
@@ -158,7 +157,7 @@ void printChar ( int c );
  * 		\brief Puts a character into the video buffer at the current position and moves the cursor.
  * 		
  * 		\param c the character to be putted into the video buffer
- * 		\parma color the color code of the character.
+ * 		\param color the color code of the character.
  *
  */
 void printColorChar ( int c, int color );
@@ -169,7 +168,7 @@ void printColorChar ( int c, int color );
  *		\brief Puts a character into the video buffer at a given position.
  *
  * 		\param c the character to be putted into the video buffer
- * 		\parma color the color code of the character.
+ * 		\param color the color code of the character.
  *		\param row the row position where the character will be putted
  *		\param col the col position where the character will be putted
  *
@@ -186,6 +185,9 @@ int putCharAtFixedPos ( int c, int color, int row, int col );
  *		
  *		\param s The string to be putted.
  *		\param color a pointer to int with the color codes for each character or NULL to print with the default video color.
+ *		\param length ParamDescription.
+ *		\param row ParamDescription.
+ *		\param col ParamDescription.
  *
  *
  */
@@ -253,13 +255,9 @@ int setVideoVTabStop ( int num );
 void updateColor ( void  );
 
 /**
- * \fn retType function(args)
+ * \fn void printAlarm ( void )
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code
@@ -272,13 +270,9 @@ void updateColor ( void  );
 void printAlarm ( void );
 
 /**
- * \fn retType function(args)
+ * \fn printBackspace ( void )
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code
@@ -291,13 +285,9 @@ void printAlarm ( void );
 void printBackspace ( void );
 
 /**
- * \fn retType function(args)
+ * \fn void printNewLine ( void )
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code
@@ -310,13 +300,9 @@ void printBackspace ( void );
 void printNewLine ( void );
 
 /**
- * \fn retType function(args)
+ * \fn void printLineFeed ( void )
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code
@@ -329,13 +315,9 @@ void printNewLine ( void );
 void printLineFeed ( void );
 
 /**
- * \fn retType function(args)
+ * \fn void printReturn ( void )
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code
@@ -348,13 +330,9 @@ void printLineFeed ( void );
 void printReturn ( void );
 
 /**
- * \fn retType function(args)
+ * \fn void printTab ( void  )
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code
@@ -367,13 +345,9 @@ void printReturn ( void );
 void printTab ( void  );
 
 /**
- * \fn retType function(args)
+ * \fn void printVTab ( void )
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code

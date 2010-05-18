@@ -1,7 +1,7 @@
 /**
  *	\file bttlship.h
  *
- *		\brief Brief.
+ *		\brief The header file of the battleship game.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -15,7 +15,6 @@
 #include "string.h"
 #include "types.h"
 #include "process.h"
-#include "defs.h"
 #include "shMemory.h"
 #include "semaphore.h"
 #include "rand.h"
@@ -71,7 +70,7 @@ extern int flg_game_over;   /* != 0 => game over */
 /**
  * \fn void cleanup(void)
  *
- * 		\brief Destroy the shared memory and semaphores
+ * 		\brief Destroys the used shared memory and semaphores
  *
  */
 
@@ -80,22 +79,22 @@ extern void cleanup(void);
 /**
  * \fn void attachTable(void);
  *
- * 		\brief It only attach to the memory already
- *				created.
+ * 		\brief It attaches itself to the already
+ *				created memory.
  *
  */
 
 extern void attachTable(void);
 
 /**
- * \fn void lockTable(int semx,int bLock)
+ * \fn void lockTable(int semx,int block)
  *
- * 		\brief It decidies if it has to lock the table
- *				or wait to the opponent. Peform semaphore wait/notifies:
+ * 		\brief It decides if it has to lock the table
+ *				or wait for the opponent. Peform semaphore wait/notifies:
  * 				ARGUMENTS:
  *  				semx    0 : table lock semaphore
  *          				1 : opponent notify semaphore
- *  				bLock   0 : perform notify
+ *  				block   0 : perform notify
  *          				1 : perform wait
  *
  * 		\param semx It is the parameter to decide what have to do with semaphore
@@ -104,12 +103,12 @@ extern void attachTable(void);
  *
  */
 
-extern void lockTable(int semx,int bLock);
+extern void lockTable(int semx,int block);
 
 /**
  * \fn void recount(void)
  *
- * 		\brief It count the amount of bomb that the player left
+ * 		\brief It counts the amount of bombs that the player has left
  *
  * 		
  *
@@ -120,7 +119,7 @@ extern void recount(int player);
 /**
  * \fn void bomb(int x,int y)
  *
- * 		\brief It put the bombo in a specific position of the table
+ * 		\brief It puts the bomb on a specific position of the table
  *
  * 		\param x The row of the table
  * 		\param y The column of the table
@@ -133,7 +132,7 @@ extern void bomb(int x,int y, int player);
 /**
  * \fn int getInput(int *px,int *py)
  *
- * 		\brief It obtain the the row and the column of the table
+ * 		\brief It obtains the the row and the column of the table
  *				from STDIN
  *
  * 		\param px The row of the table
@@ -192,7 +191,7 @@ extern void showRow(void);
 /**
  * \fn void showBattle(void)
  *
- * 		\brief It prints the whole table of the battlehsip
+ * 		\brief It prints the table of the battlehsip
  */
 
 extern void showBattle(int player);
@@ -200,7 +199,7 @@ extern void showBattle(int player);
 /**
  * \fn int battleship()
  *
- * 		\brief It is the main process of the battleship, it generates
+ * 		\brief It's the main process of the battleship, it generates
  *				the whole table and ships.
  *
  */

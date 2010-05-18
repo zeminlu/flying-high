@@ -1,7 +1,7 @@
 /**
  *	\file colors.h
  *
- *		\brief Brief.
+ *		\brief Video Color defines.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

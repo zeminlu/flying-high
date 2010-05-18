@@ -1,7 +1,7 @@
 /**
  *	\file libc.h
  *
- *		\brief Brief.
+ *		\brief The C library module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

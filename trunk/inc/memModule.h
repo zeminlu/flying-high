@@ -1,7 +1,7 @@
 /**
  *	\file memModule.h
  *
- *		\brief Brief.
+ *		\brief The memory management / paging module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -17,14 +17,7 @@
 /**
  * \fn void loadCR3()
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief Loads the CR3 into the processor register.
  *
  */
 void loadCR3();
@@ -32,16 +25,9 @@ void loadCR3();
 /**
  * \fn int initPaging()
  *
- * 		\brief Brief.
+ * 		\brief Initializes the pagination and turns it on.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int initPaging();
@@ -49,53 +35,32 @@ int initPaging();
 /**
  * \fn void setKernelHeapPresence(int state)
  *
- * 		\brief Brief.
+ * 		\brief Sets the presence bit of the kernel heap pages according to the given parameter.
  *
- * 		\param state ParamBrief.
+ * 		\param state True or False.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
  */
 void setKernelHeapPresence(int state);
 
 /**
  * \fn void initPage(page_t *page, int isKernel)
  *
- * 		\brief Brief.
+ * 		\brief Initializes the given page with according permissions.
  *
- * 		\param page ParamBrief.
- * 		\param isKernel ParamBrief.
+ * 		\param page A pointer to the page.
+ * 		\param isKernel Permissions, True or False.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
  */
 void initPage(page_t *page, int isKernel);
 
 /**
  * \fn int allocKPage(page_t *kernelPage)
  *
- * 		\brief Brief.
+ * 		\brief Allocs a Page for the kernel.
  *
- * 		\param kernelPage ParamBrief.
+ * 		\param kernelPage A pointer to the page.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int allocKPage(page_t *kernelPage);
@@ -103,18 +68,11 @@ int allocKPage(page_t *kernelPage);
 /**
  * \fn int initKernelTable(pageTable_t kernelTable)
  *
- * 		\brief Brief.
+ * 		\brief Initializes a kernel page table.
  *
- * 		\param kernelTable ParamBrief.
+ * 		\param kernelTable The table to be initialized.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int initKernelTable(pageTable_t kernelTable);
@@ -122,18 +80,11 @@ int initKernelTable(pageTable_t kernelTable);
 /**
  * \fn int allocMPage(page_t *mallocPage)
  *
- * 		\brief Brief.
+ * 		\brief Allocs a Page for the malloc section.
  *
- * 		\param mallocPage ParamBrief.
+ * 		\param mallocPage A pointer to the page.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int allocMPage(page_t *mallocPage);
@@ -141,19 +92,12 @@ int allocMPage(page_t *mallocPage);
 /**
  * \fn int initMallocTable(pageTable_t mallocTable, int dirIndex)
  *
- * 		\brief Brief.
+ * 		\brief Initializes a malloc page table.
  *
- * 		\param dirIndex ParamBrief.
- * 		\param mallocTable ParamBrief.
+ * 		\param dirIndex Reserved.
+ * 		\param mallocTable The table to be initialized.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int initMallocTable(pageTable_t mallocTable, int dirIndex);
@@ -161,16 +105,9 @@ int initMallocTable(pageTable_t mallocTable, int dirIndex);
 /**
  * \fn frame_t * getFrame()
  *
- * 		\brief Brief.
+ * 		\brief Gets a free frame.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return A pointer to a frame.
  *
  */
 frame_t * getFrame();
@@ -178,18 +115,11 @@ frame_t * getFrame();
 /**
  * \fn int freeFrame(frame_t *frame)
  *
- * 		\brief Brief.
+ * 		\brief Frees the given frame.
  *
- * 		\param frame ParamBrief.
+ * 		\param frame A pointer to the frame.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int freeFrame(frame_t *frame);
@@ -197,18 +127,11 @@ int freeFrame(frame_t *frame);
 /**
  * \fn void setFramePresence(frame_t *frame, int state)
  *
- * 		\brief Brief.
+ * 		\brief Sets the presence bit of the pages from the given frame to the given state.
  *
- * 		\param frame ParamBrief.
- * 		\param state ParamBrief.
+ * 		\param frame A pointer to the frame.
+ * 		\param state True or False.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
- *
  */
 void setFramePresence(frame_t *frame, int state);
 

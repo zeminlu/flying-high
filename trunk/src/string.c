@@ -120,15 +120,6 @@ char *strcpy(char *dst, const char *source){
 	return dst;
 }
 
-char *strstr(const char *haystack, const char *needle){
-    int len=strlen(haystack), i;
-    for(i=0; i<len; ++i){
-	   if(strncmp(haystack+i, needle, strlen(needle)) == 0)
-		  return ((char *) haystack + i);
-    }
-    return NULL;
-}
-
 int memcmp (const void *str1, const void *str2, size_t count){
 	const unsigned char *s1 = str1;
 	const unsigned char *s2 = str2;

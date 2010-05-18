@@ -15,13 +15,9 @@
 
 /* Muestra la imagen de inicio */
 /**
- * \fn retType function(args)
+ * \fn void showSplashScreen()
  *
  * 		\brief Brief.
- *
- * 		\param parameter ParamBrief.
- * 		
- * 		\return Description.
  *
  * 		Use:
  * 		\code

@@ -1,7 +1,7 @@
 /**
  *	\file bin.h
  *
- *		\brief Brief.
+ *		\brief All the OS processes.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -19,8 +19,8 @@
 /**
  * \fn void init(void *args)
  *
- * 		\brief This functions initialize the process welcome,
- *				all of shells and goddbye process. It you kill the process
+ * 		\brief This functions initialize the welcome process,
+ *				all the shells and goodbye process. If you kill the process
  *				init the system will be rebooted.
  *
  * 		\param args 
@@ -53,8 +53,8 @@ void top(char *args);
 /**
  * \fn  void welcome()
  *
- * 		\brief This function just print the welcome message to
- *				Flying-High SO
+ * 		\brief This function just prints the welcome message to
+ *				Flying-High OS
  *
  * 		Use:
  * 		\code
@@ -69,7 +69,7 @@ void welcome();
 /**
  * \fn void goodbye()
  *
- * 		\brief This function just said goddbye and reboot the system.
+ * 		\brief This function just says goodbye and reboots the system.
  *
  * 		Use:
  * 		\code
@@ -84,7 +84,7 @@ void goodbye();
 /**
  * \fn void printA()
  *
- * 		\brief This functions print A letter to the infinity
+ * 		\brief This function prints infinite A letters
  *
  * 		Use:
  * 		\code
@@ -99,7 +99,7 @@ void printA();
 /**
  * \fn void printB()
  *
- * 		\brief This functions print B letter to the infinity
+ * 		\brief This functions prints infinite A letters
  *
  * 		Use:
  * 		\code
@@ -114,7 +114,7 @@ void printB();
 /**
  * \fn void nothing()
  *
- * 		\brief This function only consume the microprocessor
+ * 		\brief This function only consumes the microprocessor
  *
  * 		Use:
  * 		\code
@@ -129,7 +129,7 @@ void nothing();
 /**
  * \fn void pageFault()
  *
- * 		\brief This function create a page fault exception
+ * 		\brief This function generates a page fault exception
  * 		
  * 		Use:
  * 		\code

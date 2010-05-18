@@ -1,7 +1,7 @@
 /**
  *	\file defs.h
  *
- *		\brief Brief.
+ *		\brief OS inner defines.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -11,17 +11,17 @@
 #define _DEFS_H_
 
 /**
- * \def BYTE
+ * \def byte
  *		\brief DefineBrief.
  */
 #define byte unsigned char
 /**
- * \def WORD
+ * \def word
  *		\brief DefineBrief.
  */
 #define word short int
 /**
- * \def DWORD
+ * \def dword
  *		\brief DefineBrief.
  */
 #define dword int

@@ -33,14 +33,7 @@ void _int_80_handler ( void );
 /**
  * \fn void _int_09_handler ( void )
  *
- * 		\brief Brief.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\brief This function handles the keyboard interrupt.
  *
  */
 void _int_09_handler ( void );

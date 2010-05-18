@@ -87,7 +87,3 @@ void flush ( FILE * stream )
 		return;
 	stream->ptr = stream->buffer;
 }
-
-int putsInStdTTY(const char  *s){
-	return 0;
-}

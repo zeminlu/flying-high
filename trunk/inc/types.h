@@ -19,49 +19,49 @@
 
 /**
  * \var Keycode
- * 		\brief Brief.
+ * 		\brief Keycode typedef.
  */
 typedef unsigned char Keycode;
 
 /**
  * \var size_t
- * 		\brief Brief.
+ * 		\brief size_t typedef.
  */
 typedef unsigned int size_t;
 
 /**
  * \var ssize_t
- * 		\brief Brief.
+ * 		\brief ssize_t typedef.
  */
 typedef unsigned int ssize_t;
 
 /**
  * \var pid_t
- * 		\brief Brief.
+ * 		\brief pid_t typedef.
  */
 typedef int pid_t;
 
 /**
  * \var key_t
- * 		\brief Brief.
+ * 		\brief key_t typedef.
  */
 typedef int key_t;
 
 /**
  * \var tty_t
- * 		\brief Brief.
+ * 		\brief tty_t typedef.
  */
 typedef int tty_t;
 
 /**
  * \var pfunc_t
- * 		\brief Brief.
+ * 		\brief pfunc_t typedef.
  */
 typedef void (pfunc_t)(void *);
 
 /**
  * \struct page_t
- * 		\brief Brief.
+ * 		\brief The paging page struct.
  */
 typedef struct page {
 	unsigned int present 		: 1;
@@ -77,13 +77,13 @@ typedef struct page {
 
 /**
  * \struct pageTable_t
- * 		\brief Brief.
+ * 		\brief The page table typedef.
  */
 typedef page_t pageTable_t[PAGE_ENTRIES_PER_TABLE];
 
 /**
  * \struct directory_t
- * 		\brief Brief.
+ * 		\brief The page directory typedef.
  */
 typedef struct directory {
 	pageTable_t tables[PAGE_TABLES_QTY];
@@ -91,26 +91,8 @@ typedef struct directory {
 } directory_t;
 
 /**
- * \struct frameLocation_t
- * 		\brief Brief.
- */
-typedef struct frameLocation {
-	unsigned int table;
-	unsigned int pageEntry;
-} frameLocation_t;
-
-/**
- * \struct usedMemBitmap_t
- * 		\brief Brief.
- */
-typedef struct usedMemBitmap {
-	int usedPages;
-	unsigned int bitmap[BITMAP_SIZE];
-} usedMemBitmap_t;
-
-/**
  * \struct frame_t
- * 		\brief Brief.
+ * 		\brief The page frame struct.
  */
 typedef struct frame{
 	int assigned;
@@ -119,7 +101,7 @@ typedef struct frame{
 
 /**
  * \struct memArea_t
- * 		\brief Brief.
+ * 		\brief The mem area malloc struct.
  */
 typedef struct memArea{
 	void *address;
@@ -129,16 +111,13 @@ typedef struct memArea{
 
 /**
  * \struct framesTable_t
- * 		\brief Brief.
+ * 		\brief The frames table typedef.
  */
 typedef frame_t framesTable_t[TOTAL_FRAMES_QTY];
 
-/*
- *	FILE Type Definition
- */
 /**
  * \struct FILE
- * 		\brief Brief.
+ * 		\brief The FILE struct.
  */
 typedef struct {
 	int fd;
@@ -150,7 +129,7 @@ typedef struct {
 
 /**
  * \struct heapStatus
- * 		\brief Brief.
+ * 		\brief The heap status struct.
  */
 typedef struct heapStatus{
 	int asigment;
@@ -159,7 +138,7 @@ typedef struct heapStatus{
 
 /**
  * \struct process_t
- * 		\brief Brief.
+ * 		\brief The process struct.
  */
 typedef struct process_t {
 	pid_t pid;
@@ -195,7 +174,7 @@ typedef struct process_t {
 
 /**
  * \enum SYSCALL_IDS
- * 		\brief Brief.
+ * 		\brief The Syscall id's enum.
  */
 enum SYSCALL_IDS{
 	_SYS_WRITE,
@@ -234,7 +213,7 @@ enum SYSCALL_IDS{
 
 /**
  * \enum STATES
- * 		\brief Brief.
+ * 		\brief The process states enum.
  */
 enum STATES{
 	RUNNING,
@@ -247,10 +226,9 @@ enum STATES{
 	DEAD
 };
 
-/*TTY*/
 /**
  * \struct stdInTTY
- * 		\brief Brief.
+ * 		\brief The tty stdin struct.
  */
 typedef struct stdInTTY{
 	Keycode 	*stdInBuffer;
@@ -259,7 +237,7 @@ typedef struct stdInTTY{
 
 /**
  * \struct stdOutTTY
- * 		\brief Brief.
+ * 		\brief The tty stdout struct.
  */
 typedef struct stdOutTTY{
 	Keycode 	*stdOutBuffer;
@@ -269,7 +247,7 @@ typedef struct stdOutTTY{
 
 /**
  * \struct tty_s
- * 		\brief Brief.
+ * 		\brief The tty_s struct.
  */
 typedef struct tty_s{
 	tty_t			ttyId;
@@ -287,7 +265,7 @@ typedef struct tty_s{
 
 /**
  * \struct sysTTY
- * 		\brief Brief.
+ * 		\brief The tty system struct.
  */
 typedef struct sysTTY{
 	int			qtyTTY;
@@ -299,13 +277,13 @@ typedef struct sysTTY{
 
 /**
  * \var shellFuncT
- * 		\brief Brief.
+ * 		\brief The shellFuncT typedef.
  */
 typedef void (*shellFuncT)(char *);
 
 /**
  * \struct commandT
- * 		\brief Brief.
+ * 		\brief The command struct.
  */
 typedef struct {
 	char * command;
@@ -315,13 +293,13 @@ typedef struct {
 
 /**
  * \var pFuncT
- * 		\brief Brief.
+ * 		\brief the pFuncT typedef.
  */
 typedef int (*pFuncT)(char*);
 
 /**
  * \struct propertyT
- * 		\brief Brief.
+ * 		\brief The property struct.
  */
 typedef struct {
 	char * name;
@@ -331,7 +309,7 @@ typedef struct {
 
 /**
  * \struct dataSlotShell
- * 		\brief Brief.
+ * 		\brief The shell data slot struct.
  */
 typedef struct{
 	pid_t pid;
@@ -343,7 +321,7 @@ typedef struct{
 
 /**
  * \var dataShell
- * 		\brief Brief.
+ * 		\brief The shell data struct typedef.
  */
 typedef dataSlotShell* dataShell;
 
@@ -352,7 +330,7 @@ typedef dataSlotShell* dataShell;
 /* Descriptor de segmento */
 /**
  * \struct DESCR_SEG
- * 		\brief Brief.
+ * 		\brief OS segment descriptor struct.
  */
 typedef struct {
   word limit,
@@ -367,7 +345,7 @@ typedef struct {
 /* Descriptor de interrupcion */
 /**
  * \struct DESCR_INT
- * 		\brief Brief.
+ * 		\brief OS interrupt descriptor struct.
  */
 typedef struct {
   word      offset_l,
@@ -380,7 +358,7 @@ typedef struct {
 /* IDTR  */
 /**
  * \struct IDTR
- * 		\brief Brief.
+ * 		\brief OS IDTR struct.
  */
 typedef struct {
   word  limit;

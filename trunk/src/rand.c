@@ -11,7 +11,7 @@
 static unsigned int seed;
 
 unsigned int timeRand(){
-	return (unsigned int)_sys_uptime();
+	return (unsigned int)upTime();
 }
 
 int rand(){

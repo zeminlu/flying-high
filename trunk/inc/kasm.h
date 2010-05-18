@@ -1,7 +1,7 @@
 /**
  *	\file kasm.h
  *
- *		\brief Brief.
+ *		\brief Kernel utilities.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

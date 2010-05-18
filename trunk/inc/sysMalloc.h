@@ -1,7 +1,7 @@
 /**
  *	\file sysMalloc.h
  *
- *		\brief Brief.
+ *		\brief Generic malloc module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
@@ -21,12 +21,7 @@
  * 		\param ap ParamBrief.
  * 		\param getMemoryArea ParamBrief.
  * 		
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sysRealloc() sysMalloc()
  *
  */
 void sysFree(void *ap, memArea_t * (*getMemoryArea)());
@@ -41,33 +36,23 @@ void sysFree(void *ap, memArea_t * (*getMemoryArea)());
  * 		
  * 		\return Description.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sysFree() sysRealloc()
  *
  */
 void *sysMalloc(size_t nbytes, memArea_t * (*getMemoryArea)());
 
 /**
- * \fn void *sysRealloc(void *ap, size_t size, memArea_t * (*getMemoryArea)())
+ * \fn void *sysRealloc(void *ptr, size_t size, memArea_t * (*getMemoryArea)())
  *
  * 		\brief Brief.
  *
- * 		\param ap ParamBrief.
+ * 		\param ptr ParamBrief.
  * 		\param size ParamBrief.
  * 		\param getMemoryArea ParamBrief.
  * 		
  * 		\return Description.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa sysFree() sysMalloc()
  *
  */
 void *sysRealloc(void *ap, size_t size, memArea_t * (*getMemoryArea)());

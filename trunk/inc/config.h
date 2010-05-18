@@ -22,8 +22,8 @@
  */
 #define SCREEN_WIDTH 80
 /**
- * \def SCREEN_HEIGHT
- *		\brief The height
+ * \def SCREEN_HEIGTH
+ *		\brief The height of the screen
  */
 #define	SCREEN_HEIGTH 25
 /**
@@ -33,7 +33,7 @@
 #define SCREEN_SIZE SCREEN_WIDTH * SCREEN_HEIGTH
 /**
  * \def VIDEO_MEMORY_SIZE
- *		\brief The real screen size with color attributes
+ *		\brief Real screen size with color attributes
  */
 #define VIDEO_MEMORY_SIZE SCREEN_SIZE * 2
 /**
@@ -73,12 +73,12 @@
 #define KEYBOARD_REPETITION		3
 /**
  * \def ENABLED
- *		\brief Enabled the cursor
+ *		\brief Enabled cursor
  */
 #define ENABLED 1
 /**
  * \def DISABLED
- *		\brief Disabled the cursor
+ *		\brief Disabled cursor
  */
 #define DISABLED 0
 /**
@@ -88,7 +88,7 @@
 #define MILISECONDS_PER_TICK 55
 /**
  * \def TICKS_PER_SECOND
- *		\brief The amount of tick in one second
+ *		\brief The amount of ticks in one second
  */
 #define TICKS_PER_SECOND 18
 /**
