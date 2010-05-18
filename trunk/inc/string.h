@@ -57,7 +57,7 @@ char *strcat(char *dst, const char *src);
  *
  * 		\brief Returns the length of the string.
  *
- * 		\param str The string who's length will be calculated.
+ * 		\param str The string whose length will be calculated.
  * 		
  * 		\return The length of the given string.
  *

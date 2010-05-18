@@ -45,6 +45,7 @@ static void freeTerminatedProcesses(void) {
 				if ( processTable[i].childs[j] != -1 )
 					terminate(j, KILL_EXIT_STATUS);			
 					processTable[i].state = DEAD;
+					processTable[i].name[0]=  '\0';
 		}
 	}
 	

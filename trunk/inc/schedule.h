@@ -23,10 +23,10 @@
 /**
  * \fn process_t * rpgSchedule()
  *
- * 		\brief 	This function simulate the RPG scheduling. The algorithim is about
- *				that when a process achieve the maximum value of RPG, it is adding to
- *				a queue. After that the functions just founf the oldest process who are
- *				waiting to be attending.
+ * 		\brief 	This function simulates the RPG scheduling. What this algorithm does, is that
+ * 				when a process achieves the maximum value of RPG, it adds it to
+ *				a queue. After that the functions just find the oldest process that is
+ *				waiting to be attended.
  *
  * 		\return The process to be attended
  *
@@ -42,7 +42,7 @@ process_t * rpgSchedule();
 /**
  * \fn process_t * getNextTask( void )
  *
- * 		\brief  This function return the next task that should be
+ * 		\brief  This function returns the next task that should be
  *				attended.
  *
  * 		\return The next process
@@ -58,8 +58,7 @@ process_t * getNextTask( void );
 /**
  * \fn int checkWhatAreReady( void )
  *
- * 		\brief This function check what process are ready using RPG
- *				Algorithim
+ * 		\brief This function checks what processes are ready using the RPG Algorithim
  *
  * 		\return the index of table process
  *
@@ -69,7 +68,7 @@ int checkWhatAreReady( void );
 /**
  * \fn void increaseRPGCounter( void )
  *
- * 		\brief This function increase the current rpg value
+ * 		\brief This function increases the current rpg value
  *				of each process.
  *
  */
@@ -79,16 +78,9 @@ void increaseRPGCounter( void );
 /**
  * \fn void changeAlgorithimSchedule( void )
  *
- * 		\brief 	This function change the Algorithim
- *				variable, if the current algorithim is RoundRobin
+ * 		\brief 	This function changes the Algorithm
+ *				variable, if the current algorithm is RoundRobin
  *				it changes to RPG and viceversa.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
  *
  */
 void changeAlgorithimSchedule( void );
