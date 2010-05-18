@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$stdio_8c.html#ab11a990e4f8863a1e7736e3c1d430092" title="Reads a character ascii from the given stream and returns it." alt="" coords="112,5,171,35"/>
+<area shape="rect" id="node5" href="$stdio_8c.html#a2b3df0e66b41edab3c039191fe6cc4f9" title="Reads a string of the given size from the given stream." alt="" coords="112,59,171,88"/>
+</map>

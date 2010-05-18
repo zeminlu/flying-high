@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$video__driver_8h.html#a67e96e514d9f296c79378f7fbfba457a" title="clearScreen" alt="" coords="213,5,315,35"/>
+<area shape="rect" id="node7" href="$ttys_8h.html#ac625c448f0a3f2dd24c1409227e291e4" title="This function returns the tty id of tty that are in focus at this moment. It is a..." alt="" coords="403,71,528,100"/>
+<area shape="rect" id="node9" href="$video__driver_8h.html#aff96fa4091dd99b631277b28be9a5e65" title="Sets the cursor&#39;s position." alt="" coords="395,148,536,177"/>
+<area shape="rect" id="node11" href="$ttys_8h.html#a77495bf57af4fe0554f55dc4be4a4600" title="It sets the cursor in an specific position of the tty stdout." alt="" coords="181,109,347,139"/>
+<area shape="rect" id="node5" href="$video__driver_8h.html#a49f60f2c7afcb3ffeb1890865dc440c0" title="Fills the screen with a character." alt="" coords="424,5,507,35"/>
+</map>

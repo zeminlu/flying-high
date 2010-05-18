@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="kernel_8c" kind="file">
+    <compoundname>kernel.c</compoundname>
+    <includes refid="kernel_8h" local="yes">kernel.h</includes>
+    <incdepgraph>
+      <node id="4167">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4156" relation="include">
+        </childnode>
+      </node>
+      <node id="4141">
+        <label>kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="4142" relation="include">
+        </childnode>
+        <childnode refid="4147" relation="include">
+        </childnode>
+        <childnode refid="4148" relation="include">
+        </childnode>
+        <childnode refid="4141" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4150" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4153" relation="include">
+        </childnode>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4162" relation="include">
+        </childnode>
+        <childnode refid="4166" relation="include">
+        </childnode>
+        <childnode refid="4165" relation="include">
+        </childnode>
+        <childnode refid="4169" relation="include">
+        </childnode>
+        <childnode refid="4172" relation="include">
+        </childnode>
+        <childnode refid="4170" relation="include">
+        </childnode>
+      </node>
+      <node id="4146">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4172">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4170" relation="include">
+        </childnode>
+      </node>
+      <node id="4168">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4156">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4142" relation="include">
+        </childnode>
+        <childnode refid="4158" relation="include">
+        </childnode>
+        <childnode refid="4161" relation="include">
+        </childnode>
+        <childnode refid="4162" relation="include">
+        </childnode>
+      </node>
+      <node id="4158">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4159" relation="include">
+        </childnode>
+        <childnode refid="4153" relation="include">
+        </childnode>
+      </node>
+      <node id="4152">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4150">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4152" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4143">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4144" relation="include">
+        </childnode>
+        <childnode refid="4145" relation="include">
+        </childnode>
+      </node>
+      <node id="4166">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4160" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+        <childnode refid="4150" relation="include">
+        </childnode>
+      </node>
+      <node id="4149">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4150" relation="include">
+        </childnode>
+        <childnode refid="4153" relation="include">
+        </childnode>
+        <childnode refid="4152" relation="include">
+        </childnode>
+        <childnode refid="4148" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4146" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+        <childnode refid="4159" relation="include">
+        </childnode>
+        <childnode refid="4169" relation="include">
+        </childnode>
+        <childnode refid="4158" relation="include">
+        </childnode>
+        <childnode refid="4171" relation="include">
+        </childnode>
+      </node>
+      <node id="4142">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4148">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4149" relation="include">
+        </childnode>
+        <childnode refid="4154" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4153">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4154" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4165">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4162" relation="include">
+        </childnode>
+        <childnode refid="4164" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4158" relation="include">
+        </childnode>
+        <childnode refid="4156" relation="include">
+        </childnode>
+        <childnode refid="4150" relation="include">
+        </childnode>
+        <childnode refid="4166" relation="include">
+        </childnode>
+        <childnode refid="4167" relation="include">
+        </childnode>
+        <childnode refid="4149" relation="include">
+        </childnode>
+      </node>
+      <node id="4154">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4161">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4142" relation="include">
+        </childnode>
+      </node>
+      <node id="4147">
+        <label>kc.h</label>
+        <link refid="kc_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4160">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+      </node>
+      <node id="4145">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4146" relation="include">
+        </childnode>
+      </node>
+      <node id="4162">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4163" relation="include">
+        </childnode>
+        <childnode refid="4153" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4164" relation="include">
+        </childnode>
+        <childnode refid="4165" relation="include">
+        </childnode>
+        <childnode refid="4156" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4152" relation="include">
+        </childnode>
+        <childnode refid="4166" relation="include">
+        </childnode>
+      </node>
+      <node id="4171">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4153" relation="include">
+        </childnode>
+        <childnode refid="4150" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+        <childnode refid="4172" relation="include">
+        </childnode>
+        <childnode refid="4170" relation="include">
+        </childnode>
+        <childnode refid="4167" relation="include">
+        </childnode>
+        <childnode refid="4162" relation="include">
+        </childnode>
+      </node>
+      <node id="4151">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4164">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4155">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4156" relation="include">
+        </childnode>
+        <childnode refid="4168" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4165" relation="include">
+        </childnode>
+      </node>
+      <node id="4163">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4164" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4170">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+      </node>
+      <node id="4140">
+        <label>src/kernel.c</label>
+        <link refid="kernel.c"/>
+        <childnode refid="4141" relation="include">
+        </childnode>
+      </node>
+      <node id="4157">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4150" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+      </node>
+      <node id="4159">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4160" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+      </node>
+      <node id="4144">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4169">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4169" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4164" relation="include">
+        </childnode>
+        <childnode refid="4165" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4156" relation="include">
+        </childnode>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+        <childnode refid="4153" relation="include">
+        </childnode>
+        <childnode refid="4142" relation="include">
+        </childnode>
+        <childnode refid="4162" relation="include">
+        </childnode>
+        <childnode refid="4152" relation="include">
+        </childnode>
+        <childnode refid="4160" relation="include">
+        </childnode>
+        <childnode refid="4150" relation="include">
+        </childnode>
+        <childnode refid="4158" relation="include">
+        </childnode>
+        <childnode refid="4166" relation="include">
+        </childnode>
+        <childnode refid="4149" relation="include">
+        </childnode>
+        <childnode refid="4154" relation="include">
+        </childnode>
+        <childnode refid="4146" relation="include">
+        </childnode>
+        <childnode refid="4159" relation="include">
+        </childnode>
+        <childnode refid="4170" relation="include">
+        </childnode>
+        <childnode refid="4167" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="kernel_8c_1a70e9961d41d661a1eb98e65344084159" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound">DESCR_INT</ref></type>
+        <definition>DESCR_INT idt[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>idt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/kernel.c" line="12" bodyfile="/Users/Luciano/Desktop/flying-high/src/kernel.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="kernel_8c_1afefc9bc7f2fa69f8a1f6e35c2e804260" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_i_d_t_r" kindref="compound">IDTR</ref></type>
+        <definition>IDTR idtr</definition>
+        <argsstring></argsstring>
+        <name>idtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/kernel.c" line="13" bodyfile="/Users/Luciano/Desktop/flying-high/src/kernel.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kernel_main</definition>
+        <argsstring>(void)</argsstring>
+        <name>kernel_main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/kernel.c" line="16" bodyfile="/Users/Luciano/Desktop/flying-high/src/kernel.c" bodystart="15" bodyend="59"/>
+        <references refid="kasm_8h_1adc8888227cfbdfe307b5b5bd0ee5c80a">_Cli</references>
+        <references refid="int__handlers_8h_1abe15fe9e35457aba9d9be21b7fc035c8">_int_08_handler</references>
+        <references refid="int__handlers_8h_1ad4d015f51393b56a91f3aae98675a1f3">_int_09_handler</references>
+        <references refid="int__handlers_8h_1aa3e8e59826d84280a1918b493750305f">_int_80_handler</references>
+        <references refid="kasm_8h_1ae8fa119f684ecab085b10ac3057a7dfc">_lidt</references>
+        <references refid="kasm_8h_1a040f3ed216543a3a9ddebd17f2b2bcd0">_mascaraPIC1</references>
+        <references refid="kasm_8h_1a7bcff8af975befd9654311a14bde1098">_mascaraPIC2</references>
+        <references refid="kasm_8h_1a38b31cfe95df07495ffe67cc0b6a9c5d">_Sti</references>
+        <references refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" compoundref="defs_8h" startline="307">ACS_INT</references>
+        <references refid="struct_i_d_t_r_1acdee40c1e899300b428fdaee620723e5" compoundref="types_8h" startline="365">IDTR::base</references>
+        <references refid="video__driver_8h_1a67e96e514d9f296c79378f7fbfba457a" compoundref="video__driver_8c" startline="425" endline="428">clearScreen</references>
+        <references refid="config_8h_1a4a96c64dbab22978dda9bbf3a52a9fb7" compoundref="config_8h" startline="63">CURSOR_START_VISIBLE</references>
+        <references refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" compoundref="defs_8h" startline="27">dword</references>
+        <references refid="bin_8h_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</references>
+        <references refid="semaphore_8h_1a890c313036014ee4d5c75c3519b831eb" compoundref="semaphore_8c" startline="59" endline="73">initializeSemaphores</references>
+        <references refid="sh_memory_8h_1a574d3f5987a7f9a3723ac7bddaf4e060" compoundref="sh_memory_8c" startline="60" endline="77">initializeShMems</references>
+        <references refid="ttys_8h_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</references>
+        <references refid="sys_process_8h_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</references>
+        <references refid="mem_module_8h_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</references>
+        <references refid="video__driver_8h_1a8830e25eeec93f2edd0c4d2ee99d6c91" compoundref="video__driver_8c" startline="176" endline="231">initVideo</references>
+        <references refid="struct_i_d_t_r_1ab5c3c0a36eb16002f03ae8565e505e89" compoundref="types_8h" startline="364">IDTR::limit</references>
+        <references refid="exceptions_8h_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</references>
+        <references refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" compoundref="libc_8c" startline="42" endline="49">setup_IDT_entry</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Kernel module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="kernel_8h" kindref="compound" tooltip="Kernel header file.">kernel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="kernel_8c_1a70e9961d41d661a1eb98e65344084159" refkind="member"><highlight class="normal"><ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound" tooltip="OS interrupt descriptor struct.">DESCR_INT</ref><sp/><ref refid="exceptions_8c_1a15ccdbd39bc4697b9cdb521f359673b0" kindref="member">idt</ref>[256];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>IDT<sp/>de<sp/>256<sp/>entradas*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="kernel_8c_1afefc9bc7f2fa69f8a1f6e35c2e804260" refkind="member"><highlight class="normal"><ref refid="struct_i_d_t_r" kindref="compound" tooltip="OS IDTR struct.">IDTR</ref><sp/><ref refid="kernel_8c_1afefc9bc7f2fa69f8a1f6e35c2e804260" kindref="member">idtr</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>IDTR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" kindref="member">kernel_main</ref><sp/>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>)<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1adc8888227cfbdfe307b5b5bd0ee5c80a" kindref="member" tooltip="Brief.">_Cli</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1a040f3ed216543a3a9ddebd17f2b2bcd0" kindref="member" tooltip="Brief.">_mascaraPIC1</ref>(0xFF);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1a7bcff8af975befd9654311a14bde1098" kindref="member" tooltip="Brief.">_mascaraPIC2</ref>(0xFF);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1a38b31cfe95df07495ffe67cc0b6a9c5d" kindref="member" tooltip="Brief.">_Sti</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Loading<sp/>IDT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x08],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="int__handlers_8h_1abe15fe9e35457aba9d9be21b7fc035c8" kindref="member" tooltip="This function handles the timer tick interrupt.">_int_08_handler</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x09],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="int__handlers_8h_1ad4d015f51393b56a91f3aae98675a1f3" kindref="member" tooltip="This function handles the keyboard interrupt.">_int_09_handler</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x80],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="int__handlers_8h_1aa3e8e59826d84280a1918b493750305f" kindref="member" tooltip="This function handles the kernel system calls. Posible system calls: _SYS_WRITE _SYS_READ...">_int_80_handler</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8h_1a9a0ae2f785726650de9637601aa4c965" kindref="member" tooltip="Loads the handler of the exception that was produced.">loadExceptionHandlers</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Loading<sp/>IDTR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idtr.<ref refid="struct_i_d_t_r_1acdee40c1e899300b428fdaee620723e5" kindref="member">base</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idtr.<ref refid="struct_i_d_t_r_1acdee40c1e899300b428fdaee620723e5" kindref="member">base</ref><sp/>+=(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)<sp/>&amp;idt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idtr.<ref refid="struct_i_d_t_r_1ab5c3c0a36eb16002f03ae8565e505e89" kindref="member">limit</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(idt)-1;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1ae8fa119f684ecab085b10ac3057a7dfc" kindref="member" tooltip="Brief.">_lidt</ref><sp/>(&amp;idtr);<sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a7a9e898c2f9b5aae935f0668c962d02f" kindref="member" tooltip="Initializes the pagination and turns it on.">initPaging</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="video__driver_8h_1a67e96e514d9f296c79378f7fbfba457a" kindref="member">clearScreen</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a9ee58440374f467ffe3fa7100485272c" kindref="member" tooltip="Create the table of ttys. The maximum of ttys is a define.">initializeTTY</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sh_memory_8h_1a574d3f5987a7f9a3723ac7bddaf4e060" kindref="member" tooltip="Initializes all the shared memories.">initializeShMems</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="semaphore_8h_1a890c313036014ee4d5c75c3519b831eb" kindref="member" tooltip="Initializes all semaphores.">initializeSemaphores</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="video__driver_8h_1a8830e25eeec93f2edd0c4d2ee99d6c91" kindref="member" tooltip="Initializes the video driver, by setting the initial cursor position, setting it&amp;#39;s...">initVideo</ref>(<ref refid="config_8h_1a4a96c64dbab22978dda9bbf3a52a9fb7" kindref="member" tooltip="The state of the cursor, Visible = 1 v NotVisible = 0.">CURSOR_START_VISIBLE</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1add8034131384a469e96c6efeb83d6043" kindref="member" tooltip="Initializes the multitasker and creates the init process.">initMultitasker</ref>(<ref refid="bin_8h_1a5bfde7b5020b14bdcb1c9269ab308dc5" kindref="member" tooltip="This functions initialize the welcome process, all the shells and goodbye process...">init</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1adc8888227cfbdfe307b5b5bd0ee5c80a" kindref="member" tooltip="Brief.">_Cli</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1a040f3ed216543a3a9ddebd17f2b2bcd0" kindref="member" tooltip="Brief.">_mascaraPIC1</ref>(0xFC);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1a7bcff8af975befd9654311a14bde1098" kindref="member" tooltip="Brief.">_mascaraPIC2</ref>(0xFF);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kasm_8h_1a38b31cfe95df07495ffe67cc0b6a9c5d" kindref="member" tooltip="Brief.">_Sti</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Main<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/kernel.c"/>
+  </compounddef>
+</doxygen>

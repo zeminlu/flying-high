@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structtty__s" kind="struct" prot="public">
+    <compoundname>tty_s</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtty__s_1a7bdcbca143d0773edef7d01762d42aff" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+        <definition>tty_t ttyId</definition>
+        <argsstring></argsstring>
+        <name>ttyId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="253" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="253" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1aac09c476e825138ad51c1c5948f47748" compoundref="ttys_8c" startline="516" endline="526">changeFocusTTY</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1a44c2fc56a32fd5125ebc51b6b2c0e178" prot="public" static="no" mutable="no">
+        <type><ref refid="structstd_in_t_t_y" kindref="compound">stdInTTY</ref> *</type>
+        <definition>stdInTTY* stdIn</definition>
+        <argsstring></argsstring>
+        <name>stdIn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="254" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="254" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1a0651a2e4ac304fdc5837a8eb0b0bd166" prot="public" static="no" mutable="no">
+        <type><ref refid="structstd_out_t_t_y" kindref="compound">stdOutTTY</ref> *</type>
+        <definition>stdOutTTY* stdOut</definition>
+        <argsstring></argsstring>
+        <name>stdOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="255" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="255" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1a5be2ba5c5e17899443300974060fe13f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hasScrolled</definition>
+        <argsstring></argsstring>
+        <name>hasScrolled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="256" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="256" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1a8b368b52e988f2fb5f99aeb979fe4040" compoundref="ttys_8c" startline="458" endline="468">putCharTTY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t focusProcess</definition>
+        <argsstring></argsstring>
+        <name>focusProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="257" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="257" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+        <referencedby refid="ttys_8c_1a99a0a65415f2b25acb0d456bc9642905" compoundref="ttys_8c" startline="558" endline="560">sysGetTTYFocusedProcess</referencedby>
+        <referencedby refid="ttys_8c_1aca07223864f88814919b02e6729569a5" compoundref="ttys_8c" startline="554" endline="556">sysSetTTYFocusedProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int writePointer</definition>
+        <argsstring></argsstring>
+        <name>writePointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="258" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="258" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a5c29772760b26cdfca93bc1284b60732" compoundref="ttys_8c" startline="88" endline="93">getWritePointer</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1a8b368b52e988f2fb5f99aeb979fe4040" compoundref="ttys_8c" startline="458" endline="468">putCharTTY</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="ttys_8c_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</referencedby>
+        <referencedby refid="ttys_8c_1af5041dd94c379cc8189ec93b816c3a20" compoundref="ttys_8c" startline="104" endline="108">setWritePointer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1ae1216492f5b395a931efcab6127d0160" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int writeCol</definition>
+        <argsstring></argsstring>
+        <name>writeCol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="259" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="259" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a5c29772760b26cdfca93bc1284b60732" compoundref="ttys_8c" startline="88" endline="93">getWritePointer</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="ttys_8c_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</referencedby>
+        <referencedby refid="ttys_8c_1af5041dd94c379cc8189ec93b816c3a20" compoundref="ttys_8c" startline="104" endline="108">setWritePointer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int writeRow</definition>
+        <argsstring></argsstring>
+        <name>writeRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="260" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="260" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a5c29772760b26cdfca93bc1284b60732" compoundref="ttys_8c" startline="88" endline="93">getWritePointer</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="ttys_8c_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</referencedby>
+        <referencedby refid="ttys_8c_1af5041dd94c379cc8189ec93b816c3a20" compoundref="ttys_8c" startline="104" endline="108">setWritePointer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1aa0a6145a711115035caf96d6d1c7d9fb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int readPointer</definition>
+        <argsstring></argsstring>
+        <name>readPointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="261" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="261" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a5cab16b9bb408c134bba477fa1436919" compoundref="ttys_8c" startline="81" endline="85">getReadPointer</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1ae286c1ea11787c6fcf410fb0474c2626" compoundref="ttys_8c" startline="96" endline="101">setReadPointer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1a38beda239dc9e9eb6f58cc2e818fbaa6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int readCol</definition>
+        <argsstring></argsstring>
+        <name>readCol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="262" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="262" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a5cab16b9bb408c134bba477fa1436919" compoundref="ttys_8c" startline="81" endline="85">getReadPointer</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1ae286c1ea11787c6fcf410fb0474c2626" compoundref="ttys_8c" startline="96" endline="101">setReadPointer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtty__s_1a0aef55ec53e97b2ad384eb814d316e9b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int readRow</definition>
+        <argsstring></argsstring>
+        <name>readRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="263" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="263" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a5cab16b9bb408c134bba477fa1436919" compoundref="ttys_8c" startline="81" endline="85">getReadPointer</referencedby>
+        <referencedby refid="ttys_8c_1a9ee58440374f467ffe3fa7100485272c" compoundref="ttys_8c" startline="50" endline="74">initializeTTY</referencedby>
+        <referencedby refid="ttys_8c_1ae286c1ea11787c6fcf410fb0474c2626" compoundref="ttys_8c" startline="96" endline="101">setReadPointer</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="structtty__s" kindref="compound">tty_s</ref> struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="126">
+        <label>stdInTTY</label>
+        <link refid="structstd_in_t_t_y"/>
+      </node>
+      <node id="127">
+        <label>stdOutTTY</label>
+        <link refid="structstd_out_t_t_y"/>
+      </node>
+      <node id="125">
+        <label>tty_s</label>
+        <link refid="structtty__s"/>
+        <childnode refid="126" relation="usage">
+          <edgelabel>stdIn</edgelabel>
+        </childnode>
+        <childnode refid="127" relation="usage">
+          <edgelabel>stdOut</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="252" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="252" bodyend="264"/>
+    <listofallmembers>
+      <member refid="structtty__s_1afefb5a7d2161ce434bcc2bbb358d5b0b" prot="public" virt="non-virtual"><scope>tty_s</scope><name>focusProcess</name></member>
+      <member refid="structtty__s_1a5be2ba5c5e17899443300974060fe13f" prot="public" virt="non-virtual"><scope>tty_s</scope><name>hasScrolled</name></member>
+      <member refid="structtty__s_1a38beda239dc9e9eb6f58cc2e818fbaa6" prot="public" virt="non-virtual"><scope>tty_s</scope><name>readCol</name></member>
+      <member refid="structtty__s_1aa0a6145a711115035caf96d6d1c7d9fb" prot="public" virt="non-virtual"><scope>tty_s</scope><name>readPointer</name></member>
+      <member refid="structtty__s_1a0aef55ec53e97b2ad384eb814d316e9b" prot="public" virt="non-virtual"><scope>tty_s</scope><name>readRow</name></member>
+      <member refid="structtty__s_1a44c2fc56a32fd5125ebc51b6b2c0e178" prot="public" virt="non-virtual"><scope>tty_s</scope><name>stdIn</name></member>
+      <member refid="structtty__s_1a0651a2e4ac304fdc5837a8eb0b0bd166" prot="public" virt="non-virtual"><scope>tty_s</scope><name>stdOut</name></member>
+      <member refid="structtty__s_1a7bdcbca143d0773edef7d01762d42aff" prot="public" virt="non-virtual"><scope>tty_s</scope><name>ttyId</name></member>
+      <member refid="structtty__s_1ae1216492f5b395a931efcab6127d0160" prot="public" virt="non-virtual"><scope>tty_s</scope><name>writeCol</name></member>
+      <member refid="structtty__s_1a3a1ce6ba5935d1763d5b04f50fee62f7" prot="public" virt="non-virtual"><scope>tty_s</scope><name>writePointer</name></member>
+      <member refid="structtty__s_1a0bd76a596e01d0e7b4775aab29dcf425" prot="public" virt="non-virtual"><scope>tty_s</scope><name>writeRow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

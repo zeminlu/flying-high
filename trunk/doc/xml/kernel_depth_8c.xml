@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="kernel_depth_8c" kind="file">
+    <compoundname>kernelDepth.c</compoundname>
+    <includes local="yes">../inc/kernelDepth.h</includes>
+    <incdepgraph>
+      <node id="4174">
+        <label>src/kernelDepth.c</label>
+        <link refid="kernelDepth.c"/>
+        <childnode refid="4175" relation="include">
+        </childnode>
+      </node>
+      <node id="4175">
+        <label>../inc/kernelDepth.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="kernel_depth_8c_1a0bdc4d5f625427f709b70bef00b4ed19" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int atomicCounter</definition>
+        <argsstring></argsstring>
+        <name>atomicCounter</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/kernelDepth.c" line="12" bodyfile="/Users/Luciano/Desktop/flying-high/src/kernelDepth.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kernel_depth_8c_1a60e4cee7d263ef4134a3d83ab35de9c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void increaseKernelDepth</definition>
+        <argsstring>(void)</argsstring>
+        <name>increaseKernelDepth</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function increases the depth relating to the iteration of system calls maintaining the presence of the kernel heap pages. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="kernel_depth_8h_1a12d75a01091aa2aef0b93c98f76b859d" kindref="member">decreaseKernelDepth()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/kernelDepth.c" line="14" bodyfile="/Users/Luciano/Desktop/flying-high/src/kernelDepth.c" bodystart="14" bodyend="21"/>
+        <references refid="mem_module_8h_1ad2ea87727da761c9bcb36881d36bef21" compoundref="mem_module_8c" startline="67" endline="69">setKernelHeapPresence</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="kernel_depth_8c_1a12d75a01091aa2aef0b93c98f76b859d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void decreaseKernelDepth</definition>
+        <argsstring>(void)</argsstring>
+        <name>decreaseKernelDepth</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function decreases the depth relating to the iteration of system calls maintaining the presence of the kernel heap pages if needed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="kernel_depth_8h_1a12d75a01091aa2aef0b93c98f76b859d" kindref="member">decreaseKernelDepth()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/kernelDepth.c" line="23" bodyfile="/Users/Luciano/Desktop/flying-high/src/kernelDepth.c" bodystart="23" bodyend="28"/>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="mem_module_8h_1ad2ea87727da761c9bcb36881d36bef21" compoundref="mem_module_8c" startline="67" endline="69">setKernelHeapPresence</references>
+        <referencedby refid="syscall_8c_1a13d5257c80be9824dd100a5d21a6b1de" compoundref="syscall_8c" startline="114" endline="128">_sysExit</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Kernel syscalls depth utilities implementation. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;../inc/kernelDepth.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>atomicCounter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="kernel_depth_8c_1a60e4cee7d263ef4134a3d83ab35de9c6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kernel_depth_8h_1a60e4cee7d263ef4134a3d83ab35de9c6" kindref="member" tooltip="This function increases the depth relating to the iteration of system calls maintaining...">increaseKernelDepth</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>atomicCounter++<sp/>==<sp/>0<sp/>){<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1ad2ea87727da761c9bcb36881d36bef21" kindref="member" tooltip="Sets the presence bit of the kernel heap pages according to the given parameter.">setKernelHeapPresence</ref>(<ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="kernel_depth_8c_1a12d75a01091aa2aef0b93c98f76b859d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kernel_depth_8h_1a12d75a01091aa2aef0b93c98f76b859d" kindref="member" tooltip="This function decreases the depth relating to the iteration of system calls maintaining...">decreaseKernelDepth</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>--atomicCounter<sp/>==<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1ad2ea87727da761c9bcb36881d36bef21" kindref="member" tooltip="Sets the presence bit of the kernel heap pages according to the given parameter.">setKernelHeapPresence</ref>(<ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/kernelDepth.c"/>
+  </compounddef>
+</doxygen>

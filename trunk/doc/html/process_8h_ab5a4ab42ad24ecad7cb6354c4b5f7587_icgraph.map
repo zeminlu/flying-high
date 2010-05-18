@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$bin_8c.html#a5bfde7b5020b14bdcb1c9269ab308dc5" title="This functions initialize the welcome process, all the shells and goodbye process..." alt="" coords="320,5,363,35"/>
+<area shape="rect" id="node7" href="$shell_8c.html#a225cd0af1ed8359b2973453e2a22a94b" title="The function that runs the shell application." alt="" coords="220,31,271,60"/>
+<area shape="rect" id="node10" href="$bin_8c.html#a9795fbee9531f56aeda1376bf9934506" title="This function show what percentage of the microprocessor it is using each process..." alt="" coords="223,84,268,113"/>
+<area shape="rect" id="node5" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="412,5,513,35"/>
+</map>

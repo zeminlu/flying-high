@@ -1,0 +1,121 @@
+\hypertarget{queue_8c}{
+\section{src/queue.c File Reference}
+\label{queue_8c}\index{src/queue.c@{src/queue.c}}
+}
+{\ttfamily \#include \char`\"{}queue.h\char`\"{}}\par
+Include dependency graph for queue.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=100pt]{queue_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{queue_8c_a5441ca2ea8de82a1f1ba4b31a2b9e96b}{charEnque} (\hyperlink{types_8h_a90ed3c9028a7fa45665d10b5210fa142}{Keycode} elem)
+\item 
+\hyperlink{types_8h_a90ed3c9028a7fa45665d10b5210fa142}{Keycode} \hyperlink{queue_8c_a00e18f7d2a6c9f6fc779b4312aeb38d6}{charDeque} (void)
+\begin{DoxyCompactList}\small\item\em Dequeue an element while the buffer is not Empty. \item\end{DoxyCompactList}\item 
+int \hyperlink{queue_8c_ab50e760055a693e439a8ac83cedee6bd}{kbBufferIsEmpty} (void)
+\begin{DoxyCompactList}\small\item\em return if the buffer is empty \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a90ed3c9028a7fa45665d10b5210fa142}{Keycode} $\ast$ \hyperlink{queue_8c_ada1a59b14be333012bb872bfc12efeb7}{keyboardBuffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{queue_8c_a00e18f7d2a6c9f6fc779b4312aeb38d6}{
+\index{queue.c@{queue.c}!charDeque@{charDeque}}
+\index{charDeque@{charDeque}!queue.c@{queue.c}}
+\subsubsection[{charDeque}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keycode} charDeque (void)}}
+\label{queue_8c_a00e18f7d2a6c9f6fc779b4312aeb38d6}
+
+
+Dequeue an element while the buffer is not Empty. 
+
+\begin{DoxyReturn}{Returns}
+The keycode 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file queue.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{queue_8c_a00e18f7d2a6c9f6fc779b4312aeb38d6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{queue_8c_a5441ca2ea8de82a1f1ba4b31a2b9e96b}{
+\index{queue.c@{queue.c}!charEnque@{charEnque}}
+\index{charEnque@{charEnque}!queue.c@{queue.c}}
+\subsubsection[{charEnque}]{\setlength{\rightskip}{0pt plus 5cm}int charEnque ({\bf Keycode} {\em elem})}}
+\label{queue_8c_a5441ca2ea8de82a1f1ba4b31a2b9e96b}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em elem}]This function receive the ASCII code of the key to enqueue in the buffer.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the key was added or FALSE if the buffer is FULL 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file queue.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=123pt]{queue_8c_a5441ca2ea8de82a1f1ba4b31a2b9e96b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{queue_8c_ab50e760055a693e439a8ac83cedee6bd}{
+\index{queue.c@{queue.c}!kbBufferIsEmpty@{kbBufferIsEmpty}}
+\index{kbBufferIsEmpty@{kbBufferIsEmpty}!queue.c@{queue.c}}
+\subsubsection[{kbBufferIsEmpty}]{\setlength{\rightskip}{0pt plus 5cm}int kbBufferIsEmpty (void)}}
+\label{queue_8c_ab50e760055a693e439a8ac83cedee6bd}
+
+
+return if the buffer is empty 
+
+\begin{DoxyReturn}{Returns}
+TRUE if it's empty, FALSE if not 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file queue.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{queue_8c_ab50e760055a693e439a8ac83cedee6bd_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{queue_8c_ada1a59b14be333012bb872bfc12efeb7}{
+\index{queue.c@{queue.c}!keyboardBuffer@{keyboardBuffer}}
+\index{keyboardBuffer@{keyboardBuffer}!queue.c@{queue.c}}
+\subsubsection[{keyboardBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keycode}$\ast$ {\bf keyboardBuffer}}}
+\label{queue_8c_ada1a59b14be333012bb872bfc12efeb7}
+
+
+Definition at line 180 of file keyboard\_\-driver.c.
+

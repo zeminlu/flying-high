@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$video__driver_8h.html#aa79e7c52525ffc6bd8c2ead33c21e851" title="Puts a character into the video buffer at the current position and moves the cursor..." alt="" coords="140,5,257,35"/>
+<area shape="rect" id="node5" href="$video__driver_8h.html#ace4f44f407dbc302d026eadcdfc3c872" title="Increments the position of the cursor by one unit. Automatically resolves new lines..." alt="" coords="308,5,391,35"/>
+</map>

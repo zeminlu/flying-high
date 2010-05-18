@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$io_8h.html#ac17a6cfbeef702c55063c3350220c126" title="This function grabs the value stored in the given port." alt="" coords="332,5,401,35"/>
+<area shape="rect" id="node5" href="$io_8h.html#a816f57bd2dc5cfc848e5f6954476844c" title="This function stores the given value in the given port." alt="" coords="327,71,407,100"/>
+<area shape="rect" id="node7" href="$video__driver_8h.html#ab7319ae93754c193869c17959927aafe" title="Sets the cursor&#39;s visibility. Zero to turn it off not zero to turn it on." alt="" coords="135,44,276,73"/>
+</map>

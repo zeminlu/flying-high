@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$rand_8h.html" title="Random number generation module." alt="" coords="932,83,993,112"/>
+<area shape="rect" id="node5" href="$syscall_8h.html" title="Implementation of every system call." alt="" coords="1196,160,1273,189"/>
+<area shape="rect" id="node7" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="1503,1011,1575,1040"/>
+<area shape="rect" id="node15" href="$mem_module_8h.html" title="The memory management / paging module." alt="" coords="805,779,923,808"/>
+<area shape="rect" id="node17" href="$string_8h.html" title="Declaration of all functions that deals with strings and buffers." alt="" coords="1275,933,1347,963"/>
+<area shape="rect" id="node28" href="$process_8h.html" title="All the process functions that invoke syscalls." alt="" coords="1192,237,1277,267"/>
+<area shape="rect" id="node37" href="$ttys_8h.html" title="The tty header file." alt="" coords="411,547,472,576"/>
+<area shape="rect" id="node68" href="$schedule_8h.html" title="The OS scheduler module." alt="" coords="1205,547,1299,576"/>
+<area shape="rect" id="node107" href="$kasm_8h.html" title="Kernel utilities." alt="" coords="2360,547,2429,576"/>
+<area shape="rect" id="node142" href="$kernel_depth_8h.html" title="Kernel syscalls depth utilities." alt="" coords="2161,469,2279,499"/>
+<area shape="rect" id="node9" href="$defs_8h.html" title="OS inner defines." alt="" coords="1600,1088,1661,1117"/>
+<area shape="rect" id="node11" href="$config_8h.html" title="OS configuration defines." alt="" coords="1501,1088,1576,1117"/>
+<area shape="rect" id="node13" href="$colors_8h.html" title="Video Color defines." alt="" coords="2337,1165,2409,1195"/>
+<area shape="rect" id="node20" href="$stdio_8h.html" title="Definitions for all standard input and output and declaration of all functions to..." alt="" coords="853,856,920,885"/>
+<area shape="rect" id="node23" href="$unistd_8h.html" title="Definitions for all UNIX Standard system calls functions." alt="" coords="924,933,999,963"/>
+<area shape="rect" id="node31" href="$int80_8h.html" title="int 80 generic calls." alt="" coords="1201,315,1268,344"/>
+<area shape="rect" id="node35" href="$sys_process_8h.html" title="OS system utilities." alt="" coords="387,315,496,344"/>
+<area shape="rect" id="node41" href="$keyboard__buffer_8h.html" title="This is the internal keyboard buffer." alt="" coords="195,701,336,731"/>
+<area shape="rect" id="node56" href="$k_malloc_8h.html" title="The kernel malloc module." alt="" coords="648,624,731,653"/>
+<area shape="rect" id="node81" href="$shell_8h.html" title="The shell process module." alt="" coords="1372,392,1436,421"/>
+<area shape="rect" id="node39" href="$queue_8h.html" title="Keyboard queue module." alt="" coords="347,624,421,653"/>
+<area shape="rect" id="node45" href="$video__driver_8h.html" title="Defines the basic function to manage the video screen, cursor &amp; mouse pointer..." alt="" coords="1217,624,1332,653"/>
+<area shape="rect" id="node47" href="$io_8h.html" title="Declaration of functions and constants related with direct access to hardware." alt="" coords="1252,701,1297,731"/>
+<area shape="rect" id="node59" href="$sys_malloc_8h.html" title="Generic malloc module." alt="" coords="907,701,1005,731"/>
+<area shape="rect" id="node71" href="$u_malloc_8h.html" title="User malloc module." alt="" coords="1109,624,1192,653"/>
+<area shape="rect" id="node86" href="$system_8h.html" title="System reboot module." alt="" coords="1441,469,1527,499"/>
+<area shape="rect" id="node96" href="$bin_8h.html" title="All the OS processes." alt="" coords="853,469,907,499"/>
+<area shape="rect" id="node126" href="$bttlship_8h.html" title="The header file of the battleship game." alt="" coords="1876,469,1961,499"/>
+<area shape="rect" id="node120" href="$semaphore_8h.html" title="The OS semaphore module." alt="" coords="1981,624,2091,653"/>
+<area shape="rect" id="node133" href="$sh_memory_8h.html" title="The shared memory IPC module." alt="" coords="2032,547,2133,576"/>
+</map>

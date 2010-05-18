@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="unistd_8h" kind="file">
+    <compoundname>unistd.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="shell_8h" local="yes">inc/shell.h</includedby>
+    <includedby refid="stdio_8h" local="yes">inc/stdio.h</includedby>
+    <includedby refid="ttys_8h" local="yes">inc/ttys.h</includedby>
+    <incdepgraph>
+      <node id="3991">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3987">
+        <label>inc/unistd.h</label>
+        <link refid="unistd.h"/>
+        <childnode refid="3988" relation="include">
+        </childnode>
+      </node>
+      <node id="3988">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3989" relation="include">
+        </childnode>
+        <childnode refid="3990" relation="include">
+        </childnode>
+      </node>
+      <node id="3990">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3991" relation="include">
+        </childnode>
+      </node>
+      <node id="3989">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4008">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="4000" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4009" relation="include">
+        </childnode>
+      </node>
+      <node id="3994">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="3995" relation="include">
+        </childnode>
+      </node>
+      <node id="4024">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="4004">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="4004" relation="include">
+        </childnode>
+      </node>
+      <node id="4001">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="4013">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4000" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="4014" relation="include">
+        </childnode>
+      </node>
+      <node id="4007">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3999" relation="include">
+        </childnode>
+        <childnode refid="4008" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4003" relation="include">
+        </childnode>
+        <childnode refid="4010" relation="include">
+        </childnode>
+      </node>
+      <node id="4017">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3996" relation="include">
+        </childnode>
+        <childnode refid="4007" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4018" relation="include">
+        </childnode>
+      </node>
+      <node id="4018">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3992">
+        <label>inc/unistd.h</label>
+        <link refid="unistd.h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3996" relation="include">
+        </childnode>
+        <childnode refid="4026" relation="include">
+        </childnode>
+        <childnode refid="4003" relation="include">
+        </childnode>
+      </node>
+      <node id="4026">
+        <label>inc/stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="4000" relation="include">
+        </childnode>
+        <childnode refid="4004" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="4002" relation="include">
+        </childnode>
+        <childnode refid="4027" relation="include">
+        </childnode>
+        <childnode refid="3998" relation="include">
+        </childnode>
+        <childnode refid="3996" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4020" relation="include">
+        </childnode>
+        <childnode refid="4031" relation="include">
+        </childnode>
+      </node>
+      <node id="4025">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="4023">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="4002">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4003" relation="include">
+        </childnode>
+      </node>
+      <node id="3996">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4022" relation="include">
+        </childnode>
+        <childnode refid="4024" relation="include">
+        </childnode>
+      </node>
+      <node id="4020">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="4020" relation="include">
+        </childnode>
+      </node>
+      <node id="4022">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="3996" relation="include">
+        </childnode>
+        <childnode refid="4023" relation="include">
+        </childnode>
+      </node>
+      <node id="3997">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="3998" relation="include">
+        </childnode>
+        <childnode refid="3999" relation="include">
+        </childnode>
+        <childnode refid="4003" relation="include">
+        </childnode>
+        <childnode refid="4020" relation="include">
+        </childnode>
+        <childnode refid="4021" relation="include">
+        </childnode>
+      </node>
+      <node id="4028">
+        <label>inc/kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4007" relation="include">
+        </childnode>
+      </node>
+      <node id="4031">
+        <label>src/stdio.c</label>
+        <link refid="stdio_8c"/>
+      </node>
+      <node id="4014">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="4005">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="4006" relation="include">
+        </childnode>
+      </node>
+      <node id="4029">
+        <label>inc/sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="4002" relation="include">
+        </childnode>
+        <childnode refid="4016" relation="include">
+        </childnode>
+        <childnode refid="4030" relation="include">
+        </childnode>
+      </node>
+      <node id="4030">
+        <label>src/sysMalloc.c</label>
+        <link refid="sys_malloc_8c"/>
+      </node>
+      <node id="4003">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="4000" relation="include">
+        </childnode>
+        <childnode refid="4004" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="4005" relation="include">
+        </childnode>
+        <childnode refid="4007" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4011" relation="include">
+        </childnode>
+      </node>
+      <node id="4000">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3996" relation="include">
+        </childnode>
+        <childnode refid="4001" relation="include">
+        </childnode>
+      </node>
+      <node id="3999">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="4000" relation="include">
+        </childnode>
+        <childnode refid="4002" relation="include">
+        </childnode>
+        <childnode refid="4012" relation="include">
+        </childnode>
+        <childnode refid="3996" relation="include">
+        </childnode>
+        <childnode refid="4007" relation="include">
+        </childnode>
+        <childnode refid="4016" relation="include">
+        </childnode>
+        <childnode refid="4019" relation="include">
+        </childnode>
+      </node>
+      <node id="4021">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="4019">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="4015">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="4012">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="4000" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="4013" relation="include">
+        </childnode>
+        <childnode refid="4015" relation="include">
+        </childnode>
+      </node>
+      <node id="4010">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="3995">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="4009">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="4011">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="4027">
+        <label>inc/memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="4028" relation="include">
+        </childnode>
+        <childnode refid="4002" relation="include">
+        </childnode>
+        <childnode refid="4007" relation="include">
+        </childnode>
+        <childnode refid="4029" relation="include">
+        </childnode>
+        <childnode refid="3997" relation="include">
+        </childnode>
+        <childnode refid="4016" relation="include">
+        </childnode>
+      </node>
+      <node id="4006">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="4016">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="4017" relation="include">
+        </childnode>
+        <childnode refid="3996" relation="include">
+        </childnode>
+      </node>
+      <node id="3993">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3993" relation="include">
+        </childnode>
+        <childnode refid="3994" relation="include">
+        </childnode>
+        <childnode refid="3996" relation="include">
+        </childnode>
+        <childnode refid="4025" relation="include">
+        </childnode>
+      </node>
+      <node id="3998">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a1bd78dbcdb69d819cb6ea4dfa78daaec" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t write</definition>
+        <argsstring>(int fileds, const void *buffer, size_t count)</argsstring>
+        <name>write</name>
+        <param>
+          <type>int</type>
+          <declname>fileds</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" kindref="member">write()</ref> writes &quot;count&quot; bytes from the buffer pointed by &quot;buffer&quot; into the file descripted by the file descriptor &quot;fileds&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the file descriptor for the file where the data is going to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the buffer where the information to be written is hold. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes that will be written in the file from the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the amount of bytes successfully written in the file or -1 in case of error.</para></simplesect>
+Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Hello<sp/>World!\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" kindref="member" tooltip="write() writes &amp;quot;count&amp;quot; bytes from the buffer pointed by &amp;quot;buffer&amp;quot;...">write</ref>(<ref refid="defs_8h_1a8875037d0772a4fc34516f1e03d7e238" kindref="member" tooltip="DefineBrief.">STDOUT</ref>,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)message,<sp/><ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(message));</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="unistd_8h_1a116146ccc01b751779e5351615743547" kindref="member">read()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/unistd.h" line="44"/>
+        <referencedby refid="syscall_8c_1a164efe2f95b7739dbe1af7970ae89054" compoundref="syscall_8c" startline="98" endline="108">_sys_fwrite</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="unistd_8h_1a116146ccc01b751779e5351615743547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a1bd78dbcdb69d819cb6ea4dfa78daaec" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t read</definition>
+        <argsstring>(int fileds, void *buffer, size_t count)</argsstring>
+        <name>read</name>
+        <param>
+          <type>int</type>
+          <declname>fileds</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="unistd_8h_1a116146ccc01b751779e5351615743547" kindref="member">read()</ref> reads &quot;count&quot; bytes from the file descripted by the file descriptor &quot;fileds&quot; and saves it into the buffer pointed by &quot;buffer&quot; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the file descriptor for the file where the data is going to be read. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the buffer where the information is going to written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes that will be written in the buffeer from the file.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the amount of bytes that were successfully read from the file or -1 in case of error.</para></simplesect>
+Example <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="unistd_8h_1a116146ccc01b751779e5351615743547" kindref="member" tooltip="read() reads &amp;quot;count&amp;quot; bytes from the file descripted by the file descriptor...">read</ref>(<ref refid="defs_8h_1ac00bfb46347d26fdc58568fe1ab5fa5b" kindref="member" tooltip="DefineBrief.">STDIN</ref>,<sp/>buffer,<sp/>VIDEO_SIZE)<sp/>!=<sp/>VIDEO_SIZE<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>video<sp/>memory<sp/>could<sp/>not<sp/>be<sp/>read\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" kindref="member">write()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/unistd.h" line="72"/>
+        <referencedby refid="syscall_8c_1ae971be1b1f3083cc169d587cfc39f1e4" compoundref="syscall_8c" startline="86" endline="96">_sys_fread</referencedby>
+        <referencedby refid="ttys_8c_1a5543e64588b3c8d57ef150404d96c5a7" compoundref="ttys_8c" startline="529" endline="536">refreshStdout</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="unistd_8h_1a5c221b4b7f606967759233ad35c1b924" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+        <definition>size_t fread</definition>
+        <argsstring>(FILE *stream, void *buffer, size_t count)</argsstring>
+        <name>fread</name>
+        <param>
+          <type><ref refid="struct_f_i_l_e" kindref="compound">FILE</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Idem to the <ref refid="unistd_8h_1a116146ccc01b751779e5351615743547" kindref="member">read()</ref> function, but from the given stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream where to read from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the buffer where the information is going to written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes that will be written in the buffeer from the file.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The amount of bytes that were successfully read from the file or -1 in case of error.</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="unistd_8h_1a116146ccc01b751779e5351615743547" kindref="member" tooltip="read() reads &amp;quot;count&amp;quot; bytes from the file descripted by the file descriptor...">read</ref>(stream,<sp/>buffer,<sp/>VIDEO_SIZE)<sp/>!=<sp/>VIDEO_SIZE<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>video<sp/>memory<sp/>could<sp/>not<sp/>be<sp/>read\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="unistd_8h_1a681fc6e35e986fe5975afb7a110830a2" kindref="member">fwrite()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/unistd.h" line="94"/>
+        <referencedby refid="stdio_8c_1ab11a990e4f8863a1e7736e3c1d430092" compoundref="stdio_8c" startline="53" endline="64">fgetc</referencedby>
+        <referencedby refid="stdio_8c_1a2b3df0e66b41edab3c039191fe6cc4f9" compoundref="stdio_8c" startline="77" endline="84">fgets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="unistd_8h_1a681fc6e35e986fe5975afb7a110830a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+        <definition>size_t fwrite</definition>
+        <argsstring>(FILE *stream, void *buffer, size_t count)</argsstring>
+        <name>fwrite</name>
+        <param>
+          <type><ref refid="struct_f_i_l_e" kindref="compound">FILE</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Idem to the <ref refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" kindref="member">write()</ref> function, but to the given stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream where to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the buffer where the information to be written is hold. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes that will be written in the file from the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The amount of bytes that were successfully read from the file or -1 in case of error.</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Hello<sp/>World!\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" kindref="member" tooltip="write() writes &amp;quot;count&amp;quot; bytes from the buffer pointed by &amp;quot;buffer&amp;quot;...">write</ref>(stream,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)message,<sp/><ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(message));</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="unistd_8h_1a5c221b4b7f606967759233ad35c1b924" kindref="member">fread()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/unistd.h" line="116"/>
+        <referencedby refid="stdio_8c_1abe6299d5823dd023e610aaa619735a3f" compoundref="stdio_8c" startline="44" endline="51">fputc</referencedby>
+        <referencedby refid="stdio_8c_1a68236e664c1f0da049b25fba1c1695f6" compoundref="stdio_8c" startline="66" endline="75">fputs</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definitions for all UNIX Standard system calls functions. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_UNISTD_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_UNISTD_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>System<sp/>Calls<sp/>Functions</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="types_8h_1a1bd78dbcdb69d819cb6ea4dfa78daaec" kindref="member" tooltip="ssize_t typedef.">ssize_t</ref><sp/><ref refid="unistd_8h_1a52af614436e190ddabe1c00d82a2a424" kindref="member" tooltip="write() writes &amp;quot;count&amp;quot; bytes from the buffer pointed by &amp;quot;buffer&amp;quot;...">write</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fileds,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="types_8h_1a1bd78dbcdb69d819cb6ea4dfa78daaec" kindref="member" tooltip="ssize_t typedef.">ssize_t</ref><sp/><ref refid="unistd_8h_1a116146ccc01b751779e5351615743547" kindref="member" tooltip="read() reads &amp;quot;count&amp;quot; bytes from the file descripted by the file descriptor...">read</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fileds,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="unistd_8h_1a5c221b4b7f606967759233ad35c1b924" kindref="member" tooltip="Idem to the read() function, but from the given stream.">fread</ref>(<ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>*stream,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="unistd_8h_1a681fc6e35e986fe5975afb7a110830a2" kindref="member" tooltip="Idem to the write() function, but to the given stream.">fwrite</ref>(<ref refid="struct_f_i_l_e" kindref="compound" tooltip="The FILE struct.">FILE</ref><sp/>*stream,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/unistd.h"/>
+  </compounddef>
+</doxygen>

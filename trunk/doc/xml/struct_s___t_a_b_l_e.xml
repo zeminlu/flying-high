@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="struct_s___t_a_b_l_e" kind="struct" prot="public">
+    <compoundname>S_TABLE</compoundname>
+    <includes refid="bttlship_8h" local="no">bttlship.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int semid</definition>
+        <argsstring></argsstring>
+        <name>semid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="51" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="bttlship_8c_1af66d7960a49eb99b5260ba4d524e1ac8" compoundref="bttlship_8c" startline="450" endline="467">lockTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int waitSemid</definition>
+        <argsstring></argsstring>
+        <name>waitSemid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="52" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="bttlship_8c_1af66d7960a49eb99b5260ba4d524e1ac8" compoundref="bttlship_8c" startline="450" endline="467">lockTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s___t_a_b_l_e_1ae0d46a978d5cd6707411f276ad869b9c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t pid</definition>
+        <argsstring></argsstring>
+        <name>pid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="54" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s___t_a_b_l_e_1a5fb13144696f146a9d71fe9a41c3d7e0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bsites</definition>
+        <argsstring></argsstring>
+        <name>bsites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="55" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s___t_a_b_l_e_1a7f2737fd5784a77ca8c868b817c0ea0d" prot="public" static="no" mutable="no">
+        <type>struct S_TABLE::@0</type>
+        <definition>struct S_TABLE::@0        player[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="56"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char sea[N_X][N_Y]</definition>
+        <argsstring>[N_X][N_Y]</argsstring>
+        <name>sea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="57" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a6554029a39cab2edd50f67075f949926" compoundref="bttlship_8c" startline="283" endline="318">draw_hz</referencedby>
+        <referencedby refid="bttlship_8c_1a2d3705cb0dd809d88cd03e1bb39afb09" compoundref="bttlship_8c" startline="320" endline="355">draw_vt</referencedby>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char flg[N_X][N_Y]</definition>
+        <argsstring>[N_X][N_Y]</argsstring>
+        <name>flg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="58" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1aef4b6e9d64c7bff5215251a7bec36b37" compoundref="bttlship_8c" startline="231" endline="239">bomb</referencedby>
+        <referencedby refid="bttlship_8c_1a6554029a39cab2edd50f67075f949926" compoundref="bttlship_8c" startline="283" endline="318">draw_hz</referencedby>
+        <referencedby refid="bttlship_8c_1a2d3705cb0dd809d88cd03e1bb39afb09" compoundref="bttlship_8c" startline="320" endline="355">draw_vt</referencedby>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="50" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="50" bodyend="59"/>
+    <listofallmembers>
+      <member refid="struct_s___t_a_b_l_e_1a5fb13144696f146a9d71fe9a41c3d7e0" prot="public" virt="non-virtual"><scope>S_TABLE</scope><name>bsites</name></member>
+      <member refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" prot="public" virt="non-virtual"><scope>S_TABLE</scope><name>flg</name></member>
+      <member refid="struct_s___t_a_b_l_e_1ae0d46a978d5cd6707411f276ad869b9c" prot="public" virt="non-virtual"><scope>S_TABLE</scope><name>pid</name></member>
+      <member refid="struct_s___t_a_b_l_e_1a7f2737fd5784a77ca8c868b817c0ea0d" prot="public" virt="non-virtual"><scope>S_TABLE</scope><name>player</name></member>
+      <member refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" prot="public" virt="non-virtual"><scope>S_TABLE</scope><name>sea</name></member>
+      <member refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" prot="public" virt="non-virtual"><scope>S_TABLE</scope><name>semid</name></member>
+      <member refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" prot="public" virt="non-virtual"><scope>S_TABLE</scope><name>waitSemid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

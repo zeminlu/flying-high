@@ -1,0 +1,287 @@
+\hypertarget{sh_memory_8h}{
+\section{inc/shMemory.h File Reference}
+\label{sh_memory_8h}\index{inc/shMemory.h@{inc/shMemory.h}}
+}
+
+
+The shared memory IPC module.  
+
+
+{\ttfamily \#include \char`\"{}semaphore.h\char`\"{}}\par
+Include dependency graph for shMemory.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{sh_memory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{sh_memory_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sh_memory_8h_a752c83032a7bec60c904d97508ea4599}{IPC\_\-RMID}~1
+\item 
+\#define \hyperlink{sh_memory_8h_a1f1cdce55426e50878b1c71a4fc67a41}{IPC\_\-SET}~2
+\item 
+\#define \hyperlink{sh_memory_8h_a16a91ee69c3cb6bfec425e1bfd5edd18}{IPC\_\-STAT}~3
+\item 
+\#define \hyperlink{sh_memory_8h_ace43f23fcb66ddaad964bb8ea8de6e9c}{IPC\_\-CREAT}~4
+\item 
+\#define \hyperlink{sh_memory_8h_ae2b9b856a4a657c250b0b2e1cc0835d9}{IPC\_\-PRIVATE}~5
+\item 
+\#define \hyperlink{sh_memory_8h_a35446e5a03df8cd9106a60c06e3e058f}{MAX\_\-SHMEMS}~8
+\item 
+\#define \hyperlink{sh_memory_8h_a2eda346ce46bb7fba299935f1d7c958f}{MAX\_\-SHMAPPN}~MAX\_\-PROCESS
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sh_memory_8h_a8d7a1c046c2493a933e170ae65a20b18}{shmget} (\hyperlink{types_8h_a158b5efbc244b8995c439d60c976c818}{key\_\-t} key, int size)
+\begin{DoxyCompactList}\small\item\em Gets a new shared memory with the given key and size. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{sh_memory_8h_a5c3d92af6a333b8c351c9b7e5aeb98e1}{shmat} (int shmid, \hyperlink{types_8h_a158b5efbc244b8995c439d60c976c818}{key\_\-t} $\ast$semid)
+\begin{DoxyCompactList}\small\item\em Attaches the current process to the shmid shared memory. \item\end{DoxyCompactList}\item 
+int \hyperlink{sh_memory_8h_a1c89b0ee5786c3cf217319a997eb5add}{shmdt} (int shmid)
+\begin{DoxyCompactList}\small\item\em Detaches the current process form the shmid shared memory segment. \item\end{DoxyCompactList}\item 
+void \hyperlink{sh_memory_8h_a574d3f5987a7f9a3723ac7bddaf4e060}{initializeShMems} ()
+\begin{DoxyCompactList}\small\item\em Initializes all the shared memories. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The shared memory IPC module. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{sh_memory_8h_source}{shMemory.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{sh_memory_8h_ace43f23fcb66ddaad964bb8ea8de6e9c}{
+\index{shMemory.h@{shMemory.h}!IPC\_\-CREAT@{IPC\_\-CREAT}}
+\index{IPC\_\-CREAT@{IPC\_\-CREAT}!shMemory.h@{shMemory.h}}
+\subsubsection[{IPC\_\-CREAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define IPC\_\-CREAT~4}}
+\label{sh_memory_8h_ace43f23fcb66ddaad964bb8ea8de6e9c}
+
+
+Definition at line 17 of file shMemory.h.
+
+\hypertarget{sh_memory_8h_ae2b9b856a4a657c250b0b2e1cc0835d9}{
+\index{shMemory.h@{shMemory.h}!IPC\_\-PRIVATE@{IPC\_\-PRIVATE}}
+\index{IPC\_\-PRIVATE@{IPC\_\-PRIVATE}!shMemory.h@{shMemory.h}}
+\subsubsection[{IPC\_\-PRIVATE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IPC\_\-PRIVATE~5}}
+\label{sh_memory_8h_ae2b9b856a4a657c250b0b2e1cc0835d9}
+
+
+Definition at line 18 of file shMemory.h.
+
+\hypertarget{sh_memory_8h_a752c83032a7bec60c904d97508ea4599}{
+\index{shMemory.h@{shMemory.h}!IPC\_\-RMID@{IPC\_\-RMID}}
+\index{IPC\_\-RMID@{IPC\_\-RMID}!shMemory.h@{shMemory.h}}
+\subsubsection[{IPC\_\-RMID}]{\setlength{\rightskip}{0pt plus 5cm}\#define IPC\_\-RMID~1}}
+\label{sh_memory_8h_a752c83032a7bec60c904d97508ea4599}
+
+
+Definition at line 14 of file shMemory.h.
+
+\hypertarget{sh_memory_8h_a1f1cdce55426e50878b1c71a4fc67a41}{
+\index{shMemory.h@{shMemory.h}!IPC\_\-SET@{IPC\_\-SET}}
+\index{IPC\_\-SET@{IPC\_\-SET}!shMemory.h@{shMemory.h}}
+\subsubsection[{IPC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define IPC\_\-SET~2}}
+\label{sh_memory_8h_a1f1cdce55426e50878b1c71a4fc67a41}
+
+
+Definition at line 15 of file shMemory.h.
+
+\hypertarget{sh_memory_8h_a16a91ee69c3cb6bfec425e1bfd5edd18}{
+\index{shMemory.h@{shMemory.h}!IPC\_\-STAT@{IPC\_\-STAT}}
+\index{IPC\_\-STAT@{IPC\_\-STAT}!shMemory.h@{shMemory.h}}
+\subsubsection[{IPC\_\-STAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define IPC\_\-STAT~3}}
+\label{sh_memory_8h_a16a91ee69c3cb6bfec425e1bfd5edd18}
+
+
+Definition at line 16 of file shMemory.h.
+
+\hypertarget{sh_memory_8h_a2eda346ce46bb7fba299935f1d7c958f}{
+\index{shMemory.h@{shMemory.h}!MAX\_\-SHMAPPN@{MAX\_\-SHMAPPN}}
+\index{MAX\_\-SHMAPPN@{MAX\_\-SHMAPPN}!shMemory.h@{shMemory.h}}
+\subsubsection[{MAX\_\-SHMAPPN}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-SHMAPPN~MAX\_\-PROCESS}}
+\label{sh_memory_8h_a2eda346ce46bb7fba299935f1d7c958f}
+
+
+Definition at line 21 of file shMemory.h.
+
+\hypertarget{sh_memory_8h_a35446e5a03df8cd9106a60c06e3e058f}{
+\index{shMemory.h@{shMemory.h}!MAX\_\-SHMEMS@{MAX\_\-SHMEMS}}
+\index{MAX\_\-SHMEMS@{MAX\_\-SHMEMS}!shMemory.h@{shMemory.h}}
+\subsubsection[{MAX\_\-SHMEMS}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-SHMEMS~8}}
+\label{sh_memory_8h_a35446e5a03df8cd9106a60c06e3e058f}
+
+
+Definition at line 20 of file shMemory.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{sh_memory_8h_a574d3f5987a7f9a3723ac7bddaf4e060}{
+\index{shMemory.h@{shMemory.h}!initializeShMems@{initializeShMems}}
+\index{initializeShMems@{initializeShMems}!shMemory.h@{shMemory.h}}
+\subsubsection[{initializeShMems}]{\setlength{\rightskip}{0pt plus 5cm}void initializeShMems ()}}
+\label{sh_memory_8h_a574d3f5987a7f9a3723ac7bddaf4e060}
+
+
+Initializes all the shared memories. 
+
+
+
+Definition at line 60 of file shMemory.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{sh_memory_8h_a574d3f5987a7f9a3723ac7bddaf4e060_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sh_memory_8h_a5c3d92af6a333b8c351c9b7e5aeb98e1}{
+\index{shMemory.h@{shMemory.h}!shmat@{shmat}}
+\index{shmat@{shmat}!shMemory.h@{shMemory.h}}
+\subsubsection[{shmat}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ shmat (int {\em shmid}, \/  {\bf key\_\-t} $\ast$ {\em semid})}}
+\label{sh_memory_8h_a5c3d92af6a333b8c351c9b7e5aeb98e1}
+
+
+Attaches the current process to the shmid shared memory. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em shmid}]The id of the shared memory segment. \item[{\em semid}]A pointer to a key\_\-t variable where to store the shared memory inner semaphore id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the shared memory space.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{sh_memory_8h_a8d7a1c046c2493a933e170ae65a20b18}{shmget()} \hyperlink{sh_memory_8h_a1c89b0ee5786c3cf217319a997eb5add}{shmdt()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 35 of file shMemory.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=86pt]{sh_memory_8h_a5c3d92af6a333b8c351c9b7e5aeb98e1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{sh_memory_8h_a5c3d92af6a333b8c351c9b7e5aeb98e1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sh_memory_8h_a1c89b0ee5786c3cf217319a997eb5add}{
+\index{shMemory.h@{shMemory.h}!shmdt@{shmdt}}
+\index{shmdt@{shmdt}!shMemory.h@{shMemory.h}}
+\subsubsection[{shmdt}]{\setlength{\rightskip}{0pt plus 5cm}int shmdt (int {\em shmid})}}
+\label{sh_memory_8h_a1c89b0ee5786c3cf217319a997eb5add}
+
+
+Detaches the current process form the shmid shared memory segment. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em shmid}]The id of the shared memory segment.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{sh_memory_8h_a8d7a1c046c2493a933e170ae65a20b18}{shmget()} \hyperlink{sh_memory_8h_a5c3d92af6a333b8c351c9b7e5aeb98e1}{shmat()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 39 of file shMemory.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=86pt]{sh_memory_8h_a1c89b0ee5786c3cf217319a997eb5add_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=93pt]{sh_memory_8h_a1c89b0ee5786c3cf217319a997eb5add_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sh_memory_8h_a8d7a1c046c2493a933e170ae65a20b18}{
+\index{shMemory.h@{shMemory.h}!shmget@{shmget}}
+\index{shmget@{shmget}!shMemory.h@{shMemory.h}}
+\subsubsection[{shmget}]{\setlength{\rightskip}{0pt plus 5cm}int shmget ({\bf key\_\-t} {\em key}, \/  int {\em size})}}
+\label{sh_memory_8h_a8d7a1c046c2493a933e170ae65a20b18}
+
+
+Gets a new shared memory with the given key and size. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em key}]The key for the shared memory segment. \item[{\em size}]The shared memory size.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the shared memory on success, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{sh_memory_8h_a5c3d92af6a333b8c351c9b7e5aeb98e1}{shmat()} \hyperlink{sh_memory_8h_a1c89b0ee5786c3cf217319a997eb5add}{shmdt()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 31 of file shMemory.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=89pt]{sh_memory_8h_a8d7a1c046c2493a933e170ae65a20b18_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=102pt]{sh_memory_8h_a8d7a1c046c2493a933e170ae65a20b18_icgraph}
+\end{center}
+\end{figure}
+
+

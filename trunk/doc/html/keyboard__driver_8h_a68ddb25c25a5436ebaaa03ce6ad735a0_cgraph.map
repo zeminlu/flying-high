@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$queue_8h.html#ad3b45b6912c2aa908942a369076a7c01" title="charEnque" alt="" coords="235,85,328,115"/>
+<area shape="rect" id="node5" href="$io_8h.html#ac17a6cfbeef702c55063c3350220c126" title="This function grabs the value stored in the given port." alt="" coords="247,139,316,168"/>
+<area shape="rect" id="node7" href="$ttys_8h.html#abbca9cfc412d307fa56ca4a4095f0f87" title="Leaves all of character that are in the KeyboradBuffer and put in the correct tty..." alt="" coords="183,192,380,221"/>
+<area shape="rect" id="node38" href="$keyboard__driver_8h.html#ae8a256c73e7395a726e5609efef38ceb" title="This function detect if a control key was pressed and set his internal flag." alt="" coords="227,245,336,275"/>
+<area shape="rect" id="node9" href="$ttys_8h.html#aac09c476e825138ad51c1c5948f47748" title="This function changes the tty focus id on the next Tty that has to be in focus. This..." alt="" coords="431,59,564,88"/>
+<area shape="rect" id="node15" href="$ttys_8h.html#ac625c448f0a3f2dd24c1409227e291e4" title="This function returns the tty id of tty that are in focus at this moment. It is a..." alt="" coords="621,5,747,35"/>
+<area shape="rect" id="node23" href="$queue_8h.html#af7d9739d980ebb59fabce9dab6379f3b" title="Dequeue an element while the buffer is not Empty." alt="" coords="449,112,545,141"/>
+<area shape="rect" id="node26" href="$sys_process_8h.html#aa1cd2078219adc47ca22033bf86a76be" title="Retrieves the OS process table." alt="" coords="431,165,564,195"/>
+<area shape="rect" id="node28" href="$video__driver_8h.html#a9890a0e1d4b684976b56495795445c77" title="Gets the actual default video color." alt="" coords="439,219,556,248"/>
+<area shape="rect" id="node30" href="$queue_8h.html#ab50e760055a693e439a8ac83cedee6bd" title="return if the buffer is empty" alt="" coords="431,272,564,301"/>
+<area shape="rect" id="node32" href="$process_8h.html#a650cf0caaaa8b75f653c1c92818d03a4" title="Kills the given pid process." alt="" coords="479,325,516,355"/>
+<area shape="rect" id="node36" href="$ttys_8h.html#a8b368b52e988f2fb5f99aeb979fe4040" title="It prints only one character in specific tty. It verifies if the character is a control..." alt="" coords="448,379,547,408"/>
+<area shape="rect" id="node11" href="$video__driver_8h.html#a67e96e514d9f296c79378f7fbfba457a" title="clearScreen" alt="" coords="633,59,735,88"/>
+<area shape="rect" id="node17" href="$video__driver_8h.html#ab59b086c41d506e55aa02729f9916be2" title="Updates all changes made to video buffer into screen." alt="" coords="625,112,743,141"/>
+<area shape="rect" id="node21" href="$video__driver_8h.html#aff96fa4091dd99b631277b28be9a5e65" title="Sets the cursor&#39;s position." alt="" coords="613,165,755,195"/>
+<area shape="rect" id="node13" href="$video__driver_8h.html#a49f60f2c7afcb3ffeb1890865dc440c0" title="Fills the screen with a character." alt="" coords="803,59,885,88"/>
+<area shape="rect" id="node19" href="$string_8h.html#aba088e716bccbc96d42da97e96316df1" title="The memcpy() function copies n bytes from memory area src to memory area dest. The..." alt="" coords="804,112,884,141"/>
+<area shape="rect" id="node34" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="656,325,712,355"/>
+</map>

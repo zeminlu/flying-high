@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="u_malloc_8h" kind="file">
+    <compoundname>uMalloc.h</compoundname>
+    <includes refid="mem_module_8h" local="yes">memModule.h</includes>
+    <includes refid="sys_malloc_8h" local="yes">sysMalloc.h</includes>
+    <includes refid="process_8h" local="yes">process.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="schedule_8h" local="yes">inc/schedule.h</includedby>
+    <includedby refid="shell_8h" local="yes">inc/shell.h</includedby>
+    <incdepgraph>
+      <node id="3946">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3935" relation="include">
+        </childnode>
+      </node>
+      <node id="3930">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3952">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3950" relation="include">
+        </childnode>
+      </node>
+      <node id="3953">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="3935">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3936" relation="include">
+        </childnode>
+        <childnode refid="3937" relation="include">
+        </childnode>
+        <childnode refid="3940" relation="include">
+        </childnode>
+        <childnode refid="3941" relation="include">
+        </childnode>
+      </node>
+      <node id="3937">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3924" relation="include">
+        </childnode>
+        <childnode refid="3938" relation="include">
+        </childnode>
+      </node>
+      <node id="3932">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3931">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3932" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3927">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3928" relation="include">
+        </childnode>
+        <childnode refid="3929" relation="include">
+        </childnode>
+      </node>
+      <node id="3945">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3933" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+        <childnode refid="3931" relation="include">
+        </childnode>
+      </node>
+      <node id="3947">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3931" relation="include">
+        </childnode>
+        <childnode refid="3938" relation="include">
+        </childnode>
+        <childnode refid="3932" relation="include">
+        </childnode>
+        <childnode refid="3948" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3930" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+        <childnode refid="3924" relation="include">
+        </childnode>
+        <childnode refid="3949" relation="include">
+        </childnode>
+        <childnode refid="3937" relation="include">
+        </childnode>
+        <childnode refid="3951" relation="include">
+        </childnode>
+      </node>
+      <node id="3936">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3948">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3947" relation="include">
+        </childnode>
+        <childnode refid="3939" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3938">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="3939" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3944">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3941" relation="include">
+        </childnode>
+        <childnode refid="3943" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3937" relation="include">
+        </childnode>
+        <childnode refid="3935" relation="include">
+        </childnode>
+        <childnode refid="3931" relation="include">
+        </childnode>
+        <childnode refid="3945" relation="include">
+        </childnode>
+        <childnode refid="3946" relation="include">
+        </childnode>
+        <childnode refid="3947" relation="include">
+        </childnode>
+      </node>
+      <node id="3939">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="3940">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3936" relation="include">
+        </childnode>
+      </node>
+      <node id="3933">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+      </node>
+      <node id="3929">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3930" relation="include">
+        </childnode>
+      </node>
+      <node id="3941">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3942" relation="include">
+        </childnode>
+        <childnode refid="3938" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3943" relation="include">
+        </childnode>
+        <childnode refid="3944" relation="include">
+        </childnode>
+        <childnode refid="3935" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3932" relation="include">
+        </childnode>
+        <childnode refid="3945" relation="include">
+        </childnode>
+      </node>
+      <node id="3951">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3938" relation="include">
+        </childnode>
+        <childnode refid="3931" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+        <childnode refid="3952" relation="include">
+        </childnode>
+        <childnode refid="3950" relation="include">
+        </childnode>
+        <childnode refid="3946" relation="include">
+        </childnode>
+        <childnode refid="3941" relation="include">
+        </childnode>
+      </node>
+      <node id="3926">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3943">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3934">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3935" relation="include">
+        </childnode>
+        <childnode refid="3953" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3944" relation="include">
+        </childnode>
+      </node>
+      <node id="3942">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3943" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3950">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+      </node>
+      <node id="3925">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3931" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3924">
+        <label>inc/uMalloc.h</label>
+        <link refid="uMalloc.h"/>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3933" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+      </node>
+      <node id="3928">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="3949">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3949" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3943" relation="include">
+        </childnode>
+        <childnode refid="3944" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+        <childnode refid="3935" relation="include">
+        </childnode>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+        <childnode refid="3938" relation="include">
+        </childnode>
+        <childnode refid="3936" relation="include">
+        </childnode>
+        <childnode refid="3941" relation="include">
+        </childnode>
+        <childnode refid="3932" relation="include">
+        </childnode>
+        <childnode refid="3933" relation="include">
+        </childnode>
+        <childnode refid="3931" relation="include">
+        </childnode>
+        <childnode refid="3937" relation="include">
+        </childnode>
+        <childnode refid="3945" relation="include">
+        </childnode>
+        <childnode refid="3947" relation="include">
+        </childnode>
+        <childnode refid="3939" relation="include">
+        </childnode>
+        <childnode refid="3930" relation="include">
+        </childnode>
+        <childnode refid="3924" relation="include">
+        </childnode>
+        <childnode refid="3950" relation="include">
+        </childnode>
+        <childnode refid="3946" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3970">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3962" relation="include">
+        </childnode>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3971" relation="include">
+        </childnode>
+      </node>
+      <node id="3956">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3957" relation="include">
+        </childnode>
+      </node>
+      <node id="3983">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3966">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="3966" relation="include">
+        </childnode>
+      </node>
+      <node id="3963">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="3975">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3962" relation="include">
+        </childnode>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3976" relation="include">
+        </childnode>
+      </node>
+      <node id="3969">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3970" relation="include">
+        </childnode>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3965" relation="include">
+        </childnode>
+        <childnode refid="3972" relation="include">
+        </childnode>
+      </node>
+      <node id="3985">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3958" relation="include">
+        </childnode>
+        <childnode refid="3969" relation="include">
+        </childnode>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3986" relation="include">
+        </childnode>
+      </node>
+      <node id="3986">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3984">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="3982">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="3964">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3965" relation="include">
+        </childnode>
+      </node>
+      <node id="3958">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3981" relation="include">
+        </childnode>
+        <childnode refid="3983" relation="include">
+        </childnode>
+      </node>
+      <node id="3979">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="3979" relation="include">
+        </childnode>
+      </node>
+      <node id="3981">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3958" relation="include">
+        </childnode>
+        <childnode refid="3982" relation="include">
+        </childnode>
+      </node>
+      <node id="3959">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3960" relation="include">
+        </childnode>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3965" relation="include">
+        </childnode>
+        <childnode refid="3979" relation="include">
+        </childnode>
+        <childnode refid="3980" relation="include">
+        </childnode>
+      </node>
+      <node id="3976">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="3967">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="3968" relation="include">
+        </childnode>
+      </node>
+      <node id="3965">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3962" relation="include">
+        </childnode>
+        <childnode refid="3966" relation="include">
+        </childnode>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3967" relation="include">
+        </childnode>
+        <childnode refid="3969" relation="include">
+        </childnode>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3973" relation="include">
+        </childnode>
+      </node>
+      <node id="3962">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3958" relation="include">
+        </childnode>
+        <childnode refid="3963" relation="include">
+        </childnode>
+      </node>
+      <node id="3961">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3962" relation="include">
+        </childnode>
+        <childnode refid="3964" relation="include">
+        </childnode>
+        <childnode refid="3974" relation="include">
+        </childnode>
+        <childnode refid="3958" relation="include">
+        </childnode>
+        <childnode refid="3969" relation="include">
+        </childnode>
+        <childnode refid="3954" relation="include">
+        </childnode>
+        <childnode refid="3978" relation="include">
+        </childnode>
+      </node>
+      <node id="3980">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="3978">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="3977">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="3974">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3962" relation="include">
+        </childnode>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3975" relation="include">
+        </childnode>
+        <childnode refid="3977" relation="include">
+        </childnode>
+      </node>
+      <node id="3972">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="3957">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="3971">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="3973">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="3968">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="3954">
+        <label>inc/uMalloc.h</label>
+        <link refid="uMalloc.h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3985" relation="include">
+        </childnode>
+        <childnode refid="3958" relation="include">
+        </childnode>
+      </node>
+      <node id="3955">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3955" relation="include">
+        </childnode>
+        <childnode refid="3956" relation="include">
+        </childnode>
+        <childnode refid="3958" relation="include">
+        </childnode>
+        <childnode refid="3984" relation="include">
+        </childnode>
+      </node>
+      <node id="3960">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="u_malloc_8h_1adebb229f063e66907017098087cbe791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free</definition>
+        <argsstring>(void *ap)</argsstring>
+        <name>free</name>
+        <param>
+          <type>void *</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Frees up the user memory pointed by ap for futures mallocs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the logical memory position that would be freed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="u_malloc_8h_1a31161ef8eddd18e7781cb947f6f627d5" kindref="member">malloc()</ref> <ref refid="u_malloc_8h_1a07b27aa678d6fdc15e47655bcf771a4e" kindref="member">realloc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/uMalloc.h" line="27" bodyfile="/Users/Luciano/Desktop/flying-high/src/uMalloc.c" bodystart="16" bodyend="19"/>
+        <references refid="sys_malloc_8h_1afc18fe654253c72492875d6b15506744" compoundref="sys_malloc_8c" startline="31" endline="33">sysFree</references>
+        <referencedby refid="p_queue_p_8c_1a871d918e75bffdd2c05ce85a8b8454a9" compoundref="p_queue_p_8c" startline="46" endline="49">freeNode</referencedby>
+        <referencedby refid="p_queue_p_8c_1a2c853f35b6e0b2adc7626d27013638d6" compoundref="p_queue_p_8c" startline="98" endline="118">freePQueue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="u_malloc_8h_1a31161ef8eddd18e7781cb947f6f627d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * malloc</definition>
+        <argsstring>(size_t nbytes)</argsstring>
+        <name>malloc</name>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>returns a continuous segment of user memory. It could return null if there is not enough free space. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of continuous memory that would be returned.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The logical user memory to be used.</para></simplesect>
+<simplesect kind="see"><para><ref refid="u_malloc_8h_1adebb229f063e66907017098087cbe791" kindref="member">free()</ref> <ref refid="u_malloc_8h_1a07b27aa678d6fdc15e47655bcf771a4e" kindref="member">realloc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/uMalloc.h" line="41" bodyfile="/Users/Luciano/Desktop/flying-high/src/uMalloc.c" bodystart="20" bodyend="22"/>
+        <references refid="sys_malloc_8h_1a7472d23b0529e946d8dcdf5a0de26c52" compoundref="sys_malloc_8c" startline="48" endline="57">sysMalloc</references>
+        <referencedby refid="p_queue_p_8c_1ac816b273d6f10ffc9d0fb76bc86fb4e4" compoundref="p_queue_p_8c" startline="120" endline="144">enque</referencedby>
+        <referencedby refid="p_queue_p_8c_1a71a9d33f7a1466b6b1e6d7dd391fdbe7" compoundref="p_queue_p_8c" startline="71" endline="96">newPQueue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="u_malloc_8h_1a07b27aa678d6fdc15e47655bcf771a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * realloc</definition>
+        <argsstring>(void *ap, size_t size)</argsstring>
+        <name>realloc</name>
+        <param>
+          <type>void *</type>
+          <declname>ap</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7b60c5629e55e8ec87a4547dd4abced4" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Changes the original size of the continuous memory. If it is possible, it moves the old segment of user memory to a new continuous user memory segment . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old position that would be changed if it&apos;s necessary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new size of the continuous user memory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new continuous segment of user memory.</para></simplesect>
+<simplesect kind="see"><para><ref refid="u_malloc_8h_1adebb229f063e66907017098087cbe791" kindref="member">free()</ref> <ref refid="u_malloc_8h_1a31161ef8eddd18e7781cb947f6f627d5" kindref="member">malloc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/uMalloc.h" line="57" bodyfile="/Users/Luciano/Desktop/flying-high/src/uMalloc.c" bodystart="23" bodyend="25"/>
+        <references refid="sys_malloc_8h_1adac4283ee6b45334ca1ea574599d7532" compoundref="sys_malloc_8c" startline="35" endline="46">sysRealloc</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>User malloc module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_U_MALLOC_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_U_MALLOC_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mem_module_8h" kindref="compound" tooltip="The memory management / paging module.">memModule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sys_malloc_8h" kindref="compound" tooltip="Generic malloc module.">sysMalloc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="process_8h" kindref="compound" tooltip="All the process functions that invoke syscalls.">process.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="u_malloc_8h_1adebb229f063e66907017098087cbe791" kindref="member" tooltip="Frees up the user memory pointed by ap for futures mallocs.">free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ap);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="u_malloc_8h_1a31161ef8eddd18e7781cb947f6f627d5" kindref="member" tooltip="returns a continuous segment of user memory. It could return null if there is not...">malloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nbytes);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="u_malloc_8h_1a07b27aa678d6fdc15e47655bcf771a4e" kindref="member" tooltip="Changes the original size of the continuous memory. If it is possible, it moves the...">realloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ap,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/uMalloc.h"/>
+  </compounddef>
+</doxygen>

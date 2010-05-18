@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="queue_8c" kind="file">
+    <compoundname>queue.c</compoundname>
+    <includes refid="queue_8h" local="yes">queue.h</includes>
+    <incdepgraph>
+      <node id="4294">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4291">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4292" relation="include">
+        </childnode>
+        <childnode refid="4293" relation="include">
+        </childnode>
+      </node>
+      <node id="4288">
+        <label>src/queue.c</label>
+        <link refid="queue.c"/>
+        <childnode refid="4289" relation="include">
+        </childnode>
+      </node>
+      <node id="4293">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4294" relation="include">
+        </childnode>
+      </node>
+      <node id="4290">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4291" relation="include">
+        </childnode>
+      </node>
+      <node id="4289">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4290" relation="include">
+        </childnode>
+        <childnode refid="4291" relation="include">
+        </childnode>
+      </node>
+      <node id="4292">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="queue_8c_1ada1a59b14be333012bb872bfc12efeb7" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref> *</type>
+        <definition>Keycode* keyboardBuffer</definition>
+        <argsstring></argsstring>
+        <name>keyboardBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/queue.c" line="16" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="queue_8c_1a96010e8f175b18e5988b95a0cf09faa1" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int curr</definition>
+        <argsstring></argsstring>
+        <name>curr</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/queue.c" line="18" bodyfile="/Users/Luciano/Desktop/flying-high/src/queue.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="queue_8c_1aff39d864a6594bc5f4a5e365282e00fe" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int tail</definition>
+        <argsstring></argsstring>
+        <name>tail</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/queue.c" line="18" bodyfile="/Users/Luciano/Desktop/flying-high/src/queue.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="queue_8c_1a5441ca2ea8de82a1f1ba4b31a2b9e96b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int charEnque</definition>
+        <argsstring>(Keycode elem)</argsstring>
+        <name>charEnque</name>
+        <param>
+          <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref></type>
+          <declname>elem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>elem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This function receive the ASCII code of the key to enqueue in the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the key was added or FALSE if the buffer is FULL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/queue.c" line="22" bodyfile="/Users/Luciano/Desktop/flying-high/src/queue.c" bodystart="21" bodyend="41"/>
+        <references refid="keyboard__buffer_8h_1a5c28e05d04961202172037075ea93d40" compoundref="keyboard__buffer_8h" startline="13">KEYBOARD_BUFFER_SIZE</references>
+        <references refid="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" compoundref="keyboard__driver_8c" startline="180">keyboardBuffer</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="queue_8c_1a00e18f7d2a6c9f6fc779b4312aeb38d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref></type>
+        <definition>Keycode charDeque</definition>
+        <argsstring>(void)</argsstring>
+        <name>charDeque</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Dequeue an element while the buffer is not Empty. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The keycode </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/queue.c" line="44" bodyfile="/Users/Luciano/Desktop/flying-high/src/queue.c" bodystart="43" bodyend="51"/>
+        <references refid="keyboard__buffer_8h_1a5c28e05d04961202172037075ea93d40" compoundref="keyboard__buffer_8h" startline="13">KEYBOARD_BUFFER_SIZE</references>
+        <references refid="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" compoundref="keyboard__driver_8c" startline="180">keyboardBuffer</references>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="queue_8c_1ab50e760055a693e439a8ac83cedee6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kbBufferIsEmpty</definition>
+        <argsstring>(void)</argsstring>
+        <name>kbBufferIsEmpty</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>return if the buffer is empty </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TRUE if it&apos;s empty, FALSE if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/queue.c" line="55" bodyfile="/Users/Luciano/Desktop/flying-high/src/queue.c" bodystart="54" bodyend="57"/>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>\file<sp/>queue.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>\author<sp/>Luciano<sp/>Zemin,<sp/>Nicolás<sp/>Magni,<sp/>Nicolás<sp/>Purita</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>\brief<sp/><sp/><sp/><sp/><sp/><sp/>Make<sp/>a<sp/>circular<sp/>buffer<sp/>queue.<sp/>The<sp/>first<sp/>time<sp/>that<sp/>the<sp/>keyboard<sp/>want<sp/>to<sp/>enqueue,<sp/>this</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer<sp/>start<sp/>to<sp/>save<sp/>in<sp/>position<sp/>1<sp/>and<sp/>then<sp/>continue<sp/>as<sp/>normally.<sp/>If<sp/>the<sp/>pointer<sp/>where<sp/>it</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>adding<sp/>is<sp/>equal<sp/>to<sp/>the<sp/>size<sp/>of<sp/>the<sp/>queue<sp/>start<sp/>in<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>buffer<sp/>but<sp/>at<sp/>this</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>it<sp/>will<sp/>enqueue<sp/>to<sp/>the<sp/>position<sp/>0.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="queue_8h" kindref="compound" tooltip="Keyboard queue module.">queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Function<sp/>Defines</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/>*<ref refid="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" kindref="member">keyboardBuffer</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>curr<sp/>=<sp/>0,<sp/>tail<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="queue_8c_1a5441ca2ea8de82a1f1ba4b31a2b9e96b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref><sp/>(<sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/>elem<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>curr<sp/>==<sp/><ref refid="keyboard__buffer_8h_1a5c28e05d04961202172037075ea93d40" kindref="member">KEYBOARD_BUFFER_SIZE</ref><sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>tail<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" kindref="member">keyboardBuffer</ref>[curr]<sp/>=<sp/>elem;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--curr;<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>curr+1<sp/>==<sp/>tail<sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--curr;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" kindref="member">keyboardBuffer</ref>[curr++]<sp/>=<sp/>elem;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="queue_8c_1a00e18f7d2a6c9f6fc779b4312aeb38d6" refkind="member"><highlight class="normal"><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/><ref refid="queue_8h_1af7d9739d980ebb59fabce9dab6379f3b" kindref="member" tooltip="Dequeue an element while the buffer is not Empty.">charDeque</ref><sp/>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>tail<sp/>==<sp/><ref refid="keyboard__buffer_8h_1a5c28e05d04961202172037075ea93d40" kindref="member">KEYBOARD_BUFFER_SIZE</ref><sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tail<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>tail<sp/>==<sp/>curr<sp/>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" kindref="member">keyboardBuffer</ref>[tail++];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="queue_8c_1ab50e760055a693e439a8ac83cedee6bd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="queue_8h_1ab50e760055a693e439a8ac83cedee6bd" kindref="member" tooltip="return if the buffer is empty">kbBufferIsEmpty</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>curr<sp/>==<sp/>tail;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/queue.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$mem_module_8h.html" title="The memory management / paging module." alt="" coords="48,83,165,112"/>
+<area shape="rect" id="node23" href="$kasm_8h.html" title="Kernel utilities." alt="" coords="213,160,283,189"/>
+<area shape="rect" id="node5" href="$string_8h.html" title="Declaration of all functions that deals with strings and buffers." alt="" coords="143,237,215,267"/>
+<area shape="rect" id="node7" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="45,315,117,344"/>
+<area shape="rect" id="node15" href="$stdio_8h.html" title="Definitions for all standard input and output and declaration of all functions to..." alt="" coords="52,160,119,189"/>
+<area shape="rect" id="node9" href="$defs_8h.html" title="OS inner defines." alt="" coords="5,392,67,421"/>
+<area shape="rect" id="node11" href="$config_8h.html" title="OS configuration defines." alt="" coords="91,392,165,421"/>
+<area shape="rect" id="node13" href="$colors_8h.html" title="Video Color defines." alt="" coords="92,469,164,499"/>
+<area shape="rect" id="node18" href="$unistd_8h.html" title="Definitions for all UNIX Standard system calls functions." alt="" coords="44,237,119,267"/>
+</map>

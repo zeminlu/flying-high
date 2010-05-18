@@ -1,0 +1,223 @@
+.TH "src/syscall.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/syscall.c \- 
+.PP
+Implementation off all system calls.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'syscall.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBforceMultitasker\fP ()"
+.br
+.ti -1c
+.RI "void \fBreturnAddress\fP ()"
+.br
+.ti -1c
+.RI "void * \fBgetKernelHeap\fP ()"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fB_sys_write\fP (int fd, char *buffer, \fBsize_t\fP n)"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fB_sys_read\fP (int fd, char *buffer, \fBsize_t\fP n)"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fB_sys_fread\fP (\fBFILE\fP *stream, char *buffer, \fBsize_t\fP n)"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fB_sys_fwrite\fP (\fBFILE\fP *stream, char *buffer, \fBsize_t\fP n)"
+.br
+.ti -1c
+.RI "void * \fB_sys_memmap\fP (int isKernel)"
+.br
+.ti -1c
+.RI "void \fB_sysExit\fP (int status)"
+.br
+.ti -1c
+.RI "\fBpid_t\fP \fB_sys_create_process\fP (char *name, \fBpfunc_t\fP main, int args, int level)"
+.br
+.ti -1c
+.RI "\fBtty_t\fP \fB_sys_get_tty\fP (\fBpid_t\fP pid)"
+.br
+.ti -1c
+.RI "\fBtty_t\fP \fB_sys_set_tty\fP (\fBpid_t\fP pid, \fBtty_t\fP tty)"
+.br
+.ti -1c
+.RI "\fBpid_t\fP \fB_sys_get_pid\fP ()"
+.br
+.ti -1c
+.RI "\fBpid_t\fP \fB_sys_get_ppid\fP ()"
+.br
+.ti -1c
+.RI "\fBpid_t\fP \fB_sys_wait\fP (int *status)"
+.br
+.ti -1c
+.RI "int \fB_sys_wait_pid\fP (\fBpid_t\fP pid, int *status)"
+.br
+.ti -1c
+.RI "int \fB_sys_kill\fP (int pid)"
+.br
+.ti -1c
+.RI "int \fB_sys_set_tty_mode\fP (\fBpid_t\fP pid, int mode)"
+.br
+.ti -1c
+.RI "int \fB_sys_get_tty_mode\fP (\fBpid_t\fP pid)"
+.br
+.ti -1c
+.RI "int \fB_sys_set_level\fP (int level)"
+.br
+.ti -1c
+.RI "int \fB_sys_get_level\fP ()"
+.br
+.ti -1c
+.RI "int \fB_sys_get_priority\fP ()"
+.br
+.ti -1c
+.RI "int \fB_sys_set_priority\fP (\fBpid_t\fP pid, int prio)"
+.br
+.ti -1c
+.RI "unsigned \fB_sys_time\fP (void)"
+.br
+.ti -1c
+.RI "unsigned \fB_sys_uptime\fP ()"
+.br
+.ti -1c
+.RI "int \fB_sys_set_atomicity\fP (\fBpid_t\fP pid, int atomic)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBprocess_t\fP * \fBrunningProcess\fP"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBnextProcess\fP"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP * \fBinitProcess\fP"
+.br
+.ti -1c
+.RI "\fBprocess_t\fP \fBprocessTable\fP [MAX_PROCESS]"
+.br
+.ti -1c
+.RI "unsigned int \fBtickCount\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation off all system calls. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBsyscall.c\fP.
+.SH "Function Documentation"
+.PP 
+.SS "\fBpid_t\fP _sys_create_process (char * name, \fBpfunc_t\fP main, int args, int level)"
+.PP
+Definition at line 160 of file syscall.c.
+.SS "\fBsize_t\fP _sys_fread (\fBFILE\fP * stream, char * buffer, \fBsize_t\fP n)"
+.PP
+Definition at line 86 of file syscall.c.
+.SS "\fBsize_t\fP _sys_fwrite (\fBFILE\fP * stream, char * buffer, \fBsize_t\fP n)"
+.PP
+Definition at line 98 of file syscall.c.
+.SS "int _sys_get_level ()"
+.PP
+Definition at line 344 of file syscall.c.
+.SS "\fBpid_t\fP _sys_get_pid ()"
+.PP
+Definition at line 263 of file syscall.c.
+.SS "\fBpid_t\fP _sys_get_ppid ()"
+.PP
+Definition at line 268 of file syscall.c.
+.SS "int _sys_get_priority ()"
+.PP
+Definition at line 348 of file syscall.c.
+.SS "\fBtty_t\fP _sys_get_tty (\fBpid_t\fP pid)"
+.PP
+Definition at line 244 of file syscall.c.
+.SS "int _sys_get_tty_mode (\fBpid_t\fP pid)"
+.PP
+Definition at line 330 of file syscall.c.
+.SS "int _sys_kill (int pid)"
+.PP
+Definition at line 293 of file syscall.c.
+.SS "void* _sys_memmap (int isKernel)"
+.PP
+Definition at line 110 of file syscall.c.
+.SS "\fBsize_t\fP _sys_read (int fd, char * buffer, \fBsize_t\fP n)"
+.PP
+Definition at line 51 of file syscall.c.
+.SS "int _sys_set_atomicity (\fBpid_t\fP pid, int atomic)"
+.PP
+Definition at line 372 of file syscall.c.
+.SS "int _sys_set_level (int level)"
+.PP
+Definition at line 337 of file syscall.c.
+.SS "int _sys_set_priority (\fBpid_t\fP pid, int prio)"
+.PP
+Definition at line 352 of file syscall.c.
+.SS "\fBtty_t\fP _sys_set_tty (\fBpid_t\fP pid, \fBtty_t\fP tty)"
+.PP
+Definition at line 252 of file syscall.c.
+.SS "int _sys_set_tty_mode (\fBpid_t\fP pid, int mode)"
+.PP
+Definition at line 323 of file syscall.c.
+.SS "unsigned _sys_time (void)"
+.PP
+Definition at line 362 of file syscall.c.
+.SS "unsigned _sys_uptime ()"
+.PP
+Definition at line 368 of file syscall.c.
+.SS "\fBpid_t\fP _sys_wait (int * status)"
+.PP
+Definition at line 272 of file syscall.c.
+.SS "int _sys_wait_pid (\fBpid_t\fP pid, int * status)"
+.PP
+Definition at line 281 of file syscall.c.
+.SS "\fBsize_t\fP _sys_write (int fd, char * buffer, \fBsize_t\fP n)"
+.PP
+Definition at line 25 of file syscall.c.
+.SS "void _sysExit (int status)"
+.PP
+Definition at line 114 of file syscall.c.
+.SS "void forceMultitasker ()"
+.SS "void* getKernelHeap ()"
+.PP
+Definition at line 28 of file memModule.c.
+.SS "void returnAddress ()"
+.SH "Variable Documentation"
+.PP 
+.SS "\fBprocess_t\fP* \fBinitProcess\fP"
+.PP
+Definition at line 18 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBnextProcess\fP"
+.PP
+Definition at line 20 of file sysProcess.c.
+.SS "\fBprocess_t\fP \fBprocessTable\fP[MAX_PROCESS]"
+.PP
+Definition at line 14 of file sysProcess.c.
+.SS "\fBprocess_t\fP* \fBrunningProcess\fP"
+.PP
+Definition at line 16 of file sysProcess.c.
+.SS "unsigned int \fBtickCount\fP"
+.PP
+Definition at line 12 of file sysProcess.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

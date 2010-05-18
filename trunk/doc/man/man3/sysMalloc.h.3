@@ -1,0 +1,112 @@
+.TH "inc/sysMalloc.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/sysMalloc.h \- 
+.PP
+Generic malloc module.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'memModule.h'\fP
+.br
+\fC#include 'string.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsysFree\fP (void *ap, \fBmemArea_t\fP *(*getMemoryArea)())"
+.br
+.RI "\fILeaves avaiable the segment to be used in futures calls to sysMalloc. The memory segment is taken from the function pased by arguments. \fP"
+.ti -1c
+.RI "void * \fBsysMalloc\fP (\fBsize_t\fP nbytes, \fBmemArea_t\fP *(*getMemoryArea)())"
+.br
+.RI "\fIFunction that gives a continuous segment of memory. This memory comes from the function getMemoryArea. It could return null if there is not enougth free space on that frame. \fP"
+.ti -1c
+.RI "void * \fBsysRealloc\fP (void *ap, \fBsize_t\fP size, \fBmemArea_t\fP *(*getMemoryArea)())"
+.br
+.RI "\fIThis function changes the original size of the logical memory to a new one if it's necesary.Returns null if theres not enough free space. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Generic malloc module. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBsysMalloc.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void sysFree (void * ap, \fBmemArea_t\fP *(*)() getMemoryArea)"
+.PP
+Leaves avaiable the segment to be used in futures calls to sysMalloc. The memory segment is taken from the function pased by arguments. \fBParameters:\fP
+.RS 4
+\fIap\fP The logical memory segment to be freed. 
+.br
+\fIgetMemoryArea\fP Function that returns the memory frame that sysMalloc wold be used in the future.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBsysRealloc()\fP \fBsysMalloc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file sysMalloc.c.
+.SS "void * sysMalloc (\fBsize_t\fP nbytes, \fBmemArea_t\fP *(*)() getMemoryArea)"
+.PP
+Function that gives a continuous segment of memory. This memory comes from the function getMemoryArea. It could return null if there is not enougth free space on that frame. \fBParameters:\fP
+.RS 4
+\fInbytes\fP the size of continuous segment memory. 
+.br
+\fIgetMemoryArea\fP Functions that gives the frame to use be used by sysMalloc.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The continuous segment of memory.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBsysFree()\fP \fBsysRealloc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 48 of file sysMalloc.c.
+.SS "void * sysRealloc (void * ptr, \fBsize_t\fP size, \fBmemArea_t\fP *(*)() getMemoryArea)"
+.PP
+This function changes the original size of the logical memory to a new one if it's necesary.Returns null if theres not enough free space. \fBParameters:\fP
+.RS 4
+\fIptr\fP Old logical memory segment, that could be moved to a new one. 
+.br
+\fIsize\fP The new size of the continuous memory segment. 
+.br
+\fIgetMemoryArea\fP Function that gives the frame to use be used by sysMalloc.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new continuous memory segment.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBsysFree()\fP \fBsysMalloc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file sysMalloc.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

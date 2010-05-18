@@ -1,0 +1,1778 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="keyboard__driver_8c" kind="file">
+    <compoundname>keyboard_driver.c</compoundname>
+    <includes refid="keyboard__driver_8h" local="yes">keyboard_driver.h</includes>
+    <incdepgraph>
+      <node id="4202">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4197" relation="include">
+        </childnode>
+      </node>
+      <node id="4184">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4208">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4206" relation="include">
+        </childnode>
+      </node>
+      <node id="4200">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4197">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4186" relation="include">
+        </childnode>
+      </node>
+      <node id="4193">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4192">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4191">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4181">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4182" relation="include">
+        </childnode>
+        <childnode refid="4183" relation="include">
+        </childnode>
+      </node>
+      <node id="4201">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+      </node>
+      <node id="4203">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4184" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4207" relation="include">
+        </childnode>
+      </node>
+      <node id="4198">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4204">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4187">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4189">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4186" relation="include">
+        </childnode>
+        <childnode refid="4180" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+      </node>
+      <node id="4185">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4199">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+      </node>
+      <node id="4178">
+        <label>keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="4179" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4186" relation="include">
+        </childnode>
+      </node>
+      <node id="4195">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+      </node>
+      <node id="4183">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4184" relation="include">
+        </childnode>
+      </node>
+      <node id="4186">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4179" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4180" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+      </node>
+      <node id="4207">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4208" relation="include">
+        </childnode>
+        <childnode refid="4206" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4186" relation="include">
+        </childnode>
+      </node>
+      <node id="4188">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4180">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4196">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4197" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+      </node>
+      <node id="4179">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4180" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4206">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+      </node>
+      <node id="4190">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+      </node>
+      <node id="4177">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard_driver.c"/>
+        <childnode refid="4178" relation="include">
+        </childnode>
+      </node>
+      <node id="4194">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+      </node>
+      <node id="4182">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4205">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4180" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4186" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4184" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4206" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="keyboard__driver_8c_1a1c62bc798a230bd1a1558429c9bc26b6" prot="public" static="no">
+        <name>KEY_RSHIFT_P</name>
+        <initializer>0x2A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="32" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="32" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a7532780fdf03fa94b668c995e90da06b" prot="public" static="no">
+        <name>KEY_LSHIFT_P</name>
+        <initializer>0x36</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="33" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="33" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1aae9c6475165c3f23596fa25b9332a583" prot="public" static="no">
+        <name>KEY_RSHIFT_R</name>
+        <initializer>(KEY_RSHIFT_P + KB_KEY_RELEASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="34" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="34" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a13720acdbecbb70c6168c3198b83bb69" prot="public" static="no">
+        <name>KEY_LSHIFT_R</name>
+        <initializer>(KEY_LSHIFT_P + KB_KEY_RELEASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="35" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="35" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a0419a1992968092f0c01347fd814693b" prot="public" static="no">
+        <name>KEY_ALT_P</name>
+        <initializer>0x38</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="36" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a8fb12969c6273b64e103ed4309dd4c90" prot="public" static="no">
+        <name>KEY_ALT_R</name>
+        <initializer>(KEY_ALT_P + KB_KEY_RELEASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="37" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a896de6986e3a1a2290166fba2f50e6af" prot="public" static="no">
+        <name>KEY_CTRL_P</name>
+        <initializer>0x1D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="38" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="38" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a93f9269ddd48232917a079e8d0392db3" prot="public" static="no">
+        <name>KEY_CTRL_R</name>
+        <initializer>(KEY_CTRL_P+KB_KEY_RELEASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="39" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="39" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ae5a9cbd478a01961788027ab9685c294" prot="public" static="no">
+        <name>KEY_CAPS</name>
+        <initializer>0x3A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="40" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="40" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1aea1fb123893c8dcc87ec0183b79d678b" prot="public" static="no">
+        <name>KB_KEY_RELEASE</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="42" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="42" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a329d7321668d223f8cf445b723eaeadb" prot="public" static="no">
+        <name>KB_OUTPUT_FULL</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="43" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="43" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ab0c169c959c5be67954c866776329563" prot="public" static="no">
+        <name>DATA_PORT</name>
+        <initializer>0x60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="45" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="45" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a1ef7b9796fcb1fed4d40173fba9f52fc" prot="public" static="no">
+        <name>CONTROL_PORT</name>
+        <initializer>0x64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="46" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="46" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" prot="public" static="no">
+        <name>FLAG_SHIFT</name>
+        <initializer>(0x01)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="51" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="51" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+        <referencedby refid="keyboard__driver_8c_1a1e982cb449d6c79c7e88c3f3c83fb0a9" compoundref="keyboard__driver_8c" startline="271" endline="274">shiftIsPressed</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" prot="public" static="no">
+        <name>FLAG_CTRL</name>
+        <initializer>(0x02)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="52" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="52" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1a046fa8980fed8bb1b411239365e4f273" compoundref="keyboard__driver_8c" startline="281" endline="284">ctrlIsPressed</referencedby>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a7834822816dc33ae89a6ea12147b1693" prot="public" static="no">
+        <name>FLAG_ALT</name>
+        <initializer>(0x04)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="53" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" prot="public" static="no">
+        <name>FLAG_CAPS</name>
+        <initializer>(0x08)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="54" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="54" bodyend="-1"/>
+        <referencedby refid="keyboard__driver_8c_1a5cd4040e5ce2d227365162f30a97bde6" compoundref="keyboard__driver_8c" startline="276" endline="279">capsIsPressed</referencedby>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+        <referencedby refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a918d3801a137ae8ac0ed7fa9fcb7bcd2" prot="public" static="no">
+        <name>KEY_SPECIAL_FLAG</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="56" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a7c0bd7fb9f00a2874e6479942bd5f7c4" prot="public" static="no">
+        <name>KEY_KEYPAD_FLAG</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="57" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a9251e181597aaffd89d4124300bb3afc" prot="public" static="no">
+        <name>KEY_SHIFT_FLAG</name>
+        <initializer>0x1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="58" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a8a23220a8cc9ec24673c721ed7c2d1ee" prot="public" static="no">
+        <name>KEY_ALT_FLAG</name>
+        <initializer>0x2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="59" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a7cbeadd13fad8f6304b512174e45f118" prot="public" static="no">
+        <name>KEY_CTRL_FLAG</name>
+        <initializer>0x4000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="60" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ab6b82f150d6913d7ca816f1c97ab6806" prot="public" static="no">
+        <name>KEY_RELEASE_FLAG</name>
+        <initializer>0x8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="61" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a17e3fe7fce6effc4800de3a1aa286362" prot="public" static="no">
+        <name>_SPECIAL</name>
+        <param><defname>num</defname></param>
+        <initializer>(KEY_SPECIAL_FLAG &amp; (num))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="67" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a640e5770ec5c594beb6f1c101b607ef3" prot="public" static="no">
+        <name>KEY_UNKNOWN</name>
+        <initializer>_SPECIAL(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="68" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a2772a1f7024ba1fd62e88ec1adb541f8" prot="public" static="no">
+        <name>KEY_F1</name>
+        <initializer>KB_KEY_RELEASE | 0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="69" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ae2e2edb31bb7796786da12f85f2d5cd1" prot="public" static="no">
+        <name>KEY_F2</name>
+        <initializer>KB_KEY_RELEASE | 0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="70" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a38ebe8e5c5f1d5727c9638bf79fc3952" prot="public" static="no">
+        <name>KEY_F3</name>
+        <initializer>KB_KEY_RELEASE | 0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="71" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ab99474b01ffcbc57d74b60a77895e5e8" prot="public" static="no">
+        <name>KEY_F4</name>
+        <initializer>KB_KEY_RELEASE | 0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="72" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a2a0aae1931111382ade29fd75ef64790" prot="public" static="no">
+        <name>KEY_F5</name>
+        <initializer>KB_KEY_RELEASE | 0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="73" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ad31281b771b8b85f4aa98bbd527d91a0" prot="public" static="no">
+        <name>KEY_F6</name>
+        <initializer>KB_KEY_RELEASE | 0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="74" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a7eed6766ef9ddb721c6a2bce807fc9dc" prot="public" static="no">
+        <name>KEY_F7</name>
+        <initializer>KB_KEY_RELEASE | 0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="75" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a7a8ad03f07f2e4757a70385e88fbbe3c" prot="public" static="no">
+        <name>KEY_F8</name>
+        <initializer>KB_KEY_RELEASE | 0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="76" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a417a382624f91fb0cdfdf1c33adc8c90" prot="public" static="no">
+        <name>KEY_F9</name>
+        <initializer>_SPECIAL(9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="77" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ad37282615edb2c357149c2a1342b4a85" prot="public" static="no">
+        <name>KEY_F10</name>
+        <initializer>_SPECIAL(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="78" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1abd820bb8b4b2a47e4210401b13789106" prot="public" static="no">
+        <name>KEY_F11</name>
+        <initializer>_SPECIAL(11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="79" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a0a3de83275f6bbc2b88692f947f0d595" prot="public" static="no">
+        <name>KEY_F12</name>
+        <initializer>_SPECIAL(12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="80" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a5286700e5cf8acb2707c1c08968c6c25" prot="public" static="no">
+        <name>KEY_LCTRL</name>
+        <initializer>_SPECIAL(13)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="81" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a02d44d9c52e2d45f18ed4b89b4d6c459" prot="public" static="no">
+        <name>KEY_RCTRL</name>
+        <initializer>_SPECIAL(14)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="82" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ae8b9735c4a7fd10317aaab6dcbe91e51" prot="public" static="no">
+        <name>KEY_LSHIFT</name>
+        <initializer>_SPECIAL(15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="83" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a5b52e8d492e96e2b4c21a94f50a689c5" prot="public" static="no">
+        <name>KEY_RSHIFT</name>
+        <initializer>_SPECIAL(16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="84" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a650e7f9f7cb284c1fd51466b12239bf8" prot="public" static="no">
+        <name>KEY_LALT</name>
+        <initializer>_SPECIAL(17)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="85" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a9ec081e11253532b99061dd69312e5bd" prot="public" static="no">
+        <name>KEY_RALT</name>
+        <initializer>_SPECIAL(18)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="86" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a1d7bd4e5940f27a6f527d92f451f77e9" prot="public" static="no">
+        <name>KEY_PRINTSCRN</name>
+        <initializer>_SPECIAL(19)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="87" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1af168e54444bdaff5f50f6f4734784762" prot="public" static="no">
+        <name>KEY_CAPSLOCK</name>
+        <initializer>_SPECIAL(20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="88" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1aa9a01a8ed5fb358424866f4bc61d7c13" prot="public" static="no">
+        <name>KEY_NUMLOCK</name>
+        <initializer>_SPECIAL(21)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="89" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a97f9cc7e1ca0a11eef51482840a0998a" prot="public" static="no">
+        <name>KEY_SCRLOCK</name>
+        <initializer>_SPECIAL(22)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="90" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a49b08a0976f0eb9d88cbd1dddd853bb8" prot="public" static="no">
+        <name>KEY_SYSREQ</name>
+        <initializer>_SPECIAL(23)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="91" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a45fd73c874d47cc9ff59119117303d57" prot="public" static="no">
+        <name>KEYPAD_START</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="96" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a336b7b3e7317fdc94c68fd1f13bba4ce" prot="public" static="no">
+        <name>_KEYPAD</name>
+        <param><defname>num</defname></param>
+        <initializer>(KEY_KEYPAD_FLAG &amp; KEY_SPECIAL_FLAG &amp; (num+KEYPAD_START))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="97" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1aa8c338a468d996ee81422efd468543b8" prot="public" static="no">
+        <name>KEY_KPHOME</name>
+        <initializer>_KEYPAD(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="98" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a85db875aabf0d851b732279f1738c401" prot="public" static="no">
+        <name>KEY_KPUP</name>
+        <initializer>_KEYPAD(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="99" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1af670127c11afdf470b728ac482c82920" prot="public" static="no">
+        <name>KEY_KPPGUP</name>
+        <initializer>_KEYPAD(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="100" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a8d4af0c33552022467acc210f1d42775" prot="public" static="no">
+        <name>KEY_KPMINUS</name>
+        <initializer>_KEYPAD(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="101" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a849d512e75ba3a6c6d75204fa9d97607" prot="public" static="no">
+        <name>KEY_KPLEFT</name>
+        <initializer>_KEYPAD(4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="102" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1aceac19ff0e70c49e8cbd65875a77a6eb" prot="public" static="no">
+        <name>KEY_KPCENTER</name>
+        <initializer>_KEYPAD(5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="103" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a3d9248f2fd65044cab216efb2547cb93" prot="public" static="no">
+        <name>KEY_KPRIGHT</name>
+        <initializer>_KEYPAD(6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="104" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ac0c8d4b7b0f615f7ac9d8bf448515e59" prot="public" static="no">
+        <name>KEY_KPPLUS</name>
+        <initializer>_KEYPAD(7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="105" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1aad6a974b184775fb8521557b2b693e3e" prot="public" static="no">
+        <name>KEY_KPEND</name>
+        <initializer>_KEYPAD(8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="106" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1ac14b45997a4ed2630dd5b89bd31b8c9e" prot="public" static="no">
+        <name>KEY_KPDOWN</name>
+        <initializer>_KEYPAD(9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="107" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a836148690b729a4772a238e6c6d0ab45" prot="public" static="no">
+        <name>KEY_KPPGDN</name>
+        <initializer>_KEYPAD(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="108" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a62972d0bce7dccfff163100429cf37df" prot="public" static="no">
+        <name>KEY_KPINSERT</name>
+        <initializer>_KEYPAD(11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="109" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1af7b6936d57ec53483055451d58ab1dc3" prot="public" static="no">
+        <name>KEY_KPDEL</name>
+        <initializer>_KEYPAD(12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="110" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1af499a0b34ddf61832ae3dab05677ac7b" prot="public" static="no">
+        <name>ASCII_ESC</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="112" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a74cfd0b97396b41e6cbb25de858ece5b" prot="public" static="no">
+        <name>ASCII_BS</name>
+        <initializer>&apos;\b&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="113" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a7ab1f9088384929f582cef4cf7510ff6" prot="public" static="no">
+        <name>ASCII_ENTER</name>
+        <initializer>&apos;\n&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="114" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keyboard__driver_8c_1a83564eb50f034d42ae30610d577ef17e" prot="public" static="no">
+        <name>SCAN_TABLE_SIZE</name>
+        <initializer>(sizeof(s_scanTableNoShift) / sizeof(<ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="144" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="keyboard__driver_8c_1a11764cc96bb263d1f257bcc01205a787" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char flag</definition>
+        <argsstring></argsstring>
+        <name>flag</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="27" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="keyboard__driver_8c_1ae045dd6b074c57083b0a3bf1b356cb42" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char flagCaps</definition>
+        <argsstring></argsstring>
+        <name>flagCaps</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="28" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="keyboard__driver_8c_1adf186c2e8559a8a315dd8594e1a1b67a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int amountOfRepetition</definition>
+        <argsstring></argsstring>
+        <name>amountOfRepetition</name>
+        <initializer> KEYBOARD_REPETITION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="29" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="keyboard__driver_8c_1a61d95ca06b08d422aff30d64e7558842" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int keyboardActivity</definition>
+        <argsstring></argsstring>
+        <name>keyboardActivity</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="30" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="keyboard__driver_8c_1a053d28839d5b2a94ea6654a20b370671" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref></type>
+        <definition>const Keycode scanTableNoShift[]</definition>
+        <argsstring>[]</argsstring>
+        <name>scanTableNoShift</name>
+        <initializer> {
+	KEY_UNKNOWN, ASCII_ESC, &apos;1&apos;, &apos;2&apos;,   
+	&apos;3&apos;, &apos;4&apos;, &apos;5&apos;, &apos;6&apos;,                 
+	&apos;7&apos;, &apos;8&apos;, &apos;9&apos;, &apos;0&apos;,                 
+	&apos;-&apos;, &apos;=&apos;, ASCII_BS, &apos;\t&apos;,           
+	&apos;q&apos;, &apos;w&apos;, &apos;e&apos;, &apos;r&apos;,                 
+	&apos;t&apos;, &apos;y&apos;, &apos;u&apos;, &apos;i&apos;,                 
+	&apos;o&apos;, &apos;p&apos;, &apos;[&apos;, &apos;]&apos;,                 
+	ASCII_ENTER, KEY_LCTRL, &apos;a&apos;, &apos;s&apos;,   
+	&apos;d&apos;, &apos;f&apos;, &apos;g&apos;, &apos;h&apos;,                 
+	&apos;j&apos;, &apos;k&apos;, &apos;l&apos;, &apos;;&apos;,                 
+	&apos;\&apos;&apos;, &apos;`&apos;, KEY_LSHIFT, &apos;\\&apos;,        
+	&apos;z&apos;, &apos;x&apos;, &apos;c&apos;, &apos;v&apos;,                 
+	&apos;b&apos;, &apos;n&apos;, &apos;m&apos;, &apos;,&apos;,                 
+	&apos;.&apos;, &apos;/&apos;, KEY_RSHIFT, KEY_PRINTSCRN, 
+	KEY_LALT, &apos; &apos;, KEY_CAPSLOCK, KEY_F1, 
+	KEY_F2, KEY_F3, KEY_F4, KEY_F5,     
+	KEY_F6, KEY_F7, KEY_F8, KEY_F9,     
+	KEY_F10, KEY_NUMLOCK, KEY_SCRLOCK, KEY_KPHOME,  
+	KEY_KPUP, KEY_KPPGUP, KEY_KPMINUS, KEY_KPLEFT,  
+	KEY_KPCENTER, KEY_KPRIGHT, KEY_KPPLUS, KEY_KPEND,  
+	KEY_KPDOWN, KEY_KPPGDN, KEY_KPINSERT, KEY_KPDEL,  
+	KEY_SYSREQ, KEY_UNKNOWN, KEY_UNKNOWN, KEY_UNKNOWN,  
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="142" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="keyboard__driver_8c_1a4356e855539beaefc934599ebffbbd43" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref></type>
+        <definition>const Keycode scanTableWithShift[]</definition>
+        <argsstring>[]</argsstring>
+        <name>scanTableWithShift</name>
+        <initializer> {
+	KEY_UNKNOWN, ASCII_ESC, &apos;!&apos;, &apos;@&apos;,   
+	&apos;#&apos;, &apos;$&apos;, &apos;%&apos;, &apos;^&apos;,                 
+	&apos;&amp;&apos;, &apos;*&apos;, &apos;(&apos;, &apos;)&apos;,                 
+	&apos;_&apos;, &apos;=&apos;, ASCII_BS, &apos;\t&apos;,           
+	&apos;Q&apos;, &apos;W&apos;, &apos;E&apos;, &apos;R&apos;,                 
+	&apos;T&apos;, &apos;Y&apos;, &apos;U&apos;, &apos;I&apos;,                 
+	&apos;O&apos;, &apos;P&apos;, &apos;{&apos;, &apos;}&apos;,                 
+	ASCII_ENTER, KEY_LCTRL, &apos;A&apos;, &apos;S&apos;,   
+	&apos;D&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;,                 
+	&apos;J&apos;, &apos;K&apos;, &apos;L&apos;, &apos;:&apos;,                 
+	&apos;&quot;&apos;, &apos;~&apos;, KEY_LSHIFT, &apos;|&apos;,          
+	&apos;Z&apos;, &apos;X&apos;, &apos;C&apos;, &apos;V&apos;,                 
+	&apos;B&apos;, &apos;N&apos;, &apos;M&apos;, &apos;&lt;&apos;,                 
+	&apos;&gt;&apos;, &apos;?&apos;, KEY_RSHIFT, KEY_PRINTSCRN, 
+	KEY_LALT, &apos; &apos;, KEY_CAPSLOCK, KEY_F1, 
+	KEY_F2, KEY_F3, KEY_F4, KEY_F5,     
+	KEY_F6, KEY_F7, KEY_F8, KEY_F9,     
+	KEY_F10, KEY_NUMLOCK, KEY_SCRLOCK, KEY_KPHOME,  
+	KEY_KPUP, KEY_KPPGUP, KEY_KPMINUS, KEY_KPLEFT,  
+	KEY_KPCENTER, KEY_KPRIGHT, KEY_KPPLUS, KEY_KPEND,  
+	KEY_KPDOWN, KEY_KPPGDN, KEY_KPINSERT, KEY_KPDEL,  
+	KEY_SYSREQ, KEY_UNKNOWN, KEY_UNKNOWN, KEY_UNKNOWN,  
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="174" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref></type>
+        <definition>Keycode keyboardBuffer[KEYBOARD_BUFFER_SIZE]</definition>
+        <argsstring>[KEYBOARD_BUFFER_SIZE]</argsstring>
+        <name>keyboardBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="180" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="180" bodyend="-1"/>
+        <referencedby refid="queue_8c_1a00e18f7d2a6c9f6fc779b4312aeb38d6" compoundref="queue_8c" startline="43" endline="51">charDeque</referencedby>
+        <referencedby refid="queue_8c_1a5441ca2ea8de82a1f1ba4b31a2b9e96b" compoundref="queue_8c" startline="21" endline="41">charEnque</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void keyboard_driver</definition>
+        <argsstring>()</argsstring>
+        <name>keyboard_driver</name>
+        <briefdescription>
+<para>This function is the manager of interpretate what key was pressed or released. It controls if the own keyboard buffer is full. The keys that are implemented are:<itemizedlist>
+<listitem><para>Letters ( upper and lower case )</para></listitem><listitem><para>Numbers ( If you press SHIFT it will interpretate the symbol associated with this key )</para></listitem><listitem><para>SHIFT buttom</para></listitem><listitem><para>CAPS-LOCK. </para></listitem></itemizedlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="188" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="188" bodyend="246"/>
+        <references refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" compoundref="queue_8c" startline="21" endline="41">charEnque</references>
+        <references refid="keyboard__driver_8c_1a1ef7b9796fcb1fed4d40173fba9f52fc" compoundref="keyboard__driver_8c" startline="46">CONTROL_PORT</references>
+        <references refid="keyboard__driver_8c_1ab0c169c959c5be67954c866776329563" compoundref="keyboard__driver_8c" startline="45">DATA_PORT</references>
+        <references refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" compoundref="keyboard__driver_8c" startline="54">FLAG_CAPS</references>
+        <references refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" compoundref="keyboard__driver_8c" startline="52">FLAG_CTRL</references>
+        <references refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" compoundref="keyboard__driver_8c" startline="51">FLAG_SHIFT</references>
+        <references refid="io_8h_1ac17a6cfbeef702c55063c3350220c126">inportb</references>
+        <references refid="keyboard__driver_8c_1aea1fb123893c8dcc87ec0183b79d678b" compoundref="keyboard__driver_8c" startline="42">KB_KEY_RELEASE</references>
+        <references refid="keyboard__driver_8c_1a329d7321668d223f8cf445b723eaeadb" compoundref="keyboard__driver_8c" startline="43">KB_OUTPUT_FULL</references>
+        <references refid="ttys_8h_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</references>
+        <references refid="keyboard__driver_8h_1ae8a256c73e7395a726e5609efef38ceb" compoundref="keyboard__driver_8c" startline="248" endline="268">SetKeyState</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetKeyState</definition>
+        <argsstring>(Keycode scanCode)</argsstring>
+        <name>SetKeyState</name>
+        <param>
+          <type><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member">Keycode</ref></type>
+          <declname>scanCode</declname>
+        </param>
+        <briefdescription>
+<para>This function detect if a control key was pressed and set his internal flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="249" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="248" bodyend="268"/>
+        <references refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" compoundref="keyboard__driver_8c" startline="54">FLAG_CAPS</references>
+        <references refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" compoundref="keyboard__driver_8c" startline="52">FLAG_CTRL</references>
+        <references refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" compoundref="keyboard__driver_8c" startline="51">FLAG_SHIFT</references>
+        <references refid="keyboard__driver_8c_1ae5a9cbd478a01961788027ab9685c294" compoundref="keyboard__driver_8c" startline="40">KEY_CAPS</references>
+        <references refid="keyboard__driver_8c_1a896de6986e3a1a2290166fba2f50e6af" compoundref="keyboard__driver_8c" startline="38">KEY_CTRL_P</references>
+        <references refid="keyboard__driver_8c_1a93f9269ddd48232917a079e8d0392db3" compoundref="keyboard__driver_8c" startline="39">KEY_CTRL_R</references>
+        <references refid="keyboard__driver_8c_1a7532780fdf03fa94b668c995e90da06b" compoundref="keyboard__driver_8c" startline="33">KEY_LSHIFT_P</references>
+        <references refid="keyboard__driver_8c_1a13720acdbecbb70c6168c3198b83bb69" compoundref="keyboard__driver_8c" startline="35">KEY_LSHIFT_R</references>
+        <references refid="keyboard__driver_8c_1a1c62bc798a230bd1a1558429c9bc26b6" compoundref="keyboard__driver_8c" startline="32">KEY_RSHIFT_P</references>
+        <references refid="keyboard__driver_8c_1aae9c6475165c3f23596fa25b9332a583" compoundref="keyboard__driver_8c" startline="34">KEY_RSHIFT_R</references>
+        <referencedby refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" compoundref="keyboard__driver_8c" startline="188" endline="246">keyboard_driver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1a1e982cb449d6c79c7e88c3f3c83fb0a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shiftIsPressed</definition>
+        <argsstring>(void)</argsstring>
+        <name>shiftIsPressed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return TRUE if the shift key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="272" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="271" bodyend="274"/>
+        <references refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" compoundref="keyboard__driver_8c" startline="51">FLAG_SHIFT</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1a5cd4040e5ce2d227365162f30a97bde6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int capsIsPressed</definition>
+        <argsstring>(void)</argsstring>
+        <name>capsIsPressed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return TRUE if caps-lock key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="277" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="276" bodyend="279"/>
+        <references refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" compoundref="keyboard__driver_8c" startline="54">FLAG_CAPS</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1a046fa8980fed8bb1b411239365e4f273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ctrlIsPressed</definition>
+        <argsstring>(void)</argsstring>
+        <name>ctrlIsPressed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return TRUE if control key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="282" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="281" bodyend="284"/>
+        <references refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" compoundref="keyboard__driver_8c" startline="52">FLAG_CTRL</references>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1ad08dcad6f1e75b671f968085649f73a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getRepetition</definition>
+        <argsstring>()</argsstring>
+        <name>getRepetition</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the actual repetition interval. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The actual repetition interval. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="287" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="286" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1a192c6a0f85ccf24da7cbd741231ac621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setRepetition</definition>
+        <argsstring>(int newRep)</argsstring>
+        <name>setRepetition</name>
+        <param>
+          <type>int</type>
+          <declname>newRep</declname>
+        </param>
+        <briefdescription>
+<para>Sets the repetition interval. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newRep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new repetition value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="292" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="291" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1a7d6406fbcd82ed4c982d8b181573a89b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int checkKeyboardActivity</definition>
+        <argsstring>(void)</argsstring>
+        <name>checkKeyboardActivity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return a 1 if the keyboard routine was called, so the keyboard had interrupted. This funtcion is used by the screensaver, to turn off. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="297" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="296" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="keyboard__driver_8c_1ad4bd2d43f0ac21af96967762a3412da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setKeyboardActivity</definition>
+        <argsstring>(void)</argsstring>
+        <name>setKeyboardActivity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set the keyboard activity flag to 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" line="307" bodyfile="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c" bodystart="306" bodyend="309"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>\file<sp/>keyboard_driver.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>\brief<sp/>This<sp/>file<sp/>contains<sp/>the<sp/>scancode<sp/>table<sp/>for<sp/>all<sp/>of<sp/>the<sp/>letter<sp/>and</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>their<sp/>combination.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-The<sp/>incoming<sp/>scancode<sp/>of<sp/>the<sp/>keyboard<sp/>select<sp/>the<sp/>row</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-The<sp/>modifier<sp/>status<sp/>select<sp/>the<sp/>column</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-The<sp/>intersection<sp/>of<sp/>two<sp/>is<sp/>the<sp/>scan/ASCII<sp/>code<sp/>to<sp/>put<sp/>into<sp/>the<sp/>PC<sp/>buffer<sp/>ahead<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>\author<sp/>Luciano<sp/>Zemin,<sp/>Nicolás<sp/>Magni,<sp/>Nicolás<sp/>Purita</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="keyboard__driver_8h" kindref="compound" tooltip="The keyboard driver module.">keyboard_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Software<sp/>keycodes</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>----------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>\brief<sp/>Each<sp/>keyboard<sp/>event<sp/>generates<sp/>a<sp/>16<sp/>bit<sp/>code.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>The<sp/>low<sp/>10<sp/>bits<sp/>indicate<sp/>which<sp/>key<sp/>was<sp/>used.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>If<sp/>bit<sp/>8<sp/>(KEY_SPECIAL_FLAG)<sp/>is<sp/>0,<sp/>then<sp/>the<sp/>low<sp/>8<sp/>bits<sp/>contain</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>ASCII<sp/>code.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>The<sp/>flags<sp/>indicate<sp/>the<sp/>shift/alt/control<sp/>state,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>whether<sp/>the<sp/>event<sp/>was<sp/>a<sp/>make<sp/>or<sp/>release.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>flagCaps<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>amountOfRepetition<sp/>=<sp/><ref refid="config_8h_1a4a2e75965162f8faca7c6ab73c98d5bd" kindref="member" tooltip="The amount of key press repetitions.">KEYBOARD_REPETITION</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyboardActivity<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="keyboard__driver_8c_1a1c62bc798a230bd1a1558429c9bc26b6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEY_RSHIFT_P<sp/><sp/><sp/><sp/>0x2A</highlight></codeline>
+<codeline lineno="33" refid="keyboard__driver_8c_1a7532780fdf03fa94b668c995e90da06b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_LSHIFT_P<sp/><sp/><sp/><sp/>0x36</highlight></codeline>
+<codeline lineno="34" refid="keyboard__driver_8c_1aae9c6475165c3f23596fa25b9332a583" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_RSHIFT_R<sp/><sp/><sp/><sp/>(KEY_RSHIFT_P<sp/>+<sp/>KB_KEY_RELEASE)</highlight></codeline>
+<codeline lineno="35" refid="keyboard__driver_8c_1a13720acdbecbb70c6168c3198b83bb69" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_LSHIFT_R<sp/><sp/><sp/><sp/>(KEY_LSHIFT_P<sp/>+<sp/>KB_KEY_RELEASE)</highlight></codeline>
+<codeline lineno="36" refid="keyboard__driver_8c_1a0419a1992968092f0c01347fd814693b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_ALT_P<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x38</highlight></codeline>
+<codeline lineno="37" refid="keyboard__driver_8c_1a8fb12969c6273b64e103ed4309dd4c90" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_ALT_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(KEY_ALT_P<sp/>+<sp/>KB_KEY_RELEASE)</highlight></codeline>
+<codeline lineno="38" refid="keyboard__driver_8c_1a896de6986e3a1a2290166fba2f50e6af" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_CTRL_P<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1D</highlight></codeline>
+<codeline lineno="39" refid="keyboard__driver_8c_1a93f9269ddd48232917a079e8d0392db3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_CTRL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(KEY_CTRL_P+KB_KEY_RELEASE)</highlight></codeline>
+<codeline lineno="40" refid="keyboard__driver_8c_1ae5a9cbd478a01961788027ab9685c294" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_CAPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x3A</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="keyboard__driver_8c_1aea1fb123893c8dcc87ec0183b79d678b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KB_KEY_RELEASE<sp/><sp/>0x80</highlight></codeline>
+<codeline lineno="43" refid="keyboard__driver_8c_1a329d7321668d223f8cf445b723eaeadb" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KB_OUTPUT_FULL<sp/><sp/>0x01</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="keyboard__driver_8c_1ab0c169c959c5be67954c866776329563" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATA_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x60</highlight></codeline>
+<codeline lineno="46" refid="keyboard__driver_8c_1a1ef7b9796fcb1fed4d40173fba9f52fc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONTROL_PORT<sp/><sp/><sp/><sp/>0x64</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>Flags</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLAG_SHIFT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x01)</highlight></codeline>
+<codeline lineno="52" refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FLAG_CTRL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x02)</highlight></codeline>
+<codeline lineno="53" refid="keyboard__driver_8c_1a7834822816dc33ae89a6ea12147b1693" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FLAG_ALT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x04)</highlight></codeline>
+<codeline lineno="54" refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FLAG_CAPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x08)</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="keyboard__driver_8c_1a918d3801a137ae8ac0ed7fa9fcb7bcd2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEY_SPECIAL_FLAG<sp/>0x00</highlight></codeline>
+<codeline lineno="57" refid="keyboard__driver_8c_1a7c0bd7fb9f00a2874e6479942bd5f7c4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KEYPAD_FLAG<sp/><sp/>0x00</highlight></codeline>
+<codeline lineno="58" refid="keyboard__driver_8c_1a9251e181597aaffd89d4124300bb3afc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_SHIFT_FLAG<sp/><sp/><sp/>0x1000</highlight></codeline>
+<codeline lineno="59" refid="keyboard__driver_8c_1a8a23220a8cc9ec24673c721ed7c2d1ee" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_ALT_FLAG<sp/><sp/><sp/><sp/><sp/>0x2000</highlight></codeline>
+<codeline lineno="60" refid="keyboard__driver_8c_1a7cbeadd13fad8f6304b512174e45f118" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_CTRL_FLAG<sp/><sp/><sp/><sp/>0x4000</highlight></codeline>
+<codeline lineno="61" refid="keyboard__driver_8c_1ab6b82f150d6913d7ca816f1c97ab6806" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_RELEASE_FLAG<sp/>0x8000</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>*<sp/>Special<sp/>key<sp/>codes</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="keyboard__driver_8c_1a17e3fe7fce6effc4800de3a1aa286362" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SPECIAL(num)<sp/>(KEY_SPECIAL_FLAG<sp/>&amp;<sp/>(num))</highlight></codeline>
+<codeline lineno="68" refid="keyboard__driver_8c_1a640e5770ec5c594beb6f1c101b607ef3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_UNKNOWN<sp/>_SPECIAL(0)<sp/></highlight></codeline>
+<codeline lineno="69" refid="keyboard__driver_8c_1a2772a1f7024ba1fd62e88ec1adb541f8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x01</highlight></codeline>
+<codeline lineno="70" refid="keyboard__driver_8c_1ae2e2edb31bb7796786da12f85f2d5cd1" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F2<sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x02<sp/></highlight></codeline>
+<codeline lineno="71" refid="keyboard__driver_8c_1a38ebe8e5c5f1d5727c9638bf79fc3952" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F3<sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x03<sp/></highlight></codeline>
+<codeline lineno="72" refid="keyboard__driver_8c_1ab99474b01ffcbc57d74b60a77895e5e8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F4<sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x04<sp/></highlight></codeline>
+<codeline lineno="73" refid="keyboard__driver_8c_1a2a0aae1931111382ade29fd75ef64790" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F5<sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x05<sp/></highlight></codeline>
+<codeline lineno="74" refid="keyboard__driver_8c_1ad31281b771b8b85f4aa98bbd527d91a0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F6<sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x06</highlight></codeline>
+<codeline lineno="75" refid="keyboard__driver_8c_1a7eed6766ef9ddb721c6a2bce807fc9dc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F7<sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x07</highlight></codeline>
+<codeline lineno="76" refid="keyboard__driver_8c_1a7a8ad03f07f2e4757a70385e88fbbe3c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F8<sp/><sp/><sp/><sp/><sp/><sp/>KB_KEY_RELEASE<sp/>|<sp/>0x08</highlight></codeline>
+<codeline lineno="77" refid="keyboard__driver_8c_1a417a382624f91fb0cdfdf1c33adc8c90" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F9<sp/><sp/><sp/><sp/><sp/><sp/>_SPECIAL(9)<sp/></highlight></codeline>
+<codeline lineno="78" refid="keyboard__driver_8c_1ad37282615edb2c357149c2a1342b4a85" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F10<sp/><sp/><sp/><sp/><sp/>_SPECIAL(10)<sp/></highlight></codeline>
+<codeline lineno="79" refid="keyboard__driver_8c_1abd820bb8b4b2a47e4210401b13789106" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F11<sp/><sp/><sp/><sp/><sp/>_SPECIAL(11)<sp/></highlight></codeline>
+<codeline lineno="80" refid="keyboard__driver_8c_1a0a3de83275f6bbc2b88692f947f0d595" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_F12<sp/><sp/><sp/><sp/><sp/>_SPECIAL(12)<sp/></highlight></codeline>
+<codeline lineno="81" refid="keyboard__driver_8c_1a5286700e5cf8acb2707c1c08968c6c25" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_LCTRL<sp/><sp/><sp/>_SPECIAL(13)<sp/></highlight></codeline>
+<codeline lineno="82" refid="keyboard__driver_8c_1a02d44d9c52e2d45f18ed4b89b4d6c459" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_RCTRL<sp/><sp/><sp/>_SPECIAL(14)<sp/></highlight></codeline>
+<codeline lineno="83" refid="keyboard__driver_8c_1ae8b9735c4a7fd10317aaab6dcbe91e51" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_LSHIFT<sp/><sp/>_SPECIAL(15)<sp/></highlight></codeline>
+<codeline lineno="84" refid="keyboard__driver_8c_1a5b52e8d492e96e2b4c21a94f50a689c5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_RSHIFT<sp/><sp/>_SPECIAL(16)<sp/></highlight></codeline>
+<codeline lineno="85" refid="keyboard__driver_8c_1a650e7f9f7cb284c1fd51466b12239bf8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_LALT<sp/><sp/><sp/><sp/>_SPECIAL(17)<sp/></highlight></codeline>
+<codeline lineno="86" refid="keyboard__driver_8c_1a9ec081e11253532b99061dd69312e5bd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_RALT<sp/><sp/><sp/><sp/>_SPECIAL(18)<sp/></highlight></codeline>
+<codeline lineno="87" refid="keyboard__driver_8c_1a1d7bd4e5940f27a6f527d92f451f77e9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_PRINTSCRN<sp/>_SPECIAL(19)<sp/></highlight></codeline>
+<codeline lineno="88" refid="keyboard__driver_8c_1af168e54444bdaff5f50f6f4734784762" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_CAPSLOCK<sp/>_SPECIAL(20)<sp/></highlight></codeline>
+<codeline lineno="89" refid="keyboard__driver_8c_1aa9a01a8ed5fb358424866f4bc61d7c13" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_NUMLOCK<sp/>_SPECIAL(21)<sp/></highlight></codeline>
+<codeline lineno="90" refid="keyboard__driver_8c_1a97f9cc7e1ca0a11eef51482840a0998a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_SCRLOCK<sp/>_SPECIAL(22)<sp/></highlight></codeline>
+<codeline lineno="91" refid="keyboard__driver_8c_1a49b08a0976f0eb9d88cbd1dddd853bb8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_SYSREQ<sp/><sp/>_SPECIAL(23)<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*<sp/>Keypad<sp/>keys</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="keyboard__driver_8c_1a45fd73c874d47cc9ff59119117303d57" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEYPAD_START<sp/>128</highlight></codeline>
+<codeline lineno="97" refid="keyboard__driver_8c_1a336b7b3e7317fdc94c68fd1f13bba4ce" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_KEYPAD(num)<sp/>(KEY_KEYPAD_FLAG<sp/>&amp;<sp/>KEY_SPECIAL_FLAG<sp/>&amp;<sp/>(num+KEYPAD_START))</highlight></codeline>
+<codeline lineno="98" refid="keyboard__driver_8c_1aa8c338a468d996ee81422efd468543b8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPHOME<sp/><sp/>_KEYPAD(0)</highlight></codeline>
+<codeline lineno="99" refid="keyboard__driver_8c_1a85db875aabf0d851b732279f1738c401" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPUP<sp/><sp/><sp/><sp/>_KEYPAD(1)</highlight></codeline>
+<codeline lineno="100" refid="keyboard__driver_8c_1af670127c11afdf470b728ac482c82920" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPPGUP<sp/><sp/>_KEYPAD(2)</highlight></codeline>
+<codeline lineno="101" refid="keyboard__driver_8c_1a8d4af0c33552022467acc210f1d42775" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPMINUS<sp/>_KEYPAD(3)</highlight></codeline>
+<codeline lineno="102" refid="keyboard__driver_8c_1a849d512e75ba3a6c6d75204fa9d97607" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPLEFT<sp/><sp/>_KEYPAD(4)</highlight></codeline>
+<codeline lineno="103" refid="keyboard__driver_8c_1aceac19ff0e70c49e8cbd65875a77a6eb" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPCENTER<sp/>_KEYPAD(5)</highlight></codeline>
+<codeline lineno="104" refid="keyboard__driver_8c_1a3d9248f2fd65044cab216efb2547cb93" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPRIGHT<sp/>_KEYPAD(6)</highlight></codeline>
+<codeline lineno="105" refid="keyboard__driver_8c_1ac0c8d4b7b0f615f7ac9d8bf448515e59" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPPLUS<sp/><sp/>_KEYPAD(7)</highlight></codeline>
+<codeline lineno="106" refid="keyboard__driver_8c_1aad6a974b184775fb8521557b2b693e3e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPEND<sp/><sp/><sp/>_KEYPAD(8)</highlight></codeline>
+<codeline lineno="107" refid="keyboard__driver_8c_1ac14b45997a4ed2630dd5b89bd31b8c9e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPDOWN<sp/><sp/>_KEYPAD(9)</highlight></codeline>
+<codeline lineno="108" refid="keyboard__driver_8c_1a836148690b729a4772a238e6c6d0ab45" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPPGDN<sp/><sp/>_KEYPAD(10)</highlight></codeline>
+<codeline lineno="109" refid="keyboard__driver_8c_1a62972d0bce7dccfff163100429cf37df" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPINSERT<sp/>_KEYPAD(11)</highlight></codeline>
+<codeline lineno="110" refid="keyboard__driver_8c_1af7b6936d57ec53483055451d58ab1dc3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KEY_KPDEL<sp/><sp/><sp/>_KEYPAD(12)</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="keyboard__driver_8c_1af499a0b34ddf61832ae3dab05677ac7b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASCII_ESC<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight></codeline>
+<codeline lineno="113" refid="keyboard__driver_8c_1a74cfd0b97396b41e6cbb25de858ece5b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ASCII_BS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;\b&apos;</highlight></codeline>
+<codeline lineno="114" refid="keyboard__driver_8c_1a7ab1f9088384929f582cef4cf7510ff6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ASCII_ENTER<sp/>&apos;\n&apos;</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/>*<sp/>Translate<sp/>from<sp/>scan<sp/>code<sp/>to<sp/>key<sp/>code,<sp/>when<sp/>shift<sp/>is<sp/>not<sp/>pressed.</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/>scanTableNoShift[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a640e5770ec5c594beb6f1c101b607ef3" kindref="member">KEY_UNKNOWN</ref>,<sp/><ref refid="keyboard__driver_8c_1af499a0b34ddf61832ae3dab05677ac7b" kindref="member">ASCII_ESC</ref>,<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x00<sp/>-<sp/>0x03<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;6&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x04<sp/>-<sp/>0x07<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;7&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;9&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x08<sp/>-<sp/>0x0B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1a74cfd0b97396b41e6cbb25de858ece5b" kindref="member">ASCII_BS</ref>,<sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x0C<sp/>-<sp/>0x0F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;q&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;w&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;e&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x10<sp/>-<sp/>0x13<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;t&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;y&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;u&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;i&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x14<sp/>-<sp/>0x17<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;o&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;p&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;[&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x18<sp/>-<sp/>0x1B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a7ab1f9088384929f582cef4cf7510ff6" kindref="member">ASCII_ENTER</ref>,<sp/><ref refid="keyboard__driver_8c_1a5286700e5cf8acb2707c1c08968c6c25" kindref="member">KEY_LCTRL</ref>,<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x1C<sp/>-<sp/>0x1F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;d&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;f&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;g&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x20<sp/>-<sp/>0x23<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;j&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;k&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;l&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x24<sp/>-<sp/>0x27<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;\&apos;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;`&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1ae8b9735c4a7fd10317aaab6dcbe91e51" kindref="member">KEY_LSHIFT</ref>,<sp/></highlight><highlight class="charliteral">&apos;\\&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x28<sp/>-<sp/>0x2B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;x&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;v&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x2C<sp/>-<sp/>0x2F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;b&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;n&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;m&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x30<sp/>-<sp/>0x33<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1a5b52e8d492e96e2b4c21a94f50a689c5" kindref="member">KEY_RSHIFT</ref>,<sp/><ref refid="keyboard__driver_8c_1a1d7bd4e5940f27a6f527d92f451f77e9" kindref="member">KEY_PRINTSCRN</ref>,<sp/></highlight><highlight class="comment">/*<sp/>0x34<sp/>-<sp/>0x37<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a650e7f9f7cb284c1fd51466b12239bf8" kindref="member">KEY_LALT</ref>,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1af168e54444bdaff5f50f6f4734784762" kindref="member">KEY_CAPSLOCK</ref>,<sp/><ref refid="keyboard__driver_8c_1a2772a1f7024ba1fd62e88ec1adb541f8" kindref="member">KEY_F1</ref>,<sp/></highlight><highlight class="comment">/*<sp/>0x38<sp/>-<sp/>0x3B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ae2e2edb31bb7796786da12f85f2d5cd1" kindref="member">KEY_F2</ref>,<sp/><ref refid="keyboard__driver_8c_1a38ebe8e5c5f1d5727c9638bf79fc3952" kindref="member">KEY_F3</ref>,<sp/><ref refid="keyboard__driver_8c_1ab99474b01ffcbc57d74b60a77895e5e8" kindref="member">KEY_F4</ref>,<sp/><ref refid="keyboard__driver_8c_1a2a0aae1931111382ade29fd75ef64790" kindref="member">KEY_F5</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x3C<sp/>-<sp/>0x3F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ad31281b771b8b85f4aa98bbd527d91a0" kindref="member">KEY_F6</ref>,<sp/><ref refid="keyboard__driver_8c_1a7eed6766ef9ddb721c6a2bce807fc9dc" kindref="member">KEY_F7</ref>,<sp/><ref refid="keyboard__driver_8c_1a7a8ad03f07f2e4757a70385e88fbbe3c" kindref="member">KEY_F8</ref>,<sp/><ref refid="keyboard__driver_8c_1a417a382624f91fb0cdfdf1c33adc8c90" kindref="member">KEY_F9</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x40<sp/>-<sp/>0x43<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ad37282615edb2c357149c2a1342b4a85" kindref="member">KEY_F10</ref>,<sp/><ref refid="keyboard__driver_8c_1aa9a01a8ed5fb358424866f4bc61d7c13" kindref="member">KEY_NUMLOCK</ref>,<sp/><ref refid="keyboard__driver_8c_1a97f9cc7e1ca0a11eef51482840a0998a" kindref="member">KEY_SCRLOCK</ref>,<sp/><ref refid="keyboard__driver_8c_1aa8c338a468d996ee81422efd468543b8" kindref="member">KEY_KPHOME</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x44<sp/>-<sp/>0x47<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a85db875aabf0d851b732279f1738c401" kindref="member">KEY_KPUP</ref>,<sp/><ref refid="keyboard__driver_8c_1af670127c11afdf470b728ac482c82920" kindref="member">KEY_KPPGUP</ref>,<sp/><ref refid="keyboard__driver_8c_1a8d4af0c33552022467acc210f1d42775" kindref="member">KEY_KPMINUS</ref>,<sp/><ref refid="keyboard__driver_8c_1a849d512e75ba3a6c6d75204fa9d97607" kindref="member">KEY_KPLEFT</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x48<sp/>-<sp/>0x4B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1aceac19ff0e70c49e8cbd65875a77a6eb" kindref="member">KEY_KPCENTER</ref>,<sp/><ref refid="keyboard__driver_8c_1a3d9248f2fd65044cab216efb2547cb93" kindref="member">KEY_KPRIGHT</ref>,<sp/><ref refid="keyboard__driver_8c_1ac0c8d4b7b0f615f7ac9d8bf448515e59" kindref="member">KEY_KPPLUS</ref>,<sp/><ref refid="keyboard__driver_8c_1aad6a974b184775fb8521557b2b693e3e" kindref="member">KEY_KPEND</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x4C<sp/>-<sp/>0x4F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ac14b45997a4ed2630dd5b89bd31b8c9e" kindref="member">KEY_KPDOWN</ref>,<sp/><ref refid="keyboard__driver_8c_1a836148690b729a4772a238e6c6d0ab45" kindref="member">KEY_KPPGDN</ref>,<sp/><ref refid="keyboard__driver_8c_1a62972d0bce7dccfff163100429cf37df" kindref="member">KEY_KPINSERT</ref>,<sp/><ref refid="keyboard__driver_8c_1af7b6936d57ec53483055451d58ab1dc3" kindref="member">KEY_KPDEL</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x50<sp/>-<sp/>0x53<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a49b08a0976f0eb9d88cbd1dddd853bb8" kindref="member">KEY_SYSREQ</ref>,<sp/><ref refid="keyboard__driver_8c_1a640e5770ec5c594beb6f1c101b607ef3" kindref="member">KEY_UNKNOWN</ref>,<sp/>KEY_UNKNOWN,<sp/>KEY_UNKNOWN,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x54<sp/>-<sp/>0x57<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="keyboard__driver_8c_1a83564eb50f034d42ae30610d577ef17e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCAN_TABLE_SIZE<sp/>(sizeof(s_scanTableNoShift)<sp/>/<sp/>sizeof(Keycode))</highlight></codeline>
+<codeline lineno="145"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/>*<sp/>\brief<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Translate<sp/>from<sp/>scan<sp/>code<sp/>to<sp/>key<sp/>code,<sp/>when<sp/>shift<sp/>*is*<sp/>pressed.</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Keep<sp/>this<sp/>in<sp/>sync<sp/>with<sp/>the<sp/>unshifted<sp/>table<sp/>above!</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>They<sp/>must<sp/>be<sp/>the<sp/>same<sp/>size.</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/>scanTableWithShift[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a640e5770ec5c594beb6f1c101b607ef3" kindref="member">KEY_UNKNOWN</ref>,<sp/><ref refid="keyboard__driver_8c_1af499a0b34ddf61832ae3dab05677ac7b" kindref="member">ASCII_ESC</ref>,<sp/></highlight><highlight class="charliteral">&apos;!&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;@&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x00<sp/>-<sp/>0x03<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;$&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;%&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;^&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x04<sp/>-<sp/>0x07<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;&amp;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;)&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x08<sp/>-<sp/>0x0B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1a74cfd0b97396b41e6cbb25de858ece5b" kindref="member">ASCII_BS</ref>,<sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x0C<sp/>-<sp/>0x0F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;Q&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;W&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;R&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x10<sp/>-<sp/>0x13<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;T&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;Y&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;U&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;I&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x14<sp/>-<sp/>0x17<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;P&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;{&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;}&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x18<sp/>-<sp/>0x1B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a7ab1f9088384929f582cef4cf7510ff6" kindref="member">ASCII_ENTER</ref>,<sp/><ref refid="keyboard__driver_8c_1a5286700e5cf8acb2707c1c08968c6c25" kindref="member">KEY_LCTRL</ref>,<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;S&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x1C<sp/>-<sp/>0x1F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;F&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;G&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;H&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x20<sp/>-<sp/>0x23<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;K&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;L&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x24<sp/>-<sp/>0x27<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;&quot;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;~&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1ae8b9735c4a7fd10317aaab6dcbe91e51" kindref="member">KEY_LSHIFT</ref>,<sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x28<sp/>-<sp/>0x2B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;Z&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;V&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x2C<sp/>-<sp/>0x2F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;B&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;N&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;&lt;&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x30<sp/>-<sp/>0x33<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;&gt;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;?&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1a5b52e8d492e96e2b4c21a94f50a689c5" kindref="member">KEY_RSHIFT</ref>,<sp/><ref refid="keyboard__driver_8c_1a1d7bd4e5940f27a6f527d92f451f77e9" kindref="member">KEY_PRINTSCRN</ref>,<sp/></highlight><highlight class="comment">/*<sp/>0x34<sp/>-<sp/>0x37<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a650e7f9f7cb284c1fd51466b12239bf8" kindref="member">KEY_LALT</ref>,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,<sp/><ref refid="keyboard__driver_8c_1af168e54444bdaff5f50f6f4734784762" kindref="member">KEY_CAPSLOCK</ref>,<sp/><ref refid="keyboard__driver_8c_1a2772a1f7024ba1fd62e88ec1adb541f8" kindref="member">KEY_F1</ref>,<sp/></highlight><highlight class="comment">/*<sp/>0x38<sp/>-<sp/>0x3B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ae2e2edb31bb7796786da12f85f2d5cd1" kindref="member">KEY_F2</ref>,<sp/><ref refid="keyboard__driver_8c_1a38ebe8e5c5f1d5727c9638bf79fc3952" kindref="member">KEY_F3</ref>,<sp/><ref refid="keyboard__driver_8c_1ab99474b01ffcbc57d74b60a77895e5e8" kindref="member">KEY_F4</ref>,<sp/><ref refid="keyboard__driver_8c_1a2a0aae1931111382ade29fd75ef64790" kindref="member">KEY_F5</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x3C<sp/>-<sp/>0x3F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ad31281b771b8b85f4aa98bbd527d91a0" kindref="member">KEY_F6</ref>,<sp/><ref refid="keyboard__driver_8c_1a7eed6766ef9ddb721c6a2bce807fc9dc" kindref="member">KEY_F7</ref>,<sp/><ref refid="keyboard__driver_8c_1a7a8ad03f07f2e4757a70385e88fbbe3c" kindref="member">KEY_F8</ref>,<sp/><ref refid="keyboard__driver_8c_1a417a382624f91fb0cdfdf1c33adc8c90" kindref="member">KEY_F9</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x40<sp/>-<sp/>0x43<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ad37282615edb2c357149c2a1342b4a85" kindref="member">KEY_F10</ref>,<sp/><ref refid="keyboard__driver_8c_1aa9a01a8ed5fb358424866f4bc61d7c13" kindref="member">KEY_NUMLOCK</ref>,<sp/><ref refid="keyboard__driver_8c_1a97f9cc7e1ca0a11eef51482840a0998a" kindref="member">KEY_SCRLOCK</ref>,<sp/><ref refid="keyboard__driver_8c_1aa8c338a468d996ee81422efd468543b8" kindref="member">KEY_KPHOME</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x44<sp/>-<sp/>0x47<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a85db875aabf0d851b732279f1738c401" kindref="member">KEY_KPUP</ref>,<sp/><ref refid="keyboard__driver_8c_1af670127c11afdf470b728ac482c82920" kindref="member">KEY_KPPGUP</ref>,<sp/><ref refid="keyboard__driver_8c_1a8d4af0c33552022467acc210f1d42775" kindref="member">KEY_KPMINUS</ref>,<sp/><ref refid="keyboard__driver_8c_1a849d512e75ba3a6c6d75204fa9d97607" kindref="member">KEY_KPLEFT</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x48<sp/>-<sp/>0x4B<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1aceac19ff0e70c49e8cbd65875a77a6eb" kindref="member">KEY_KPCENTER</ref>,<sp/><ref refid="keyboard__driver_8c_1a3d9248f2fd65044cab216efb2547cb93" kindref="member">KEY_KPRIGHT</ref>,<sp/><ref refid="keyboard__driver_8c_1ac0c8d4b7b0f615f7ac9d8bf448515e59" kindref="member">KEY_KPPLUS</ref>,<sp/><ref refid="keyboard__driver_8c_1aad6a974b184775fb8521557b2b693e3e" kindref="member">KEY_KPEND</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x4C<sp/>-<sp/>0x4F<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1ac14b45997a4ed2630dd5b89bd31b8c9e" kindref="member">KEY_KPDOWN</ref>,<sp/><ref refid="keyboard__driver_8c_1a836148690b729a4772a238e6c6d0ab45" kindref="member">KEY_KPPGDN</ref>,<sp/><ref refid="keyboard__driver_8c_1a62972d0bce7dccfff163100429cf37df" kindref="member">KEY_KPINSERT</ref>,<sp/><ref refid="keyboard__driver_8c_1af7b6936d57ec53483055451d58ab1dc3" kindref="member">KEY_KPDEL</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x50<sp/>-<sp/>0x53<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8c_1a49b08a0976f0eb9d88cbd1dddd853bb8" kindref="member">KEY_SYSREQ</ref>,<sp/><ref refid="keyboard__driver_8c_1a640e5770ec5c594beb6f1c101b607ef3" kindref="member">KEY_UNKNOWN</ref>,<sp/>KEY_UNKNOWN,<sp/>KEY_UNKNOWN,<sp/><sp/></highlight><highlight class="comment">/*<sp/>0x54<sp/>-<sp/>0x57<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/>*<sp/>Buffer<sp/>Teclado</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/>*<sp/>----------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="ttys_8c_1ada1a59b14be333012bb872bfc12efeb7" refkind="member"><highlight class="normal"><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/><ref refid="keyboard__driver_8c_1a1450b40f662a6e83afdd2146c0a64307" kindref="member">keyboardBuffer</ref>[<ref refid="keyboard__buffer_8h_1a5c28e05d04961202172037075ea93d40" kindref="member">KEYBOARD_BUFFER_SIZE</ref>];</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/>*<sp/>Private<sp/>data<sp/>and<sp/>functions</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/>*<sp/>----------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="keyboard__driver_8c_1a354ce1ad1d33647cf9d227c04fe70f21" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a68ddb25c25a5436ebaaa03ce6ad735a0" kindref="member" tooltip="This function is the manager of interpretate what key was pressed or released. It...">keyboard_driver</ref>(){</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/>scan<sp/>=<sp/>0,<sp/>auxScan,<sp/>oldScanCode=0;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>countEnq<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="io_8h_1ac17a6cfbeef702c55063c3350220c126" kindref="member" tooltip="This function grabs the value stored in the given port.">inportb</ref>(<ref refid="keyboard__driver_8c_1a1ef7b9796fcb1fed4d40173fba9f52fc" kindref="member">CONTROL_PORT</ref>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(<ref refid="keyboard__driver_8c_1a329d7321668d223f8cf445b723eaeadb" kindref="member">KB_OUTPUT_FULL</ref><sp/>&amp;<sp/>status)<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scan<sp/>=<sp/><ref refid="io_8h_1ac17a6cfbeef702c55063c3350220c126" kindref="member" tooltip="This function grabs the value stored in the given port.">inportb</ref>(<ref refid="keyboard__driver_8c_1ab0c169c959c5be67954c866776329563" kindref="member">DATA_PORT</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>keyboard<sp/>is<sp/>avaliable<sp/>to<sp/>read<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="keyboard__driver_8h_1ae8a256c73e7395a726e5609efef38ceb" kindref="member" tooltip="This function detect if a control key was pressed and set his internal flag.">SetKeyState</ref>(scan);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!(scan<sp/>&amp;<sp/><ref refid="keyboard__driver_8c_1aea1fb123893c8dcc87ec0183b79d678b" kindref="member">KB_KEY_RELEASE</ref>)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>flag<sp/>&amp;<sp/><ref refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" kindref="member">FLAG_SHIFT</ref><sp/><sp/>)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>flagCaps<sp/>&amp;<sp/><ref refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" kindref="member">FLAG_CAPS</ref><sp/>)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxScan<sp/>=<sp/>scanTableNoShift[scan];</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>auxScan<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>auxScan<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref>(auxScan);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxScan<sp/>=<sp/>scanTableWithShift[scan];</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>auxScan<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref>(auxScan);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxScan<sp/>=<sp/>scanTableWithShift[scan];</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>auxScan<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref>(auxScan);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>flag<sp/>&amp;<sp/><ref refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" kindref="member">FLAG_CAPS</ref><sp/>&amp;&amp;<sp/>(auxScan<sp/>=<sp/>scanTableNoShift[scan])<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>auxScan<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxScan<sp/>-=<sp/>0x20;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>auxScan<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref>(auxScan);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>flag<sp/>&amp;<sp/><ref refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" kindref="member">FLAG_CTRL</ref><sp/>&amp;&amp;<sp/>((auxScan<sp/>=<sp/>scanTableNoShift[scan])<sp/>==<sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal"><sp/>||<sp/>(auxScan<sp/>=<sp/>scanTableWithShift[scan])<sp/>==<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref>(<sp/>0x8A<sp/>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxScan<sp/>=<sp/>scanTableNoShift[scan];</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>oldScanCode<sp/>==<sp/>scan<sp/>)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>countEnq++<sp/>&lt;=<sp/>amountOfRepetition<sp/>)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref>(auxScan);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>auxScan<sp/>)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="queue_8h_1ad3b45b6912c2aa908942a369076a7c01" kindref="member">charEnque</ref>(auxScan);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oldScanCode<sp/>=<sp/>scan;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyboardActivity<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1abbca9cfc412d307fa56ca4a4095f0f87" kindref="member" tooltip="Leaves all of character that are in the KeyboradBuffer and put in the correct tty...">refreshKeyboardBufferTTY</ref>();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="keyboard__driver_8c_1ae8a256c73e7395a726e5609efef38ceb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1ae8a256c73e7395a726e5609efef38ceb" kindref="member" tooltip="This function detect if a control key was pressed and set his internal flag.">SetKeyState</ref>(<sp/><ref refid="types_8h_1a90ed3c9028a7fa45665d10b5210fa142" kindref="member" tooltip="Keycode typedef.">Keycode</ref><sp/>scanCode<sp/>)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(scanCode)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1a1c62bc798a230bd1a1558429c9bc26b6" kindref="member">KEY_RSHIFT_P</ref>:<sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1a7532780fdf03fa94b668c995e90da06b" kindref="member">KEY_LSHIFT_P</ref>:</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flag<sp/>|=<sp/><ref refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" kindref="member">FLAG_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1aae9c6475165c3f23596fa25b9332a583" kindref="member">KEY_RSHIFT_R</ref>:<sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1a13720acdbecbb70c6168c3198b83bb69" kindref="member">KEY_LSHIFT_R</ref>:</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flag<sp/>&amp;=<sp/>~<ref refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" kindref="member">FLAG_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1ae5a9cbd478a01961788027ab9685c294" kindref="member">KEY_CAPS</ref>:</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flag<sp/>=<sp/>flag<sp/>^<ref refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" kindref="member">FLAG_CAPS</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flagCaps<sp/>=<sp/>flagCaps<sp/>^FLAG_CAPS;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1a896de6986e3a1a2290166fba2f50e6af" kindref="member">KEY_CTRL_P</ref>:</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flag<sp/>|=<sp/><ref refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" kindref="member">FLAG_CTRL</ref>;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8c_1a93f9269ddd48232917a079e8d0392db3" kindref="member">KEY_CTRL_R</ref>:</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flag<sp/>&amp;=<sp/>~<ref refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" kindref="member">FLAG_CTRL</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="keyboard__driver_8c_1a1e982cb449d6c79c7e88c3f3c83fb0a9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a1e982cb449d6c79c7e88c3f3c83fb0a9" kindref="member" tooltip="Return TRUE if the shift key was pressed.">shiftIsPressed</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>flag<sp/>==<sp/><ref refid="keyboard__driver_8c_1a39efb68cd74558b7306c0afc3dc83ad5" kindref="member">FLAG_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="keyboard__driver_8c_1a5cd4040e5ce2d227365162f30a97bde6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a5cd4040e5ce2d227365162f30a97bde6" kindref="member" tooltip="Return TRUE if caps-lock key was pressed.">capsIsPressed</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>flag<sp/>==<sp/><ref refid="keyboard__driver_8c_1a6bd6d6a87499abd47ce11af2ef762d8f" kindref="member">FLAG_CAPS</ref>;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="keyboard__driver_8c_1a046fa8980fed8bb1b411239365e4f273" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a046fa8980fed8bb1b411239365e4f273" kindref="member" tooltip="Return TRUE if control key was pressed.">ctrlIsPressed</ref><sp/>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>flag<sp/>==<sp/><ref refid="keyboard__driver_8c_1a912a1473d65d050bbb2a6d476d3153e3" kindref="member">FLAG_CTRL</ref>;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="keyboard__driver_8c_1ad08dcad6f1e75b671f968085649f73a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a0f7d83a11b51b8609c96bd59f4a2e7f5" kindref="member" tooltip="Gets the actual repetition interval.">getRepetition</ref>()</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>amountOfRepetition;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="keyboard__driver_8c_1a192c6a0f85ccf24da7cbd741231ac621" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a192c6a0f85ccf24da7cbd741231ac621" kindref="member" tooltip="Sets the repetition interval.">setRepetition</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newRep<sp/>)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amountOfRepetition<sp/>=<sp/>newRep;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="keyboard__driver_8c_1a7d6406fbcd82ed4c982d8b181573a89b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1a7d6406fbcd82ed4c982d8b181573a89b" kindref="member" tooltip="Return a 1 if the keyboard routine was called, so the keyboard had interrupted. This...">checkKeyboardActivity</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>keyboardActivity<sp/>)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyboardActivity<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="keyboard__driver_8c_1ad4bd2d43f0ac21af96967762a3412da2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keyboard__driver_8h_1ad4bd2d43f0ac21af96967762a3412da2" kindref="member" tooltip="Set the keyboard activity flag to 0.">setKeyboardActivity</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyboardActivity<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/keyboard_driver.c"/>
+  </compounddef>
+</doxygen>

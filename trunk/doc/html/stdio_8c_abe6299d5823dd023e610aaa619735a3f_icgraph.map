@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$bttlship_8c.html#a21c4f719d9c70f144ffbb7b4ab57d935" title="It prints the table of the battlehsip." alt="" coords="247,5,345,35"/>
+<area shape="rect" id="node7" href="$bttlship_8c.html#afcb21d332942ec61fd523fed20b758e5" title="It prints each row of the table." alt="" coords="112,31,197,60"/>
+<area shape="rect" id="node5" href="$bttlship_8c.html#a52e47768a66b91e89d5546a8cb0f168c" title="It&#39;s the main process of the battleship, it generates the whole table and ships..." alt="" coords="395,5,485,35"/>
+</map>

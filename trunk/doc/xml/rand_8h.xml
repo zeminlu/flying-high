@@ -1,0 +1,738 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="rand_8h" kind="file">
+    <compoundname>rand.h</compoundname>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="bttlship_8h" local="yes">inc/bttlship.h</includedby>
+    <includedby refid="sys_process_8h" local="yes">inc/sysProcess.h</includedby>
+    <includedby refid="rand_8c" local="yes">src/rand.c</includedby>
+    <incdepgraph>
+      <node id="3163">
+        <label>inc/rand.h</label>
+        <link refid="rand.h"/>
+        <childnode refid="3164" relation="include">
+        </childnode>
+      </node>
+      <node id="3168">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3191">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3189" relation="include">
+        </childnode>
+      </node>
+      <node id="3174">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="3164">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3188" relation="include">
+        </childnode>
+        <childnode refid="3183" relation="include">
+        </childnode>
+        <childnode refid="3192" relation="include">
+        </childnode>
+        <childnode refid="3176" relation="include">
+        </childnode>
+      </node>
+      <node id="3183">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3179" relation="include">
+        </childnode>
+      </node>
+      <node id="3172">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3171">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3165">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3166" relation="include">
+        </childnode>
+        <childnode refid="3167" relation="include">
+        </childnode>
+      </node>
+      <node id="3181">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3182" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+      </node>
+      <node id="3185">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3179" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+        <childnode refid="3186" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3168" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3187" relation="include">
+        </childnode>
+        <childnode refid="3183" relation="include">
+        </childnode>
+        <childnode refid="3190" relation="include">
+        </childnode>
+      </node>
+      <node id="3188">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3186">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3185" relation="include">
+        </childnode>
+        <childnode refid="3180" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3179">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="3180" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3175">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3176" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3183" relation="include">
+        </childnode>
+        <childnode refid="3164" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3163" relation="include">
+        </childnode>
+        <childnode refid="3185" relation="include">
+        </childnode>
+      </node>
+      <node id="3180">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="3192">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3188" relation="include">
+        </childnode>
+      </node>
+      <node id="3182">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+      </node>
+      <node id="3167">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3168" relation="include">
+        </childnode>
+      </node>
+      <node id="3176">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3177" relation="include">
+        </childnode>
+        <childnode refid="3179" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3175" relation="include">
+        </childnode>
+        <childnode refid="3164" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+        <childnode refid="3181" relation="include">
+        </childnode>
+      </node>
+      <node id="3190">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3179" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+        <childnode refid="3191" relation="include">
+        </childnode>
+        <childnode refid="3189" relation="include">
+        </childnode>
+        <childnode refid="3163" relation="include">
+        </childnode>
+        <childnode refid="3176" relation="include">
+        </childnode>
+      </node>
+      <node id="3170">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3178">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3173">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3164" relation="include">
+        </childnode>
+        <childnode refid="3174" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3175" relation="include">
+        </childnode>
+      </node>
+      <node id="3177">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3189">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+      </node>
+      <node id="3169">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+      </node>
+      <node id="3184">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3182" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+      </node>
+      <node id="3166">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="3187">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3187" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3175" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3164" relation="include">
+        </childnode>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+        <childnode refid="3179" relation="include">
+        </childnode>
+        <childnode refid="3188" relation="include">
+        </childnode>
+        <childnode refid="3176" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+        <childnode refid="3182" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3183" relation="include">
+        </childnode>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3185" relation="include">
+        </childnode>
+        <childnode refid="3180" relation="include">
+        </childnode>
+        <childnode refid="3168" relation="include">
+        </childnode>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3189" relation="include">
+        </childnode>
+        <childnode refid="3163" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3193">
+        <label>inc/rand.h</label>
+        <link refid="rand.h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3201" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3225" relation="include">
+        </childnode>
+      </node>
+      <node id="3195">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3196" relation="include">
+        </childnode>
+      </node>
+      <node id="3223">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3205">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+      </node>
+      <node id="3202">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="3212">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3201" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3213" relation="include">
+        </childnode>
+      </node>
+      <node id="3208">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3200" relation="include">
+        </childnode>
+        <childnode refid="3193" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3204" relation="include">
+        </childnode>
+        <childnode refid="3209" relation="include">
+        </childnode>
+      </node>
+      <node id="3216">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3217" relation="include">
+        </childnode>
+      </node>
+      <node id="3217">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3224">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="3222">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="3203">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3204" relation="include">
+        </childnode>
+      </node>
+      <node id="3197">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3221" relation="include">
+        </childnode>
+        <childnode refid="3223" relation="include">
+        </childnode>
+      </node>
+      <node id="3219">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="3219" relation="include">
+        </childnode>
+      </node>
+      <node id="3221">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3222" relation="include">
+        </childnode>
+      </node>
+      <node id="3198">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3199" relation="include">
+        </childnode>
+        <childnode refid="3200" relation="include">
+        </childnode>
+        <childnode refid="3204" relation="include">
+        </childnode>
+        <childnode refid="3219" relation="include">
+        </childnode>
+        <childnode refid="3220" relation="include">
+        </childnode>
+      </node>
+      <node id="3213">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="3206">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="3207" relation="include">
+        </childnode>
+      </node>
+      <node id="3204">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3201" relation="include">
+        </childnode>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3206" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3210" relation="include">
+        </childnode>
+      </node>
+      <node id="3201">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3202" relation="include">
+        </childnode>
+      </node>
+      <node id="3200">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3201" relation="include">
+        </childnode>
+        <childnode refid="3203" relation="include">
+        </childnode>
+        <childnode refid="3211" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3215" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+      </node>
+      <node id="3220">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="3218">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="3214">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="3211">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3201" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+        <childnode refid="3214" relation="include">
+        </childnode>
+      </node>
+      <node id="3209">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="3196">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="3225">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="3210">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="3207">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="3215">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3216" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+      </node>
+      <node id="3194">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3224" relation="include">
+        </childnode>
+      </node>
+      <node id="3199">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="rand_8h_1a690f251553b39fd4f31894826141b61a" prot="public" static="no">
+        <name>RAND_MAX</name>
+        <initializer>42949679</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/rand.h" line="14" bodyfile="/Users/Luciano/Desktop/flying-high/inc/rand.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="rand_8c_1a20e50ab9d6b10af0e2940d9419448f42" compoundref="rand_8c" startline="17" endline="24">rand</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int timeRand</definition>
+        <argsstring>()</argsstring>
+        <name>timeRand</name>
+        <briefdescription>
+<para>This function loads the amount of ticks. It uses a system call. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The amount of tick</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" kindref="member" tooltip="Sets the seed to generate random numbers.">srand</ref>(<ref refid="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" kindref="member" tooltip="This function loads the amount of ticks. It uses a system call.">timeRand</ref>());</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para>_system_uptime </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/rand.h" line="32" bodyfile="/Users/Luciano/Desktop/flying-high/src/rand.c" bodystart="13" bodyend="15"/>
+        <references refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" compoundref="process_8c" startline="95" endline="97">upTime</references>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rand_8h_1a20e50ab9d6b10af0e2940d9419448f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rand</definition>
+        <argsstring>()</argsstring>
+        <name>rand</name>
+        <briefdescription>
+<para>Generates a random number with a linear equation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A random number</para></simplesect>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ran<sp/>=<sp/><ref refid="rand_8h_1a20e50ab9d6b10af0e2940d9419448f42" kindref="member" tooltip="Generates a random number with a linear equation.">rand</ref>();</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/rand.h" line="47" bodyfile="/Users/Luciano/Desktop/flying-high/src/rand.c" bodystart="17" bodyend="24"/>
+        <references refid="rand_8h_1a690f251553b39fd4f31894826141b61a" compoundref="rand_8h" startline="14">RAND_MAX</references>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void srand</definition>
+        <argsstring>(unsigned int seedP)</argsstring>
+        <name>srand</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>seedP</declname>
+        </param>
+        <briefdescription>
+<para>Sets the seed to generate random numbers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seedP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed to be set.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" kindref="member" tooltip="Sets the seed to generate random numbers.">srand</ref>(<ref refid="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" kindref="member" tooltip="This function loads the amount of ticks. It uses a system call.">timeRand</ref>());</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/rand.h" line="64" bodyfile="/Users/Luciano/Desktop/flying-high/src/rand.c" bodystart="26" bodyend="28"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Random number generation module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>RAND</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RAND</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound" tooltip="Implementation of every system call.">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="rand_8h_1a690f251553b39fd4f31894826141b61a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAND_MAX<sp/>42949679</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" kindref="member" tooltip="This function loads the amount of ticks. It uses a system call.">timeRand</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rand_8h_1a20e50ab9d6b10af0e2940d9419448f42" kindref="member" tooltip="Generates a random number with a linear equation.">rand</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" kindref="member" tooltip="Sets the seed to generate random numbers.">srand</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seedP<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/rand.h"/>
+  </compounddef>
+</doxygen>

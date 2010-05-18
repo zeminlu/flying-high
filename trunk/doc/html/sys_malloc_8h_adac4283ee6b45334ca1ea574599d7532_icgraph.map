@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$k_malloc_8c.html#ad9fb012fb56b43ef1ab6078646973b3f" title="Calls sysRealloc, that changes the size of the original. It returns null if there..." alt="" coords="148,5,225,35"/>
+<area shape="rect" id="node5" href="$u_malloc_8c.html#a5ed3930d6e86bee548f632e2c571c736" title="Changes the original size of the continuous memory. If it is possible, it moves the..." alt="" coords="153,59,220,88"/>
+</map>

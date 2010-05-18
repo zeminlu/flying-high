@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$sys_malloc_8h.html#adac4283ee6b45334ca1ea574599d7532" title="This function changes the original size of the logical memory to a new one if it&#39;s..." alt="" coords="120,32,213,61"/>
+<area shape="rect" id="node5" href="$string_8h.html#aba088e716bccbc96d42da97e96316df1" title="The memcpy() function copies n bytes from memory area src to memory area dest. The..." alt="" coords="265,5,345,35"/>
+<area shape="rect" id="node7" href="$sys_malloc_8h.html#a7472d23b0529e946d8dcdf5a0de26c52" title="Function that gives a continuous segment of memory. This memory comes from the function..." alt="" coords="263,59,348,88"/>
+</map>

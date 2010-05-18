@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$exceptions_8c.html#a7bb93194b9711c5e41743a0b15e1f96d" title="handleException" alt="" coords="223,112,356,141"/>
+<area shape="rect" id="node5" href="$ttys_8h.html#ac625c448f0a3f2dd24c1409227e291e4" title="This function returns the tty id of tty that are in focus at this moment. It is a..." alt="" coords="407,5,532,35"/>
+<area shape="rect" id="node7" href="$process_8h.html#ac61b207337ca21b3b309593fd1a0cb82" title="Retrieves the calling process&#39; pid." alt="" coords="437,59,501,88"/>
+<area shape="rect" id="node11" href="$process_8h.html#a650cf0caaaa8b75f653c1c92818d03a4" title="Kills the given pid process." alt="" coords="451,112,488,141"/>
+<area shape="rect" id="node14" href="$ttys_8h.html#aa0c166c59cfd83d43839b76afe6ac3ce" title="This functions check if the proccess if different of init and the running process..." alt="" coords="423,165,516,195"/>
+<area shape="rect" id="node26" href="$sys_process_8h.html#a7cf69c15da459e564717f8116eb75c57" title="Signals the given tty so that any blocked process from it can be unblocked." alt="" coords="428,219,511,248"/>
+<area shape="rect" id="node9" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="612,85,668,115"/>
+<area shape="rect" id="node16" href="$video__driver_8h.html#ab59b086c41d506e55aa02729f9916be2" title="Updates all changes made to video buffer into screen." alt="" coords="581,139,699,168"/>
+<area shape="rect" id="node20" href="$ttys_8h.html#a5543e64588b3c8d57ef150404d96c5a7" title="Pust all of character that are in the STDOUT and and puts in the tty STDOUT who is..." alt="" coords="583,192,697,221"/>
+<area shape="rect" id="node18" href="$string_8h.html#aba088e716bccbc96d42da97e96316df1" title="The memcpy() function copies n bytes from memory area src to memory area dest. The..." alt="" coords="757,139,837,168"/>
+<area shape="rect" id="node22" href="$ttys_8h.html#a8b368b52e988f2fb5f99aeb979fe4040" title="It prints only one character in specific tty. It verifies if the character is a control..." alt="" coords="748,192,847,221"/>
+<area shape="rect" id="node24" href="$unistd_8h.html#a116146ccc01b751779e5351615743547" title="read() reads &quot;count&quot; bytes from the file descripted by the file descriptor..." alt="" coords="772,245,823,275"/>
+</map>

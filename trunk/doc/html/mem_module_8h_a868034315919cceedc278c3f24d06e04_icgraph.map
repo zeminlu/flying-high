@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$mem_module_8c.html#ae7015dddbf16d196ea6e8cc66f2a8d2f" title="Initializes a malloc page table." alt="" coords="152,5,272,35"/>
+<area shape="rect" id="node5" href="$mem_module_8c.html#a7a9e898c2f9b5aae935f0668c962d02f" title="Initializes the pagination and turns it on." alt="" coords="321,5,407,35"/>
+<area shape="rect" id="node7" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="457,5,559,35"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$syscall_8c.html#a5cd71748fd2bf784c6e4f481809a9b15" title="_sys_create_process" alt="" coords="144,5,307,35"/>
+<area shape="rect" id="node5" href="$sh_memory_8c.html#a5c13ce26761ac9aee72a441624bcf571" title="_sys_shmget" alt="" coords="171,59,280,88"/>
+<area shape="rect" id="node7" href="$mem_module_8c.html#a7a9e898c2f9b5aae935f0668c962d02f" title="Initializes the pagination and turns it on." alt="" coords="183,112,268,141"/>
+<area shape="rect" id="node9" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="356,112,457,141"/>
+</map>

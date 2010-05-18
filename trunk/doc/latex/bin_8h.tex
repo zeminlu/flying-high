@@ -1,0 +1,344 @@
+\hypertarget{bin_8h}{
+\section{inc/bin.h File Reference}
+\label{bin_8h}\index{inc/bin.h@{inc/bin.h}}
+}
+
+
+All the OS processes.  
+
+
+{\ttfamily \#include \char`\"{}sysProcess.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}keyboard\_\-buffer.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}sysProcess.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}string.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}syscall.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}memModule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}process.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}video\_\-driver.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}kasm.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ttys.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}unistd.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}sysMalloc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}stdio.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}schedule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}kMalloc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}shell.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}io.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}colors.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}uMalloc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}semaphore.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}rand.h\char`\"{}}\par
+Include dependency graph for bin.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{bin_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{bin_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{bin_8h_a5bfde7b5020b14bdcb1c9269ab308dc5}{init} (void $\ast$args)
+\begin{DoxyCompactList}\small\item\em This functions initialize the welcome process, all the shells and goodbye process. If you kill the process init the system will be rebooted. \item\end{DoxyCompactList}\item 
+void \hyperlink{bin_8h_a9795fbee9531f56aeda1376bf9934506}{top} (char $\ast$args)
+\begin{DoxyCompactList}\small\item\em This function show what percentage of the microprocessor it is using each process. When you write the command top in the shell, the process top will be created. \item\end{DoxyCompactList}\item 
+void \hyperlink{bin_8h_a236e454e493fc9b262f746305660a2eb}{welcome} ()
+\begin{DoxyCompactList}\small\item\em This function just prints the welcome message to Flying-\/High OS. \item\end{DoxyCompactList}\item 
+void \hyperlink{bin_8h_ae2338f2b60de8c59eaa31a6a285c1fc0}{goodbye} ()
+\begin{DoxyCompactList}\small\item\em This function just says goodbye and reboots the system. \item\end{DoxyCompactList}\item 
+void \hyperlink{bin_8h_a8d6f8ce896cba69a844650449479ead1}{printA} ()
+\begin{DoxyCompactList}\small\item\em This function prints infinite A letters. \item\end{DoxyCompactList}\item 
+void \hyperlink{bin_8h_a5964c5b2b75cb7dc3c7648afe535fd03}{printB} ()
+\begin{DoxyCompactList}\small\item\em This functions prints infinite A letters. \item\end{DoxyCompactList}\item 
+void \hyperlink{bin_8h_a91d6348b48c15f044abee99da6fec6bd}{nothing} ()
+\begin{DoxyCompactList}\small\item\em This function only consumes the microprocessor. \item\end{DoxyCompactList}\item 
+void \hyperlink{bin_8h_ab8d39c86e0f803f0816e787e36c99bd1}{pageFault} ()
+\begin{DoxyCompactList}\small\item\em This function generates a page fault exception. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+All the OS processes. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{bin_8h_source}{bin.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{bin_8h_ae2338f2b60de8c59eaa31a6a285c1fc0}{
+\index{bin.h@{bin.h}!goodbye@{goodbye}}
+\index{goodbye@{goodbye}!bin.h@{bin.h}}
+\subsubsection[{goodbye}]{\setlength{\rightskip}{0pt plus 5cm}void goodbye ()}}
+\label{bin_8h_ae2338f2b60de8c59eaa31a6a285c1fc0}
+
+
+This function just says goodbye and reboots the system. 
+
+Use: 
+\begin{DoxyCode}
+                        createProcess("goodbye", (void(*)(void *))goodbye, NULL, 
+      FOREGROUND);
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+
+
+Definition at line 260 of file bin.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{bin_8h_ae2338f2b60de8c59eaa31a6a285c1fc0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{bin_8h_ae2338f2b60de8c59eaa31a6a285c1fc0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{bin_8h_a5bfde7b5020b14bdcb1c9269ab308dc5}{
+\index{bin.h@{bin.h}!init@{init}}
+\index{init@{init}!bin.h@{bin.h}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void init (void $\ast$ {\em args})}}
+\label{bin_8h_a5bfde7b5020b14bdcb1c9269ab308dc5}
+
+
+This functions initialize the welcome process, all the shells and goodbye process. If you kill the process init the system will be rebooted. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em args}]\end{DoxyParams}
+Use: 
+\begin{DoxyCode}
+                        initMultitasker(init);
+\end{DoxyCode}
+ 
+
+Definition at line 14 of file bin.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{bin_8h_a5bfde7b5020b14bdcb1c9269ab308dc5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=95pt]{bin_8h_a5bfde7b5020b14bdcb1c9269ab308dc5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{bin_8h_a91d6348b48c15f044abee99da6fec6bd}{
+\index{bin.h@{bin.h}!nothing@{nothing}}
+\index{nothing@{nothing}!bin.h@{bin.h}}
+\subsubsection[{nothing}]{\setlength{\rightskip}{0pt plus 5cm}void nothing ()}}
+\label{bin_8h_a91d6348b48c15f044abee99da6fec6bd}
+
+
+This function only consumes the microprocessor. 
+
+Use: 
+\begin{DoxyCode}
+                        createProcess("nothing", (void(*)(void *))nothing, NULL, 
+      FOREGROUND)
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+
+
+Definition at line 308 of file bin.c.
+
+\hypertarget{bin_8h_ab8d39c86e0f803f0816e787e36c99bd1}{
+\index{bin.h@{bin.h}!pageFault@{pageFault}}
+\index{pageFault@{pageFault}!bin.h@{bin.h}}
+\subsubsection[{pageFault}]{\setlength{\rightskip}{0pt plus 5cm}void pageFault ()}}
+\label{bin_8h_ab8d39c86e0f803f0816e787e36c99bd1}
+
+
+This function generates a page fault exception. 
+
+Use: 
+\begin{DoxyCode}
+                        createProcess("pageFault", (void(*)(void *))pageFault, 
+      NULL, FOREGROUND)
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+
+
+Definition at line 317 of file bin.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{bin_8h_ab8d39c86e0f803f0816e787e36c99bd1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{bin_8h_a8d6f8ce896cba69a844650449479ead1}{
+\index{bin.h@{bin.h}!printA@{printA}}
+\index{printA@{printA}!bin.h@{bin.h}}
+\subsubsection[{printA}]{\setlength{\rightskip}{0pt plus 5cm}void printA ()}}
+\label{bin_8h_a8d6f8ce896cba69a844650449479ead1}
+
+
+This function prints infinite A letters. 
+
+Use: 
+\begin{DoxyCode}
+                        createProcess("printA", (void(*)(void *))printA, NULL, 
+      FOREGROUND)
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+
+
+Definition at line 291 of file bin.c.
+
+\hypertarget{bin_8h_a5964c5b2b75cb7dc3c7648afe535fd03}{
+\index{bin.h@{bin.h}!printB@{printB}}
+\index{printB@{printB}!bin.h@{bin.h}}
+\subsubsection[{printB}]{\setlength{\rightskip}{0pt plus 5cm}void printB ()}}
+\label{bin_8h_a5964c5b2b75cb7dc3c7648afe535fd03}
+
+
+This functions prints infinite A letters. 
+
+Use: 
+\begin{DoxyCode}
+                        createProcess("printB", (void(*)(void *))printB, NULL, 
+      FOREGROUND)
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+
+
+Definition at line 300 of file bin.c.
+
+\hypertarget{bin_8h_a9795fbee9531f56aeda1376bf9934506}{
+\index{bin.h@{bin.h}!top@{top}}
+\index{top@{top}!bin.h@{bin.h}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}void top (char $\ast$ {\em args})}}
+\label{bin_8h_a9795fbee9531f56aeda1376bf9934506}
+
+
+This function show what percentage of the microprocessor it is using each process. When you write the command top in the shell, the process top will be created. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em args}]Use: 
+\begin{DoxyCode}
+                        createProcess("top", (void(*)(void *))top, NULL, 
+      FOREGROUND);
+\end{DoxyCode}
+ \end{DoxyParams}
+
+
+Definition at line 63 of file bin.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{bin_8h_a9795fbee9531f56aeda1376bf9934506_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{bin_8h_a236e454e493fc9b262f746305660a2eb}{
+\index{bin.h@{bin.h}!welcome@{welcome}}
+\index{welcome@{welcome}!bin.h@{bin.h}}
+\subsubsection[{welcome}]{\setlength{\rightskip}{0pt plus 5cm}void welcome ()}}
+\label{bin_8h_a236e454e493fc9b262f746305660a2eb}
+
+
+This function just prints the welcome message to Flying-\/High OS. 
+
+Use: 
+\begin{DoxyCode}
+                        createProcess("welcome", (void(*)(void *))welcome, NULL, 
+      FOREGROUND)
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+
+
+Definition at line 217 of file bin.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{bin_8h_a236e454e493fc9b262f746305660a2eb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{bin_8h_a236e454e493fc9b262f746305660a2eb_icgraph}
+\end{center}
+\end{figure}
+
+

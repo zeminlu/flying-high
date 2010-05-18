@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$process_8h.html#ac61b207337ca21b3b309593fd1a0cb82" title="Retrieves the calling process&#39; pid." alt="" coords="175,5,239,35"/>
+<area shape="rect" id="node5" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="288,5,344,35"/>
+</map>

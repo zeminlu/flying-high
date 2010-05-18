@@ -1,0 +1,40 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$bin_8h.html" title="All the OS processes." alt="" coords="1263,237,1337,267"/>
+<area shape="rect" id="node6" href="$kernel_8h.html" title="Kernel header file." alt="" coords="641,856,740,885"/>
+<area shape="rect" id="node11" href="$shell_8h.html" title="The shell process module." alt="" coords="1257,315,1343,344"/>
+<area shape="rect" id="node14" href="$sys_process_8h.html" title="OS system utilities." alt="" coords="1101,392,1232,421"/>
+<area shape="rect" id="node18" href="$p_queue_p_8h.html" title="The priority queue module." alt="" coords="397,469,515,499"/>
+<area shape="rect" id="node23" href="$bttlship_8h.html" title="The header file of the battleship game." alt="" coords="1183,856,1289,885"/>
+<area shape="rect" id="node28" href="$k_malloc_8h.html" title="The kernel malloc module." alt="" coords="523,547,629,576"/>
+<area shape="rect" id="node37" href="$exceptions_8h.html" title="Functions related with exception handling." alt="" coords="201,856,332,885"/>
+<area shape="rect" id="node93" href="$p_queue_p_8c.html" title="The priority queue module." alt="" coords="640,469,757,499"/>
+<area shape="rect" id="node112" href="$mem_module_8h.html" title="The memory management / paging module." alt="" coords="863,83,1001,112"/>
+<area shape="rect" id="node134" href="$stdio_8c.html" title="Definitions for all standard input and output and declaration of all functions to..." alt="" coords="1025,83,1116,112"/>
+<area shape="rect" id="node106" href="$bin_8c.html" title="All the OS processes." alt="" coords="1760,315,1837,344"/>
+<area shape="rect" id="node9" href="$kernel_8c.html" title="Kernel module." alt="" coords="641,933,740,963"/>
+<area shape="rect" id="node98" href="$system_8h.html" title="System reboot module." alt="" coords="913,392,1020,421"/>
+<area shape="rect" id="node104" href="$shell_8c.html" title="The shell process module." alt="" coords="1256,392,1344,421"/>
+<area shape="rect" id="node20" href="$process_8h.html" title="All the process functions that invoke syscalls." alt="" coords="1424,469,1533,499"/>
+<area shape="rect" id="node33" href="$ttys_8h.html" title="The tty header file." alt="" coords="1372,779,1457,808"/>
+<area shape="rect" id="node96" href="$sys_process_8c.html" title="OS system utilities." alt="" coords="1091,469,1224,499"/>
+<area shape="rect" id="node45" href="$syscall_8h.html" title="Implementation of every system call." alt="" coords="1581,701,1683,731"/>
+<area shape="rect" id="node63" href="$semaphore_8h.html" title="The OS semaphore module." alt="" coords="827,701,957,731"/>
+<area shape="rect" id="node78" href="$u_malloc_8h.html" title="User malloc module." alt="" coords="1821,547,1928,576"/>
+<area shape="rect" id="node90" href="$process_8c.html" title="All the process functions that invoke syscalls." alt="" coords="1309,547,1419,576"/>
+<area shape="rect" id="node26" href="$bttlship_8c.html" title="Battleship module." alt="" coords="1181,933,1291,963"/>
+<area shape="rect" id="node41" href="$keyboard__driver_8h.html" title="The keyboard driver module." alt="" coords="1423,856,1585,885"/>
+<area shape="rect" id="node61" href="$ttys_8c.html" title="The tty module implementation." alt="" coords="1313,856,1399,885"/>
+<area shape="rect" id="node43" href="$keyboard__driver_8c.html" title="src/keyboard_driver.c" alt="" coords="1423,933,1585,963"/>
+<area shape="rect" id="node49" href="$rand_8h.html" title="Random number generation module." alt="" coords="1560,779,1645,808"/>
+<area shape="rect" id="node58" href="$syscall_8c.html" title="Implementation off all system calls." alt="" coords="1669,779,1771,808"/>
+<area shape="rect" id="node54" href="$rand_8c.html" title="Random number generation module." alt="" coords="1609,856,1695,885"/>
+<area shape="rect" id="node68" href="$sh_memory_8h.html" title="The shared memory IPC module." alt="" coords="829,779,955,808"/>
+<area shape="rect" id="node74" href="$semaphore_8c.html" title="The OS semaphore module." alt="" coords="1029,779,1163,808"/>
+<area shape="rect" id="node72" href="$sh_memory_8c.html" title="The shared memory IPC module." alt="" coords="829,856,955,885"/>
+<area shape="rect" id="node81" href="$schedule_8h.html" title="The OS scheduler module." alt="" coords="1725,624,1843,653"/>
+<area shape="rect" id="node87" href="$schedule_8c.html" title="The OS scheduler module." alt="" coords="1725,701,1843,731"/>
+<area shape="rect" id="node102" href="$system_8c.html" title="System reboot module." alt="" coords="856,469,965,499"/>
+<area shape="rect" id="node116" href="$kernel_depth_8h.html" title="Kernel syscalls depth utilities." alt="" coords="2057,624,2199,653"/>
+<area shape="rect" id="node121" href="$sys_malloc_8h.html" title="Generic malloc module." alt="" coords="1240,160,1360,189"/>
+<area shape="rect" id="node126" href="$sys_malloc_8c.html" title="Generic malloc module." alt="" coords="1385,237,1508,267"/>
+</map>

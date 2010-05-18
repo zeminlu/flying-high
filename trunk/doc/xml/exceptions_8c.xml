@@ -1,0 +1,915 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="exceptions_8c" kind="file">
+    <compoundname>exceptions.c</compoundname>
+    <includes local="yes">../inc/exceptions.h</includes>
+    <incdepgraph>
+      <node id="4138">
+        <label>../inc/exceptions.h</label>
+      </node>
+      <node id="4137">
+        <label>src/exceptions.c</label>
+        <link refid="exceptions.c"/>
+        <childnode refid="4138" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structregisters" prot="public">registers</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="exceptions_8c_1adf58dbaf6139b4957c348711f2026957" prot="public" static="no">
+        <type>struct <ref refid="structregisters" kindref="compound">registers</ref></type>
+        <definition>typedef struct registers  registers_t</definition>
+        <argsstring></argsstring>
+        <name>registers_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="exceptions_8c_1a15ccdbd39bc4697b9cdb521f359673b0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound">DESCR_INT</ref></type>
+        <definition>DESCR_INT idt[]</definition>
+        <argsstring>[]</argsstring>
+        <name>idt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="32" bodyfile="/Users/Luciano/Desktop/flying-high/src/kernel.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="exceptions_8c_1a09b307c68044fd645da910cd6a40e5e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _divide_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_divide_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="34"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a5c69c0c0325b37ec19db9d65f6431102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _debug_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_debug_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="35"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a5ff5c2fa629c194afa4c9a854bf62a5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _nmi_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_nmi_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="36"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a0123e0aaddeaa882241ba12a64b6ad8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _break_point_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_break_point_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="37"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a9862ae42a2cec2300fa82e94a7d49443" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _overflow_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_overflow_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="38"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a9a986178cf8fef721e77e0e774273a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _bounds_check_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_bounds_check_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="39"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ad055669ebf4a8a75c75f53d30f541f3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _invalid_opcode_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_invalid_opcode_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="40"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1afbc45fac0cce5f15e2ba4e1c8daa3c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _copro_unavailable_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_copro_unavailable_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="41"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ab55db3d9fff90ae0784e5ff9450c53e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _double_fault_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_double_fault_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ace752c5ce750a18f15b9a7af416f4652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _invalid_tss_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_invalid_tss_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a73e1f4e71404375ff33b6b0a4ace0d51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _segment_not_present_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_segment_not_present_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="44"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1af7efca04e0cd11c964e1a3fc5f90d28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _stack_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_stack_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="45"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a5bf5a06f773ec08b7ce00833586fec6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _general_protection_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_general_protection_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="46"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ab045475c20ce0c303b188a38a2ea8020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _page_fault_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_page_fault_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="47"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1aa526d9e90e0242d85c2d130c1ca9dbf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _coprocessor_e_hand</definition>
+        <argsstring>()</argsstring>
+        <name>_coprocessor_e_hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="48"/>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a53e55c7eb29423ae12995e670766bd54" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void panic</definition>
+        <argsstring>(char *msg, registers_t regs)</argsstring>
+        <name>panic</name>
+        <param>
+          <type>char *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="95" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="95" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handleException</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="136" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="136" bodyend="149"/>
+        <references refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" compoundref="ttys_8c" startline="471" endline="474">getFocusedTTY</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="process_8h_1a650cf0caaaa8b75f653c1c92818d03a4" compoundref="process_8c" startline="63" endline="65">kill</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="ttys_8h_1aa0c166c59cfd83d43839b76afe6ac3ce" compoundref="ttys_8c" startline="539" endline="547">refreshTTY</references>
+        <references refid="sys_process_8h_1a7cf69c15da459e564717f8116eb75c57" compoundref="sys_process_8c" startline="165" endline="174">signalTty</references>
+        <referencedby refid="exceptions_8c_1a32bab9bb09acbf2863846ccd6aa26501" compoundref="exceptions_8c" startline="181" endline="185">boundsCheckExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1a57d9e0521f1fc4ab7c8fc9f052204703" compoundref="exceptions_8c" startline="169" endline="173">breakPointExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1ac464c99d06c0c64de9c5bccd9d4d7534" compoundref="exceptions_8c" startline="193" endline="197">coprocessorUnavailableExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1a2b3302ed29ef81d473f026f64d9d1c66" compoundref="exceptions_8c" startline="157" endline="161">debugExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1a55f97a9e3220c454003172e2ff56c3e5" compoundref="exceptions_8c" startline="151" endline="155">divideExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1acba24c9be2bf08564cb8be1032541f1a" compoundref="exceptions_8c" startline="199" endline="203">doubleFaultExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1a178df3a61e259fb29152aa09c11ff4ab" compoundref="exceptions_8c" startline="223" endline="227">generalProtectionExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1ac2fadd7fa66a6cd401c7810c7055259c" compoundref="exceptions_8c" startline="187" endline="191">invalidOpcodeExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1a45d46ef062a935da4d949de18e015bb9" compoundref="exceptions_8c" startline="205" endline="209">invalidTSSExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1ad50c96900069ee0b4235d4132859d32b" compoundref="exceptions_8c" startline="163" endline="167">NMIExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1a5f51cb8cb4095770f020d157afe31def" compoundref="exceptions_8c" startline="175" endline="179">overflowExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1ae6fa1d6ef273ccd07a43bf324cccdadd" compoundref="exceptions_8c" startline="229" endline="260">pageFaultExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1a5e7dddcd8c830975521acbeacaa7bf62" compoundref="exceptions_8c" startline="211" endline="215">segmentNotPresentExceptionHandler</referencedby>
+        <referencedby refid="exceptions_8c_1ac8037344bd876e8299a5326a192456c1" compoundref="exceptions_8c" startline="217" endline="221">stackExceptionHandler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a55f97a9e3220c454003172e2ff56c3e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void divideExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>divideExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="151" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="151" bodyend="155"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a2b3302ed29ef81d473f026f64d9d1c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void debugExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>debugExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="157" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="157" bodyend="161"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ad50c96900069ee0b4235d4132859d32b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NMIExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>NMIExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="163" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="163" bodyend="167"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a57d9e0521f1fc4ab7c8fc9f052204703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void breakPointExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>breakPointExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="169" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="169" bodyend="173"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a5f51cb8cb4095770f020d157afe31def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void overflowExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>overflowExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="175" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="175" bodyend="179"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a32bab9bb09acbf2863846ccd6aa26501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boundsCheckExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>boundsCheckExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="181" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="181" bodyend="185"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ac2fadd7fa66a6cd401c7810c7055259c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invalidOpcodeExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>invalidOpcodeExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="187" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="187" bodyend="191"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ac464c99d06c0c64de9c5bccd9d4d7534" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void coprocessorUnavailableExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>coprocessorUnavailableExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="193" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="193" bodyend="197"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1acba24c9be2bf08564cb8be1032541f1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void doubleFaultExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>doubleFaultExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="199" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="199" bodyend="203"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a45d46ef062a935da4d949de18e015bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void invalidTSSExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>invalidTSSExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="205" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="205" bodyend="209"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a5e7dddcd8c830975521acbeacaa7bf62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void segmentNotPresentExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>segmentNotPresentExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="211" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="211" bodyend="215"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ac8037344bd876e8299a5326a192456c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stackExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>stackExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="217" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="217" bodyend="221"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a178df3a61e259fb29152aa09c11ff4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void generalProtectionExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>generalProtectionExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="223" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="223" bodyend="227"/>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ae6fa1d6ef273ccd07a43bf324cccdadd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pageFaultExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>pageFaultExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="229" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="229" bodyend="260"/>
+        <references refid="structregisters_1aa25790aaf38769a83aeb3bf66ba2adc3" compoundref="exceptions_8c" startline="85">registers::error</references>
+        <references refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" compoundref="stdio_8h" startline="66">putx</references>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1ae57213cf421e2743afacb2a409db51f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void coprocessorExceptionHandler</definition>
+        <argsstring>(registers_t regs)</argsstring>
+        <name>coprocessorExceptionHandler</name>
+        <param>
+          <type><ref refid="structregisters" kindref="compound">registers_t</ref></type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="262" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadExceptionHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>loadExceptionHandlers</name>
+        <briefdescription>
+<para>Loads the handler of the exception that was produced. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c" line="273" bodyfile="/Users/Luciano/Desktop/flying-high/src/exceptions.c" bodystart="273" bodyend="289"/>
+        <references refid="exceptions_8c_1a9a986178cf8fef721e77e0e774273a8d">_bounds_check_e_hand</references>
+        <references refid="exceptions_8c_1a0123e0aaddeaa882241ba12a64b6ad8d">_break_point_e_hand</references>
+        <references refid="exceptions_8c_1afbc45fac0cce5f15e2ba4e1c8daa3c58">_copro_unavailable_e_hand</references>
+        <references refid="exceptions_8c_1aa526d9e90e0242d85c2d130c1ca9dbf7">_coprocessor_e_hand</references>
+        <references refid="exceptions_8c_1a5c69c0c0325b37ec19db9d65f6431102">_debug_e_hand</references>
+        <references refid="exceptions_8c_1a09b307c68044fd645da910cd6a40e5e1">_divide_e_hand</references>
+        <references refid="exceptions_8c_1a5bf5a06f773ec08b7ce00833586fec6b">_general_protection_e_hand</references>
+        <references refid="exceptions_8c_1ad055669ebf4a8a75c75f53d30f541f3c">_invalid_opcode_e_hand</references>
+        <references refid="exceptions_8c_1a5ff5c2fa629c194afa4c9a854bf62a5d">_nmi_e_hand</references>
+        <references refid="exceptions_8c_1a9862ae42a2cec2300fa82e94a7d49443">_overflow_e_hand</references>
+        <references refid="exceptions_8c_1ab045475c20ce0c303b188a38a2ea8020">_page_fault_e_hand</references>
+        <references refid="exceptions_8c_1a73e1f4e71404375ff33b6b0a4ace0d51">_segment_not_present_e_hand</references>
+        <references refid="exceptions_8c_1af7efca04e0cd11c964e1a3fc5f90d28c">_stack_e_hand</references>
+        <references refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" compoundref="defs_8h" startline="307">ACS_INT</references>
+        <references refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" compoundref="defs_8h" startline="27">dword</references>
+        <references refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" compoundref="libc_8c" startline="42" endline="49">setup_IDT_entry</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>\file<sp/>exceptions.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\brief<sp/>The<sp/>implementation<sp/>of<sp/>all<sp/>exception<sp/>handlers.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Intel&apos;s<sp/>80386<sp/>Exceptions<sp/>Table</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Divide<sp/>error</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug<sp/>exceptions</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Nonmaskable<sp/>interrupt</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Breakpoint<sp/>(one-byte<sp/>INT<sp/>3<sp/>instruction)</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Overflow<sp/>(INTO<sp/>instruction)</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bounds<sp/>check<sp/>(BOUND<sp/>instruction)</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Invalid<sp/>opcode</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Coprocessor<sp/>not<sp/>available</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>fault</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(reserved)</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Invalid<sp/>TSS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Segment<sp/>not<sp/>present</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Stack<sp/>exception</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>General<sp/>protection</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>14<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Page<sp/>fault</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(reserved)</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Coprocessor<sp/>error</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17-31<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(reserved)</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\author<sp/>Luciano<sp/>Zemin,<sp/>Nicolás<sp/>Magni,<sp/>Nicolás<sp/>Purita</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../inc/exceptions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_d_e_s_c_r___i_n_t" kindref="compound" tooltip="OS interrupt descriptor struct.">DESCR_INT</ref><sp/><ref refid="exceptions_8c_1a15ccdbd39bc4697b9cdb521f359673b0" kindref="member">idt</ref>[];<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a09b307c68044fd645da910cd6a40e5e1" kindref="member">_divide_e_hand</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a5c69c0c0325b37ec19db9d65f6431102" kindref="member">_debug_e_hand</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a5ff5c2fa629c194afa4c9a854bf62a5d" kindref="member">_nmi_e_hand</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a0123e0aaddeaa882241ba12a64b6ad8d" kindref="member">_break_point_e_hand</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a9862ae42a2cec2300fa82e94a7d49443" kindref="member">_overflow_e_hand</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a9a986178cf8fef721e77e0e774273a8d" kindref="member">_bounds_check_e_hand</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ad055669ebf4a8a75c75f53d30f541f3c" kindref="member">_invalid_opcode_e_hand</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1afbc45fac0cce5f15e2ba4e1c8daa3c58" kindref="member">_copro_unavailable_e_hand</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ab55db3d9fff90ae0784e5ff9450c53e3" kindref="member">_double_fault_e_hand</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ace752c5ce750a18f15b9a7af416f4652" kindref="member">_invalid_tss_e_hand</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a73e1f4e71404375ff33b6b0a4ace0d51" kindref="member">_segment_not_present_e_hand</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1af7efca04e0cd11c964e1a3fc5f90d28c" kindref="member">_stack_e_hand</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a5bf5a06f773ec08b7ce00833586fec6b" kindref="member">_general_protection_e_hand</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ab045475c20ce0c303b188a38a2ea8020" kindref="member">_page_fault_e_hand</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1aa526d9e90e0242d85c2d130c1ca9dbf7" kindref="member">_coprocessor_e_hand</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Stack<sp/>Order</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>ret</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>edi</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>esi</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>ebp</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>esp</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>ebx</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>edx</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>ecx</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>eax</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>error</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>ip</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>cs<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>eflags</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xFFFFFFFF</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="structregisters" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structregisters" kindref="compound">registers</ref><sp/>{</highlight></codeline>
+<codeline lineno="77" refid="structregisters_1aa8328d7107121caab9a02f51ec3bf4de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1aa8328d7107121caab9a02f51ec3bf4de" kindref="member">edi</ref>;</highlight></codeline>
+<codeline lineno="78" refid="structregisters_1a20d41899401bd0bfefa0873f3e1a3548" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1a20d41899401bd0bfefa0873f3e1a3548" kindref="member">esi</ref>;</highlight></codeline>
+<codeline lineno="79" refid="structregisters_1a0b23dfe5ba8a9bc90315a06784350cb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1a0b23dfe5ba8a9bc90315a06784350cb2" kindref="member">ebp</ref>;</highlight></codeline>
+<codeline lineno="80" refid="structregisters_1ae5fca9ad9630a49d43dc822c7c36b795" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1ae5fca9ad9630a49d43dc822c7c36b795" kindref="member">esp</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structregisters_1acff6a7e560519d3d068076c43be5a986" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1acff6a7e560519d3d068076c43be5a986" kindref="member">ebx</ref>;</highlight></codeline>
+<codeline lineno="82" refid="structregisters_1ab1addf7d38e0c8a57015f07bd282130f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1ab1addf7d38e0c8a57015f07bd282130f" kindref="member">edx</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structregisters_1a356bd1510740b64868b03ae84a80010e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1a356bd1510740b64868b03ae84a80010e" kindref="member">ecx</ref>;</highlight></codeline>
+<codeline lineno="84" refid="structregisters_1a6d4f2bc514bdffb925ddb14d37a12d9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1a6d4f2bc514bdffb925ddb14d37a12d9d" kindref="member">eax</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structregisters_1aa25790aaf38769a83aeb3bf66ba2adc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1aa25790aaf38769a83aeb3bf66ba2adc3" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structregisters_1a17f7bde379a0e9874a602e53b15d14e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1a17f7bde379a0e9874a602e53b15d14e3" kindref="member">eip</ref>;</highlight></codeline>
+<codeline lineno="87" refid="structregisters_1a3f7dcd390a33c96d3b184f643038278e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1a3f7dcd390a33c96d3b184f643038278e" kindref="member">cs</ref>;</highlight></codeline>
+<codeline lineno="88" refid="structregisters_1a76117c5f5403e959cdaa62b640edaa02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structregisters_1a76117c5f5403e959cdaa62b640edaa02" kindref="member">eflags</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}<sp/><ref refid="structregisters" kindref="compound">registers_t</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Prints<sp/>the<sp/>KERNEL<sp/>PANIC<sp/>message<sp/>and</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>message<sp/>given.</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>panic(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg,<sp/><ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;--------------------------------------------------------------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/>KERNEL<sp/>PANIC<sp/>(&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)msg);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;)<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/>Failing<sp/>Instruction<sp/>at:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1a3f7dcd390a33c96d3b184f643038278e" kindref="member">cs</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1a17f7bde379a0e9874a602e53b15d14e3" kindref="member">eip</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/>Registers:<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>eax:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1a6d4f2bc514bdffb925ddb14d37a12d9d" kindref="member">eax</ref>);<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>ebx:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1acff6a7e560519d3d068076c43be5a986" kindref="member">ebx</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>ecx:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1a356bd1510740b64868b03ae84a80010e" kindref="member">ecx</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>edx:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1ab1addf7d38e0c8a57015f07bd282130f" kindref="member">edx</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>esp:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1ae5fca9ad9630a49d43dc822c7c36b795" kindref="member">esp</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>ebp:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1a0b23dfe5ba8a9bc90315a06784350cb2" kindref="member">ebp</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>esi:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1a20d41899401bd0bfefa0873f3e1a3548" kindref="member">esi</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>edi:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(regs.<ref refid="structregisters_1aa8328d7107121caab9a02f51ec3bf4de" kindref="member">edi</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;--------------------------------------------------------------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid<sp/>=<sp/><ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a650cf0caaaa8b75f653c1c92818d03a4" kindref="member" tooltip="Kills the given pid process.">kill</ref>(pid);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1a7cf69c15da459e564717f8116eb75c57" kindref="member" tooltip="Signals the given tty so that any blocked process from it can be unblocked.">signalTty</ref>(<ref refid="ttys_8h_1ac625c448f0a3f2dd24c1409227e291e4" kindref="member" tooltip="This function returns the tty id of tty that are in focus at this moment. It is a...">getFocusedTTY</ref>());</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1aa0c166c59cfd83d43839b76afe6ac3ce" kindref="member" tooltip="This functions check if the proccess if different of init and the running process...">refreshTTY</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="exceptions_8c_1a55f97a9e3220c454003172e2ff56c3e5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a55f97a9e3220c454003172e2ff56c3e5" kindref="member">divideExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Divide<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="exceptions_8c_1a2b3302ed29ef81d473f026f64d9d1c66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a2b3302ed29ef81d473f026f64d9d1c66" kindref="member">debugExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Debug<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="exceptions_8c_1ad50c96900069ee0b4235d4132859d32b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ad50c96900069ee0b4235d4132859d32b" kindref="member">NMIExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Nonmaskable<sp/>Interrupt<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="exceptions_8c_1a57d9e0521f1fc4ab7c8fc9f052204703" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a57d9e0521f1fc4ab7c8fc9f052204703" kindref="member">breakPointExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Break<sp/>Point&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="exceptions_8c_1a5f51cb8cb4095770f020d157afe31def" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a5f51cb8cb4095770f020d157afe31def" kindref="member">overflowExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Overflow<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="exceptions_8c_1a32bab9bb09acbf2863846ccd6aa26501" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a32bab9bb09acbf2863846ccd6aa26501" kindref="member">boundsCheckExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Bounds<sp/>Check<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="exceptions_8c_1ac2fadd7fa66a6cd401c7810c7055259c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ac2fadd7fa66a6cd401c7810c7055259c" kindref="member">invalidOpcodeExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>Opcode&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="exceptions_8c_1ac464c99d06c0c64de9c5bccd9d4d7534" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ac464c99d06c0c64de9c5bccd9d4d7534" kindref="member">coprocessorUnavailableExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Coprocessor<sp/>Unavaible&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="exceptions_8c_1acba24c9be2bf08564cb8be1032541f1a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1acba24c9be2bf08564cb8be1032541f1a" kindref="member">doubleFaultExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Double<sp/>Fault&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="exceptions_8c_1a45d46ef062a935da4d949de18e015bb9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a45d46ef062a935da4d949de18e015bb9" kindref="member">invalidTSSExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>TSS&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="exceptions_8c_1a5e7dddcd8c830975521acbeacaa7bf62" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a5e7dddcd8c830975521acbeacaa7bf62" kindref="member">segmentNotPresentExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Segment<sp/>not<sp/>present&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="exceptions_8c_1ac8037344bd876e8299a5326a192456c1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ac8037344bd876e8299a5326a192456c1" kindref="member">stackExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Stack<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="exceptions_8c_1a178df3a61e259fb29152aa09c11ff4ab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1a178df3a61e259fb29152aa09c11ff4ab" kindref="member">generalProtectionExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;General<sp/>Protection<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="exceptions_8c_1ae6fa1d6ef273ccd07a43bf324cccdadd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ae6fa1d6ef273ccd07a43bf324cccdadd" kindref="member">pageFaultExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>address;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Page<sp/>Fault&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;mov<sp/>%%cr2,<sp/>%0&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&quot;=r&quot;</highlight><highlight class="normal">(address));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/>Trying<sp/>to<sp/>access<sp/>address<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>(address);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/>Fault<sp/>Info:<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(regs.<ref refid="structregisters_1aa25790aaf38769a83aeb3bf66ba2adc3" kindref="member">error</ref><sp/>&amp;<sp/>0x1)<sp/>)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>1<sp/>-<sp/>The<sp/>fault<sp/>was<sp/>caused<sp/>by<sp/>a<sp/>page-level<sp/>protection<sp/>violation.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>1<sp/>-<sp/>The<sp/>fault<sp/>was<sp/>caused<sp/>by<sp/>a<sp/>non-present<sp/>page.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(regs.<ref refid="structregisters_1aa25790aaf38769a83aeb3bf66ba2adc3" kindref="member">error</ref><sp/>&amp;<sp/>0x2)<sp/>)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>2<sp/>-<sp/>The<sp/>access<sp/>causing<sp/>the<sp/>fault<sp/>was<sp/>write.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>2<sp/>-<sp/>The<sp/>access<sp/>causing<sp/>the<sp/>fault<sp/>was<sp/>read.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(regs.<ref refid="structregisters_1aa25790aaf38769a83aeb3bf66ba2adc3" kindref="member">error</ref><sp/>&amp;<sp/>0x4)<sp/>)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>3<sp/>-<sp/>The<sp/>access<sp/>causing<sp/>the<sp/>fault<sp/>oriented<sp/>when<sp/>the<sp/>processor<sp/>was<sp/>executing<sp/>in<sp/>user<sp/>mode.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>3<sp/>-<sp/>The<sp/>access<sp/>causing<sp/>the<sp/>fault<sp/>oriented<sp/>when<sp/>the<sp/>processor<sp/>was<sp/>executing<sp/>in<sp/>kernel<sp/>mode.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(regs.<ref refid="structregisters_1aa25790aaf38769a83aeb3bf66ba2adc3" kindref="member">error</ref><sp/>&amp;<sp/>0x8)<sp/>)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>4<sp/>-<sp/>The<sp/>fault<sp/>was<sp/>caused<sp/>by<sp/>reserved<sp/>bits<sp/>set<sp/>to<sp/>1<sp/>in<sp/>page<sp/>directory.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>4<sp/>-<sp/>The<sp/>fault<sp/>was<sp/>not<sp/>caused<sp/>by<sp/>reserved<sp/>bits<sp/>violation.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" kindref="member">handleException</ref>(regs);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="exceptions_8c_1ae57213cf421e2743afacb2a409db51f5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8c_1ae57213cf421e2743afacb2a409db51f5" kindref="member">coprocessorExceptionHandler</ref>(<ref refid="structregisters" kindref="compound">registers_t</ref><sp/>regs)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panic(</highlight><highlight class="stringliteral">&quot;Coprocessor<sp/>Error&quot;</highlight><highlight class="normal">,<sp/>regs);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>TODO<sp/>Check<sp/>wich<sp/>one<sp/>of<sp/>the<sp/>interrupt<sp/>requires</highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>that<sp/>a<sp/>singal<sp/>to<sp/>the<sp/>pic<sp/>must<sp/>be<sp/>send.</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exceptions_8h_1a9a0ae2f785726650de9637601aa4c965" kindref="member" tooltip="Loads the handler of the exception that was produced.">loadExceptionHandlers</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x00],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a09b307c68044fd645da910cd6a40e5e1" kindref="member">_divide_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x01],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a5c69c0c0325b37ec19db9d65f6431102" kindref="member">_debug_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x02],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a5ff5c2fa629c194afa4c9a854bf62a5d" kindref="member">_nmi_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x03],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a0123e0aaddeaa882241ba12a64b6ad8d" kindref="member">_break_point_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x04],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a9862ae42a2cec2300fa82e94a7d49443" kindref="member">_overflow_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x05],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a9a986178cf8fef721e77e0e774273a8d" kindref="member">_bounds_check_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x06],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1ad055669ebf4a8a75c75f53d30f541f3c" kindref="member">_invalid_opcode_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x07],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1afbc45fac0cce5f15e2ba4e1c8daa3c58" kindref="member">_copro_unavailable_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*//setup_IDT_entry<sp/>(&amp;idt[0x08],<sp/>0x08,<sp/>(dword)&amp;_double_fault_e_hand,<sp/>ACS_INT,<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//setup_IDT_entry<sp/>(&amp;idt[0xA0],<sp/>0x08,<sp/>(dword)&amp;_invalid_tss_e_hand,<sp/>ACS_INT,<sp/>0);<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x0B],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a73e1f4e71404375ff33b6b0a4ace0d51" kindref="member">_segment_not_present_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x0C],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1af7efca04e0cd11c964e1a3fc5f90d28c" kindref="member">_stack_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x0D],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1a5bf5a06f773ec08b7ce00833586fec6b" kindref="member">_general_protection_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x0E],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1ab045475c20ce0c303b188a38a2ea8020" kindref="member">_page_fault_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kc_8h_1a35291f4e9b708f17a281f51aa524979c" kindref="member" tooltip="Brief.">setup_IDT_entry</ref><sp/>(&amp;idt[0x10],<sp/>0x08,<sp/>(<ref refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" kindref="member" tooltip="DefineBrief.">dword</ref>)&amp;<ref refid="exceptions_8c_1aa526d9e90e0242d85c2d130c1ca9dbf7" kindref="member">_coprocessor_e_hand</ref>,<sp/><ref refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" kindref="member" tooltip="DefineBrief.">ACS_INT</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/exceptions.c"/>
+  </compounddef>
+</doxygen>

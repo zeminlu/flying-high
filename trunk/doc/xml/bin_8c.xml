@@ -1,0 +1,916 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="bin_8c" kind="file">
+    <compoundname>bin.c</compoundname>
+    <includes refid="bin_8h" local="yes">bin.h</includes>
+    <incdepgraph>
+      <node id="4098">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4086" relation="include">
+        </childnode>
+      </node>
+      <node id="4078">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4102">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4103" relation="include">
+        </childnode>
+      </node>
+      <node id="4091">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4086">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4087" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4092" relation="include">
+        </childnode>
+        <childnode refid="4093" relation="include">
+        </childnode>
+        <childnode refid="4096" relation="include">
+        </childnode>
+        <childnode refid="4081" relation="include">
+        </childnode>
+      </node>
+      <node id="4093">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4094" relation="include">
+        </childnode>
+        <childnode refid="4083" relation="include">
+        </childnode>
+      </node>
+      <node id="4089">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4088">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4089" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4073">
+        <label>src/bin.c</label>
+        <link refid="bin.c"/>
+        <childnode refid="4074" relation="include">
+        </childnode>
+      </node>
+      <node id="4075">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4076" relation="include">
+        </childnode>
+        <childnode refid="4077" relation="include">
+        </childnode>
+      </node>
+      <node id="4097">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4087" relation="include">
+        </childnode>
+        <childnode refid="4095" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+        <childnode refid="4088" relation="include">
+        </childnode>
+      </node>
+      <node id="4099">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4088" relation="include">
+        </childnode>
+        <childnode refid="4083" relation="include">
+        </childnode>
+        <childnode refid="4089" relation="include">
+        </childnode>
+        <childnode refid="4100" relation="include">
+        </childnode>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4078" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+        <childnode refid="4094" relation="include">
+        </childnode>
+        <childnode refid="4074" relation="include">
+        </childnode>
+        <childnode refid="4093" relation="include">
+        </childnode>
+        <childnode refid="4101" relation="include">
+        </childnode>
+      </node>
+      <node id="4092">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4100">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4099" relation="include">
+        </childnode>
+        <childnode refid="4084" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4083">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4084" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4080">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4081" relation="include">
+        </childnode>
+        <childnode refid="4079" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4087" relation="include">
+        </childnode>
+        <childnode refid="4093" relation="include">
+        </childnode>
+        <childnode refid="4086" relation="include">
+        </childnode>
+        <childnode refid="4088" relation="include">
+        </childnode>
+        <childnode refid="4097" relation="include">
+        </childnode>
+        <childnode refid="4098" relation="include">
+        </childnode>
+        <childnode refid="4099" relation="include">
+        </childnode>
+      </node>
+      <node id="4084">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4096">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4087" relation="include">
+        </childnode>
+        <childnode refid="4092" relation="include">
+        </childnode>
+      </node>
+      <node id="4095">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4087" relation="include">
+        </childnode>
+        <childnode refid="4085" relation="include">
+        </childnode>
+      </node>
+      <node id="4077">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4078" relation="include">
+        </childnode>
+      </node>
+      <node id="4081">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4082" relation="include">
+        </childnode>
+        <childnode refid="4083" relation="include">
+        </childnode>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4079" relation="include">
+        </childnode>
+        <childnode refid="4080" relation="include">
+        </childnode>
+        <childnode refid="4086" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4089" relation="include">
+        </childnode>
+        <childnode refid="4097" relation="include">
+        </childnode>
+      </node>
+      <node id="4101">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4083" relation="include">
+        </childnode>
+        <childnode refid="4088" relation="include">
+        </childnode>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+        <childnode refid="4102" relation="include">
+        </childnode>
+        <childnode refid="4103" relation="include">
+        </childnode>
+        <childnode refid="4098" relation="include">
+        </childnode>
+        <childnode refid="4081" relation="include">
+        </childnode>
+      </node>
+      <node id="4085">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4079">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4090">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4086" relation="include">
+        </childnode>
+        <childnode refid="4091" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4080" relation="include">
+        </childnode>
+      </node>
+      <node id="4082">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4079" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4103">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+      </node>
+      <node id="4087">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4088" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+      </node>
+      <node id="4094">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4087" relation="include">
+        </childnode>
+        <childnode refid="4095" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+      </node>
+      <node id="4076">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4074">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4074" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4079" relation="include">
+        </childnode>
+        <childnode refid="4080" relation="include">
+        </childnode>
+        <childnode refid="4085" relation="include">
+        </childnode>
+        <childnode refid="4086" relation="include">
+        </childnode>
+        <childnode refid="4087" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+        <childnode refid="4083" relation="include">
+        </childnode>
+        <childnode refid="4092" relation="include">
+        </childnode>
+        <childnode refid="4081" relation="include">
+        </childnode>
+        <childnode refid="4089" relation="include">
+        </childnode>
+        <childnode refid="4095" relation="include">
+        </childnode>
+        <childnode refid="4088" relation="include">
+        </childnode>
+        <childnode refid="4093" relation="include">
+        </childnode>
+        <childnode refid="4097" relation="include">
+        </childnode>
+        <childnode refid="4099" relation="include">
+        </childnode>
+        <childnode refid="4084" relation="include">
+        </childnode>
+        <childnode refid="4078" relation="include">
+        </childnode>
+        <childnode refid="4094" relation="include">
+        </childnode>
+        <childnode refid="4103" relation="include">
+        </childnode>
+        <childnode refid="4098" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="bin_8c_1a83e1a7341d63e92cd3d1733f87176a88" prot="public" static="no" mutable="no">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t* processTable</definition>
+        <argsstring></argsstring>
+        <name>processTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="12" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>init</name>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>This functions initialize the welcome process, all the shells and goodbye process. If you kill the process init the system will be rebooted. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1add8034131384a469e96c6efeb83d6043" kindref="member" tooltip="Initializes the multitasker and creates the init process.">initMultitasker</ref>(<ref refid="bin_8h_1a5bfde7b5020b14bdcb1c9269ab308dc5" kindref="member" tooltip="This functions initialize the welcome process, all the shells and goodbye process...">init</ref>);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="14" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="14" bodyend="61"/>
+        <references refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" compoundref="defs_8h" startline="118">ATOMIC</references>
+        <references refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" compoundref="process_8c" startline="22" endline="24">createProcess</references>
+        <references refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" compoundref="defs_8h" startline="128">FOREGROUND</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="sys_process_8h_1aa1cd2078219adc47ca22033bf86a76be" compoundref="sys_process_8c" startline="250" endline="252">getProcessTable</references>
+        <references refid="bin_8h_1ae2338f2b60de8c59eaa31a6a285c1fc0" compoundref="bin_8c" startline="260" endline="289">goodbye</references>
+        <references refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" compoundref="config_8h" startline="123">MAX_TTY</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="system_8h_1ac8c8545f4a29ebb7d3e384467263cf50" compoundref="system_8c" startline="12" endline="18">rebootSystem</references>
+        <references refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" compoundref="process_8c" startline="99" endline="101">setProcessAtomicity</references>
+        <references refid="process_8h_1af886a211159a5c948f114280d2030a06" compoundref="process_8c" startline="31" endline="33">setTty</references>
+        <references refid="process_8h_1aa4f3855e8a226d285a523789a377fe04" compoundref="process_8c" startline="67" endline="69">setTTYMode</references>
+        <references refid="shell_8h_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</references>
+        <references refid="defs_8h_1afd70646efe5984e361c17010322a5711" compoundref="defs_8h" startline="80">TTY_CANONICAL</references>
+        <references refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" compoundref="defs_8h" startline="123">UNATOMIC</references>
+        <references refid="process_8h_1a6655447bab00753d59759423bf28e22e" compoundref="process_8c" startline="55" endline="57">wait</references>
+        <references refid="bin_8h_1a236e454e493fc9b262f746305660a2eb" compoundref="bin_8c" startline="217" endline="258">welcome</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bin_8c_1a9795fbee9531f56aeda1376bf9934506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void top</definition>
+        <argsstring>(char *args)</argsstring>
+        <name>top</name>
+        <param>
+          <type>char *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>This function show what percentage of the microprocessor it is using each process. When you write the command top in the shell, the process top will be created. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;top&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1a9795fbee9531f56aeda1376bf9934506" kindref="member" tooltip="This function show what percentage of the microprocessor it is using each process...">top</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>);</highlight></codeline>
+</programlisting> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="63" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="63" bodyend="215"/>
+        <references refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" compoundref="defs_8h" startline="118">ATOMIC</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" compoundref="types_8h" startline="221">BLOCKED</references>
+        <references refid="sys_process_8h_1accfbf2e870cb5b019499cd068db1eb07" compoundref="sys_process_8c" startline="240" endline="248">clearProcessesTicks</references>
+        <references refid="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</references>
+        <references refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" compoundref="types_8h" startline="171">process_t::dataUmalloc</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a11fd9ca455f92c69c084484d5cd803c2" compoundref="types_8h" startline="226">DEAD</references>
+        <references refid="string_8h_1a5aad25908949f4a9f515aff74d166cbe" compoundref="string_8c" startline="37" endline="57">doubleToString</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="sys_process_8h_1aa1cd2078219adc47ca22033bf86a76be" compoundref="sys_process_8c" startline="250" endline="252">getProcessTable</references>
+        <references refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" compoundref="types_8h" startline="136">heapStatus::mallocMem</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" compoundref="stdio_8h" startline="51">putchar</references>
+        <references refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" compoundref="stdio_8h" startline="61">puti</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <references refid="sys_process_8h_1a18afd4bf4046ef60e7827333850e1bc6" compoundref="sys_process_8c" startline="223" endline="238">refreshProcessesCPUs</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a1061be6c3fb88d32829cba6f6b2be304" compoundref="types_8h" startline="219">RUNNING</references>
+        <references refid="config_8h_1a2cd109632a6dcccaa80b43561b1ab700" compoundref="config_8h" startline="23">SCREEN_WIDTH</references>
+        <references refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" compoundref="process_8c" startline="99" endline="101">setProcessAtomicity</references>
+        <references refid="ttys_8h_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</references>
+        <references refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" compoundref="string_8c" startline="76" endline="80">strlen</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a240c1965a48eaf409ba68c4cc9462ac5" compoundref="types_8h" startline="225">TERMINATED</references>
+        <references refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" compoundref="defs_8h" startline="123">UNATOMIC</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a2ab3b1e8acf4975677202367f5bb0c21" compoundref="types_8h" startline="222">WAITING_CHILD</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a61a718eb0f51f850ecc7985cba8b7c4b" compoundref="types_8h" startline="224">WAITING_PID</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a407e57f0265d25fbfa718bb4d17fc356" compoundref="types_8h" startline="223">WAITING_TIME</references>
+      </memberdef>
+      <memberdef kind="function" id="bin_8c_1a236e454e493fc9b262f746305660a2eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void welcome</definition>
+        <argsstring>()</argsstring>
+        <name>welcome</name>
+        <briefdescription>
+<para>This function just prints the welcome message to Flying-High OS. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;welcome&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1a236e454e493fc9b262f746305660a2eb" kindref="member" tooltip="This function just prints the welcome message to Flying-High OS.">welcome</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>)</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="217" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="217" bodyend="258"/>
+        <references refid="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</references>
+        <references refid="shell_8h_1a3bffbbc4425ed2ee988c21ea67c09202" compoundref="shell_8c" startline="17" endline="24">initGlobalDataShell</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="config_8h_1a3dd7b7d41c220904632461a2d95d61cf" compoundref="config_8h" startline="93">TICKS_PER_SECOND</references>
+        <references refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" compoundref="process_8c" startline="95" endline="97">upTime</references>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bin_8c_1ae2338f2b60de8c59eaa31a6a285c1fc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void goodbye</definition>
+        <argsstring>()</argsstring>
+        <name>goodbye</name>
+        <briefdescription>
+<para>This function just says goodbye and reboots the system. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;goodbye&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1ae2338f2b60de8c59eaa31a6a285c1fc0" kindref="member" tooltip="This function just says goodbye and reboots the system.">goodbye</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>);</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="260" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="260" bodyend="289"/>
+        <references refid="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="config_8h_1a3dd7b7d41c220904632461a2d95d61cf" compoundref="config_8h" startline="93">TICKS_PER_SECOND</references>
+        <references refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" compoundref="process_8c" startline="95" endline="97">upTime</references>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bin_8c_1a8d6f8ce896cba69a844650449479ead1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printA</definition>
+        <argsstring>()</argsstring>
+        <name>printA</name>
+        <briefdescription>
+<para>This function prints infinite A letters. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;printA&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1a8d6f8ce896cba69a844650449479ead1" kindref="member" tooltip="This function prints infinite A letters.">printA</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>)</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="291" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="291" bodyend="298"/>
+        <references refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" compoundref="stdio_8h" startline="51">putchar</references>
+      </memberdef>
+      <memberdef kind="function" id="bin_8c_1a5964c5b2b75cb7dc3c7648afe535fd03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printB</definition>
+        <argsstring>()</argsstring>
+        <name>printB</name>
+        <briefdescription>
+<para>This functions prints infinite A letters. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;printB&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1a5964c5b2b75cb7dc3c7648afe535fd03" kindref="member" tooltip="This functions prints infinite A letters.">printB</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>)</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="300" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="300" bodyend="306"/>
+        <references refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" compoundref="stdio_8h" startline="51">putchar</references>
+      </memberdef>
+      <memberdef kind="function" id="bin_8c_1a91d6348b48c15f044abee99da6fec6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nothing</definition>
+        <argsstring>()</argsstring>
+        <name>nothing</name>
+        <briefdescription>
+<para>This function only consumes the microprocessor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;nothing&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1a91d6348b48c15f044abee99da6fec6bd" kindref="member" tooltip="This function only consumes the microprocessor.">nothing</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>)</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="308" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="308" bodyend="315"/>
+        <references refid="stdio_8h_1ac0484b3e3a4d8361d91c3322440f9195" compoundref="stdio_8h" startline="56">getchar</references>
+      </memberdef>
+      <memberdef kind="function" id="bin_8c_1ab8d39c86e0f803f0816e787e36c99bd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pageFault</definition>
+        <argsstring>()</argsstring>
+        <name>pageFault</name>
+        <briefdescription>
+<para>This function generates a page fault exception. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;pageFault&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1ab8d39c86e0f803f0816e787e36c99bd1" kindref="member" tooltip="This function generates a page fault exception.">pageFault</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>)</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/bin.c" line="317" bodyfile="/Users/Luciano/Desktop/flying-high/src/bin.c" bodystart="317" bodyend="331"/>
+        <references refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" compoundref="types_8h" startline="171">process_t::dataUmalloc</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" compoundref="types_8h" startline="136">heapStatus::mallocMem</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" compoundref="stdio_8h" startline="66">putx</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>All the OS processes. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bin_8h" kindref="compound" tooltip="All the OS processes.">bin.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="bin_8c_1a83e1a7341d63e92cd3d1733f87176a88" kindref="member">processTable</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1a5bfde7b5020b14bdcb1c9269ab308dc5" kindref="member" tooltip="This functions initialize the welcome process, all the shells and goodbye process...">init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*args){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>status;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*processTable;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable<sp/>=<sp/><ref refid="sys_process_8h_1aa1cd2078219adc47ca22033bf86a76be" kindref="member" tooltip="Retrieves the OS process table.">getProcessTable</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" kindref="member" tooltip="DefineBrief.">ATOMIC</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(pid<sp/>=<sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;welcome&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1a236e454e493fc9b262f746305660a2eb" kindref="member" tooltip="This function just prints the welcome message to Flying-High OS.">welcome</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>))<sp/>==<sp/>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;ERROR:<sp/>Welcome<sp/>could<sp/>not<sp/>be<sp/>created.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af886a211159a5c948f114280d2030a06" kindref="member" tooltip="Sets the given process tty id.">setTty</ref>(pid,<sp/>0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" kindref="member" tooltip="DefineBrief.">UNATOMIC</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(processTable[0].childsQty){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" kindref="member" tooltip="DefineBrief.">ATOMIC</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" kindref="member" tooltip="The maximum amount of ttys.">MAX_TTY</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(pid<sp/>=<sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;sh&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="shell_8h_1a225cd0af1ed8359b2973453e2a22a94b" kindref="member" tooltip="The function that runs the shell application.">shell</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>))<sp/>==<sp/>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;ERROR:<sp/>A<sp/>Shell<sp/>could<sp/>not<sp/>be<sp/>created.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af886a211159a5c948f114280d2030a06" kindref="member" tooltip="Sets the given process tty id.">setTty</ref>(pid,<sp/>i);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1aa4f3855e8a226d285a523789a377fe04" kindref="member" tooltip="Sets the tty mode of the given pid process.">setTTYMode</ref>(pid,<sp/><ref refid="defs_8h_1afd70646efe5984e361c17010322a5711" kindref="member" tooltip="DefineBrief.">TTY_CANONICAL</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" kindref="member" tooltip="DefineBrief.">UNATOMIC</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(processTable[0].childsQty<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a6655447bab00753d59759423bf28e22e" kindref="member" tooltip="Blocks the calling process until a child returns.">wait</ref>(&amp;status);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" kindref="member" tooltip="DefineBrief.">ATOMIC</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(pid<sp/>=<sp/><ref refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" kindref="member" tooltip="Creates a new process into the system and sets it ready to run. The process will...">createProcess</ref>(</highlight><highlight class="stringliteral">&quot;goodbye&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))<ref refid="bin_8h_1ae2338f2b60de8c59eaa31a6a285c1fc0" kindref="member" tooltip="This function just says goodbye and reboots the system.">goodbye</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" kindref="member" tooltip="DefineBrief.">FOREGROUND</ref>))<sp/>==<sp/>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;ERROR:<sp/>Goodbye<sp/>could<sp/>not<sp/>be<sp/>created.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af886a211159a5c948f114280d2030a06" kindref="member" tooltip="Sets the given process tty id.">setTty</ref>(pid,<sp/>0);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" kindref="member" tooltip="DefineBrief.">UNATOMIC</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(processTable[0].childsQty){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="system_8h_1ac8c8545f4a29ebb7d3e384467263cf50" kindref="member" tooltip="Reboots the system.">rebootSystem</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1a9795fbee9531f56aeda1376bf9934506" kindref="member" tooltip="This function show what percentage of the microprocessor it is using each process...">top</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>c1<sp/>=<sp/>6,<sp/>c2<sp/>=<sp/>7,<sp/>c3<sp/>=<sp/>13,<sp/>c4<sp/>=<sp/>8,<sp/>c5<sp/>=<sp/>9,<sp/>c6<sp/>=<sp/>15,<sp/>c7<sp/>=<sp/>7,<sp/>c8<sp/>=<sp/>15;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aux,<sp/>dig<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*processTable;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TOP<sp/>-<sp/>Process<sp/>List&quot;</highlight><highlight class="normal">,<sp/>*l1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;PID&quot;</highlight><highlight class="normal">,<sp/>*l2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;PPID&quot;</highlight><highlight class="normal">,<sp/>*l3<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/>*l4<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;%<sp/>CPU&quot;</highlight><highlight class="normal">,<sp/>*l5<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Childs&quot;</highlight><highlight class="normal">,<sp/>*l6<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Used<sp/>Mem<sp/>(B)&quot;</highlight><highlight class="normal">,<sp/>*l7<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Prio&quot;</highlight><highlight class="normal">,<sp/>*l8<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;State&quot;</highlight><highlight class="normal">,<sp/>*tmp,<sp/>tmp2[10];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processTable<sp/>=<sp/><ref refid="sys_process_8h_1aa1cd2078219adc47ca22033bf86a76be" kindref="member" tooltip="Retrieves the OS process table.">getProcessTable</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" kindref="member" tooltip="It clears the stdout of the tty that is in focus.">clearTTYScreen</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>(<ref refid="config_8h_1a2cd109632a6dcccaa80b43561b1ab700" kindref="member" tooltip="The width of the screen.">SCREEN_WIDTH</ref><sp/>-<sp/><ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(title))<sp/>/<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(title);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/><ref refid="config_8h_1a2cd109632a6dcccaa80b43561b1ab700" kindref="member" tooltip="The width of the screen.">SCREEN_WIDTH</ref><sp/>;<sp/>++j){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c1<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l1))<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l2);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c2<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l2))<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>(c3<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l3))<sp/>-<sp/>2)<sp/>/<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l3);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>(c3<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l3))<sp/>-<sp/>2)<sp/>/<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l4);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c4<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l4))<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l5);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c5<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l5))<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l6);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c6<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l6))<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l7);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c7<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l7))<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(l8);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c8<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(l8))<sp/>-<sp/>1<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>SCREEN_WIDTH<sp/>;<sp/>++j){</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1){</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" kindref="member" tooltip="DefineBrief.">ATOMIC</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1a18afd4bf4046ef60e7827333850e1bc6" kindref="member" tooltip="Refreshes the process comsumption of every process.">refreshProcessesCPUs</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys_process_8h_1accfbf2e870cb5b019499cd068db1eb07" kindref="member" tooltip="Clears the current tickcount of every process.">clearProcessesTicks</ref>();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a77495bf57af4fe0554f55dc4be4a4600" kindref="member" tooltip="It sets the cursor in an specific position of the tty stdout.">setTTYCursorPosition</ref>(6,<sp/>0);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1ab5a4ab42ad24ecad7cb6354c4b5f7587" kindref="member" tooltip="Sets the given pid process&amp;#39; atomicity.">setProcessAtomicity</ref>(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>(),<sp/><ref refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" kindref="member" tooltip="DefineBrief.">UNATOMIC</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" kindref="member" tooltip="The maximum amount of process.">MAX_PROCESS</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>processTable[i].pid<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" kindref="member" tooltip="puti function define.">puti</ref>(aux<sp/>=<sp/>processTable[i].pid);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c1<sp/>-<sp/>((aux<sp/>&gt;<sp/>9)<sp/>?<sp/>2<sp/>:<sp/>1)<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" kindref="member" tooltip="puti function define.">puti</ref>(aux<sp/>=<sp/>processTable[i].ppid);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c2<sp/>-<sp/>((aux<sp/>&gt;<sp/>9)<sp/>?<sp/>2<sp/>:<sp/>1)<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/>processTable[i].name);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c3<sp/>-<sp/>(<ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(tmp))<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="string_8h_1a5aad25908949f4a9f515aff74d166cbe" kindref="member" tooltip="Idem as intToString, but with double values.">doubleToString</ref>(processTable[i].cpuPercent,<sp/>tmp2);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp2);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c4<sp/>-<sp/><ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(tmp2)<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" kindref="member" tooltip="puti function define.">puti</ref>(aux<sp/>=<sp/>processTable[i].childsQty);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c5<sp/>-<sp/>((aux<sp/>&gt;<sp/>9)<sp/>?<sp/>2<sp/>:<sp/>1)<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" kindref="member" tooltip="puti function define.">puti</ref>(aux<sp/>=<sp/>(processTable[i].dataUmalloc.mallocMem.allocp<sp/>-<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)processTable[i].<ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>.<ref refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" kindref="member">mallocMem</ref>.address));</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(aux<sp/>/<sp/>10<sp/>&gt;<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux<sp/>/=<sp/>10;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++dig;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c6<sp/>-<sp/>dig<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dig<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" kindref="member" tooltip="puti function define.">puti</ref>(processTable[i].priority);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c7<sp/>-<sp/>1<sp/>-<sp/>2<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<sp/>processTable[i].state<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" kindref="member">READY</ref>:</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;READY&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" kindref="member">BLOCKED</ref>:</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BLOCKED&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a61a718eb0f51f850ecc7985cba8b7c4b" kindref="member">WAITING_PID</ref>:</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;WAITING<sp/>PID&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a407e57f0265d25fbfa718bb4d17fc356" kindref="member">WAITING_TIME</ref>:</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;WAITING<sp/>TIME&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a2ab3b1e8acf4975677202367f5bb0c21" kindref="member">WAITING_CHILD</ref>:</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;WAITING_CHILD&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a240c1965a48eaf409ba68c4cc9462ac5" kindref="member">TERMINATED</ref>:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TERMINATED&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a1061be6c3fb88d32829cba6f6b2be304" kindref="member">RUNNING</ref>:</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;RUNNING&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a11fd9ca455f92c69c084484d5cd803c2" kindref="member">DEAD</ref>:</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;DEAD&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(tmp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>c8<sp/>-<sp/><ref refid="string_8h_1ae6c8de953239811a34eeeab09458e55e" kindref="member" tooltip="Returns the length of the string.">strlen</ref>(tmp)<sp/>-<sp/>1<sp/>;<sp/>++j)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/>SCREEN_WIDTH<sp/>;<sp/>++j){</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="bin_8c_1a236e454e493fc9b262f746305660a2eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1a236e454e493fc9b262f746305660a2eb" kindref="member" tooltip="This function just prints the welcome message to Flying-High OS.">welcome</ref>(){</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>curTime;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curTime<sp/>=<sp/><ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" kindref="member" tooltip="It clears the stdout of the tty that is in focus.">clearTTYScreen</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\n\tWelcome,<sp/>you&apos;re<sp/>Flying-High<sp/>at<sp/>1.0<sp/>meters!!\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(msg);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;\t\tInitializing<sp/>Drivers..............................................&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>()<sp/>&lt;<sp/>curTime<sp/>+<sp/>j<sp/>*<sp/><ref refid="config_8h_1a3dd7b7d41c220904632461a2d95d61cf" kindref="member" tooltip="The amount of ticks in one second.">TICKS_PER_SECOND</ref>);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Done.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;\n\t\tEnabling<sp/>Interrupts...............................................&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>()<sp/>&lt;<sp/>curTime<sp/>+<sp/>j<sp/>*<sp/>TICKS_PER_SECOND);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Done.\n&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;\n\tInitializing<sp/>Shells...................................................&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="shell_8h_1a3bffbbc4425ed2ee988c21ea67c09202" kindref="member" tooltip="Initializes the data structures for the shells.">initGlobalDataShell</ref>();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>()<sp/>&lt;<sp/>curTime<sp/>+<sp/>j<sp/>*<sp/>TICKS_PER_SECOND);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Done.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;\n\tReady,<sp/>have<sp/>fun!!\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="bin_8c_1ae2338f2b60de8c59eaa31a6a285c1fc0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1ae2338f2b60de8c59eaa31a6a285c1fc0" kindref="member" tooltip="This function just says goodbye and reboots the system.">goodbye</ref>(){</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>curTime;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ttys_8h_1a6083aac7b79f2adcd3c4d6fbf479f283" kindref="member" tooltip="It clears the stdout of the tty that is in focus.">clearTTYScreen</ref>();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curTime<sp/>=<sp/><ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;\nNo<sp/>processes<sp/>running,<sp/>starting<sp/>system<sp/>reboot...\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>()<sp/>&lt;<sp/>curTime<sp/>+<sp/>j<sp/>*<sp/><ref refid="config_8h_1a3dd7b7d41c220904632461a2d95d61cf" kindref="member" tooltip="The amount of ticks in one second.">TICKS_PER_SECOND</ref>);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;\tShutting<sp/>down<sp/>drivers...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>()<sp/>&lt;<sp/>curTime<sp/>+<sp/>j<sp/>*<sp/>TICKS_PER_SECOND);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;...Done.\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Have<sp/>a<sp/>nice<sp/>day!...Rebooting<sp/>now...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="process_8h_1ae735fa27b5b798dab27c5d1077802faf" kindref="member" tooltip="Retrieves the amount of ticks since the system boot.">upTime</ref>()<sp/>&lt;<sp/>curTime<sp/>+<sp/>j<sp/>*<sp/>TICKS_PER_SECOND);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="bin_8c_1a8d6f8ce896cba69a844650449479ead1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1a8d6f8ce896cba69a844650449479ead1" kindref="member" tooltip="This function prints infinite A letters.">printA</ref>(){</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1){</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="bin_8c_1a5964c5b2b75cb7dc3c7648afe535fd03" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1a5964c5b2b75cb7dc3c7648afe535fd03" kindref="member" tooltip="This functions prints infinite A letters.">printB</ref>(){</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1){</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" kindref="member" tooltip="putchar function define.">putchar</ref>(</highlight><highlight class="charliteral">&apos;B&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308" refid="bin_8c_1a91d6348b48c15f044abee99da6fec6bd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1a91d6348b48c15f044abee99da6fec6bd" kindref="member" tooltip="This function only consumes the microprocessor.">nothing</ref>(){</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1){</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ac0484b3e3a4d8361d91c3322440f9195" kindref="member" tooltip="getchar function define.">getchar</ref>();</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;hlt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="bin_8c_1ab8d39c86e0f803f0816e787e36c99bd1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_8h_1ab8d39c86e0f803f0816e787e36c99bd1" kindref="member" tooltip="This function generates a page fault exception.">pageFault</ref>(){</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>aux;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" kindref="member" tooltip="puts function define.">puts</ref>(</highlight><highlight class="stringliteral">&quot;Quiero<sp/>escribir<sp/>en<sp/><sp/>la<sp/>posicion<sp/>de<sp/>memoria<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>()<sp/>-<sp/>1<sp/>&gt;=<sp/>0){</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux<sp/>=<sp/>processTable[<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>()<sp/>-<sp/>1].<ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>.<ref refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" kindref="member">mallocMem</ref>.allocp;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)aux);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*aux<sp/>=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux<sp/>=<sp/>processTable[<ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>()<sp/>+<sp/>1].<ref refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" kindref="member">dataUmalloc</ref>.<ref refid="structheap_status_1a563eaaea14f23514bd4a6c87f11711dd" kindref="member">mallocMem</ref>.allocp;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdio_8h_1ab2e1f434fff6e1e4a89a8a2c10964919" kindref="member" tooltip="putx function define.">putx</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)aux);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*aux<sp/>=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/bin.c"/>
+  </compounddef>
+</doxygen>

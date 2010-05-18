@@ -1,0 +1,189 @@
+\hypertarget{p_queue_p_8h}{
+\section{inc/pQueueP.h File Reference}
+\label{p_queue_p_8h}\index{inc/pQueueP.h@{inc/pQueueP.h}}
+}
+
+
+The priority queue module.  
+
+
+{\ttfamily \#include \char`\"{}string.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}stdio.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}sysProcess.h\char`\"{}}\par
+Include dependency graph for pQueueP.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{p_queue_p_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structp_queue_c_d_t}{pQueueCDT} $\ast$ \hyperlink{p_queue_p_8h_ad7833c7256e151ecc7fb1ef7b6debdb9}{pQueueADT}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structp_queue_c_d_t}{pQueueADT} \hyperlink{p_queue_p_8h_a410b753d802b615381198d60fd33cc12}{newPQueue} (void($\ast$freeFn)(void $\ast$), void $\ast$($\ast$cpyFn)(void $\ast$))
+\begin{DoxyCompactList}\small\item\em This function return a new priority Queue. It creates a priority queue for \_\-MAX\_\-PRIORITY\_\- priorities. It receives the function to copy an element and free an element. \item\end{DoxyCompactList}\item 
+void \hyperlink{p_queue_p_8h_a1da6471fc3cf61ea1ce047d0baafd72b}{freePQueue} (\hyperlink{structp_queue_c_d_t}{pQueueADT} queue)
+\begin{DoxyCompactList}\small\item\em This function frees the whole pQueue. \item\end{DoxyCompactList}\item 
+int \hyperlink{p_queue_p_8h_a2c6cfc95a906a00331462b78a5bd5cf7}{enque} (\hyperlink{structp_queue_c_d_t}{pQueueADT} queue, void $\ast$data, int priority)
+\begin{DoxyCompactList}\small\item\em This function enque the element in the correct priority node and it will be added at last of the list. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{p_queue_p_8h_a06d7f0a23562dd5158922dd40019254c}{deque} (\hyperlink{structp_queue_c_d_t}{pQueueADT} queue)
+\begin{DoxyCompactList}\small\item\em This function return the first element of the queue. After you call to deque, if the proccess doesn't finish you must enque again the control block, if not you don't do anything. \item\end{DoxyCompactList}\item 
+int \hyperlink{p_queue_p_8h_aef016839ece378b19c2ab903e53165b7}{isEmpty} (\hyperlink{structp_queue_c_d_t}{pQueueADT} queue)
+\begin{DoxyCompactList}\small\item\em This function the amount of proccess that are in the priority queue. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The priority queue module. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{p_queue_p_8h_source}{pQueueP.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{p_queue_p_8h_ad7833c7256e151ecc7fb1ef7b6debdb9}{
+\index{pQueueP.h@{pQueueP.h}!pQueueADT@{pQueueADT}}
+\index{pQueueADT@{pQueueADT}!pQueueP.h@{pQueueP.h}}
+\subsubsection[{pQueueADT}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf pQueueCDT}$\ast$ {\bf pQueueADT}}}
+\label{p_queue_p_8h_ad7833c7256e151ecc7fb1ef7b6debdb9}
+
+
+Definition at line 20 of file pQueueP.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p_queue_p_8h_a06d7f0a23562dd5158922dd40019254c}{
+\index{pQueueP.h@{pQueueP.h}!deque@{deque}}
+\index{deque@{deque}!pQueueP.h@{pQueueP.h}}
+\subsubsection[{deque}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ deque ({\bf pQueueADT} {\em queue})}}
+\label{p_queue_p_8h_a06d7f0a23562dd5158922dd40019254c}
+
+
+This function return the first element of the queue. After you call to deque, if the proccess doesn't finish you must enque again the control block, if not you don't do anything. 
+
+
+\begin{DoxyCode}
+                        pQueue * queue;
+                        int     data = 10, ret;
+
+                        queue = newPQueue();
+                        enque( (void*)(&data) );
+                        ret = *((int *)deque(queue));
+\end{DoxyCode}
+ 
+
+Definition at line 146 of file pQueueP.c.
+
+\hypertarget{p_queue_p_8h_a2c6cfc95a906a00331462b78a5bd5cf7}{
+\index{pQueueP.h@{pQueueP.h}!enque@{enque}}
+\index{enque@{enque}!pQueueP.h@{pQueueP.h}}
+\subsubsection[{enque}]{\setlength{\rightskip}{0pt plus 5cm}int enque ({\bf pQueueADT} {\em queue}, \/  void $\ast$ {\em data}, \/  int {\em priority})}}
+\label{p_queue_p_8h_a2c6cfc95a906a00331462b78a5bd5cf7}
+
+
+This function enque the element in the correct priority node and it will be added at last of the list. 
+
+
+\begin{DoxyCode}
+                        pQueue * queue;
+                        int data = 9;
+                        queue = newPQueue();
+                        ...
+                        enque(queue, (void*)(&data) );
+\end{DoxyCode}
+ 
+
+Definition at line 120 of file pQueueP.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{p_queue_p_8h_a2c6cfc95a906a00331462b78a5bd5cf7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{p_queue_p_8h_a1da6471fc3cf61ea1ce047d0baafd72b}{
+\index{pQueueP.h@{pQueueP.h}!freePQueue@{freePQueue}}
+\index{freePQueue@{freePQueue}!pQueueP.h@{pQueueP.h}}
+\subsubsection[{freePQueue}]{\setlength{\rightskip}{0pt plus 5cm}void freePQueue ({\bf pQueueADT} {\em queue})}}
+\label{p_queue_p_8h_a1da6471fc3cf61ea1ce047d0baafd72b}
+
+
+This function frees the whole pQueue. 
+
+
+\begin{DoxyCode}
+                        ...
+                        freePQueue( queue );
+                        ...
+\end{DoxyCode}
+ 
+
+Definition at line 98 of file pQueueP.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{p_queue_p_8h_a1da6471fc3cf61ea1ce047d0baafd72b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{p_queue_p_8h_aef016839ece378b19c2ab903e53165b7}{
+\index{pQueueP.h@{pQueueP.h}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!pQueueP.h@{pQueueP.h}}
+\subsubsection[{isEmpty}]{\setlength{\rightskip}{0pt plus 5cm}int isEmpty ({\bf pQueueADT} {\em queue})}}
+\label{p_queue_p_8h_aef016839ece378b19c2ab903e53165b7}
+
+
+This function the amount of proccess that are in the priority queue. 
+
+
+
+Definition at line 167 of file pQueueP.c.
+
+\hypertarget{p_queue_p_8h_a410b753d802b615381198d60fd33cc12}{
+\index{pQueueP.h@{pQueueP.h}!newPQueue@{newPQueue}}
+\index{newPQueue@{newPQueue}!pQueueP.h@{pQueueP.h}}
+\subsubsection[{newPQueue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pQueueADT} newPQueue (void($\ast$)(void $\ast$) {\em freeFn}, \/  void $\ast$($\ast$)(void $\ast$) {\em cpyFn})}}
+\label{p_queue_p_8h_a410b753d802b615381198d60fd33cc12}
+
+
+This function return a new priority Queue. It creates a priority queue for \_\-MAX\_\-PRIORITY\_\- priorities. It receives the function to copy an element and free an element. 
+
+
+\begin{DoxyCode}
+                
+                pQueue * queue;
+                queue = newPQueue();
+\end{DoxyCode}
+ 
+
+Definition at line 71 of file pQueueP.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{p_queue_p_8h_a410b753d802b615381198d60fd33cc12_cgraph}
+\end{center}
+\end{figure}
+
+

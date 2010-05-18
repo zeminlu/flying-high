@@ -1,0 +1,110 @@
+.TH "inc/kMalloc.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/kMalloc.h \- 
+.PP
+The kernel malloc module.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'memModule.h'\fP
+.br
+\fC#include 'sysMalloc.h'\fP
+.br
+\fC#include 'process.h'\fP
+.br
+\fC#include 'stdio.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkFree\fP (void *ap)"
+.br
+.RI "\fIThis function calls sysFree, that leaves the kernel memory to be used by Kalloc in future calls. \fP"
+.ti -1c
+.RI "void * \fBkMalloc\fP (\fBsize_t\fP nbytes)"
+.br
+.RI "\fIThis funtion calls sysMalloc that gives the request size of memory. This is given from the kernel memory. On error returns null. \fP"
+.ti -1c
+.RI "void * \fBkRealloc\fP (void *ap, \fBsize_t\fP size)"
+.br
+.RI "\fICalls sysRealloc, that changes the size of the original. It returns null if there is not enough memory. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The kernel malloc module. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBkMalloc.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void kFree (void * ap)"
+.PP
+This function calls sysFree, that leaves the kernel memory to be used by Kalloc in future calls. \fBParameters:\fP
+.RS 4
+\fIap\fP The kernel memory position that will be freed.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBkMalloc()\fP \fBkRealloc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file kMalloc.c.
+.SS "void * kMalloc (\fBsize_t\fP nbytes)"
+.PP
+This funtion calls sysMalloc that gives the request size of memory. This is given from the kernel memory. On error returns null. \fBParameters:\fP
+.RS 4
+\fInbytes\fP The memory size that would be returned, this is allways kernel memory.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns the logic memory position, with continious memory to use.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBkFree()\fP \fBkRealloc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file kMalloc.c.
+.SS "void * kRealloc (void * ap, \fBsize_t\fP size)"
+.PP
+Calls sysRealloc, that changes the size of the original. It returns null if there is not enough memory. \fBParameters:\fP
+.RS 4
+\fIap\fP The logic memory position that wold be extended. 
+.br
+\fIsize\fP The new size that would be used to increase the ap segment memory.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new memory address that has a continuous segment of kernel memory.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBkFree()\fP \fBkMalloc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file kMalloc.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

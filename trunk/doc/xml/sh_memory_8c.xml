@@ -1,0 +1,862 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="sh_memory_8c" kind="file">
+    <compoundname>shMemory.c</compoundname>
+    <includes refid="sh_memory_8h" local="yes">shMemory.h</includes>
+    <incdepgraph>
+      <node id="4449">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="4432" relation="include">
+        </childnode>
+      </node>
+      <node id="4430">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="4425">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="4426" relation="include">
+        </childnode>
+      </node>
+      <node id="4454">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="4432">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4437" relation="include">
+        </childnode>
+        <childnode refid="4438" relation="include">
+        </childnode>
+        <childnode refid="4443" relation="include">
+        </childnode>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4438">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4439" relation="include">
+        </childnode>
+        <childnode refid="4441" relation="include">
+        </childnode>
+      </node>
+      <node id="4436">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4435">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4436" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4427">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4428" relation="include">
+        </childnode>
+        <childnode refid="4429" relation="include">
+        </childnode>
+      </node>
+      <node id="4448">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4440" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4435" relation="include">
+        </childnode>
+      </node>
+      <node id="4450">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="4435" relation="include">
+        </childnode>
+        <childnode refid="4441" relation="include">
+        </childnode>
+        <childnode refid="4436" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4430" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4439" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4438" relation="include">
+        </childnode>
+        <childnode refid="4453" relation="include">
+        </childnode>
+      </node>
+      <node id="4437">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4451">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4442" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4441">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="4442" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4447">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+        <childnode refid="4446" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4438" relation="include">
+        </childnode>
+        <childnode refid="4432" relation="include">
+        </childnode>
+        <childnode refid="4435" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+      </node>
+      <node id="4442">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="4443">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4437" relation="include">
+        </childnode>
+      </node>
+      <node id="4424">
+        <label>src/shMemory.c</label>
+        <link refid="shMemory.c"/>
+        <childnode refid="4425" relation="include">
+        </childnode>
+      </node>
+      <node id="4440">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+      </node>
+      <node id="4429">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4430" relation="include">
+        </childnode>
+      </node>
+      <node id="4444">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4441" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4446" relation="include">
+        </childnode>
+        <childnode refid="4447" relation="include">
+        </childnode>
+        <childnode refid="4432" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4436" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+      </node>
+      <node id="4453">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="4441" relation="include">
+        </childnode>
+        <childnode refid="4435" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4425" relation="include">
+        </childnode>
+        <childnode refid="4426" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4434">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4446">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4431">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="4432" relation="include">
+        </childnode>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4447" relation="include">
+        </childnode>
+      </node>
+      <node id="4445">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="4446" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4426">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+      </node>
+      <node id="4433">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4435" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+      </node>
+      <node id="4439">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4440" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+      </node>
+      <node id="4428">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="4452">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4427" relation="include">
+        </childnode>
+        <childnode refid="4446" relation="include">
+        </childnode>
+        <childnode refid="4447" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4432" relation="include">
+        </childnode>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4441" relation="include">
+        </childnode>
+        <childnode refid="4437" relation="include">
+        </childnode>
+        <childnode refid="4444" relation="include">
+        </childnode>
+        <childnode refid="4436" relation="include">
+        </childnode>
+        <childnode refid="4440" relation="include">
+        </childnode>
+        <childnode refid="4435" relation="include">
+        </childnode>
+        <childnode refid="4438" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4442" relation="include">
+        </childnode>
+        <childnode refid="4430" relation="include">
+        </childnode>
+        <childnode refid="4439" relation="include">
+        </childnode>
+        <childnode refid="4426" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsh_mem" prot="public">shMem</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" prot="public" static="no">
+        <name>FREE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="11" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="11" bodyend="-1"/>
+        <referencedby refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" compoundref="sh_memory_8c" startline="79" endline="122">_sys_shmget</referencedby>
+        <referencedby refid="sh_memory_8c_1a574d3f5987a7f9a3723ac7bddaf4e060" compoundref="sh_memory_8c" startline="60" endline="77">initializeShMems</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sh_memory_8c_1ab5be0aaddb58ffb9cb20c12530d66316" prot="public" static="no">
+        <name>BUSY</name>
+        <initializer>!FREE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="12" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="12" bodyend="-1"/>
+        <referencedby refid="sh_memory_8c_1a5fe312690d813e1d177d7bc76019c4e0" compoundref="sh_memory_8c" startline="124" endline="147">_sys_shmat</referencedby>
+        <referencedby refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" compoundref="sh_memory_8c" startline="79" endline="122">_sys_shmget</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sh_memory_8c_1a0b77053cf4c7fd4e29a853f170dbe4ec" prot="public" static="no">
+        <type>struct <ref refid="structsh_mem" kindref="compound">shMem</ref></type>
+        <definition>typedef struct shMem shMem_t</definition>
+        <argsstring></argsstring>
+        <name>shMem_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sh_memory_8c_1a292b68e4b7ee8e7d1e4808eadc094c3d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int freeShMems</definition>
+        <argsstring></argsstring>
+        <name>freeShMems</name>
+        <initializer> MAX_SHMEMS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="14" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sh_memory_8c_1a98159ae155fdc666ee35d94677dbe7ed" prot="public" static="yes" mutable="no">
+        <type><ref refid="structsh_mem" kindref="compound">shMem_t</ref></type>
+        <definition>shMem_t shMemories[MAX_SHMEMS]</definition>
+        <argsstring>[MAX_SHMEMS]</argsstring>
+        <name>shMemories</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="29" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sh_memory_8c_1a8d7a1c046c2493a933e170ae65a20b18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shmget</definition>
+        <argsstring>(key_t key, int size)</argsstring>
+        <name>shmget</name>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Gets a new shared memory with the given key and size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key for the shared memory segment. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shared memory size.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The id of the shared memory on success, -1 on error.</para></simplesect>
+<simplesect kind="see"><para><ref refid="sh_memory_8h_1a5c3d92af6a333b8c351c9b7e5aeb98e1" kindref="member">shmat()</ref> <ref refid="sh_memory_8h_1a1c89b0ee5786c3cf217319a997eb5add" kindref="member">shmdt()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="31" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="31" bodyend="33"/>
+        <references refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43aad35ded9ade9adffc5799de4bbf9a9ef" compoundref="types_8h" startline="195">_SYS_SHMGET</references>
+        <references refid="int80_8h_1a36ef33b2d2512c40b2aee77f85c56c38">int80</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sh_memory_8c_1afed1d99151e26266e7bdc8e07e1283e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* shmat</definition>
+        <argsstring>(int shmid, key_t *semid)</argsstring>
+        <name>shmat</name>
+        <param>
+          <type>int</type>
+          <declname>shmid</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref> *</type>
+          <declname>semid</declname>
+        </param>
+        <briefdescription>
+<para>Attaches the current process to the shmid shared memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shmid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the shared memory segment. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>semid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a key_t variable where to store the shared memory inner semaphore id.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the shared memory space.</para></simplesect>
+<simplesect kind="see"><para><ref refid="sh_memory_8h_1a8d7a1c046c2493a933e170ae65a20b18" kindref="member">shmget()</ref> <ref refid="sh_memory_8h_1a1c89b0ee5786c3cf217319a997eb5add" kindref="member">shmdt()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="35" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="35" bodyend="37"/>
+        <references refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4dfea9bd4999361e67a6e7b6c90ee37f" compoundref="types_8h" startline="196">_SYS_SHMAT</references>
+        <references refid="int80_8h_1a36ef33b2d2512c40b2aee77f85c56c38">int80</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <referencedby refid="bttlship_8c_1a03d7f39ab8509bab171aecf4d4fc7b9e" compoundref="bttlship_8c" startline="195" endline="208">attachTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sh_memory_8c_1a1c89b0ee5786c3cf217319a997eb5add" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shmdt</definition>
+        <argsstring>(int shmid)</argsstring>
+        <name>shmdt</name>
+        <param>
+          <type>int</type>
+          <declname>shmid</declname>
+        </param>
+        <briefdescription>
+<para>Detaches the current process form the shmid shared memory segment. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shmid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the shared memory segment.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error.</para></simplesect>
+<simplesect kind="see"><para><ref refid="sh_memory_8h_1a8d7a1c046c2493a933e170ae65a20b18" kindref="member">shmget()</ref> <ref refid="sh_memory_8h_1a5c3d92af6a333b8c351c9b7e5aeb98e1" kindref="member">shmat()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="39" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="39" bodyend="41"/>
+        <references refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad759df680d924dc4e24c190dfc1023ce" compoundref="types_8h" startline="197">_SYS_SHM_DETACH</references>
+        <references refid="int80_8h_1a36ef33b2d2512c40b2aee77f85c56c38">int80</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <referencedby refid="bttlship_8c_1ac475b6f9eb4174c8579f3d4709b0e219" compoundref="bttlship_8c" startline="186" endline="193">cleanup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sh_memory_8c_1a8f91fb84e1d76262a055a5544a0554bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void shmDestroy</definition>
+        <argsstring>(int shmid)</argsstring>
+        <name>shmDestroy</name>
+        <param>
+          <type>int</type>
+          <declname>shmid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="43" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="43" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="sh_memory_8c_1a574d3f5987a7f9a3723ac7bddaf4e060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeShMems</definition>
+        <argsstring>()</argsstring>
+        <name>initializeShMems</name>
+        <briefdescription>
+<para>Initializes all the shared memories. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="60" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="60" bodyend="77"/>
+        <references refid="defs_8h_1a8026e8d87908b0239264d643c90183f5" compoundref="defs_8h" startline="53">_READ</references>
+        <references refid="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" compoundref="defs_8h" startline="58">_WRITE</references>
+        <references refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" compoundref="sh_memory_8c" startline="25">shMem::appnProcessesAmm</references>
+        <references refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" compoundref="sh_memory_8c" startline="26">shMem::appnProcessesPids</references>
+        <references refid="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" compoundref="sh_memory_8c" startline="11">FREE</references>
+        <references refid="structsh_mem_1ac8861193246fc34d8f29ac9d57b6791a" compoundref="sh_memory_8c" startline="18">shMem::key</references>
+        <references refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" compoundref="sh_memory_8h" startline="21">MAX_SHMAPPN</references>
+        <references refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" compoundref="sh_memory_8h" startline="20">MAX_SHMEMS</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structsh_mem_1a720a6e55514a9c4aee4b913a7f871c31" compoundref="sh_memory_8c" startline="24">shMem::permFlags</references>
+        <references refid="structsh_mem_1a9222a19bf63a4f9775ec6307f10955ac" compoundref="sh_memory_8c" startline="22">shMem::semid</references>
+        <references refid="structsh_mem_1a21b32e7678691034a296926c350c2d62" compoundref="sh_memory_8c" startline="20">shMem::shMemFrame</references>
+        <references refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" compoundref="sh_memory_8c" startline="21">shMem::shMemP</references>
+        <references refid="structsh_mem_1a43617d0cfffcc8578872707c8804b381" compoundref="sh_memory_8c" startline="19">shMem::shMemSize</references>
+        <references refid="structsh_mem_1ac8807d215d2ee6d9779d76aeb1147430" compoundref="sh_memory_8c" startline="17">shMem::shmid</references>
+        <references refid="structsh_mem_1a89f234133d3efe315836311cbf21c64b" compoundref="sh_memory_8c" startline="23">shMem::state</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_shmget</definition>
+        <argsstring>(key_t key, int size)</argsstring>
+        <name>_sys_shmget</name>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="79" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="79" bodyend="122"/>
+        <references refid="semaphore_8h_1a52220397ecea855b3a99746e451426e1" compoundref="semaphore_8h" startline="16">BLOCK</references>
+        <references refid="sh_memory_8c_1ab5be0aaddb58ffb9cb20c12530d66316" compoundref="sh_memory_8c" startline="12">BUSY</references>
+        <references refid="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" compoundref="sh_memory_8c" startline="11">FREE</references>
+        <references refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" compoundref="mem_module_8c" startline="143" endline="153">getFrame</references>
+        <references refid="structsh_mem_1ac8861193246fc34d8f29ac9d57b6791a" compoundref="sh_memory_8c" startline="18">shMem::key</references>
+        <references refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" compoundref="sh_memory_8h" startline="20">MAX_SHMEMS</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" compoundref="defs_8h" startline="179">PAGE_SIZE</references>
+        <references refid="config_8h_1a072812a1bebf92b7d4e6c4321573b9a1" compoundref="config_8h" startline="133">PAGES_PER_FRAME</references>
+        <references refid="semaphore_8h_1a46e2163685880ebc53e237c1e3ebf30e" compoundref="semaphore_8c" startline="75" endline="77">sem_get</references>
+        <references refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" compoundref="mem_module_8c" startline="131" endline="141">setFramePresence</references>
+        <references refid="structsh_mem_1a21b32e7678691034a296926c350c2d62" compoundref="sh_memory_8c" startline="20">shMem::shMemFrame</references>
+        <references refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" compoundref="sh_memory_8c" startline="21">shMem::shMemP</references>
+        <references refid="structsh_mem_1a43617d0cfffcc8578872707c8804b381" compoundref="sh_memory_8c" startline="19">shMem::shMemSize</references>
+        <references refid="structsh_mem_1ac8807d215d2ee6d9779d76aeb1147430" compoundref="sh_memory_8c" startline="17">shMem::shmid</references>
+        <references refid="structsh_mem_1a89f234133d3efe315836311cbf21c64b" compoundref="sh_memory_8c" startline="23">shMem::state</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="sh_memory_8c_1a5fe312690d813e1d177d7bc76019c4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* _sys_shmat</definition>
+        <argsstring>(int shmid, key_t *semid)</argsstring>
+        <name>_sys_shmat</name>
+        <param>
+          <type>int</type>
+          <declname>shmid</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref> *</type>
+          <declname>semid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="124" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="124" bodyend="147"/>
+        <references refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" compoundref="sh_memory_8c" startline="25">shMem::appnProcessesAmm</references>
+        <references refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" compoundref="sh_memory_8c" startline="26">shMem::appnProcessesPids</references>
+        <references refid="sh_memory_8c_1ab5be0aaddb58ffb9cb20c12530d66316" compoundref="sh_memory_8c" startline="12">BUSY</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" compoundref="sh_memory_8h" startline="21">MAX_SHMAPPN</references>
+        <references refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" compoundref="sh_memory_8h" startline="20">MAX_SHMEMS</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="structsh_mem_1a9222a19bf63a4f9775ec6307f10955ac" compoundref="sh_memory_8c" startline="22">shMem::semid</references>
+        <references refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" compoundref="sh_memory_8c" startline="21">shMem::shMemP</references>
+      </memberdef>
+      <memberdef kind="function" id="sh_memory_8c_1a700ff640b38fe4afda474128e3602261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sys_shm_detach</definition>
+        <argsstring>(int shmid)</argsstring>
+        <name>_sys_shm_detach</name>
+        <param>
+          <type>int</type>
+          <declname>shmid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c" line="149" bodyfile="/Users/Luciano/Desktop/flying-high/src/shMemory.c" bodystart="149" bodyend="173"/>
+        <references refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" compoundref="sh_memory_8c" startline="25">shMem::appnProcessesAmm</references>
+        <references refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" compoundref="sh_memory_8c" startline="26">shMem::appnProcessesPids</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" compoundref="sh_memory_8h" startline="21">MAX_SHMAPPN</references>
+        <references refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" compoundref="sh_memory_8h" startline="20">MAX_SHMEMS</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The shared memory IPC module. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sh_memory_8h" kindref="compound" tooltip="The shared memory IPC module.">shMemory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FREE<sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="12" refid="sh_memory_8c_1ab5be0aaddb58ffb9cb20c12530d66316" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BUSY<sp/><sp/><sp/><sp/>!FREE</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>freeShMems<sp/>=<sp/><ref refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" kindref="member">MAX_SHMEMS</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="structsh_mem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsh_mem" kindref="compound">shMem</ref>{</highlight></codeline>
+<codeline lineno="17" refid="structsh_mem_1ac8807d215d2ee6d9779d76aeb1147430" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1ac8807d215d2ee6d9779d76aeb1147430" kindref="member">shmid</ref>;</highlight></codeline>
+<codeline lineno="18" refid="structsh_mem_1ac8861193246fc34d8f29ac9d57b6791a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1ac8861193246fc34d8f29ac9d57b6791a" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structsh_mem_1a43617d0cfffcc8578872707c8804b381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1a43617d0cfffcc8578872707c8804b381" kindref="member">shMemSize</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structsh_mem_1a21b32e7678691034a296926c350c2d62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structframe__t" kindref="compound" tooltip="The page frame struct.">frame_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structsh_mem_1a21b32e7678691034a296926c350c2d62" kindref="member">shMemFrame</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" kindref="member">shMemP</ref>;</highlight></codeline>
+<codeline lineno="22" refid="structsh_mem_1a9222a19bf63a4f9775ec6307f10955ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1a9222a19bf63a4f9775ec6307f10955ac" kindref="member">semid</ref>;</highlight></codeline>
+<codeline lineno="23" refid="structsh_mem_1a89f234133d3efe315836311cbf21c64b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="24" refid="structsh_mem_1a720a6e55514a9c4aee4b913a7f871c31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1a720a6e55514a9c4aee4b913a7f871c31" kindref="member">permFlags</ref>;</highlight></codeline>
+<codeline lineno="25" refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" kindref="member">appnProcessesAmm</ref>;</highlight></codeline>
+<codeline lineno="26" refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" kindref="member">appnProcessesPids</ref>[<ref refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" kindref="member">MAX_SHMAPPN</ref>];</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<ref refid="structsh_mem" kindref="compound">shMem_t</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structsh_mem" kindref="compound">shMem_t</ref><sp/>shMemories[<ref refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" kindref="member">MAX_SHMEMS</ref>];</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="sh_memory_8c_1a8d7a1c046c2493a933e170ae65a20b18" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sh_memory_8h_1a8d7a1c046c2493a933e170ae65a20b18" kindref="member" tooltip="Gets a new shared memory with the given key and size.">shmget</ref>(<ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="int80_8h_1a36ef33b2d2512c40b2aee77f85c56c38" kindref="member" tooltip="copy the parameters to the processor registers.">int80</ref>(<ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43aad35ded9ade9adffc5799de4bbf9a9ef" kindref="member">_SYS_SHMGET</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)key,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)size,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="sh_memory_8c_1afed1d99151e26266e7bdc8e07e1283e6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="sh_memory_8h_1a5c3d92af6a333b8c351c9b7e5aeb98e1" kindref="member" tooltip="Attaches the current process to the shmid shared memory.">shmat</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shmid,<sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>*semid){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<ref refid="int80_8h_1a36ef33b2d2512c40b2aee77f85c56c38" kindref="member" tooltip="copy the parameters to the processor registers.">int80</ref>(<ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43a4dfea9bd4999361e67a6e7b6c90ee37f" kindref="member">_SYS_SHMAT</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)shmid,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)semid,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="sh_memory_8c_1a1c89b0ee5786c3cf217319a997eb5add" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sh_memory_8h_1a1c89b0ee5786c3cf217319a997eb5add" kindref="member" tooltip="Detaches the current process form the shmid shared memory segment.">shmdt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shmid){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="int80_8h_1a36ef33b2d2512c40b2aee77f85c56c38" kindref="member" tooltip="copy the parameters to the processor registers.">int80</ref>(<ref refid="types_8h_1ab287c195e026dd24b42c98d06af3ce43ad759df680d924dc4e24c190dfc1023ce" kindref="member">_SYS_SHM_DETACH</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)shmid,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>,<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>shmDestroy(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shmid){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shMemories[shmid].state<sp/>!=<sp/><ref refid="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" kindref="member">FREE</ref>){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[shmid].<ref refid="structsh_mem_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref><sp/>=<sp/><ref refid="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" kindref="member">FREE</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[shmid].<ref refid="structsh_mem_1ac8861193246fc34d8f29ac9d57b6791a" kindref="member">key</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(shMemories[shmid].shMemFrame,<sp/><ref refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" tooltip="DefineBrief.">FALSE</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a49336e498bea7c6948b194027bfa32d4" kindref="member" tooltip="Frees the given frame.">freeFrame</ref>(shMemories[shmid].shMemFrame);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[shmid].<ref refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" kindref="member">shMemP</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[shmid].<ref refid="structsh_mem_1a43617d0cfffcc8578872707c8804b381" kindref="member">shMemSize</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="semaphore_8h_1ad789c6f97a5592c78cb99d9413c9607b" kindref="member" tooltip="Frees up the given semid semaphore.">sem_free</ref>(shMemories[shmid].semid);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[shmid].<ref refid="structsh_mem_1a9222a19bf63a4f9775ec6307f10955ac" kindref="member">semid</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++freeShMems;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="sh_memory_8c_1a574d3f5987a7f9a3723ac7bddaf4e060" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sh_memory_8h_1a574d3f5987a7f9a3723ac7bddaf4e060" kindref="member" tooltip="Initializes all the shared memories.">initializeShMems</ref>(){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/><ref refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" kindref="member">MAX_SHMEMS</ref><sp/>;<sp/>++i){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1ac8807d215d2ee6d9779d76aeb1147430" kindref="member">shmid</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1ac8861193246fc34d8f29ac9d57b6791a" kindref="member">key</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1a43617d0cfffcc8578872707c8804b381" kindref="member">shMemSize</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1a21b32e7678691034a296926c350c2d62" kindref="member">shMemFrame</ref><sp/>=<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" kindref="member">shMemP</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1a9222a19bf63a4f9775ec6307f10955ac" kindref="member">semid</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref><sp/>=<sp/><ref refid="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" kindref="member">FREE</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1a720a6e55514a9c4aee4b913a7f871c31" kindref="member">permFlags</ref><sp/>=<sp/>(<ref refid="defs_8h_1a8026e8d87908b0239264d643c90183f5" kindref="member" tooltip="DefineBrief.">_READ</ref><sp/>|<sp/><ref refid="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" kindref="member" tooltip="DefineBrief.">_WRITE</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" kindref="member">appnProcessesAmm</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0<sp/>;<sp/>j<sp/>&lt;<sp/><ref refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" kindref="member">MAX_SHMAPPN</ref><sp/>;<sp/>++j){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[i].<ref refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" kindref="member">appnProcessesPids</ref>[j]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" kindref="member">_sys_shmget</ref>(<ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>freePos<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!freeShMems<sp/>||<sp/>size<sp/>&gt;<sp/><ref refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" kindref="member" tooltip="DefineBrief.">PAGE_SIZE</ref><sp/>*<sp/><ref refid="config_8h_1a072812a1bebf92b7d4e6c4321573b9a1" kindref="member" tooltip="The amount of pages per frame.">PAGES_PER_FRAME</ref>){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*puts(&quot;El<sp/>tamaño<sp/>es<sp/>mayor<sp/>al<sp/>de<sp/>una<sp/>pagina&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/><ref refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" kindref="member">MAX_SHMEMS</ref><sp/>;<sp/>++i){</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shMemories[i].key<sp/>==<sp/>key){</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*puts(&quot;La<sp/>key<sp/>es<sp/>igual&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shMemories[i].state<sp/>==<sp/><ref refid="sh_memory_8c_1a9a8e700d56e7d858108b755ad3edb52e" kindref="member">FREE</ref><sp/>&amp;&amp;<sp/>freePos<sp/>==<sp/>-1){</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>freePos<sp/>=<sp/>shMemories[i].<ref refid="structsh_mem_1ac8807d215d2ee6d9779d76aeb1147430" kindref="member">shmid</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(freePos<sp/>==<sp/>-1){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*puts(&quot;freepos<sp/>==<sp/>-1&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[freePos].<ref refid="structsh_mem_1a89f234133d3efe315836311cbf21c64b" kindref="member">state</ref><sp/>=<sp/><ref refid="sh_memory_8c_1ab5be0aaddb58ffb9cb20c12530d66316" kindref="member">BUSY</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[freePos].<ref refid="structsh_mem_1ac8861193246fc34d8f29ac9d57b6791a" kindref="member">key</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[freePos].<ref refid="structsh_mem_1a43617d0cfffcc8578872707c8804b381" kindref="member">shMemSize</ref><sp/>=<sp/><ref refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" kindref="member" tooltip="DefineBrief.">PAGE_SIZE</ref><sp/>*<sp/>PAGES_PER_FRAME;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((shMemories[freePos].shMemFrame<sp/>=<sp/><ref refid="mem_module_8h_1a84fa8c324392664110d9da557624b7f2" kindref="member" tooltip="Gets a free frame.">getFrame</ref>())<sp/>==<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>){</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*puts(&quot;Pidiendo<sp/>el<sp/>frame&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mem_module_8h_1a33bcef362cae377767738cdcc12fb340" kindref="member" tooltip="Sets the presence bit of the pages from the given frame to the given state.">setFramePresence</ref>(shMemories[freePos].shMemFrame,<sp/><ref refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" tooltip="DefineBrief.">TRUE</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[freePos].<ref refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" kindref="member">shMemP</ref><sp/>=<sp/>shMemories[freePos].<ref refid="structsh_mem_1a21b32e7678691034a296926c350c2d62" kindref="member">shMemFrame</ref>-&gt;address;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((shMemories[freePos].semid<sp/>=<sp/><ref refid="semaphore_8h_1a46e2163685880ebc53e237c1e3ebf30e" kindref="member" tooltip="Gets a semaphore for the given mode.">sem_get</ref>(<ref refid="semaphore_8h_1a52220397ecea855b3a99746e451426e1" kindref="member">BLOCK</ref>))<sp/>==<sp/>-1){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*puts(&quot;creando<sp/>semaforo\n&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--freeShMems;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>freePos;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="sh_memory_8c_1a5fe312690d813e1d177d7bc76019c4e0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="sh_memory_8c_1a5fe312690d813e1d177d7bc76019c4e0" kindref="member">_sys_shmat</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shmid,<sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>*semid){</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid<sp/>=<sp/><ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shmid<sp/>&gt;=<sp/><ref refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" kindref="member">MAX_SHMEMS</ref><sp/>||<sp/>shMemories[shmid].state<sp/>!=<sp/><ref refid="sh_memory_8c_1ab5be0aaddb58ffb9cb20c12530d66316" kindref="member">BUSY</ref><sp/>||<sp/>shMemories[shmid].key<sp/>==<sp/>-1<sp/>||<sp/>shMemories[shmid].appnProcessesAmm<sp/>&gt;=<sp/><ref refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" kindref="member">MAX_SHMAPPN</ref>){</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++shMemories[shmid].<ref refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" kindref="member">appnProcessesAmm</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/><ref refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" kindref="member">MAX_SHMAPPN</ref><sp/>;<sp/>++i){</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shMemories[shmid].appnProcessesPids[i]<sp/>==<sp/>-1){</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[shmid].<ref refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" kindref="member">appnProcessesPids</ref>[i]<sp/>=<sp/>pid;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>MAX_SHMAPPN){</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*semid<sp/>=<sp/>shMemories[shmid].<ref refid="structsh_mem_1a9222a19bf63a4f9775ec6307f10955ac" kindref="member">semid</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)shMemories[shmid].<ref refid="structsh_mem_1af69f25548b68c95b9142a8cea59796bb" kindref="member">shMemP</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="sh_memory_8c_1a700ff640b38fe4afda474128e3602261" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sh_memory_8c_1a700ff640b38fe4afda474128e3602261" kindref="member">_sys_shm_detach</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shmid){</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid<sp/>=<sp/><ref refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" kindref="member" tooltip="Retrieves the calling process&amp;#39; pid.">getpid</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shmid<sp/>&lt;<sp/>0<sp/>||<sp/>shmid<sp/>&gt;=<sp/><ref refid="sh_memory_8h_1a35446e5a03df8cd9106a60c06e3e058f" kindref="member">MAX_SHMEMS</ref>){</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/><ref refid="sh_memory_8h_1a2eda346ce46bb7fba299935f1d7c958f" kindref="member">MAX_SHMAPPN</ref><sp/>;<sp/>++i){</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shMemories[shmid].appnProcessesPids[i]<sp/>==<sp/>pid){</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shMemories[shmid].<ref refid="structsh_mem_1a5bb581de55dfe5f03f5b8b1646a93b38" kindref="member">appnProcessesPids</ref>[i]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--shMemories[shmid].<ref refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" kindref="member">appnProcessesAmm</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>MAX_SHMAPPN){</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(shMemories[shmid].appnProcessesAmm)){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shmDestroy(shmid);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>shMemories[shmid].<ref refid="structsh_mem_1aab6ea7924dbc5e67cbf5923d4226ea91" kindref="member">appnProcessesAmm</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/src/shMemory.c"/>
+  </compounddef>
+</doxygen>

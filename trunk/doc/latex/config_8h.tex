@@ -1,0 +1,516 @@
+\hypertarget{config_8h}{
+\section{inc/config.h File Reference}
+\label{config_8h}\index{inc/config.h@{inc/config.h}}
+}
+
+
+OS configuration defines.  
+
+
+{\ttfamily \#include \char`\"{}colors.h\char`\"{}}\par
+Include dependency graph for config.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=58pt]{config_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{config_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{config_8h_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\_\-WIDTH}~80
+\begin{DoxyCompactList}\small\item\em The width of the screen. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a25f7ae536603397e929ff4941e253200}{SCREEN\_\-HEIGTH}~25
+\begin{DoxyCompactList}\small\item\em The height of the screen. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a6cacb150853456c97c51481e67d0dabc}{SCREEN\_\-SIZE}~SCREEN\_\-WIDTH $\ast$ SCREEN\_\-HEIGTH
+\begin{DoxyCompactList}\small\item\em Real screen size without color attribute. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a6f784c53fe46a1d7cc4979a97ce2b484}{VIDEO\_\-MEMORY\_\-SIZE}~SCREEN\_\-SIZE $\ast$ 2
+\begin{DoxyCompactList}\small\item\em Real screen size with color attributes. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a96df1fa5a1eb0452e87bad701a632eeb}{CURSOR\_\-START\_\-COL}~0
+\begin{DoxyCompactList}\small\item\em The starter column position. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a0918341b64efcf251a70fc2c188803fa}{CURSOR\_\-START\_\-ROW}~0
+\begin{DoxyCompactList}\small\item\em The starter row position. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a625199558fb05110496080e008423fa6}{VIDEO\_\-TAB\_\-STOP}~4
+\begin{DoxyCompactList}\small\item\em The spaces that tab prints. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a1a24019cfbf00c9425f1aefb18421453}{VIDEO\_\-VTAB\_\-STOP}~4
+\begin{DoxyCompactList}\small\item\em The vertical tab spaces. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a4a96c64dbab22978dda9bbf3a52a9fb7}{CURSOR\_\-START\_\-VISIBLE}~1
+\begin{DoxyCompactList}\small\item\em The state of the cursor, Visible = 1 v NotVisible = 0. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a6a82449f6eb7ef9870e64a127e068485}{VIDEO\_\-COLOR}~setColor(BLACK, WHITE)
+\begin{DoxyCompactList}\small\item\em Set color of letters and screen. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a4a2e75965162f8faca7c6ab73c98d5bd}{KEYBOARD\_\-REPETITION}~3
+\begin{DoxyCompactList}\small\item\em The amount of key press repetitions. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a73c228f87e038e8295ee8ea8eceaa5ac}{ENABLED}~1
+\begin{DoxyCompactList}\small\item\em Enabled cursor. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_abd5c8ab57c190a6522ccdbf0ed7577da}{DISABLED}~0
+\begin{DoxyCompactList}\small\item\em Disabled cursor. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_aec93c5a909c2d118cf88f1b9001b85a9}{MILISECONDS\_\-PER\_\-TICK}~55
+\begin{DoxyCompactList}\small\item\em The amount of miliseconds per tick. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a3dd7b7d41c220904632461a2d95d61cf}{TICKS\_\-PER\_\-SECOND}~18
+\begin{DoxyCompactList}\small\item\em The amount of ticks in one second. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_ad16585962eaf6f3a114a237350a9ba97}{STD\_\-TTY}~0
+\item 
+\#define \hyperlink{config_8h_ad4c770f8a29f82d705f3d34839112bd1}{MAX\_\-PROCESS}~32
+\begin{DoxyCompactList}\small\item\em The maximum amount of process. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_aca2d241a951204f1f8e2d905f162dcbe}{MAX\_\-CHILDS}~MAX\_\-PROCESS -\/ 1
+\begin{DoxyCompactList}\small\item\em The maximum amount of childs that a process could have. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_ad49d6c18040b4ee47b8db7a2aeccc960}{MAX\_\-PROCESS\_\-NAME}~36
+\begin{DoxyCompactList}\small\item\em The maximum length of process name. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a88b491593ae5e149772272b10dbad018}{MAX\_\-PRIORITIES}~4
+\begin{DoxyCompactList}\small\item\em The amount of priority that the system accept. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a44756bcafe20e3d49defdbab056ed7c2}{MAX\_\-TTY}~8
+\begin{DoxyCompactList}\small\item\em The maximum amount of ttys. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a2c5eecb22513a88c24ae5831a3265e54}{MAX\_\-FILES}~2
+\begin{DoxyCompactList}\small\item\em The maximum amount of files. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a072812a1bebf92b7d4e6c4321573b9a1}{PAGES\_\-PER\_\-FRAME}~8
+\begin{DoxyCompactList}\small\item\em The amount of pages per frame. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a392e96dba4ab2bce32bb263a88ff3372}{KERNEL\_\-HEAP\_\-PAGES\_\-QTY}~10
+\begin{DoxyCompactList}\small\item\em The amount of pages that the kernel has in his heap. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a842ed03f27719bc87666bfd1f75415b8}{MAX\_\-LINE}~100
+\begin{DoxyCompactList}\small\item\em The length of the shell buffer. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a9e27e49f40e7acbb55bb085f15dabd99}{ALARM}~'$\backslash$a'
+\begin{DoxyCompactList}\small\item\em The alarm control ascii value. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a629568514359445d2fbda71d70eeb1ce}{BACKSPACE}~'$\backslash$b'
+\begin{DoxyCompactList}\small\item\em The backspace control ascii value. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a3c2cad5489953de23c5733e6e696a93e}{LINE\_\-FEED}~'$\backslash$f'
+\begin{DoxyCompactList}\small\item\em The line feed control ascii value. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a7b99dc1e1c86b4897498c2d436ead1b5}{NEW\_\-LINE}~'$\backslash$n'
+\begin{DoxyCompactList}\small\item\em The new line control ascii value. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_a6a0e6b80dd3d5ca395cf58151749f5e2}{RETURN}~'$\backslash$r'
+\begin{DoxyCompactList}\small\item\em The return control ascii value. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_ad58a1fbfc85c7e4790fc55e654f50221}{TAB}~'$\backslash$t'
+\begin{DoxyCompactList}\small\item\em The tabular control ascii value. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{config_8h_ae32038c6d240009ae8ca21911e89c089}{VTAB}~'$\backslash$v'
+\begin{DoxyCompactList}\small\item\em The vertical tab control ascii value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+OS configuration defines. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{config_8h_source}{config.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{config_8h_a9e27e49f40e7acbb55bb085f15dabd99}{
+\index{config.h@{config.h}!ALARM@{ALARM}}
+\index{ALARM@{ALARM}!config.h@{config.h}}
+\subsubsection[{ALARM}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALARM~'$\backslash$a'}}
+\label{config_8h_a9e27e49f40e7acbb55bb085f15dabd99}
+
+
+The alarm control ascii value. 
+
+
+
+Definition at line 155 of file config.h.
+
+\hypertarget{config_8h_a629568514359445d2fbda71d70eeb1ce}{
+\index{config.h@{config.h}!BACKSPACE@{BACKSPACE}}
+\index{BACKSPACE@{BACKSPACE}!config.h@{config.h}}
+\subsubsection[{BACKSPACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BACKSPACE~'$\backslash$b'}}
+\label{config_8h_a629568514359445d2fbda71d70eeb1ce}
+
+
+The backspace control ascii value. 
+
+
+
+Definition at line 160 of file config.h.
+
+\hypertarget{config_8h_a96df1fa5a1eb0452e87bad701a632eeb}{
+\index{config.h@{config.h}!CURSOR\_\-START\_\-COL@{CURSOR\_\-START\_\-COL}}
+\index{CURSOR\_\-START\_\-COL@{CURSOR\_\-START\_\-COL}!config.h@{config.h}}
+\subsubsection[{CURSOR\_\-START\_\-COL}]{\setlength{\rightskip}{0pt plus 5cm}\#define CURSOR\_\-START\_\-COL~0}}
+\label{config_8h_a96df1fa5a1eb0452e87bad701a632eeb}
+
+
+The starter column position. 
+
+
+
+Definition at line 43 of file config.h.
+
+\hypertarget{config_8h_a0918341b64efcf251a70fc2c188803fa}{
+\index{config.h@{config.h}!CURSOR\_\-START\_\-ROW@{CURSOR\_\-START\_\-ROW}}
+\index{CURSOR\_\-START\_\-ROW@{CURSOR\_\-START\_\-ROW}!config.h@{config.h}}
+\subsubsection[{CURSOR\_\-START\_\-ROW}]{\setlength{\rightskip}{0pt plus 5cm}\#define CURSOR\_\-START\_\-ROW~0}}
+\label{config_8h_a0918341b64efcf251a70fc2c188803fa}
+
+
+The starter row position. 
+
+
+
+Definition at line 48 of file config.h.
+
+\hypertarget{config_8h_a4a96c64dbab22978dda9bbf3a52a9fb7}{
+\index{config.h@{config.h}!CURSOR\_\-START\_\-VISIBLE@{CURSOR\_\-START\_\-VISIBLE}}
+\index{CURSOR\_\-START\_\-VISIBLE@{CURSOR\_\-START\_\-VISIBLE}!config.h@{config.h}}
+\subsubsection[{CURSOR\_\-START\_\-VISIBLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define CURSOR\_\-START\_\-VISIBLE~1}}
+\label{config_8h_a4a96c64dbab22978dda9bbf3a52a9fb7}
+
+
+The state of the cursor, Visible = 1 v NotVisible = 0. 
+
+
+
+Definition at line 63 of file config.h.
+
+\hypertarget{config_8h_abd5c8ab57c190a6522ccdbf0ed7577da}{
+\index{config.h@{config.h}!DISABLED@{DISABLED}}
+\index{DISABLED@{DISABLED}!config.h@{config.h}}
+\subsubsection[{DISABLED}]{\setlength{\rightskip}{0pt plus 5cm}\#define DISABLED~0}}
+\label{config_8h_abd5c8ab57c190a6522ccdbf0ed7577da}
+
+
+Disabled cursor. 
+
+
+
+Definition at line 83 of file config.h.
+
+\hypertarget{config_8h_a73c228f87e038e8295ee8ea8eceaa5ac}{
+\index{config.h@{config.h}!ENABLED@{ENABLED}}
+\index{ENABLED@{ENABLED}!config.h@{config.h}}
+\subsubsection[{ENABLED}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENABLED~1}}
+\label{config_8h_a73c228f87e038e8295ee8ea8eceaa5ac}
+
+
+Enabled cursor. 
+
+
+
+Definition at line 78 of file config.h.
+
+\hypertarget{config_8h_a392e96dba4ab2bce32bb263a88ff3372}{
+\index{config.h@{config.h}!KERNEL\_\-HEAP\_\-PAGES\_\-QTY@{KERNEL\_\-HEAP\_\-PAGES\_\-QTY}}
+\index{KERNEL\_\-HEAP\_\-PAGES\_\-QTY@{KERNEL\_\-HEAP\_\-PAGES\_\-QTY}!config.h@{config.h}}
+\subsubsection[{KERNEL\_\-HEAP\_\-PAGES\_\-QTY}]{\setlength{\rightskip}{0pt plus 5cm}\#define KERNEL\_\-HEAP\_\-PAGES\_\-QTY~10}}
+\label{config_8h_a392e96dba4ab2bce32bb263a88ff3372}
+
+
+The amount of pages that the kernel has in his heap. 
+
+
+
+Definition at line 140 of file config.h.
+
+\hypertarget{config_8h_a4a2e75965162f8faca7c6ab73c98d5bd}{
+\index{config.h@{config.h}!KEYBOARD\_\-REPETITION@{KEYBOARD\_\-REPETITION}}
+\index{KEYBOARD\_\-REPETITION@{KEYBOARD\_\-REPETITION}!config.h@{config.h}}
+\subsubsection[{KEYBOARD\_\-REPETITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYBOARD\_\-REPETITION~3}}
+\label{config_8h_a4a2e75965162f8faca7c6ab73c98d5bd}
+
+
+The amount of key press repetitions. 
+
+
+
+Definition at line 73 of file config.h.
+
+\hypertarget{config_8h_a3c2cad5489953de23c5733e6e696a93e}{
+\index{config.h@{config.h}!LINE\_\-FEED@{LINE\_\-FEED}}
+\index{LINE\_\-FEED@{LINE\_\-FEED}!config.h@{config.h}}
+\subsubsection[{LINE\_\-FEED}]{\setlength{\rightskip}{0pt plus 5cm}\#define LINE\_\-FEED~'$\backslash$f'}}
+\label{config_8h_a3c2cad5489953de23c5733e6e696a93e}
+
+
+The line feed control ascii value. 
+
+
+
+Definition at line 165 of file config.h.
+
+\hypertarget{config_8h_aca2d241a951204f1f8e2d905f162dcbe}{
+\index{config.h@{config.h}!MAX\_\-CHILDS@{MAX\_\-CHILDS}}
+\index{MAX\_\-CHILDS@{MAX\_\-CHILDS}!config.h@{config.h}}
+\subsubsection[{MAX\_\-CHILDS}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-CHILDS~MAX\_\-PROCESS -\/ 1}}
+\label{config_8h_aca2d241a951204f1f8e2d905f162dcbe}
+
+
+The maximum amount of childs that a process could have. 
+
+
+
+Definition at line 108 of file config.h.
+
+\hypertarget{config_8h_a2c5eecb22513a88c24ae5831a3265e54}{
+\index{config.h@{config.h}!MAX\_\-FILES@{MAX\_\-FILES}}
+\index{MAX\_\-FILES@{MAX\_\-FILES}!config.h@{config.h}}
+\subsubsection[{MAX\_\-FILES}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-FILES~2}}
+\label{config_8h_a2c5eecb22513a88c24ae5831a3265e54}
+
+
+The maximum amount of files. 
+
+
+
+Definition at line 128 of file config.h.
+
+\hypertarget{config_8h_a842ed03f27719bc87666bfd1f75415b8}{
+\index{config.h@{config.h}!MAX\_\-LINE@{MAX\_\-LINE}}
+\index{MAX\_\-LINE@{MAX\_\-LINE}!config.h@{config.h}}
+\subsubsection[{MAX\_\-LINE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-LINE~100}}
+\label{config_8h_a842ed03f27719bc87666bfd1f75415b8}
+
+
+The length of the shell buffer. 
+
+
+
+Definition at line 149 of file config.h.
+
+\hypertarget{config_8h_a88b491593ae5e149772272b10dbad018}{
+\index{config.h@{config.h}!MAX\_\-PRIORITIES@{MAX\_\-PRIORITIES}}
+\index{MAX\_\-PRIORITIES@{MAX\_\-PRIORITIES}!config.h@{config.h}}
+\subsubsection[{MAX\_\-PRIORITIES}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-PRIORITIES~4}}
+\label{config_8h_a88b491593ae5e149772272b10dbad018}
+
+
+The amount of priority that the system accept. 
+
+
+
+Definition at line 118 of file config.h.
+
+\hypertarget{config_8h_ad4c770f8a29f82d705f3d34839112bd1}{
+\index{config.h@{config.h}!MAX\_\-PROCESS@{MAX\_\-PROCESS}}
+\index{MAX\_\-PROCESS@{MAX\_\-PROCESS}!config.h@{config.h}}
+\subsubsection[{MAX\_\-PROCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-PROCESS~32}}
+\label{config_8h_ad4c770f8a29f82d705f3d34839112bd1}
+
+
+The maximum amount of process. 
+
+
+
+Definition at line 103 of file config.h.
+
+\hypertarget{config_8h_ad49d6c18040b4ee47b8db7a2aeccc960}{
+\index{config.h@{config.h}!MAX\_\-PROCESS\_\-NAME@{MAX\_\-PROCESS\_\-NAME}}
+\index{MAX\_\-PROCESS\_\-NAME@{MAX\_\-PROCESS\_\-NAME}!config.h@{config.h}}
+\subsubsection[{MAX\_\-PROCESS\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-PROCESS\_\-NAME~36}}
+\label{config_8h_ad49d6c18040b4ee47b8db7a2aeccc960}
+
+
+The maximum length of process name. 
+
+
+
+Definition at line 113 of file config.h.
+
+\hypertarget{config_8h_a44756bcafe20e3d49defdbab056ed7c2}{
+\index{config.h@{config.h}!MAX\_\-TTY@{MAX\_\-TTY}}
+\index{MAX\_\-TTY@{MAX\_\-TTY}!config.h@{config.h}}
+\subsubsection[{MAX\_\-TTY}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-TTY~8}}
+\label{config_8h_a44756bcafe20e3d49defdbab056ed7c2}
+
+
+The maximum amount of ttys. 
+
+
+
+Definition at line 123 of file config.h.
+
+\hypertarget{config_8h_aec93c5a909c2d118cf88f1b9001b85a9}{
+\index{config.h@{config.h}!MILISECONDS\_\-PER\_\-TICK@{MILISECONDS\_\-PER\_\-TICK}}
+\index{MILISECONDS\_\-PER\_\-TICK@{MILISECONDS\_\-PER\_\-TICK}!config.h@{config.h}}
+\subsubsection[{MILISECONDS\_\-PER\_\-TICK}]{\setlength{\rightskip}{0pt plus 5cm}\#define MILISECONDS\_\-PER\_\-TICK~55}}
+\label{config_8h_aec93c5a909c2d118cf88f1b9001b85a9}
+
+
+The amount of miliseconds per tick. 
+
+
+
+Definition at line 88 of file config.h.
+
+\hypertarget{config_8h_a7b99dc1e1c86b4897498c2d436ead1b5}{
+\index{config.h@{config.h}!NEW\_\-LINE@{NEW\_\-LINE}}
+\index{NEW\_\-LINE@{NEW\_\-LINE}!config.h@{config.h}}
+\subsubsection[{NEW\_\-LINE}]{\setlength{\rightskip}{0pt plus 5cm}\#define NEW\_\-LINE~'$\backslash$n'}}
+\label{config_8h_a7b99dc1e1c86b4897498c2d436ead1b5}
+
+
+The new line control ascii value. 
+
+
+
+Definition at line 170 of file config.h.
+
+\hypertarget{config_8h_a072812a1bebf92b7d4e6c4321573b9a1}{
+\index{config.h@{config.h}!PAGES\_\-PER\_\-FRAME@{PAGES\_\-PER\_\-FRAME}}
+\index{PAGES\_\-PER\_\-FRAME@{PAGES\_\-PER\_\-FRAME}!config.h@{config.h}}
+\subsubsection[{PAGES\_\-PER\_\-FRAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define PAGES\_\-PER\_\-FRAME~8}}
+\label{config_8h_a072812a1bebf92b7d4e6c4321573b9a1}
+
+
+The amount of pages per frame. 
+
+
+
+Definition at line 133 of file config.h.
+
+\hypertarget{config_8h_a6a0e6b80dd3d5ca395cf58151749f5e2}{
+\index{config.h@{config.h}!RETURN@{RETURN}}
+\index{RETURN@{RETURN}!config.h@{config.h}}
+\subsubsection[{RETURN}]{\setlength{\rightskip}{0pt plus 5cm}\#define RETURN~'$\backslash$r'}}
+\label{config_8h_a6a0e6b80dd3d5ca395cf58151749f5e2}
+
+
+The return control ascii value. 
+
+
+
+Definition at line 175 of file config.h.
+
+\hypertarget{config_8h_a25f7ae536603397e929ff4941e253200}{
+\index{config.h@{config.h}!SCREEN\_\-HEIGTH@{SCREEN\_\-HEIGTH}}
+\index{SCREEN\_\-HEIGTH@{SCREEN\_\-HEIGTH}!config.h@{config.h}}
+\subsubsection[{SCREEN\_\-HEIGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCREEN\_\-HEIGTH~25}}
+\label{config_8h_a25f7ae536603397e929ff4941e253200}
+
+
+The height of the screen. 
+
+
+
+Definition at line 28 of file config.h.
+
+\hypertarget{config_8h_a6cacb150853456c97c51481e67d0dabc}{
+\index{config.h@{config.h}!SCREEN\_\-SIZE@{SCREEN\_\-SIZE}}
+\index{SCREEN\_\-SIZE@{SCREEN\_\-SIZE}!config.h@{config.h}}
+\subsubsection[{SCREEN\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCREEN\_\-SIZE~SCREEN\_\-WIDTH $\ast$ SCREEN\_\-HEIGTH}}
+\label{config_8h_a6cacb150853456c97c51481e67d0dabc}
+
+
+Real screen size without color attribute. 
+
+
+
+Definition at line 33 of file config.h.
+
+\hypertarget{config_8h_a2cd109632a6dcccaa80b43561b1ab700}{
+\index{config.h@{config.h}!SCREEN\_\-WIDTH@{SCREEN\_\-WIDTH}}
+\index{SCREEN\_\-WIDTH@{SCREEN\_\-WIDTH}!config.h@{config.h}}
+\subsubsection[{SCREEN\_\-WIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCREEN\_\-WIDTH~80}}
+\label{config_8h_a2cd109632a6dcccaa80b43561b1ab700}
+
+
+The width of the screen. 
+
+
+
+Definition at line 23 of file config.h.
+
+\hypertarget{config_8h_ad16585962eaf6f3a114a237350a9ba97}{
+\index{config.h@{config.h}!STD\_\-TTY@{STD\_\-TTY}}
+\index{STD\_\-TTY@{STD\_\-TTY}!config.h@{config.h}}
+\subsubsection[{STD\_\-TTY}]{\setlength{\rightskip}{0pt plus 5cm}\#define STD\_\-TTY~0}}
+\label{config_8h_ad16585962eaf6f3a114a237350a9ba97}
+
+
+Definition at line 98 of file config.h.
+
+\hypertarget{config_8h_ad58a1fbfc85c7e4790fc55e654f50221}{
+\index{config.h@{config.h}!TAB@{TAB}}
+\index{TAB@{TAB}!config.h@{config.h}}
+\subsubsection[{TAB}]{\setlength{\rightskip}{0pt plus 5cm}\#define TAB~'$\backslash$t'}}
+\label{config_8h_ad58a1fbfc85c7e4790fc55e654f50221}
+
+
+The tabular control ascii value. 
+
+
+
+Definition at line 180 of file config.h.
+
+\hypertarget{config_8h_a3dd7b7d41c220904632461a2d95d61cf}{
+\index{config.h@{config.h}!TICKS\_\-PER\_\-SECOND@{TICKS\_\-PER\_\-SECOND}}
+\index{TICKS\_\-PER\_\-SECOND@{TICKS\_\-PER\_\-SECOND}!config.h@{config.h}}
+\subsubsection[{TICKS\_\-PER\_\-SECOND}]{\setlength{\rightskip}{0pt plus 5cm}\#define TICKS\_\-PER\_\-SECOND~18}}
+\label{config_8h_a3dd7b7d41c220904632461a2d95d61cf}
+
+
+The amount of ticks in one second. 
+
+
+
+Definition at line 93 of file config.h.
+
+\hypertarget{config_8h_a6a82449f6eb7ef9870e64a127e068485}{
+\index{config.h@{config.h}!VIDEO\_\-COLOR@{VIDEO\_\-COLOR}}
+\index{VIDEO\_\-COLOR@{VIDEO\_\-COLOR}!config.h@{config.h}}
+\subsubsection[{VIDEO\_\-COLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIDEO\_\-COLOR~setColor(BLACK, WHITE)}}
+\label{config_8h_a6a82449f6eb7ef9870e64a127e068485}
+
+
+Set color of letters and screen. 
+
+
+
+Definition at line 68 of file config.h.
+
+\hypertarget{config_8h_a6f784c53fe46a1d7cc4979a97ce2b484}{
+\index{config.h@{config.h}!VIDEO\_\-MEMORY\_\-SIZE@{VIDEO\_\-MEMORY\_\-SIZE}}
+\index{VIDEO\_\-MEMORY\_\-SIZE@{VIDEO\_\-MEMORY\_\-SIZE}!config.h@{config.h}}
+\subsubsection[{VIDEO\_\-MEMORY\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIDEO\_\-MEMORY\_\-SIZE~SCREEN\_\-SIZE $\ast$ 2}}
+\label{config_8h_a6f784c53fe46a1d7cc4979a97ce2b484}
+
+
+Real screen size with color attributes. 
+
+
+
+Definition at line 38 of file config.h.
+
+\hypertarget{config_8h_a625199558fb05110496080e008423fa6}{
+\index{config.h@{config.h}!VIDEO\_\-TAB\_\-STOP@{VIDEO\_\-TAB\_\-STOP}}
+\index{VIDEO\_\-TAB\_\-STOP@{VIDEO\_\-TAB\_\-STOP}!config.h@{config.h}}
+\subsubsection[{VIDEO\_\-TAB\_\-STOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIDEO\_\-TAB\_\-STOP~4}}
+\label{config_8h_a625199558fb05110496080e008423fa6}
+
+
+The spaces that tab prints. 
+
+
+
+Definition at line 53 of file config.h.
+
+\hypertarget{config_8h_a1a24019cfbf00c9425f1aefb18421453}{
+\index{config.h@{config.h}!VIDEO\_\-VTAB\_\-STOP@{VIDEO\_\-VTAB\_\-STOP}}
+\index{VIDEO\_\-VTAB\_\-STOP@{VIDEO\_\-VTAB\_\-STOP}!config.h@{config.h}}
+\subsubsection[{VIDEO\_\-VTAB\_\-STOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIDEO\_\-VTAB\_\-STOP~4}}
+\label{config_8h_a1a24019cfbf00c9425f1aefb18421453}
+
+
+The vertical tab spaces. 
+
+
+
+Definition at line 58 of file config.h.
+
+\hypertarget{config_8h_ae32038c6d240009ae8ca21911e89c089}{
+\index{config.h@{config.h}!VTAB@{VTAB}}
+\index{VTAB@{VTAB}!config.h@{config.h}}
+\subsubsection[{VTAB}]{\setlength{\rightskip}{0pt plus 5cm}\#define VTAB~'$\backslash$v'}}
+\label{config_8h_ae32038c6d240009ae8ca21911e89c089}
+
+
+The vertical tab control ascii value. 
+
+
+
+Definition at line 185 of file config.h.
+

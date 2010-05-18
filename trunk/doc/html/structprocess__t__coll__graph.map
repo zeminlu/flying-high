@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structheap_status.html" title="The heap status struct." alt="" coords="5,101,104,131"/>
+<area shape="rect" id="node4" href="$structmem_area.html" title="memArea" alt="" coords="11,5,99,35"/>
+<area shape="rect" id="node6" href="$structframe__t.html" title="The page frame struct." alt="" coords="132,101,207,131"/>
+<area shape="rect" id="node8" href="$struct_f_i_l_e.html" title="The FILE struct." alt="" coords="231,101,281,131"/>
+</map>

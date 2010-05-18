@@ -1,0 +1,146 @@
+\hypertarget{sys_malloc_8c}{
+\section{src/sysMalloc.c File Reference}
+\label{sys_malloc_8c}\index{src/sysMalloc.c@{src/sysMalloc.c}}
+}
+
+
+Generic malloc module.  
+
+
+{\ttfamily \#include \char`\"{}sysMalloc.h\char`\"{}}\par
+Include dependency graph for sysMalloc.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=114pt]{sys_malloc_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sys_malloc_8c_afc18fe654253c72492875d6b15506744}{sysFree} (void $\ast$ap, \hyperlink{structmem_area__t}{memArea\_\-t} $\ast$($\ast$getMemoryArea)())
+\begin{DoxyCompactList}\small\item\em Leaves avaiable the segment to be used in futures calls to sysMalloc. The memory segment is taken from the function pased by arguments. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{sys_malloc_8c_a9dd7a27b9a2dd7b9249af7fdef77fb4f}{sysRealloc} (void $\ast$ptr, \hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} size, \hyperlink{structmem_area__t}{memArea\_\-t} $\ast$($\ast$getMemoryArea)())
+\begin{DoxyCompactList}\small\item\em This function changes the original size of the logical memory to a new one if it's necesary.Returns null if theres not enough free space. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{sys_malloc_8c_ace92c2d3af5c7f1f66548cd8f2e4412d}{sysMalloc} (\hyperlink{types_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\_\-t} nbytes, \hyperlink{structmem_area__t}{memArea\_\-t} $\ast$($\ast$getMemoryArea)())
+\begin{DoxyCompactList}\small\item\em Function that gives a continuous segment of memory. This memory comes from the function getMemoryArea. It could return null if there is not enougth free space on that frame. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic malloc module. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{sys_malloc_8c_source}{sysMalloc.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{sys_malloc_8c_afc18fe654253c72492875d6b15506744}{
+\index{sysMalloc.c@{sysMalloc.c}!sysFree@{sysFree}}
+\index{sysFree@{sysFree}!sysMalloc.c@{sysMalloc.c}}
+\subsubsection[{sysFree}]{\setlength{\rightskip}{0pt plus 5cm}void sysFree (void $\ast$ {\em ap}, \/  {\bf memArea\_\-t} $\ast$($\ast$)() {\em getMemoryArea})}}
+\label{sys_malloc_8c_afc18fe654253c72492875d6b15506744}
+
+
+Leaves avaiable the segment to be used in futures calls to sysMalloc. The memory segment is taken from the function pased by arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ap}]The logical memory segment to be freed. \item[{\em getMemoryArea}]Function that returns the memory frame that sysMalloc wold be used in the future.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{sys_malloc_8h_adac4283ee6b45334ca1ea574599d7532}{sysRealloc()} \hyperlink{sys_malloc_8h_a7472d23b0529e946d8dcdf5a0de26c52}{sysMalloc()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 31 of file sysMalloc.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{sys_malloc_8c_afc18fe654253c72492875d6b15506744_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sys_malloc_8c_ace92c2d3af5c7f1f66548cd8f2e4412d}{
+\index{sysMalloc.c@{sysMalloc.c}!sysMalloc@{sysMalloc}}
+\index{sysMalloc@{sysMalloc}!sysMalloc.c@{sysMalloc.c}}
+\subsubsection[{sysMalloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ sysMalloc ({\bf size\_\-t} {\em nbytes}, \/  {\bf memArea\_\-t} $\ast$($\ast$)() {\em getMemoryArea})}}
+\label{sys_malloc_8c_ace92c2d3af5c7f1f66548cd8f2e4412d}
+
+
+Function that gives a continuous segment of memory. This memory comes from the function getMemoryArea. It could return null if there is not enougth free space on that frame. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em nbytes}]the size of continuous segment memory. \item[{\em getMemoryArea}]Functions that gives the frame to use be used by sysMalloc.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The continuous segment of memory.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{sys_malloc_8h_afc18fe654253c72492875d6b15506744}{sysFree()} \hyperlink{sys_malloc_8h_adac4283ee6b45334ca1ea574599d7532}{sysRealloc()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 48 of file sysMalloc.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{sys_malloc_8c_ace92c2d3af5c7f1f66548cd8f2e4412d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sys_malloc_8c_a9dd7a27b9a2dd7b9249af7fdef77fb4f}{
+\index{sysMalloc.c@{sysMalloc.c}!sysRealloc@{sysRealloc}}
+\index{sysRealloc@{sysRealloc}!sysMalloc.c@{sysMalloc.c}}
+\subsubsection[{sysRealloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ sysRealloc (void $\ast$ {\em ptr}, \/  {\bf size\_\-t} {\em size}, \/  {\bf memArea\_\-t} $\ast$($\ast$)() {\em getMemoryArea})}}
+\label{sys_malloc_8c_a9dd7a27b9a2dd7b9249af7fdef77fb4f}
+
+
+This function changes the original size of the logical memory to a new one if it's necesary.Returns null if theres not enough free space. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ptr}]Old logical memory segment, that could be moved to a new one. \item[{\em size}]The new size of the continuous memory segment. \item[{\em getMemoryArea}]Function that gives the frame to use be used by sysMalloc.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new continuous memory segment.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{sys_malloc_8h_afc18fe654253c72492875d6b15506744}{sysFree()} \hyperlink{sys_malloc_8h_a7472d23b0529e946d8dcdf5a0de26c52}{sysMalloc()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 35 of file sysMalloc.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=108pt]{sys_malloc_8c_a9dd7a27b9a2dd7b9249af7fdef77fb4f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=105pt]{sys_malloc_8c_a9dd7a27b9a2dd7b9249af7fdef77fb4f_icgraph}
+\end{center}
+\end{figure}
+
+

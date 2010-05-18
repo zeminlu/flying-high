@@ -1,0 +1,522 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structprocess__t" kind="struct" prot="public">
+    <compoundname>process_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t pid</definition>
+        <argsstring></argsstring>
+        <name>pid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="144" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1ac4f145ecb7886299279cb31af7a45474" compoundref="syscall_8c" startline="263" endline="266">_sys_get_pid</referencedby>
+        <referencedby refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" compoundref="syscall_8c" startline="281" endline="291">_sys_wait_pid</referencedby>
+        <referencedby refid="syscall_8c_1a13d5257c80be9824dd100a5d21a6b1de" compoundref="syscall_8c" startline="114" endline="128">_sysExit</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="ttys_8c_1aa0c166c59cfd83d43839b76afe6ac3ce" compoundref="ttys_8c" startline="539" endline="547">refreshTTY</referencedby>
+        <referencedby refid="sys_process_8c_1a2cd7c071907edcb9f8151c8519d4b27e" compoundref="sys_process_8c" startline="157" endline="163">waitTty</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t ppid</definition>
+        <argsstring></argsstring>
+        <name>ppid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="145" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a95a772ff88b957728418d0423a038508" compoundref="syscall_8c" startline="268" endline="270">_sys_get_ppid</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t gid</definition>
+        <argsstring></argsstring>
+        <name>gid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="146" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1ae899f7ec6cb314499b5eb7fe8458fcce" compoundref="syscall_8c" startline="293" endline="321">_sys_kill</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1af7f414d19241988592fad1bc470e8761" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+        <definition>tty_t tty</definition>
+        <argsstring></argsstring>
+        <name>tty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="147" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a1f10047dfd0af83a976fc552222e97b0" compoundref="syscall_8c" startline="244" endline="250">_sys_get_tty</referencedby>
+        <referencedby refid="syscall_8c_1acc308801f66fe10b81fc915fe5d6897c" compoundref="syscall_8c" startline="252" endline="261">_sys_set_tty</referencedby>
+        <referencedby refid="ttys_8c_1a6083aac7b79f2adcd3c4d6fbf479f283" compoundref="ttys_8c" startline="563" endline="581">clearTTYScreen</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="ttys_8c_1a5543e64588b3c8d57ef150404d96c5a7" compoundref="ttys_8c" startline="529" endline="536">refreshStdout</referencedby>
+        <referencedby refid="ttys_8c_1aa0c166c59cfd83d43839b76afe6ac3ce" compoundref="ttys_8c" startline="539" endline="547">refreshTTY</referencedby>
+        <referencedby refid="ttys_8c_1a77495bf57af4fe0554f55dc4be4a4600" compoundref="ttys_8c" startline="584" endline="599">setTTYCursorPosition</referencedby>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t childs[MAX_CHILDS]</definition>
+        <argsstring>[MAX_CHILDS]</argsstring>
+        <name>childs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="148" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="148" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1ae77317d364318c5912ead6b8114777bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int childsQty</definition>
+        <argsstring></argsstring>
+        <name>childsQty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="149" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a69756b34768c5818fb406d341c9b3e74" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char name[MAX_PROCESS_NAME+1]</definition>
+        <argsstring>[MAX_PROCESS_NAME+1]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="150" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="150" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a89f234133d3efe315836311cbf21c64b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="151" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="151" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1ac14fb5dbd2e3d3a7f897dc6b1546b6bb" compoundref="syscall_8c" startline="272" endline="279">_sys_wait</referencedby>
+        <referencedby refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" compoundref="syscall_8c" startline="281" endline="291">_sys_wait_pid</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="sys_process_8c_1a7cf69c15da459e564717f8116eb75c57" compoundref="sys_process_8c" startline="165" endline="174">signalTty</referencedby>
+        <referencedby refid="sys_process_8c_1a1fd8ccd9bf174a1b3ff78daa2b87872d" compoundref="sys_process_8c" startline="141" endline="146">sysSelfBlock</referencedby>
+        <referencedby refid="sys_process_8c_1a309acd4364c8a2cac76e01219a583aa0" compoundref="sys_process_8c" startline="148" endline="155">sysUnblock</referencedby>
+        <referencedby refid="sys_process_8c_1a2cd7c071907edcb9f8151c8519d4b27e" compoundref="sys_process_8c" startline="157" endline="163">waitTty</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a38a7314b52579446f9acf4f643084465" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_i_l_e" kindref="compound">FILE</ref> *</type>
+        <definition>FILE* files[MAX_FILES]</definition>
+        <argsstring>[MAX_FILES]</argsstring>
+        <name>files</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="152" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="152" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a3a8140629b64c39fb34eb595b2d1cce2" compoundref="syscall_8c" startline="51" endline="84">_sys_read</referencedby>
+        <referencedby refid="syscall_8c_1a66b9bb4354c792ee6c467874ceb30cb3" compoundref="syscall_8c" startline="25" endline="49">_sys_write</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rpgPrior</definition>
+        <argsstring></argsstring>
+        <name>rpgPrior</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="153" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="schedule_8c_1a2b69bd69a28b34a5da0d299dcfe8765e" compoundref="schedule_8c" startline="97" endline="109">increaseRPGCounter</referencedby>
+        <referencedby refid="schedule_8c_1a3ff76a95775e3eb0e8609b1c67cb5014" compoundref="schedule_8c" startline="57" endline="67">rpgSchedule</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rpgOld</definition>
+        <argsstring></argsstring>
+        <name>rpgOld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="154" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="154" bodyend="-1"/>
+        <referencedby refid="schedule_8c_1a2b69bd69a28b34a5da0d299dcfe8765e" compoundref="schedule_8c" startline="97" endline="109">increaseRPGCounter</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned tickCounter</definition>
+        <argsstring></argsstring>
+        <name>tickCounter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="155" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1aa5a5e27a93dadcc8686704a4415c9cec" compoundref="syscall_8c" startline="362" endline="366">_sys_time</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1ac7aa08806d7be189514d2daaf83e5b72" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cpuPercent</definition>
+        <argsstring></argsstring>
+        <name>cpuPercent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="156" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="157" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a7e35393170d01151feb237e45374a318" compoundref="syscall_8c" startline="348" endline="350">_sys_get_priority</referencedby>
+        <referencedby refid="syscall_8c_1abbdd4d0db4fa440f5aa99bc25fa8b0e9" compoundref="syscall_8c" startline="352" endline="360">_sys_set_priority</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="158" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a1a5bc45712097f96eb8f29f3c8556c5f" compoundref="syscall_8c" startline="344" endline="346">_sys_get_level</referencedby>
+        <referencedby refid="syscall_8c_1a283b696c91d432182271488d8d283004" compoundref="syscall_8c" startline="337" endline="342">_sys_set_level</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t waitingPid</definition>
+        <argsstring></argsstring>
+        <name>waitingPid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="159" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1ac14fb5dbd2e3d3a7f897dc6b1546b6bb" compoundref="syscall_8c" startline="272" endline="279">_sys_wait</referencedby>
+        <referencedby refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" compoundref="syscall_8c" startline="281" endline="291">_sys_wait_pid</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a51c991682921a9f2a4de5cf819c29f17" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+        <definition>pid_t sleepingPid</definition>
+        <argsstring></argsstring>
+        <name>sleepingPid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="160" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int waitedStatus</definition>
+        <argsstring></argsstring>
+        <name>waitedStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="161" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1ac14fb5dbd2e3d3a7f897dc6b1546b6bb" compoundref="syscall_8c" startline="272" endline="279">_sys_wait</referencedby>
+        <referencedby refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" compoundref="syscall_8c" startline="281" endline="291">_sys_wait_pid</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a27f83ceda788165817cb18a475c91062" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* ebp</definition>
+        <argsstring></argsstring>
+        <name>ebp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="162" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a9a4b64202371e10f27f3769b73537182" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* esp</definition>
+        <argsstring></argsstring>
+        <name>esp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="163" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1afc0da95553742561773d762fa905fdab" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* stack</definition>
+        <argsstring></argsstring>
+        <name>stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="164" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="164" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a04510901b878d0d366fb541f823df97d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* heap</definition>
+        <argsstring></argsstring>
+        <name>heap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="165" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="165" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a1e28d369e9c25e4ba00e24439a35f92e" compoundref="syscall_8c" startline="110" endline="112">_sys_memmap</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" prot="public" static="no" mutable="no">
+        <type><ref refid="structframe__t" kindref="compound">frame_t</ref> *</type>
+        <definition>frame_t* sFrame</definition>
+        <argsstring></argsstring>
+        <name>sFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="166" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="166" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1afa88d15da39ad6f87338267449baaa26" prot="public" static="no" mutable="no">
+        <type><ref refid="structframe__t" kindref="compound">frame_t</ref> *</type>
+        <definition>frame_t* pFrame</definition>
+        <argsstring></argsstring>
+        <name>pFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="167" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="167" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" prot="public" static="no" mutable="no">
+        <type><ref refid="structframe__t" kindref="compound">frame_t</ref> *</type>
+        <definition>frame_t* hFrame</definition>
+        <argsstring></argsstring>
+        <name>hFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="168" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="168" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atomicity</definition>
+        <argsstring></argsstring>
+        <name>atomicity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="169" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="169" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a68c2809dae69574f9b706325264a0675" compoundref="syscall_8c" startline="372" endline="379">_sys_set_atomicity</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ttyMode</definition>
+        <argsstring></argsstring>
+        <name>ttyMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="170" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="170" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a621de44efbbfa68c7d41b5387ee6051b" compoundref="syscall_8c" startline="330" endline="335">_sys_get_tty_mode</referencedby>
+        <referencedby refid="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" compoundref="syscall_8c" startline="323" endline="328">_sys_set_tty_mode</referencedby>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" prot="public" static="no" mutable="no">
+        <type><ref refid="structheap_status" kindref="compound">heapStatus</ref></type>
+        <definition>heapStatus dataUmalloc</definition>
+        <argsstring></argsstring>
+        <name>dataUmalloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="171" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="bin_8c_1ab8d39c86e0f803f0816e787e36c99bd1" compoundref="bin_8c" startline="317" endline="331">pageFault</referencedby>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The process struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="98">
+        <label>memArea</label>
+        <link refid="structmem_area"/>
+      </node>
+      <node id="96">
+        <label>process_t</label>
+        <link refid="structprocess__t"/>
+        <childnode refid="97" relation="usage">
+          <edgelabel>dataUmalloc</edgelabel>
+        </childnode>
+        <childnode refid="99" relation="usage">
+          <edgelabel>pFrame</edgelabel>
+          <edgelabel>hFrame</edgelabel>
+          <edgelabel>sFrame</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>files</edgelabel>
+        </childnode>
+      </node>
+      <node id="99">
+        <label>frame_t</label>
+        <link refid="structframe__t"/>
+      </node>
+      <node id="97">
+        <label>heapStatus</label>
+        <link refid="structheap_status"/>
+        <childnode refid="98" relation="usage">
+          <edgelabel>mallocMem</edgelabel>
+        </childnode>
+      </node>
+      <node id="100">
+        <label>FILE</label>
+        <link refid="struct_f_i_l_e"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="143" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="143" bodyend="173"/>
+    <listofallmembers>
+      <member refid="structprocess__t_1ae2d34916281a962b63074e700a0e4e68" prot="public" virt="non-virtual"><scope>process_t</scope><name>atomicity</name></member>
+      <member refid="structprocess__t_1ad209165e7280e20b1fa6393e81ccca83" prot="public" virt="non-virtual"><scope>process_t</scope><name>childs</name></member>
+      <member refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" prot="public" virt="non-virtual"><scope>process_t</scope><name>childsQty</name></member>
+      <member refid="structprocess__t_1ac7aa08806d7be189514d2daaf83e5b72" prot="public" virt="non-virtual"><scope>process_t</scope><name>cpuPercent</name></member>
+      <member refid="structprocess__t_1a19c110397be65fbeb224f20c1a21b76b" prot="public" virt="non-virtual"><scope>process_t</scope><name>dataUmalloc</name></member>
+      <member refid="structprocess__t_1a27f83ceda788165817cb18a475c91062" prot="public" virt="non-virtual"><scope>process_t</scope><name>ebp</name></member>
+      <member refid="structprocess__t_1a9a4b64202371e10f27f3769b73537182" prot="public" virt="non-virtual"><scope>process_t</scope><name>esp</name></member>
+      <member refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" prot="public" virt="non-virtual"><scope>process_t</scope><name>files</name></member>
+      <member refid="structprocess__t_1a788cbd0bbce27a8718e41d5b21806891" prot="public" virt="non-virtual"><scope>process_t</scope><name>gid</name></member>
+      <member refid="structprocess__t_1a04510901b878d0d366fb541f823df97d" prot="public" virt="non-virtual"><scope>process_t</scope><name>heap</name></member>
+      <member refid="structprocess__t_1a597f5bd642c4a5d073a48ddd37ed0458" prot="public" virt="non-virtual"><scope>process_t</scope><name>hFrame</name></member>
+      <member refid="structprocess__t_1acf4d33ee4cff36f69b924471174dcb11" prot="public" virt="non-virtual"><scope>process_t</scope><name>level</name></member>
+      <member refid="structprocess__t_1a69756b34768c5818fb406d341c9b3e74" prot="public" virt="non-virtual"><scope>process_t</scope><name>name</name></member>
+      <member refid="structprocess__t_1afa88d15da39ad6f87338267449baaa26" prot="public" virt="non-virtual"><scope>process_t</scope><name>pFrame</name></member>
+      <member refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" prot="public" virt="non-virtual"><scope>process_t</scope><name>pid</name></member>
+      <member refid="structprocess__t_1a812d4e1057eab93f0c388dc6c00b2cf8" prot="public" virt="non-virtual"><scope>process_t</scope><name>ppid</name></member>
+      <member refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" prot="public" virt="non-virtual"><scope>process_t</scope><name>priority</name></member>
+      <member refid="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" prot="public" virt="non-virtual"><scope>process_t</scope><name>rpgOld</name></member>
+      <member refid="structprocess__t_1a3069d63842ac168171e4c2a659ac06d5" prot="public" virt="non-virtual"><scope>process_t</scope><name>rpgPrior</name></member>
+      <member refid="structprocess__t_1a835da90e3143feb2586b1d88a186a32c" prot="public" virt="non-virtual"><scope>process_t</scope><name>sFrame</name></member>
+      <member refid="structprocess__t_1a51c991682921a9f2a4de5cf819c29f17" prot="public" virt="non-virtual"><scope>process_t</scope><name>sleepingPid</name></member>
+      <member refid="structprocess__t_1afc0da95553742561773d762fa905fdab" prot="public" virt="non-virtual"><scope>process_t</scope><name>stack</name></member>
+      <member refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" prot="public" virt="non-virtual"><scope>process_t</scope><name>state</name></member>
+      <member refid="structprocess__t_1ae205502dd5c0be67092374ce83267bdf" prot="public" virt="non-virtual"><scope>process_t</scope><name>tickCounter</name></member>
+      <member refid="structprocess__t_1af7f414d19241988592fad1bc470e8761" prot="public" virt="non-virtual"><scope>process_t</scope><name>tty</name></member>
+      <member refid="structprocess__t_1a5db9aa2a3238730b35b1b99a3932b030" prot="public" virt="non-virtual"><scope>process_t</scope><name>ttyMode</name></member>
+      <member refid="structprocess__t_1a302f417bbfe3271770ffef16d2b53959" prot="public" virt="non-virtual"><scope>process_t</scope><name>waitedStatus</name></member>
+      <member refid="structprocess__t_1a221846b944d7ce2a181f8a1486c44d85" prot="public" virt="non-virtual"><scope>process_t</scope><name>waitingPid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

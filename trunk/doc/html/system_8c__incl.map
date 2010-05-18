@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$system_8h.html" title="System reboot module." alt="" coords="1670,83,1755,112"/>
+<area shape="rect" id="node5" href="$shell_8h.html" title="The shell process module." alt="" coords="1680,160,1744,189"/>
+<area shape="rect" id="node11" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="1562,1243,1634,1272"/>
+<area shape="rect" id="node25" href="$io_8h.html" title="Declaration of functions and constants related with direct access to hardware." alt="" coords="347,933,392,963"/>
+<area shape="rect" id="node7" href="$stdio_8h.html" title="Definitions for all standard input and output and declaration of all functions to..." alt="" coords="1528,1088,1595,1117"/>
+<area shape="rect" id="node9" href="$string_8h.html" title="Declaration of all functions that deals with strings and buffers." alt="" coords="1599,1165,1671,1195"/>
+<area shape="rect" id="node17" href="$colors_8h.html" title="Video Color defines." alt="" coords="1515,1397,1587,1427"/>
+<area shape="rect" id="node19" href="$unistd_8h.html" title="Definitions for all UNIX Standard system calls functions." alt="" coords="1135,1165,1210,1195"/>
+<area shape="rect" id="node23" href="$video__driver_8h.html" title="Defines the basic function to manage the video screen, cursor &amp; mouse pointer..." alt="" coords="582,856,696,885"/>
+<area shape="rect" id="node33" href="$process_8h.html" title="All the process functions that invoke syscalls." alt="" coords="1768,469,1854,499"/>
+<area shape="rect" id="node48" href="$schedule_8h.html" title="The OS scheduler module." alt="" coords="499,779,592,808"/>
+<area shape="rect" id="node51" href="$u_malloc_8h.html" title="User malloc module." alt="" coords="475,856,558,885"/>
+<area shape="rect" id="node104" href="$bin_8h.html" title="All the OS processes." alt="" coords="815,315,868,344"/>
+<area shape="rect" id="node132" href="$bttlship_8h.html" title="The header file of the battleship game." alt="" coords="2031,237,2116,267"/>
+<area shape="rect" id="node13" href="$defs_8h.html" title="OS inner defines." alt="" coords="1612,1320,1674,1349"/>
+<area shape="rect" id="node15" href="$config_8h.html" title="OS configuration defines." alt="" coords="1514,1320,1588,1349"/>
+<area shape="rect" id="node35" href="$syscall_8h.html" title="Implementation of every system call." alt="" coords="1172,547,1250,576"/>
+<area shape="rect" id="node75" href="$sys_process_8h.html" title="OS system utilities." alt="" coords="1352,701,1462,731"/>
+<area shape="rect" id="node98" href="$int80_8h.html" title="int 80 generic calls." alt="" coords="1946,547,2012,576"/>
+<area shape="rect" id="node38" href="$mem_module_8h.html" title="The memory management / paging module." alt="" coords="1210,1011,1327,1040"/>
+<area shape="rect" id="node45" href="$kasm_8h.html" title="Kernel utilities." alt="" coords="854,701,923,731"/>
+<area shape="rect" id="node60" href="$kernel_depth_8h.html" title="Kernel syscalls depth utilities." alt="" coords="955,624,1072,653"/>
+<area shape="rect" id="node64" href="$ttys_8h.html" title="The tty header file." alt="" coords="1402,624,1463,653"/>
+<area shape="rect" id="node54" href="$sys_malloc_8h.html" title="Generic malloc module." alt="" coords="851,933,950,963"/>
+<area shape="rect" id="node66" href="$queue_8h.html" title="Keyboard queue module." alt="" coords="1688,701,1763,731"/>
+<area shape="rect" id="node68" href="$keyboard__buffer_8h.html" title="This is the internal keyboard buffer." alt="" coords="1723,779,1864,808"/>
+<area shape="rect" id="node84" href="$k_malloc_8h.html" title="The kernel malloc module." alt="" coords="1227,779,1310,808"/>
+<area shape="rect" id="node90" href="$rand_8h.html" title="Random number generation module." alt="" coords="1334,779,1395,808"/>
+<area shape="rect" id="node126" href="$semaphore_8h.html" title="The OS semaphore module." alt="" coords="2067,392,2176,421"/>
+<area shape="rect" id="node139" href="$sh_memory_8h.html" title="The shared memory IPC module." alt="" coords="2067,315,2168,344"/>
+</map>

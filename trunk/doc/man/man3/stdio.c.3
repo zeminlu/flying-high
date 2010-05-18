@@ -1,0 +1,207 @@
+.TH "src/stdio.c" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/stdio.c \- 
+.PP
+Definitions for all standard input and output and declaration of all functions to send/recive data to/from standar input/output.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stdio.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNIBBLES_PER_INT\fP   sizeof(int) * 2"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBfputi\fP (int i, \fBFILE\fP *stream)"
+.br
+.RI "\fIWrites the given integer to the given stream. \fP"
+.ti -1c
+.RI "int \fBfputx\fP (int num, \fBFILE\fP *stream)"
+.br
+.RI "\fIWrites the given integer as in hexadecimal format into the given stream. \fP"
+.ti -1c
+.RI "int \fBfputc\fP (int c, \fBFILE\fP *stream)"
+.br
+.RI "\fIWrites the given character to the given stream. \fP"
+.ti -1c
+.RI "int \fBfgetc\fP (\fBFILE\fP *stream)"
+.br
+.RI "\fIReads a character ascii from the given stream and returns it. \fP"
+.ti -1c
+.RI "int \fBfputs\fP (const char *s, \fBFILE\fP *stream)"
+.br
+.RI "\fIWrites the given string to the given stream. \fP"
+.ti -1c
+.RI "char * \fBfgets\fP (char *s, int size, \fBFILE\fP *stream)"
+.br
+.RI "\fIReads a string of the given size from the given stream. \fP"
+.ti -1c
+.RI "void \fBflush\fP (\fBFILE\fP *stream)"
+.br
+.RI "\fIFlushes the given stream. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definitions for all standard input and output and declaration of all functions to send/recive data to/from standar input/output. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBstdio.c\fP.
+.SH "Define Documentation"
+.PP 
+.SS "#define NIBBLES_PER_INT   sizeof(int) * 2"
+.PP
+Definition at line 14 of file stdio.c.
+.SH "Function Documentation"
+.PP 
+.SS "int fgetc (\fBFILE\fP * stream)"
+.PP
+Reads a character ascii from the given stream and returns it. \fBParameters:\fP
+.RS 4
+\fIstream\fP The stream where to read the character from.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The ascii from the read character.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBfputc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file stdio.c.
+.SS "char* fgets (char * s, int size, \fBFILE\fP * stream)"
+.PP
+Reads a string of the given size from the given stream. \fBParameters:\fP
+.RS 4
+\fIs\fP A pointer to the buffer where to write the string to. 
+.br
+\fIsize\fP The ammount of bytes to be read. 
+.br
+\fIstream\fP The stream where to read the string from.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBfputs()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file stdio.c.
+.SS "void flush (\fBFILE\fP * stream)"
+.PP
+Flushes the given stream. \fBParameters:\fP
+.RS 4
+\fIstream\fP The stream to be flushed. 
+.RE
+.PP
+
+.PP
+Definition at line 86 of file stdio.c.
+.SS "int fputc (int c, \fBFILE\fP * stream)"
+.PP
+Writes the given character to the given stream. \fBParameters:\fP
+.RS 4
+\fIc\fP The character ascii to be written. 
+.br
+\fIstream\fP The stream where to write the character to.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBfgetc()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file stdio.c.
+.SS "int fputi (int i, \fBFILE\fP * stream)"
+.PP
+Writes the given integer to the given stream. \fBParameters:\fP
+.RS 4
+\fIi\fP The integer to write. 
+.br
+\fIstream\fP The stream where to write to.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error. 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file stdio.c.
+.SS "int fputs (const char * s, \fBFILE\fP * stream)"
+.PP
+Writes the given string to the given stream. \fBParameters:\fP
+.RS 4
+\fIs\fP A null terminate string to be written. 
+.br
+\fIstream\fP The stream where to write the string.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBfgets()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file stdio.c.
+.SS "int fputx (int num, \fBFILE\fP * stream)"
+.PP
+Writes the given integer as in hexadecimal format into the given stream. \fBParameters:\fP
+.RS 4
+\fInum\fP The number to bw written. 
+.br
+\fIstream\fP The stream where to write the number to.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file stdio.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

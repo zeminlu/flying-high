@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$mem_module_8h.html#ad2ea87727da761c9bcb36881d36bef21" title="Sets the presence bit of the kernel heap pages according to the given parameter." alt="" coords="224,5,411,35"/>
+<area shape="rect" id="node5" href="$mem_module_8h.html#a33bcef362cae377767738cdcc12fb340" title="Sets the presence bit of the pages from the given frame to the given state." alt="" coords="459,5,611,35"/>
+</map>

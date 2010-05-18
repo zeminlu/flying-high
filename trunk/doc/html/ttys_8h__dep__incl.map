@@ -1,0 +1,34 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$bin_8h.html" title="All the OS processes." alt="" coords="1045,83,1120,112"/>
+<area shape="rect" id="node6" href="$kernel_8h.html" title="Kernel header file." alt="" coords="1460,547,1559,576"/>
+<area shape="rect" id="node14" href="$sys_process_8h.html" title="OS system utilities." alt="" coords="505,237,636,267"/>
+<area shape="rect" id="node23" href="$bttlship_8h.html" title="The header file of the battleship game." alt="" coords="972,701,1079,731"/>
+<area shape="rect" id="node48" href="$syscall_8h.html" title="Implementation of every system call." alt="" coords="181,547,283,576"/>
+<area shape="rect" id="node94" href="$exceptions_8h.html" title="Functions related with exception handling." alt="" coords="1709,83,1840,112"/>
+<area shape="rect" id="node98" href="$keyboard__driver_8h.html" title="The keyboard driver module." alt="" coords="2048,83,2211,112"/>
+<area shape="rect" id="node104" href="$ttys_8c.html" title="The tty module implementation." alt="" coords="1939,83,2024,112"/>
+<area shape="rect" id="node11" href="$shell_8h.html" title="The shell process module." alt="" coords="1040,160,1125,189"/>
+<area shape="rect" id="node91" href="$bin_8c.html" title="All the OS processes." alt="" coords="1405,160,1483,189"/>
+<area shape="rect" id="node9" href="$kernel_8c.html" title="Kernel module." alt="" coords="1460,624,1559,653"/>
+<area shape="rect" id="node83" href="$system_8h.html" title="System reboot module." alt="" coords="1273,237,1380,267"/>
+<area shape="rect" id="node89" href="$shell_8c.html" title="The shell process module." alt="" coords="936,237,1024,267"/>
+<area shape="rect" id="node18" href="$p_queue_p_8h.html" title="The priority queue module." alt="" coords="371,315,488,344"/>
+<area shape="rect" id="node20" href="$process_8h.html" title="All the process functions that invoke syscalls." alt="" coords="987,315,1096,344"/>
+<area shape="rect" id="node78" href="$p_queue_p_8c.html" title="The priority queue module." alt="" coords="512,315,629,344"/>
+<area shape="rect" id="node81" href="$sys_process_8c.html" title="OS system utilities." alt="" coords="677,315,811,344"/>
+<area shape="rect" id="node28" href="$k_malloc_8h.html" title="The kernel malloc module." alt="" coords="1557,392,1664,421"/>
+<area shape="rect" id="node34" href="$semaphore_8h.html" title="The OS semaphore module." alt="" coords="1184,392,1315,421"/>
+<area shape="rect" id="node63" href="$u_malloc_8h.html" title="User malloc module." alt="" coords="687,392,793,421"/>
+<area shape="rect" id="node75" href="$process_8c.html" title="All the process functions that invoke syscalls." alt="" coords="993,392,1103,421"/>
+<area shape="rect" id="node26" href="$bttlship_8c.html" title="Battleship module." alt="" coords="971,779,1080,808"/>
+<area shape="rect" id="node39" href="$sh_memory_8h.html" title="The shared memory IPC module." alt="" coords="1088,469,1213,499"/>
+<area shape="rect" id="node45" href="$semaphore_8c.html" title="The OS semaphore module." alt="" coords="1288,469,1421,499"/>
+<area shape="rect" id="node43" href="$sh_memory_8c.html" title="The shared memory IPC module." alt="" coords="1139,547,1264,576"/>
+<area shape="rect" id="node52" href="$rand_8h.html" title="Random number generation module." alt="" coords="43,624,128,653"/>
+<area shape="rect" id="node61" href="$syscall_8c.html" title="Implementation off all system calls." alt="" coords="181,624,283,653"/>
+<area shape="rect" id="node57" href="$rand_8c.html" title="Random number generation module." alt="" coords="43,701,128,731"/>
+<area shape="rect" id="node66" href="$schedule_8h.html" title="The OS scheduler module." alt="" coords="591,469,708,499"/>
+<area shape="rect" id="node72" href="$schedule_8c.html" title="The OS scheduler module." alt="" coords="591,547,708,576"/>
+<area shape="rect" id="node87" href="$system_8c.html" title="System reboot module." alt="" coords="1272,315,1381,344"/>
+<area shape="rect" id="node100" href="$keyboard__driver_8c.html" title="src/keyboard_driver.c" alt="" coords="2048,160,2211,189"/>
+</map>

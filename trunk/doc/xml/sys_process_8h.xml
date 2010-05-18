@@ -1,0 +1,1011 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="sys_process_8h" kind="file">
+    <compoundname>sysProcess.h</compoundname>
+    <includes refid="ttys_8h" local="yes">ttys.h</includes>
+    <includes refid="keyboard__buffer_8h" local="yes">keyboard_buffer.h</includes>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="mem_module_8h" local="yes">memModule.h</includes>
+    <includes refid="schedule_8h" local="yes">schedule.h</includes>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <includes refid="stdio_8h" local="yes">stdio.h</includes>
+    <includes refid="k_malloc_8h" local="yes">kMalloc.h</includes>
+    <includes refid="rand_8h" local="yes">rand.h</includes>
+    <includes refid="shell_8h" local="yes">shell.h</includes>
+    <includedby refid="bin_8h" local="yes">inc/bin.h</includedby>
+    <includedby refid="kernel_8h" local="yes">inc/kernel.h</includedby>
+    <includedby refid="p_queue_p_8h" local="yes">inc/pQueueP.h</includedby>
+    <includedby refid="process_8h" local="yes">inc/process.h</includedby>
+    <includedby refid="ttys_8h" local="yes">inc/ttys.h</includedby>
+    <includedby refid="p_queue_p_8c" local="yes">src/pQueueP.c</includedby>
+    <includedby refid="sys_process_8c" local="yes">src/sysProcess.c</includedby>
+    <incdepgraph>
+      <node id="3702">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3686">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="3708">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3706" relation="include">
+        </childnode>
+      </node>
+      <node id="3695">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="3690">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3700" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+      </node>
+      <node id="3697">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3687" relation="include">
+        </childnode>
+      </node>
+      <node id="3693">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3692">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3683">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+      </node>
+      <node id="3701">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+      </node>
+      <node id="3703">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3687" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3704" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+      </node>
+      <node id="3696">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3704">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3703" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3687">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3679">
+        <label>inc/sysProcess.h</label>
+        <link refid="sysProcess.h"/>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3702" relation="include">
+        </childnode>
+        <childnode refid="3703" relation="include">
+        </childnode>
+      </node>
+      <node id="3688">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="3700">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+      </node>
+      <node id="3699">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+      </node>
+      <node id="3685">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3686" relation="include">
+        </childnode>
+      </node>
+      <node id="3680">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3681" relation="include">
+        </childnode>
+        <childnode refid="3687" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3679" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+      </node>
+      <node id="3707">
+        <label>bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3687" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3708" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3702" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+      </node>
+      <node id="3689">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3682">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3694">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3695" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3679" relation="include">
+        </childnode>
+      </node>
+      <node id="3681">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3706">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+      </node>
+      <node id="3691">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3698">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+      </node>
+      <node id="3684">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="3705">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3679" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3687" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3703" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3702" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3728">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3729" relation="include">
+        </childnode>
+      </node>
+      <node id="3711">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3712" relation="include">
+        </childnode>
+      </node>
+      <node id="3716">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3724">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="3724" relation="include">
+        </childnode>
+      </node>
+      <node id="3721">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="3733">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3734" relation="include">
+        </childnode>
+      </node>
+      <node id="3727">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3719" relation="include">
+        </childnode>
+        <childnode refid="3728" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3723" relation="include">
+        </childnode>
+        <childnode refid="3730" relation="include">
+        </childnode>
+      </node>
+      <node id="3737">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3738" relation="include">
+        </childnode>
+      </node>
+      <node id="3738">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="3717">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="3715">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="3722">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3723" relation="include">
+        </childnode>
+      </node>
+      <node id="3713">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3714" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+      </node>
+      <node id="3740">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="3740" relation="include">
+        </childnode>
+      </node>
+      <node id="3714">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3715" relation="include">
+        </childnode>
+      </node>
+      <node id="3709">
+        <label>inc/sysProcess.h</label>
+        <link refid="sysProcess.h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3719" relation="include">
+        </childnode>
+        <childnode refid="3723" relation="include">
+        </childnode>
+        <childnode refid="3740" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+      </node>
+      <node id="3734">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="3725">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="3726" relation="include">
+        </childnode>
+      </node>
+      <node id="3723">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3724" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3725" relation="include">
+        </childnode>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3720">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3721" relation="include">
+        </childnode>
+      </node>
+      <node id="3719">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3722" relation="include">
+        </childnode>
+        <childnode refid="3732" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3736" relation="include">
+        </childnode>
+        <childnode refid="3739" relation="include">
+        </childnode>
+      </node>
+      <node id="3741">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="3739">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="3735">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="3732">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3733" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3730">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="3712">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="3729">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="3731">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="3726">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="3736">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3737" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+      </node>
+      <node id="3710">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3717" relation="include">
+        </childnode>
+      </node>
+      <node id="3718">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void forceMultitasker</definition>
+        <argsstring>()</argsstring>
+        <name>forceMultitasker</name>
+        <briefdescription>
+<para>Forces the call to the multitasker. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="30"/>
+        <referencedby refid="syscall_8c_1ae899f7ec6cb314499b5eb7fe8458fcce" compoundref="syscall_8c" startline="293" endline="321">_sys_kill</referencedby>
+        <referencedby refid="syscall_8c_1ac14fb5dbd2e3d3a7f897dc6b1546b6bb" compoundref="syscall_8c" startline="272" endline="279">_sys_wait</referencedby>
+        <referencedby refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" compoundref="syscall_8c" startline="281" endline="291">_sys_wait_pid</referencedby>
+        <referencedby refid="syscall_8c_1a13d5257c80be9824dd100a5d21a6b1de" compoundref="syscall_8c" startline="114" endline="128">_sysExit</referencedby>
+        <referencedby refid="sys_process_8c_1a1fd8ccd9bf174a1b3ff78daa2b87872d" compoundref="sys_process_8c" startline="141" endline="146">sysSelfBlock</referencedby>
+        <referencedby refid="sys_process_8c_1a2cd7c071907edcb9f8151c8519d4b27e" compoundref="sys_process_8c" startline="157" endline="163">waitTty</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1a4645c68ff4b67ae7de543c23c9117047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isMTActivated</definition>
+        <argsstring>()</argsstring>
+        <name>isMTActivated</name>
+        <briefdescription>
+<para>Checks wether the multitasker is activated or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if it&apos;s activated, False if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="40" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1add8034131384a469e96c6efeb83d6043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initMultitasker</definition>
+        <argsstring>(pfunc_t init)</argsstring>
+        <name>initMultitasker</name>
+        <param>
+          <type><ref refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" kindref="member">pfunc_t</ref></type>
+          <declname>init</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the multitasker and creates the init process. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the init function.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error.</para></simplesect>
+<simplesect kind="see"><para><ref refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" kindref="member">multitasker()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="54" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="55" bodyend="91"/>
+        <references refid="defs_8h_1a8026e8d87908b0239264d643c90183f5" compoundref="defs_8h" startline="53">_READ</references>
+        <references refid="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" compoundref="defs_8h" startline="58">_WRITE</references>
+        <references refid="defs_8h_1a850b2f07a67b73890889e63fb8a49fda" compoundref="defs_8h" startline="133">BACKGROUND</references>
+        <references refid="struct_f_i_l_e_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="types_8h" startline="124">FILE::buffer</references>
+        <references refid="struct_f_i_l_e_1a7be887a2ca0a258cf6b368d32fd87487" compoundref="types_8h" startline="127">FILE::bufferSize</references>
+        <references refid="structprocess__t_1ae77317d364318c5912ead6b8114777bc" compoundref="types_8h" startline="149">process_t::childsQty</references>
+        <references refid="process_8h_1a400d6ff57b24d5bec48a1a28ad944081" compoundref="process_8c" startline="22" endline="24">createProcess</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a11fd9ca455f92c69c084484d5cd803c2" compoundref="types_8h" startline="226">DEAD</references>
+        <references refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="defs_8h" startline="37">FALSE</references>
+        <references refid="struct_f_i_l_e_1a6f8059414f0228f0256115e024eeed4b" compoundref="types_8h" startline="123">FILE::fd</references>
+        <references refid="sys_process_8c_1a04a16ab64e2131f772cd461bfa97c672" compoundref="sys_process_8c" startline="28">fileBuffers</references>
+        <references refid="structprocess__t_1a38a7314b52579446f9acf4f643084465" compoundref="types_8h" startline="152">process_t::files</references>
+        <references refid="struct_f_i_l_e_1adf916204820072417ed73a32de1cefcf" compoundref="types_8h" startline="126">FILE::flag</references>
+        <references refid="config_8h_1a2c5eecb22513a88c24ae5831a3265e54" compoundref="config_8h" startline="128">MAX_FILES</references>
+        <references refid="config_8h_1a44756bcafe20e3d49defdbab056ed7c2" compoundref="config_8h" startline="123">MAX_TTY</references>
+        <references refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="types_8h" startline="144">process_t::pid</references>
+        <references refid="structprocess__t_1acec9ce2df15222151ad66fcb1d74eb9f" compoundref="types_8h" startline="157">process_t::priority</references>
+        <references refid="struct_f_i_l_e_1a935adc2e417a61d7eb6f04efb18ba031" compoundref="types_8h" startline="125">FILE::ptr</references>
+        <references refid="structprocess__t_1aa92db4fb120da36d4d5f60e2a8e01ce0" compoundref="types_8h" startline="154">process_t::rpgOld</references>
+        <references refid="config_8h_1a6cacb150853456c97c51481e67d0dabc" compoundref="config_8h" startline="33">SCREEN_SIZE</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <references refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="defs_8h" startline="32">TRUE</references>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1a1fd8ccd9bf174a1b3ff78daa2b87872d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sysSelfBlock</definition>
+        <argsstring>()</argsstring>
+        <name>sysSelfBlock</name>
+        <briefdescription>
+<para>Blocks the calling process. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="sys_process_8h_1a309acd4364c8a2cac76e01219a583aa0" kindref="member">sysUnblock()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="64" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="141" bodyend="146"/>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" compoundref="types_8h" startline="221">BLOCKED</references>
+        <references refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb">forceMultitasker</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <referencedby refid="semaphore_8c_1abada34c4103e3b6963caa4286ad82b4c" compoundref="semaphore_8c" startline="133" endline="144">_sys_sem_wait</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1a309acd4364c8a2cac76e01219a583aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sysUnblock</definition>
+        <argsstring>(pid_t pid)</argsstring>
+        <name>sysUnblock</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+<para>Unblocks the given pid process. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pid of the process to be unlocked.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on error.</para></simplesect>
+<simplesect kind="see"><para><ref refid="sys_process_8h_1a1fd8ccd9bf174a1b3ff78daa2b87872d" kindref="member">sysSelfBlock()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="78" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="148" bodyend="155"/>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" compoundref="types_8h" startline="221">BLOCKED</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <referencedby refid="semaphore_8c_1ad10680f7901c93d3b8e6f2a690f11e36" compoundref="semaphore_8c" startline="146" endline="158">_sys_sem_signal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1a2cd7c071907edcb9f8151c8519d4b27e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void waitTty</definition>
+        <argsstring>(tty_t tty)</argsstring>
+        <name>waitTty</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <briefdescription>
+<para>Blocks the calling process until it&apos;s tty is signaled. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty of the process to be blocked.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="sys_process_8h_1a7cf69c15da459e564717f8116eb75c57" kindref="member">signalTty()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="90" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="157" bodyend="163"/>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a376c1b6a3f75d283a2efacf737438d61" compoundref="types_8h" startline="221">BLOCKED</references>
+        <references refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb">forceMultitasker</references>
+        <references refid="structprocess__t_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="types_8h" startline="144">process_t::pid</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="bttlship_8c_1a4003a14058da5be60c7e7600713cd5c0" compoundref="bttlship_8c" startline="241" endline="281">getInput</referencedby>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1a7cf69c15da459e564717f8116eb75c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void signalTty</definition>
+        <argsstring>(tty_t tty)</argsstring>
+        <name>signalTty</name>
+        <param>
+          <type><ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member">tty_t</ref></type>
+          <declname>tty</declname>
+        </param>
+        <briefdescription>
+<para>Signals the given tty so that any blocked process from it can be unblocked. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tty to be signaled.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="sys_process_8h_1a2cd7c071907edcb9f8151c8519d4b27e" kindref="member">waitTty()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="102" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="165" bodyend="174"/>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a6564f2f3e15be06b670547bbcaaf0798" compoundref="types_8h" startline="220">READY</references>
+        <references refid="structprocess__t_1a89f234133d3efe315836311cbf21c64b" compoundref="types_8h" startline="151">process_t::state</references>
+        <referencedby refid="exceptions_8c_1a7bb93194b9711c5e41743a0b15e1f96d" compoundref="exceptions_8c" startline="136" endline="149">handleException</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void terminate</definition>
+        <argsstring>(pid_t pid, int status)</argsstring>
+        <name>terminate</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Terminates the given process with the given status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pid number from the process to be terminated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The status upon which the process is being terminated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="113" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="203" bodyend="221"/>
+        <references refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" compoundref="defs_8h" startline="128">FOREGROUND</references>
+        <references refid="config_8h_1aca2d241a951204f1f8e2d905f162dcbe" compoundref="config_8h" startline="108">MAX_CHILDS</references>
+        <references refid="ttys_8h_1aca07223864f88814919b02e6729569a5" compoundref="ttys_8c" startline="554" endline="556">sysSetTTYFocusedProcess</references>
+        <references refid="types_8h_1a94b1da2e055fff4d143aa6aa891f79a9a240c1965a48eaf409ba68c4cc9462ac5" compoundref="types_8h" startline="225">TERMINATED</references>
+        <references refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" compoundref="defs_8h" startline="123">UNATOMIC</references>
+        <referencedby refid="syscall_8c_1ae899f7ec6cb314499b5eb7fe8458fcce" compoundref="syscall_8c" startline="293" endline="321">_sys_kill</referencedby>
+        <referencedby refid="syscall_8c_1a13d5257c80be9824dd100a5d21a6b1de" compoundref="syscall_8c" startline="114" endline="128">_sysExit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1aa1cd2078219adc47ca22033bf86a76be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprocess__t" kindref="compound">process_t</ref> *</type>
+        <definition>process_t * getProcessTable</definition>
+        <argsstring>(void)</argsstring>
+        <name>getProcessTable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Retrieves the OS process table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to the OS process table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="123" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="250" bodyend="252"/>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1ae09fcffc18c78e7ca54e5b4df10c235a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * getProcessName</definition>
+        <argsstring>(pid_t pid)</argsstring>
+        <name>getProcessName</name>
+        <param>
+          <type><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member">pid_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the given pid process name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pid from the process whose name to be retrieven.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The process&apos; name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="135" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="254" bodyend="258"/>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1a18afd4bf4046ef60e7827333850e1bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void refreshProcessesCPUs</definition>
+        <argsstring>()</argsstring>
+        <name>refreshProcessesCPUs</name>
+        <briefdescription>
+<para>Refreshes the process comsumption of every process. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="sys_process_8h_1accfbf2e870cb5b019499cd068db1eb07" kindref="member">clearProcessesTicks()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="145" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="223" bodyend="238"/>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sys_process_8h_1accfbf2e870cb5b019499cd068db1eb07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearProcessesTicks</definition>
+        <argsstring>()</argsstring>
+        <name>clearProcessesTicks</name>
+        <briefdescription>
+<para>Clears the current tickcount of every process. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>refreshProcesses() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h" line="155" bodyfile="/Users/Luciano/Desktop/flying-high/src/sysProcess.c" bodystart="240" bodyend="248"/>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>OS system utilities. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_SYSPROCESS_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_SYSPROCESS_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ttys_8h" kindref="compound" tooltip="The tty header file.">ttys.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="keyboard__buffer_8h" kindref="compound" tooltip="This is the internal keyboard buffer.">keyboard_buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mem_module_8h" kindref="compound" tooltip="The memory management / paging module.">memModule.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="schedule_8h" kindref="compound" tooltip="The OS scheduler module.">schedule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound" tooltip="Implementation of every system call.">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdio_8h" kindref="compound" tooltip="Definitions for all standard input and output and declaration of all functions to...">stdio.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="k_malloc_8h" kindref="compound" tooltip="The kernel malloc module.">kMalloc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rand_8h" kindref="compound" tooltip="Random number generation module.">rand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shell_8h" kindref="compound" tooltip="The shell process module.">shell.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a4e14e480ef0c76ed52ff2c261e9d13cb" kindref="member" tooltip="Forces the call to the multitasker.">forceMultitasker</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a4645c68ff4b67ae7de543c23c9117047" kindref="member" tooltip="Checks wether the multitasker is activated or not.">isMTActivated</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1add8034131384a469e96c6efeb83d6043" kindref="member" tooltip="Initializes the multitasker and creates the init process.">initMultitasker</ref>(<ref refid="types_8h_1ac33fbdfb125ea93ff0028a9cccf0fe5d" kindref="member" tooltip="pfunc_t typedef.">pfunc_t</ref><sp/><ref refid="bin_8h_1a5bfde7b5020b14bdcb1c9269ab308dc5" kindref="member" tooltip="This functions initialize the welcome process, all the shells and goodbye process...">init</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a1fd8ccd9bf174a1b3ff78daa2b87872d" kindref="member" tooltip="Blocks the calling process.">sysSelfBlock</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a309acd4364c8a2cac76e01219a583aa0" kindref="member" tooltip="Unblocks the given pid process.">sysUnblock</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a2cd7c071907edcb9f8151c8519d4b27e" kindref="member" tooltip="Blocks the calling process until it&amp;#39;s tty is signaled.">waitTty</ref>(<ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a7cf69c15da459e564717f8116eb75c57" kindref="member" tooltip="Signals the given tty so that any blocked process from it can be unblocked.">signalTty</ref>(<ref refid="types_8h_1a10bbb7176245baeab9f398547c410779" kindref="member" tooltip="tty_t typedef.">tty_t</ref><sp/>tty);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1ab5b0962abeaa4a1657d1fc3d5931a612" kindref="member" tooltip="Terminates the given process with the given status.">terminate</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="structprocess__t" kindref="compound" tooltip="The process struct.">process_t</ref><sp/>*<ref refid="sys_process_8h_1aa1cd2078219adc47ca22033bf86a76be" kindref="member" tooltip="Retrieves the OS process table.">getProcessTable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sys_process_8h_1ae09fcffc18c78e7ca54e5b4df10c235a" kindref="member" tooltip="Retrieves the given pid process name.">getProcessName</ref>(<ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/>pid);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1a18afd4bf4046ef60e7827333850e1bc6" kindref="member" tooltip="Refreshes the process comsumption of every process.">refreshProcessesCPUs</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sys_process_8h_1accfbf2e870cb5b019499cd068db1eb07" kindref="member" tooltip="Clears the current tickcount of every process.">clearProcessesTicks</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/sysProcess.h"/>
+  </compounddef>
+</doxygen>

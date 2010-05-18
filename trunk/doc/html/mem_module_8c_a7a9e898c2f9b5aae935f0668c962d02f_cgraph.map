@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$mem_module_8h.html#a84fa8c324392664110d9da557624b7f2" title="Gets a free frame." alt="" coords="191,5,279,35"/>
+<area shape="rect" id="node5" href="$mem_module_8h.html#a6a84b1dac3ab7d785283bf1b99da1e26" title="Initializes a kernel page table." alt="" coords="175,59,295,88"/>
+<area shape="rect" id="node9" href="$mem_module_8h.html#ad19841b9dac7eb81c72b63088b80015c" title="Initializes the given page with according permissions." alt="" coords="576,111,653,140"/>
+<area shape="rect" id="node11" href="$mem_module_8h.html#ae7015dddbf16d196ea6e8cc66f2a8d2f" title="Initializes a malloc page table." alt="" coords="175,163,295,192"/>
+<area shape="rect" id="node17" href="$mem_module_8h.html#acc364a2b6a3687b69aa60fd922b178ef" title="Loads the CR3 into the processor register." alt="" coords="196,216,273,245"/>
+<area shape="rect" id="node19" href="$string_8h.html#a1dfdc55c5334154353963674598faf1b" title="The memset() function sets n bytes from the memory area dest with the value of c..." alt="" coords="195,269,275,299"/>
+<area shape="rect" id="node21" href="$mem_module_8h.html#ad2ea87727da761c9bcb36881d36bef21" title="Sets the presence bit of the kernel heap pages according to the given parameter." alt="" coords="141,323,328,352"/>
+<area shape="rect" id="node7" href="$mem_module_8h.html#a1056bbd0c7d38416134d0645668eaf7d" title="Allocs a Page for the kernel." alt="" coords="405,59,499,88"/>
+<area shape="rect" id="node13" href="$mem_module_8h.html#a868034315919cceedc278c3f24d06e04" title="Allocs a Page for the malloc section." alt="" coords="403,163,501,192"/>
+<area shape="rect" id="node23" href="$mem_module_8h.html#a33bcef362cae377767738cdcc12fb340" title="Sets the presence bit of the pages from the given frame to the given state." alt="" coords="376,323,528,352"/>
+</map>

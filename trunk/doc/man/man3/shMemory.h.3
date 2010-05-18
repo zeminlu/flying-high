@@ -1,0 +1,168 @@
+.TH "inc/shMemory.h" 3 "18 May 2010" "Version 1.0" "flying-high" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/shMemory.h \- 
+.PP
+The shared memory IPC module.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'semaphore.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIPC_RMID\fP   1"
+.br
+.ti -1c
+.RI "#define \fBIPC_SET\fP   2"
+.br
+.ti -1c
+.RI "#define \fBIPC_STAT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBIPC_CREAT\fP   4"
+.br
+.ti -1c
+.RI "#define \fBIPC_PRIVATE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBMAX_SHMEMS\fP   8"
+.br
+.ti -1c
+.RI "#define \fBMAX_SHMAPPN\fP   MAX_PROCESS"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBshmget\fP (\fBkey_t\fP key, int size)"
+.br
+.RI "\fIGets a new shared memory with the given key and size. \fP"
+.ti -1c
+.RI "char * \fBshmat\fP (int shmid, \fBkey_t\fP *semid)"
+.br
+.RI "\fIAttaches the current process to the shmid shared memory. \fP"
+.ti -1c
+.RI "int \fBshmdt\fP (int shmid)"
+.br
+.RI "\fIDetaches the current process form the shmid shared memory segment. \fP"
+.ti -1c
+.RI "void \fBinitializeShMems\fP ()"
+.br
+.RI "\fIInitializes all the shared memories. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The shared memory IPC module. 
+
+\fBAuthor:\fP
+.RS 4
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+.RE
+.PP
+
+.PP
+Definition in file \fBshMemory.h\fP.
+.SH "Define Documentation"
+.PP 
+.SS "#define IPC_CREAT   4"
+.PP
+Definition at line 17 of file shMemory.h.
+.SS "#define IPC_PRIVATE   5"
+.PP
+Definition at line 18 of file shMemory.h.
+.SS "#define IPC_RMID   1"
+.PP
+Definition at line 14 of file shMemory.h.
+.SS "#define IPC_SET   2"
+.PP
+Definition at line 15 of file shMemory.h.
+.SS "#define IPC_STAT   3"
+.PP
+Definition at line 16 of file shMemory.h.
+.SS "#define MAX_SHMAPPN   MAX_PROCESS"
+.PP
+Definition at line 21 of file shMemory.h.
+.SS "#define MAX_SHMEMS   8"
+.PP
+Definition at line 20 of file shMemory.h.
+.SH "Function Documentation"
+.PP 
+.SS "void initializeShMems ()"
+.PP
+Initializes all the shared memories. 
+.PP
+Definition at line 60 of file shMemory.c.
+.SS "char * shmat (int shmid, \fBkey_t\fP * semid)"
+.PP
+Attaches the current process to the shmid shared memory. \fBParameters:\fP
+.RS 4
+\fIshmid\fP The id of the shared memory segment. 
+.br
+\fIsemid\fP A pointer to a key_t variable where to store the shared memory inner semaphore id.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A pointer to the shared memory space.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBshmget()\fP \fBshmdt()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file shMemory.c.
+.SS "int shmdt (int shmid)"
+.PP
+Detaches the current process form the shmid shared memory segment. \fBParameters:\fP
+.RS 4
+\fIshmid\fP The id of the shared memory segment.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBshmget()\fP \fBshmat()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file shMemory.c.
+.SS "int shmget (\fBkey_t\fP key, int size)"
+.PP
+Gets a new shared memory with the given key and size. \fBParameters:\fP
+.RS 4
+\fIkey\fP The key for the shared memory segment. 
+.br
+\fIsize\fP The shared memory size.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The id of the shared memory on success, -1 on error.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBshmat()\fP \fBshmdt()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file shMemory.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for flying-high from the source code.

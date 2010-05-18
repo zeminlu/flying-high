@@ -1,0 +1,1592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="bttlship_8h" kind="file">
+    <compoundname>bttlship.h</compoundname>
+    <includes refid="video__driver_8h" local="yes">video_driver.h</includes>
+    <includes refid="stdio_8h" local="yes">stdio.h</includes>
+    <includes refid="string_8h" local="yes">string.h</includes>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="process_8h" local="yes">process.h</includes>
+    <includes refid="sh_memory_8h" local="yes">shMemory.h</includes>
+    <includes refid="semaphore_8h" local="yes">semaphore.h</includes>
+    <includes refid="rand_8h" local="yes">rand.h</includes>
+    <includes refid="ttys_8h" local="yes">ttys.h</includes>
+    <includedby refid="shell_8h" local="yes">inc/shell.h</includedby>
+    <includedby refid="bttlship_8c" local="yes">src/bttlship.c</includedby>
+    <incdepgraph>
+      <node id="2397">
+        <label>rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="2385" relation="include">
+        </childnode>
+      </node>
+      <node id="2380">
+        <label>colors.h</label>
+        <link refid="colors_8h"/>
+      </node>
+      <node id="2403">
+        <label>shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="2401" relation="include">
+        </childnode>
+      </node>
+      <node id="2402">
+        <label>int80.h</label>
+        <link refid="int80_8h"/>
+      </node>
+      <node id="2385">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
+      </node>
+      <node id="2388">
+        <label>schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2375" relation="include">
+        </childnode>
+      </node>
+      <node id="2383">
+        <label>unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2381">
+        <label>stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2377">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2378" relation="include">
+        </childnode>
+        <childnode refid="2379" relation="include">
+        </childnode>
+      </node>
+      <node id="2396">
+        <label>kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+      </node>
+      <node id="2398">
+        <label>shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="2381" relation="include">
+        </childnode>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2399" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2380" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+      </node>
+      <node id="2387">
+        <label>kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="2398" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2375">
+        <label>video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2395">
+        <label>sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2397" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2376">
+        <label>io.h</label>
+        <link refid="io_8h"/>
+      </node>
+      <node id="2391">
+        <label>kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+      </node>
+      <node id="2390">
+        <label>sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+      </node>
+      <node id="2379">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2380" relation="include">
+        </childnode>
+      </node>
+      <node id="2392">
+        <label>ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2396" relation="include">
+        </childnode>
+      </node>
+      <node id="2382">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2374">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship.h"/>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2403" relation="include">
+        </childnode>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2397" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
+      </node>
+      <node id="2394">
+        <label>keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2384">
+        <label>process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+      </node>
+      <node id="2393">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="2394" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2401">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+      </node>
+      <node id="2386">
+        <label>memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2389">
+        <label>uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+      </node>
+      <node id="2378">
+        <label>defs.h</label>
+        <link refid="defs_8h"/>
+      </node>
+      <node id="2400">
+        <label>bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2380" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2397" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2419">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2420" relation="include">
+        </childnode>
+      </node>
+      <node id="2407">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2408" relation="include">
+        </childnode>
+      </node>
+      <node id="2435">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="2415">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="2415" relation="include">
+        </childnode>
+      </node>
+      <node id="2436">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="2424">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2425" relation="include">
+        </childnode>
+      </node>
+      <node id="2418">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2421" relation="include">
+        </childnode>
+      </node>
+      <node id="2428">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+      </node>
+      <node id="2429">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="2409">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="2434">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="2413">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2414" relation="include">
+        </childnode>
+      </node>
+      <node id="2405">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+      </node>
+      <node id="2431">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="2431" relation="include">
+        </childnode>
+      </node>
+      <node id="2433">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2434" relation="include">
+        </childnode>
+      </node>
+      <node id="2410">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
+        </childnode>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2432" relation="include">
+        </childnode>
+      </node>
+      <node id="2425">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="2416">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="2417" relation="include">
+        </childnode>
+      </node>
+      <node id="2414">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2415" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2416" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2422" relation="include">
+        </childnode>
+      </node>
+      <node id="2404">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship.h"/>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+      </node>
+      <node id="2412">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+      </node>
+      <node id="2432">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="2430">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="2426">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="2423">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2426" relation="include">
+        </childnode>
+      </node>
+      <node id="2421">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="2408">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="2420">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="2422">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="2417">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="2427">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+      </node>
+      <node id="2406">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+      </node>
+      <node id="2411">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_s___t_a_b_l_e" prot="public">S_TABLE</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" prot="public" static="no">
+        <name>N_X</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="23" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a6554029a39cab2edd50f67075f949926" compoundref="bttlship_8c" startline="283" endline="318">draw_hz</referencedby>
+        <referencedby refid="bttlship_8c_1a2d3705cb0dd809d88cd03e1bb39afb09" compoundref="bttlship_8c" startline="320" endline="355">draw_vt</referencedby>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+        <referencedby refid="bttlship_8c_1a4003a14058da5be60c7e7600713cd5c0" compoundref="bttlship_8c" startline="241" endline="281">getInput</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+        <referencedby refid="bttlship_8c_1afcb21d332942ec61fd523fed20b758e5" compoundref="bttlship_8c" startline="389" endline="398">showRow</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" prot="public" static="no">
+        <name>N_Y</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="24" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a6554029a39cab2edd50f67075f949926" compoundref="bttlship_8c" startline="283" endline="318">draw_hz</referencedby>
+        <referencedby refid="bttlship_8c_1a2d3705cb0dd809d88cd03e1bb39afb09" compoundref="bttlship_8c" startline="320" endline="355">draw_vt</referencedby>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+        <referencedby refid="bttlship_8c_1a4003a14058da5be60c7e7600713cd5c0" compoundref="bttlship_8c" startline="241" endline="281">getInput</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a4f5341d5491f9ca1655a283043276052" prot="public" static="no">
+        <name>N_Z</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="25" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a1f3139d214f19c27732d952f9f47cdb7" prot="public" static="no">
+        <name>N_SHIPS</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="26" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1adacc98cbe6c9c29d073ce4e4e47d786c" prot="public" static="no">
+        <name>INP_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="28" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="bttlship_8c_1a4003a14058da5be60c7e7600713cd5c0" compoundref="bttlship_8c" startline="241" endline="281">getInput</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a9975cd7a48b7b233f3785f04190f97eb" prot="public" static="no">
+        <name>INP_YX</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="29" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a4003a14058da5be60c7e7600713cd5c0" compoundref="bttlship_8c" startline="241" endline="281">getInput</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a0376b2ead2de10bb7ab6a4d21ec304e9" prot="public" static="no">
+        <name>LOCK</name>
+        <initializer>lockTable(0,1, &amp;table)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="31" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1ac82effb31e82e32254efc8b57251d59e" prot="public" static="no">
+        <name>UNLOCK</name>
+        <initializer>lockTable(0,0, &amp;table)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="32" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1aa5c996b0f78c43badb720d4e71b36c47" prot="public" static="no">
+        <name>WAIT2</name>
+        <initializer>lockTable(1,1, &amp;table)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="34" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a6d6f3072344ba56155dd8f035da07137" prot="public" static="no">
+        <name>NOTIFY2</name>
+        <initializer>lockTable(1,0, &amp;table)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="35" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1aa6b116f87a85ae940c89cdfc6f2581a7" prot="public" static="no">
+        <name>FLG_P1</name>
+        <initializer>001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="40" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1aef4b6e9d64c7bff5215251a7bec36b37" compoundref="bttlship_8c" startline="231" endline="239">bomb</referencedby>
+        <referencedby refid="bttlship_8c_1a6554029a39cab2edd50f67075f949926" compoundref="bttlship_8c" startline="283" endline="318">draw_hz</referencedby>
+        <referencedby refid="bttlship_8c_1a2d3705cb0dd809d88cd03e1bb39afb09" compoundref="bttlship_8c" startline="320" endline="355">draw_vt</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a47bfd9d0735388bcd45193b3579ebd0f" prot="public" static="no">
+        <name>FLG_P2</name>
+        <initializer>002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="41" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1aef4b6e9d64c7bff5215251a7bec36b37" compoundref="bttlship_8c" startline="231" endline="239">bomb</referencedby>
+        <referencedby refid="bttlship_8c_1a6554029a39cab2edd50f67075f949926" compoundref="bttlship_8c" startline="283" endline="318">draw_hz</referencedby>
+        <referencedby refid="bttlship_8c_1a2d3705cb0dd809d88cd03e1bb39afb09" compoundref="bttlship_8c" startline="320" endline="355">draw_vt</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a1cb9b8638cef6ff70f3b6178c07b6d79" prot="public" static="no">
+        <name>FLG_SEEN0</name>
+        <initializer>004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="42" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1ae89a10b18e78db31e348765563a25d39" prot="public" static="no">
+        <name>FLG_SEEN1</name>
+        <initializer>010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="43" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a2459bbe0a47167492255693121680db5" prot="public" static="no">
+        <name>FLG_BOMBD</name>
+        <initializer>020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="44" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1aef4b6e9d64c7bff5215251a7bec36b37" compoundref="bttlship_8c" startline="231" endline="239">bomb</referencedby>
+        <referencedby refid="bttlship_8c_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="bttlship_8h_1a5f70824b678311b0789ff323b32a2440" prot="public" static="no">
+        <name>FLG_SPLSH</name>
+        <initializer>040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="45" bodyfile="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="bttlship_8c_1aef4b6e9d64c7bff5215251a7bec36b37" compoundref="bttlship_8c" startline="231" endline="239">bomb</referencedby>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="bttlship_8h_1ae13bc024f7a68af424d382c4b7a9ce39" prot="public" static="no">
+        <type>struct <ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref></type>
+        <definition>typedef struct S_TABLE S_TABLE</definition>
+        <argsstring></argsstring>
+        <name>S_TABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bttlship_8h_1ac475b6f9eb4174c8579f3d4709b0e219" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cleanup</definition>
+        <argsstring>(key_t shmid, key_t semid)</argsstring>
+        <name>cleanup</name>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref></type>
+          <declname>shmid</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref></type>
+          <declname>semid</declname>
+        </param>
+        <briefdescription>
+<para>Destroys the used shared memory and semaphores. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shmid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the shared memory segment. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>semid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the semaphore. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="70" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="186" bodyend="193"/>
+        <references refid="semaphore_8h_1ad789c6f97a5592c78cb99d9413c9607b" compoundref="semaphore_8c" startline="79" endline="82">sem_free</references>
+        <references refid="sh_memory_8h_1a1c89b0ee5786c3cf217319a997eb5add" compoundref="sh_memory_8c" startline="39" endline="41">shmdt</references>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1a03d7f39ab8509bab171aecf4d4fc7b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void attachTable</definition>
+        <argsstring>(S_TABLE **table, key_t shmid, char **shmp)</argsstring>
+        <name>attachTable</name>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member">key_t</ref></type>
+          <declname>shmid</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>shmp</declname>
+        </param>
+        <briefdescription>
+<para>It attaches itself to the already created memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adress of the table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shmid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shared memory segment id. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adress where to store the shared memory segment pointer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="83" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="195" bodyend="208"/>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="sh_memory_8h_1a5c3d92af6a333b8c351c9b7e5aeb98e1" compoundref="sh_memory_8c" startline="35" endline="37">shmat</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1af66d7960a49eb99b5260ba4d524e1ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lockTable</definition>
+        <argsstring>(int semx, int block, S_TABLE **tableS)</argsstring>
+        <name>lockTable</name>
+        <param>
+          <type>int</type>
+          <declname>semx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <briefdescription>
+<para>It decides if it has to lock the table or wait for the opponent. Peform semaphore wait/notifies: ARGUMENTS: semx 0 : table lock semaphore 1 : opponent notify semaphore block 0 : perform notify 1 : perform wait. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>semx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>It is the parameter to decide what have to do with semaphore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>It decides what have to do with the table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adress of the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="101" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="450" bodyend="467"/>
+        <references refid="semaphore_8h_1adf32347e1821519a91572b64a6c53101" compoundref="semaphore_8c" startline="89" endline="92">sem_signal</references>
+        <references refid="semaphore_8h_1a5d86815c472afe2d2175180835500008" compoundref="semaphore_8c" startline="84" endline="87">sem_wait</references>
+        <references refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" compoundref="bttlship_8h" startline="51">S_TABLE::semid</references>
+        <references refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" compoundref="bttlship_8h" startline="52">S_TABLE::waitSemid</references>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1a03efcb954008fc3018e19f0353b58157" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void recount</definition>
+        <argsstring>(S_TABLE **tableS, int *flg_game_over)</argsstring>
+        <name>recount</name>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>flg_game_over</declname>
+        </param>
+        <briefdescription>
+<para>It counts the amount of bombs that the player has left. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flg_game_over</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adress of the game status. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="112" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="210" bodyend="229"/>
+        <references refid="struct_s___t_a_b_l_e_1a5fb13144696f146a9d71fe9a41c3d7e0" compoundref="bttlship_8h" startline="55">S_TABLE::bsites</references>
+        <references refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" compoundref="bttlship_8h" startline="58">S_TABLE::flg</references>
+        <references refid="bttlship_8h_1a2459bbe0a47167492255693121680db5" compoundref="bttlship_8h" startline="44">FLG_BOMBD</references>
+        <references refid="bttlship_8h_1aa6b116f87a85ae940c89cdfc6f2581a7" compoundref="bttlship_8h" startline="40">FLG_P1</references>
+        <references refid="bttlship_8h_1a47bfd9d0735388bcd45193b3579ebd0f" compoundref="bttlship_8h" startline="41">FLG_P2</references>
+        <references refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" compoundref="bttlship_8h" startline="23">N_X</references>
+        <references refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" compoundref="bttlship_8h" startline="24">N_Y</references>
+        <references refid="struct_s___t_a_b_l_e_1a7f2737fd5784a77ca8c868b817c0ea0d">S_TABLE::player</references>
+        <references refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" compoundref="bttlship_8h" startline="57">S_TABLE::sea</references>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1aef4b6e9d64c7bff5215251a7bec36b37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bomb</definition>
+        <argsstring>(int x, int y, S_TABLE **tableS)</argsstring>
+        <name>bomb</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <briefdescription>
+<para>It puts the bomb on a specific position of the table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row of the table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column of the table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="124" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="231" bodyend="239"/>
+        <references refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" compoundref="bttlship_8h" startline="58">S_TABLE::flg</references>
+        <references refid="bttlship_8h_1a2459bbe0a47167492255693121680db5" compoundref="bttlship_8h" startline="44">FLG_BOMBD</references>
+        <references refid="bttlship_8h_1aa6b116f87a85ae940c89cdfc6f2581a7" compoundref="bttlship_8h" startline="40">FLG_P1</references>
+        <references refid="bttlship_8h_1a47bfd9d0735388bcd45193b3579ebd0f" compoundref="bttlship_8h" startline="41">FLG_P2</references>
+        <references refid="bttlship_8h_1a5f70824b678311b0789ff323b32a2440" compoundref="bttlship_8h" startline="45">FLG_SPLSH</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1a4003a14058da5be60c7e7600713cd5c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getInput</definition>
+        <argsstring>(int *px, int *py, S_TABLE **table)</argsstring>
+        <name>getInput</name>
+        <param>
+          <type>int *</type>
+          <declname>px</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>py</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+<para>It obtains the the row and the column of the table from STDIN. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>px</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row of the table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>py</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column of the table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="137" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="241" bodyend="281"/>
+        <references refid="stdio_8h_1a59adc4c82490d23754cd39c2fb99b0da" compoundref="stdio_8h" startline="19">EOF</references>
+        <references refid="stdio_8h_1ac0484b3e3a4d8361d91c3322440f9195" compoundref="stdio_8h" startline="56">getchar</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="process_8h_1a109666f73149f2d6bbead68763749fbd" compoundref="process_8c" startline="35" endline="37">getTty</references>
+        <references refid="bttlship_8h_1adacc98cbe6c9c29d073ce4e4e47d786c" compoundref="bttlship_8h" startline="28">INP_NONE</references>
+        <references refid="bttlship_8h_1a9975cd7a48b7b233f3785f04190f97eb" compoundref="bttlship_8h" startline="29">INP_YX</references>
+        <references refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" compoundref="bttlship_8h" startline="23">N_X</references>
+        <references refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" compoundref="bttlship_8h" startline="24">N_Y</references>
+        <references refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" compoundref="stdio_8h" startline="51">putchar</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="sys_process_8h_1a2cd7c071907edcb9f8151c8519d4b27e" compoundref="sys_process_8c" startline="157" endline="163">waitTty</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1a6554029a39cab2edd50f67075f949926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int draw_hz</definition>
+        <argsstring>(int sx, int sy, int z, int who, S_TABLE **tableS)</argsstring>
+        <name>draw_hz</name>
+        <param>
+          <type>int</type>
+          <declname>sx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>who</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <briefdescription>
+<para>It draws the horizontal ship. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>who</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="151" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="283" bodyend="318"/>
+        <references refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" compoundref="bttlship_8h" startline="58">S_TABLE::flg</references>
+        <references refid="bttlship_8h_1aa6b116f87a85ae940c89cdfc6f2581a7" compoundref="bttlship_8h" startline="40">FLG_P1</references>
+        <references refid="bttlship_8h_1a47bfd9d0735388bcd45193b3579ebd0f" compoundref="bttlship_8h" startline="41">FLG_P2</references>
+        <references refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" compoundref="bttlship_8h" startline="23">N_X</references>
+        <references refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" compoundref="bttlship_8h" startline="24">N_Y</references>
+        <references refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" compoundref="bttlship_8h" startline="57">S_TABLE::sea</references>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1a2d3705cb0dd809d88cd03e1bb39afb09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int draw_vt</definition>
+        <argsstring>(int sx, int sy, int z, int who, S_TABLE **tableS)</argsstring>
+        <name>draw_vt</name>
+        <param>
+          <type>int</type>
+          <declname>sx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>who</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <briefdescription>
+<para>It draws the horizontal ship. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>who</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="165" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="320" bodyend="355"/>
+        <references refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" compoundref="bttlship_8h" startline="58">S_TABLE::flg</references>
+        <references refid="bttlship_8h_1aa6b116f87a85ae940c89cdfc6f2581a7" compoundref="bttlship_8h" startline="40">FLG_P1</references>
+        <references refid="bttlship_8h_1a47bfd9d0735388bcd45193b3579ebd0f" compoundref="bttlship_8h" startline="41">FLG_P2</references>
+        <references refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" compoundref="bttlship_8h" startline="23">N_X</references>
+        <references refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" compoundref="bttlship_8h" startline="24">N_Y</references>
+        <references refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" compoundref="bttlship_8h" startline="57">S_TABLE::sea</references>
+        <referencedby refid="bttlship_8c_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1ae442293b5a53448d5a03e47e38396009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBattle</definition>
+        <argsstring>(S_TABLE **tableS)</argsstring>
+        <name>genBattle</name>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <briefdescription>
+<para>It generates the table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="175" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="357" bodyend="387"/>
+        <references refid="bttlship_8h_1a6554029a39cab2edd50f67075f949926" compoundref="bttlship_8c" startline="283" endline="318">draw_hz</references>
+        <references refid="bttlship_8h_1a2d3705cb0dd809d88cd03e1bb39afb09" compoundref="bttlship_8c" startline="320" endline="355">draw_vt</references>
+        <references refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" compoundref="bttlship_8h" startline="58">S_TABLE::flg</references>
+        <references refid="string_8h_1a1dfdc55c5334154353963674598faf1b" compoundref="string_8c" startline="134" endline="139">memset</references>
+        <references refid="bttlship_8h_1a1f3139d214f19c27732d952f9f47cdb7" compoundref="bttlship_8h" startline="26">N_SHIPS</references>
+        <references refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" compoundref="bttlship_8h" startline="23">N_X</references>
+        <references refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" compoundref="bttlship_8h" startline="24">N_Y</references>
+        <references refid="bttlship_8h_1a4f5341d5491f9ca1655a283043276052" compoundref="bttlship_8h" startline="25">N_Z</references>
+        <references refid="rand_8h_1a20e50ab9d6b10af0e2940d9419448f42" compoundref="rand_8c" startline="17" endline="24">rand</references>
+        <references refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" compoundref="bttlship_8h" startline="57">S_TABLE::sea</references>
+        <references refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" compoundref="rand_8c" startline="26" endline="28">srand</references>
+        <references refid="rand_8h_1a55e3beba53036a0b4b8ac14e6914753d" compoundref="rand_8c" startline="13" endline="15">timeRand</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1afcb21d332942ec61fd523fed20b758e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showRow</definition>
+        <argsstring>(void)</argsstring>
+        <name>showRow</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>It prints each row of the table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="183" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="389" bodyend="398"/>
+        <references refid="stdio_8h_1abe6299d5823dd023e610aaa619735a3f" compoundref="stdio_8c" startline="44" endline="51">fputc</references>
+        <references refid="stdio_8h_1a68236e664c1f0da049b25fba1c1695f6" compoundref="stdio_8c" startline="66" endline="75">fputs</references>
+        <references refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" compoundref="bttlship_8h" startline="23">N_X</references>
+        <references refid="stdio_8h_1a0c0ef221f95f64e8632451312fd18cc8" compoundref="stdio_8h" startline="36">stdout</references>
+        <referencedby refid="bttlship_8c_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1a21c4f719d9c70f144ffbb7b4ab57d935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showBattle</definition>
+        <argsstring>(S_TABLE **tableS, int us, int them, int *flg_game_over)</argsstring>
+        <name>showBattle</name>
+        <param>
+          <type><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref> **</type>
+          <declname>tableS</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>us</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>them</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>flg_game_over</declname>
+        </param>
+        <briefdescription>
+<para>It prints the table of the battlehsip. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tableS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>us</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>them</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inner use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flg_game_over</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the game status. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="196" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="400" bodyend="439"/>
+        <references refid="struct_s___t_a_b_l_e_1a5fb13144696f146a9d71fe9a41c3d7e0" compoundref="bttlship_8h" startline="55">S_TABLE::bsites</references>
+        <references refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" compoundref="bttlship_8h" startline="58">S_TABLE::flg</references>
+        <references refid="bttlship_8h_1a2459bbe0a47167492255693121680db5" compoundref="bttlship_8h" startline="44">FLG_BOMBD</references>
+        <references refid="bttlship_8h_1aa6b116f87a85ae940c89cdfc6f2581a7" compoundref="bttlship_8h" startline="40">FLG_P1</references>
+        <references refid="bttlship_8h_1a47bfd9d0735388bcd45193b3579ebd0f" compoundref="bttlship_8h" startline="41">FLG_P2</references>
+        <references refid="bttlship_8h_1a1cb9b8638cef6ff70f3b6178c07b6d79" compoundref="bttlship_8h" startline="42">FLG_SEEN0</references>
+        <references refid="bttlship_8h_1ae89a10b18e78db31e348765563a25d39" compoundref="bttlship_8h" startline="43">FLG_SEEN1</references>
+        <references refid="bttlship_8h_1a5f70824b678311b0789ff323b32a2440" compoundref="bttlship_8h" startline="45">FLG_SPLSH</references>
+        <references refid="stdio_8h_1abe6299d5823dd023e610aaa619735a3f" compoundref="stdio_8c" startline="44" endline="51">fputc</references>
+        <references refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" compoundref="bttlship_8h" startline="23">N_X</references>
+        <references refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" compoundref="bttlship_8h" startline="24">N_Y</references>
+        <references refid="struct_s___t_a_b_l_e_1a7f2737fd5784a77ca8c868b817c0ea0d">S_TABLE::player</references>
+        <references refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" compoundref="stdio_8h" startline="51">putchar</references>
+        <references refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" compoundref="stdio_8h" startline="61">puti</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="bttlship_8h_1a03efcb954008fc3018e19f0353b58157" compoundref="bttlship_8c" startline="210" endline="229">recount</references>
+        <references refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" compoundref="bttlship_8h" startline="57">S_TABLE::sea</references>
+        <references refid="bttlship_8h_1afcb21d332942ec61fd523fed20b758e5" compoundref="bttlship_8c" startline="389" endline="398">showRow</references>
+        <references refid="stdio_8h_1a0c0ef221f95f64e8632451312fd18cc8" compoundref="stdio_8h" startline="36">stdout</references>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bttlship_8h_1a52e47768a66b91e89d5546a8cb0f168c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int battleship</definition>
+        <argsstring>()</argsstring>
+        <name>battleship</name>
+        <briefdescription>
+<para>It&apos;s the main process of the battleship, it generates the whole table and ships. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h" line="205" bodyfile="/Users/Luciano/Desktop/flying-high/src/bttlship.c" bodystart="12" bodyend="181"/>
+        <references refid="bttlship_8h_1a03d7f39ab8509bab171aecf4d4fc7b9e" compoundref="bttlship_8c" startline="195" endline="208">attachTable</references>
+        <references refid="semaphore_8h_1a52220397ecea855b3a99746e451426e1" compoundref="semaphore_8h" startline="16">BLOCK</references>
+        <references refid="bttlship_8h_1aef4b6e9d64c7bff5215251a7bec36b37" compoundref="bttlship_8c" startline="231" endline="239">bomb</references>
+        <references refid="stdio_8h_1a59adc4c82490d23754cd39c2fb99b0da" compoundref="stdio_8h" startline="19">EOF</references>
+        <references refid="bttlship_8h_1ae442293b5a53448d5a03e47e38396009" compoundref="bttlship_8c" startline="357" endline="387">genBattle</references>
+        <references refid="stdio_8h_1ac0484b3e3a4d8361d91c3322440f9195" compoundref="stdio_8h" startline="56">getchar</references>
+        <references refid="bttlship_8h_1a4003a14058da5be60c7e7600713cd5c0" compoundref="bttlship_8c" startline="241" endline="281">getInput</references>
+        <references refid="process_8h_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</references>
+        <references refid="process_8h_1a109666f73149f2d6bbead68763749fbd" compoundref="process_8c" startline="35" endline="37">getTty</references>
+        <references refid="bttlship_8h_1adacc98cbe6c9c29d073ce4e4e47d786c" compoundref="bttlship_8h" startline="28">INP_NONE</references>
+        <references refid="sh_memory_8h_1ae2b9b856a4a657c250b0b2e1cc0835d9" compoundref="sh_memory_8h" startline="18">IPC_PRIVATE</references>
+        <references refid="bttlship_8h_1a0376b2ead2de10bb7ab6a4d21ec304e9" compoundref="bttlship_8h" startline="31">LOCK</references>
+        <references refid="config_8h_1ad4c770f8a29f82d705f3d34839112bd1" compoundref="config_8h" startline="103">MAX_PROCESS</references>
+        <references refid="bttlship_8h_1a6d6f3072344ba56155dd8f035da07137" compoundref="bttlship_8h" startline="35">NOTIFY2</references>
+        <references refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="defs_8h" startline="328">NULL</references>
+        <references refid="struct_s___t_a_b_l_e_1ae0d46a978d5cd6707411f276ad869b9c" compoundref="bttlship_8h" startline="54">S_TABLE::pid</references>
+        <references refid="struct_s___t_a_b_l_e_1a7f2737fd5784a77ca8c868b817c0ea0d">S_TABLE::player</references>
+        <references refid="stdio_8h_1a568f021a83b2c22e1e700d12559d660a" compoundref="stdio_8h" startline="51">putchar</references>
+        <references refid="stdio_8h_1a049d7c6dddcd2eafdf1349942dbdac88" compoundref="stdio_8h" startline="61">puti</references>
+        <references refid="stdio_8h_1ab1188d451a7325a10703cbd0f953f31e" compoundref="stdio_8h" startline="46">puts</references>
+        <references refid="video__driver_8h_1ab59b086c41d506e55aa02729f9916be2" compoundref="video__driver_8c" startline="233" endline="236">refreshScreen</references>
+        <references refid="ttys_8h_1a5543e64588b3c8d57ef150404d96c5a7" compoundref="ttys_8c" startline="529" endline="536">refreshStdout</references>
+        <references refid="semaphore_8h_1a46e2163685880ebc53e237c1e3ebf30e" compoundref="semaphore_8c" startline="75" endline="77">sem_get</references>
+        <references refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" compoundref="bttlship_8h" startline="51">S_TABLE::semid</references>
+        <references refid="sh_memory_8h_1a8d7a1c046c2493a933e170ae65a20b18" compoundref="sh_memory_8c" startline="31" endline="33">shmget</references>
+        <references refid="bttlship_8h_1a21c4f719d9c70f144ffbb7b4ab57d935" compoundref="bttlship_8c" startline="400" endline="439">showBattle</references>
+        <references refid="rand_8h_1a4158d0a4435ddf2a9ae2e1d2e270024e" compoundref="rand_8c" startline="26" endline="28">srand</references>
+        <references refid="bttlship_8h_1ac82effb31e82e32254efc8b57251d59e" compoundref="bttlship_8h" startline="32">UNLOCK</references>
+        <references refid="semaphore_8h_1aef72fe86b7c60b1a86920496456edeac" compoundref="semaphore_8h" startline="17">WAIT</references>
+        <references refid="bttlship_8h_1aa5c996b0f78c43badb720d4e71b36c47" compoundref="bttlship_8h" startline="34">WAIT2</references>
+        <references refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" compoundref="bttlship_8h" startline="52">S_TABLE::waitSemid</references>
+        <references refid="sys_process_8h_1a2cd7c071907edcb9f8151c8519d4b27e" compoundref="sys_process_8c" startline="157" endline="163">waitTty</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The header file of the battleship game. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_BTTLSHIP_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_BTTLSHIP_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="video__driver_8h" kindref="compound" tooltip="Defines the basic function to manage the video screen, cursor &amp;amp; mouse pointer...">video_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdio_8h" kindref="compound" tooltip="Definitions for all standard input and output and declaration of all functions to...">stdio.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8h" kindref="compound" tooltip="Declaration of all functions that deals with strings and buffers.">string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound" tooltip="Definition for system dependent types.">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="process_8h" kindref="compound" tooltip="All the process functions that invoke syscalls.">process.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sh_memory_8h" kindref="compound" tooltip="The shared memory IPC module.">shMemory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="semaphore_8h" kindref="compound" tooltip="The OS semaphore module.">semaphore.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rand_8h" kindref="compound" tooltip="Random number generation module.">rand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ttys_8h" kindref="compound" tooltip="The tty header file.">ttys.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>N_X<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>X<sp/>dimension<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>N_Y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Y<sp/>dimension<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="bttlship_8h_1a4f5341d5491f9ca1655a283043276052" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>N_Z<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Max<sp/>length<sp/>of<sp/>ship<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="bttlship_8h_1a1f3139d214f19c27732d952f9f47cdb7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>N_SHIPS<sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Max<sp/>number<sp/>of<sp/>ships<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="bttlship_8h_1adacc98cbe6c9c29d073ce4e4e47d786c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INP_NONE<sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>No<sp/>input<sp/>not<sp/>recognizable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="bttlship_8h_1a9975cd7a48b7b233f3785f04190f97eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INP_YX<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>YX<sp/>was<sp/>given<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="bttlship_8h_1a0376b2ead2de10bb7ab6a4d21ec304e9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOCK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockTable(0,1,<sp/>&amp;table)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Lock<sp/>Table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="bttlship_8h_1ac82effb31e82e32254efc8b57251d59e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNLOCK<sp/><sp/><sp/><sp/><sp/><sp/>lockTable(0,0,<sp/>&amp;table)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Unlock<sp/>Table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="bttlship_8h_1aa5c996b0f78c43badb720d4e71b36c47" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WAIT2<sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockTable(1,1,<sp/>&amp;table)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Wait<sp/>for<sp/>Notify<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="bttlship_8h_1a6d6f3072344ba56155dd8f035da07137" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NOTIFY2<sp/><sp/><sp/><sp/><sp/>lockTable(1,0,<sp/>&amp;table)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Notify<sp/>player<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>Table<sp/>flags<sp/>:</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="bttlship_8h_1aa6b116f87a85ae940c89cdfc6f2581a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLG_P1<sp/><sp/><sp/><sp/><sp/><sp/>001<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Owned<sp/>by<sp/>player<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="bttlship_8h_1a47bfd9d0735388bcd45193b3579ebd0f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLG_P2<sp/><sp/><sp/><sp/><sp/><sp/>002<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Owned<sp/>by<sp/>player<sp/>2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="bttlship_8h_1a1cb9b8638cef6ff70f3b6178c07b6d79" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLG_SEEN0<sp/><sp/><sp/>004<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Seen<sp/>by<sp/>player<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="bttlship_8h_1ae89a10b18e78db31e348765563a25d39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLG_SEEN1<sp/><sp/><sp/>010<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Seen<sp/>by<sp/>player<sp/>2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="bttlship_8h_1a2459bbe0a47167492255693121680db5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLG_BOMBD<sp/><sp/><sp/>020<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bombed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="bttlship_8h_1a5f70824b678311b0789ff323b32a2440" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLG_SPLSH<sp/><sp/><sp/>040<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Splash<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>Shared<sp/>Memory<sp/>Table<sp/>:</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="struct_s___t_a_b_l_e" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>{</highlight></codeline>
+<codeline lineno="51" refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s___t_a_b_l_e_1a7c35ac5305085cf7360645b8d52988b5" kindref="member">semid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Locking<sp/>sem<sp/>IPC<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s___t_a_b_l_e_1a9f1f2d138b13036572e13571aabb6120" kindref="member">waitSemid</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54" refid="struct_s___t_a_b_l_e_1ae0d46a978d5cd6707411f276ad869b9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1ab612a3a4eb0e2ced1e55ecff76260458" kindref="member" tooltip="pid_t typedef.">pid_t</ref><sp/><ref refid="struct_s___t_a_b_l_e_1ae0d46a978d5cd6707411f276ad869b9c" kindref="member">pid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Process<sp/>ID<sp/>of<sp/>player<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="struct_s___t_a_b_l_e_1a5fb13144696f146a9d71fe9a41c3d7e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_s___t_a_b_l_e_1a5fb13144696f146a9d71fe9a41c3d7e0" kindref="member">bsites</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sites<sp/>left<sp/>for<sp/>bombing<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s___t_a_b_l_e_1a7f2737fd5784a77ca8c868b817c0ea0d" kindref="member">player</ref>[2];</highlight></codeline>
+<codeline lineno="57" refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_s___t_a_b_l_e_1a6bee2a889a353271513547393b6a9779" kindref="member">sea</ref>[<ref refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" kindref="member">N_X</ref>][<ref refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" kindref="member">N_Y</ref>];<sp/><sp/></highlight><highlight class="comment">/*<sp/>Matrix<sp/>of<sp/>sea<sp/>locations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_s___t_a_b_l_e_1ad3bb0e8aada972de614d50a5069596b1" kindref="member">flg</ref>[<ref refid="bttlship_8h_1a162b2f8daef7ed7ffb5b65eb52f06541" kindref="member">N_X</ref>][<ref refid="bttlship_8h_1a5efedafe88e8b42370ab7e629360d5b8" kindref="member">N_Y</ref>];<sp/><sp/></highlight><highlight class="comment">/*<sp/>Flags<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1ac475b6f9eb4174c8579f3d4709b0e219" kindref="member" tooltip="Destroys the used shared memory and semaphores.">cleanup</ref>(<ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>shmid,<sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>semid);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1a03d7f39ab8509bab171aecf4d4fc7b9e" kindref="member" tooltip="It attaches itself to the already created memory.">attachTable</ref>(<ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**table,<sp/><ref refid="types_8h_1a158b5efbc244b8995c439d60c976c818" kindref="member" tooltip="key_t typedef.">key_t</ref><sp/>shmid,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**shmp);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1af66d7960a49eb99b5260ba4d524e1ac8" kindref="member" tooltip="It decides if it has to lock the table or wait for the opponent. Peform semaphore...">lockTable</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semx,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>block,<sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1a03efcb954008fc3018e19f0353b58157" kindref="member" tooltip="It counts the amount of bombs that the player has left.">recount</ref>(<ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*flg_game_over);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1aef4b6e9d64c7bff5215251a7bec36b37" kindref="member" tooltip="It puts the bomb on a specific position of the table.">bomb</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1a4003a14058da5be60c7e7600713cd5c0" kindref="member" tooltip="It obtains the the row and the column of the table from STDIN.">getInput</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*px,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*py,<sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**table);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1a6554029a39cab2edd50f67075f949926" kindref="member" tooltip="It draws the horizontal ship.">draw_hz</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sx,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sy,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>who,<sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1a2d3705cb0dd809d88cd03e1bb39afb09" kindref="member" tooltip="It draws the horizontal ship.">draw_vt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sx,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sy,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>who,<sp/><ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1ae442293b5a53448d5a03e47e38396009" kindref="member" tooltip="It generates the table.">genBattle</ref>(<ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1afcb21d332942ec61fd523fed20b758e5" kindref="member" tooltip="It prints each row of the table.">showRow</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1a21c4f719d9c70f144ffbb7b4ab57d935" kindref="member" tooltip="It prints the table of the battlehsip.">showBattle</ref>(<ref refid="struct_s___t_a_b_l_e" kindref="compound">S_TABLE</ref><sp/>**tableS,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>us,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>them,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*flg_game_over);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bttlship_8h_1a52e47768a66b91e89d5546a8cb0f168c" kindref="member" tooltip="It&amp;#39;s the main process of the battleship, it generates the whole table and ships...">battleship</ref>();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/bttlship.h"/>
+  </compounddef>
+</doxygen>

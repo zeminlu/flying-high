@@ -1,0 +1,1469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="defs_8h" kind="file">
+    <compoundname>defs.h</compoundname>
+    <includedby refid="types_8h" local="yes">inc/types.h</includedby>
+    <invincdepgraph>
+      <node id="2565">
+        <label>inc/rand.h</label>
+        <link refid="rand_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2566" relation="include">
+        </childnode>
+      </node>
+      <node id="2551">
+        <label>inc/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2552" relation="include">
+        </childnode>
+      </node>
+      <node id="2581">
+        <label>src/shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="2561">
+        <label>inc/exceptions.h</label>
+        <link refid="exceptions_8h"/>
+        <childnode refid="2561" relation="include">
+        </childnode>
+      </node>
+      <node id="2558">
+        <label>src/bttlship.c</label>
+        <link refid="bttlship_8c"/>
+      </node>
+      <node id="2570">
+        <label>inc/shMemory.h</label>
+        <link refid="sh_memory_8h"/>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2571" relation="include">
+        </childnode>
+      </node>
+      <node id="2564">
+        <label>inc/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2556" relation="include">
+        </childnode>
+        <childnode refid="2565" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2567" relation="include">
+        </childnode>
+      </node>
+      <node id="2574">
+        <label>inc/schedule.h</label>
+        <link refid="schedule_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2575" relation="include">
+        </childnode>
+      </node>
+      <node id="2575">
+        <label>src/schedule.c</label>
+        <link refid="schedule_8c"/>
+      </node>
+      <node id="2598">
+        <label>inc/unistd.h</label>
+        <link refid="unistd_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2594" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+      </node>
+      <node id="2594">
+        <label>inc/stdio.h</label>
+        <link refid="stdio_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2561" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2559" relation="include">
+        </childnode>
+        <childnode refid="2591" relation="include">
+        </childnode>
+        <childnode refid="2555" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2595" relation="include">
+        </childnode>
+      </node>
+      <node id="2600">
+        <label>src/video_driver.c</label>
+        <link refid="video__driver_8c"/>
+      </node>
+      <node id="2597">
+        <label>src/string.c</label>
+        <link refid="string_8c"/>
+      </node>
+      <node id="2582">
+        <label>src/bin.c</label>
+        <link refid="bin_8c"/>
+      </node>
+      <node id="2580">
+        <label>src/system.c</label>
+        <link refid="system_8c"/>
+      </node>
+      <node id="2549">
+        <label>inc/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2561" relation="include">
+        </childnode>
+        <childnode refid="2583" relation="include">
+        </childnode>
+        <childnode refid="2585" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2588" relation="include">
+        </childnode>
+        <childnode refid="2562" relation="include">
+        </childnode>
+        <childnode refid="2591" relation="include">
+        </childnode>
+        <childnode refid="2556" relation="include">
+        </childnode>
+        <childnode refid="2589" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+        <childnode refid="2569" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2594" relation="include">
+        </childnode>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2598" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+      </node>
+      <node id="2559">
+        <label>inc/kMalloc.h</label>
+        <link refid="k_malloc_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+      </node>
+      <node id="2553">
+        <label>inc/shell.h</label>
+        <link refid="shell_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
+        </childnode>
+        <childnode refid="2581" relation="include">
+        </childnode>
+      </node>
+      <node id="2583">
+        <label>inc/kasm.h</label>
+        <link refid="kasm_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2561" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2584" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+      </node>
+      <node id="2577">
+        <label>src/pQueueP.c</label>
+        <link refid="p_queue_p_8c"/>
+        <childnode refid="2577" relation="include">
+        </childnode>
+      </node>
+      <node id="2579">
+        <label>inc/system.h</label>
+        <link refid="system_8h"/>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2580" relation="include">
+        </childnode>
+      </node>
+      <node id="2599">
+        <label>inc/video_driver.h</label>
+        <link refid="video__driver_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2600" relation="include">
+        </childnode>
+      </node>
+      <node id="2554">
+        <label>inc/sysProcess.h</label>
+        <link refid="sys_process_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2555" relation="include">
+        </childnode>
+        <childnode refid="2556" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2578" relation="include">
+        </childnode>
+      </node>
+      <node id="2590">
+        <label>src/queue.c</label>
+        <link refid="queue_8c"/>
+      </node>
+      <node id="2586">
+        <label>inc/libc.h</label>
+        <link refid="libc_8h"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+      </node>
+      <node id="2584">
+        <label>inc/kernelDepth.h</label>
+        <link refid="kernel_depth_8h"/>
+        <childnode refid="2564" relation="include">
+        </childnode>
+      </node>
+      <node id="2595">
+        <label>src/stdio.c</label>
+        <link refid="stdio_8c"/>
+      </node>
+      <node id="2571">
+        <label>src/shMemory.c</label>
+        <link refid="sh_memory_8c"/>
+      </node>
+      <node id="2585">
+        <label>inc/kc.h</label>
+        <link refid="kc_8h"/>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2586" relation="include">
+        </childnode>
+      </node>
+      <node id="2562">
+        <label>inc/keyboard_driver.h</label>
+        <link refid="keyboard__driver_8h"/>
+        <childnode refid="2563" relation="include">
+        </childnode>
+      </node>
+      <node id="2592">
+        <label>inc/sysMalloc.h</label>
+        <link refid="sys_malloc_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2559" relation="include">
+        </childnode>
+        <childnode refid="2573" relation="include">
+        </childnode>
+        <childnode refid="2593" relation="include">
+        </childnode>
+      </node>
+      <node id="2593">
+        <label>src/sysMalloc.c</label>
+        <link refid="sys_malloc_8c"/>
+      </node>
+      <node id="2560">
+        <label>inc/ttys.h</label>
+        <link refid="ttys_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2561" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2562" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2568" relation="include">
+        </childnode>
+      </node>
+      <node id="2596">
+        <label>inc/string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2591" relation="include">
+        </childnode>
+        <childnode refid="2555" relation="include">
+        </childnode>
+        <childnode refid="2556" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2594" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2592" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2597" relation="include">
+        </childnode>
+      </node>
+      <node id="2557">
+        <label>inc/bttlship.h</label>
+        <link refid="bttlship_8h"/>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2558" relation="include">
+        </childnode>
+      </node>
+      <node id="2587">
+        <label>src/libc.c</label>
+        <link refid="libc_8c"/>
+      </node>
+      <node id="2588">
+        <label>inc/keyboard_buffer.h</label>
+        <link refid="keyboard__buffer_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2589" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+      </node>
+      <node id="2556">
+        <label>inc/process.h</label>
+        <link refid="process_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2559" relation="include">
+        </childnode>
+        <childnode refid="2569" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2573" relation="include">
+        </childnode>
+        <childnode refid="2576" relation="include">
+        </childnode>
+      </node>
+      <node id="2578">
+        <label>src/sysProcess.c</label>
+        <link refid="sys_process_8c"/>
+      </node>
+      <node id="2589">
+        <label>inc/queue.h</label>
+        <link refid="queue_8h"/>
+        <childnode refid="2562" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2590" relation="include">
+        </childnode>
+      </node>
+      <node id="2576">
+        <label>src/process.c</label>
+        <link refid="process_8c"/>
+      </node>
+      <node id="2572">
+        <label>src/semaphore.c</label>
+        <link refid="semaphore_8c"/>
+      </node>
+      <node id="2569">
+        <label>inc/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2572" relation="include">
+        </childnode>
+      </node>
+      <node id="2567">
+        <label>src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="2552">
+        <label>src/kernel.c</label>
+        <link refid="kernel_8c"/>
+      </node>
+      <node id="2566">
+        <label>src/rand.c</label>
+        <link refid="rand_8c"/>
+      </node>
+      <node id="2568">
+        <label>src/ttys.c</label>
+        <link refid="ttys_8c"/>
+      </node>
+      <node id="2591">
+        <label>inc/memModule.h</label>
+        <link refid="mem_module_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2584" relation="include">
+        </childnode>
+        <childnode refid="2559" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2592" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2573" relation="include">
+        </childnode>
+      </node>
+      <node id="2563">
+        <label>src/keyboard_driver.c</label>
+        <link refid="keyboard__driver_8c"/>
+      </node>
+      <node id="2573">
+        <label>inc/uMalloc.h</label>
+        <link refid="u_malloc_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+      </node>
+      <node id="2548">
+        <label>inc/defs.h</label>
+        <link refid="defs.h"/>
+        <childnode refid="2549" relation="include">
+        </childnode>
+      </node>
+      <node id="2550">
+        <label>inc/bin.h</label>
+        <link refid="bin_8h"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2582" relation="include">
+        </childnode>
+      </node>
+      <node id="2555">
+        <label>inc/pQueueP.h</label>
+        <link refid="p_queue_p_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" prot="public" static="no">
+        <name>byte</name>
+        <initializer>unsigned char</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="17" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a836535f59bf515522a395858a8029d42" prot="public" static="no">
+        <name>word</name>
+        <initializer>short int</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="22" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a55849dc98f28432a4601c29a4a352a97" prot="public" static="no">
+        <name>dword</name>
+        <initializer>int</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="27" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" prot="public" static="no">
+        <name>TRUE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="32" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a283b696c91d432182271488d8d283004" compoundref="syscall_8c" startline="337" endline="342">_sys_set_level</referencedby>
+        <referencedby refid="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" compoundref="syscall_8c" startline="323" endline="328">_sys_set_tty_mode</referencedby>
+        <referencedby refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" compoundref="sh_memory_8c" startline="79" endline="122">_sys_shmget</referencedby>
+        <referencedby refid="mem_module_8c_1a1056bbd0c7d38416134d0645668eaf7d" compoundref="mem_module_8c" startline="79" endline="87">allocKPage</referencedby>
+        <referencedby refid="queue_8c_1a5441ca2ea8de82a1f1ba4b31a2b9e96b" compoundref="queue_8c" startline="21" endline="41">charEnque</referencedby>
+        <referencedby refid="mem_module_8c_1a196022e7c97d188da8545ca5575d515a" compoundref="mem_module_8c" startline="143" endline="153">getFrame</referencedby>
+        <referencedby refid="kernel_depth_8c_1a60e4cee7d263ef4134a3d83ab35de9c6" compoundref="kernel_depth_8c" startline="14" endline="21">increaseKernelDepth</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+        <referencedby refid="mem_module_8c_1ad19841b9dac7eb81c72b63088b80015c" compoundref="mem_module_8c" startline="71" endline="77">initPage</referencedby>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="ttys_8c_1a0ecf720256fc5769d712a4e4190946f1" compoundref="ttys_8c" startline="451" endline="455">putsTTY</referencedby>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+        <referencedby refid="string_8c_1a839ba133fed8b10bbded09e332999153" compoundref="string_8c" startline="59" endline="65">stringHasChar</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" prot="public" static="no">
+        <name>FALSE</name>
+        <initializer>!TRUE</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="37" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a621de44efbbfa68c7d41b5387ee6051b" compoundref="syscall_8c" startline="330" endline="335">_sys_get_tty_mode</referencedby>
+        <referencedby refid="syscall_8c_1a283b696c91d432182271488d8d283004" compoundref="syscall_8c" startline="337" endline="342">_sys_set_level</referencedby>
+        <referencedby refid="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" compoundref="syscall_8c" startline="323" endline="328">_sys_set_tty_mode</referencedby>
+        <referencedby refid="mem_module_8c_1a868034315919cceedc278c3f24d06e04" compoundref="mem_module_8c" startline="99" endline="107">allocMPage</referencedby>
+        <referencedby refid="kernel_depth_8c_1a12d75a01091aa2aef0b93c98f76b859d" compoundref="kernel_depth_8c" startline="23" endline="28">decreaseKernelDepth</referencedby>
+        <referencedby refid="mem_module_8c_1a49336e498bea7c6948b194027bfa32d4" compoundref="mem_module_8c" startline="155" endline="163">freeFrame</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="ttys_8c_1a0ae5938446774e4ebb46d0f5120458a8" compoundref="ttys_8c" startline="602" endline="625">putTTYCharAtPosition</referencedby>
+        <referencedby refid="ttys_8c_1a5543e64588b3c8d57ef150404d96c5a7" compoundref="ttys_8c" startline="529" endline="536">refreshStdout</referencedby>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+        <referencedby refid="string_8c_1a839ba133fed8b10bbded09e332999153" compoundref="string_8c" startline="59" endline="65">stringHasChar</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aba51915c87d64af47fb1cc59348961c9" prot="public" static="no">
+        <name>OK</name>
+        <initializer>TRUE</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="42" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" prot="public" static="no">
+        <name>ERROR</name>
+        <initializer>FALSE</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="47" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a8026e8d87908b0239264d643c90183f5" prot="public" static="no">
+        <name>_READ</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="53" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a3a8140629b64c39fb34eb595b2d1cce2" compoundref="syscall_8c" startline="51" endline="84">_sys_read</referencedby>
+        <referencedby refid="sh_memory_8c_1a574d3f5987a7f9a3723ac7bddaf4e060" compoundref="sh_memory_8c" startline="60" endline="77">initializeShMems</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" prot="public" static="no">
+        <name>_WRITE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="58" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a66b9bb4354c792ee6c467874ceb30cb3" compoundref="syscall_8c" startline="25" endline="49">_sys_write</referencedby>
+        <referencedby refid="sh_memory_8c_1a574d3f5987a7f9a3723ac7bddaf4e060" compoundref="sh_memory_8c" startline="60" endline="77">initializeShMems</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ad930a240d62012e99d9f9dc2b618b3e8" prot="public" static="no">
+        <name>SEND_TO_VIDEO</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="64" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ae30b01f0637fa2a2ef0ee72fbbaee2a2" prot="public" static="no">
+        <name>WRITE_ON_TTY</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="69" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a057b722e3d1168cf748c4936f59b7769" prot="public" static="no">
+        <name>TTY_RAW</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="75" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" compoundref="syscall_8c" startline="323" endline="328">_sys_set_tty_mode</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1afd70646efe5984e361c17010322a5711" prot="public" static="no">
+        <name>TTY_CANONICAL</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="80" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a269aae76f8b8eeb63593b6857bb6d5a9" compoundref="syscall_8c" startline="323" endline="328">_sys_set_tty_mode</referencedby>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+        <referencedby refid="ttys_8c_1abbca9cfc412d307fa56ca4a4095f0f87" compoundref="ttys_8c" startline="487" endline="513">refreshKeyboardBufferTTY</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a0b674752cca6d434a1a69f40877eb2be" prot="public" static="no">
+        <name>LOAD</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="86" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ab2868d85c8a74e3ee08bdc44580e2235" prot="public" static="no">
+        <name>SAVE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="91" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ac00bfb46347d26fdc58568fe1ab5fa5b" prot="public" static="no">
+        <name>STDIN</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="97" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a8875037d0772a4fc34516f1e03d7e238" prot="public" static="no">
+        <name>STDOUT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="102" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="ttys_8c_1a5543e64588b3c8d57ef150404d96c5a7" compoundref="ttys_8c" startline="529" endline="536">refreshStdout</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ac242dc8b10d052be6043664a044fdb87" prot="public" static="no">
+        <name>IN_ATT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="107" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a26743ec6d52be788fe60acfe2865d5ae" prot="public" static="no">
+        <name>OUT_ATT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="112" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" prot="public" static="no">
+        <name>ATOMIC</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="118" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a68c2809dae69574f9b706325264a0675" compoundref="syscall_8c" startline="372" endline="379">_sys_set_atomicity</referencedby>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a33d80cf420a3739faa00760673eee7db" prot="public" static="no">
+        <name>UNATOMIC</name>
+        <initializer>!ATOMIC</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="123" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a68c2809dae69574f9b706325264a0675" compoundref="syscall_8c" startline="372" endline="379">_sys_set_atomicity</referencedby>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+        <referencedby refid="shell_8c_1a225cd0af1ed8359b2973453e2a22a94b" compoundref="shell_8c" startline="497" endline="538">shell</referencedby>
+        <referencedby refid="sys_process_8c_1ab5b0962abeaa4a1657d1fc3d5931a612" compoundref="sys_process_8c" startline="203" endline="221">terminate</referencedby>
+        <referencedby refid="bin_8c_1a9795fbee9531f56aeda1376bf9934506" compoundref="bin_8c" startline="63" endline="215">top</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a2a375179c125d0867430c6778c343b6f" prot="public" static="no">
+        <name>FOREGROUND</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="128" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a283b696c91d432182271488d8d283004" compoundref="syscall_8c" startline="337" endline="342">_sys_set_level</referencedby>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="sys_process_8c_1ab5b0962abeaa4a1657d1fc3d5931a612" compoundref="sys_process_8c" startline="203" endline="221">terminate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a850b2f07a67b73890889e63fb8a49fda" prot="public" static="no">
+        <name>BACKGROUND</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="133" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1a283b696c91d432182271488d8d283004" compoundref="syscall_8c" startline="337" endline="342">_sys_set_level</referencedby>
+        <referencedby refid="sys_process_8c_1add8034131384a469e96c6efeb83d6043" compoundref="sys_process_8c" startline="55" endline="91">initMultitasker</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a1841fd1a462d245d8c73dce55e2f45da" prot="public" static="no">
+        <name>KB</name>
+        <initializer>* (1 &lt;&lt; 10)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="140" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aa6b38d492364d98453284934ed7caee9" prot="public" static="no">
+        <name>MB</name>
+        <initializer>* (1 &lt;&lt; 20)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="145" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a94ad616f6fdced1466e60a7add259f3c" prot="public" static="no">
+        <name>KERNEL_SPACE</name>
+        <initializer>0x00000000</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="152" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="152" bodyend="-1"/>
+        <referencedby refid="mem_module_8c_1a1056bbd0c7d38416134d0645668eaf7d" compoundref="mem_module_8c" startline="79" endline="87">allocKPage</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a2d85dcc33ff0b653b17210b6861b9030" prot="public" static="no">
+        <name>KERNEL_SPACE_SIZE</name>
+        <initializer>(8 MB)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="157" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aecbd22e428b6301e4e4c34e96af47b19" prot="public" static="no">
+        <name>MALLOC_SPACE</name>
+        <initializer>(KERNEL_SPACE + KERNEL_SPACE_SIZE)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="162" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="mem_module_8c_1a868034315919cceedc278c3f24d06e04" compoundref="mem_module_8c" startline="99" endline="107">allocMPage</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a15861042d55ace11a79fe0b3da5814e8" prot="public" static="no">
+        <name>MALLOC_SPACE_SIZE</name>
+        <initializer>(8 MB)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="167" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a1ec9bed1a229be7be1c30b971ac19148" prot="public" static="no">
+        <name>TOTAL_MEMORY_SIZE</name>
+        <initializer>(KERNEL_SPACE_SIZE + MALLOC_SPACE_SIZE)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="172" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" prot="public" static="no">
+        <name>PAGE_SIZE</name>
+        <initializer>(4 KB)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="179" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="179" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" compoundref="sh_memory_8c" startline="79" endline="122">_sys_shmget</referencedby>
+        <referencedby refid="mem_module_8c_1a1056bbd0c7d38416134d0645668eaf7d" compoundref="mem_module_8c" startline="79" endline="87">allocKPage</referencedby>
+        <referencedby refid="mem_module_8c_1a868034315919cceedc278c3f24d06e04" compoundref="mem_module_8c" startline="99" endline="107">allocMPage</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1afdb5118f31e3b405e768aae86185858f" prot="public" static="no">
+        <name>PAGE_ENTRY_SIZE</name>
+        <initializer>sizeof(unsigned int)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="184" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a8e5feaae0050abc2f048607651293efe" prot="public" static="no">
+        <name>PAGE_ENTRIES_PER_TABLE</name>
+        <initializer>(PAGE_SIZE / PAGE_ENTRY_SIZE)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="189" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="189" bodyend="-1"/>
+        <referencedby refid="mem_module_8c_1a6a84b1dac3ab7d785283bf1b99da1e26" compoundref="mem_module_8c" startline="89" endline="97">initKernelTable</referencedby>
+        <referencedby refid="mem_module_8c_1ae7015dddbf16d196ea6e8cc66f2a8d2f" compoundref="mem_module_8c" startline="109" endline="129">initMallocTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a23bbe65918fee446b09dc6d3f92e0bac" prot="public" static="no">
+        <name>KERNEL_TABLES_QTY</name>
+        <initializer>(KERNEL_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="194" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="194" bodyend="-1"/>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a6f5a06effdbd61bd2873b52fd019ac2d" prot="public" static="no">
+        <name>MALLOC_TABLES_QTY</name>
+        <initializer>(MALLOC_SPACE_SIZE / (PAGE_SIZE * PAGE_ENTRIES_PER_TABLE))</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="199" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a2fe5b1c83a789cd19496b550290a10e2" prot="public" static="no">
+        <name>PAGE_TABLES_QTY</name>
+        <initializer>(KERNEL_TABLES_QTY + MALLOC_TABLES_QTY)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="204" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="204" bodyend="-1"/>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a20851f5fd859765b86e8b9fc8b30572e" prot="public" static="no">
+        <name>FRAMES_PER_TABLE</name>
+        <initializer>(PAGE_ENTRIES_PER_TABLE / PAGES_PER_FRAME)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="211" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a7f80e4b553d435a097d07c74652ee861" prot="public" static="no">
+        <name>TOTAL_FRAMES_QTY</name>
+        <initializer>(MALLOC_TABLES_QTY * FRAMES_PER_TABLE)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="216" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="216" bodyend="-1"/>
+        <referencedby refid="mem_module_8c_1a196022e7c97d188da8545ca5575d515a" compoundref="mem_module_8c" startline="143" endline="153">getFrame</referencedby>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a2cac3b477c52f9e0329f6b6d8050aa34" prot="public" static="no">
+        <name>FIRST_KERNEL_TABLE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="223" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="223" bodyend="-1"/>
+        <referencedby refid="mem_module_8c_1a7a9e898c2f9b5aae935f0668c962d02f" compoundref="mem_module_8c" startline="38" endline="65">initPaging</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a8d40ab04e10902bcdca98d83ad7b5155" prot="public" static="no">
+        <name>FIRST_MALLOC_TABLE</name>
+        <initializer>FIRST_KERNEL_TABLE + KERNEL_TABLES_QTY</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="228" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ab84f195ddb9b6b192088157ecf8c835f" prot="public" static="no">
+        <name>PAGES_PER_INT</name>
+        <initializer>((int)(sizeof(unsigned int)) * 8)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="235" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a2d4f316ac84e27da715d76af7694e4f9" prot="public" static="no">
+        <name>INTS_PER_TABLE</name>
+        <initializer>(PAGE_ENTRIES_PER_TABLE / 32)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="240" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aa5efd9de5f0408f54365716967adbb87" prot="public" static="no">
+        <name>BITMAP_SIZE</name>
+        <initializer>(INTS_PER_TABLE * MALLOC_TABLES_QTY)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="245" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aa810745c50d2723a02ccb8059f7e11b6" prot="public" static="no">
+        <name>MAX_MAPPED_ADDRESS</name>
+        <initializer>(TOTAL_MEMORY_SIZE - 1)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="250" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ac64bf9bd32b5cab356a11a0259ea9fb6" prot="public" static="no">
+        <name>getBitmapIndex</name>
+        <param><defname>addr</defname></param>
+        <initializer>(((addr) / (unsigned)PAGE_SIZE) / (unsigned)PAGES_PER_INT)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="255" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aeab9875301d2688f746797e91126b16f" prot="public" static="no">
+        <name>getBitmapOffset</name>
+        <param><defname>addr</defname></param>
+        <initializer>(0x00000001 &lt;&lt; (((addr) / PAGE_SIZE) % PAGES_PER_INT))</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="260" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a9d6fc23740ab9f37272a3299949d3c11" prot="public" static="no">
+        <name>OFFSET_MASK</name>
+        <initializer>0xFFFFF000</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="265" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ae60b3b1ff706b666b7eaef0a715c4490" prot="public" static="no">
+        <name>ACS_PRESENT</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="272" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a0efe10800f018eacf8c3f55e7b37647e" prot="public" static="no">
+        <name>ACS_CSEG</name>
+        <initializer>0x18</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="277" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a8e220a1ec7efd60bb8e56d73f480825c" prot="public" static="no">
+        <name>ACS_DSEG</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="282" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a2ed04c0e682556517761ecb25b15fe12" prot="public" static="no">
+        <name>ACS_READ</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="287" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a409bddc73ed57ee81de6ca917cea2b27" prot="public" static="no">
+        <name>ACS_WRITE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="292" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a7a7ce494703b76e2a80a3e820be0fd49" prot="public" static="no">
+        <name>ACS_IDT</name>
+        <initializer>ACS_DSEG</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="297" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aab317390db9c07d896f467b7e2314698" prot="public" static="no">
+        <name>ACS_INT_386</name>
+        <initializer>0x0E</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="302" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" prot="public" static="no">
+        <name>ACS_INT</name>
+        <initializer>( ACS_PRESENT | ACS_INT_386 )</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="307" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="307" bodyend="-1"/>
+        <referencedby refid="kernel_8c_1a6b8fb674fb359f6ae53dc9c4fb7fc6be" compoundref="kernel_8c" startline="15" endline="59">kernel_main</referencedby>
+        <referencedby refid="exceptions_8c_1a9a0ae2f785726650de9637601aa4c965" compoundref="exceptions_8c" startline="273" endline="289">loadExceptionHandlers</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aa7ddb691bab273f0807425fe80040f1d" prot="public" static="no">
+        <name>ACS_CODE</name>
+        <initializer>(ACS_PRESENT | ACS_CSEG | ACS_READ)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="313" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1ac1572e04dde6fdf2710a883fff94cab4" prot="public" static="no">
+        <name>ACS_DATA</name>
+        <initializer>(ACS_PRESENT | ACS_DSEG | ACS_WRITE)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="318" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a2f319798ef0f9dd5926f95d90697b7ab" prot="public" static="no">
+        <name>ACS_STACK</name>
+        <initializer>(ACS_PRESENT | ACS_DSEG | ACS_WRITE)</initializer>
+        <briefdescription>
+<para>DefineBrief. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="323" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" prot="public" static="no">
+        <name>NULL</name>
+        <initializer>(void *)0x0</initializer>
+        <briefdescription>
+<para>NULL pointer definition. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h" line="328" bodyfile="/Users/Luciano/Desktop/flying-high/inc/defs.h" bodystart="328" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a5cd71748fd2bf784c6e4f481809a9b15" compoundref="syscall_8c" startline="160" endline="242">_sys_create_process</referencedby>
+        <referencedby refid="syscall_8c_1ae971be1b1f3083cc169d587cfc39f1e4" compoundref="syscall_8c" startline="86" endline="96">_sys_fread</referencedby>
+        <referencedby refid="syscall_8c_1a164efe2f95b7739dbe1af7970ae89054" compoundref="syscall_8c" startline="98" endline="108">_sys_fwrite</referencedby>
+        <referencedby refid="syscall_8c_1a1a5bc45712097f96eb8f29f3c8556c5f" compoundref="syscall_8c" startline="344" endline="346">_sys_get_level</referencedby>
+        <referencedby refid="syscall_8c_1ac4f145ecb7886299279cb31af7a45474" compoundref="syscall_8c" startline="263" endline="266">_sys_get_pid</referencedby>
+        <referencedby refid="syscall_8c_1a95a772ff88b957728418d0423a038508" compoundref="syscall_8c" startline="268" endline="270">_sys_get_ppid</referencedby>
+        <referencedby refid="syscall_8c_1a7e35393170d01151feb237e45374a318" compoundref="syscall_8c" startline="348" endline="350">_sys_get_priority</referencedby>
+        <referencedby refid="syscall_8c_1a3a8140629b64c39fb34eb595b2d1cce2" compoundref="syscall_8c" startline="51" endline="84">_sys_read</referencedby>
+        <referencedby refid="syscall_8c_1a283b696c91d432182271488d8d283004" compoundref="syscall_8c" startline="337" endline="342">_sys_set_level</referencedby>
+        <referencedby refid="sh_memory_8c_1a5fe312690d813e1d177d7bc76019c4e0" compoundref="sh_memory_8c" startline="124" endline="147">_sys_shmat</referencedby>
+        <referencedby refid="sh_memory_8c_1a5c13ce26761ac9aee72a441624bcf571" compoundref="sh_memory_8c" startline="79" endline="122">_sys_shmget</referencedby>
+        <referencedby refid="syscall_8c_1aa5a5e27a93dadcc8686704a4415c9cec" compoundref="syscall_8c" startline="362" endline="366">_sys_time</referencedby>
+        <referencedby refid="syscall_8c_1a45dd6dc5a68765db7ee3300ad0349155" compoundref="syscall_8c" startline="281" endline="291">_sys_wait_pid</referencedby>
+        <referencedby refid="syscall_8c_1a66b9bb4354c792ee6c467874ceb30cb3" compoundref="syscall_8c" startline="25" endline="49">_sys_write</referencedby>
+        <referencedby refid="bttlship_8c_1a52e47768a66b91e89d5546a8cb0f168c" compoundref="bttlship_8c" startline="12" endline="181">battleship</referencedby>
+        <referencedby refid="process_8c_1a400d6ff57b24d5bec48a1a28ad944081" compoundref="process_8c" startline="22" endline="24">createProcess</referencedby>
+        <referencedby refid="p_queue_p_8c_1ae86c353375c76752f2da8773bcdb1bf7" compoundref="p_queue_p_8c" startline="146" endline="165">deque</referencedby>
+        <referencedby refid="string_8c_1a15727281e2e7722634674f28022a9c09" compoundref="string_8c" startline="37" endline="57">doubleToString</referencedby>
+        <referencedby refid="p_queue_p_8c_1ac816b273d6f10ffc9d0fb76bc86fb4e4" compoundref="p_queue_p_8c" startline="120" endline="144">enque</referencedby>
+        <referencedby refid="process_8c_1a55e99c539cf7723ec15e856b7e0a8cee" compoundref="process_8c" startline="26" endline="29">exit</referencedby>
+        <referencedby refid="stdio_8c_1ab11a990e4f8863a1e7736e3c1d430092" compoundref="stdio_8c" startline="53" endline="64">fgetc</referencedby>
+        <referencedby refid="stdio_8c_1a2b3df0e66b41edab3c039191fe6cc4f9" compoundref="stdio_8c" startline="77" endline="84">fgets</referencedby>
+        <referencedby refid="stdio_8c_1af7aa5c359f41db5ffe4a6545628c02d1" compoundref="stdio_8c" startline="86" endline="91">flush</referencedby>
+        <referencedby refid="stdio_8c_1abe6299d5823dd023e610aaa619735a3f" compoundref="stdio_8c" startline="44" endline="51">fputc</referencedby>
+        <referencedby refid="stdio_8c_1a68236e664c1f0da049b25fba1c1695f6" compoundref="stdio_8c" startline="66" endline="75">fputs</referencedby>
+        <referencedby refid="p_queue_p_8c_1a2c853f35b6e0b2adc7626d27013638d6" compoundref="p_queue_p_8c" startline="98" endline="118">freePQueue</referencedby>
+        <referencedby refid="video__driver_8c_1a3c98653541da7b062ffb6bde6fbd8e00" compoundref="video__driver_8c" startline="315" endline="321">getCursorPosition</referencedby>
+        <referencedby refid="mem_module_8c_1a196022e7c97d188da8545ca5575d515a" compoundref="mem_module_8c" startline="143" endline="153">getFrame</referencedby>
+        <referencedby refid="process_8c_1a8c6fea79d2b1d923386e86255bcf9317" compoundref="process_8c" startline="79" endline="81">getLevel</referencedby>
+        <referencedby refid="process_8c_1ac61b207337ca21b3b309593fd1a0cb82" compoundref="process_8c" startline="47" endline="49">getpid</referencedby>
+        <referencedby refid="process_8c_1a556b7b3c8a853a6c86d847da7f008fc0" compoundref="process_8c" startline="51" endline="53">getppid</referencedby>
+        <referencedby refid="process_8c_1a8e1ac3494e27c30441640926f0f07b6f" compoundref="process_8c" startline="83" endline="85">getPriority</referencedby>
+        <referencedby refid="sys_process_8c_1a872dbe3f7089cf045fee774b6c4cc937" compoundref="sys_process_8c" startline="254" endline="258">getProcessName</referencedby>
+        <referencedby refid="process_8c_1a109666f73149f2d6bbead68763749fbd" compoundref="process_8c" startline="35" endline="37">getTty</referencedby>
+        <referencedby refid="process_8c_1a2933571ad11e89122adbe46a2a9147d6" compoundref="process_8c" startline="43" endline="45">getTTYFocusedProcess</referencedby>
+        <referencedby refid="process_8c_1a7473b5c0ee016e409accc07718d23891" compoundref="process_8c" startline="71" endline="73">getTTYMode</referencedby>
+        <referencedby refid="bin_8c_1a5bfde7b5020b14bdcb1c9269ab308dc5" compoundref="bin_8c" startline="14" endline="61">init</referencedby>
+        <referencedby refid="sh_memory_8c_1a574d3f5987a7f9a3723ac7bddaf4e060" compoundref="sh_memory_8c" startline="60" endline="77">initializeShMems</referencedby>
+        <referencedby refid="string_8c_1aa5815a3348ad67b65d8f8d9af8243b2c" compoundref="string_8c" startline="22" endline="35">intToString</referencedby>
+        <referencedby refid="process_8c_1a650cf0caaaa8b75f653c1c92818d03a4" compoundref="process_8c" startline="63" endline="65">kill</referencedby>
+        <referencedby refid="string_8c_1af765ecf76f1d5c177c07cdb436bf2e29" compoundref="string_8c" startline="141" endline="152">memcpy</referencedby>
+        <referencedby refid="process_8c_1ad56a3baae6f1c970d4eeb27f0abdb48c" compoundref="process_8c" startline="18" endline="20">memmap</referencedby>
+        <referencedby refid="sys_process_8c_1a9aa73aebdb67c7b8551305ec0ebf6087" compoundref="sys_process_8c" startline="93" endline="132">multitasker</referencedby>
+        <referencedby refid="p_queue_p_8c_1a71a9d33f7a1466b6b1e6d7dd391fdbe7" compoundref="p_queue_p_8c" startline="71" endline="96">newPQueue</referencedby>
+        <referencedby refid="p_queue_p_8c_1a7ee3c5c51cd1398ff0bc2006d32a8fe8" compoundref="p_queue_p_8c" startline="51" endline="69">printQueue</referencedby>
+        <referencedby refid="video__driver_8c_1a37c1bbc92418d2dcfe3e278e6b33f2fe" compoundref="video__driver_8c" startline="394" endline="411">putColoredStringAtFixedPos</referencedby>
+        <referencedby refid="ttys_8c_1aa0c166c59cfd83d43839b76afe6ac3ce" compoundref="ttys_8c" startline="539" endline="547">refreshTTY</referencedby>
+        <referencedby refid="semaphore_8c_1ad789c6f97a5592c78cb99d9413c9607b" compoundref="semaphore_8c" startline="79" endline="82">sem_free</referencedby>
+        <referencedby refid="semaphore_8c_1a46e2163685880ebc53e237c1e3ebf30e" compoundref="semaphore_8c" startline="75" endline="77">sem_get</referencedby>
+        <referencedby refid="semaphore_8c_1adf32347e1821519a91572b64a6c53101" compoundref="semaphore_8c" startline="89" endline="92">sem_signal</referencedby>
+        <referencedby refid="semaphore_8c_1a5d86815c472afe2d2175180835500008" compoundref="semaphore_8c" startline="84" endline="87">sem_wait</referencedby>
+        <referencedby refid="process_8c_1a04fead7e53a28d1b2d13bdebd80ddbea" compoundref="process_8c" startline="75" endline="77">setLevel</referencedby>
+        <referencedby refid="process_8c_1a8984ed6d44c45fc3a93b0c8fd217fab4" compoundref="process_8c" startline="87" endline="89">setPriority</referencedby>
+        <referencedby refid="process_8c_1ab5a4ab42ad24ecad7cb6354c4b5f7587" compoundref="process_8c" startline="99" endline="101">setProcessAtomicity</referencedby>
+        <referencedby refid="process_8c_1af886a211159a5c948f114280d2030a06" compoundref="process_8c" startline="31" endline="33">setTty</referencedby>
+        <referencedby refid="process_8c_1a815d6c1ef38269f70826c824a5eab524" compoundref="process_8c" startline="39" endline="41">setTTYFocusedProcess</referencedby>
+        <referencedby refid="process_8c_1aa4f3855e8a226d285a523789a377fe04" compoundref="process_8c" startline="67" endline="69">setTTYMode</referencedby>
+        <referencedby refid="sh_memory_8c_1afed1d99151e26266e7bdc8e07e1283e6" compoundref="sh_memory_8c" startline="35" endline="37">shmat</referencedby>
+        <referencedby refid="sh_memory_8c_1a1c89b0ee5786c3cf217319a997eb5add" compoundref="sh_memory_8c" startline="39" endline="41">shmdt</referencedby>
+        <referencedby refid="sh_memory_8c_1a8d7a1c046c2493a933e170ae65a20b18" compoundref="sh_memory_8c" startline="31" endline="33">shmget</referencedby>
+        <referencedby refid="string_8c_1a11bd144d7d44914099a3aeddf1c8567d" compoundref="string_8c" startline="82" endline="93">strcmp</referencedby>
+        <referencedby refid="string_8c_1a5cd51814499c616414a5b60a0e33ea57" compoundref="string_8c" startline="154" endline="192">strtok</referencedby>
+        <referencedby refid="sys_malloc_8c_1a9dd7a27b9a2dd7b9249af7fdef77fb4f" compoundref="sys_malloc_8c" startline="35" endline="46">sysRealloc</referencedby>
+        <referencedby refid="process_8c_1a989eea779d2e0a14ed31f0a16aee69bc" compoundref="process_8c" startline="91" endline="93">time</referencedby>
+        <referencedby refid="process_8c_1ae735fa27b5b798dab27c5d1077802faf" compoundref="process_8c" startline="95" endline="97">upTime</referencedby>
+        <referencedby refid="process_8c_1a6655447bab00753d59759423bf28e22e" compoundref="process_8c" startline="55" endline="57">wait</referencedby>
+        <referencedby refid="process_8c_1a750680863e18ddefd3f3eae7d04cbe96" compoundref="process_8c" startline="59" endline="61">waitpid</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>OS inner defines. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Luciano Zemin, Nicolás Magni, Nicolás Purita </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_DEFS_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_DEFS_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="17" refid="defs_8h_1a71809484a26cd96c6abe839a0a8a289d" refkind="member"><highlight class="preprocessor">#define<sp/>byte<sp/>unsigned<sp/>char</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="22" refid="defs_8h_1a836535f59bf515522a395858a8029d42" refkind="member"><highlight class="preprocessor">#define<sp/>word<sp/>short<sp/>int</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="27" refid="defs_8h_1a55849dc98f28432a4601c29a4a352a97" refkind="member"><highlight class="preprocessor">#define<sp/>dword<sp/>int</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="32" refid="defs_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" refkind="member"><highlight class="preprocessor">#define<sp/>TRUE<sp/>1</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="37" refid="defs_8h_1aa93f0eb578d23995850d61f7d61c55c1" refkind="member"><highlight class="preprocessor">#define<sp/>FALSE<sp/>!TRUE</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="42" refid="defs_8h_1aba51915c87d64af47fb1cc59348961c9" refkind="member"><highlight class="preprocessor">#define<sp/>OK<sp/><sp/><sp/><sp/><sp/><sp/>TRUE</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="47" refid="defs_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" refkind="member"><highlight class="preprocessor">#define<sp/>ERROR<sp/>FALSE</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="53" refid="defs_8h_1a8026e8d87908b0239264d643c90183f5" refkind="member"><highlight class="preprocessor">#define<sp/>_READ<sp/><sp/><sp/>0x01</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="58" refid="defs_8h_1a622e22a8bb12b59a4e14802f6aa1737e" refkind="member"><highlight class="preprocessor">#define<sp/>_WRITE<sp/><sp/>0x02</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="64" refid="defs_8h_1ad930a240d62012e99d9f9dc2b618b3e8" refkind="member"><highlight class="preprocessor">#define<sp/>SEND_TO_VIDEO<sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="69" refid="defs_8h_1ae30b01f0637fa2a2ef0ee72fbbaee2a2" refkind="member"><highlight class="preprocessor">#define<sp/>WRITE_ON_TTY<sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="75" refid="defs_8h_1a057b722e3d1168cf748c4936f59b7769" refkind="member"><highlight class="preprocessor">#define<sp/>TTY_RAW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="80" refid="defs_8h_1afd70646efe5984e361c17010322a5711" refkind="member"><highlight class="preprocessor">#define<sp/>TTY_CANONICAL<sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="86" refid="defs_8h_1a0b674752cca6d434a1a69f40877eb2be" refkind="member"><highlight class="preprocessor">#define<sp/>LOAD<sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="91" refid="defs_8h_1ab2868d85c8a74e3ee08bdc44580e2235" refkind="member"><highlight class="preprocessor">#define<sp/>SAVE<sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="97" refid="defs_8h_1ac00bfb46347d26fdc58568fe1ab5fa5b" refkind="member"><highlight class="preprocessor">#define<sp/>STDIN<sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="102" refid="defs_8h_1a8875037d0772a4fc34516f1e03d7e238" refkind="member"><highlight class="preprocessor">#define<sp/>STDOUT<sp/><sp/>1</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="107" refid="defs_8h_1ac242dc8b10d052be6043664a044fdb87" refkind="member"><highlight class="preprocessor">#define<sp/>IN_ATT<sp/><sp/>2</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="112" refid="defs_8h_1a26743ec6d52be788fe60acfe2865d5ae" refkind="member"><highlight class="preprocessor">#define<sp/>OUT_ATT<sp/>3</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="118" refid="defs_8h_1a7ae1ae649327b67ce210e47ea1ed07dc" refkind="member"><highlight class="preprocessor">#define<sp/>ATOMIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="123" refid="defs_8h_1a33d80cf420a3739faa00760673eee7db" refkind="member"><highlight class="preprocessor">#define<sp/>UNATOMIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!ATOMIC</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="128" refid="defs_8h_1a2a375179c125d0867430c6778c343b6f" refkind="member"><highlight class="preprocessor">#define<sp/>FOREGROUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="133" refid="defs_8h_1a850b2f07a67b73890889e63fb8a49fda" refkind="member"><highlight class="preprocessor">#define<sp/>BACKGROUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>Units<sp/>Definitions<sp/>*/</highlight></codeline>
+<codeline lineno="140" refid="defs_8h_1a1841fd1a462d245d8c73dce55e2f45da" refkind="member"><highlight class="preprocessor">#define<sp/>KB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(1<sp/>&lt;&lt;<sp/>10)</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="145" refid="defs_8h_1aa6b38d492364d98453284934ed7caee9" refkind="member"><highlight class="preprocessor">#define<sp/>MB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(1<sp/>&lt;&lt;<sp/>20)</highlight></codeline>
+<codeline lineno="146"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Memory<sp/>Space<sp/>Model<sp/>*/</highlight></codeline>
+<codeline lineno="152" refid="defs_8h_1a94ad616f6fdced1466e60a7add259f3c" refkind="member"><highlight class="preprocessor">#define<sp/>KERNEL_SPACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="157" refid="defs_8h_1a2d85dcc33ff0b653b17210b6861b9030" refkind="member"><highlight class="preprocessor">#define<sp/>KERNEL_SPACE_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(8<sp/>MB)</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="162" refid="defs_8h_1aecbd22e428b6301e4e4c34e96af47b19" refkind="member"><highlight class="preprocessor">#define<sp/>MALLOC_SPACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(KERNEL_SPACE<sp/>+<sp/>KERNEL_SPACE_SIZE)</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="167" refid="defs_8h_1a15861042d55ace11a79fe0b3da5814e8" refkind="member"><highlight class="preprocessor">#define<sp/>MALLOC_SPACE_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(8<sp/>MB)</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="172" refid="defs_8h_1a1ec9bed1a229be7be1c30b971ac19148" refkind="member"><highlight class="preprocessor">#define<sp/>TOTAL_MEMORY_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(KERNEL_SPACE_SIZE<sp/>+<sp/>MALLOC_SPACE_SIZE)</highlight></codeline>
+<codeline lineno="173"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Page<sp/>Definitions<sp/>*/</highlight></codeline>
+<codeline lineno="179" refid="defs_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" refkind="member"><highlight class="preprocessor">#define<sp/>PAGE_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4<sp/>KB)</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="184" refid="defs_8h_1afdb5118f31e3b405e768aae86185858f" refkind="member"><highlight class="preprocessor">#define<sp/>PAGE_ENTRY_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof(unsigned<sp/>int)</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="189" refid="defs_8h_1a8e5feaae0050abc2f048607651293efe" refkind="member"><highlight class="preprocessor">#define<sp/>PAGE_ENTRIES_PER_TABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PAGE_SIZE<sp/>/<sp/>PAGE_ENTRY_SIZE)</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="194" refid="defs_8h_1a23bbe65918fee446b09dc6d3f92e0bac" refkind="member"><highlight class="preprocessor">#define<sp/>KERNEL_TABLES_QTY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(KERNEL_SPACE_SIZE<sp/>/<sp/>(PAGE_SIZE<sp/>*<sp/>PAGE_ENTRIES_PER_TABLE))</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="199" refid="defs_8h_1a6f5a06effdbd61bd2873b52fd019ac2d" refkind="member"><highlight class="preprocessor">#define<sp/>MALLOC_TABLES_QTY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MALLOC_SPACE_SIZE<sp/>/<sp/>(PAGE_SIZE<sp/>*<sp/>PAGE_ENTRIES_PER_TABLE))</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="204" refid="defs_8h_1a2fe5b1c83a789cd19496b550290a10e2" refkind="member"><highlight class="preprocessor">#define<sp/>PAGE_TABLES_QTY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(KERNEL_TABLES_QTY<sp/>+<sp/>MALLOC_TABLES_QTY)</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Frame<sp/>Definitions<sp/>*/</highlight></codeline>
+<codeline lineno="211" refid="defs_8h_1a20851f5fd859765b86e8b9fc8b30572e" refkind="member"><highlight class="preprocessor">#define<sp/>FRAMES_PER_TABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PAGE_ENTRIES_PER_TABLE<sp/>/<sp/>PAGES_PER_FRAME)</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="216" refid="defs_8h_1a7f80e4b553d435a097d07c74652ee861" refkind="member"><highlight class="preprocessor">#define<sp/>TOTAL_FRAMES_QTY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MALLOC_TABLES_QTY<sp/>*<sp/>FRAMES_PER_TABLE)</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Table&apos;s<sp/>Index<sp/>Definitions<sp/>*/</highlight></codeline>
+<codeline lineno="223" refid="defs_8h_1a2cac3b477c52f9e0329f6b6d8050aa34" refkind="member"><highlight class="preprocessor">#define<sp/>FIRST_KERNEL_TABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="224"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="228" refid="defs_8h_1a8d40ab04e10902bcdca98d83ad7b5155" refkind="member"><highlight class="preprocessor">#define<sp/>FIRST_MALLOC_TABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FIRST_KERNEL_TABLE<sp/>+<sp/>KERNEL_TABLES_QTY</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Free<sp/>Memory<sp/>Bitmap<sp/>Definitions<sp/>*/</highlight></codeline>
+<codeline lineno="235" refid="defs_8h_1ab84f195ddb9b6b192088157ecf8c835f" refkind="member"><highlight class="preprocessor">#define<sp/>PAGES_PER_INT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((int)(sizeof(unsigned<sp/>int))<sp/>*<sp/>8)</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="240" refid="defs_8h_1a2d4f316ac84e27da715d76af7694e4f9" refkind="member"><highlight class="preprocessor">#define<sp/>INTS_PER_TABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PAGE_ENTRIES_PER_TABLE<sp/>/<sp/>32)</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="245" refid="defs_8h_1aa5efd9de5f0408f54365716967adbb87" refkind="member"><highlight class="preprocessor">#define<sp/>BITMAP_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(INTS_PER_TABLE<sp/>*<sp/>MALLOC_TABLES_QTY)</highlight></codeline>
+<codeline lineno="246"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="250" refid="defs_8h_1aa810745c50d2723a02ccb8059f7e11b6" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_MAPPED_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(TOTAL_MEMORY_SIZE<sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="251"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="255" refid="defs_8h_1ac64bf9bd32b5cab356a11a0259ea9fb6" refkind="member"><highlight class="preprocessor">#define<sp/>getBitmapIndex(addr)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((addr)<sp/>/<sp/>(unsigned)PAGE_SIZE)<sp/>/<sp/>(unsigned)PAGES_PER_INT)</highlight></codeline>
+<codeline lineno="256"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="260" refid="defs_8h_1aeab9875301d2688f746797e91126b16f" refkind="member"><highlight class="preprocessor">#define<sp/>getBitmapOffset(addr)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x00000001<sp/>&lt;&lt;<sp/>(((addr)<sp/>/<sp/>PAGE_SIZE)<sp/>%<sp/>PAGES_PER_INT))</highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="265" refid="defs_8h_1a9d6fc23740ab9f37272a3299949d3c11" refkind="member"><highlight class="preprocessor">#define<sp/>OFFSET_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xFFFFF000</highlight></codeline>
+<codeline lineno="266"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Flags<sp/>para<sp/>derechos<sp/>de<sp/>acceso<sp/>de<sp/>los<sp/>segmentos<sp/>*/</highlight></codeline>
+<codeline lineno="272" refid="defs_8h_1ae60b3b1ff706b666b7eaef0a715c4490" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_PRESENT<sp/><sp/><sp/><sp/><sp/>0x80<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>segmento<sp/>presente<sp/>en<sp/>memoria<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="defs_8h_1a0efe10800f018eacf8c3f55e7b37647e" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_CSEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x18<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>segmento<sp/>de<sp/>codigo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="defs_8h_1a8e220a1ec7efd60bb8e56d73f480825c" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_DSEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>segmento<sp/>de<sp/>datos<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="defs_8h_1a2ed04c0e682556517761ecb25b15fe12" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_READ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>segmento<sp/>de<sp/>lectura<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="defs_8h_1a409bddc73ed57ee81de6ca917cea2b27" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_WRITE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>segmento<sp/>de<sp/>escritura<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="defs_8h_1a7a7ce494703b76e2a80a3e820be0fd49" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_IDT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ACS_DSEG</highlight></codeline>
+<codeline lineno="298"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="302" refid="defs_8h_1aab317390db9c07d896f467b7e2314698" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_INT_386<sp/><sp/><sp/><sp/><sp/>0x0E<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Interrupt<sp/>GATE<sp/>32<sp/>bits<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="defs_8h_1a8cc2a7c8288db5cf7281a58f92bc1f17" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_INT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>ACS_PRESENT<sp/>|<sp/>ACS_INT_386<sp/>)</highlight></codeline>
+<codeline lineno="308"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="313" refid="defs_8h_1aa7ddb691bab273f0807425fe80040f1d" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_CODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ACS_PRESENT<sp/>|<sp/>ACS_CSEG<sp/>|<sp/>ACS_READ)</highlight></codeline>
+<codeline lineno="314"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="318" refid="defs_8h_1ac1572e04dde6fdf2710a883fff94cab4" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ACS_PRESENT<sp/>|<sp/>ACS_DSEG<sp/>|<sp/>ACS_WRITE)</highlight></codeline>
+<codeline lineno="319"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="323" refid="defs_8h_1a2f319798ef0f9dd5926f95d90697b7ab" refkind="member"><highlight class="preprocessor">#define<sp/>ACS_STACK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ACS_PRESENT<sp/>|<sp/>ACS_DSEG<sp/>|<sp/>ACS_WRITE)</highlight></codeline>
+<codeline lineno="324"><highlight class="preprocessor"></highlight><highlight class="normal">#define<sp/><ref refid="defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" tooltip="NULL pointer definition.">NULL</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)0x0</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/defs.h"/>
+  </compounddef>
+</doxygen>

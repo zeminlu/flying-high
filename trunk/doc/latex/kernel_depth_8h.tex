@@ -1,0 +1,110 @@
+\hypertarget{kernel_depth_8h}{
+\section{inc/kernelDepth.h File Reference}
+\label{kernel_depth_8h}\index{inc/kernelDepth.h@{inc/kernelDepth.h}}
+}
+
+
+Kernel syscalls depth utilities.  
+
+
+{\ttfamily \#include \char`\"{}memModule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}kasm.h\char`\"{}}\par
+Include dependency graph for kernelDepth.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{kernel_depth_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{kernel_depth_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{kernel_depth_8h_a60e4cee7d263ef4134a3d83ab35de9c6}{increaseKernelDepth} (void)
+\begin{DoxyCompactList}\small\item\em This function increases the depth relating to the iteration of system calls maintaining the presence of the kernel heap pages. \item\end{DoxyCompactList}\item 
+void \hyperlink{kernel_depth_8h_a12d75a01091aa2aef0b93c98f76b859d}{decreaseKernelDepth} (void)
+\begin{DoxyCompactList}\small\item\em This function decreases the depth relating to the iteration of system calls maintaining the presence of the kernel heap pages if needed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kernel syscalls depth utilities. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{kernel_depth_8h_source}{kernelDepth.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{kernel_depth_8h_a12d75a01091aa2aef0b93c98f76b859d}{
+\index{kernelDepth.h@{kernelDepth.h}!decreaseKernelDepth@{decreaseKernelDepth}}
+\index{decreaseKernelDepth@{decreaseKernelDepth}!kernelDepth.h@{kernelDepth.h}}
+\subsubsection[{decreaseKernelDepth}]{\setlength{\rightskip}{0pt plus 5cm}void decreaseKernelDepth (void)}}
+\label{kernel_depth_8h_a12d75a01091aa2aef0b93c98f76b859d}
+
+
+This function decreases the depth relating to the iteration of system calls maintaining the presence of the kernel heap pages if needed. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{kernel_depth_8h_a12d75a01091aa2aef0b93c98f76b859d}{decreaseKernelDepth()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 23 of file kernelDepth.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{kernel_depth_8h_a12d75a01091aa2aef0b93c98f76b859d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{kernel_depth_8h_a12d75a01091aa2aef0b93c98f76b859d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{kernel_depth_8h_a60e4cee7d263ef4134a3d83ab35de9c6}{
+\index{kernelDepth.h@{kernelDepth.h}!increaseKernelDepth@{increaseKernelDepth}}
+\index{increaseKernelDepth@{increaseKernelDepth}!kernelDepth.h@{kernelDepth.h}}
+\subsubsection[{increaseKernelDepth}]{\setlength{\rightskip}{0pt plus 5cm}void increaseKernelDepth (void)}}
+\label{kernel_depth_8h_a60e4cee7d263ef4134a3d83ab35de9c6}
+
+
+This function increases the depth relating to the iteration of system calls maintaining the presence of the kernel heap pages. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{kernel_depth_8h_a12d75a01091aa2aef0b93c98f76b859d}{decreaseKernelDepth()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 14 of file kernelDepth.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{kernel_depth_8h_a60e4cee7d263ef4134a3d83ab35de9c6_cgraph}
+\end{center}
+\end{figure}
+
+

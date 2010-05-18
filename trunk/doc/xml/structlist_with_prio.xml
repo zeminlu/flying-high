@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structlist_with_prio" kind="struct" prot="public">
+    <compoundname>listWithPrio</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlist_with_prio_1acec9ce2df15222151ad66fcb1d74eb9f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="25" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlist_with_prio_1a671979afa869339d57da6ad30c0498d8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pQueueDim</definition>
+        <argsstring></argsstring>
+        <name>pQueueDim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="26" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlist_with_prio_1aaea2707399dfe92afae4ef90749f7542" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_node__t" kindref="compound">Node_t</ref> *</type>
+        <definition>Node_t* first</definition>
+        <argsstring></argsstring>
+        <name>first</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="27" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlist_with_prio_1a1b88fdeb724166cbdf6717d7ba4b49c6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_node__t" kindref="compound">Node_t</ref> *</type>
+        <definition>Node_t* last</definition>
+        <argsstring></argsstring>
+        <name>last</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="28" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="78">
+        <label>Node_t</label>
+        <link refid="struct_node__t"/>
+        <childnode refid="78" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="77">
+        <label>listWithPrio</label>
+        <link refid="structlist_with_prio"/>
+        <childnode refid="78" relation="usage">
+          <edgelabel>last</edgelabel>
+          <edgelabel>first</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" line="24" bodyfile="/Users/Luciano/Desktop/flying-high/src/pQueueP.c" bodystart="24" bodyend="29"/>
+    <listofallmembers>
+      <member refid="structlist_with_prio_1aaea2707399dfe92afae4ef90749f7542" prot="public" virt="non-virtual"><scope>listWithPrio</scope><name>first</name></member>
+      <member refid="structlist_with_prio_1a1b88fdeb724166cbdf6717d7ba4b49c6" prot="public" virt="non-virtual"><scope>listWithPrio</scope><name>last</name></member>
+      <member refid="structlist_with_prio_1a671979afa869339d57da6ad30c0498d8" prot="public" virt="non-virtual"><scope>listWithPrio</scope><name>pQueueDim</name></member>
+      <member refid="structlist_with_prio_1acec9ce2df15222151ad66fcb1d74eb9f" prot="public" virt="non-virtual"><scope>listWithPrio</scope><name>priority</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

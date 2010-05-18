@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$process_8h.html#ac61b207337ca21b3b309593fd1a0cb82" title="Retrieves the calling process&#39; pid." alt="" coords="157,5,221,35"/>
+<area shape="rect" id="node7" href="$process_8h.html#a109666f73149f2d6bbead68763749fbd" title="Retrieves the given process pid&#39;s tty." alt="" coords="155,59,224,88"/>
+<area shape="rect" id="node10" href="$process_8h.html#ab5a4ab42ad24ecad7cb6354c4b5f7587" title="Sets the given pid process&#39; atomicity." alt="" coords="108,112,271,141"/>
+<area shape="rect" id="node13" href="$sys_process_8h.html#a2cd7c071907edcb9f8151c8519d4b27e" title="Blocks the calling process until it&#39;s tty is signaled." alt="" coords="152,165,227,195"/>
+<area shape="rect" id="node5" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="359,59,415,88"/>
+<area shape="rect" id="node15" href="$sys_process_8h.html#a4e14e480ef0c76ed52ff2c261e9d13cb" title="Forces the call to the multitasker." alt="" coords="320,165,453,195"/>
+</map>

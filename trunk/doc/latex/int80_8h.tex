@@ -1,0 +1,88 @@
+\hypertarget{int80_8h}{
+\section{inc/int80.h File Reference}
+\label{int80_8h}\index{inc/int80.h@{inc/int80.h}}
+}
+
+
+int 80 generic calls.  
+
+
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=420pt]{int80_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{int80_8h_a36ef33b2d2512c40b2aee77f85c56c38}{int80} (int eax, void $\ast$ebx, void $\ast$ecx, void $\ast$edx)
+\begin{DoxyCompactList}\small\item\em copy the parameters to the processor registers. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{int80_8h_a68310308ad9c6753621ad8d0a790ddfd}{int80ext} (int eax, void $\ast$ebx, void $\ast$ecx, void $\ast$edx, void $\ast$edi, void $\ast$esi)
+\begin{DoxyCompactList}\small\item\em copy the parameters to the processor registers. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+int 80 generic calls. \begin{DoxyAuthor}{Author}
+Luciano Zemin, Nicolás Magni, Nicolás Purita 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{int80_8h_source}{int80.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{int80_8h_a36ef33b2d2512c40b2aee77f85c56c38}{
+\index{int80.h@{int80.h}!int80@{int80}}
+\index{int80@{int80}!int80.h@{int80.h}}
+\subsubsection[{int80}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ int80 (int {\em eax}, \/  void $\ast$ {\em ebx}, \/  void $\ast$ {\em ecx}, \/  void $\ast$ {\em edx})}}
+\label{int80_8h_a36ef33b2d2512c40b2aee77f85c56c38}
+
+
+copy the parameters to the processor registers. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em eax}]eax register. \item[{\em ebx}]ebx register. \item[{\em ecx}]ecx register. \item[{\em edx}]edx register.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value returned by the function that the int 80 invoked. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=351pt]{int80_8h_a36ef33b2d2512c40b2aee77f85c56c38_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{int80_8h_a68310308ad9c6753621ad8d0a790ddfd}{
+\index{int80.h@{int80.h}!int80ext@{int80ext}}
+\index{int80ext@{int80ext}!int80.h@{int80.h}}
+\subsubsection[{int80ext}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ int80ext (int {\em eax}, \/  void $\ast$ {\em ebx}, \/  void $\ast$ {\em ecx}, \/  void $\ast$ {\em edx}, \/  void $\ast$ {\em edi}, \/  void $\ast$ {\em esi})}}
+\label{int80_8h_a68310308ad9c6753621ad8d0a790ddfd}
+
+
+copy the parameters to the processor registers. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em eax}]eax register. \item[{\em ebx}]ebx register. \item[{\em ecx}]ecx register. \item[{\em edx}]edx register. \item[{\em edi}]edi register. \item[{\em esi}]esi register.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value returned by the function that the int 80 invoked. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{int80_8h_a68310308ad9c6753621ad8d0a790ddfd_icgraph}
+\end{center}
+\end{figure}
+
+

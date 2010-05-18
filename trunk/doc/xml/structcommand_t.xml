@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structcommand_t" kind="struct" prot="public">
+    <compoundname>commandT</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcommand_t_1ade9cba72805fe52685a1deea307a8e82" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="289" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcommand_t_1aaadded894dece7b4c2b3d51d18ada303" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a4688631f0fdd9ac08d416e42573c9cf7" kindref="member">shellFuncT</ref></type>
+        <definition>shellFuncT func</definition>
+        <argsstring></argsstring>
+        <name>func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="290" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcommand_t_1aecae62b0d3cecad6022e749f64cc8a8e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* helpMsg</definition>
+        <argsstring></argsstring>
+        <name>helpMsg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="291" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The command struct. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Luciano/Desktop/flying-high/inc/types.h" line="288" bodyfile="/Users/Luciano/Desktop/flying-high/inc/types.h" bodystart="288" bodyend="292"/>
+    <listofallmembers>
+      <member refid="structcommand_t_1ade9cba72805fe52685a1deea307a8e82" prot="public" virt="non-virtual"><scope>commandT</scope><name>command</name></member>
+      <member refid="structcommand_t_1aaadded894dece7b4c2b3d51d18ada303" prot="public" virt="non-virtual"><scope>commandT</scope><name>func</name></member>
+      <member refid="structcommand_t_1aecae62b0d3cecad6022e749f64cc8a8e" prot="public" virt="non-virtual"><scope>commandT</scope><name>helpMsg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
