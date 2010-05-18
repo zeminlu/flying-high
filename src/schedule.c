@@ -25,7 +25,7 @@ extern process_t *initProcess;
 
 extern int qtyProccessTable;
 
-static int Algorithim = ROUND_ROBIN;
+static int Algorithim = RPG;
 
 static int prevPro = 0;
 
@@ -50,7 +50,7 @@ static process_t * roundRobinSchedule()
 		++i;
 		
 		if( i == MAX_PROCESS ){
-			i = 1;
+			i = 0;
 		}
 	}
 	return initProcess;
@@ -112,6 +112,10 @@ void increaseRPGCounter()
 
 void changeAlgorithimSchedule( void ){
 	Algorithim = (Algorithim == ROUND_ROBIN ? RPG : ROUND_ROBIN);
+	if( Algorithim == ROUND_ROBIN )
+		puts("Ahora esta corriendo Round Robin\n");
+	else	
+		puts("Ahora esta corriendo RPG\n");
 }
 
 
