@@ -75,7 +75,7 @@ int initMultitasker(pfunc_t init) {
 		}
 	}
 	
-	if ( (pid = sysCreateProcess("init", init, 0, BACKGROUND)) == -1 ) {
+	if ( (pid = createProcess("init", init, 0, BACKGROUND)) == -1 ) {
 		return FALSE;
 	}
 	

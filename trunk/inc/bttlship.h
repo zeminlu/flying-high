@@ -25,14 +25,14 @@
 #define N_Z         5       /* Max length of ship */
 #define N_SHIPS     6       /* Max number of ships */
 
-#define INP_NONE    0       /* No input / not recognizable */
+#define INP_NONE    0       /* No input not recognizable */
 #define INP_YX      1       /* YX was given */
 
-#define LOCK        lockTable(0,1)  /* Lock Table */
-#define UNLOCK      lockTable(0,0)  /* Unlock Table */
+#define LOCK        lockTable(0,1, &table)  /* Lock Table */
+#define UNLOCK      lockTable(0,0, &table)  /* Unlock Table */
 
-#define WAIT2       lockTable(1,1)  /* Wait for Notify */
-#define NOTIFY2     lockTable(1,0)  /* Notify player 1 */
+#define WAIT2       lockTable(1,1, &table)  /* Wait for Notify */
+#define NOTIFY2     lockTable(1,0, &table)  /* Notify player 1 */
 
 /*
  * Table flags :
@@ -47,7 +47,7 @@
 /*
  * Shared Memory Table :
  */
-struct S_TABLE {
+typedef struct S_TABLE {
     int     semid;          /* Locking sem IPC ID */
 	int		waitSemid;
     struct  {
@@ -56,15 +56,13 @@ struct S_TABLE {
     }       player[2];
     char    sea[N_X][N_Y];  /* Matrix of sea locations */
     char    flg[N_X][N_Y];  /* Flags */
-};
-
-extern struct S_TABLE *table[2];
+}S_TABLE;
 
 extern int shmid;           /* Shared Memory IPC ID */
 extern int semid;           /* Table locking semaphore */
 extern char *shmp;          /* Pointer to shared memory */
-extern int us[2];              /* 0=starter / 1=challenger */
-extern int them[2];            /* 1=challenger / 0=starter */
+extern int us;              /* 0=starter / 1=challenger */
+extern int them;            /* 1=challenger / 0=starter */
 extern int flg_game_over;   /* != 0 => game over */
 
 /**
@@ -84,7 +82,7 @@ extern void cleanup(void);
  *
  */
 
-extern void attachTable(void);
+extern void attachTable(S_TABLE **table);
 
 /**
  * \fn void lockTable(int semx,int block)
@@ -103,7 +101,7 @@ extern void attachTable(void);
  *
  */
 
-extern void lockTable(int semx,int block);
+extern void lockTable(int semx,int block, S_TABLE **tableS);
 
 /**
  * \fn void recount(void)
@@ -114,7 +112,7 @@ extern void lockTable(int semx,int block);
  *
  */
 
-extern void recount(int player);
+extern void recount(S_TABLE **table);
 
 /**
  * \fn void bomb(int x,int y)
@@ -127,7 +125,7 @@ extern void recount(int player);
  *
  */
 
-extern void bomb(int x,int y, int player);
+extern void bomb(int x,int y, S_TABLE **table);
 
 /**
  * \fn int getInput(int *px,int *py)
@@ -141,7 +139,7 @@ extern void bomb(int x,int y, int player);
  *
  */
 
-extern int getInput(int *px,int *py);
+extern int getInput(int *px,int *py, S_TABLE **table);
 
 /**
  * \fn int draw_hz(int sx,int sy,int z,int who)
@@ -155,7 +153,7 @@ extern int getInput(int *px,int *py);
  *
  */
 
-extern int draw_hz(int sx,int sy,int z,int who, int player);
+extern int draw_hz(int sx,int sy,int z,int who, S_TABLE **table);
 
 /**
  * \fn int draw_vt(int sx,int sy,int z,int who)
@@ -169,7 +167,7 @@ extern int draw_hz(int sx,int sy,int z,int who, int player);
  *
  */
 
-extern int draw_vt(int sx,int sy,int z,int who, int player);
+extern int draw_vt(int sx,int sy,int z,int who, S_TABLE **table);
 
 /**
  * \fn void genBattle(void)
@@ -177,7 +175,7 @@ extern int draw_vt(int sx,int sy,int z,int who, int player);
  * 		\brief It generates the table
  */
 
-extern void genBattle(int player);
+extern void genBattle(S_TABLE **table);
 
 /**
  * \fn void showRow(void)
@@ -194,7 +192,7 @@ extern void showRow(void);
  * 		\brief It prints the table of the battlehsip
  */
 
-extern void showBattle(int player);
+extern void showBattle(S_TABLE **table, int us, int them);
 
 /**
  * \fn int battleship()

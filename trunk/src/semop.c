@@ -17,19 +17,21 @@
  *          1 : perform wait
  */
 void
-lockTable(int semx,int block) {
+lockTable(int semx,int block, S_TABLE **tableS) {
+	
+	S_TABLE *table = *tableS;
 	
 	if( !semx ){
 		if( block ){
-			sem_wait(table[0]->semid);
+			sem_wait(table->semid);
 		}else{
-			sem_signal(table[0]->semid);
+			sem_signal(table->semid);
 		}
 	}else{
 		if( block ){
-			sem_wait(table[0]->waitSemid);
+			sem_wait(table->waitSemid);
 		}else{
-			sem_signal(table[0]->waitSemid);
+			sem_signal(table->waitSemid);
 		}
 	}
 }
