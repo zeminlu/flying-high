@@ -23,6 +23,8 @@ extern process_t *nextProcess;
 
 extern process_t *initProcess;
 
+extern process_t *runningProcess;
+
 extern int qtyProccessTable;
 
 static int Algorithim = RPG;
@@ -49,8 +51,8 @@ static process_t * roundRobinSchedule()
 		
 		++i;
 		
-		if( i == MAX_PROCESS ){
-			i = 0;
+		if( i == MAX_PROCESS - 1 ){
+			return runningProcess;
 		}
 	}
 	return initProcess;
