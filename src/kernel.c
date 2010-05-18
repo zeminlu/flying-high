@@ -1,7 +1,7 @@
 /**
  *	\file kernel.c
  *
- *		\brief Brief.
+ *		\brief Kernel module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

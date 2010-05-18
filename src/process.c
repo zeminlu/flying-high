@@ -1,7 +1,7 @@
 /**
  *	\file process.c
  *
- *		\brief Brief.
+ *		\brief All the process functions that invoke syscalls.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

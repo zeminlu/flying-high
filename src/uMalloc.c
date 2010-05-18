@@ -1,7 +1,7 @@
 /**
  *	\file uMalloc.c
  *
- *		\brief Brief.
+ *		\brief User malloc module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

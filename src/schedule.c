@@ -1,7 +1,7 @@
 /**
  *	\file schedule.c
  *
- *		\brief Brief.
+ *		\brief The OS scheduler module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

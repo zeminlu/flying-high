@@ -1,7 +1,7 @@
 /**
  *	\file ttys.c
  *
- *		\brief Brief.
+ *		\brief The tty module implementation.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

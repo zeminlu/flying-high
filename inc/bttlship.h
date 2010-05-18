@@ -67,7 +67,7 @@ typedef struct S_TABLE {
  *		\param semid The id of the semaphore.
  *
  */
-extern void cleanup(key_t shmid, key_t semid);
+void cleanup(key_t shmid, key_t semid);
 
 /**
  * \fn void attachTable(S_TABLE **table, key_t shmid, char **shmp);
@@ -80,7 +80,7 @@ extern void cleanup(key_t shmid, key_t semid);
  *		\param shmp The adress where to store the shared memory segment pointer.
  *
  */
-extern void attachTable(S_TABLE **table, key_t shmid, char **shmp);
+void attachTable(S_TABLE **table, key_t shmid, char **shmp);
 
 /**
  * \fn void lockTable(int semx,int block, S_TABLE **tableS)
@@ -98,7 +98,7 @@ extern void attachTable(S_TABLE **table, key_t shmid, char **shmp);
  *		\param tableS The adress of the table.
  * 		
  */
-extern void lockTable(int semx,int block, S_TABLE **tableS);
+void lockTable(int semx,int block, S_TABLE **tableS);
 
 /**
  * \fn void recount(S_TABLE **tableS, int *flg_game_over)
@@ -109,7 +109,7 @@ extern void lockTable(int semx,int block, S_TABLE **tableS);
  *		\param flg_game_over The adress of the game status.
  *
  */
-extern void recount(S_TABLE **tableS, int *flg_game_over);
+void recount(S_TABLE **tableS, int *flg_game_over);
 
 /**
  * \fn void bomb(int x, int y, S_TABLE **tableS)
@@ -121,7 +121,7 @@ extern void recount(S_TABLE **tableS, int *flg_game_over);
  *		\param tableS The address of the table.
  *
  */
-extern void bomb(int x, int y, S_TABLE **tableS);
+void bomb(int x, int y, S_TABLE **tableS);
 
 /**
  * \fn int getInput(int *px,int *py, S_TABLE **table)
@@ -134,7 +134,7 @@ extern void bomb(int x, int y, S_TABLE **tableS);
  *		\param table The address of the table.
  *
  */
-extern int getInput(int *px,int *py, S_TABLE **table);
+int getInput(int *px,int *py, S_TABLE **table);
 
 /**
  * \fn int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS)
@@ -148,7 +148,7 @@ extern int getInput(int *px,int *py, S_TABLE **table);
  *		\param tableS The address of the table.
  *
  */
-extern int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS);
+int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS);
 
 /**
  * \fn int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS)
@@ -162,7 +162,7 @@ extern int draw_hz(int sx,int sy,int z,int who, S_TABLE **tableS);
  *		\param tableS The address of the table.
  *
  */
-extern int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS);
+int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS);
 
 /**
  * \fn void genBattle(S_TABLE **tableS)
@@ -172,7 +172,7 @@ extern int draw_vt(int sx,int sy,int z,int who, S_TABLE **tableS);
  *		\param tableS The address of the table.
  *
  */
-extern void genBattle(S_TABLE **tableS);
+void genBattle(S_TABLE **tableS);
 
 /**
  * \fn void showRow(void)
@@ -180,7 +180,7 @@ extern void genBattle(S_TABLE **tableS);
  * 		\brief It prints each row of the table
  *
  */
-extern void showRow(void);
+void showRow(void);
 
 /**
  * \fn void showBattle(S_TABLE **tableS, int us, int them, int *flg_game_over)
@@ -193,7 +193,7 @@ extern void showRow(void);
  *		\param flg_game_over The address of the game status.
  *
  */
-extern void showBattle(S_TABLE **tableS, int us, int them, int *flg_game_over);
+void showBattle(S_TABLE **tableS, int us, int them, int *flg_game_over);
 
 /**
  * \fn int battleship()

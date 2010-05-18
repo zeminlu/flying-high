@@ -1,7 +1,7 @@
 /**
  *	\file sysProcess.c
  *
- *		\brief Brief.
+ *		\brief OS system utilities.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

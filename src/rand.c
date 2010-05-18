@@ -1,7 +1,7 @@
 /**
  *	\file rand.c
  *
- *		\brief Brief.
+ *		\brief Random number generation module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

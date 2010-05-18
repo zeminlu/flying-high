@@ -1,7 +1,7 @@
 /**
  *	\file semaphore.c
  *
- *		\brief Brief.
+ *		\brief The OS semaphore module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

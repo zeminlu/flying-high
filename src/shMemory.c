@@ -1,7 +1,7 @@
 /**
  *	\file shMemory.c
  *
- *		\brief Brief.
+ *		\brief The shared memory IPC module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

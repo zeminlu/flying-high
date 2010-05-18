@@ -1,7 +1,7 @@
 /**
  *	\file sysMalloc.c
  *
- *		\brief Brief.
+ *		\brief Generic malloc module.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *

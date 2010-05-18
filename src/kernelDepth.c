@@ -1,7 +1,7 @@
 /**
  *	\file kernelDepth.c
  *
- *		\brief Brief.
+ *		\brief Kernel syscalls depth utilities implementation.
  *
  *		\author Luciano Zemin, Nicolás Magni, Nicolás Purita
  *
