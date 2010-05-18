@@ -307,9 +307,9 @@ static void startTop(char *args){
 	setProcessAtomicity(getpid(), ATOMIC);
 	
 	for (i = 0 ; i < MAX_PROCESS ; ++i){
-		if (!strcmp(processTable[i].name, "top")){
+		if (!strcmp(processTable[i].name, "top") && processTable[i].pid > 0){
 			puts("El proceso top ya se encuentra corriendo en la tty ");
-			puti(processTable[i].tty);
+			puti(processTable[i].tty + 1);
 			putchar('\n');
 			setProcessAtomicity(getpid(), UNATOMIC);
 			return;

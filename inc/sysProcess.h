@@ -127,7 +127,7 @@ process_t *getProcessTable(void);
  *
  * 		\brief Retrieves the given pid process name.
  *
- * 		\param pid The pid from the process who's name to be retrieven.
+ * 		\param pid The pid from the process whose name to be retrieven.
  * 		
  * 		\return The process' name.
  *

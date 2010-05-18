@@ -39,7 +39,7 @@ void init(void *args){
 	}	
 	setProcessAtomicity(getpid(), UNATOMIC);
 		
-	while(processTable[0].childsQty){
+	while(processTable[0].childsQty > 0){
 		wait(&status);
 		asm volatile("hlt");
 	}

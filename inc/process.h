@@ -97,7 +97,7 @@ void exit(int status);
  *
  * 		\brief Sets the given process tty id.
  *
- * 		\param pid The process' pid who's tty id will be set.
+ * 		\param pid The process' pid whose tty id will be set.
  * 		\param tty The tty id to be set.
  * 		
  * 		\return 0 on success, -1 on error.
@@ -132,7 +132,7 @@ tty_t getTty(pid_t pid);
  * 		\brief Sets the given tty focused process with the given pid process.
  *
  * 		\param pid The process to be set as focused process.
- * 		\param tty The tty who's focused process will be set.
+ * 		\param tty The tty whose focused process will be set.
  * 		
  * 		\return 0 on success, -1 on error.
  *
@@ -192,19 +192,14 @@ int wait(int *status);
 /**
  * \fn int waitpid(pid_t pid, int *status)
  *
- * 		\brief Brief.
+ * 		\brief This function blocks the calling process until the given pid child returns.
  *
- * 		\param pid ParamBrief.
- * 		\param status ParamBrief.
+ * 		\param pid The pid of the child process to wait.
+ * 		\param status A pointer where to store the child process return status.
  * 		
- * 		\return Description.
+ * 		\return The pid of the child process.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa wait()
  *
  */
 int waitpid(pid_t pid, int *status);
@@ -212,18 +207,11 @@ int waitpid(pid_t pid, int *status);
 /**
  * \fn int kill(int pid)
  *
- * 		\brief Brief.
+ * 		\brief Kills the given pid process.
  *
- * 		\param pid ParamBrief.
+ * 		\param pid The pid of the process to be killed.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int kill(int pid);
@@ -231,19 +219,14 @@ int kill(int pid);
 /**
  * \fn int setTTYMode(pid_t pid, int mode)
  *
- * 		\brief Brief.
+ * 		\brief Sets the tty mode of the given pid process.
  *
- * 		\param pid ParamBrief.
- * 		\param mode ParamBrief.
+ * 		\param pid The pid of the process whose tty mode will be changed.
+ * 		\param mode The tty mode: TTY_CANONICAL or TTY_RAW.
  * 		
- * 		\return Description.
+ * 		\return 0 on success, -1 on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa getTTYMode()
  *
  */
 int setTTYMode(pid_t pid, int mode);
@@ -251,18 +234,13 @@ int setTTYMode(pid_t pid, int mode);
 /**
  * \fn int getTTYMode(pid_t pid)
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the given pid process tty mode.
  *
- * 		\param pid ParamBrief.
+ * 		\param pid The pid of the process whose tty mode will be retrieved.
  * 		
- * 		\return Description.
+ * 		\return The tty mode.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa setTTYMode()
  *
  */
 int getTTYMode(pid_t pid);
@@ -270,18 +248,13 @@ int getTTYMode(pid_t pid);
 /**
  * \fn int setLevel(int level)
  *
- * 		\brief Brief.
+ * 		\brief Sets the calling process level.
  *
- * 		\param level ParamBrief.
+ * 		\param level FOREGROUND or BACKGROUND.
  * 		
- * 		\return Description.
+ * 		\return TRUE on success, FALSE on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa getLevel()
  *
  */
 int setLevel(int level);
@@ -289,16 +262,11 @@ int setLevel(int level);
 /**
  * \fn int getLevel()
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the calling process' level.
  *
- * 		\return Description.
+ * 		\return The calling process' level.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa setLevel()
  *
  */
 int getLevel();
@@ -306,16 +274,11 @@ int getLevel();
 /**
  * \fn int getPriority()
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the calling process' priority.
  *
- * 		\return Description.
+ * 		\return The calling process' priority.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa setPriority()
  *
  */
 int getPriority();
@@ -323,19 +286,14 @@ int getPriority();
 /**
  * \fn int setPriority(pid_t pid, int prio)
  *
- * 		\brief Brief.
+ * 		\brief Sets the pid process priority.
  *
- * 		\param pid ParamBrief.
- * 		\param prio ParamBrief.
+ * 		\param pid The pid of the process whose priority will be changed.
+ * 		\param prio The priority to be set.
  * 		
- * 		\return Description.
+ * 		\return prio on success, -1 on error.
  *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\sa getPriority()
  *
  */
 int setPriority(pid_t pid, int prio);
@@ -343,16 +301,9 @@ int setPriority(pid_t pid, int prio);
 /**
  * \fn unsigned time(void)
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the amount of miliseconds that the calling process' had the processor.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The amount of miliseconds that the calling process' had the processor.
  *
  */
 unsigned time(void);
@@ -360,16 +311,9 @@ unsigned time(void);
 /**
  * \fn unsigned upTime()
  *
- * 		\brief Brief.
+ * 		\brief Retrieves the amount of ticks since the system boot.
  *
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return The amount of ticks since the system boot.
  *
  */
 unsigned upTime();
@@ -377,19 +321,12 @@ unsigned upTime();
 /**
  * \fn int setProcessAtomicity(pid_t pid, int atomic)
  *
- * 		\brief Brief.
+ * 		\brief Sets the given pid process' atomicity.
  *
- * 		\param pid ParamBrief.
- * 		\param atomic ParamBrief.
+ * 		\param pid The pid of the process whose atomicity will be set.
+ * 		\param atomic ATOMIC or UNATOMIC.
  * 		
- * 		\return Description.
- *
- * 		Use:
- * 		\code
- *		
- *		\endcode
- *
- * 		\sa f1() f2()
+ * 		\return 0 on success, -1 on error.
  *
  */
 int setProcessAtomicity(pid_t pid, int atomic);
