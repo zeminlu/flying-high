@@ -14,25 +14,10 @@
  */
 void
 cleanup(void) {
-    /*union semun semarg;*/
 
-    /*
-     * Detach shared memory if it is attached:
-     */
-    /*if ( shmp != 0 && shmp != (char *)(-1) )
-        if ( shmdt(shmp) == -1 ){
-			puts("Error al borrar Shm si esta atachada");
-		}
-*/
-    /*
-     * Destroy shared memory:
-     */
     if ( shmid != -1 )
         if ( shmdt(shmid) == -1 )
-			puts("Error al borrar Shm");
-    /*
-     * Destroy semaphore:
-     */
+	
     if ( semid != -1 )
 		sem_free(semid);
 }

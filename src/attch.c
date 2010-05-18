@@ -10,7 +10,7 @@
 #include "bttlship.h"
 
 void
-attachTable(void) {
+attachTable( S_TABLE **table) {
 
     /*
      * Attach the shared memory :
@@ -22,6 +22,5 @@ attachTable(void) {
 		return;
     }
 
-    table[0] = (struct S_TABLE *)shmp;
-	table[1] = (struct S_TABLE *)shmp;
+    (*table) = (S_TABLE *)shmp;
 }
