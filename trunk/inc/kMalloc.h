@@ -18,9 +18,9 @@
 /**
  * \fn void kFree(void *ap)
  *
- * 		\brief Brief.
+ * 		\brief 	This function calls sysFree, that leaves the kernel memory to be used by Kalloc in future calls.
  *
- * 		\param ap ParamBrief.
+ * 		\param 	ap The kernel memory position that will be freed. 
  * 		
  * 		\sa kMalloc() kRealloc()
  *
@@ -30,11 +30,12 @@ void kFree(void *ap);
 /**
  * \fn void *kMalloc(size_t nbytes)
  *
- * 		\brief Brief.
+ * 		\brief 	This funtion calls sysMalloc that gives the request size of memory. 
+ *				This is given from the kernle memory. On error return null.
  *
- * 		\param nbytes ParamBrief.
+ * 		\param	nbytes The memory size that would be returned, this is allways kernel memory,.
  * 		
- * 		\return Description.
+ * 		\return	Return the memory logic position , with continious memory to use.
  *
  * 		\sa kFree() kRealloc()
  *
@@ -44,12 +45,13 @@ void *kMalloc(size_t nbytes);
 /**
  * \fn void *kRealloc(void *ap, size_t size)
  *
- * 		\brief Brief.
+ * 		\brief	Calls sysRealloc, that change the size of the original. It returns null if 
+ *				there is not enougth memory.
  *
- * 		\param ap ParamBrief.
- * 		\param size ParamBrief.
+ * 		\param ap The logic memory position that wold be extended.
+ * 		\param size	The new size that would be used to increase the ap segment memory.
  * 		
- * 		\return Description.
+ * 		\return	the new memory address that have a continious segment of kernel memory.
  *
  * 		\sa kFree() kMalloc()
  *
