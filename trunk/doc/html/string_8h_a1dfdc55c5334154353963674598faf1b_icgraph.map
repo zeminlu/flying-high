@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$syscall_8c.html#a5cd71748fd2bf784c6e4f481809a9b15" title="_sys_create_process" alt="" coords="133,5,296,35"/>
-<area shape="rect" id="node5" href="$stdio_8c.html#a299df7595d833020c4d9622877eba4f0" title="Writes the given integer to the given stream." alt="" coords="188,59,241,88"/>
-<area shape="rect" id="node7" href="$stdio_8c.html#ab478c2e59f39890f213687f1ebd59285" title="Writes the given integer as in hexadecimal format into the given stream." alt="" coords="185,112,244,141"/>
-<area shape="rect" id="node9" href="$bttlship_8c.html#ae442293b5a53448d5a03e47e38396009" title="It generates the table." alt="" coords="169,165,260,195"/>
-<area shape="rect" id="node13" href="$mem_module_8c.html#a7a9e898c2f9b5aae935f0668c962d02f" title="Initializes the pagination and turns it on." alt="" coords="172,219,257,248"/>
-<area shape="rect" id="node11" href="$bttlship_8c.html#a52e47768a66b91e89d5546a8cb0f168c" title="It&#39;s the main process of the battleship, it generates the whole table and ships..." alt="" coords="351,165,441,195"/>
-<area shape="rect" id="node15" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="345,219,447,248"/>
-</map>

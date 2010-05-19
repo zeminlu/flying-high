@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$bin_8c.html#a5bfde7b5020b14bdcb1c9269ab308dc5" title="This functions initialize the welcome process, all the shells and goodbye process..." alt="" coords="215,5,257,35"/>
-<area shape="rect" id="node7" href="$sys_process_8c.html#add8034131384a469e96c6efeb83d6043" title="Initializes the multitasker and creates the init process." alt="" coords="177,59,295,88"/>
-<area shape="rect" id="node5" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="345,32,447,61"/>
-</map>

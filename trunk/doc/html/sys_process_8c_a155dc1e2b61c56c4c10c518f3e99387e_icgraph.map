@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$bin_8c.html#a5bfde7b5020b14bdcb1c9269ab308dc5" title="This functions initialize the welcome process, all the shells and goodbye process..." alt="" coords="268,5,311,35"/>
-<area shape="rect" id="node7" href="$ttys_8c.html#abbca9cfc412d307fa56ca4a4095f0f87" title="Leaves all of character that are in the KeyboradBuffer and put in the correct tty..." alt="" coords="191,59,388,88"/>
-<area shape="rect" id="node11" href="$bin_8c.html#a9795fbee9531f56aeda1376bf9934506" title="This function show what percentage of the microprocessor it is using each process..." alt="" coords="267,112,312,141"/>
-<area shape="rect" id="node5" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="451,5,552,35"/>
-<area shape="rect" id="node9" href="$keyboard__driver_8c.html#a354ce1ad1d33647cf9d227c04fe70f21" title="This function is the manager of interpretate what key was pressed or released. It..." alt="" coords="437,59,565,88"/>
-</map>

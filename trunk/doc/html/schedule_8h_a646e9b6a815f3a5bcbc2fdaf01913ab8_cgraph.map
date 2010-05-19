@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$schedule_8h.html#a1f23daf143e53db80049ae389acc597d" title="This function simulates the RPG scheduling. What this algorithm does, is that when..." alt="" coords="163,32,267,61"/>
-<area shape="rect" id="node5" href="$schedule_8h.html#a29be8fb1ec9e43332002a4396b615094" title="This function checks what processes are ready using the RPG Algorithim." alt="" coords="316,5,479,35"/>
-<area shape="rect" id="node7" href="$schedule_8h.html#af95a92936b33c15af802b17f34f06cf8" title="This function increases the current rpg value of each process." alt="" coords="316,59,479,88"/>
-</map>

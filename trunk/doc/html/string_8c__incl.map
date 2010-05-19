@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$string_8h.html" title="Declaration of all functions that deals with strings and buffers." alt="" coords="45,83,117,112"/>
-<area shape="rect" id="node5" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="45,160,117,189"/>
-<area shape="rect" id="node7" href="$defs_8h.html" title="OS inner defines." alt="" coords="5,237,67,267"/>
-<area shape="rect" id="node9" href="$config_8h.html" title="OS configuration defines." alt="" coords="91,237,165,267"/>
-<area shape="rect" id="node11" href="$colors_8h.html" title="Video Color defines." alt="" coords="92,315,164,344"/>
-</map>

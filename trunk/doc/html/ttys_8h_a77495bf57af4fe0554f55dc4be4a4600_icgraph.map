@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$ttys_8c.html#a6083aac7b79f2adcd3c4d6fbf479f283" title="It clears the stdout of the tty that is in focus." alt="" coords="241,59,367,88"/>
-<area shape="rect" id="node11" href="$bin_8c.html#a9795fbee9531f56aeda1376bf9934506" title="This function show what percentage of the microprocessor it is using each process..." alt="" coords="456,112,501,141"/>
-<area shape="rect" id="node16" href="$ttys_8c.html#a0ae5938446774e4ebb46d0f5120458a8" title="It puts a character in a specific position of the tty stdout. It prints the character..." alt="" coords="220,163,388,192"/>
-<area shape="rect" id="node5" href="$bin_8c.html#ae2338f2b60de8c59eaa31a6a285c1fc0" title="This function just says goodbye and reboots the system." alt="" coords="440,5,517,35"/>
-<area shape="rect" id="node13" href="$bin_8c.html#a236e454e493fc9b262f746305660a2eb" title="This function just prints the welcome message to Flying&#45;High OS." alt="" coords="437,59,520,88"/>
-<area shape="rect" id="node7" href="$bin_8c.html#a5bfde7b5020b14bdcb1c9269ab308dc5" title="This functions initialize the welcome process, all the shells and goodbye process..." alt="" coords="568,32,611,61"/>
-<area shape="rect" id="node9" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="660,32,761,61"/>
-</map>

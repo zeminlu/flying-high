@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$process_8h.html#a400d6ff57b24d5bec48a1a28ad944081" title="Creates a new process into the system and sets it ready to run. The process will..." alt="" coords="175,5,295,35"/>
-<area shape="rect" id="node5" href="$int80_8h.html#a68310308ad9c6753621ad8d0a790ddfd" title="copy the parameters to the processor registers." alt="" coords="344,5,424,35"/>
-</map>

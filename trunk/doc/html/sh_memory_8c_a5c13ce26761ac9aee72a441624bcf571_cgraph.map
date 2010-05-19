@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$mem_module_8h.html#a84fa8c324392664110d9da557624b7f2" title="Gets a free frame." alt="" coords="197,5,285,35"/>
-<area shape="rect" id="node5" href="$semaphore_8h.html#a46e2163685880ebc53e237c1e3ebf30e" title="Gets a semaphore for the given mode." alt="" coords="200,59,283,88"/>
-<area shape="rect" id="node9" href="$mem_module_8h.html#a33bcef362cae377767738cdcc12fb340" title="Sets the presence bit of the pages from the given frame to the given state." alt="" coords="165,112,317,141"/>
-<area shape="rect" id="node7" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="365,59,421,88"/>
-</map>

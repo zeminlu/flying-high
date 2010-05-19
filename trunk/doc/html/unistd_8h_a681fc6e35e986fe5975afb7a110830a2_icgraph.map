@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$stdio_8c.html#abe6299d5823dd023e610aaa619735a3f" title="Writes the given character to the given stream." alt="" coords="117,31,176,60"/>
-<area shape="rect" id="node12" href="$stdio_8c.html#a68236e664c1f0da049b25fba1c1695f6" title="Writes the given string to the given stream." alt="" coords="119,84,175,113"/>
-<area shape="rect" id="node5" href="$bttlship_8c.html#a21c4f719d9c70f144ffbb7b4ab57d935" title="It prints the table of the battlehsip." alt="" coords="359,5,457,35"/>
-<area shape="rect" id="node9" href="$bttlship_8c.html#afcb21d332942ec61fd523fed20b758e5" title="It prints each row of the table." alt="" coords="224,31,309,60"/>
-<area shape="rect" id="node7" href="$bttlship_8c.html#a52e47768a66b91e89d5546a8cb0f168c" title="It&#39;s the main process of the battleship, it generates the whole table and ships..." alt="" coords="507,5,597,35"/>
-<area shape="rect" id="node14" href="$stdio_8c.html#a299df7595d833020c4d9622877eba4f0" title="Writes the given integer to the given stream." alt="" coords="240,84,293,113"/>
-<area shape="rect" id="node16" href="$stdio_8c.html#ab478c2e59f39890f213687f1ebd59285" title="Writes the given integer as in hexadecimal format into the given stream." alt="" coords="237,137,296,167"/>
-</map>

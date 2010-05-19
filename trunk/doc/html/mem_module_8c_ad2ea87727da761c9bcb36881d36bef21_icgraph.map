@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$kernel_depth_8c.html#a12d75a01091aa2aef0b93c98f76b859d" title="This function decreases the depth relating to the iteration of system calls maintaining..." alt="" coords="240,5,411,35"/>
-<area shape="rect" id="node7" href="$kernel_depth_8c.html#a60e4cee7d263ef4134a3d83ab35de9c6" title="This function increases the depth relating to the iteration of system calls maintaining..." alt="" coords="243,59,408,88"/>
-<area shape="rect" id="node9" href="$mem_module_8c.html#a7a9e898c2f9b5aae935f0668c962d02f" title="Initializes the pagination and turns it on." alt="" coords="283,112,368,141"/>
-<area shape="rect" id="node5" href="$syscall_8c.html#a13d5257c80be9824dd100a5d21a6b1de" title="_sysExit" alt="" coords="472,5,549,35"/>
-<area shape="rect" id="node11" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="kernel_main" alt="" coords="460,112,561,141"/>
-</map>
