@@ -75,14 +75,14 @@ pQueueADT newPQueue( void (*freeFnP)(void *), void * (*cpyFnP)(void *) )
 	
 	if( (queueADT = malloc(sizeof(pQueueCDT))) == NULL )
 	{
-		puts("Error en la creacion de la queue");
+		puts("Error creating the queue\n");
 		return NULL;
 	}
 	queueADT->cpyFn = cpyFnP;
 	queueADT->freeFn = freeFnP;
 	if( (queueADT->queue = malloc( sizeof(listWithPrio) * MAX_PRIORITIES)) == NULL )
 	{
-		puts("Error en la creacion de la lista con las prioridades");
+		puts("Error creating the priority list\n");
 		return NULL;
 	}
 	for( i = 0 ; i < _MAX_PRIORITY_ ; ++i )

@@ -202,9 +202,11 @@ static void printPhrasing(char * value)
 	static char * msg1 = "\nObjetivo\n\tRealizar un programa que muestre algunas de las caracteristicas del Modo protegido de los microprocesadores de Intel.\n\tEnunciado\n\tEl trabajo consta de un diskete booteable con GRUB instalado, el cual debe obtener de disco una imagen binaria que sera el programa que corra en Modo protegido.\n\tDicho programa debera contener lo siguiente:\n\t\ta) Shell: El sistema debe proveer al usuario de un shell, para poder ejecutar comandos.\n\t\tb) INT 80h: Crear las primitivas read() y write() ";
 	static char * msg2 = "para centralizar la lectura y la escritura de los dispositivos. Dichas primitivas deben invocar la INT 80h.\n\t\tc) Driver de Mouse: El programa debera poder manejar un cursor de texto en pantalla. Con el botón izquierdo del Mouse presionado se podra seleccionar cualquier parte de la pantalla (copiar) y con el boton derecho ";
 	static char * msg3 = "se podra “pegar” lo seleccionado donde se encuentre el cursor para ingreso de datos.\n\t\td) Salva pantalla: Por línea de comando se podra programar la cantidad de segundos en la que se activa el salva pantalla. El mismo dejara de funcionar ante la presión de una tecla o el movimiento del Mouse.\n\n";
+	static char * msg4 = "ACTUALIZACION: Se extiende el tp de arquitecturas en la materia sistemas operativos, implementando un sistema multi tarea con paginacion y scheduler como objetivos principales, implementando el IPC shared memory, utlizado por un juego a eleccion\n";
 	puts(msg1);
 	puts(msg2);
 	puts(msg3);
+	puts(msg4);
 }
 
 static void mkdir(char *value)
@@ -309,7 +311,7 @@ static void startTop(char *args){
 	
 	for (i = 0 ; i < MAX_PROCESS ; ++i){
 		if (!strcmp(processTable[i].name, "top") && processTable[i].pid > 0){
-			puts("El proceso top ya se encuentra corriendo en la tty ");
+			puts("The Top process is already running int the tty ");
 			puti(processTable[i].tty + 1);
 			putchar('\n');
 			setProcessAtomicity(ownPid, UNATOMIC);
@@ -354,7 +356,6 @@ static void startBattleShip(char *args){
 	setProcessAtomicity(ownPid, UNATOMIC);
 	waitpid(pid, &status);
 	//clearTTYScreen();
-	
 }
 
 static void startPrintA(char *args){
@@ -374,6 +375,8 @@ static void startPrintA(char *args){
 	if(mode == FOREGROUND){
 		waitpid(pid, &status);
 	}
+	clearTTYScreen();
+	
 	return;
 }
 
@@ -394,6 +397,8 @@ static void startPrintB(char *args){
 	if(mode == FOREGROUND){
 		waitpid(pid, &status);
 	}
+	
+	clearTTYScreen();
 	return;
 }
 
@@ -426,7 +431,7 @@ static void startPageFault(char *args){
 	int status;
 	
 	if ((pid = createProcess("nothing", (void(*)(void *))pageFault, NULL, FOREGROUND)) == -1 ) {
-		puts("ERROR: nothing could not be created.\n");
+		puts("ERROR: page fault could not be created.\n");
 	}
 	waitpid(pid, &status);
 
