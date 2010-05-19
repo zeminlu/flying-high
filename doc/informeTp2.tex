@@ -67,7 +67,6 @@ Se desea implementar un Multitasker, cuyo objetivo  principal es el de asignar t
 \section{Paginaci\'on}
 	\subsection{Objetivo}
 		El sistema operativo debe tener un m\'odulo de paginaci\'on, por lo tanto cada proceso debe tener asociada cierta cantidad de p\'aginas. Por consecuente se debe implementar el manejo de la excepci\'on correspondiente a paginaci\'on ya que el m\'odulo de administraci\'on de memoria debe verificar que un proceso no utilize p\'aginas no asignadas a \'el. Todos los procesos comparten el heap, es decir que no existen variables globales dentro del sistema operativo, y en el caso que existiesen, deben estar en el heap del kernel, por lo tanto si el proceso desea obtener algun valor de alguna variable debe simular un system call y copiar la variables al heap propio del proceso.
-	\subsection{Modelo}
 	\subsection{Esquema general}
 		Como se implement\'o un m\'odulo de administraci\'on de memoria, se debi\'o implemantar un \textit{malloc}. Un criterio tomado es que el kernel llama una sola vez al memory map donde obtiene todo su espacio kernel. En cambio el malloc llama reiteradas veces al memory map donde se asignan las p\'aginas asociadas al heap de ese proceso. Toda la informaci\'on de las p\'aginas asignadas se encuentran en la tabla de procesos.
 	\subsection{Problemas y soluciones}
