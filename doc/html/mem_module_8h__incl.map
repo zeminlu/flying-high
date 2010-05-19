@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$string_8h.html" title="Declaration of all functions that deals with strings and buffers." alt="" coords="39,160,111,189"/>
-<area shape="rect" id="node5" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="75,237,147,267"/>
-<area shape="rect" id="node13" href="$stdio_8h.html" title="Definitions for all standard input and output and declaration of all functions to..." alt="" coords="113,83,180,112"/>
-<area shape="rect" id="node7" href="$defs_8h.html" title="OS inner defines." alt="" coords="35,315,96,344"/>
-<area shape="rect" id="node9" href="$config_8h.html" title="OS configuration defines." alt="" coords="120,315,195,344"/>
-<area shape="rect" id="node11" href="$colors_8h.html" title="Video Color defines." alt="" coords="121,392,193,421"/>
-<area shape="rect" id="node16" href="$unistd_8h.html" title="Definitions for all UNIX Standard system calls functions." alt="" coords="185,160,260,189"/>
-</map>

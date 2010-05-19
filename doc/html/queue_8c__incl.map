@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$queue_8h.html" title="Keyboard queue module." alt="" coords="92,83,167,112"/>
-<area shape="rect" id="node5" href="$keyboard__buffer_8h.html" title="This is the internal keyboard buffer." alt="" coords="5,160,147,189"/>
-<area shape="rect" id="node7" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="93,237,165,267"/>
-<area shape="rect" id="node9" href="$defs_8h.html" title="OS inner defines." alt="" coords="53,315,115,344"/>
-<area shape="rect" id="node11" href="$config_8h.html" title="OS configuration defines." alt="" coords="139,315,213,344"/>
-<area shape="rect" id="node13" href="$colors_8h.html" title="Video Color defines." alt="" coords="140,392,212,421"/>
-</map>

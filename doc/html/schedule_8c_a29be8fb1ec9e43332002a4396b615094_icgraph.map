@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$schedule_8c.html#a3ff76a95775e3eb0e8609b1c67cb5014" title="This function simulates the RPG scheduling. What this algorithm does, is that when..." alt="" coords="219,5,323,35"/>
-<area shape="rect" id="node5" href="$schedule_8c.html#a8c619ef4910f0dc6a31bbafbf167e792" title="This function returns the next task that should be attended." alt="" coords="371,5,480,35"/>
-<area shape="rect" id="node7" href="$sys_process_8c.html#a9aa73aebdb67c7b8551305ec0ebf6087" title="multitasker" alt="" coords="528,5,627,35"/>
-</map>

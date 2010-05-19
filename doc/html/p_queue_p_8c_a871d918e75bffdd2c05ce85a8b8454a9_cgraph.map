@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$u_malloc_8h.html#adebb229f063e66907017098087cbe791" title="Frees up the user memory pointed by ap for futures mallocs." alt="" coords="139,5,189,35"/>
-<area shape="rect" id="node5" href="$sys_malloc_8h.html#afc18fe654253c72492875d6b15506744" title="Leaves avaiable the segment to be used in futures calls to sysMalloc. The memory..." alt="" coords="237,5,312,35"/>
-</map>

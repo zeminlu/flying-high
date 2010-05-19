@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$stdio_8h.html#abe6299d5823dd023e610aaa619735a3f" title="Writes the given character to the given stream." alt="" coords="288,22,347,51"/>
-<area shape="rect" id="node7" href="$bttlship_8h.html#a03efcb954008fc3018e19f0353b58157" title="It counts the amount of bombs that the player has left." alt="" coords="160,22,235,51"/>
-<area shape="rect" id="node9" href="$bttlship_8h.html#afcb21d332942ec61fd523fed20b758e5" title="It prints each row of the table." alt="" coords="155,75,240,104"/>
-<area shape="rect" id="node5" href="$unistd_8h.html#a681fc6e35e986fe5975afb7a110830a2" title="Idem to the write() function, but to the given stream." alt="" coords="396,22,457,51"/>
-<area shape="rect" id="node12" href="$stdio_8h.html#a68236e664c1f0da049b25fba1c1695f6" title="Writes the given string to the given stream." alt="" coords="289,75,345,104"/>
-<area shape="rect" id="node15" href="$string_8h.html#ae6c8de953239811a34eeeab09458e55e" title="Returns the length of the string." alt="" coords="396,75,457,104"/>
-</map>

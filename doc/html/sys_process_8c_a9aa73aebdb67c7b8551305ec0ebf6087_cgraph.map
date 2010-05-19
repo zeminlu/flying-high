@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$schedule_8h.html#a646e9b6a815f3a5bcbc2fdaf01913ab8" title="This function returns the next task that should be attended." alt="" coords="199,32,308,61"/>
-<area shape="rect" id="node11" href="$mem_module_8h.html#a33bcef362cae377767738cdcc12fb340" title="Sets the presence bit of the pages from the given frame to the given state." alt="" coords="177,85,329,115"/>
-<area shape="rect" id="node13" href="$ttys_8h.html#aca07223864f88814919b02e6729569a5" title="Sets the pid to the process which is in focus." alt="" coords="153,139,353,168"/>
-<area shape="rect" id="node5" href="$schedule_8h.html#a1f23daf143e53db80049ae389acc597d" title="This function simulates the RPG scheduling. What this algorithm does, is that when..." alt="" coords="403,32,507,61"/>
-<area shape="rect" id="node7" href="$schedule_8h.html#a29be8fb1ec9e43332002a4396b615094" title="This function checks what processes are ready using the RPG Algorithim." alt="" coords="556,5,719,35"/>
-<area shape="rect" id="node9" href="$schedule_8h.html#af95a92936b33c15af802b17f34f06cf8" title="This function increases the current rpg value of each process." alt="" coords="556,59,719,88"/>
-</map>

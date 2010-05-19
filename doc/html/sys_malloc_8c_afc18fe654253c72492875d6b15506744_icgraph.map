@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$u_malloc_8c.html#adebb229f063e66907017098087cbe791" title="Frees up the user memory pointed by ap for futures mallocs." alt="" coords="133,32,184,61"/>
-<area shape="rect" id="node9" href="$k_malloc_8c.html#ab10ef73295572f6facd6e0c9c84e1357" title="This function calls sysFree, that leaves the kernel memory to be used by Kalloc in..." alt="" coords="129,85,188,115"/>
-<area shape="rect" id="node5" href="$p_queue_p_8c.html#a871d918e75bffdd2c05ce85a8b8454a9" title="freeNode" alt="" coords="247,5,332,35"/>
-<area shape="rect" id="node7" href="$p_queue_p_8c.html#a2c853f35b6e0b2adc7626d27013638d6" title="This function frees the whole pQueue." alt="" coords="237,59,341,88"/>
-</map>

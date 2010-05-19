@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$u_malloc_8h.html#a31161ef8eddd18e7781cb947f6f627d5" title="returns a continuous segment of user memory. It could return null if there is not..." alt="" coords="119,5,183,35"/>
-<area shape="rect" id="node5" href="$sys_malloc_8h.html#a7472d23b0529e946d8dcdf5a0de26c52" title="Function that gives a continuous segment of memory. This memory comes from the function..." alt="" coords="233,5,319,35"/>
-</map>

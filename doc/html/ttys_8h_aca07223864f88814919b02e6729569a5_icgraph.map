@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$syscall_8c.html#a5cd71748fd2bf784c6e4f481809a9b15" title="_sys_create_process" alt="" coords="256,5,419,35"/>
-<area shape="rect" id="node5" href="$sys_process_8c.html#a9aa73aebdb67c7b8551305ec0ebf6087" title="multitasker" alt="" coords="288,59,387,88"/>
-<area shape="rect" id="node7" href="$sys_process_8c.html#ab5b0962abeaa4a1657d1fc3d5931a612" title="Terminates the given process with the given status." alt="" coords="292,112,383,141"/>
-<area shape="rect" id="node9" href="$syscall_8c.html#ae899f7ec6cb314499b5eb7fe8458fcce" title="_sys_kill" alt="" coords="469,85,544,115"/>
-<area shape="rect" id="node11" href="$syscall_8c.html#a13d5257c80be9824dd100a5d21a6b1de" title="_sysExit" alt="" coords="468,139,545,168"/>
-</map>

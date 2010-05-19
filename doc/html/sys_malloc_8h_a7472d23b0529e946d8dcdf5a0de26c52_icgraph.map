@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$k_malloc_8c.html#a56f36ea42ec22a22158c4fb5f841e82e" title="This funtion calls sysMalloc that gives the request size of memory. This is given..." alt="" coords="153,5,223,35"/>
-<area shape="rect" id="node5" href="$u_malloc_8c.html#a46627f45f4a4d33db3de37fce9b5a8a6" title="returns a continuous segment of user memory. It could return null if there is not..." alt="" coords="156,59,220,88"/>
-<area shape="rect" id="node11" href="$sys_malloc_8c.html#a9dd7a27b9a2dd7b9249af7fdef77fb4f" title="This function changes the original size of the logical memory to a new one if it&#39;s..." alt="" coords="141,112,235,141"/>
-<area shape="rect" id="node7" href="$p_queue_p_8c.html#ac816b273d6f10ffc9d0fb76bc86fb4e4" title="This function enque the element in the correct priority node and it will be added..." alt="" coords="303,5,367,35"/>
-<area shape="rect" id="node9" href="$p_queue_p_8c.html#a71a9d33f7a1466b6b1e6d7dd391fdbe7" title="This function return a new priority Queue. It creates a priority queue for _MAX_PRIORITY_..." alt="" coords="283,59,387,88"/>
-<area shape="rect" id="node13" href="$k_malloc_8c.html#ad9fb012fb56b43ef1ab6078646973b3f" title="Calls sysRealloc, that changes the size of the original. It returns null if there..." alt="" coords="296,112,373,141"/>
-<area shape="rect" id="node15" href="$u_malloc_8c.html#a5ed3930d6e86bee548f632e2c571c736" title="Changes the original size of the continuous memory. If it is possible, it moves the..." alt="" coords="301,165,368,195"/>
-</map>

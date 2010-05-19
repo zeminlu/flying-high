@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$sh_memory_8h.html#a5c3d92af6a333b8c351c9b7e5aeb98e1" title="Attaches the current process to the shmid shared memory." alt="" coords="159,5,223,35"/>
-<area shape="rect" id="node5" href="$int80_8h.html#a36ef33b2d2512c40b2aee77f85c56c38" title="copy the parameters to the processor registers." alt="" coords="272,5,328,35"/>
-</map>

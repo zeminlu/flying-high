@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$video__driver_8h.html#a67e96e514d9f296c79378f7fbfba457a" title="clearScreen" alt="" coords="209,5,311,35"/>
-<area shape="rect" id="node7" href="$ttys_8h.html#ac625c448f0a3f2dd24c1409227e291e4" title="This function returns the tty id of tty that are in focus at this moment. It is a..." alt="" coords="197,59,323,88"/>
-<area shape="rect" id="node9" href="$video__driver_8h.html#ab59b086c41d506e55aa02729f9916be2" title="Updates all changes made to video buffer into screen." alt="" coords="201,112,319,141"/>
-<area shape="rect" id="node13" href="$video__driver_8h.html#aff96fa4091dd99b631277b28be9a5e65" title="Sets the cursor&#39;s position." alt="" coords="189,165,331,195"/>
-<area shape="rect" id="node5" href="$video__driver_8h.html#a49f60f2c7afcb3ffeb1890865dc440c0" title="Fills the screen with a character." alt="" coords="379,5,461,35"/>
-<area shape="rect" id="node11" href="$string_8h.html#aba088e716bccbc96d42da97e96316df1" title="The memcpy() function copies n bytes from memory area src to memory area dest. The..." alt="" coords="380,112,460,141"/>
-</map>

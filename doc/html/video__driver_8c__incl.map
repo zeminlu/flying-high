@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$video__driver_8h.html" title="Defines the basic function to manage the video screen, cursor &amp; mouse pointer..." alt="" coords="17,83,132,112"/>
-<area shape="rect" id="node5" href="$io_8h.html" title="Declaration of functions and constants related with direct access to hardware." alt="" coords="11,160,56,189"/>
-<area shape="rect" id="node7" href="$types_8h.html" title="Definition for system dependent types." alt="" coords="80,160,152,189"/>
-<area shape="rect" id="node9" href="$defs_8h.html" title="OS inner defines." alt="" coords="39,237,100,267"/>
-<area shape="rect" id="node11" href="$config_8h.html" title="OS configuration defines." alt="" coords="124,237,199,267"/>
-<area shape="rect" id="node13" href="$colors_8h.html" title="Video Color defines." alt="" coords="125,315,197,344"/>
-</map>

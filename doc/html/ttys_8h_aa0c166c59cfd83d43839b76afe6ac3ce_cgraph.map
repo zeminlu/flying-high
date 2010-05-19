@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$video__driver_8h.html#ab59b086c41d506e55aa02729f9916be2" title="Updates all changes made to video buffer into screen." alt="" coords="149,5,267,35"/>
-<area shape="rect" id="node7" href="$ttys_8h.html#a5543e64588b3c8d57ef150404d96c5a7" title="Pust all of character that are in the STDOUT and and puts in the tty STDOUT who is..." alt="" coords="151,59,265,88"/>
-<area shape="rect" id="node5" href="$string_8h.html#aba088e716bccbc96d42da97e96316df1" title="The memcpy() function copies n bytes from memory area src to memory area dest. The..." alt="" coords="325,5,405,35"/>
-<area shape="rect" id="node9" href="$ttys_8h.html#a8b368b52e988f2fb5f99aeb979fe4040" title="It prints only one character in specific tty. It verifies if the character is a control..." alt="" coords="316,59,415,88"/>
-<area shape="rect" id="node11" href="$unistd_8h.html#a116146ccc01b751779e5351615743547" title="read() reads &quot;count&quot; bytes from the file descripted by the file descriptor..." alt="" coords="340,112,391,141"/>
-</map>
