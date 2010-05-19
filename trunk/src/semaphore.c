@@ -133,7 +133,7 @@ void _sys_sem_free( key_t semid ){
 int _sys_sem_wait(key_t semid){	
 	if (sems[semid].semval != 0){
 		if (semEnque(sems[semid].waitQueue) == -1){
-			puts("Error en enque de semaforos\n");
+			puts("Error in sem enqueue\n");
 			return -1;
 		}
 		sysSelfBlock();
@@ -146,7 +146,7 @@ int _sys_sem_wait(key_t semid){
 int _sys_sem_signal(key_t semid){
 
 	if (sems[semid].semval != 1){
-		puts("Sali del sem signal por error\n");
+		puts("Error in sem signal\n");
 		return -1;
 	}
 	

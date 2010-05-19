@@ -28,11 +28,11 @@ int battleship() {
 	
     srand(pid);            /* Init random no.s */
 	
-	puts("Bienvenido a Flying-High-BattleShip\n\n");
-	puts("Debo hostear una partida?\n\t");
+	puts("Welcome to Flying-High-BattleShip\n\n");
+	puts("Should I host the game?\n\t");
 
-	while (auxChar != 's' && auxChar != 'n') {
-		puts("Solo conteste s o n\n");
+	while (auxChar != 'y' && auxChar != 'n') {
+		puts("Answer only 'y' or 'n'\n");
 		auxChar = getchar();
 		if(auxChar == EOF){
 			waitTty(getTty(pid));
@@ -40,7 +40,7 @@ int battleship() {
 		}
 	}
 
-    if ( auxChar == 's' ) {
+    if ( auxChar == 'y' ) {
         /*
          * Create Shared Memory
          */
@@ -96,10 +96,10 @@ int battleship() {
         them = 0;               /* They're player[0] */
 		auxChar = 'A';
 		
-		puts("\nPor favor ingrese el id que el proceso que hostea le ha proporcionado:\n");
+		puts("\nPlease enter the id number that the hosting game provided:\n");
 
 		while (auxChar < '0' || auxChar > '9') {
-			puts("Ingrese un id entero por favor\n");
+			puts("Enter an integer id please...\n");
 			auxChar = getchar();
 			if(auxChar == EOF){
 				waitTty(getTty(pid));
@@ -200,7 +200,7 @@ void attachTable( S_TABLE **table, key_t shmid, char **shmp) {
 	key_t a;
     *shmp = shmat(shmid, &a);
     if ( *shmp == (char *)(-1) ) {
-        puts("Error al crear la shm");
+        puts("Error creating the shm\n");
 		return;
     }
 

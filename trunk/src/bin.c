@@ -184,10 +184,10 @@ void top(char * args) {
 					puts(tmp = "BLOCKED");
 					break;
 				case WAITING_PID:
-					puts(tmp = "WAITING PID");
+					puts(tmp = "WAITING_PID");
 					break;
 				case WAITING_TIME:
-					puts(tmp = "WAITING TIME");
+					puts(tmp = "WAITING_TIME");
 					break;
 				case WAITING_CHILD:
 					puts(tmp = "WAITING_CHILD");
@@ -317,7 +317,7 @@ void nothing(){
 void pageFault(){
 	char * aux;
 	
-	puts("Quiero escribir en  la posicion de memoria ");
+	puts("Trying to write to a page that doesn't belong to me...\n");
 	if(getpid() - 1 >= 0){
 		aux = processTable[getpid() - 1].dataUmalloc.mallocMem.allocp;
 		putx((int)aux);
