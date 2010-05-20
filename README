@@ -1,7 +1,8 @@
 - Copiar el archivo mtools.conf a /etc/
+- Para visualizar la documentacion:
+	-HTML: Ingresar a la carpeta de doc/html y abrir el archivo index.html
+	-LaTeX: Ingresar a la carpeta doc/latex y abrir el archivo refman.pdf
+	-RTF: Ingresar a la carpeta doc/rtf y abrir el archivo refman.rtf
+	-MAN: Ingresar a la carpeta doc/man/man3 y realizar man 3 ./nombrearchivo.3
+	-XML: Ingresar a la carpeta doc/xml y visualizar index.xml
 
-- Habilitar Modo de Copiado a color
-	Se deben descomentar las siguientes lineas:
-	En src/shell.c en la funcion shell() descomentar el fputc(att, outatt) del else final
-	En src/video_adapter descomentar todas las lineas comentadas dentro de la funcion flushStdBuffer y bufferMapper
-	En inc/video_adapter descomentar todas las lineas comentadas dentro en la funcion bufferMapper

@@ -30,6 +30,9 @@ void init(void *args){
 	}
 	
 	setProcessAtomicity(getpid(), ATOMIC);
+	
+	initGlobalDataShell();
+	
 	for ( i = 0; i < MAX_TTY; ++i ) {
 		if ( (pid = createProcess("sh", (void (*)(void *))shell, NULL, FOREGROUND)) == -1 ) {
 			puts("ERROR: A Shell could not be created.\n");
@@ -243,8 +246,6 @@ void welcome(){
 	puts("Done.\n");	
 
 	puts("\n\tInitializing Shells...................................................");
-
-	initGlobalDataShell();
 	
 	++j;
 	
